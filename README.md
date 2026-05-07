@@ -13,7 +13,7 @@ All episode content lives in the `episodes/` directory:
 | Episode | Status | Files |
 |---------|--------|-------|
 | **Episode 1** | Synopsis ready, SRT placeholder | [`synopsis.md`](episodes/episode-01/synopsis.md) · [`subtitles.srt`](episodes/episode-01/subtitles.srt) |
-| **Episode 2** | In development | [`synopsis.md`](episodes/episode-02/synopsis.md) · [`subtitles.srt`](episodes/episode-02/subtitles.srt) |
+| **Episode 2** | Synopsis ready, SRT placeholder | [`synopsis.md`](episodes/episode-02/synopsis.md) · [`subtitles.srt`](episodes/episode-02/subtitles.srt) |
 
 ## Assets & Visuals
 - Grok Imagine images & video frames: Recommended external hosting (Google Drive / Imgur) to keep clones lightweight.  

@@ -6,16 +6,14 @@
 Live cinematic page ready for reviews, editing & production notes:  
 **https://ford442.github.io/weeks_of_fire** (enable GitHub Pages below)
 
-## Current Script (Episode 1)
-```markdown
-[PASTE LATEST DRAFT HERE]
+## Episodes
 
-INT. STUDIO - DAY
+All episode content lives in the `episodes/` directory:
 
-The director leans in...
-```
-
-*Update this section or add a script.md file for version control.*
+| Episode | Status | Files |
+|---------|--------|-------|
+| **Episode 1** | Synopsis ready, SRT placeholder | [`synopsis.md`](episodes/episode-01/synopsis.md) · [`subtitles.srt`](episodes/episode-01/subtitles.srt) |
+| **Episode 2** | In development | [`synopsis.md`](episodes/episode-02/synopsis.md) · [`subtitles.srt`](episodes/episode-02/subtitles.srt) |
 
 ## Assets & Visuals
 - Grok Imagine images & video frames: Recommended external hosting (Google Drive / Imgur) to keep clones lightweight.  
@@ -27,7 +25,7 @@ The director leans in...
 
 ## Next Steps
 1. Enable GitHub Pages (Settings → Pages → Deploy from `main` branch, root folder).  
-2. Drop your latest script here.  
+2. Update `episodes/episode-01/subtitles.srt` with the final timed transcript.  
 3. Add image links from Drive.
 
 Made with Grok Imagine magic ✨

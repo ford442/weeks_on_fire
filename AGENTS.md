@@ -39,6 +39,7 @@ weeks_of_fire/
 ├── characters/         # Character reference images (webp, jpg, png)
 ├── songs/              # Music tracks (mp3) + lyrics/style descriptions (md)
 ├── ideas/              # Raw brainstorming, backlog, concepts
+├── notes/              # Quick-capture workspace: scratchpad + structured templates for new scene suggestions, song ideas, and image prompt captures
 ├── scripts/            # Lightweight Python automation tools
 ├── prompts/            # Grok Imagine prompts for reproducibility
 ├── templates/          # Starter files for new episodes
@@ -58,6 +59,8 @@ Each `episodes/episode-NN/` folder typically contains:
 - `NoteGPT_TRANSCRIPT_Weeks on Fire - Episode NN.txt` — Plain-text transcript export.
 
 Episode 03 is the most developed example: it includes `scenes.md` (detailed scene breakdowns with Grok Imagine prompts per shot) and `laser_snakes.md`.
+
+**New in notes/**: Use `notes/scene-suggestions.md` and `notes/song-suggestions.md` (with built-in templates) when developing fresh scenes or songs. Use `notes/scratchpad.md` for rapid capture and `notes/image-prompt-captures.md` for visual ideas.
 
 ---
 
@@ -154,6 +157,18 @@ Note: `git.sh` uses the hard-coded message `"push fix"`. For meaningful commits,
 
 ---
 
+## Capturing & Developing New Scenes, Songs & Visuals
+
+For rapid creative work:
+- Start in `notes/scratchpad.md` for anything that pops up.
+- Use the structured templates in `notes/scene-suggestions.md` and `notes/song-suggestions.md` to develop ideas with prompts, music sync, and emotional notes.
+- Stage image ideas in `notes/image-prompt-captures.md` then refine and move to `prompts/`.
+- Once ready, promote into episodes/ or other folders.
+
+This keeps the creative flow convenient and organized.
+
+---
+
 ## Security and Size Considerations
 
 - **Do not commit secrets** (API keys, tokens, passwords). The project currently has none.
@@ -178,6 +193,10 @@ When in doubt about creative direction, consult `grok.md`. When in doubt about w
 | Preview site locally | `python3 -m http.server 8000` then open `http://localhost:8000` |
 | Generate image prompts | `python3 scripts/generate-prompts.py "scene description"` |
 | Add new episode | Copy `templates/synopsis-template.md` + `subtitles-template.srt` into `episodes/episode-NN/` |
+| Capture new scene/song ideas | `notes/scene-suggestions.md` and `notes/song-suggestions.md` (use built-in templates) |
+| Quick scratch notes & fragments | `notes/scratchpad.md` |
+| Stage image / Grok Imagine ideas | `notes/image-prompt-captures.md` |
 | Update production hub | Edit `index.html` directly |
 | Quick git push | `bash git.sh` (uses message `"push fix"`) |
 | Production log | `docs/production-log.md` |
+}}

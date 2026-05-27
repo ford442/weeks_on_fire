@@ -4,7 +4,7 @@
 
 ## 🎬 Production Hub
 Live cinematic page ready for reviews, editing & production notes:  
-**https://ford442.github.io/weeks_of_fire** (enable GitHub Pages below)
+**https://ford442.github.io/weeks_on_fire** (enable GitHub Pages below)
 
 ## Episodes
 

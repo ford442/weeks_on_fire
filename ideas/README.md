@@ -38,6 +38,8 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `wildflower-paint-rivulets.md` – shared dirt grammar for Daisy field bookends and the mountain-lion meadow: wet enamel colors between the stems, never on the petals.
 - `mountain-lion-wildflower-cutaway.md` – POV leash musical cutaway: lion insists on the field, flowers go botanical-surreal, **give way to open ocean and come back bigger on the far shore**, other mountain lions already there. Two 110 BPM beds (`come-further` → `here-they-are`) with the ocean crossing *as* the crossfade; ~2:20. Includes a swap bank of alternate drag corridors and alternate destinations. Suggestions id `mountain-lion-wildflowers`.
 - `home-sweet-void.md` – space visual-experiment table cutaway (~71s): bag greeting → space-speeding talk → floor worms → sit-up **cut** → cat glow-stop. Not a new episode. Daisy / Hanshaw week stays the musical spine. Suggestions id `home-sweet-void`. Canonical board local: `artifacts/space_house_return_board.md`.
+- `riley-space-cop-cutaway.md` – Riley years montage. Table door (“you caught me / space cop”) then Annex: two lines, one cube, nights, canyon yard, Appendix C, bestowal of an odd sword. Rubella cuts before the second verse. Suggestions id `riley-space-cop`. Issue [#57](https://github.com/ford442/weeks_on_fire/issues/57).
+- `riley-space-cop-agentic.md` – Claude runbook for scene expansion (year cards, scenery twins, bestowal harden, codegen).
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

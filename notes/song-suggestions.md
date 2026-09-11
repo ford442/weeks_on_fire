@@ -25,6 +25,7 @@ weeks_of_fire tracks should feel like **late-night affiliate programming** that 
 - [Nine Percent Battery](../songs/Nine_Percent_Battery.md) · [Terms and Conditions](../songs/Terms_and_Conditions.md) · [Negotiating with the Elevator](../songs/Negotiating_with_the_Elevator.md) — joke/unusual cycle (smoke-detector love song, sung EULA, tango with a freight elevator), graduated 2026-08-19
 - [Article Seven](../songs/Article_Seven.md) · [Heart Rate Optimal](../songs/Heart_Rate_Optimal.md) · [This Program Contains Dialogue](../songs/This_Program_Contains_Dialogue.md) — joke/unusual pack, graduated 2026-08-19: union pause on the Ep3 lawn, wellness-notification ballad locked at 78 BPM, EyeWash legal bumper that is not dialogue until someone talks
 - [Heels or No Entry](../songs/Heels_or_No_Entry.md) · [Call Forty-Seven](../songs/Call_Forty-Seven.md) · [The Roof Knows How to Wait](../songs/The_Roof_Knows_How_to_Wait.md) · [Receipt Dated Thursday](../songs/Receipt_Dated_Thursday.md) · [Closed Since Ninety-Eight](../songs/Closed_Since_Ninety-Eight.md) · [The Most Refreshing Drink](../songs/The_Most_Refreshing_Drink.md) — original-title pack, graduated 2026-09-06: Velvet Rope door policy, 911 hold accretion, ruin ventilation, Biscuit’s Thursday receipt, dead-station carpool, Ultra-Refreshed sponsor bed
+- [Well Fall](../songs/Well_Fall.md) — instrumental heavy metal well-drop (~90s, no vocal); sight bank open in [`ideas/well-fall.md`](../ideas/well-fall.md), graduated 2026-09-11
 
 Gag pairings: [`one-panel-gags.md`](one-panel-gags.md). All of the above also appear on the site **Suggestions** view.
 
@@ -51,6 +52,36 @@ Gag pairings: [`one-panel-gags.md`](one-panel-gags.md). All of the above also ap
 ---
 
 ## Your Song Ideas
+
+### Pitch: "Well Fall" (graduated 2026-09-11)
+
+**Working Title:** Well Fall
+
+**Genre / Vibe / Style References:** Instrumental heavy metal, 144 BPM. Quiet
+well-mouth harmonics + drip, then a descending riff that never cadences. Not
+Ultra Screech.
+
+**Key Instruments & Production Notes:** Drop-A seven-string, twin-lead that
+never sings, double-kick after the drop only. Structural flaw: the tonic is
+reserved for a bottom that may not exist; each cycle starts a half-step lower.
+
+**Lyrical Themes / Hook / Chorus Ideas:** None. Instrumental only.
+
+**Emotional Arc or Story Fit:** Commit to the fall. Sights are written in
+[`ideas/well-fall.md`](../ideas/well-fall.md), not in the lyric.
+
+**Potential Episode / Scene Placement:** Musical cutaway / visual experiment.
+Suggestions id `well-fall`.
+
+**Grok Imagine Visual Companion Concepts:** Stone well lip; POV shaft; open
+`[SIGHT]` slots B–H.
+
+**Reference Tracks / Artists:** Cinematic instrumental metal. Opposite of
+Glam-Sham-Poo joke-commercial energy.
+
+**Status:** ✅ **GRADUATED** → [`songs/Well_Fall.md`](../songs/Well_Fall.md)
+
+---
 
 ### Active seeds (ready for Minimax generation)
 

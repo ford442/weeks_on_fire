@@ -1,0 +1,22 @@
+{
+  "id": "well-fall",
+  "kind": "musical",
+  "title": "Well Fall",
+  "status": "suggested",
+  "runtime": "~90 seconds",
+  "episode": "Musical Cutaway / Visual Experiment",
+  "songId": "well-fall",
+  "songTitle": "Well Fall",
+  "summary": "POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Six open fall-sights plus an open bottom — write what we see on the way down in ideas/well-fall.md.",
+  "visualArc": "Stone well mouth → drop (riff in) → open sight B → open sight C → open sight D → open sight E → open sight F → open sight G → bottom or none.",
+  "tags": [
+    "well",
+    "fall",
+    "instrumental",
+    "heavy-metal",
+    "visual-experiment",
+    "pov",
+    "open-sights"
+  ],
+  "segmentsSource": "prompts/well-fall-segments.md"
+}

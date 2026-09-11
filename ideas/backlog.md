@@ -38,6 +38,8 @@ Quick capture of ideas that aren't ready for their own file yet.
 - [x] **Short packet farm** — 18 joke / strange-3D cutaway packets (loop tiles, 3–10s interrupts, 30s gags) + loop grammar + kill list — `ideas/short-packet-farm.md`, `ideas/loop-grammar.md`, `prompts/short-packet-farm-segments.md`
 - [ ] Generate stills for the three generate-first short packets (`bag-at-chest-height`, `we-will-stand`, `the-approval-desk`) — awaiting the user's pick
 - [ ] Get a still / local file / one-sentence description of the existing Facebook loop reel, then log it as the reference tile in `ideas/loop-grammar.md` and design siblings
+- [x] **Well Fall** — instrumental heavy metal well-drop cutaway; lip locked, sight bank open — `ideas/well-fall.md` + `songs/Well_Fall.md` + Suggestions `well-fall`
+- [ ] Fill Well Fall sights B–H (what we see as we fall), then generate the lip still
 - [x] **Cue Sheets** — Nova Chen's second album: 10 short sung tracks in mix-supervisor language, one structural flaw each, MiniMax 3.0 STYLE at the 2000-char ceiling — `ideas/cue-sheets.md` + `songs/`
 - [ ] Generate Cue Sheets on MiniMax 3.0 — Hold for Eight, Under Dialogue, Cue Sheets first; host audio externally and wire `audioFile`
 

@@ -363,5 +363,20 @@ export const filmScenes: FilmScene[] = [
     description: "Shot E (0:24–0:30). Pull-back: spark-halo, glass flower, undersun through a hole in the deck.",
     theme: "The Soft Gyre",
     tags: ["suggestion", "soft-gyre", "gel", "halo", "undersun", "wide"],
+  },
+  {
+    id: "suggestion-well-fall-lip",
+    imageKind: "suggestion",
+    episode: "Musical Cutaway / Visual Experiment",
+    title: "Well Fall — Lip of the Well",
+    prompt: "Cinematic 2.39:1 photoreal still at the lip of an old stone well in dry California hills, circular brick and fieldstone ring, dark cylinder dropping out of frame, a pale disk of sky or porch light on the water far below or none at all, no people, no text, crushed blacks, 35mm anamorphic, short-film production still, Grok Imagine style",
+    promptVariations: ["Looking straight down the cylinder from the lip, sky as a thin ring, Grok Imagine", "Wide: well in a dry backyard, HOA fence distant, mouth as a black coin, Grok Imagine"],
+    
+    mediaType: "image",
+    musicCue: "Well Fall — clean harmonics + drip, then the drop",
+    musicStyle: "Instrumental heavy metal, 144 BPM",
+    description: "Locked lip for the Well Fall cutaway. Sights B–H stay open in ideas/well-fall.md — write what we see as we fall.",
+    theme: "Well Fall",
+    tags: ["suggestion", "well", "fall", "instrumental", "heavy-metal", "pov"],
   }
 ];

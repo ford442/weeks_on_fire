@@ -73,6 +73,49 @@ Cast table (who appears in which scene): [`scenes/README.md`](scenes/README.md).
 
 ---
 
+## Scene Idea: "Well Fall" (Instrumental metal / open sights)
+
+**Scene / Beat Title:** Well Fall — POV down a well, heavy metal, no vocal
+
+**Fits Episode / New Episode Concept:** Standalone musical cutaway / visual
+experiment. Not an episode spine. Not Ultra Screech.
+
+**Juxtaposition / Wrong channel:** A nearly silent show drops into committed
+instrumental metal because someone went down a well. Full stack. No wink.
+
+**Setting & Atmosphere:** Real stone well. Dry California hills or a backyard
+that forgot it had a well. The well is quiet. The metal is non-diegetic.
+
+**Key Visuals (Grok Imagine prompt seeds):** Lip locked. Sights B–H are empty —
+fill the bank in [`ideas/well-fall.md`](../ideas/well-fall.md). Templates:
+[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md).
+
+**Narrative Beats / Action:** Stand at the ring → fall → see things (unassigned)
+→ bottom or none.
+
+**Dialogue, Voiceover or Narration (if any):** none
+
+**Dialog versions page:** n/a — not a dialog scene
+
+**Interpersonal subjects (if any):** none assigned. Faces only if a sight names
+them.
+
+**Emotional Tone & Themes:** Commit to the fall. The riff never cadences
+because the bottom may not exist.
+
+**Music / Song Sync Opportunity:** [`songs/Well_Fall.md`](../songs/Well_Fall.md)
+— 144 BPM instrumental heavy metal, ~90s.
+
+**Suggested Grok Imagine Full Prompt:** See segment A (lip) in the prompts file.
+Open slots use a `[SIGHT]` template.
+
+**Variations or Alternate Takes:** Looking-up twin (mouth as a shrinking coin).
+H can be impact, reverse, sky, or still falling.
+
+**Status / Next Step:** Idea — fill the sight bank, then generate stills.
+
+---
+
 ## Scene Idea: "Cat POV" (Silent Witness)
 
 **Scene / Beat Title:** Cat POV — Halloween to Dawn, No Dialog

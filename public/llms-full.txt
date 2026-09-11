@@ -90,6 +90,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 22. **The Soft Gyre — C Interior** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
 23. **The Soft Gyre — D Answer** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
 24. **The Soft Gyre — E Soft set** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
+25. **Well Fall — Lip of the Well** (Musical Cutaway / Visual Experiment, theme: Well Fall)
 
 ## Minimax song catalog (content index)
 
@@ -169,6 +170,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | twilight-time | Twilight Time | 90s rave / eurodance | Character Archive |
 | two-db-and-dont-tell-me | Two dB and Don't Tell Me | Fader blues | Catalog / Cue Sheets |
 | under-dialogue | Under Dialogue | Ducked soul / room-tone ballad | Catalog / Cue Sheets |
+| well-fall | Well Fall | Instrumental heavy metal | Musical Cutaway / Visual Experiment |
 | whatever-lets-us-be | Whatever Lets Us Be | Dark cabaret piano ballad | Episode 01 / 03 |
 | zero-g-click | Zero-G Click | Trance-adjacent techno | Catalog / Night Side |
 
@@ -247,6 +249,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **The Soft Gyre** (the-soft-gyre) — A house-sized translucent gel blob hovers above anvil thunderheads, spins, and throws sparks and jello at the weather. Clouds dent, lantern, and grow glass flowers. The gyre spins clockwise; every ejecta counter-rotates. Five locked stills, ready to animate.
 - **Ultra-Refreshed Water Lab** (ultra-refreshed-water-lab) — The most refreshing glass of ice water in human history, delivered by an insanely complex window apparatus. Played completely straight.
 - **The Velvet Rope at the End of the World** (velvet-rope) — Bouncer enforces heels-or-no-entry while the skyline burns. She produces emergency stilettos. Approved.
+- **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Six open fall-sights plus an open bottom — write what we see on the way down in ideas/well-fall.md.
 
 ## Daisy Bell cutaway
 

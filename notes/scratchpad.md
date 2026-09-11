@@ -46,6 +46,8 @@
 
 - Slow push-in on an old cathode-ray TV in a dark room. On the screen: the same suburban backyard from Ep3, but the laser battle is happening in miniature on the TV, and the "real" backyard outside the window is quiet and empty.
 
+- **Well Fall:** POV down a well, instrumental heavy metal, no vocal. Lip locked. Room for what we see as we fall: `ideas/well-fall.md`.
+
 ## "What If" Ideas & Random Sparks
 
 - What if every episode ends with the same 3-second shot of the pizza guy in a different context, but we never acknowledge it as a "thing"?

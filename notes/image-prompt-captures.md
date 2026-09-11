@@ -21,6 +21,28 @@ This is your lightweight staging area before moving refined prompts into the org
 
 ## Captured Ideas
 
+### Well Fall (instrumental metal / open sights)
+
+**Context / Scene this belongs to:** Standalone musical cutaway. Board:
+[`ideas/well-fall.md`](../ideas/well-fall.md). Prompts:
+[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md).
+
+**Raw Description / Mood:** Real stone well. We fall. Metal is non-diegetic.
+Sights B–H are empty on purpose.
+
+**Prompt Seed / Draft:** Lip (A) is locked. Open slots are a well-shaft camera
+plus `[SIGHT]`. Fill the bank, then replace the placeholder.
+
+**Style Modifiers to try:** 2.39:1 anamorphic, crushed blacks, wet brick,
+shrinking disk of sky, photoreal, no text.
+
+**Variations:** Looking-down POV vs looking-up (mouth as a shrinking coin).
+H is impact, reverse, sky, or still falling.
+
+**Status:** Raw — sight dump open. Lip still not generated.
+
+---
+
 ### The Soft Gyre (30s psychedelic 3D)
 
 **Context / Scene this belongs to:** Standalone abstract musical cutaway / EyeWash late-movie insert. Full timed shots + prompt stack in [`prompts/the-soft-gyre-segments.md`](../prompts/the-soft-gyre-segments.md). Sibling to *Molten Silver Sphere* (cave/chrome) but this one lives above a cloud deck.

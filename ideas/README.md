@@ -40,6 +40,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `home-sweet-void.md` – space visual-experiment table cutaway (~71s): bag greeting → space-speeding talk → floor worms → sit-up **cut** → cat glow-stop. Not a new episode. Daisy / Hanshaw week stays the musical spine. Suggestions id `home-sweet-void`. Canonical board local: `artifacts/space_house_return_board.md`.
 - `riley-space-cop-cutaway.md` – Riley years montage. Table door (“you caught me / space cop”) then Annex: two lines, one cube, nights, canyon yard, Appendix C, bestowal of an odd sword. Rubella cuts before the second verse. Suggestions id `riley-space-cop`. Issue [#57](https://github.com/ford442/weeks_on_fire/issues/57).
 - `riley-space-cop-agentic.md` – Claude runbook for scene expansion (year cards, scenery twins, bestowal harden, codegen).
+- `well-fall.md` – POV down a real well, instrumental heavy metal, no vocal. Lip locked. Sight bank B–H is empty on purpose — write what we see as we fall. Suggestions id `well-fall`.
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

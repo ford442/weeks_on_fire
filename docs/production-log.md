@@ -1,5 +1,8 @@
 # Production Log
 
+## 2026-09-11
+- **Well Fall** boarded as a musical cutaway (~90s): POV down a real well, instrumental heavy metal, no vocal. Lip locked. Six open fall-sights plus an open bottom — the idea file is the room for what we see as we fall. Not Ultra Screech. Files: `ideas/well-fall.md`, `songs/Well_Fall.md`, `prompts/well-fall-segments.md`, `content/cutaways/well-fall.json`. Suggestions id `well-fall`.
+
 ## 2026-09-06
 - **Home Sweet Void** table expansion boarded as a scene cutaway (~71s, under 90s): bag is the greeting, conversation before the floor, worms sit up as a cut, cat speaks once and is stopped by glow. Prompts + hull-hum dialog stub + Suggestions card. Daisy / Hanshaw / bird joke stay this week's musical spine — this packet waits its turn. Farm on [#22](https://github.com/ford442/weeks_on_fire/issues/22), not #42. Files: `ideas/home-sweet-void.md`, `prompts/home-sweet-void-segments.md`, `songs/Home_Sweet_Void_Dialog.md`, `content/cutaways/home-sweet-void.json`.
 - **Glam-Sham-Poo / Ultra Screech** punch-in on the first commercial only: beat-by-beat board against `Ultra_Screech_2_with_scream.mp3` (~2:51), ten stills-to-video packets (Pizza Guy + elevator inserts added), same eight joke-network gags and 4s sting. Farm on [#32](https://github.com/ford442/weeks_on_fire/issues/32). Not a second ad. Files: `prompts/glam-sham-poo-segments.md`, `ideas/glam-sham-poo-commercial.md`, `notes/glam-sham-poo-ideas.md`.

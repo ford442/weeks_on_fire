@@ -3210,7 +3210,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     runtime: "~2:00 years montage (table door + holds + cut)",
     episode: "Space visual experiment / Dialog Cutaway",
     songId: "home-sweet-void-dialog",
-    songTitle: "Annex theme (brass + tick) under bestowal only",
+    songTitle: "Home Sweet Void (Dialog)",
     summary: "HSV table is the door: Alright, you caught me. I used to be a space cop, okay? Cut to nineteen at Transportation Patrol Annex. Years of two lines and one cube, nights, a yard over a canyon, Appendix C, then a bestowal — hollow-chevron wings, an odd short sword, a hymn that also files. She inhales for the first posting. Rubella cuts: we are expected back down to Earth, right away. Not a fight movie. Scenery beds hold the black hole; rooms stay short.",
     visualArc: "Table door → orbit scenery → first-year cube → nights / window planet → empty canyon yard → further exercises → Appendix C hold → bestowal + theme → two-moon sky (unfinished posting) → sage-crop return.",
     tags: ["riley", "space-cop", "annex", "dialog", "visual-experiment", "rubella", "lillith", "wings", "inventory"],

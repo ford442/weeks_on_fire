@@ -48,6 +48,8 @@
 
 - **Well Fall:** POV down a well, instrumental heavy metal, no vocal. Lip locked. Room for what we see as we fall: `ideas/well-fall.md`.
 
+- **Big City hair-dos:** downtown Daisy Bell act. Giant 1890s Gibson Girls as traffic islands / awnings / cafe walls. Awkward, not slapstick. Dump: `ideas/big-city-hairdos.md`.
+
 ## "What If" Ideas & Random Sparks
 
 - What if every episode ends with the same 3-second shot of the pizza guy in a different context, but we never acknowledge it as a "thing"?

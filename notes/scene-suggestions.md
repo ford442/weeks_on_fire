@@ -73,6 +73,45 @@ Cast table (who appears in which scene): [`scenes/README.md`](scenes/README.md).
 
 ---
 
+## Scene Idea: "Big City Hair-dos" (Daisy Bell downtown)
+
+**Scene / Beat Title:** Giant hair-dos as civic obstacles on the Fleet Street /
+crowded-downtown act
+
+**Fits Episode / New Episode Concept:** Daisy Bell musical cutaway — Big City
+video (`db-x01` and street sights). Not a new song. Not Ultra Screech.
+
+**Juxtaposition / Wrong channel:** A period city has a millinery zoning
+problem and treats it as weather. Full commitment. Awkward, not slapstick.
+
+**Setting & Atmosphere:** Late-Victorian London street and the tight rooms
+that still belong to it (cafe, revolving door, lift). Soft daylight or
+nitrate grain if the Daisy flip is on.
+
+**Key Visuals (Grok Imagine prompt seeds):** Gibson Girl updo at kiosk /
+traffic-island scale. People at true human size. Rubella & Lillith keep
+small hair and still fit. Board: [`ideas/big-city-hairdos.md`](../ideas/big-city-hairdos.md).
+
+**Narrative Beats / Action:** City goes around the hair. Faces miss. The
+flower tandem threads a gap the hair forgot.
+
+**Dialogue, Voiceover or Narration (if any):** none on camera. Optional
+off-camera “After you.” / “I’ll go around the block.”
+
+**Interpersonal subjects (if any):** Stylish 1890s women; a couple who can
+only shake hands; a policeman directing around hair as if it were a stalled
+cart.
+
+**Emotional Tone & Themes:** Polite dread. Looking sweet as a civic fault.
+
+**Music / Song Sync Opportunity:** *You’ll look sweet upon the seat* — Daisy
+Bell downtown.
+
+**Status / Next Step:** Idea — generate-first stills: roundabout or cafe
+no-eye-line.
+
+---
+
 ## Scene Idea: "Well Fall" (Instrumental metal / open sights)
 
 **Scene / Beat Title:** Well Fall — POV down a well, heavy metal, no vocal

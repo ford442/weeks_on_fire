@@ -135,6 +135,78 @@
       "lyricCue": null,
       "title": "St. Paul\u2019s in fog",
       "description": "Thick fog parts long enough for the dome, then closes behind them."
+    },
+    {
+      "id": "sight-hair-roundabout",
+      "lyricCue": "You\u2019ll look sweet upon the seat",
+      "title": "Pompadour roundabout",
+      "description": "A Gibson Girl updo fills the turning radius of a hansom. Carriages orbit. A policeman on a box in the middle directs with both arms and never touches the hair. She checks a coin-sized mirror."
+    },
+    {
+      "id": "sight-hair-revolving",
+      "lyricCue": null,
+      "title": "Revolving-door compartment",
+      "description": "One slice of the door is only hair. The other three keep turning. She is already inside, mortified, saying nothing."
+    },
+    {
+      "id": "sight-hair-cafe",
+      "lyricCue": "You\u2019ll look sweet upon the seat",
+      "title": "No eye-line, cafe",
+      "description": "Two giant hairdos meet over a small table. Menus at arm\u2019s length. Faces cannot see each other. They order by pointing at the waiter\u2019s shoes. He is used to it."
+    },
+    {
+      "id": "sight-hair-handshake",
+      "lyricCue": "You\u2019ll look sweet upon the seat",
+      "title": "Sofa-width kiss",
+      "description": "A couple trying to kiss. The hairdos hold them a sofa apart. They shake hands instead, very formally, and look at the cobbles."
+    },
+    {
+      "id": "sight-hair-pigeons",
+      "lyricCue": null,
+      "title": "Cornice roost",
+      "description": "Pigeons treat a Gibson Girl as hotel stonework. She knows. She does not shoo. One pigeon has a ribbon."
+    },
+    {
+      "id": "sight-hair-wires",
+      "lyricCue": null,
+      "title": "Clothesline wires",
+      "description": "Overhead telephone lines rest across an updo. Two stockings and a telegram. She walks. The line goes slack, then taut."
+    },
+    {
+      "id": "sight-hair-landau-hatch",
+      "lyricCue": "You\u2019ll look sweet upon the seat",
+      "title": "Landau sunroof",
+      "description": "Open carriage with a hole cut for the hair. Four society ladies; only faces above the leather. They still lean in unison to watch the flower bike."
+    },
+    {
+      "id": "sight-hair-lantern",
+      "lyricCue": null,
+      "title": "Lantern in the curl",
+      "description": "A traffic lantern cycles red-amber-green inside a ringlet. Pedestrians wait on it. Nobody argues with hair."
+    },
+    {
+      "id": "sight-hair-elevator",
+      "lyricCue": null,
+      "title": "Hair arrives first",
+      "description": "Lift doors close on the updo. Next floor, the hair is there. Then she is. Both nod, as if this is a timetable."
+    },
+    {
+      "id": "sight-hair-awning",
+      "lyricCue": null,
+      "title": "Borrowed awning",
+      "description": "Rain. Four strangers wait under a stranger\u2019s hairdo the way you wait under a shop awning you do not own. Nobody looks up."
+    },
+    {
+      "id": "sight-hair-after-you",
+      "lyricCue": null,
+      "title": "After you",
+      "description": "Two pompadours in a crosswalk. Both owners apologize to the hair, not each other. A third person says they will go around the block."
+    },
+    {
+      "id": "sight-hair-turret",
+      "lyricCue": "You\u2019ll look sweet upon the seat",
+      "title": "Hair turns late",
+      "description": "A stylish woman looks at the living tandem. Her hair turns a full second later, like a turret. Rubella and Lillith are already past. They still fit."
     }
   ],
   "frames": [

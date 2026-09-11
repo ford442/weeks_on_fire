@@ -1,6 +1,7 @@
 # Production Log
 
 ## 2026-09-11
+- **Big City hair-dos** think tank for the Daisy Bell downtown / Fleet Street act: giant awkward Gibson Girl updos as civic infrastructure (roundabout, revolving door, cafe with no eye-line, sofa-width handshake). Rubella & Lillith keep small hair. Not Glam-Sham-Poo. Files: `ideas/big-city-hairdos.md`; twelve new street sights on the Daisy Bell page.
 - **Well Fall** boarded as a musical cutaway (~90s): POV down a real well, instrumental heavy metal, no vocal. Lip locked. Six open fall-sights plus an open bottom — the idea file is the room for what we see as we fall. Not Ultra Screech. Files: `ideas/well-fall.md`, `songs/Well_Fall.md`, `prompts/well-fall-segments.md`, `content/cutaways/well-fall.json`. Suggestions id `well-fall`.
 
 ## 2026-09-06

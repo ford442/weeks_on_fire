@@ -39,6 +39,8 @@ Quick capture of ideas that aren't ready for their own file yet.
 - [ ] Generate stills for the three generate-first short packets (`bag-at-chest-height`, `we-will-stand`, `the-approval-desk`) — awaiting the user's pick
 - [ ] Get a still / local file / one-sentence description of the existing Facebook loop reel, then log it as the reference tile in `ideas/loop-grammar.md` and design siblings
 - [x] **Well Fall** — instrumental heavy metal well-drop cutaway; lip locked, sight bank open — `ideas/well-fall.md` + `songs/Well_Fall.md` + Suggestions `well-fall`
+- [x] **Big City hair-dos** — downtown Daisy Bell think tank; giant awkward Gibson Girls as civic obstacles — `ideas/big-city-hairdos.md` + Daisy Bell street sights
+- [ ] Generate two Big City hair-do stills (roundabout or cafe no-eye-line first)
 - [ ] Fill Well Fall sights B–H (what we see as we fall), then generate the lip still
 - [x] **Cue Sheets** — Nova Chen's second album: 10 short sung tracks in mix-supervisor language, one structural flaw each, MiniMax 3.0 STYLE at the 2000-char ceiling — `ideas/cue-sheets.md` + `songs/`
 - [ ] Generate Cue Sheets on MiniMax 3.0 — Hold for Eight, Under Dialogue, Cue Sheets first; host audio externally and wire `audioFile`

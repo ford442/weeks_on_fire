@@ -21,6 +21,31 @@ This is your lightweight staging area before moving refined prompts into the org
 
 ## Captured Ideas
 
+### Big City — giant hair-dos (Daisy Bell downtown)
+
+**Context / Scene this belongs to:** Daisy Bell crowded-city act (`db-x01`
+Fleet Street and siblings). Board: [`ideas/big-city-hairdos.md`](../ideas/big-city-hairdos.md).
+Live as street sights on the Daisy Bell page.
+
+**Raw Description / Mood:** 1890s hair taken past the building line. Civic.
+Awkward. People navigate pompadours like parked vans. Rubella & Lillith still
+fit. Not a Glam commercial.
+
+**Prompt Seed / Draft:** Generate-first: roundabout / cafe no-eye-line /
+revolving-door compartment / sofa-width handshake. Swap `[SIGHT]` into the
+lock sentence in the idea file.
+
+**Style Modifiers to try:** 16:9 photoreal, Fleet Street brick, real hair and
+pins not foam, human-scale bodies, polite negative space, optional nitrate
+grain if the Daisy flip is on.
+
+**Variations:** Wide civic vs tight interior. With or without the flower
+tandem in a gap the hair forgot.
+
+**Status:** Raw — sight dump open. Stills not generated.
+
+---
+
 ### Well Fall (instrumental metal / open sights)
 
 **Context / Scene this belongs to:** Standalone musical cutaway. Board:

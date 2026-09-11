@@ -2,64 +2,67 @@
   {
     "id": "test-psy-flower-engine",
     "imageKind": "test",
-    "episode": "Grok Imagine · psychedelic",
+    "episode": "Grok Imagine \u00b7 psychedelic",
     "title": "Living Flower Engine",
-    "prompt": "Psychedelic 3D still, 16:9: an impossible living flower engine — interlocking glass gears and blooming wildflower pistons suspended in a spherical nebula of pollen and iridescent smoke, soft pastel and electric lime, dreamlike depth, highly detailed, no text.",
+    "prompt": "Psychedelic 3D still, 16:9: an impossible living flower engine \u2014 interlocking glass gears and blooming wildflower pistons suspended in a spherical nebula of pollen and iridescent smoke, soft pastel and electric lime, dreamlike depth, highly detailed, no text.",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Daisy Bell / Orb background",
     "musicStyle": "Ambient surreal",
-    "description": "Abstract 3D flower-machine — bridge between Daisy Bell and Soft Gyre energy.",
+    "description": "Abstract 3D flower-machine \u2014 bridge between Daisy Bell and Soft Gyre energy.",
     "theme": "Psychedelic 3D",
     "tags": [
       "grok",
       "psychedelic",
       "3d",
       "flowers"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-flower-engine.jpg"
   },
   {
     "id": "test-psy-mobius-ribbon",
     "imageKind": "test",
-    "episode": "Grok Imagine · psychedelic",
-    "title": "Möbius Chrome Ribbon",
-    "prompt": "Strange psychedelic 3D abstract scene, cinematic 16:9: a cathedral-sized Möbius ribbon of molten chrome and prismatic crystal twisting through infinite black space, surface covered in microscopic daisy petals, volumetric god rays of magenta and cyan, no people, ultra detailed refractive materials, short-film title card energy.",
+    "episode": "Grok Imagine \u00b7 psychedelic",
+    "title": "M\u00f6bius Chrome Ribbon",
+    "prompt": "Strange psychedelic 3D abstract scene, cinematic 16:9: a cathedral-sized M\u00f6bius ribbon of molten chrome and prismatic crystal twisting through infinite black space, surface covered in microscopic daisy petals, volumetric god rays of magenta and cyan, no people, ultra detailed refractive materials, short-film title card energy.",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Deep Space Drift",
     "musicStyle": "Cosmic ambient",
-    "description": "Title-card scale abstract — chrome Möbius + daisy petal texture.",
+    "description": "Title-card scale abstract \u2014 chrome M\u00f6bius + daisy petal texture.",
     "theme": "Psychedelic 3D",
     "tags": [
       "grok",
       "psychedelic",
       "3d",
       "abstract"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-mobius-ribbon.jpg"
   },
   {
     "id": "test-psy-gyre-victorian",
     "imageKind": "test",
-    "episode": "Grok Imagine · psychedelic",
+    "episode": "Grok Imagine \u00b7 psychedelic",
     "title": "Gyre Over Victorian Street",
     "prompt": "Surreal cinematic 16:9 photoreal-3D hybrid still: a translucent floating geometric gyre made of glass and gel, rainbow internal caustics, slowly rotating above a Victorian cobblestone street at night while two silhouettes in black lace stand beside a bicycle covered in glowing bioluminescent flowers. Psychedelic but elegant, deep violet and amber light, Weeks on Fire short film.",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Daisy Bell bridge",
     "musicStyle": "Surreal hybrid",
-    "description": "Soft Gyre meets Daisy Bell London — hybrid cutaway experiment.",
+    "description": "Soft Gyre meets Daisy Bell London \u2014 hybrid cutaway experiment.",
     "theme": "Psychedelic 3D",
     "tags": [
       "grok",
       "psychedelic",
       "daisy-bell",
       "gyre"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-gyre-victorian-street.jpg"
   },
   {
     "id": "test-psy-tetrahedron-sea",
     "imageKind": "test",
-    "episode": "Grok Imagine · psychedelic",
+    "episode": "Grok Imagine \u00b7 psychedelic",
     "title": "Tetrahedron Sea",
     "prompt": "Psychedelic 3D landscape 16:9 cinematic still: a calm ocean of transparent tetrahedrons and soft gelatin orbs under a liquid sky that drips upward, each orb holding a tiny black-lace silhouette and a miniature flower tandem bicycle, vast scale, uncanny calm, prismatic refraction, short-film still.",
     "promptVariations": [],
@@ -73,80 +76,85 @@
       "psychedelic",
       "3d",
       "landscape"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-tetrahedron-sea.jpg"
   },
   {
     "id": "test-psy-sphere-tower",
     "imageKind": "test",
-    "episode": "Grok Imagine · psychedelic",
+    "episode": "Grok Imagine \u00b7 psychedelic",
     "title": "Sphere Tower of Daisies",
     "prompt": "Psychedelic 3D abstract 16:9: a spiral tower of interlocking chrome spheres and glass daisy petals rising from a field of static, each sphere filled with swirling magenta fog and tiny lightning, no people, hyper-detailed materials, dark cosmic background with soft nebula glow.",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Strange Light",
     "musicStyle": "Dark psychedelic",
-    "description": "Spiral chrome/glass tower — pure 3D mood board.",
+    "description": "Spiral chrome/glass tower \u2014 pure 3D mood board.",
     "theme": "Psychedelic 3D",
     "tags": [
       "grok",
       "psychedelic",
       "3d",
       "tower"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-sphere-tower.jpg"
   },
   {
     "id": "test-psy-xai-glass-cathedral",
     "imageKind": "test",
-    "episode": "xAI API · psychedelic",
+    "episode": "xAI API \u00b7 psychedelic",
     "title": "Glass Petal Cathedral",
     "prompt": "Psychedelic 3D cinematic 16:9: an impossible cathedral of refractive glass petals and floating chrome orbs, magenta and cyan volumetric light, daisy motifs etched in crystal, no people, ultra detailed materials, dark cosmic void",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Deep Space Drift",
     "musicStyle": "Cosmic ambient",
-    "description": "api.x.ai grok-imagine-image-quality — glass cathedral abstract.",
+    "description": "api.x.ai grok-imagine-image-quality \u2014 glass cathedral abstract.",
     "theme": "Psychedelic 3D",
     "tags": [
       "xai-api",
       "psychedelic",
       "3d"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-xai-01-glass-cathedral.jpg"
   },
   {
     "id": "test-psy-xai-flower-nebula",
     "imageKind": "test",
-    "episode": "xAI API · psychedelic",
+    "episode": "xAI API \u00b7 psychedelic",
     "title": "Daisy Nebula",
     "prompt": "Psychedelic 3D still 16:9: a slowly rotating nebula shaped like a giant daisy, petals made of translucent gel and prismatic shards, pollen storms of gold dust, dreamlike depth, no text, short-film title card energy",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Orb background",
     "musicStyle": "Dream ambient",
-    "description": "api.x.ai — giant daisy nebula title-card energy.",
+    "description": "api.x.ai \u2014 giant daisy nebula title-card energy.",
     "theme": "Psychedelic 3D",
     "tags": [
       "xai-api",
       "psychedelic",
       "3d"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-xai-02-flower-nebula.jpg"
   },
   {
     "id": "test-psy-xai-klein-lattice",
     "imageKind": "test",
-    "episode": "xAI API · psychedelic",
+    "episode": "xAI API \u00b7 psychedelic",
     "title": "Klein Flower Lattice",
     "prompt": "Strange psychedelic 3D abstract 16:9: a Klein-bottle lattice of interlocking soft metallic tubes blooming with tiny wildflowers at every junction, electric lime and violet caustics, infinite recursive space, highly detailed",
     "promptVariations": [],
     "mediaType": "image",
     "musicCue": "Strange Light",
     "musicStyle": "Dark psychedelic",
-    "description": "api.x.ai — recursive Klein lattice with wildflower nodes.",
+    "description": "api.x.ai \u2014 recursive Klein lattice with wildflower nodes.",
     "theme": "Psychedelic 3D",
     "tags": [
       "xai-api",
       "psychedelic",
       "3d"
-    ]
+    ],
+    "imagePath": "images/psychedelic/psy-xai-03-klein-lattice.jpg"
   },
   {
     "id": "ep03-laser-serpent-awakening",
@@ -168,7 +176,8 @@
       "desert",
       "laser",
       "night"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image.jpg"
   },
   {
     "id": "ep03-rubella-signal",
@@ -190,7 +199,8 @@
       "signal",
       "rubella",
       "firelight"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image_004.jpg"
   },
   {
     "id": "ep03-snake-battle-canyon",
@@ -212,7 +222,8 @@
       "canyon",
       "serpent",
       "music-video"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image_005.jpg"
   },
   {
     "id": "ep03-static-altar",
@@ -234,7 +245,8 @@
       "shortwave",
       "ritual",
       "static"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image_006.jpg"
   },
   {
     "id": "ep03-fireline-exit",
@@ -256,7 +268,8 @@
       "dawn",
       "fireline",
       "aftermath"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image_007.jpg"
   },
   {
     "id": "character-reference-two",
@@ -278,7 +291,8 @@
       "reference",
       "duo",
       "portrait"
-    ]
+    ],
+    "imagePath": "characters/image_001.webp"
   },
   {
     "id": "character-reference-alt",
@@ -300,20 +314,21 @@
       "reference",
       "alternate",
       "portrait"
-    ]
+    ],
+    "imagePath": "characters/image_002.jpg"
   },
   {
     "id": "test-computer-room",
     "imageKind": "test",
     "episode": "Ideas / Meta",
-    "title": "Computer Room — Broadcast Control",
-    "prompt": "Dim retro broadcast control room with stacked CRT monitors, tangled cables, and a single operator silhouette lit by scan lines — meta-studio energy, 480p grain, Weeks on Fire production still, Grok Imagine style.",
+    "title": "Computer Room \u2014 Broadcast Control",
+    "prompt": "Dim retro broadcast control room with stacked CRT monitors, tangled cables, and a single operator silhouette lit by scan lines \u2014 meta-studio energy, 480p grain, Weeks on Fire production still, Grok Imagine style.",
     "promptVariations": [
       "Wide still of a cluttered server-and-CRT room at night, blue monitor glow on dust, analog switchboard, cinematic short-film grain.",
       "Over-shoulder at a control desk buried in cables, multiple feeds showing the same lace-clad duo, paranoid thriller lighting."
     ],
     "mediaType": "image",
-    "musicCue": "Rinse Cycle — sign-off hum",
+    "musicCue": "Rinse Cycle \u2014 sign-off hum",
     "musicStyle": "Institutional soft rock",
     "description": "Early mood board for the Meta-Studio / 480p feed huddle aesthetic.",
     "theme": "Meta Studio",
@@ -323,20 +338,21 @@
       "crt",
       "meta-studio",
       "480p"
-    ]
+    ],
+    "imagePath": "ideas/computer_room.jpg"
   },
   {
     "id": "test-hologram-glitch",
     "imageKind": "test",
     "episode": "Episode 03 / Ideas",
-    "title": "Hologram Glitch — Rubella Double",
-    "prompt": "Cinematic medium still of a glamorous woman at a silver vintage microphone as her body begins to fail — volumetric hologram scan lines, RGB channel split, digital static eating one shoulder, Monster Mash finale reveal energy, Grok Imagine style.",
+    "title": "Hologram Glitch \u2014 Rubella Double",
+    "prompt": "Cinematic medium still of a glamorous woman at a silver vintage microphone as her body begins to fail \u2014 volumetric hologram scan lines, RGB channel split, digital static eating one shoulder, Monster Mash finale reveal energy, Grok Imagine style.",
     "promptVariations": [
       "Split frame: glitching hologram singer above, real performer in white spy gear in under-stage shadows below.",
       "Close on RGB-fringed hologram face still performing mid-lyric, projector haze, cold cyan versus warm party light."
     ],
     "mediaType": "image",
-    "musicCue": "The Monster Mash (Finale) — bridge glitch",
+    "musicCue": "The Monster Mash (Finale) \u2014 bridge glitch",
     "musicStyle": "Halloween novelty-rock",
     "description": "Visual experiment for the hologram reveal beat in the Monster Mash finale.",
     "theme": "Hologram Reveal",
@@ -346,22 +362,23 @@
       "glitch",
       "monster-mash",
       "rubella"
-    ]
+    ],
+    "imagePath": "ideas/hologram.webp"
   },
   {
     "id": "suggestion-molten-silver-sphere",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway",
-    "title": "Molten Silver Sphere — Beat-Sync Pulse",
+    "title": "Molten Silver Sphere \u2014 Beat-Sync Pulse",
     "prompt": "Cinematic 8K still of a glossy molten silver liquid-metal sphere hovering dead-center in a vast pitch-black cave, mercury-chrome skin with capillary ripples pulsating to a deep musical kick, cavern walls mid-flash between razor-sharp black-and-white checkerboard and electric neon line grids, chromatic specular ribbons racing across the chrome, Grok Imagine style.",
     "promptVariations": [
       "Orbital still: neon veins crawl along cave fault lines like circuitry, checkerboard afterimages ghost on wet stone.",
-      "Extreme macro dive into chrome surface — warped checkerboard and neon ribbons reflected in liquid metal."
+      "Extreme macro dive into chrome surface \u2014 warped checkerboard and neon ribbons reflected in liquid metal."
     ],
     "mediaType": "image",
-    "musicCue": "Twilight Time — warehouse pulse",
+    "musicCue": "Twilight Time \u2014 warehouse pulse",
     "musicStyle": "90s rave / beat-sync visual",
-    "description": "Prompt-only cutaway suggestion — pure visual experiment synced to Twilight Time. Generate stills before locking video.",
+    "description": "Prompt-only cutaway suggestion \u2014 pure visual experiment synced to Twilight Time. Generate stills before locking video.",
     "theme": "Visual Experiment",
     "tags": [
       "suggestion",
@@ -376,7 +393,7 @@
     "id": "suggestion-glam-sham-poo",
     "imageKind": "suggestion",
     "episode": "EyeWash Station",
-    "title": "Glam-Sham-Poo — Commercial Still Package",
+    "title": "Glam-Sham-Poo \u2014 Commercial Still Package",
     "prompt": "Cinematic still of exhausted glam-metal shampoo commercial energy: chrome bathroom set, screeching product bottle center frame, two women in black lace dead-pan behind a fog machine, Gang vocals on GLAM-SHAM-POO spelled in neon, joke-commercial short-film still, Grok Imagine style.",
     "promptVariations": [
       "Product hero: oversized chrome shampoo bottle with GLAM-SHAM-POO label, stage fog, ring light, 80s commercial parody.",
@@ -385,7 +402,7 @@
     "mediaType": "image",
     "musicCue": "Ultra Screech (Glam-Sham-Poo)",
     "musicStyle": "Glam metal joke commercial",
-    "description": "Stills-first package for the Ultra Screech cutaway — see ideas/glam-sham-poo-commercial.md for full beat sheet.",
+    "description": "Stills-first package for the Ultra Screech cutaway \u2014 see ideas/glam-sham-poo-commercial.md for full beat sheet.",
     "theme": "Commercial Parody",
     "tags": [
       "suggestion",
@@ -399,16 +416,16 @@
     "id": "suggestion-soft-gyre-hover",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "The Soft Gyre — A Hover",
+    "title": "The Soft Gyre \u2014 A Hover",
     "prompt": "Cinematic 8K photoreal 3D still of a house-sized hovering blob of glowing amorphous translucent gel floating a few hundred meters above a continuous floor of anvil thunderheads at golden-violet dusk, internal lava-lamp lobes and a slow gold-glass helix readable through the skin, oil-slick meniscus ridges gathering at the equator, three gold-white sparks just peeling off the limb, warm undersun lighting the cloud bottoms from below while the stratosphere above is crushed violet with a few hard stars, ultraviolet rim light on the gel, no ground no city no people, anamorphic 2.39:1, Arri Alexa look, short-film production still, Grok Imagine style",
     "promptVariations": [
       "Low angle from inside the cloud deck looking up at the gel gyre, ultraviolet rim, Grok Imagine",
       "Hero lock: full body centered, three sparks just leaving the equator, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Porch Light Meridian / Strange Light — instrumental lean",
-    "musicStyle": "Celestial downtempo, 64–72 BPM",
-    "description": "Shot A (0:00–0:06). Identity lock for the 30s psychedelic cutaway — spin starts, three sparks peel off.",
+    "musicCue": "Porch Light Meridian / Strange Light \u2014 instrumental lean",
+    "musicStyle": "Celestial downtempo, 64\u201372 BPM",
+    "description": "Shot A (0:00\u20130:06). Identity lock for the 30s psychedelic cutaway \u2014 spin starts, three sparks peel off.",
     "theme": "The Soft Gyre",
     "tags": [
       "suggestion",
@@ -417,22 +434,23 @@
       "clouds",
       "abstract",
       "hover"
-    ]
+    ],
+    "imagePath": "ideas/soft-gyre/shot-a-hover.jpg"
   },
   {
     "id": "suggestion-soft-gyre-weather",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "The Soft Gyre — B Weather",
-    "prompt": "Cinematic 8K photoreal 3D still, three-quarter view: the same hovering translucent gel gyre left of frame above anvil thunderheads, clockwise skin spin implied by stretched meniscus, two wet ejecta already in the air — a raspberry gelatin cube tumbling and an electric-lime ribbon stretching downward — one memory-foam dent already in the nearest cloud, warm undersun from below, ultraviolet rim, gold-glass helix visible inside, sparks counter-rotating against the body, no people, 2.39:1 anamorphic, Grok Imagine style",
+    "title": "The Soft Gyre \u2014 B Weather",
+    "prompt": "Cinematic 8K photoreal 3D still, three-quarter view: the same hovering translucent gel gyre left of frame above anvil thunderheads, clockwise skin spin implied by stretched meniscus, two wet ejecta already in the air \u2014 a raspberry gelatin cube tumbling and an electric-lime ribbon stretching downward \u2014 one memory-foam dent already in the nearest cloud, warm undersun from below, ultraviolet rim, gold-glass helix visible inside, sparks counter-rotating against the body, no people, 2.39:1 anamorphic, Grok Imagine style",
     "promptVariations": [
       "Macro on the tumbling raspberry cube with the gyre soft in the background, Grok Imagine",
       "Cloud dent close-up holding the cube's shape for one beat, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Porch Light Meridian — first THROW / FLOOR exchange",
-    "musicStyle": "Celestial downtempo, 64–72 BPM",
-    "description": "Shot B (0:06–0:12). Raspberry cube and lime ribbon hit the deck; one cloud takes a memory-foam dent.",
+    "musicCue": "Porch Light Meridian \u2014 first THROW / FLOOR exchange",
+    "musicStyle": "Celestial downtempo, 64\u201372 BPM",
+    "description": "Shot B (0:06\u20130:12). Raspberry cube and lime ribbon hit the deck; one cloud takes a memory-foam dent.",
     "theme": "The Soft Gyre",
     "tags": [
       "suggestion",
@@ -441,22 +459,23 @@
       "jello",
       "lightning",
       "weather"
-    ]
+    ],
+    "imagePath": "ideas/soft-gyre/shot-b-weather.jpg"
   },
   {
     "id": "suggestion-soft-gyre-interior",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "The Soft Gyre — C Interior",
+    "title": "The Soft Gyre \u2014 C Interior",
     "prompt": "Extreme cinematic 8K macro still looking into a translucent glowing amorphous gel body, skin filling most of the frame with oil-slick meniscus and a melting icosahedral facet, nested raspberry and lime lava-lamp lobes, a gold-glass double helix turning through the middle, two trapped bubbles each containing a tiny anvil-cloud lit from below, a phosphor-gold spark forming in a convection cell near camera, dusk cloud floor softly blurred far below the lower limb, ultraviolet rim, photoreal 3D, Grok Imagine style",
     "promptVariations": [
       "Single bubble close-up: miniature anvil-cloud inside gel, Grok Imagine",
       "Helix only, lobes out of focus, spark nucleating, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Porch Light Meridian — intimate mid-section",
-    "musicStyle": "Celestial downtempo, 64–72 BPM",
-    "description": "Shot C (0:12–0:18). Push through the skin: helix, cloud-bubbles, a spark born inside.",
+    "musicCue": "Porch Light Meridian \u2014 intimate mid-section",
+    "musicStyle": "Celestial downtempo, 64\u201372 BPM",
+    "description": "Shot C (0:12\u20130:18). Push through the skin: helix, cloud-bubbles, a spark born inside.",
     "theme": "The Soft Gyre",
     "tags": [
       "suggestion",
@@ -465,22 +484,23 @@
       "macro",
       "helix",
       "interior"
-    ]
+    ],
+    "imagePath": "ideas/soft-gyre/shot-c-interior.jpg"
   },
   {
     "id": "suggestion-soft-gyre-answer",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "The Soft Gyre — D Answer",
+    "title": "The Soft Gyre \u2014 D Answer",
     "prompt": "Cinematic 8K photoreal 3D still of the hovering gel gyre above anvil clouds, a single pale vapor tendril rising from a lime-glowing lantern cloud toward the blob's underside, not yet touching, glass-flower crystal already blooming on a neighboring anvil where a spark planted, ejecta ribbons in the air counter-rotating, body slightly off-axis as if about to wobble, warm undersun, violet stratosphere, 2.39:1, Grok Imagine style",
     "promptVariations": [
       "Tendril almost touching the gel underside, lime glow from below, Grok Imagine",
       "Glass flower only on a dark anvil cloud, gyre small in the sky, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Porch Light Meridian — the cloud answers",
-    "musicStyle": "Celestial downtempo, 64–72 BPM",
-    "description": "Shot D (0:18–0:24). Lime-lantern cloud sends a vapor tendril up. Glass flower on the next anvil.",
+    "musicCue": "Porch Light Meridian \u2014 the cloud answers",
+    "musicStyle": "Celestial downtempo, 64\u201372 BPM",
+    "description": "Shot D (0:18\u20130:24). Lime-lantern cloud sends a vapor tendril up. Glass flower on the next anvil.",
     "theme": "The Soft Gyre",
     "tags": [
       "suggestion",
@@ -489,22 +509,23 @@
       "tendril",
       "glass-flower",
       "answer"
-    ]
+    ],
+    "imagePath": "ideas/soft-gyre/shot-d-answer.jpg"
   },
   {
     "id": "suggestion-soft-gyre-soft-set",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "The Soft Gyre — E Soft set",
+    "title": "The Soft Gyre \u2014 E Soft set",
     "prompt": "Cinematic 8K photoreal wide still of the same gel gyre now smaller in frame above a vast anvil-cloud sea, spin almost spent, a faint gold spark-halo ringing the body, one glass flower catching light on the nearest cloud, a hole in the deck letting a single warm undersun flare up, crushed-violet sky with hard stars, ultraviolet remnant rim on the gel, quiet after-chaos, 2.39:1 anamorphic, Grok Imagine style",
     "promptVariations": [
       "Wide only: tiny gyre, one flare, one flower, Grok Imagine",
       "Undersun flare through a hole, gyre as silhouette, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Porch Light Meridian — flare is the last note",
-    "musicStyle": "Celestial downtempo, 64–72 BPM",
-    "description": "Shot E (0:24–0:30). Pull-back: spark-halo, glass flower, undersun through a hole in the deck.",
+    "musicCue": "Porch Light Meridian \u2014 flare is the last note",
+    "musicStyle": "Celestial downtempo, 64\u201372 BPM",
+    "description": "Shot E (0:24\u20130:30). Pull-back: spark-halo, glass flower, undersun through a hole in the deck.",
     "theme": "The Soft Gyre",
     "tags": [
       "suggestion",
@@ -513,22 +534,24 @@
       "halo",
       "undersun",
       "wide"
-    ]
+    ],
+    "imagePath": "ideas/soft-gyre/shot-e-soft-set.jpg"
   },
   {
     "id": "suggestion-well-fall-lip",
     "imageKind": "suggestion",
     "episode": "Musical Cutaway / Visual Experiment",
-    "title": "Well Fall — Lip of the Well",
+    "title": "Well Fall \u2014 Lip of the Well",
+    "imagePath": "images/well-fall/wf-a-lip.jpg",
     "prompt": "Cinematic 2.39:1 photoreal still at the lip of an old stone well in dry California hills, circular brick and fieldstone ring, dark cylinder dropping out of frame, a pale disk of sky or porch light on the water far below or none at all, no people, no text, crushed blacks, 35mm anamorphic, short-film production still, Grok Imagine style",
     "promptVariations": [
       "Looking straight down the cylinder from the lip, sky as a thin ring, Grok Imagine",
       "Wide: well in a dry backyard, HOA fence distant, mouth as a black coin, Grok Imagine"
     ],
     "mediaType": "image",
-    "musicCue": "Well Fall — clean harmonics + drip, then the drop",
+    "musicCue": "Well Fall \u2014 clean harmonics + drip, then the drop",
     "musicStyle": "Instrumental heavy metal, 144 BPM",
-    "description": "Locked lip for the Well Fall cutaway. Sights B–H stay open in ideas/well-fall.md — write what we see as we fall.",
+    "description": "Locked lip for the Well Fall cutaway. Open sights B–H on Suggestions — click a candidate from the sight bank to preview what we see as we fall.",
     "theme": "Well Fall",
     "tags": [
       "suggestion",

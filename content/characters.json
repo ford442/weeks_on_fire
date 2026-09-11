@@ -2,7 +2,7 @@
   {
     "id": "lillith",
     "name": "Lillith Vale",
-    "role": "The Instigator — black-lace cabaret energy",
+    "role": "The Instigator \u2014 black-lace cabaret energy",
     "episodes": [
       "Episode 01",
       "Episode 02",
@@ -14,7 +14,7 @@
       "Competitive",
       "Never smudges mascara"
     ],
-    "bio": "One half of the glamorous Vale duo. Impulsive, cutting, and terrified of boredom more than death. Leads educational cabaret duets, HOA confrontations, and parallel spy heists with clinical calm. In the Studio Huddle she is the analytical note-giver — barista informants, coded quiet, world logic.",
+    "bio": "One half of the glamorous Vale duo. Impulsive, cutting, and terrified of boredom more than death. Leads educational cabaret duets, HOA confrontations, and parallel spy heists with clinical calm. In the Studio Huddle she is the analytical note-giver \u2014 barista informants, coded quiet, world logic.",
     "props": [
       "Ping-pong paddle",
       "Champagne flute",
@@ -26,12 +26,13 @@
       "lace",
       "duet",
       "spy"
-    ]
+    ],
+    "imagePath": "characters/image_001.webp"
   },
   {
     "id": "rubella",
     "name": "Rubella Vale",
-    "role": "The Witness — lead singer & hologram bait",
+    "role": "The Witness \u2014 lead singer & hologram bait",
     "episodes": [
       "Episode 01",
       "Episode 02",
@@ -43,7 +44,7 @@
       "Cabaret-spooky commitment",
       "Precise wrongness"
     ],
-    "bio": "The other half of the Vale duo. Delivers pseudoscience lectures, covers Monster Mash on the post-battle lawn, and may be a hologram. White spy gear reveal optional. In the Studio Huddle she is the practical truth-teller — seventeen bowls of Weeks on Fire cereal, cinnamon and battery acid, eight bowls of oatmeal tops.",
+    "bio": "The other half of the Vale duo. Delivers pseudoscience lectures, covers Monster Mash on the post-battle lawn, and may be a hologram. White spy gear reveal optional. In the Studio Huddle she is the practical truth-teller \u2014 seventeen bowls of Weeks on Fire cereal, cinnamon and battery acid, eight bowls of oatmeal tops.",
     "props": [
       "Silver vintage microphone",
       "Hawaiian lei (basalt cutaway)",
@@ -54,15 +55,16 @@
       "lace",
       "monster-mash",
       "spy"
-    ]
+    ],
+    "imagePath": "characters/image_002.jpg"
   },
   {
     "id": "qing-rao",
     "name": "Qing Rao",
-    "nameNote": "清饶 — “clear abundance”",
-    "role": "Crystal-skull keeper — elegant lawn observer",
+    "nameNote": "\u6e05\u9976 \u2014 \u201cclear abundance\u201d",
+    "role": "Crystal-skull keeper \u2014 elegant lawn observer",
     "episodes": [
-      "Episode 03 — Monster Mash Finale"
+      "Episode 03 \u2014 Monster Mash Finale"
     ],
     "traits": [
       "Chinese",
@@ -70,7 +72,7 @@
       "Unfazed by Nixon, Furbies, or Cthulhu tentacles",
       "Treats a glowing skull like a wine glass"
     ],
-    "bio": "The Chinese lady on the Halloween lawn ensemble is named Qing Rao. Dark hair, understated elegance — visually distinct from the near-identical black-lace trio. She cradles a glowing transparent crystal skull with lecturer calm and delivers minimal, precise dialogue that lands slightly wrong for the moment. Natural counterpoint to Madelin’s manic skull-tote energy.",
+    "bio": "The Chinese lady on the Halloween lawn ensemble is named Qing Rao. Dark hair, understated elegance \u2014 visually distinct from the near-identical black-lace trio. She cradles a glowing transparent crystal skull with lecturer calm and delivers minimal, precise dialogue that lands slightly wrong for the moment. Natural counterpoint to Madelin\u2019s manic skull-tote energy.",
     "props": [
       "Glowing transparent crystal skull"
     ],
@@ -79,21 +81,22 @@
       "monster-mash",
       "lawn-ensemble",
       "crystal-skull"
-    ]
+    ],
+    "imagePath": "episodes/episode-03/image_004.jpg"
   },
   {
     "id": "justine",
     "name": "Justine",
-    "role": "Deadpan finisher — fourth core lawn cast",
+    "role": "Deadpan finisher \u2014 fourth core lawn cast",
     "episodes": [
-      "Episode 03 — Monster Mash Finale"
+      "Episode 03 \u2014 Monster Mash Finale"
     ],
     "traits": [
       "Younger",
       "Dark-haired",
       "Dry one-liners like gavels"
     ],
-    "bio": "Fourth member of the Halloween lawn ensemble — younger and dark-haired, distinct from the lace sisters. Appears uninvolved until she is the only one with a solution. On the vintage couch during chorus 2; may hold the crystal skull while Qing Rao mingles.",
+    "bio": "Fourth member of the Halloween lawn ensemble \u2014 younger and dark-haired, distinct from the lace sisters. Appears uninvolved until she is the only one with a solution. On the vintage couch during chorus 2; may hold the crystal skull while Qing Rao mingles.",
     "props": [
       "Coffee cup",
       "USB cores",
@@ -108,9 +111,9 @@
   {
     "id": "madelin",
     "name": "Madelin",
-    "role": "Manic bag lady — skull-tote chaos agent",
+    "role": "Manic bag lady \u2014 skull-tote chaos agent",
     "episodes": [
-      "Episode 03 — Monster Mash Finale",
+      "Episode 03 \u2014 Monster Mash Finale",
       "Ping-pong scene concept"
     ],
     "traits": [
@@ -133,9 +136,9 @@
   {
     "id": "scarlet",
     "name": "Scarlet",
-    "role": "Silent third sister — sidewalk lecture flank",
+    "role": "Silent third sister \u2014 sidewalk lecture flank",
     "episodes": [
-      "Episode 03 — Spooky Telephone Poles"
+      "Episode 03 \u2014 Spooky Telephone Poles"
     ],
     "traits": [
       "Matching black lace",
@@ -151,7 +154,8 @@
       "ep3",
       "lace",
       "utility-poles"
-    ]
+    ],
+    "imagePath": "characters/image_001.webp"
   },
   {
     "id": "pizza-guy",
@@ -167,7 +171,7 @@
       "Perfect posture",
       "Phone always at 23% battery"
     ],
-    "bio": "The universe’s only constant. Red uniform rotates by episode. Never explains, never lingers, never wrong about the name on the order. Delivers through laser battles like any other Tuesday.",
+    "bio": "The universe\u2019s only constant. Red uniform rotates by episode. Never explains, never lingers, never wrong about the name on the order. Delivers through laser battles like any other Tuesday.",
     "props": [
       "Pizza bag",
       "Red uniform (rotating)",
@@ -182,10 +186,10 @@
   {
     "id": "riley-smith",
     "name": "Riley Smith",
-    "role": "The stranger on the center line — unemployed technician with good data",
+    "role": "The stranger on the center line \u2014 unemployed technician with good data",
     "episodes": [
-      "Episode 04 — The Long Way Up",
-      "Episode 04 — No Other Human Sounds"
+      "Episode 04 \u2014 The Long Way Up",
+      "Episode 04 \u2014 No Other Human Sounds"
     ],
     "traits": [
       "Never wrong about a fact",
@@ -193,7 +197,7 @@
       "Answers the question asked, then the number",
       "Last name is aggressively adequate"
     ],
-    "bio": "Sun-bleached, trail-worn, size-seven boots. Nine years of site surveys: drive to hardware nobody has thought about since the Clinton administration and write down whether it is still there. It is almost always still there. That is the finding. Contract ended; she declined a desk in Bakersfield. The 4Runner is in her brother Darren’s driveway in Tulare. The amethyst was fourteen dollars in Bishop. Songs get a date and a wind direction. Keep her above five thousand feet.",
+    "bio": "Sun-bleached, trail-worn, size-seven boots. Nine years of site surveys: drive to hardware nobody has thought about since the Clinton administration and write down whether it is still there. It is almost always still there. That is the finding. Contract ended; she declined a desk in Bakersfield. The 4Runner is in her brother Darren\u2019s driveway in Tulare. The amethyst was fourteen dollars in Bishop. Songs get a date and a wind direction. Keep her above five thousand feet.",
     "props": [
       "Forty-liter pack",
       "Notebook (left page site, right page weather)",
@@ -210,7 +214,7 @@
   },
   {
     "id": "kenji-shred-sato",
-    "name": "Kenji “Shred” Sato",
+    "name": "Kenji \u201cShred\u201d Sato",
     "role": "Glam-Sham-Poo brand ambassador / alumnus",
     "episodes": [
       "Musical Cutaway / EyeWash"

@@ -86,9 +86,10 @@ instrumental metal because someone went down a well. Full stack. No wink.
 **Setting & Atmosphere:** Real stone well. Dry California hills or a backyard
 that forgot it had a well. The well is quiet. The metal is non-diegetic.
 
-**Key Visuals (Grok Imagine prompt seeds):** Lip locked. Sights B–H are empty —
-fill the bank in [`ideas/well-fall.md`](../ideas/well-fall.md). Templates:
-[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md).
+**Key Visuals (Grok Imagine prompt seeds):** Lip locked. Sight bank is on
+Suggestions (`/suggestions/well-fall`). Templates:
+[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md). Workshop:
+[`ideas/well-fall.md`](../ideas/well-fall.md).
 
 **Narrative Beats / Action:** Stand at the ring → fall → see things (unassigned)
 → bottom or none.
@@ -112,7 +113,7 @@ Open slots use a `[SIGHT]` template.
 **Variations or Alternate Takes:** Looking-up twin (mouth as a shrinking coin).
 H can be impact, reverse, sky, or still falling.
 
-**Status / Next Step:** Idea — fill the sight bank, then generate stills.
+**Status / Next Step:** Idea — preview sights on Suggestions, lock B–H later, then generate stills.
 
 ---
 

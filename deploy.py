@@ -81,7 +81,9 @@ def build_zip(build_path: Path, skip_sizes=None) -> bytes:
                 continue
             rel_s = str(rel).replace("\\", "/")
             local_size = file.stat().st_size
-            if (skip_sizes or {}).get(rel_s) == local_size:
+            # index/404 hashes change even when byte length does not; always send them.
+            always_upload = rel_s in {"index.html", "404.html", ".htaccess", "1ink.1ink"}
+            if not always_upload and (skip_sizes or {}).get(rel_s) == local_size:
                 print(f"  = {rel} ({local_size} bytes, unchanged)")
                 continue
             zf.write(file, rel_s)

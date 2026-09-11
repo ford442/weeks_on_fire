@@ -17,7 +17,7 @@ export function pathnameToView(pathname: string): SiteView {
   if (normalized.startsWith('/songs')) return 'songs';
   if (normalized === '/timeline') return 'timeline';
   if (normalized === '/daisy-bell') return 'daisy-bell';
-  if (normalized === '/suggestions') return 'suggestions';
+  if (normalized.startsWith('/suggestions')) return 'suggestions';
   if (normalized === '/characters') return 'characters';
   if (normalized === '/staff') return 'staff';
 

@@ -61,9 +61,11 @@ No edits to `src/data/songs.ts` are required.
 
 2. **Optional:** set `"segmentsSource": "prompts/your-cutaway-segments.md"` instead of inline `segments` when timed Grok/Gemini prompts live in `prompts/`. Codegen parses `## A — Title (0:00–0:08)` headers when present; otherwise keep `segments` inline in JSON.
 
-3. `songId` must match a song `id` from `songs/*.md` frontmatter.
+3. **Optional:** `"sightBank"` — candidate sights for open `[SIGHT]` slots (Well Fall). Each item: `id`, `title`, `category`, `lane` (`fall` for mid-drop slots, `ending` for the last open slot), `prompt` (replaces `[SIGHT]`), `description`. Shown as a click-to-preview picker on Suggestions. Does not lock slots.
 
-4. Run `npm run codegen` and commit.
+4. `songId` must match a song `id` from `songs/*.md` frontmatter.
+
+5. Run `npm run codegen` and commit.
 
 ## Gallery, characters, Daisy Bell
 

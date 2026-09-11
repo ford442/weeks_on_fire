@@ -5,7 +5,8 @@ Song: [`songs/Well_Fall.md`](../songs/Well_Fall.md) (~90s, instrumental heavy me
 Visible on Suggestions as `well-fall` (Musical).
 
 **A is locked. B–G are empty sight slots. H is the open bottom.**
-Fill the bank in the idea file, then replace `[SIGHT]` here.
+Preview candidates on Suggestions (`/suggestions/well-fall`). Replace `[SIGHT]`
+here only after a slot is locked.
 
 ## Visual arc
 

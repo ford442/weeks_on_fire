@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   Check,
   Copy,
@@ -8,11 +9,13 @@ import {
   Search,
   Sparkles,
   Timer,
+  X,
 } from 'lucide-react';
 import {
   cutawaySuggestions,
   type CutawaySegment,
   type CutawaySuggestion,
+  type SightCandidate,
   type SuggestionKind,
 } from '../data/suggestions';
 import {
@@ -22,6 +25,8 @@ import {
 } from '../data/sceneDialogVersions';
 
 const allValue = 'All';
+const sightToken = '[SIGHT]';
+const previewStoragePrefix = 'weeks-on-fire:sight-previews:';
 
 const kindLabel: Record<SuggestionKind, string> = {
   musical: 'Musical',
@@ -29,16 +34,93 @@ const kindLabel: Record<SuggestionKind, string> = {
   scene: 'Scenes',
 };
 
+function applySightToPrompt(template: string, prompt: string): string {
+  return template.replaceAll(sightToken, prompt);
+}
+
+function isOpenSlot(segment: CutawaySegment): boolean {
+  return segment.grokImaginePrompt.includes(sightToken);
+}
+
+function openSlots(segments: CutawaySegment[]): CutawaySegment[] {
+  return segments.filter(isOpenSlot);
+}
+
+function endingSlot(segments: CutawaySegment[]): CutawaySegment | undefined {
+  const open = openSlots(segments);
+  return open[open.length - 1];
+}
+
+function fallSlots(segments: CutawaySegment[]): CutawaySegment[] {
+  const open = openSlots(segments);
+  return open.slice(0, Math.max(0, open.length - 1));
+}
+
+function slotLane(
+  segment: CutawaySegment,
+  segments: CutawaySegment[],
+): 'locked' | 'fall' | 'ending' {
+  if (!isOpenSlot(segment)) {
+    return 'locked';
+  }
+  return endingSlot(segments)?.id === segment.id ? 'ending' : 'fall';
+}
+
+function segmentLetter(segment: CutawaySegment): string {
+  const letter = segment.label.split('—')[0]?.trim();
+  return letter || segment.label;
+}
+
+function loadPreviews(cutawayId: string): Record<string, string> {
+  try {
+    const raw = window.localStorage.getItem(`${previewStoragePrefix}${cutawayId}`);
+    if (!raw) {
+      return {};
+    }
+    const parsed: unknown = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      return {};
+    }
+    const next: Record<string, string> = {};
+    for (const [key, value] of Object.entries(parsed)) {
+      if (typeof value === 'string') {
+        next[key] = value;
+      }
+    }
+    return next;
+  } catch {
+    return {};
+  }
+}
+
+function savePreviews(cutawayId: string, map: Record<string, string>) {
+  try {
+    window.localStorage.setItem(`${previewStoragePrefix}${cutawayId}`, JSON.stringify(map));
+  } catch {
+    // private mode / quota
+  }
+}
+
 export default function Suggestions() {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [kind, setKind] = useState<typeof allValue | SuggestionKind>(allValue);
   const [query, setQuery] = useState('');
-  const [selectedId, setSelectedId] = useState(cutawaySuggestions[0]?.id ?? '');
+  const [selectedId, setSelectedId] = useState(
+    id && cutawaySuggestions.some((cutaway) => cutaway.id === id)
+      ? id
+      : (cutawaySuggestions[0]?.id ?? ''),
+  );
   const [activeSegmentId, setActiveSegmentId] = useState(
-    cutawaySuggestions[0]?.segments[0]?.id ?? '',
+    cutawaySuggestions.find((cutaway) => cutaway.id === id)?.segments[0]?.id ??
+      cutawaySuggestions[0]?.segments[0]?.id ??
+      '',
   );
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
   const [workspaceTab, setWorkspaceTab] = useState<'prompts' | 'dialog'>('prompts');
   const [expandedExchangeId, setExpandedExchangeId] = useState<string | null>(null);
+  const [previewBySegment, setPreviewBySegment] = useState<Record<string, string>>({});
+  const [sightCategory, setSightCategory] = useState(allValue);
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -63,16 +145,32 @@ export default function Suggestions() {
     });
   }, [kind, query]);
 
-  const selected = useMemo(
-    () => filtered.find((cutaway) => cutaway.id === selectedId) ?? filtered[0],
-    [filtered, selectedId],
-  );
+  const selected = useMemo(() => {
+    const fromCatalog = cutawaySuggestions.find((cutaway) => cutaway.id === selectedId);
+    return filtered.find((cutaway) => cutaway.id === selectedId) ?? fromCatalog ?? filtered[0];
+  }, [filtered, selectedId]);
 
   const activeSegment = useMemo(
     () =>
       selected?.segments.find((segment) => segment.id === activeSegmentId) ?? selected?.segments[0],
     [activeSegmentId, selected],
   );
+
+  useEffect(() => {
+    if (id) {
+      const match = cutawaySuggestions.find((cutaway) => cutaway.id === id);
+      if (match) {
+        setSelectedId(match.id);
+        return;
+      }
+      navigate('/suggestions', { replace: true });
+      return;
+    }
+
+    if (cutawaySuggestions[0] && !selectedId) {
+      setSelectedId(cutawaySuggestions[0].id);
+    }
+  }, [id, navigate, selectedId]);
 
   useEffect(() => {
     if (!selected) {
@@ -86,6 +184,111 @@ export default function Suggestions() {
       setActiveSegmentId(selected.segments[0]?.id ?? '');
     }
   }, [activeSegmentId, selected, selectedId]);
+
+  useEffect(() => {
+    if (!selected?.id) {
+      setPreviewBySegment({});
+      return;
+    }
+    setPreviewBySegment(loadPreviews(selected.id));
+    setSightCategory(allValue);
+  }, [selected?.id]);
+
+  const sightBank = useMemo(() => selected?.sightBank ?? [], [selected]);
+
+  const sightCategories = useMemo(() => {
+    const seen: string[] = [];
+    for (const sight of sightBank) {
+      if (!seen.includes(sight.category)) {
+        seen.push(sight.category);
+      }
+    }
+    return seen;
+  }, [sightBank]);
+
+  const filteredSights = useMemo(() => {
+    if (sightCategory === allValue) {
+      return sightBank;
+    }
+    return sightBank.filter((sight) => sight.category === sightCategory);
+  }, [sightBank, sightCategory]);
+
+  const previewSightBySegment = useMemo(() => {
+    const map = new Map<string, SightCandidate>();
+    if (!selected?.sightBank) {
+      return map;
+    }
+    for (const [segmentId, sightId] of Object.entries(previewBySegment)) {
+      const sight = selected.sightBank.find((candidate) => candidate.id === sightId);
+      if (sight) {
+        map.set(segmentId, sight);
+      }
+    }
+    return map;
+  }, [previewBySegment, selected]);
+
+  const slotLettersBySight = useMemo(() => {
+    const map = new Map<string, string[]>();
+    if (!selected) {
+      return map;
+    }
+    for (const [segmentId, sightId] of Object.entries(previewBySegment)) {
+      const segment = selected.segments.find((entry) => entry.id === segmentId);
+      if (!segment) {
+        continue;
+      }
+      const letters = map.get(sightId) ?? [];
+      letters.push(segmentLetter(segment));
+      map.set(sightId, letters);
+    }
+    return map;
+  }, [previewBySegment, selected]);
+
+  const persistPreviews = (cutawayId: string, next: Record<string, string>) => {
+    setPreviewBySegment(next);
+    savePreviews(cutawayId, next);
+  };
+
+  const assignSight = (sight: SightCandidate) => {
+    if (!selected) {
+      return;
+    }
+    const active = selected.segments.find((segment) => segment.id === activeSegmentId);
+    const activeKind = active ? slotLane(active, selected.segments) : 'locked';
+    let targetId = activeSegmentId;
+
+    if (sight.lane === 'ending') {
+      targetId = endingSlot(selected.segments)?.id ?? targetId;
+    } else if (activeKind !== 'fall') {
+      targetId = fallSlots(selected.segments)[0]?.id ?? targetId;
+    }
+
+    const target = selected.segments.find((segment) => segment.id === targetId);
+    if (!target || !isOpenSlot(target)) {
+      return;
+    }
+    if (slotLane(target, selected.segments) !== sight.lane) {
+      return;
+    }
+
+    setActiveSegmentId(target.id);
+    const next = { ...previewBySegment };
+    if (next[target.id] === sight.id) {
+      delete next[target.id];
+    } else {
+      next[target.id] = sight.id;
+    }
+    persistPreviews(selected.id, next);
+  };
+
+  const clearPreview = (segmentId: string) => {
+    if (!selected) {
+      return;
+    }
+    const next = { ...previewBySegment };
+    delete next[segmentId];
+    persistPreviews(selected.id, next);
+  };
 
   const counts = useMemo(() => {
     const next = { musical: 0, gag: 0, scene: 0 };
@@ -110,6 +313,9 @@ export default function Suggestions() {
     setActiveSegmentId(cutaway.segments[0]?.id ?? '');
     setWorkspaceTab('prompts');
     setExpandedExchangeId(null);
+    if (id !== cutaway.id) {
+      navigate(`/suggestions/${cutaway.id}`);
+    }
   };
 
   const dialogVersions = useMemo(
@@ -209,6 +415,11 @@ export default function Suggestions() {
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1">
                     <Sparkles size={14} /> {cutaway.segments.length} segments
                   </span>
+                  {cutaway.sightBank && cutaway.sightBank.length > 0 && (
+                    <span className="inline-flex items-center gap-1.5 rounded-md border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 text-violet-200">
+                      <Lightbulb size={14} /> {cutaway.sightBank.length} sights
+                    </span>
+                  )}
                   {getDialogVersionsForScene(cutaway.id) && (
                     <span className="inline-flex items-center gap-1.5 rounded-md border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 text-orange-200">
                       <MessageSquare size={14} />{' '}
@@ -247,6 +458,8 @@ export default function Suggestions() {
                         key={segment.id}
                         segment={segment}
                         active={activeSegment?.id === segment.id}
+                        previewTitle={previewSightBySegment.get(segment.id)?.title}
+                        locked={!isOpenSlot(segment) && Boolean(cutaway.sightBank?.length)}
                         onSelect={() => {
                           selectCutaway(cutaway);
                           setActiveSegmentId(segment.id);
@@ -297,12 +510,27 @@ export default function Suggestions() {
             onCopy={copyToClipboard}
           />
         ) : selected && activeSegment ? (
-          <SegmentDetail
-            cutaway={selected}
-            segment={activeSegment}
-            copiedKey={copiedKey}
-            onCopy={copyToClipboard}
-          />
+          <div className="space-y-5">
+            <SegmentDetail
+              cutaway={selected}
+              segment={activeSegment}
+              previewSight={previewSightBySegment.get(activeSegment.id)}
+              copiedKey={copiedKey}
+              onCopy={copyToClipboard}
+              onClearPreview={() => clearPreview(activeSegment.id)}
+            />
+            {sightBank.length > 0 && (
+              <SightBankPanel
+                sights={filteredSights}
+                categories={sightCategories}
+                activeCategory={sightCategory}
+                activeSightId={previewBySegment[activeSegment.id]}
+                slotLettersBySight={slotLettersBySight}
+                onCategory={setSightCategory}
+                onSelectSight={assignSight}
+              />
+            )}
+          </div>
         ) : (
           <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5 text-sm text-zinc-400">
             Select a suggestion to copy prompts.
@@ -310,6 +538,110 @@ export default function Suggestions() {
         )}
       </div>
     </section>
+  );
+}
+
+function SightBankPanel({
+  sights,
+  categories,
+  activeCategory,
+  activeSightId,
+  slotLettersBySight,
+  onCategory,
+  onSelectSight,
+}: {
+  sights: SightCandidate[];
+  categories: string[];
+  activeCategory: string;
+  activeSightId?: string;
+  slotLettersBySight: Map<string, string[]>;
+  onCategory: (category: string) => void;
+  onSelectSight: (sight: SightCandidate) => void;
+}) {
+  return (
+    <div className="rounded-lg border border-zinc-800 bg-zinc-950/95 p-4">
+      <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+        <div>
+          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            Sight bank
+          </h3>
+          <p className="mt-1 text-xs leading-5 text-zinc-500">
+            Click a fall sight into B–G, or an ending into H. Lip stays locked. Preview is not a
+            lock.
+          </p>
+        </div>
+        <p className="text-xs text-zinc-500">{sights.length} shown</p>
+      </div>
+      <div className="mb-3 flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={() => onCategory(allValue)}
+          className={`rounded-md border px-2.5 py-1 text-xs font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+            activeCategory === allValue
+              ? 'border-violet-400/60 bg-violet-500/15 text-violet-100'
+              : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
+          }`}
+        >
+          All
+        </button>
+        {categories.map((category) => (
+          <button
+            key={category}
+            type="button"
+            onClick={() => onCategory(category)}
+            className={`rounded-md border px-2.5 py-1 text-xs font-medium transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+              activeCategory === category
+                ? 'border-violet-400/60 bg-violet-500/15 text-violet-100'
+                : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+      <div className="grid max-h-[22rem] gap-2 overflow-y-auto pr-1">
+        {sights.map((sight) => {
+          const assigned = slotLettersBySight.get(sight.id) ?? [];
+          const isActive = activeSightId === sight.id;
+
+          return (
+            <button
+              key={sight.id}
+              type="button"
+              onClick={() => onSelectSight(sight)}
+              className={`rounded-md border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+                isActive
+                  ? 'border-violet-400/70 bg-violet-500/15'
+                  : 'border-zinc-800 bg-black/40 hover:border-zinc-600'
+              }`}
+            >
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <p className="text-sm font-semibold text-white">{sight.title}</p>
+                <div className="flex flex-wrap gap-1">
+                  {sight.lane === 'ending' && (
+                    <span className="rounded border border-amber-500/30 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-200">
+                      H only
+                    </span>
+                  )}
+                  {assigned.map((letter) => (
+                    <span
+                      key={`${sight.id}:${letter}`}
+                      className="rounded border border-violet-500/30 bg-violet-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-violet-200"
+                    >
+                      {letter}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-zinc-500">
+                {sight.category}
+              </p>
+              <p className="mt-1.5 text-xs leading-5 text-zinc-400">{sight.description}</p>
+            </button>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 
@@ -355,10 +687,12 @@ function StatusBadge({ status }: { status: CutawaySuggestion['status'] }) {
 interface SegmentRowProps {
   segment: CutawaySegment;
   active: boolean;
+  previewTitle?: string;
+  locked?: boolean;
   onSelect: () => void;
 }
 
-function SegmentRow({ segment, active, onSelect }: SegmentRowProps) {
+function SegmentRow({ segment, active, previewTitle, locked, onSelect }: SegmentRowProps) {
   const timing =
     segment.durationSec === 0
       ? 'still'
@@ -377,7 +711,9 @@ function SegmentRow({ segment, active, onSelect }: SegmentRowProps) {
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="font-mono text-[11px] text-zinc-500">{timing}</p>
-          <p className="mt-1 text-sm font-semibold text-white">{segment.label}</p>
+          <p className="mt-1 text-sm font-semibold text-white">
+            {previewTitle ? `${segment.label} · ${previewTitle}` : segment.label}
+          </p>
         </div>
         {segment.stillUrl && (
           <img
@@ -387,7 +723,13 @@ function SegmentRow({ segment, active, onSelect }: SegmentRowProps) {
           />
         )}
       </div>
-      <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">{segment.onScreen}</p>
+      <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+        {previewTitle
+          ? 'Preview in this slot — not locked'
+          : locked
+            ? `${segment.onScreen} · lip locked`
+            : segment.onScreen}
+      </p>
     </button>
   );
 }
@@ -395,25 +737,69 @@ function SegmentRow({ segment, active, onSelect }: SegmentRowProps) {
 interface SegmentDetailProps {
   cutaway: CutawaySuggestion;
   segment: CutawaySegment;
+  previewSight?: SightCandidate;
   copiedKey: string | null;
   onCopy: (text: string, label: string, key: string) => void;
+  onClearPreview?: () => void;
 }
 
-function SegmentDetail({ cutaway, segment, copiedKey, onCopy }: SegmentDetailProps) {
+function SegmentDetail({
+  cutaway,
+  segment,
+  previewSight,
+  copiedKey,
+  onCopy,
+  onClearPreview,
+}: SegmentDetailProps) {
+  const grokPrompt = previewSight
+    ? applySightToPrompt(segment.grokImaginePrompt, previewSight.prompt)
+    : segment.grokImaginePrompt;
+  const geminiPrompt = previewSight
+    ? applySightToPrompt(segment.geminiOmniPrompt, previewSight.prompt)
+    : segment.geminiOmniPrompt;
+  const variations = previewSight
+    ? segment.promptVariations.map((variation) =>
+        applySightToPrompt(variation, previewSight.prompt),
+      )
+    : segment.promptVariations;
+
   return (
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
           {cutaway.title}
         </p>
-        <h2 className="mt-2 text-xl font-semibold leading-tight text-white">{segment.label}</h2>
+        <h2 className="mt-2 text-xl font-semibold leading-tight text-white">
+          {previewSight ? `${segment.label} · ${previewSight.title}` : segment.label}
+        </h2>
         <p className="mt-2 font-mono text-xs text-zinc-500">
           {segment.durationSec === 0
             ? 'Still'
             : `${segment.start} → ${segment.end} (${segment.durationSec}s)`}
         </p>
-        <p className="mt-3 text-sm leading-6 text-zinc-300">{segment.onScreen}</p>
+        <p className="mt-3 text-sm leading-6 text-zinc-300">
+          {previewSight ? previewSight.description : segment.onScreen}
+        </p>
       </div>
+
+      {previewSight && (
+        <div className="flex items-start justify-between gap-3 rounded-md border border-violet-500/30 bg-violet-500/10 px-3 py-2">
+          <p className="text-sm leading-6 text-violet-100">
+            Preview: {previewSight.title}
+            {previewSight.lane === 'ending' ? ' · H only' : ''}
+          </p>
+          {onClearPreview && (
+            <button
+              type="button"
+              onClick={onClearPreview}
+              className="inline-flex shrink-0 items-center gap-1 rounded-md border border-violet-500/40 px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-violet-100 transition hover:border-violet-300 focus:outline-none focus:ring-2 focus:ring-orange-300"
+            >
+              <X size={12} />
+              Clear
+            </button>
+          )}
+        </div>
+      )}
 
       {segment.stillUrl && (
         <img
@@ -439,30 +825,29 @@ function SegmentDetail({ cutaway, segment, copiedKey, onCopy }: SegmentDetailPro
 
       <PromptBlock
         title="Grok Imagine Prompt"
-        text={segment.grokImaginePrompt}
+        text={grokPrompt}
         copied={copiedKey === `${segment.id}:grok`}
-        onCopy={() =>
-          onCopy(segment.grokImaginePrompt, 'Grok Imagine prompt', `${segment.id}:grok`)
-        }
+        onCopy={() => onCopy(grokPrompt, 'Grok Imagine prompt', `${segment.id}:grok`)}
       />
 
       <PromptBlock
         title="Gemini Omni Prompt"
-        text={segment.geminiOmniPrompt}
+        text={geminiPrompt}
         copied={copiedKey === `${segment.id}:gemini`}
-        onCopy={() =>
-          onCopy(segment.geminiOmniPrompt, 'Gemini Omni prompt', `${segment.id}:gemini`)
-        }
+        onCopy={() => onCopy(geminiPrompt, 'Gemini Omni prompt', `${segment.id}:gemini`)}
       />
 
-      {segment.promptVariations.length > 0 && (
+      {variations.length > 0 && (
         <section>
           <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
             Variations
           </h3>
           <div className="space-y-3">
-            {segment.promptVariations.map((variation, index) => (
-              <div key={variation} className="rounded-md border border-zinc-800 bg-zinc-900/70 p-3">
+            {variations.map((variation, index) => (
+              <div
+                key={`${segment.id}:variation:${index}`}
+                className="rounded-md border border-zinc-800 bg-zinc-900/70 p-3"
+              >
                 <div className="mb-2 flex items-center justify-between gap-3">
                   <span className="text-xs font-semibold text-zinc-500">Variation {index + 1}</span>
                   <CopyButton

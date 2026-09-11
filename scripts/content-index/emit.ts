@@ -93,6 +93,14 @@ function emitCutawaySegment(segment: {
       }`;
 }
 
+function emitJsonValue(value: unknown, indent: number): string {
+  const pad = ' '.repeat(indent);
+  return JSON.stringify(value, null, 2)
+    .split('\n')
+    .map((line, index) => (index === 0 ? line : `${pad}${line}`))
+    .join('\n');
+}
+
 export function emitCutawaysModule(
   cutaways: Array<{
     id: string;
@@ -106,6 +114,14 @@ export function emitCutawaysModule(
     summary: string;
     visualArc: string;
     tags: string[];
+    sightBank?: Array<{
+      id: string;
+      title: string;
+      category: string;
+      lane: string;
+      prompt: string;
+      description: string;
+    }>;
     segments: Array<{
       id: string;
       label: string;
@@ -143,6 +159,10 @@ export function emitCutawaysModule(
         .map((segment) => emitCutawaySegment(segment, imageImports))
         .join(',\n');
 
+      const sightBankLine = cutaway.sightBank?.length
+        ? `\n    sightBank: ${emitJsonValue(cutaway.sightBank, 4)},`
+        : '';
+
       return `  {
     id: ${toTsString(cutaway.id)},
     kind: ${toTsString(cutaway.kind)},
@@ -154,7 +174,7 @@ export function emitCutawaysModule(
     songTitle: ${toTsString(cutaway.songTitle)},
     summary: ${toTsString(cutaway.summary)},
     visualArc: ${toTsString(cutaway.visualArc)},
-    tags: ${toTsStringArray(cutaway.tags)},
+    tags: ${toTsStringArray(cutaway.tags)},${sightBankLine}
     segments: [
 ${segments}
     ],

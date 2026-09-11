@@ -27,6 +27,15 @@ export const CutawaySegmentSchema = z.object({
   stillImagePath: z.string().optional(),
 });
 
+export const SightCandidateSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  category: z.string().min(1),
+  lane: z.enum(['fall', 'ending']),
+  prompt: z.string().min(1),
+  description: z.string().min(1),
+});
+
 export const CutawaySchema = z.object({
   id: z.string().min(1),
   kind: z.enum(['musical', 'gag', 'scene']),
@@ -42,6 +51,7 @@ export const CutawaySchema = z.object({
   segmentsSource: z.string().optional(),
   segmentStills: z.record(z.string(), z.string()).optional(),
   segments: z.array(CutawaySegmentSchema).optional(),
+  sightBank: z.array(SightCandidateSchema).optional(),
 });
 
 export const FilmSceneSchema = z.object({
@@ -122,6 +132,7 @@ export const DaisyBellSchema = z.object({
 
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
+export type SightCandidate = z.infer<typeof SightCandidateSchema>;
 export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;

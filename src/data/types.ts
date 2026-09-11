@@ -30,6 +30,17 @@ export interface CutawaySegment {
 
 export type SuggestionKind = 'musical' | 'gag' | 'scene';
 
+export type SightLane = 'fall' | 'ending';
+
+export interface SightCandidate {
+  id: string;
+  title: string;
+  category: string;
+  lane: SightLane;
+  prompt: string;
+  description: string;
+}
+
 export interface CutawaySuggestion {
   id: string;
   kind: SuggestionKind;
@@ -43,6 +54,7 @@ export interface CutawaySuggestion {
   visualArc: string;
   tags: string[];
   segments: CutawaySegment[];
+  sightBank?: SightCandidate[];
 }
 
 export type MediaType = 'image' | 'video';

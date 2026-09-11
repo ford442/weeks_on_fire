@@ -249,7 +249,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **The Soft Gyre** (the-soft-gyre) — A house-sized translucent gel blob hovers above anvil thunderheads, spins, and throws sparks and jello at the weather. Clouds dent, lantern, and grow glass flowers. The gyre spins clockwise; every ejecta counter-rotates. Five locked stills, ready to animate.
 - **Ultra-Refreshed Water Lab** (ultra-refreshed-water-lab) — The most refreshing glass of ice water in human history, delivered by an insanely complex window apparatus. Played completely straight.
 - **The Velvet Rope at the End of the World** (velvet-rope) — Bouncer enforces heels-or-no-entry while the skyline burns. She produces emergency stilettos. Approved.
-- **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Six open fall-sights plus an open bottom — write what we see on the way down in ideas/well-fall.md.
+- **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Click a sight into open slots B–G, or an ending into H — previews fill [SIGHT] in the prompts.
 
 ## Daisy Bell cutaway
 

@@ -61,19 +61,87 @@ Do not overwrite A. H stays open until we decide whether there is a bottom.
 
 ## Sight dump
 
-Unassigned. Copy a line into the table when it earns a slot.
+Unassigned sparks. Copy a line into the table when it earns a slot. Cross one
+off when it is promoted. Nothing here is locked, and nothing here is required.
 
--
+**House rule for this list:** everything is *in the shaft with us* or *is the
+shaft for a moment*. We do not cut away. The fall never pauses to explain.
 
--
+### The well forgets what it is
 
--
+- A ring of fire around the full circumference — no source, no heat haze on the
+  brick, we pass through the middle of it and come out the other side unlit
+- The brick gives way to raw mine timber and rail, an abandoned drift shaft,
+  ore cart tipped on its side halfway up a wall that is now a ceiling
+- Cut rock becomes poured concrete becomes hospital tile becomes brick again
+- A seam of wet clay with a doorknob in it, at the height a door would be
+- One course of brick is bathroom tile, grouted, clean, someone's shower
 
--
+### Infrastructure that should not be here
 
--
+- A leaking cast-iron pipe crossing the shaft, dripping *up* past us because we
+  are faster than the water
+- A junction of six pipes, all leaking, a chandelier of small falling streams we
+  fall through — each one a different color
+- Conduit, then a breaker panel bolted to the curve, its door swinging open
+- A water meter still counting, numbers rolling the wrong direction
+- A telephone pole, horizontal, cleats and all, crossbar strung with dead line
+- Utility flags and spray paint on the stone: ORANGE TELECOM, marking nothing
 
--
+### Occupied
+
+- Bats playing poker on a ledge — full table, chips, a hanging bulb, none of
+  them look up as we pass
+- One bat, mid-deal, holds the deal until we are gone
+- A ladder with a man on it, painting the shaft, six feet of fresh white above
+  him and nothing below
+- A cat on a landing that has no stairs
+- A diver in full brass helmet standing on the wall as if it were the floor
+- A line of pigeons on a pipe, facing in, all turning their heads as we drop
+
+### Domestic, falling
+
+- A dining table set for one, falling slower than we are — we pass it *(already
+  in the seed pile)*
+- A chest freezer, open, still lit, ice fog trailing straight up out of it
+- A window — framed, curtained, lit from inside — set into the brick, and the
+  room behind it is level
+- A staircase going down the wall in a helix, no one on it
+- A grandfather clock face in the masonry, hands spinning down
+- Someone's mail, still bundled, rubber-banded, passing us
+
+### Water and weather
+
+- Rain falling *inside* the shaft, and it is falling slower than we are
+- A layer of fog we punch through and come out the bottom of, dry
+- Fish. Just fish, swimming in air, in a school, in the shaft, going up
+- Frost line — one horizontal band where everything is white, then gone
+- A thunderstorm happening sideways in a gap in the wall
+
+### Scale breaks
+
+- The shaft widens into a cathedral of wet brick, then narrows back before we
+  can read the far wall
+- A second well mouth opening in the wall — daylight the wrong hour *(seed)*
+- We fall past the outside of a well, seen from a dry hillside, and re-enter
+- The shaft becomes a throat. Not a metaphor. Then it is brick again.
+- A bright coin above us, and a bright coin below us, both shrinking
+
+### Wrong-channel
+
+- A television on a shelf in the brick, playing the well, from above, live
+- A vending machine, humming, fully stocked, one row empty
+- A parking garage level marker: P4. Then P9. Then P4 again.
+- An exit sign, green, arrow pointing sideways into solid stone
+- A rotary phone ringing on a hook, and it stops the instant we are past it
+
+### Endings for H (do not use one in B–G)
+
+- The bottom is a sky *(seed)*
+- The bottom is the lip of the well, from below, and we are about to arrive at
+  the start
+- The water surface, one inch away, held there
+- Nothing changes. The brick keeps coming. Cut to black on a still-falling frame.
 
 ---
 

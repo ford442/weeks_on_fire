@@ -99,6 +99,11 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - A closed elevator door, floor indicator counting down with us, never opening
 - A glowing fiber-optic coil we pass through
 - A CITY manhole in the wall, daylight leaking around the rim
+- An auto assembly line wrapped around the inside of the shaft, unfinished
+  car bodies hanging sideways from a conveyor, weld sparks going up past us,
+  robots working the curve as if it were a floor; no logos
+- One finished unpainted sedan hanging on a single hook, waiting for a line
+  that is not here; we fall past the grille
 
 ### Occupied
 
@@ -114,6 +119,10 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - Two people having dinner on a tiny balcony bolted to the brick, not looking
   down
 - A child on a swing hung from a pipe, we fall through the arc
+- Several cats on staggered ledges eating from bowls and one shared tin,
+  heads down, chewing, none of them look up as we pass
+- Live snakes on the wet brick — ordinary scales, coiled and traveling the
+  curve, no glow, no laser, no Halloween lawn; they do not strike
 
 ### Domestic, falling
 
@@ -128,6 +137,13 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - A refrigerator door with magnet photos of this well from above
 - Laundry on a line strung across the diameter — we tear through a sheet
 - Keys, then a folding chair, then a piano
+- A complete circle of piano keys set into the brick like a course, ivory
+  and ebony, keys depressing one after another as we pass; no piano body
+- Loose piano keys falling slower than we are — a cloud of ivory and ebony
+- The shaft packed with sealed cardboard boxes we fall through, packing
+  peanuts trailing straight up out of torn flaps
+- Empty cardboard boxes stacked as a spiral against the brick, flaps open,
+  nothing in them
 
 ### Water and weather
 
@@ -139,6 +155,10 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - One layer of hail, then dry brick
 - A rainbow that is a full circle because we are inside it
 - The shaft fills with still water and we keep falling through it, breathing
+- A solid plug of clear lake ice filling the shaft for twenty feet, bubbles
+  frozen in it; we punch through and come out wet brick again
+- The wet brick sheathed in a skin of ice, our fall a blur inside the glaze,
+  then brick again
 
 ### Scale breaks
 
@@ -153,6 +173,10 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - Dollhouse rooms stacked in the brick, lamps on, no dolls
 - Another falling camera looking at us, same speed
 - Bricks enlarge until one brick is a wall, then normal
+- The brick giving way to a lining of real outer space — stars, a little
+  dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick
+- A gap in the brick where there is no air, only stars through a missing
+  course; we fall through and the air comes back
 
 ### Wrong-channel
 
@@ -167,6 +191,9 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - An ATM asking for a PIN, screen lighting the brick
 - Subway tiles and a delay board: NEXT WELL 2 MIN
 - A sports scoreboard: HOME 0 AWAY 0, clock running our fall time
+- A circular trading pit built into the shaft: jackets, paper tickets,
+  ticker tape falling up past us because we are faster; no readable prices,
+  no HUD, no on-screen titles
 
 ### Time / records
 

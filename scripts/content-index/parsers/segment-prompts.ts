@@ -69,6 +69,7 @@ export function parseSegmentPromptsFile(
     const end = timeParts[1] ?? start;
 
     const segmentId = `${cutawayId.split('-').slice(0, 2).join('-')}-${letter.toLowerCase()}-${slugify(title).split('-').slice(0, 2).join('-')}`;
+    const onScreenLine = section.match(/\*\*On screen:\*\*\s*(.+)/i)?.[1]?.trim();
 
     segments.push({
       id: segmentId,
@@ -76,9 +77,15 @@ export function parseSegmentPromptsFile(
       start,
       end,
       durationSec: durationFromRange(start, end),
-      onScreen: title,
-      lyrics: '',
-      musicCue: '',
+      onScreen: onScreenLine || title,
+      lyrics:
+        extractFencedBlock(section, 'Spoken') ||
+        extractFencedBlock(section, 'Lyrics') ||
+        '',
+      musicCue:
+        extractFencedBlock(section, 'Sound') ||
+        extractFencedBlock(section, 'Voice bed') ||
+        '',
       grokImaginePrompt: extractFencedBlock(section, 'Grok Imagine'),
       geminiOmniPrompt: extractFencedBlock(section, 'Gemini Omni'),
       promptVariations: extractVariations(section),

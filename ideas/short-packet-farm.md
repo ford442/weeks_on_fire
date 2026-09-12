@@ -1,18 +1,17 @@
 # Short Packet Farm — jokes + strange 3D
 
 Farm sheet for **short animation cutaways**: 3–10s joke interrupts, ~30s gag sketches,
-and seamless loop tiles. **28 packets** — 9 loop tiles, 11 joke interrupts, 6 gag sketches,
-one bridge and one musical-optional held back. Not an episode. Not EP5.
+one spoken laundry open mic, one bridge and one musical-optional held back. Not an episode. Not EP5.
 
 **Farm:** [#22](https://github.com/ford442/weeks_on_fire/issues/22) · song beds (if any)
 [#18](https://github.com/ford442/weeks_on_fire/issues/18) / [#33](https://github.com/ford442/weeks_on_fire/issues/33) · **not** [#42](https://github.com/ford442/weeks_on_fire/issues/42)
-**Boards:** [`prompts/short-packet-farm-segments.md`](../prompts/short-packet-farm-segments.md)
+**Boards:** [`prompts/short-packet-farm-segments.md`](../prompts/short-packet-farm-segments.md) · spoken: [`prompts/rubella-stand-up-segments.md`](../prompts/rubella-stand-up-segments.md)
 **Loop rules:** [`ideas/loop-grammar.md`](loop-grammar.md)
 **#22 draft:** [`notes/issue-22-short-packet-farm-body.md`](../notes/issue-22-short-packet-farm-body.md)
-**Date:** 2026-09-09
+**Date:** 2026-09-11
 
 Prefer many small packets over one long idea. Every row below is one room, one job,
-one punch.
+one punch. **29 packets** including the spoken laundry open mic.
 
 ---
 
@@ -23,6 +22,7 @@ one punch.
 | **Loop tile** | 2–8s, seamless | Repeating object / machine cycle. Can play forever. Bumper, EyeWash wallpaper, or in-between under a bed. | Silent picture, or one SFX click/tick |
 | **Joke interrupt** | 3–10s | Cut in, punch, cut out. Same shelf as the cowboy-chimp cartoon and the bird flock. | Prior-scene echo + chirp/click laugh-track. No new Minimax unless asked |
 | **Gag sketch** | ~30s | One joke: setup, wrong turn, land. | Optional short bed or dry dialogue |
+| **Spoken gag** | 60–75s + 6–8s tags | Joke / micro-duel. Slideshow of stills on a Voice bed. Mouths on; do not wait on lipsync. | Spoken Voice bed, not Minimax. Chair-creak laugh track. |
 | **Animation bridge** | 45s–2:03 | In-between like Marble Tick Tack. Pure motion. | Existing or new Minimax; picture silent in stacker |
 | **Musical cutaway** | 30s–2:20 | Spine lane. Not invented here unless a joke needs a song. | Minimax first |
 
@@ -74,6 +74,7 @@ one punch.
 | `elevator-counteroffer` | gag-30 | 28s | The car opens on a supply closet. Closes. Opens on the same closet with one more folding chair in it. | Freight elevator car interior, quilted pads | Dry car hum. No song. | no | The elevator does **not** sing here — that's the tango. No Lillith. No floor-number vocal. |
 | `the-weighing-room` | gag-30 | 30s | A porcelain balance matches whatever is in the left pan by producing its twin in the right. Emptied, it matches empty with empty — then lifts off its own right pan, sets it in the left, and reads level. | Bare white-panel weighing room, marble plinth | Silent + brass pan settle | no | No hands after the setup. No glow, no particles. Removing the pan is a **cut**, not a melt. |
 | `the-filing-cabinet` | gag-30 | 30s | Every form is a size the cabinet does not have, so it grows a drawer to fit. The last form is the cabinet's own inventory card. | Corridor, honey-oak filing cabinet | Silent + drawer runners | no | **Not the marble cabinet.** Never travels, never comes home, never in the night lot. Filing itself is a cut, not a melt. |
+| `rubella-stand-up` | spoken | 60–75s + three tags | Rubella files Item Seven at a laundry-room open mic. Madelyn put her on the list. Chairs creak; they do not clap. | Laundry room; honey-oak table, unused brass-stem mic | Spoken Voice bed. No Minimax. Chair creak + fluorescent tick | **YES** (stills A+D first) | Not Ultra Screech, not Lace Waterfall, not Big City club. No elevator interior. Lint-inventory is a different night, no Rubella, no detergent bottle. |
 
 ### Bridge / musical (not this pass)
 
@@ -106,7 +107,8 @@ wallpaper. This is not generic trippy CGI — the objects are employed.
 Do not replace, do not fold into: cowboy chimpanzee on a donkey · bird-comedian flock ·
 Marble Tick Tack (Roley owns; night-lot is the production take) · Picard space-lounge
 breakdance · night-alley EM-field walk · Home Sweet Void hallway / table ·
-Glam-Sham-Poo Ultra Screech.
+Glam-Sham-Poo Ultra Screech · **Rubella Stand-Up** (spoken laundry open mic — she talks
+about the elevator; we do not cut inside it; lint-inventory is a different night).
 
 Worlds do not mix. Night-lot stays night-lot. Daisy field paint stays between the stems.
 Home Sweet Void snakes stay porcelain swan-neck. Riley wings stay annex geometry — never
@@ -142,6 +144,7 @@ packet a copyable segment row:
 | `short-packet-farm` | Scenes | 3 | The generate-first boards — full rest-pose Imagine prompts and motion prompts |
 | `short-packet-jokes` | Gags | 10 | Every joke interrupt not yet boarded, seed prompt each |
 | `short-packet-strange-3d` | Scenes | 13 | Loop tiles and strange-3D gag sketches not yet boarded, seed prompt each |
+| `rubella-stand-up` | Gags | 7 | Spoken A-roll (4 stills) + elevator / detergent / damages tags |
 
 Source of truth is `content/cutaways/short-packet-*.json`; run `npm run codegen` after
 editing. The bridge and the musical-optional stay off the page on purpose — neither has
@@ -151,7 +154,9 @@ a bed and neither is this pass.
 
 ## Status
 
-Catalog: **28 packets**, 2026-09-09 pass added five jokes (`inspection-tag`,
+Catalog: **29 packets**, 2026-09-11 added spoken gag `rubella-stand-up` (60–75s
+A-roll + three interrupt tags; Voice bed, not Minimax; stills A+D first).
+2026-09-09 pass added five jokes (`inspection-tag`,
 `stall-forty-seven`, `chute-return`, `lint-inventory`, `bulk-item-pickup`) and five
 strange-3D (`tare-loop`, `honeycomb-drip-tray`, `pneumatic-return`, `the-weighing-room`,
 `the-filing-cabinet`). **Boards written for the three generate-first packets.** All 26

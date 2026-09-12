@@ -30,7 +30,7 @@ Dry, slightly raspy, zero fucks left to give. Perfect for deadpan call-and-respo
 - Close-up: her eyes reflecting the glow of a "World's Okayest Tenant" mug while something impossible happens just over her shoulder.
 
 **Episode / Cutaway Fit**  
-Any late-night building sequence, laundry-room musical numbers, HOA confrontation aftermaths, and every scene where someone needs to say the quiet part out loud with maximum dryness.
+Any late-night building sequence, laundry-room musical numbers, HOA confrontation aftermaths, and every scene where someone needs to say the quiet part out loud with maximum dryness. Spoken packet: [`notes/scenes/rubella-stand-up.md`](../notes/scenes/rubella-stand-up.md) — Item Seven at the laundry intercom.
 
 **Status**  
 Core protagonist. Already heavy in Episode 3 scripts, audio cuts, and multiple musical cutaways (Choose Your Basalt, Monster Mash, etc.). Expand freely.

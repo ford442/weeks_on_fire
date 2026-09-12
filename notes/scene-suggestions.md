@@ -73,6 +73,50 @@ Cast table (who appears in which scene): [`scenes/README.md`](scenes/README.md).
 
 ---
 
+## Scene Idea: "Rubella Stand-Up" (laundry-room open mic)
+
+**Scene / Beat Title:** Rubella Stand-Up — short spoken gag
+
+**Fits Episode / New Episode Concept:** Short packet farm (#22 picture · Voice
+bed here · not #42). Joke / micro-duel spoken cutaway. Not a musical. Not Ultra
+Screech. Not Lace Waterfall. Not Big City club.
+
+**Juxtaposition / Wrong channel:** Item Seven on the HOA agenda is Resident
+Comments. The designated podium is a laundry-room intercom. Full commitment.
+She did not sign up. Madelyn put her on the list.
+
+**Setting & Atmosphere:** Laundry-room open mic. Honey-oak folding table,
+unused brass-stem mic, flickering fluorescent, wet enamel on the grout only,
+World's Okayest Tenant mug, unlabeled contraband detergent, empty folding
+chairs. They creak. They do not clap.
+
+**Key Visuals (Grok Imagine prompt seeds):** Four stills — podium lock,
+detergent relic, heckle wide (Rubella does not turn), land with duplicate
+forms. Shoot 1 and 4 first. Boards:
+[`prompts/rubella-stand-up-segments.md`](../prompts/rubella-stand-up-segments.md).
+
+**Narrative Beats / Action:** Four bits + land (~72s). Three interrupt tags
+(elevator 7s / detergent 6s / damages 8s) cut from the same mic.
+
+**Dialogue, Voiceover or Narration (if any):** Punched set in
+[`notes/scenes/rubella-stand-up.md`](scenes/rubella-stand-up.md) and
+[`songs/Rubella_Stand_Up.md`](../songs/Rubella_Stand_Up.md). Locked lines kept:
+elevator / pay rent · detergent that still works · emotional damages.
+
+**Interpersonal subjects:** Rubella; Lillith one heckle off-mic; Madelyn
+clipboard silhouette; Qing optional (noodles, wrong-time laugh, no line).
+
+**Emotional Tone & Themes:** Dry, slightly raspy, zero fucks left. Filing a
+complaint that happens to have a mic. Building bureaucracy is the comic engine.
+
+**Music / Song Sync Opportunity:** Voice bed only. No Minimax song. Laugh
+track = chair creak (peggy-babcock-second) + fluorescent tick. Later sting if
+needed: one dry snare + chair creak.
+
+**Status / Next Step:** Ready-to-generate. Suggestions id `rubella-stand-up`.
+
+---
+
 ## Scene Idea: "Big City Hair-dos" (Daisy Bell downtown)
 
 **Scene / Beat Title:** Giant hair-dos as civic obstacles on the Fleet Street /

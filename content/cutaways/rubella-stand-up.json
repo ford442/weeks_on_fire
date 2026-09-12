@@ -1,0 +1,23 @@
+{
+  "id": "rubella-stand-up",
+  "kind": "gag",
+  "title": "Rubella Stand-Up",
+  "status": "ready-to-generate",
+  "runtime": "60–75s + three 6–8s tags",
+  "episode": "Short packet farm / spoken cutaway",
+  "songId": "rubella-stand-up",
+  "songTitle": "Rubella Stand-Up (Voice Bed)",
+  "summary": "Item Seven: Resident Comments. The podium is a laundry-room intercom. Madelyn put her on the list. Folding chairs creak; they do not clap. Spoken Voice bed, not a musical.",
+  "visualArc": "Podium lock → detergent relic → heckle wide (she does not turn) → land with duplicate forms.",
+  "tags": [
+    "gag",
+    "spoken",
+    "laundry",
+    "hoa",
+    "rubella",
+    "lillith",
+    "farm-22",
+    "voice-bed"
+  ],
+  "segmentsSource": "prompts/rubella-stand-up-segments.md"
+}

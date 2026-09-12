@@ -26,7 +26,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     episodes: ["Episode 01", "Episode 02", "Episode 03", "Musical Cutaways"],
     traits: ["Elegant deadpan", "Cabaret-spooky commitment", "Precise wrongness"],
     bio: "The other half of the Vale duo. Delivers pseudoscience lectures, covers Monster Mash on the post-battle lawn, and may be a hologram. White spy gear reveal optional. In the Studio Huddle she is the practical truth-teller — seventeen bowls of Weeks on Fire cereal, cinnamon and battery acid, eight bowls of oatmeal tops.",
-    props: ["Silver vintage microphone", "Hawaiian lei (basalt cutaway)", "White spy trenchcoat"],
+    props: ["Silver vintage microphone", "Hawaiian lei (basalt cutaway)", "White spy trenchcoat", "World's Okayest Tenant mug", "Contraband detergent"],
     tags: ["vale-sisters", "lace", "monster-mash", "spy"],
     imageUrl: characterImg1,
   },

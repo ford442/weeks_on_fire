@@ -28,6 +28,7 @@ The elevator just tried to negotiate. I told it I already pay rent. That's a cou
 I don't need a hero. I need the detergent that still works. I keep a bottle. Contraband. It still finishes a cycle.
 
 [C — heckle]
+That tube is pinker than the other one. I logged it as a fire hazard.
 LILLITH (from the back, off-mic, one line only)
 It's not a fire hazard. It's ambient lighting with ambition.
 RUBELLA

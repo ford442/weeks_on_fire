@@ -37,7 +37,7 @@ they go when they get long enough to act.
 | **Empty Highway Confession** *(stretch)* | [`empty-highway-confession.md`](empty-highway-confession.md) | [`versions/…`](versions/empty-highway-confession-versions.md) | 3–4 min | Interstate, 4:17 AM | Poetic / nocturnal |
 | **The Long Way Up** | [`the-long-way-up.md`](the-long-way-up.md) | [`versions/…`](versions/the-long-way-up-versions.md) **full alts** | 9–12 min | Ridge → Kestrel Ridge | Procedural / sci-fi parody |
 | **No Other Human Sounds** | [`no-other-human-sounds.md`](no-other-human-sounds.md) | [`versions/…`](versions/no-other-human-sounds-versions.md) | 6–8 min | 4N22-C → Pulpit Overlook | Quiet rally / two-hander |
-| **Rubella Stand-Up** | [`rubella-stand-up.md`](rubella-stand-up.md) | — | 60–75s + tags | Laundry-room open mic | Spoken gag / HOA Item Seven |
+| **Rubella Stand-Up** | [`rubella-stand-up.md`](rubella-stand-up.md) | [`versions/…`](versions/rubella-stand-up-versions.md) | 60–75s + tags | Laundry-room open mic | Spoken gag / HOA Item Seven |
 
 **The Long Way Up is deliberately the longest continuous dialog block in the
 series** — the "wordy episode," where the show appears to change channels into a

@@ -6,8 +6,9 @@
 **Runtime target:** 60–75s A-roll + three 6–8s interrupt tags  
 **Voice bed:** [`songs/Rubella_Stand_Up.md`](../../songs/Rubella_Stand_Up.md) — dry raspy, hallway slap, no music  
 **Boards:** [`prompts/rubella-stand-up-segments.md`](../../prompts/rubella-stand-up-segments.md)  
+**Dialog versions (alts):** [`versions/rubella-stand-up-versions.md`](versions/rubella-stand-up-versions.md)  
 **Suggestions:** `rubella-stand-up`  
-**Status:** punched v1 · 2026-09-11  
+**Status:** punched v1 · heckle-setup pass 2026-09-12  
 **Cast lock:** Grok Imagine building-cast. No real actor names.
 
 **Cast:** RUBELLA (Item Seven, did not sign up), LILLITH (one heckle, off-mic, back row), MADELYN (clipboard silhouette, last chair, no gavel), QING (optional: noodles, wrong-time laugh, no line)
@@ -63,6 +64,11 @@ That's a counteroffer with a ding.
 I don't need a hero. I need the detergent that still works. I keep
 a bottle. Contraband. It still finishes a cycle.
 
+                      (does not turn; the pinker tube stays behind her)
+
+That tube is pinker than the other one. I logged it as a fire
+hazard.
+
 LILLITH
 (from the back, off-mic, one line only)
 It's not a fire hazard. It's ambient lighting with ambition.
@@ -78,6 +84,8 @@ anything.
 
 That's my time. The chairs can creak. I'm waiting for a dryer that
 does not summon anything.
+
+                      (Madelyn's clipboard ticks a box. No line.)
 ```
 
 ```

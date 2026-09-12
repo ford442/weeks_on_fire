@@ -29,7 +29,7 @@ Podium lock → detergent relic → heckle wide (Rubella does not turn) → land
 |------|-------------|-----|------------------------------------------|
 | A    | 0:00–0:20   | 20s | Podium lock. Item Seven. Shoot first.    |
 | B    | 0:20–0:38   | 18s | Detergent relic. Bottle in the off-hand. |
-| C    | 0:38–0:52   | 14s | Heckle wide. Rubella does not turn.      |
+| C    | 0:38–0:52   | 14s | Tube plant, then heckle. She does not turn. |
 | D    | 0:52–1:12   | 20s | Land. Duplicate forms. Shoot first.      |
 | E    | 1:12–1:19   |  7s | Tag: elevator. Echo + chair creak.       |
 | F    | 1:19–1:25   |  6s | Tag: detergent.                          |
@@ -104,13 +104,14 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Spoken**
 ```
+RUBELLA: That tube is pinker than the other one. I logged it as a fire hazard.
 LILLITH (off-mic): It's not a fire hazard. It's ambient lighting with ambition.
 RUBELLA: That's my roommate. She fixed the ping-pong table. Tonight: sparks.
 ```
 
 **Sound**
 ```
-Lillith heckle once, bright, too helpful, off-mic. Rubella does not look at her. No second heckle.
+Rubella logs the pink tube first, still not turning. Lillith heckle once, bright, too helpful, off-mic. Rubella does not look at her. No second heckle.
 ```
 
 **Grok Imagine**

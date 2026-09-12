@@ -31,6 +31,7 @@ overwriting the baseline until the room picks a cut.
 | [`../laundromat-slow-dance.md`](../laundromat-slow-dance.md) | [`laundromat-slow-dance-versions.md`](laundromat-slow-dance-versions.md) |
 | [`../house-of-mirrors-rally.md`](../house-of-mirrors-rally.md) | [`house-of-mirrors-rally-versions.md`](house-of-mirrors-rally-versions.md) |
 | [`../empty-highway-confession.md`](../empty-highway-confession.md) | [`empty-highway-confession-versions.md`](empty-highway-confession-versions.md) |
+| [`../rubella-stand-up.md`](../rubella-stand-up.md) | [`rubella-stand-up-versions.md`](rubella-stand-up-versions.md) |
 
 **New scene?** Copy [`_template.md`](_template.md) → `[slug]-versions.md`, fill
 the juxtaposition box, then link it from the parent and from

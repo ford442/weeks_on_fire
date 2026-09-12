@@ -101,7 +101,11 @@ forms. Shoot 1 and 4 first. Boards:
 **Dialogue, Voiceover or Narration (if any):** Punched set in
 [`notes/scenes/rubella-stand-up.md`](scenes/rubella-stand-up.md) and
 [`songs/Rubella_Stand_Up.md`](../songs/Rubella_Stand_Up.md). Locked lines kept:
-elevator / pay rent · detergent that still works · emotional damages.
+elevator / pay rent · detergent that still works · emotional damages. Beat C
+plants the fire-hazard log ("That tube is pinker than the other one") before
+Lillith's heckle. Overflow bits live in
+[`notes/scenes/versions/rubella-stand-up-versions.md`](scenes/versions/rubella-stand-up-versions.md);
+do not dump them into the 60–75s A-roll.
 
 **Interpersonal subjects:** Rubella; Lillith one heckle off-mic; Madelyn
 clipboard silhouette; Qing optional (noodles, wrong-time laugh, no line).
@@ -114,6 +118,7 @@ track = chair creak (peggy-babcock-second) + fluorescent tick. Later sting if
 needed: one dry snare + chair creak.
 
 **Status / Next Step:** Ready-to-generate. Suggestions id `rubella-stand-up`.
+Heckle-setup pass 2026-09-12. Versions page exists.
 
 ---
 

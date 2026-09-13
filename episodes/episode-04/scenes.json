@@ -1,7 +1,7 @@
 {
   "episode": "04",
   "title": "Weeks on Fire - Episode 04",
-  "lastUpdated": "2026-08-31T12:00:00Z",
+  "lastUpdated": "2026-09-13T12:00:00Z",
   "scenes": [
     {
       "id": "scene-001",
@@ -85,8 +85,27 @@
       ]
     },
     {
-      "id": "scene-005",
+      "id": "scene-006",
       "order": 4,
+      "title": "EyeWash Toon Break: Delivery Loop (optional insert)",
+      "timestamp": "00:05:40",
+      "description": "CLUBHOUSE CORNER CRT → EYEWASH CARTOON — NIGHT. Hand-drawn early-1990s Warner Bros. TV cel style; a deliberate break from photoreal, like the Marble Tick Tack bridge. Push into the CRT (Biscuit is the only one watching). Toon Pizza Guy sprints past a repeating background of house, cat, skeleton, and blue bins, with a dead-still face. Toon Lillith and Rubella lecture on the run cycle in held drawings (\"Eight drawings, repeated until morale improves\" / \"The bin is still the wrong blue\"). Skid, dust cloud, two knocks, hard cut to the real door. ~40s; cut if the meeting runs long. Needs toon model sheets (characters/model-sheets/). Full beats and all four prompts: episodes/episode-04/scenes.md.",
+      "prompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, flat side-view: a lanky pizza delivery man in a red uniform and cap sprinting left to right, legs drawn as a circular speed-blur wheel, pizza bag held perfectly level, completely blank dead-eyed deadpan face, speed lines trailing behind him, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, behind him a softer painted gouache suburban background that visibly repeats: same house, same black cat sitting on a fence, same plastic skeleton, same three recycling bins in slightly different blues, night sky with a purple glow, exaggerated squash-and-stretch cartoon motion, 4:3 1990s TV cel look with faint cel dust, hand-drawn cartoon, Grok Imagine style",
+      "mediaUrl": "",
+      "status": "draft",
+      "addedAt": "2026-09-13T12:00:00Z",
+      "lastEditedAt": "2026-09-13T12:00:00Z",
+      "history": [
+        {
+          "date": "2026-09-13T12:00:00Z",
+          "action": "added",
+          "note": "Cartoon style-break insert drafted in scenes.md. Key still prompt is the 0:08–0:18 run cycle; CRT push-in, lecture, and skid prompts are in scenes.md."
+        }
+      ]
+    },
+    {
+      "id": "scene-005",
+      "order": 5,
       "title": "Pizza Guy at the Door",
       "timestamp": "00:05:40",
       "description": "INT. HOA CLUBHOUSE DOORWAY — NIGHT. Order nobody placed. Extra napkins are in the bag. Optional eight bars of Rinse Cycle under the exit.",
@@ -94,12 +113,17 @@
       "mediaUrl": "",
       "status": "draft",
       "addedAt": "2026-08-31T12:00:00Z",
-      "lastEditedAt": "2026-08-31T12:00:00Z",
+      "lastEditedAt": "2026-09-13T12:00:00Z",
       "history": [
         {
           "date": "2026-08-31T12:00:00Z",
           "action": "added",
           "note": "Button line from Item Three draft"
+        },
+        {
+          "date": "2026-09-13T12:00:00Z",
+          "action": "reordered",
+          "note": "Order 4 → 5 to follow the optional EyeWash Toon Break insert (scene-006). Timestamp unchanged; plays at ~6:20 if the insert is kept."
         }
       ]
     }
@@ -119,6 +143,11 @@
       "date": "2026-08-31T12:00:00Z",
       "action": "hoa-spine-locked",
       "note": "Synopsis + scenes.md + SRT added. HOA / Morning After is the Episode 4 spine. Long Way Up parked as Episode 5 candidate (docs/season-arc.md)."
+    },
+    {
+      "date": "2026-09-13T12:00:00Z",
+      "action": "scene-added",
+      "note": "Optional EyeWash Toon Break (scene-006): hand-drawn 1993 TV-cartoon style-break insert before Extra Napkins."
     }
   ]
 }

@@ -193,6 +193,14 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **Riley Smith** — The stranger on the center line — unemployed technician with good data
 - **Kenji “Shred” Sato** — Glam-Sham-Poo brand ambassador / alumnus
 
+## Series crew (fictional)
+
+- **Mara Vell** — Writer
+- **Julian Rook** — Producer
+- **Soren Kade** — Director
+- **Nova Chen** — Music Supervisor
+- **Elio Marsh** — Visual Designer
+
 ## Cutaways & suggestions
 
 - **911 for the Wrong Shade of Blue** (911-wrong-shade) — Karen reports existential zoning. Operator asks if anyone is bleeding. “Democracy is bleeding, Steven.” Transfer loop until pizza arrives.
@@ -268,7 +276,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 ```
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, cutaways, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills

@@ -67,13 +67,20 @@ No edits to `src/data/songs.ts` are required.
 
 5. Run `npm run codegen` and commit.
 
-## Gallery, characters, Daisy Bell
+## Gallery, characters, staff, Daisy Bell
 
-| File | Purpose |
-|------|---------|
-| [`gallery.json`](gallery.json) | Visual Archive cards (`imagePath` = repo-relative path) |
-| [`characters.json`](characters.json) | Cast bios |
-| [`daisy-bell.json`](daisy-bell.json) | Daisy Bell keyframe board |
+| File                                 | Purpose                                                           |
+| ------------------------------------ | ----------------------------------------------------------------- |
+| [`gallery.json`](gallery.json)       | Visual Archive cards (`imagePath` = repo-relative path)           |
+| [`characters.json`](characters.json) | Cast bios                                                         |
+| [`staff.json`](staff.json)           | Fictional crew bios (`imageFile` = filename under `public/cast/`) |
+| [`daisy-bell.json`](daisy-bell.json) | Daisy Bell keyframe board                                         |
+
+## Dialog versions (intentional TS exception)
+
+Long-form dialog audition pages live in [`notes/scenes/versions/`](../notes/scenes/versions/). They are prose (competing registers, fragments, juxtaposition notes), not a codegen schema.
+
+The Suggestions workspace reads **only** the selected Riley Rosencrantz exchanges from hand-authored [`src/data/sceneDialogVersions.ts`](../src/data/sceneDialogVersions.ts). Do not add new catalog arrays there — new indexed content belongs in this folder.
 
 ## Validation
 

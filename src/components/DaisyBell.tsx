@@ -25,6 +25,7 @@ import {
   type DaisyBellFrame,
   type DaisyFrameTreatment,
 } from '../data/daisyBell';
+import { firstCatalogItem } from '../lib/catalog';
 import SongAudioPlayer from './SongAudioPlayer';
 
 const allValue = 'all' as const;
@@ -32,7 +33,9 @@ type TreatmentFilter = typeof allValue | DaisyFrameTreatment;
 
 export default function DaisyBell() {
   const [treatment, setTreatment] = useState<TreatmentFilter>(allValue);
-  const [selected, setSelected] = useState<DaisyBellFrame>(daisyBellFrames[0]);
+  const [selected, setSelected] = useState<DaisyBellFrame>(
+    firstCatalogItem(daisyBellFrames, 'daisy-bell'),
+  );
   const [lightbox, setLightbox] = useState<DaisyBellFrame | null>(null);
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
@@ -457,7 +460,7 @@ function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps
           ) : (
             <div className="flex min-h-[240px] flex-col justify-center gap-3 p-8">
               <p
-                className={`text-xs font-semibold uppercase tracking-[0.2em] ${meta.accent.split(' ').pop()}`}
+                className={`text-xs font-semibold uppercase tracking-[0.2em] ${meta.accent.split(' ').pop() ?? ''}`}
               >
                 {meta.label}
               </p>

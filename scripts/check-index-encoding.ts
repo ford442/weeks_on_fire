@@ -4,7 +4,7 @@ const INDEX_PATH = 'dist/index.html';
 const LINK_INDEX_PATH = 'dist/1ink.1ink';
 const header = readFileSync(INDEX_PATH);
 
-function fail(message) {
+function fail(message: string): never {
   console.error(`check-index-encoding: ${message}`);
   process.exit(1);
 }

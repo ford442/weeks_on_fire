@@ -3405,8 +3405,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         end: "0:52",
         durationSec: 14,
         onScreen: "Rubella does not turn. Lillith one chair in the back row, mouth open one frame. Clipboard silhouette in the last chair.",
-        lyrics: "LILLITH (off-mic): It's not a fire hazard. It's ambient lighting with ambition.\nRUBELLA: That's my roommate. She fixed the ping-pong table. Tonight: sparks.",
-        musicCue: "Lillith heckle once, bright, too helpful, off-mic. Rubella does not look at her. No second heckle.",
+        lyrics: "RUBELLA: That tube is pinker than the other one. I logged it as a fire hazard.\nLILLITH (off-mic): It's not a fire hazard. It's ambient lighting with ambition.\nRUBELLA: That's my roommate. She fixed the ping-pong table. Tonight: sparks.",
+        musicCue: "Rubella logs the pink tube first, still not turning. Lillith heckle once, bright, too helpful, off-mic. Rubella does not look at her. No second heckle.",
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, wide laundry-room open mic, Rubella a glamorous exhausted woman in a modern black lace evening dress behind a honey-oak folding table used as a stage in the foreground, she does not turn, mouths on toward the unused brass-stem microphone on a short stand, World's Okayest Tenant mug on the table, rows of empty beige steel folding chairs facing her, Lillith one chair in the back row in black lace, mouth open one frame, off-mic, not a two-shot concert photo, a clipboard silhouette in the last chair and no gavel, three supporting figures: wet enamel only in the floor grout lines, a flickering fluorescent troffer, a dryer row in the dark, institutional cream plaster, wet grey tile, locked camera at standing height behind the last row, 28mm anamorphic, T4, fine grain, dry honey-oak against brass against black lace, no Glam magenta, no night-lot cabinet, no Daisy field, no space lounge, no cowboy-chimp, no bird flock, no Ultra Screech, Grok Imagine style",
         geminiOmniPrompt: "14-second silent picture on a Voice bed. Hold Rubella not turning. Lillith's mouth opens for one frame in the back row and closes. Clipboard silhouette does not move. Optional: Qing in a side chair with noodles, one wrong-time laugh, no line, not looking at the mic. Photoreal, camera locked, 2.39:1. Grok Imagine building-cast, no real actor names.",
         promptVariations: ["Qing optional: noodles, one wrong-time laugh, no line, side chair only, Grok Imagine", "Without Lillith's face, only the open mouth as a small shape in the back row, Grok Imagine"],
@@ -4928,6 +4928,110 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         "lane": "fall",
         "prompt": "a laminated missing-person flyer taped to the brick, face toward the center",
         "description": "The flyer is looking at the fall path. We pass the face."
+      },
+      {
+        "id": "ice-plug",
+        "title": "Ice plug",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "a solid plug of clear lake ice filling the shaft for twenty feet, bubbles frozen in it, we punch through and come out wet brick again",
+        "description": "A cork of ice. We go through the middle. Brick resumes."
+      },
+      {
+        "id": "ice-lining",
+        "title": "Ice lining",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "the wet brick sheathed in a skin of ice, thick enough to show our fall as a blur inside it, no frost-line cutoff, just ice then not",
+        "description": "The cylinder is glazed. We are inside the glaze for a moment."
+      },
+      {
+        "id": "piano-key-ring",
+        "title": "Piano-key ring",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "a complete circle of piano keys set into the brick like a course, ivory and ebony, keys depressing one after another as we pass through the ring, no piano body, no player",
+        "description": "A keyboard that thinks the shaft is a wrist. Distinct from the falling piano."
+      },
+      {
+        "id": "loose-piano-keys",
+        "title": "Loose piano keys",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "loose piano keys falling slower than we are, ivory and ebony tumbling, we pass a cloud of them",
+        "description": "The instrument is gone. The notes are still falling."
+      },
+      {
+        "id": "car-assembly",
+        "title": "Cars being born",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "an auto assembly line wrapped around the inside of the shaft, unfinished car bodies hanging sideways from an overhead conveyor, spot-weld sparks going up past us, robots working the curve as if it were a floor, no logos, no HUD",
+        "description": "The factory thinks the well is a plant. Cars hang. We do not stop."
+      },
+      {
+        "id": "finished-sedan",
+        "title": "One finished sedan",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "one finished unpainted sedan hanging in the shaft on a single hook, doors shut, waiting for a line that is not here, we fall past the grille",
+        "description": "The line ended. The car stayed."
+      },
+      {
+        "id": "starfield-lining",
+        "title": "Outer space lining",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "the brick giving way to a lining of real outer space — stars, a little dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick again",
+        "description": "Space is the masonry for a moment. Not Annex. Not a cutaway."
+      },
+      {
+        "id": "vacuum-gap",
+        "title": "Vacuum gap",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "a gap in the brick where there is no air and no dust, only stars through a missing course, we fall through the missing course and the air comes back",
+        "description": "One course is vacuum. The next course is wet brick."
+      },
+      {
+        "id": "cats-eating",
+        "title": "Cats eating",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "several cats on staggered ledges eating from bowls and one shared tin, heads down, chewing, none of them look up as we pass",
+        "description": "Dinner is on. We are not dinner. Distinct from the cat with no stairs."
+      },
+      {
+        "id": "trading-pit",
+        "title": "Stock market pit",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a circular trading pit built into the shaft, jackets, paper tickets, ticker tape falling up past us because we are faster, no readable prices, no HUD, no on-screen titles",
+        "description": "The pit is in the round. Paper goes the wrong way. Numbers stay off-screen."
+      },
+      {
+        "id": "cardboard-chute",
+        "title": "Cardboard boxes",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "the shaft packed with sealed cardboard boxes we have to fall through, packing peanuts trailing straight up out of torn flaps, labels facing in, unreadable",
+        "description": "A chute of brown cardboard. We are the tear."
+      },
+      {
+        "id": "empty-boxes",
+        "title": "Empty boxes stacked",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "empty cardboard boxes stacked as a spiral staircase against the brick, flaps open, nothing in them, we pass the spiral without using it",
+        "description": "A way down made of boxes. We do not take it."
+      },
+      {
+        "id": "snakes-on-brick",
+        "title": "Snakes on the brick",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "live snakes on the wet brick, ordinary scales, coiled and traveling the curve, no glow, no laser, no Halloween lawn, they do not strike, we pass",
+        "description": "Real snakes. Not Ep3. Not a light show."
       },
       {
         "id": "bottom-is-sky",

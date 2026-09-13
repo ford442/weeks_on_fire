@@ -1,4 +1,7 @@
-export function parseFrontmatter(raw: string): { frontmatter: Record<string, unknown>; body: string } {
+export function parseFrontmatter(raw: string): {
+  frontmatter: Record<string, unknown>;
+  body: string;
+} {
   if (!raw.startsWith('---')) {
     return { frontmatter: {}, body: raw };
   }

@@ -6,25 +6,45 @@
 
 ## Project Overview
 
-`weeks_of_fire` is a **creative short-film series production hub**. It is **not** a traditional software application or web service. The project organizes synopses, subtitles, music metadata, AI-generated image prompts, and a single static HTML page for production review.
+`weeks_of_fire` is a **creative short-film series production hub**: synopses, screenplays, Minimax music notes, Grok Imagine prompts, and a **React + Vite + TypeScript** gallery that indexes that archive.
 
-- **Concept**: A personal short-film series that blends musical cutaways (Minimax Music), AI-generated visuals (Grok Imagine / x.ai), and narrative scenes.
-- **Live hub**: `https://ford442.github.io/weeks_of_fire` (GitHub Pages from repo root).
-- **Creative guide**: See `grok.md` for artistic direction and common creative tasks.
+- **Concept**: Musical cutaways (Minimax Music) intercut with AI-generated visuals (Grok Imagine / xAI) and narrative scenes.
+- **Live hub**: `https://ford442.github.io/weeks_on_fire` (GitHub Pages deploys `dist/` via Actions).
+- **npm package name**: `weeks-on-fire-gallery`.
+- **Creative guide**: See `grok.md`. This file is the technical guide.
+
+Root `index.html` is the **Vite entry** (`/src/main.tsx`). It is not a standalone static page. Do not serve it with `python3 -m http.server`. Use `npm run dev` or `npm run preview` after `npm run build`.
 
 ---
 
 ## Technology Stack
 
-| Layer | Technology | Notes |
-|-------|-----------|-------|
-| Presentation | HTML5 + CSS3 | Single file: `index.html`. No JavaScript framework. Uses Google Fonts (Inter, Playfair Display). |
-| Automation | Python 3 | One helper script (`scripts/generate-prompts.py`). No dependencies. |
-| Documentation | Markdown | All creative content, synopses, logs, and song lyrics are Markdown. |
-| Subtitles | SRT | Standard SubRip format. |
-| Version Control | Git | No hooks, no CI/CD, no GitHub Actions. |
+| Layer           | Technology                     | Notes                                                             |
+| --------------- | ------------------------------ | ----------------------------------------------------------------- |
+| App             | React 19 + TypeScript + Vite 8 | Source in `src/`. Tailwind CSS v4 via `@tailwindcss/vite`.        |
+| Content index   | Markdown / JSON → codegen      | Author in `content/` and `songs/`. Emit to `src/data/generated/`. |
+| Codegen         | `tsx` + Zod (devDependency)    | `scripts/content-index/*.ts`. No extra runtime libraries.         |
+| Episode archive | Markdown + SRT + `scenes.json` | Separate from the React catalog index.                            |
+| Python helpers  | stdlib-only scripts            | Imagine API, slideshow assemble, episode scaffold.                |
+| Deploy          | GitHub Actions → Pages         | `.github/workflows/deploy-pages.yml` (`npm ci && npm run build`). |
 
-**Important**: There is **no build system**, **no package manager**, and **no configuration file** such as `package.json`, `pyproject.toml`, `Cargo.toml`, etc. Do not add one unless explicitly asked.
+TypeScript is the hub language. Do not add a new runtime library, in-repo C++, or `compile_commands.json` unless explicitly asked.
+
+---
+
+## Hub views (seven)
+
+Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/views.ts`:
+
+| View           | Path           | What you get                                          |
+| -------------- | -------------- | ----------------------------------------------------- |
+| Visual Archive | `/`            | Grok Imagine stills, prompt variations, music cues    |
+| Timeline       | `/timeline`    | Scene status, local edits, exportable production JSON |
+| Songs          | `/songs`       | Minimax catalog — style prompts, lyrics, episode ties |
+| Daisy Bell     | `/daisy-bell`  | Keyframe board, period/color treatments, sequence     |
+| Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts      |
+| Characters     | `/characters`  | Recurring cast bible                                  |
+| Crew           | `/staff`       | Fictional series crew bios                            |
 
 ---
 
@@ -32,198 +52,134 @@
 
 ```
 weeks_of_fire/
-├── episodes/           # One subfolder per episode
-│   ├── episode-01/     # synopsis.md, subtitles.srt, transcript files
-│   ├── episode-02/
-│   └── episode-03/     # Also contains scenes.md, laser_snakes.md, and some binary assets
-├── characters/         # Character reference images (webp, jpg, png)
-├── songs/              # Music tracks (mp3) + lyrics/style descriptions (md)
-├── ideas/              # Raw brainstorming, backlog, concepts
-├── notes/              # Quick-capture workspace: scratchpad + structured templates for new scene suggestions, song ideas, and image prompt captures
-├── scripts/            # Lightweight Python automation tools
-├── prompts/            # Grok Imagine prompts for reproducibility
-├── templates/          # Starter files for new episodes
-├── docs/               # Production logs and references
-├── index.html          # Cinematic production hub page (GitHub Pages entry point)
-├── grok.md             # Creative AI assistant guide (artistic direction)
-├── git.sh              # One-liner push helper
-├── README.md           # Human-facing project intro
-└── STRUCTURE.md        # Human-facing directory explanation
+├── src/                 # React gallery (App, components, data shims)
+│   └── data/generated/  # AUTO-GENERATED — do not hand-edit
+├── content/             # Catalog JSON (cutaways, gallery, characters, staff, Daisy Bell)
+├── songs/               # Minimax markdown + some mp3
+├── episodes/            # Per-episode synopsis, screenplay, SRT, scenes.json
+├── characters/          # Reference stills + character notes
+├── prompts/             # Grok Imagine / segment prompt archive
+├── notes/               # Scratchpad, scene/song suggestions, dialog versions
+├── ideas/               # Raw brainstorming
+├── scripts/             # content-index (TS) + Python helpers
+├── templates/           # Episode boilerplate
+├── docs/                # Production logs and references
+├── public/              # llms.txt, sitemap, robots, OG, cast portraits
+├── index.html           # Vite entry + crawler-facing shell
+├── grok.md              # Creative AI assistant guide
+└── README.md
 ```
 
-### Key files per episode
-Each `episodes/episode-NN/` folder typically contains:
-- `synopsis.md` — Scene-by-scene breakdown. Uses **YAML frontmatter** with keys: `title`, `episode`, `status`, `runtime_approx`.
-- `subtitles.srt` — Subtitle file. Often a placeholder copied from `templates/subtitles-template.srt`.
-- `NoteGPT_TRANSCRIPT_Weeks on Fire - Episode NN.srt` — Full transcript export.
-- `NoteGPT_TRANSCRIPT_Weeks on Fire - Episode NN.txt` — Plain-text transcript export.
+### Episode folders
 
-Episode 03 is the most developed example: it includes `scenes.md` (detailed scene breakdowns with Grok Imagine prompts per shot) and `laser_snakes.md`.
+Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subtitles.srt`, and `scenes.json`. Episode 03 also has `scenes.md` / `laser_snakes.md`.
 
-**New in notes/**: Use `notes/scene-suggestions.md` and `notes/song-suggestions.md` (with built-in templates) when developing fresh scenes or songs. Use `notes/scratchpad.md` for rapid capture and `notes/image-prompt-captures.md` for visual ideas.
+### Content index (author here, not in generated TS)
+
+| What       | Source of truth           | Generated output                   |
+| ---------- | ------------------------- | ---------------------------------- |
+| Songs      | `songs/*.md`              | `src/data/generated/songs.ts`      |
+| Cutaways   | `content/cutaways/*.json` | `src/data/generated/cutaways.ts`   |
+| Gallery    | `content/gallery.json`    | `src/data/generated/gallery.ts`    |
+| Characters | `content/characters.json` | `src/data/generated/characters.ts` |
+| Staff      | `content/staff.json`      | `src/data/generated/staff.ts`      |
+| Daisy Bell | `content/daisy-bell.json` | `src/data/generated/daisy-bell.ts` |
+
+`src/data/*.ts` files are thin shims (types + re-exports). **Exception:** `src/data/sceneDialogVersions.ts` is hand-authored TypeScript. Dialog audition pages in `notes/scenes/versions/` are prose, not a codegen schema. See `content/README.md`.
 
 ---
 
-## File Formats and Conventions
+## Commands
 
-### Markdown with YAML frontmatter (synopses)
-```markdown
----
-title: "Episode 1"
-episode: 1
-status: "synopsis ready / srt placeholder"
-runtime_approx: "~4 min"
----
-
-# Episode 1 — Synopsis
-```
-
-### SRT subtitles
-Follow the standard SubRip format:
-```
-1
-00:00:00,000 --> 00:00:05,000
-[Opening music sting]
-```
-
-### Media storage policy
-The repository **prefers external hosting** for all media (images, audio, video) to keep clones fast. Use public links (Google Drive, Imgur, etc.) and reference them in Markdown or `index.html`. Some binary files are already committed (e.g., `songs/*.mp3`, `episodes/episode-03/*.wav`, `characters/*`), but avoid adding more large binaries without explicit user approval.
-
-### Language
-All documentation, comments, and code are in **English**.
-
----
-
-## Build, Test, and Deploy
-
-### Build
-There is no build step. `index.html` is served as-is.
-
-### Local preview
-Open `index.html` directly in a browser, or run any static file server from the repo root:
 ```bash
-python3 -m http.server 8000
+npm install
+npm run dev              # http://localhost:5173  (pass -- --host to bind 0.0.0.0)
+npm run codegen          # content/ + songs/ → src/data/generated/
+npm run codegen:check    # fail if generated files drifted
+npm run agent-docs       # regenerate public/llms.txt, llms-full.txt, sitemap.xml
+npm run agent-docs:check
+npm run lint             # ESLint on src/ and scripts/ (ignores generated)
+npm run format           # Prettier check on src/ and scripts/
+npm run format:write
+npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
+npm run preview
 ```
 
-### Testing
-There are no automated tests. Validate changes manually:
-- Open `index.html` and check layout/responsiveness.
-- Verify `synopsis.md` files render correctly as Markdown.
-- Check SRT files for valid timing syntax.
+`tsc -b` typechecks **three** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the TS bundle checks). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
 
-### Deploy
-Deployment is through **GitHub Pages**:
-1. Push changes to the `main` branch.
-2. GitHub Pages deploys automatically from the root folder.
+### Python helpers (real files)
 
-A helper script exists for quick pushes:
-```bash
-bash git.sh
-```
-Note: `git.sh` uses the hard-coded message `"push fix"`. For meaningful commits, use standard `git commit` instead.
+| Script                                | Purpose                                                  |
+| ------------------------------------- | -------------------------------------------------------- |
+| `scripts/generate-prompts.py`         | Three Grok Imagine prompt variations from a scene string |
+| `scripts/xai-generate.py`             | Call xAI Imagine API (`XAI_API_KEY`)                     |
+| `scripts/assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`             |
+| `scripts/create_episode.py`           | Scaffold `episodes/episode-NN/` from templates           |
+| `scripts/eyewash_idents_generator.py` | Scaffold EyeWash ident tables                            |
+| `scripts/cat_pov_generator.py`        | Scaffold a cat-POV cutaway outline                       |
+
+There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 
 ---
 
-## Code Style Guidelines
+## How to add catalog content
 
-### Python scripts
-- Keep scripts **lightweight and dependency-free**.
-- Include a module docstring explaining usage.
-- Accept CLI arguments via `sys.argv` (the existing script does this).
-- Print human-readable output to stdout.
+1. Author the markdown/JSON source (`content/README.md`).
+2. `npm run codegen` (and `npm run agent-docs` if views/catalog summaries should change).
+3. Commit sources **and** regenerated `src/data/generated/*` / `public/llms*.txt` as needed.
 
-### HTML/CSS
-- The `index.html` uses inline styles within a single `<style>` block. This is intentional to avoid extra HTTP requests.
-- Prefer semantic HTML and simple CSS Grid / Flexbox for layout.
-- When adding new episode cards, copy the existing card pattern inside the `asset-grid` container.
-
-### Markdown
-- Use consistent header levels (`#` for title, `##` for sections, `###` for sub-sections).
-- Preserve YAML frontmatter exactly as shown in existing synopses.
+Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 
 ---
 
-## How to Add a New Episode
+## How to add an episode
 
-1. **Create folder**: `mkdir episodes/episode-04`
-2. **Copy templates**:
-   ```bash
-   cp templates/synopsis-template.md episodes/episode-04/synopsis.md
-   cp templates/subtitles-template.srt episodes/episode-04/subtitles.srt
-   ```
-3. **Fill in content**: Edit `synopsis.md` with YAML frontmatter and scene breakdowns. Update `subtitles.srt` with timed transcripts.
-4. **Update `index.html`**: Add a new episode card in the Episodes section, mirroring the existing card structure.
-5. **Commit and push**.
+1. `python3 scripts/create_episode.py 05 "Title"` or copy `templates/`.
+2. Fill `synopsis.md` and `scenes.json`.
+3. Timeline loads `episodes/episode-NN/scenes.json` dynamically; keep `AVAILABLE_EPISODES` in `src/data/production.ts` in sync if you add a number.
+
+Do **not** add an episode card to a static `index.html`. The hub is the React app.
 
 ---
 
-## Capturing & Developing New Scenes, Songs & Visuals
+## Capturing new scenes, songs, visuals
 
-For rapid creative work:
-- Start in `notes/scratchpad.md` for anything that pops up.
-- Use the structured templates in `notes/scene-suggestions.md` and `notes/song-suggestions.md` to develop ideas with prompts, music sync, and emotional notes.
-- Stage image ideas in `notes/image-prompt-captures.md` then refine and move to `prompts/`.
-- Once ready, promote into episodes/ or other folders.
-
-This keeps the creative flow convenient and organized.
+- `notes/scratchpad.md` — rapid capture
+- `notes/scene-suggestions.md` / `notes/song-suggestions.md` — structured templates
+- `notes/image-prompt-captures.md` — stage Grok ideas, then move to `prompts/`
+- `notes/scenes/versions/` — dialog audition pages (not codegen)
 
 ---
 
-## Security and Size Considerations
+## Gotchas
 
-- **Do not commit secrets** (API keys, tokens, passwords). The project currently has none.
-- **Avoid bloating the repo**: Do not commit large video files, high-resolution image batches, or uncompressed audio. Link externally instead.
-- **No server-side code**: Everything is static. There are no databases, auth systems, or backend services.
+- **Do not hand-edit** `src/data/generated/` or `public/llms.txt` / `llms-full.txt` / `sitemap.xml`.
+- **Media**: prefer external hosting for large video; some stills and mp3s are already in-repo. Do not add large binaries without approval.
+- **No secrets** in the repo. `xai-generate.py` and `deploy.py` read env vars.
+- **Python** stays stdlib-only.
+- `git.sh` commits with the hard-coded message `"push fix"` — prefer a descriptive `git commit`.
 
 ---
 
 ## Relationship to `grok.md`
 
-- **`grok.md`** is the **creative** AI assistant guide. It covers artistic vision, asset management storytelling, and visual polish.
-- **`AGENTS.md`** (this file) is the **technical** guide. It covers repository structure, conventions, and how to make safe code changes.
+- **`grok.md`**: artistic vision and visual polish.
+- **`AGENTS.md`**: repository structure, codegen, typecheck, and safe edits.
 
-When in doubt about creative direction, consult `grok.md`. When in doubt about where to put a file or how to edit safely, consult this file.
+When in doubt about creative direction, consult `grok.md`. When in doubt about where a file belongs, consult this file.
 
 ---
 
 ## Quick Reference
 
-| Task | Command / Location |
-|------|-------------------|
-| Preview site locally | `python3 -m http.server 8000` then open `http://localhost:8000` |
-| Generate image prompts | `python3 scripts/generate-prompts.py "scene description"` |
-| Add new episode | Copy `templates/synopsis-template.md` + `subtitles-template.srt` into `episodes/episode-NN/` |
-| Capture new scene/song ideas | `notes/scene-suggestions.md` and `notes/song-suggestions.md` (use built-in templates) |
-| Quick scratch notes & fragments | `notes/scratchpad.md` |
-| Stage image / Grok Imagine ideas | `notes/image-prompt-captures.md` |
-| Update production hub | Edit `index.html` directly |
-| Quick git push | `bash git.sh` (uses message `"push fix"`) |
-| Production log | `docs/production-log.md` |
-}}
-
----
-
-## Cursor Cloud specific instructions
-
-The sections above describe the repo as a static, HTML-only production hub. That is now out of date for the runnable app: the root `index.html` is a Vite entry point that loads `/src/main.tsx`, so it is **not** a standalone static page. Opening it with `python3 -m http.server` will not render the React UI — use Vite instead.
-
-### Actual app: `weeks-on-fire-gallery`
-- **Stack**: React 19 + TypeScript + Vite + Tailwind CSS (v4 via `@tailwindcss/vite`). Source lives in `src/` (`App.tsx`, `components/`, thin `src/data/*.ts` shims → `src/data/generated/`).
-- **Content index**: Songs, cutaways, gallery, characters, and Daisy Bell are authored in [`content/`](../content/) and [`songs/`](../songs/) (see [`content/README.md`](../content/README.md)). **`npm run build` always runs codegen first** — do not hand-edit `src/data/generated/`.
-- **Views** toggled from the header: Visual Archive, Songs, Suggestions, Daisy Bell, Timeline, Characters, Staff.
-
-### Commands (from `package.json`)
-- Dev server: `npm run dev` (Vite, serves on `http://localhost:5173`). Pass `-- --host` to expose it.
-- Codegen: `npm run codegen` (Zod-validated emit to `src/data/generated/`). `npm run codegen:check` fails if generated files drift.
-- Agent docs: `npm run agent-docs` (regenerates `public/llms.txt`, `llms-full.txt`, `sitemap.xml` from `content/`). `npm run agent-docs:check` fails if they drift.
-- Lint / format: `npm run lint` (ESLint on `src/`), `npm run format` (Prettier check), `npm run format:write` (apply).
-- Build + typecheck: `npm run build` (runs `codegen`, `agent-docs`, then `tsc -b`, then `vite build`). This is the closest thing to a "test".
-- Preview production build: `npm run preview`.
-- One-time legacy export: `npm run migrate:content` (reads old TS data layer → writes `content/` + song frontmatter).
-
-### Gotchas
-- **Lint + type gate**: ESLint + Prettier cover `src/`; `npm run build` remains the TypeScript gate (`tsc` strict).
-- **Agent docs at build time**: `public/llms*.txt` and `sitemap.xml` are generated from `content/` — do not hand-edit; run `npm run agent-docs`.
-- **Cutaway `songId` references** must exist in song frontmatter — codegen validation fails on orphans.
-- **`prompts/*-segments.md`** files used via `segmentsSource` must have a matching cutaway JSON entry.
-- The Python helper (`scripts/generate-prompts.py`) and Markdown/SRT episode content are separate from the React catalog index.
+| Task                    | Command / Location                                           |
+| ----------------------- | ------------------------------------------------------------ |
+| Preview hub             | `npm run dev` → http://localhost:5173                        |
+| Typecheck app + codegen | `npx tsc -b`                                                 |
+| Generate catalog        | `npm run codegen`                                            |
+| Agent crawl files       | `npm run agent-docs`                                         |
+| Production build        | `npm run build`                                              |
+| Grok prompt variations  | `python3 scripts/generate-prompts.py "scene"`                |
+| xAI image               | `python3 scripts/xai-generate.py "prompt" -o images/out.jpg` |
+| New episode folder      | `python3 scripts/create_episode.py 05 "Title"`               |
+| Production log          | `docs/production-log.md`                                     |

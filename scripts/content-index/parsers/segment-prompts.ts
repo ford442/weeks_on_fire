@@ -5,10 +5,12 @@ import type { CutawaySegment } from '../schemas';
 function parseTimeToSeconds(value: string): number {
   const parts = value.trim().split(':').map(Number);
   if (parts.length === 3) {
-    return parts[0] * 3600 + parts[1] * 60 + parts[2];
+    const [hours = 0, minutes = 0, seconds = 0] = parts;
+    return hours * 3600 + minutes * 60 + seconds;
   }
   if (parts.length === 2) {
-    return parts[0] * 60 + parts[1];
+    const [minutes = 0, seconds = 0] = parts;
+    return minutes * 60 + seconds;
   }
   return 0;
 }
@@ -56,7 +58,10 @@ export function parseSegmentPromptsFile(
   const matches = [...markdown.matchAll(headerPattern)];
 
   for (const match of matches) {
-    const [, letter, title, timeRange] = match;
+    const letter = match[1];
+    const title = match[2];
+    const timeRange = match[3];
+    if (!letter || !title || !timeRange) continue;
     const headerIndex = match.index ?? 0;
     const nextHeader = markdown.slice(headerIndex + match[0].length).search(/^##\s/m);
     const section =
@@ -78,14 +83,9 @@ export function parseSegmentPromptsFile(
       end,
       durationSec: durationFromRange(start, end),
       onScreen: onScreenLine || title,
-      lyrics:
-        extractFencedBlock(section, 'Spoken') ||
-        extractFencedBlock(section, 'Lyrics') ||
-        '',
+      lyrics: extractFencedBlock(section, 'Spoken') || extractFencedBlock(section, 'Lyrics') || '',
       musicCue:
-        extractFencedBlock(section, 'Sound') ||
-        extractFencedBlock(section, 'Voice bed') ||
-        '',
+        extractFencedBlock(section, 'Sound') || extractFencedBlock(section, 'Voice bed') || '',
       grokImaginePrompt: extractFencedBlock(section, 'Grok Imagine'),
       geminiOmniPrompt: extractFencedBlock(section, 'Gemini Omni'),
       promptVariations: extractVariations(section),
@@ -104,7 +104,11 @@ function parseSoftGyreTable(markdown: string, cutawayId: string): CutawaySegment
   const rowPattern = /\|\s*([0-9:]+)[–-]([0-9:]+)\s*\|\s*\*\*([A-Z])\s+—\s+([^*]+)\*\*/g;
 
   for (const match of markdown.matchAll(rowPattern)) {
-    const [, start, end, letter, title] = match;
+    const start = match[1];
+    const end = match[2];
+    const letter = match[3];
+    const title = match[4];
+    if (!start || !end || !letter || !title) continue;
     const sectionPattern = new RegExp(
       `##\\s+Shot\\s+${letter}\\s+—[\\s\\S]*?(?=##\\s+Shot\\s+[A-Z]|##\\s+Gemini|$)`,
       'i',
@@ -120,8 +124,10 @@ function parseSoftGyreTable(markdown: string, cutawayId: string): CutawaySegment
       onScreen: title.trim(),
       lyrics: '[Instrumental — no vocal]',
       musicCue: '',
-      grokImaginePrompt: extractFencedBlock(section, 'Grok Imagine') || extractFencedBlock(section, 'First frame'),
-      geminiOmniPrompt: extractFencedBlock(section, 'Gemini Omni') || extractFencedBlock(section, 'Video'),
+      grokImaginePrompt:
+        extractFencedBlock(section, 'Grok Imagine') || extractFencedBlock(section, 'First frame'),
+      geminiOmniPrompt:
+        extractFencedBlock(section, 'Gemini Omni') || extractFencedBlock(section, 'Video'),
       promptVariations: extractVariations(section),
     });
   }
@@ -134,7 +140,7 @@ export function countEditTimelineRows(repoRoot: string, relativePath: string): n
   const timelineMatch = markdown.match(/## Edit timeline[\s\S]*?```([\s\S]*?)```/i);
   if (!timelineMatch) return null;
 
-  return timelineMatch[1]
+  return (timelineMatch[1] ?? '')
     .split('\n')
     .map((line) => line.trim())
     .filter((line) => line.includes('|') && /\d+:\d+/.test(line)).length;

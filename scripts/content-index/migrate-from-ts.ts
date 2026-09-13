@@ -1,6 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { parseSegmentPromptsFile } from './parsers/segment-prompts.ts';
+import { parseSegmentPromptsFile } from './parsers/segment-prompts';
 import { formatFrontmatter } from './parsers/frontmatter';
 
 const repoRoot = join(import.meta.dirname, '../..');
@@ -29,7 +29,9 @@ function parseImportMap(tsSource: string): Map<string, string> {
   const map = new Map<string, string>();
   const importPattern = /import\s+(\w+)\s+from\s+['"](\.\.\/[^'"]+)['"]/g;
   for (const match of tsSource.matchAll(importPattern)) {
-    const [, alias, relPath] = match;
+    const alias = match[1];
+    const relPath = match[2];
+    if (!alias || !relPath) continue;
     map.set(alias, relPath.replace(/^\.\.\/\.\.\//, ''));
   }
   return map;
@@ -47,6 +49,7 @@ function extractArray(tsSource: string, name: string): string {
 
   for (let i = arrayStart; i < tsSource.length; i += 1) {
     const char = tsSource[i];
+    if (char === undefined) continue;
 
     if (inString) {
       if (escaped) {
@@ -88,12 +91,18 @@ function migrateSongs() {
   const importMap = parseImportMap(songsTs);
   const rawImportPattern = /import\s+(\w+)\s+from\s+['"](\.\.\/\.\.\/songs\/[^'"]+)['"]/g;
   for (const match of songsTs.matchAll(rawImportPattern)) {
-    const [, alias, relPath] = match;
+    const alias = match[1];
+    const relPath = match[2];
+    if (!alias || !relPath) continue;
     const filePath = relPath.replace(/^\.\.\/\.\.\//, '').split('?')[0];
+    if (!filePath) continue;
     importMap.set(alias, readFileSync(join(repoRoot, filePath), 'utf8'));
   }
 
-  const songSources = evalArray<Record<string, unknown>>(extractArray(songsTs, 'songSources'), importMap);
+  const songSources = evalArray<Record<string, unknown>>(
+    extractArray(songsTs, 'songSources'),
+    importMap,
+  );
 
   for (const source of songSources) {
     const sourceFile = String(source.sourceFile);
@@ -161,7 +170,7 @@ function serializeCutaway(cutaway: Record<string, unknown>) {
   return output;
 }
 
-async function migrateCutaways() {
+function migrateCutaways() {
   const cutawaysDir = join(repoRoot, 'content/cutaways');
   if (existsSync(cutawaysDir) && readdirSync(cutawaysDir).length > 0) {
     console.log('content/cutaways already populated — skipping cutaway migration');
@@ -181,18 +190,10 @@ async function migrateCutaways() {
     importMap,
   );
 
-  let extensionCutaways: Record<string, unknown>[] = [];
-  try {
-    const { gagCutaways } = await import('../../src/data/gagCutaways.ts');
-    const { songCutaways } = await import('../../src/data/songCutaways.ts');
-    const { sceneCutaways } = await import('../../src/data/sceneCutaways.ts');
-    extensionCutaways = [...gagCutaways, ...songCutaways, ...sceneCutaways] as Record<
-      string,
-      unknown
-    >[];
-  } catch {
-    console.warn('Legacy *Cutaways.ts modules not found — migrating core cutaways only');
-  }
+  const extensionCutaways: Record<string, unknown>[] = [];
+  console.warn(
+    'Legacy *Cutaways.ts modules are no longer in src/data — migrating core cutaways only',
+  );
 
   const all = [...coreCutaways, ...extensionCutaways];
   mkdirSync(cutawaysDir, { recursive: true });
@@ -232,7 +233,10 @@ function migrateGallery() {
 function migrateCharacters() {
   const source = readFileSync(join(repoRoot, 'src/data/characters.ts'), 'utf8');
   const importMap = parseImportMap(source);
-  const characters = evalArray<Record<string, unknown>>(extractArray(source, 'seriesCharacters'), importMap);
+  const characters = evalArray<Record<string, unknown>>(
+    extractArray(source, 'seriesCharacters'),
+    importMap,
+  );
 
   const output = characters.map((character) => ({
     id: character.id,
@@ -255,53 +259,61 @@ function migrateDaisyBell() {
   const importMap = parseImportMap(source);
 
   const metaMatch = source.match(/export const daisyBellMeta = (\{[\s\S]*?\}) as const;/);
-  const subjectLockMatch = source.match(/export const daisyBellSubjectLock =\n\s*'((?:\\'|[^'])*)';/);
+  const subjectLockMatch = source.match(
+    /export const daisyBellSubjectLock =\n\s*'((?:\\'|[^'])*)';/,
+  );
   const stylishMatch = source.match(/export const daisyBellStylish1890s =\n\s*'((?:\\'|[^'])*)';/);
   const workingMatch = source.match(/export const daisyBellWorking1890s =\n\s*'((?:\\'|[^'])*)';/);
 
-  const subjectLock = subjectLockMatch?.[1].replace(/\\'/g, "'") ?? '';
-  const stylish1890s = stylishMatch?.[1].replace(/\\'/g, "'") ?? '';
-  const working1890s = workingMatch?.[1].replace(/\\'/g, "'") ?? '';
+  const subjectLock = (subjectLockMatch?.[1] ?? '').replace(/\\'/g, "'");
+  const stylish1890s = (stylishMatch?.[1] ?? '').replace(/\\'/g, "'");
+  const working1890s = (workingMatch?.[1] ?? '').replace(/\\'/g, "'");
 
   importMap.set('daisyBellSubjectLock', subjectLock);
   importMap.set('daisyBellStylish1890s', stylish1890s);
   importMap.set('daisyBellWorking1890s', working1890s);
 
   const output = {
-    meta: metaMatch ? eval(`(${metaMatch[1]})`) : {},
+    meta: metaMatch?.[1] ? eval(`(${metaMatch[1]})`) : {},
     subjectLock,
     stylish1890s,
     working1890s,
-    sequence: evalArray<Record<string, unknown>>(extractArray(source, 'daisyBellSequence'), importMap),
-    sights: evalArray<Record<string, unknown>>(extractArray(source, 'daisyBellSights'), importMap),
-    frames: evalArray<Record<string, unknown>>(extractArray(source, 'daisyBellFrames'), importMap).map(
-      (frame) => ({
-        id: frame.id,
-        order: frame.order,
-        title: frame.title,
-        treatment: frame.treatment,
-        beat: frame.beat,
-        description: frame.description,
-        prompt: frame.prompt,
-        imagePath: frame.imageUrl ? importMap.get(String(frame.imageUrl)) : undefined,
-        tags: frame.tags,
-      }),
+    sequence: evalArray<Record<string, unknown>>(
+      extractArray(source, 'daisyBellSequence'),
+      importMap,
     ),
+    sights: evalArray<Record<string, unknown>>(extractArray(source, 'daisyBellSights'), importMap),
+    frames: evalArray<Record<string, unknown>>(
+      extractArray(source, 'daisyBellFrames'),
+      importMap,
+    ).map((frame) => ({
+      id: frame.id,
+      order: frame.order,
+      title: frame.title,
+      treatment: frame.treatment,
+      beat: frame.beat,
+      description: frame.description,
+      prompt: frame.prompt,
+      imagePath: frame.imageUrl ? importMap.get(String(frame.imageUrl)) : undefined,
+      tags: frame.tags,
+    })),
   };
 
   writeFileSync(join(repoRoot, 'content/daisy-bell.json'), `${JSON.stringify(output, null, 2)}\n`);
 }
 
-async function main() {
+function main() {
   migrateSongs();
-  await migrateCutaways();
+  migrateCutaways();
   migrateGallery();
   migrateCharacters();
   migrateDaisyBell();
   console.log('Migration complete.');
 }
 
-main().catch((error) => {
+try {
+  main();
+} catch (error) {
   console.error(error);
   process.exit(1);
-});
+}

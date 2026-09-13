@@ -44,6 +44,9 @@ jobs:
       - name: Agent docs check
         run: npm run agent-docs:check
 
+      - name: Test
+        run: npm run test
+
       - name: Build
         run: npm run build
 

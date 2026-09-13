@@ -18,12 +18,20 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Characters, Crew (`/staff`).
+Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, Crew (`/staff`).
+
+Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short cartoon seeds
+(`content/cartoons/<id>.json` — premise, still, optional prompt). No song id. Promote winners to
+Suggestions.
+
+Episodes (`/episodes`, `/episodes/:id`) is a read-only episode bible: logline, status, runtime, and
+in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/episodes.json` +
+`episodes/`, `notes/`, `docs/`. Timeline remains the only place to edit `scenes.json`.
 
 ## Repository Structure
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
-**`content/`** — Cutaways, gallery, characters, staff, Daisy Bell JSON.  
+**`content/`** — Cutaways, gallery, characters, staff, episodes, cartoons, Daisy Bell JSON.  
 **`songs/`** — YAML-frontmatter markdown + optional mp3.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  
 **`prompts/`** — Segment / Grok Imagine prompt docs (`segmentsSource`).  

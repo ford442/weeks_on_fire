@@ -2,27 +2,37 @@
 
 The Production Timeline can export a reduced JSON payload for external **clip_stacker** tooling and import it back with merge rules.
 
+## Not to be confused with `clip_stacker_directions.md`
+
+This document is the machine-readable **`clip-stacker-NN.json`** export/import contract only —
+schema-validated fields for the Timeline's clip_stacker payload. It is a different artifact from
+**`clip_stacker_directions.md`**, a prose "edit grammar" reference for production notes
+(referenced from files under `ideas/` and `prompts/`, e.g. `prompts/home-sweet-void-segments.md`).
+That file is not committed to this repo — it's an external production artifact, the same way
+`daisyBellMeta.slideshowUrl` points at a hosted video rather than a git-tracked one. If you're
+looking for narrative edit-grammar guidance, that's the wrong doc; if you're looking for the JSON
+field contract, you're in the right place.
+
+This repo also has no in-repo C++/emscripten toolchain and no `compile_commands.json` — native
+clip/video assembly from this JSON contract is out of scope for this SPA and is tracked separately
+in issue #43, consumed by a separate repo.
+
 ## Export payload (`clip-stacker-NN.json`)
 
-| Field | Type | Notes |
-|-------|------|-------|
-| `project` | string | Episode title (from `EpisodeProduction.title`) |
-| `version` | `"weeks_on_fire_v1"` | Schema tag — required for import |
-| `exportedAt` | string | ISO timestamp |
-| `clips` | array | One entry per scene (see below) |
-| `episodeHistory` | array | Episode-level history entries |
+The `clip_stacker` payload (`ClipStackerPayload`) and its `clips[]` items (`ClipStackerClip`) are
+defined once, as runtime-validated Zod schemas, in
+[`src/schemas/production.ts`](../src/schemas/production.ts) — `ClipStackerPayloadSchema` and
+`ClipStackerClipSchema`. That module is the source of truth for field names, types, and the
+`weeks_on_fire_v1` version tag; this document does not repeat the field list so it can't drift out
+of sync. `EpisodeProduction` / `ProductionScene` (the committed `scenes.json` shape) live in the
+same module.
 
-### Each `clips[]` item
-
-| Field | Type | Source |
-|-------|------|--------|
-| `id` | string | `ProductionScene.id` |
-| `title` | string | Scene title |
-| `timestamp` | string | `HH:MM:SS` synopsis timecode |
-| `order` | number | Scene sort order |
-| `status` | string | `draft` \| `generated` \| `approved` \| `in-edit` \| `final` |
-| `mediaUrl` | string \| null | Empty string exported as `null` |
-| `description` | string | Scene description |
+Both `src/data/production.ts` (`exportToClipStacker`, `clipStackerToProduction`,
+`isClipStackerPayload`) and `src/lib/productionStorage.ts` (the `wof:production:episode-NN`
+localStorage wrapper) validate against these same schemas — there is no second, hand-rolled
+parser. Unrecognized extra fields on a payload are accepted and stripped rather than rejected, so
+the format can grow without breaking older exports. See `src/schemas/production.test.ts` for the
+export → import round-trip and rejection cases covered by `npm run test`.
 
 ### Omitted on export
 
@@ -82,6 +92,8 @@ When importing a `clip-stacker-*.json` file:
 
 ## Related files
 
+- Schema: [`src/schemas/production.ts`](../src/schemas/production.ts) (`ClipStackerPayloadSchema`, `EpisodeProductionSchema`, `StoredProductionSchema`)
 - Export/import logic: [`src/data/production.ts`](../src/data/production.ts) (`exportToClipStacker`, `clipStackerToProduction`)
+- Storage wrapper: [`src/lib/productionStorage.ts`](../src/lib/productionStorage.ts)
 - Timeline UI: [`src/App.tsx`](../src/App.tsx)
 - Committed scene data: [`episodes/episode-NN/scenes.json`](../episodes/)

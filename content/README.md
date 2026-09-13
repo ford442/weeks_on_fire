@@ -75,6 +75,76 @@ No edits to `src/data/songs.ts` are required.
 | [`characters.json`](characters.json) | Cast bios                                                         |
 | [`staff.json`](staff.json)           | Fictional crew bios (`imageFile` = filename under `public/cast/`) |
 | [`daisy-bell.json`](daisy-bell.json) | Daisy Bell keyframe board                                         |
+| [`episodes.json`](episodes.json)     | Episode Bible index (Episodes view) — see below                   |
+| [`cartoons/*.json`](cartoons/)       | Short cartoon seeds (Cartoons view) — one file per idea           |
+
+## Adding/editing an episode (Episode Bible)
+
+`episodes.json` is the source for the **Episodes** hub view (`/episodes`, `/episodes/:id`) — a
+read-only logline/status/synopsis browser. It does **not** replace `episodes/episode-NN/scenes.json`
+(that stays Timeline's editable production data).
+
+Each entry:
+
+```json
+{
+  "id": "01",
+  "number": 1,
+  "title": "The Burning Town",
+  "register": "Glamour fire",
+  "status": "synopsis-ready",
+  "runtime": "~4 min",
+  "logline": "One sentence, sourced from the episode's own synopsis/season-arc — don't invent one.",
+  "files": {
+    "synopsis": "episodes/episode-01/synopsis.md",
+    "scenes": "episodes/episode-01/scenes.md",
+    "screenplay": "episodes/episode-01/screenplay.md",
+    "subtitles": "episodes/episode-01/subtitles.srt",
+    "notes": "notes/scenes/some-note.md",
+    "seasonArc": "docs/season-arc.md"
+  }
+}
+```
+
+- `status` is one of `synopsis-ready`, `in-production`, `candidate`.
+- All `files` entries are repo-relative and optional; codegen fails if a referenced path doesn't
+  exist. Only `synopsis`, `scenes`, `screenplay`, `notes`, and `seasonArc` render as in-app markdown
+  (via `react-markdown` + `remark-gfm`) — `subtitles` is link-only.
+- Parked, not-yet-shot episodes (e.g. the Episode 5 candidate) set `"isCandidate": true` and have no
+  `episodes/episode-NN/` folder yet — link `notes`/`seasonArc` instead of `synopsis`/`scenes`.
+- Run `npm run codegen` and commit `episodes.json` + the regenerated `src/data/generated/episodes.ts`.
+
+## Adding a short cartoon idea (agents)
+
+The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds — one still, a
+6–8s loop, no song id, no timed segments. One JSON file per idea under
+[`cartoons/`](cartoons/). Filename must match `id`.
+
+```json
+{
+  "id": "your-idea-id",
+  "title": "Title",
+  "premise": "The gag in one or two sentences.",
+  "visual": "What we see. Newspaper-comic test: if it needs a caption, the still is unfinished.",
+  "status": "seed",
+  "tags": ["tag"],
+  "runtime": "~8 seconds",
+  "register": "grounded surreal",
+  "characterLean": "optional — who it leans toward",
+  "grokImaginePrompt": "optional copy-ready still prompt",
+  "motion": "optional 6–8s motion note",
+  "notes": "optional production notes",
+  "agent": "optional — which model/agent dropped this"
+}
+```
+
+- `status` is one of `seed`, `sketched`, `ready-to-generate`, `promoted`.
+- Required: `id`, `title`, `premise`, `visual`, `status`, `tags`.
+- Tone lock matches [`notes/one-panel-gags.md`](../notes/one-panel-gags.md): dry, elegant, slightly
+  menacing. No broad slapstick. Do not reuse the locked gags listed there.
+- When a seed is ready, promote it to `content/cutaways/` (Suggestions). Leave `status: "promoted"`
+  on the cartoon file so the parking lot keeps the credit.
+- Run `npm run codegen` and commit the JSON + `src/data/generated/cartoons.ts`.
 
 ## Dialog versions (intentional TS exception)
 
@@ -91,6 +161,8 @@ The Suggestions workspace reads **only** the selected Riley Rosencrantz exchange
 - Missing image paths
 - Segment count vs `## Edit timeline` table (when present in prompts source)
 - Orphan `prompts/*-segments.md` files (`npm run codegen:check`)
+- Episode `files.*` paths exist on disk; duplicate episode `id`/`number`
+- Cartoon filename matches `id`; duplicate cartoon ids
 
 ## Migration from legacy TS
 
@@ -106,3 +178,4 @@ This reads the previous `src/data/*.ts` sources and writes `content/` + song fro
 
 - Timeline production JSON: [`episodes/episode-NN/scenes.json`](../episodes/) — separate from this index; see [`docs/clip-stacker.md`](../docs/clip-stacker.md)
 - Segment prompt docs: [`prompts/`](../prompts/)
+- Season spine / Episode 5 candidate context: [`docs/season-arc.md`](../docs/season-arc.md)

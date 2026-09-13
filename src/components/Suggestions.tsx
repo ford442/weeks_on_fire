@@ -23,6 +23,7 @@ import {
   getDialogVersionsForScene,
   type DialogExchange,
 } from '../data/sceneDialogVersions';
+import CutawayPreview from './CutawayPreview';
 
 const allValue = 'All';
 const sightToken = '[SIGHT]';
@@ -511,6 +512,11 @@ export default function Suggestions() {
           />
         ) : selected && activeSegment ? (
           <div className="space-y-5">
+            <CutawayPreview
+              segments={selected.segments}
+              activeSegmentId={activeSegment.id}
+              onActiveSegmentChange={setActiveSegmentId}
+            />
             <SegmentDetail
               cutaway={selected}
               segment={activeSegment}

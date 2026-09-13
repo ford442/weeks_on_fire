@@ -7,6 +7,8 @@ import {
   SeriesCharacterSchema,
   DaisyBellSchema,
   StaffMemberSchema,
+  EpisodeSchema,
+  CartoonSchema,
 } from './schemas';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
@@ -18,6 +20,8 @@ import type {
   SeriesCharacterRecord,
   DaisyBellRecord,
   StaffMemberRecord,
+  EpisodeRecord,
+  CartoonRecord,
 } from './schemas';
 
 export interface ParsedSong {
@@ -131,6 +135,34 @@ export function loadStaff(repoRoot: string): StaffMemberRecord[] {
   return (Array.isArray(raw) ? raw : raw.staff).map((item: unknown) =>
     StaffMemberSchema.parse(item),
   );
+}
+
+export function loadEpisodes(repoRoot: string): EpisodeRecord[] {
+  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/episodes.json'), 'utf8'));
+  return (Array.isArray(raw) ? raw : raw.episodes).map((item: unknown) =>
+    EpisodeSchema.parse(item),
+  );
+}
+
+export function loadCartoons(repoRoot: string): CartoonRecord[] {
+  const cartoonsDir = join(repoRoot, 'content/cartoons');
+  if (!existsSync(cartoonsDir)) {
+    throw new Error('Missing content/cartoons/. Add one JSON file per short cartoon idea.');
+  }
+
+  const files = readdirSync(cartoonsDir)
+    .filter((file) => file.endsWith('.json'))
+    .sort();
+
+  return files.map((file) => {
+    const raw = JSON.parse(readFileSync(join(cartoonsDir, file), 'utf8'));
+    const record = CartoonSchema.parse(raw);
+    const expectedId = file.replace(/\.json$/, '');
+    if (record.id !== expectedId) {
+      throw new Error(`Cartoon file ${file} id mismatch: ${record.id}`);
+    }
+    return record;
+  });
 }
 
 export function listMp3Filenames(repoRoot: string): string[] {

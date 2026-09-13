@@ -1,0 +1,72 @@
+[
+  {
+    "id": "01",
+    "number": 1,
+    "title": "The Burning Town",
+    "register": "Glamour fire",
+    "status": "synopsis-ready",
+    "runtime": "~4 min",
+    "logline": "House of mirrors, burning town, corset and ping-pong. The Two are bored and want more fire. Lives get swapped; mascara must not smudge.",
+    "files": {
+      "synopsis": "episodes/episode-01/synopsis.md",
+      "screenplay": "episodes/episode-01/screenplay.md",
+      "subtitles": "episodes/episode-01/subtitles.srt"
+    }
+  },
+  {
+    "id": "02",
+    "number": 2,
+    "title": "Episode 2",
+    "register": "Liminal night",
+    "status": "synopsis-ready",
+    "runtime": "~14 min",
+    "logline": "Dashboard glow, Radio Voice in the static, wildflowers, a factory skull, the caffeinated melon. Studio Huddle seeds the HOA weather system.",
+    "files": {
+      "synopsis": "episodes/episode-02/synopsis.md",
+      "subtitles": "episodes/episode-02/subtitles.srt",
+      "notes": "episodes/episode-02/studio-huddle.md"
+    }
+  },
+  {
+    "id": "03",
+    "number": 3,
+    "title": "Laser Serpent Skirmish",
+    "register": "Suburban Halloween",
+    "status": "in-production",
+    "runtime": "~1:10",
+    "logline": "A curious black cat triggers a laser battle between glowing serpents and an animated skeleton — until a completely unfazed pizza delivery guy shows up and the camera pulls back to reveal the true scale of the madness.",
+    "files": {
+      "synopsis": "episodes/episode-03/synopsis.md",
+      "scenes": "episodes/episode-03/scenes.md",
+      "screenplay": "episodes/episode-03/screenplay.md"
+    }
+  },
+  {
+    "id": "04",
+    "number": 4,
+    "title": "Episode 4",
+    "register": "Bureaucracy afterglow",
+    "status": "synopsis-ready",
+    "runtime": "~6 min",
+    "logline": "The morning after the portal, the HOA reclassifies cosmic horror as seasonal décor.",
+    "files": {
+      "synopsis": "episodes/episode-04/synopsis.md",
+      "scenes": "episodes/episode-04/scenes.md",
+      "subtitles": "episodes/episode-04/subtitles.srt"
+    }
+  },
+  {
+    "id": "05",
+    "number": 5,
+    "title": "The Long Way Up",
+    "register": "Candidate — honest height",
+    "status": "candidate",
+    "runtime": "9–12 min (target)",
+    "logline": "The Long Way Up + No Other Human Sounds. Riley Smith. One wordy episode per season. Score withheld until the saddle. The EyeWash transmitter stays offscreen.",
+    "isCandidate": true,
+    "files": {
+      "notes": "notes/scenes/the-long-way-up.md",
+      "seasonArc": "docs/season-arc.md"
+    }
+  }
+]

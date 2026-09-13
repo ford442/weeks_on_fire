@@ -6,7 +6,7 @@
 
 **https://ford442.github.io/weeks_on_fire**
 
-React + Vite gallery with seven views:
+React + Vite gallery with production views:
 
 | View               | What you get                                             |
 | ------------------ | -------------------------------------------------------- |
@@ -15,7 +15,9 @@ React + Vite gallery with seven views:
 | **Songs**          | Minimax catalog — style prompts, lyrics, episode ties    |
 | **Daisy Bell**     | Keyframe board, color vs period treatments, sequence     |
 | **Suggestions**    | Cutaways, gags, and scene suggestions with timed prompts |
+| **Cartoons**       | Short cartoon seeds from agents — premise, still, prompt |
 | **Characters**     | Recurring cast bible                                     |
+| **Episodes**       | Read-only episode bible                                  |
 | **Crew**           | Fictional series crew bios                               |
 
 Agent-friendly files on the live site: [`/llms.txt`](https://ford442.github.io/weeks_on_fire/llms.txt) · [`/llms-full.txt`](https://ford442.github.io/weeks_on_fire/llms-full.txt) · [`/sitemap.xml`](https://ford442.github.io/weeks_on_fire/sitemap.xml)
@@ -57,6 +59,7 @@ Catalog data is **not** hand-edited in `src/data/*.ts`. Author in markdown/JSON,
 | Characters | `content/characters.json`                                      | `src/data/generated/characters.ts` |
 | Staff      | `content/staff.json`                                           | `src/data/generated/staff.ts`      |
 | Daisy Bell | `content/daisy-bell.json`                                      | `src/data/generated/daisy-bell.ts` |
+| Cartoons   | `content/cartoons/*.json` (one file per short cartoon)         | `src/data/generated/cartoons.ts`   |
 
 ```bash
 npm run codegen        # regenerate src/data/generated/*

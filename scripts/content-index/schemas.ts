@@ -25,6 +25,7 @@ export const CutawaySegmentSchema = z.object({
   promptVariations: z.array(z.string()),
   stillUrl: z.string().optional(),
   stillImagePath: z.string().optional(),
+  previewUrl: z.string().optional(),
 });
 
 export const SightCandidateSchema = z.object({
@@ -152,6 +153,47 @@ export const StaffMemberSchema = z.object({
   imageFile: z.string().min(1),
 });
 
+export const EpisodeStatusSchema = z.enum(['synopsis-ready', 'in-production', 'candidate']);
+
+export const EpisodeFilesSchema = z.object({
+  synopsis: z.string().optional(),
+  scenes: z.string().optional(),
+  screenplay: z.string().optional(),
+  subtitles: z.string().optional(),
+  notes: z.string().optional(),
+  seasonArc: z.string().optional(),
+});
+
+export const EpisodeSchema = z.object({
+  id: z.string().min(1),
+  number: z.number(),
+  title: z.string().min(1),
+  register: z.string().optional(),
+  status: EpisodeStatusSchema,
+  runtime: z.string().optional(),
+  logline: z.string().min(1),
+  isCandidate: z.boolean().optional(),
+  files: EpisodeFilesSchema,
+});
+
+export const CartoonStatusSchema = z.enum(['seed', 'sketched', 'ready-to-generate', 'promoted']);
+
+export const CartoonSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  premise: z.string().min(1),
+  visual: z.string().min(1),
+  status: CartoonStatusSchema,
+  tags: z.array(z.string()),
+  runtime: z.string().optional(),
+  register: z.string().optional(),
+  characterLean: z.string().optional(),
+  grokImaginePrompt: z.string().optional(),
+  motion: z.string().optional(),
+  notes: z.string().optional(),
+  agent: z.string().optional(),
+});
+
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
 export type SightCandidate = z.infer<typeof SightCandidateSchema>;
@@ -160,3 +202,8 @@ export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
 export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;
+export type EpisodeStatus = z.infer<typeof EpisodeStatusSchema>;
+export type EpisodeFiles = z.infer<typeof EpisodeFilesSchema>;
+export type EpisodeRecord = z.infer<typeof EpisodeSchema>;
+export type CartoonStatus = z.infer<typeof CartoonStatusSchema>;
+export type CartoonRecord = z.infer<typeof CartoonSchema>;

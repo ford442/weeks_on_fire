@@ -8,7 +8,9 @@ const TimelinePage = lazy(() => import('./components/TimelinePage'));
 const Songs = lazy(() => import('./components/Songs'));
 const DaisyBell = lazy(() => import('./components/DaisyBell'));
 const Suggestions = lazy(() => import('./components/Suggestions'));
+const Cartoons = lazy(() => import('./components/Cartoons'));
 const Characters = lazy(() => import('./components/Characters'));
+const Episodes = lazy(() => import('./components/Episodes'));
 const Staff = lazy(() => import('./components/Staff'));
 
 function RouteFallback() {
@@ -34,7 +36,11 @@ export default function App() {
           <Route path="/daisy-bell" element={<DaisyBell />} />
           <Route path="/suggestions" element={<Suggestions />} />
           <Route path="/suggestions/:id" element={<Suggestions />} />
+          <Route path="/cartoons" element={<Cartoons />} />
+          <Route path="/cartoons/:id" element={<Cartoons />} />
           <Route path="/characters" element={<Characters />} />
+          <Route path="/episodes" element={<Episodes />} />
+          <Route path="/episodes/:id" element={<Episodes />} />
           <Route path="/staff" element={<Staff />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

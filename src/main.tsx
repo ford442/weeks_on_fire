@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import MediaSessionProvider from './contexts/MediaSessionProvider';
 import './styles.css';
 
 function routerBasename(): string {
@@ -18,7 +19,9 @@ const basename = routerBasename();
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter basename={basename}>
-      <App />
+      <MediaSessionProvider>
+        <App />
+      </MediaSessionProvider>
     </BrowserRouter>
   </StrictMode>,
 );

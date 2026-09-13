@@ -1,65 +1,37 @@
 // Production timeline data models for weeks_on_fire
 // These map directly to episodes/<episode>/scenes.json
 // Git-friendly structured data with full change history.
+//
+// Types and runtime validation both come from the shared Zod contract in
+// src/schemas/production.ts — do not redefine these shapes here.
 
-export type SceneStatus = 'draft' | 'generated' | 'approved' | 'in-edit' | 'final';
+import {
+  ClipStackerPayloadSchema,
+  EpisodeProductionSchema,
+  ProductionSceneSchema,
+} from '../schemas/production';
+import type {
+  ClipStackerClip,
+  ClipStackerPayload,
+  EpisodeHistoryEntry,
+  EpisodeProduction,
+  ProductionScene,
+  SceneHistoryEntry,
+  SceneStatus,
+} from '../schemas/production';
 
-export interface SceneHistoryEntry {
-  date: string; // ISO string
-  action: 'added' | 'edited' | 'status-changed' | 'media-added' | string;
-  note: string;
-}
-
-export interface ProductionScene {
-  id: string; // e.g. "scene-001"
-  order: number;
-  title: string;
-  timestamp: string; // "00:00:01" style from synopsis
-  description: string;
-  prompt?: string;
-  mediaUrl?: string;
-  status: SceneStatus;
-  addedAt: string; // ISO
-  lastEditedAt: string; // ISO
-  history: SceneHistoryEntry[];
-}
-
-export interface EpisodeHistoryEntry {
-  date: string;
-  action: string;
-  note: string;
-}
-
-export interface EpisodeProduction {
-  episode: string; // "01"
-  title: string;
-  lastUpdated: string;
-  scenes: ProductionScene[];
-  episodeHistory: EpisodeHistoryEntry[];
-}
+export type {
+  ClipStackerClip,
+  ClipStackerPayload,
+  EpisodeHistoryEntry,
+  EpisodeProduction,
+  ProductionScene,
+  SceneHistoryEntry,
+  SceneStatus,
+};
 
 export const AVAILABLE_EPISODES = ['01', '02', '03', '04'] as const;
 export type EpisodeId = (typeof AVAILABLE_EPISODES)[number];
-
-export interface ClipStackerClip {
-  id: string;
-  title: string;
-  timestamp: string;
-  order: number;
-  status: SceneStatus;
-  mediaUrl: string | null;
-  description: string;
-}
-
-export interface ClipStackerPayload {
-  project: string;
-  version: 'weeks_on_fire_v1';
-  exportedAt: string;
-  clips: ClipStackerClip[];
-  episodeHistory: EpisodeHistoryEntry[];
-}
-
-const SCENE_STATUSES: SceneStatus[] = ['draft', 'generated', 'approved', 'in-edit', 'final'];
 
 const episodeLoaders = import.meta.glob<{ default: EpisodeProduction }>(
   '../../episodes/episode-*/scenes.json',
@@ -71,55 +43,16 @@ function episodeJsonPath(episode: string): string {
   return `../../episodes/episode-${episode}/scenes.json`;
 }
 
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null;
-}
-
-function isSceneStatus(value: unknown): value is SceneStatus {
-  return typeof value === 'string' && SCENE_STATUSES.includes(value as SceneStatus);
-}
-
 export function isValidProductionScene(data: unknown): data is ProductionScene {
-  if (!isRecord(data)) return false;
-  return (
-    typeof data.id === 'string' &&
-    typeof data.order === 'number' &&
-    typeof data.title === 'string' &&
-    typeof data.timestamp === 'string' &&
-    typeof data.description === 'string' &&
-    isSceneStatus(data.status) &&
-    typeof data.addedAt === 'string' &&
-    typeof data.lastEditedAt === 'string' &&
-    Array.isArray(data.history)
-  );
+  return ProductionSceneSchema.safeParse(data).success;
 }
 
 export function isValidEpisodeProduction(data: unknown): data is EpisodeProduction {
-  if (!isRecord(data)) return false;
-  return (
-    typeof data.episode === 'string' &&
-    typeof data.title === 'string' &&
-    typeof data.lastUpdated === 'string' &&
-    Array.isArray(data.scenes) &&
-    data.scenes.every(isValidProductionScene) &&
-    Array.isArray(data.episodeHistory)
-  );
+  return EpisodeProductionSchema.safeParse(data).success;
 }
 
 export function isClipStackerPayload(data: unknown): data is ClipStackerPayload {
-  if (!isRecord(data)) return false;
-  if (data.version !== 'weeks_on_fire_v1' || !Array.isArray(data.clips)) return false;
-  return data.clips.every(
-    (clip) =>
-      isRecord(clip) &&
-      typeof clip.id === 'string' &&
-      typeof clip.title === 'string' &&
-      typeof clip.timestamp === 'string' &&
-      typeof clip.order === 'number' &&
-      isSceneStatus(clip.status) &&
-      typeof clip.description === 'string' &&
-      (clip.mediaUrl === null || typeof clip.mediaUrl === 'string'),
-  );
+  return ClipStackerPayloadSchema.safeParse(data).success;
 }
 
 async function loadCommittedEpisode(episode: string): Promise<EpisodeProduction | null> {

@@ -1,11 +1,29 @@
 import type { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Clock, Film, Flower2, Lightbulb, Music2, UserCircle, Users } from 'lucide-react';
+import {
+  BookOpen,
+  Clock,
+  Film,
+  Flower2,
+  Lightbulb,
+  Music2,
+  PenLine,
+  UserCircle,
+  Users,
+} from 'lucide-react';
 
 import { pathnameToView, viewPaths } from '../routes/paths';
 
 export type SiteView =
-  'gallery' | 'timeline' | 'songs' | 'daisy-bell' | 'suggestions' | 'characters' | 'staff';
+  | 'gallery'
+  | 'timeline'
+  | 'songs'
+  | 'daisy-bell'
+  | 'suggestions'
+  | 'cartoons'
+  | 'characters'
+  | 'episodes'
+  | 'staff';
 
 const viewMeta: Record<SiteView, { eyebrow: string; description: string; icon: typeof Film }> = {
   gallery: {
@@ -38,11 +56,23 @@ const viewMeta: Record<SiteView, { eyebrow: string; description: string; icon: t
       'Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.',
     icon: Lightbulb,
   },
+  cartoons: {
+    eyebrow: 'Cartoon Ideas',
+    description:
+      'Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.',
+    icon: PenLine,
+  },
   characters: {
     eyebrow: 'Character Bible',
     description:
       'Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.',
     icon: UserCircle,
+  },
+  episodes: {
+    eyebrow: 'Episode Bible',
+    description:
+      'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
+    icon: BookOpen,
   },
   staff: {
     eyebrow: 'Series Crew',
@@ -95,9 +125,17 @@ export default function SiteHeader() {
               <Lightbulb size={16} />
               Suggestions
             </TabLink>
+            <TabLink to={viewPaths.cartoons}>
+              <PenLine size={16} />
+              Cartoons
+            </TabLink>
             <TabLink to={viewPaths.characters}>
               <UserCircle size={16} />
               Characters
+            </TabLink>
+            <TabLink to={viewPaths.episodes}>
+              <BookOpen size={16} />
+              Episodes
             </TabLink>
             <TabLink to={viewPaths.staff}>
               <Users size={16} />

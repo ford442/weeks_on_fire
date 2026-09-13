@@ -1,0 +1,12 @@
+{
+  "id": "unscheduled-rain",
+  "title": "Unscheduled Rain",
+  "premise": "Rain falls in a perfect rectangle over the coffee table. Nobody moves the magazines. The cat walks around the wet zone as if this is the house rule.",
+  "visual": "Luxury living room at 2 a.m. A hard-edged shaft of rain, the exact footprint of the glass table, soaking the issues underneath. Dry carpet around it. Two wine glasses, one lipstick-stained. A tiny CRT in the corner playing EyeWash Station snow. A black cat circumnavigates the puddle without looking up.",
+  "status": "seed",
+  "runtime": "~6 seconds",
+  "register": "grounded surreal",
+  "characterLean": "The Two do not comment on weather. The cat already knew.",
+  "tags": ["interior", "rain", "cat", "eyewash-station"],
+  "notes": "Seed only — still prompt not locked. Keep the rain rectangular; do not let it become a leak. Not the Ultra-Refreshed plant. Not the hovering melon."
+}

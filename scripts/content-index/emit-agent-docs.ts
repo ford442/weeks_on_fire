@@ -2,6 +2,7 @@ import { execSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
+  loadCartoons,
   loadCharacters,
   loadCutaways,
   loadDaisyBell,
@@ -96,7 +97,7 @@ Weeks on Fire is a personal cinematic experiment combining:
 - **Visuals**: stills and frames from Grok Imagine (xAI)
 - **Music**: Minimax Music style prompts, lyrics, and cutaway cues
 - **Writing**: episode synopses, screenplays, scene breakdowns
-- **Hub UI**: React + Vite gallery with seven production views
+- **Hub UI**: React + Vite gallery with production views
 
 ## Primary content (crawl these)
 
@@ -109,10 +110,11 @@ ${episodeLines}
 ### Songs (style prompts + lyrics)
 - ${REPO_BASE}/tree/main/songs
 
-### Prompts & notes
+### Prompts, notes, cartoon seeds
 - ${REPO_BASE}/tree/main/prompts
 - ${REPO_BASE}/tree/main/notes
 - ${REPO_BASE}/tree/main/ai-contributions
+- ${REPO_BASE}/tree/main/content/cartoons
 
 ## Featured visual scenes
 
@@ -139,6 +141,7 @@ function emitLlmsFullTxt(
   cutaways: ReturnType<typeof loadCutaways>,
   daisyBell: ReturnType<typeof loadDaisyBell>,
   staff: ReturnType<typeof loadStaff>,
+  cartoons: ReturnType<typeof loadCartoons>,
   episodes: EpisodeSummary[],
 ): string {
   const viewLines = siteViews
@@ -180,6 +183,16 @@ ${paths}`;
 
   const staffLines = staff.map((member) => `- **${member.name}** — ${member.role}`).join('\n');
 
+  const cartoonLines =
+    cartoons.length > 0
+      ? cartoons
+          .map(
+            (cartoon) =>
+              `- **${cartoon.title}** (${cartoon.id}, ${cartoon.status}) — ${cartoon.premise}`,
+          )
+          .join('\n')
+      : '- (none yet — add `content/cartoons/<id>.json`)';
+
   return `# Weeks on Fire — full agent brief
 
 This file is a dense, crawlable summary of the project for AI agents and research tools.
@@ -197,7 +210,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with seven views: Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Characters, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -235,6 +248,12 @@ ${staffLines}
 
 ${cutawayLines}
 
+## Cartoon ideas (agent parking lot)
+
+Short still + optional 6–8s loop. No song id. Author in \`content/cartoons/<id>.json\`. Promote winners to Suggestions.
+
+${cartoonLines}
+
 ## Daisy Bell cutaway
 
 - **Title**: ${daisyBell.meta.title}
@@ -246,7 +265,7 @@ ${cutawayLines}
 \`\`\`
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, staff, cutaways, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills
@@ -336,6 +355,7 @@ function main() {
   const characters = loadCharacters(repoRoot);
   const daisyBell = loadDaisyBell(repoRoot);
   const staff = loadStaff(repoRoot);
+  const cartoons = loadCartoons(repoRoot);
   const episodes = loadEpisodes();
 
   const outputs = {
@@ -347,6 +367,7 @@ function main() {
       cutaways,
       daisyBell,
       staff,
+      cartoons,
       episodes,
     ),
     'sitemap.xml': emitSitemap(episodes),
@@ -357,7 +378,7 @@ function main() {
   }
 
   console.log(
-    `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways.`,
+    `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons.`,
   );
 
   if (checkMode) {

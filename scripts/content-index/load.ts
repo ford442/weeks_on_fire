@@ -1,10 +1,24 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { SongFrontmatterSchema, CutawaySchema, FilmSceneSchema, SeriesCharacterSchema, DaisyBellSchema } from './schemas';
-import { parseFrontmatter } from './parsers/frontmatter.ts';
-import { parseSongSections } from './parsers/song-sections.ts';
-import { parseSegmentPromptsFile } from './parsers/segment-prompts.ts';
-import type { CutawayRecord, CutawaySegment, FilmSceneRecord, SeriesCharacterRecord, DaisyBellRecord } from './schemas';
+import {
+  SongFrontmatterSchema,
+  CutawaySchema,
+  FilmSceneSchema,
+  SeriesCharacterSchema,
+  DaisyBellSchema,
+  StaffMemberSchema,
+} from './schemas';
+import { parseFrontmatter } from './parsers/frontmatter';
+import { parseSongSections } from './parsers/song-sections';
+import { parseSegmentPromptsFile } from './parsers/segment-prompts';
+import type {
+  CutawayRecord,
+  CutawaySegment,
+  FilmSceneRecord,
+  SeriesCharacterRecord,
+  DaisyBellRecord,
+  StaffMemberRecord,
+} from './schemas';
 
 export interface ParsedSong {
   id: string;
@@ -23,7 +37,9 @@ export interface ParsedSong {
 
 export function loadSongs(repoRoot: string): ParsedSong[] {
   const songsDir = join(repoRoot, 'songs');
-  const files = readdirSync(songsDir).filter((file) => file.endsWith('.md')).sort();
+  const files = readdirSync(songsDir)
+    .filter((file) => file.endsWith('.md'))
+    .sort();
 
   return files.map((file) => {
     const raw = readFileSync(join(songsDir, file), 'utf8');
@@ -50,7 +66,9 @@ export function loadSongs(repoRoot: string): ParsedSong[] {
 
 export function loadCutaways(repoRoot: string): CutawayRecord[] {
   const cutawaysDir = join(repoRoot, 'content/cutaways');
-  const files = readdirSync(cutawaysDir).filter((file) => file.endsWith('.json')).sort();
+  const files = readdirSync(cutawaysDir)
+    .filter((file) => file.endsWith('.json'))
+    .sort();
 
   return files.map((file) => {
     const raw = JSON.parse(readFileSync(join(cutawaysDir, file), 'utf8'));
@@ -76,7 +94,9 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
       } else if (record.segments?.length) {
         segments = record.segments;
       } else {
-        throw new Error(`Cutaway ${record.id}: failed to parse segments from ${record.segmentsSource}`);
+        throw new Error(
+          `Cutaway ${record.id}: failed to parse segments from ${record.segmentsSource}`,
+        );
       }
     }
 
@@ -89,17 +109,28 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
 
 export function loadGallery(repoRoot: string): FilmSceneRecord[] {
   const raw = JSON.parse(readFileSync(join(repoRoot, 'content/gallery.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.scenes).map((item: unknown) => FilmSceneSchema.parse(item));
+  return (Array.isArray(raw) ? raw : raw.scenes).map((item: unknown) =>
+    FilmSceneSchema.parse(item),
+  );
 }
 
 export function loadCharacters(repoRoot: string): SeriesCharacterRecord[] {
   const raw = JSON.parse(readFileSync(join(repoRoot, 'content/characters.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.characters).map((item: unknown) => SeriesCharacterSchema.parse(item));
+  return (Array.isArray(raw) ? raw : raw.characters).map((item: unknown) =>
+    SeriesCharacterSchema.parse(item),
+  );
 }
 
 export function loadDaisyBell(repoRoot: string): DaisyBellRecord {
   const raw = JSON.parse(readFileSync(join(repoRoot, 'content/daisy-bell.json'), 'utf8'));
   return DaisyBellSchema.parse(raw);
+}
+
+export function loadStaff(repoRoot: string): StaffMemberRecord[] {
+  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/staff.json'), 'utf8'));
+  return (Array.isArray(raw) ? raw : raw.staff).map((item: unknown) =>
+    StaffMemberSchema.parse(item),
+  );
 }
 
 export function listMp3Filenames(repoRoot: string): string[] {

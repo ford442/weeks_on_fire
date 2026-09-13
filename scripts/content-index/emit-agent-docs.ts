@@ -7,9 +7,10 @@ import {
   loadDaisyBell,
   loadGallery,
   loadSongs,
-} from './load.ts';
-import { parseFrontmatter } from './parsers/frontmatter.ts';
-import { REPO_BASE, SITE_BASE, siteUrl, siteViews } from './views.ts';
+  loadStaff,
+} from './load';
+import { parseFrontmatter } from './parsers/frontmatter';
+import { REPO_BASE, SITE_BASE, siteUrl, siteViews } from './views';
 
 const repoRoot = join(import.meta.dirname, '../..');
 const publicDir = join(repoRoot, 'public');
@@ -65,9 +66,7 @@ function emitLlmsTxt(
   gallery: ReturnType<typeof loadGallery>,
   episodes: EpisodeSummary[],
 ): string {
-  const viewLines = siteViews
-    .map((view) => `- ${view.label} — ${view.description}`)
-    .join('\n');
+  const viewLines = siteViews.map((view) => `- ${view.label} — ${view.description}`).join('\n');
 
   const featuredScenes = gallery
     .slice(0, 6)
@@ -80,10 +79,7 @@ function emitLlmsTxt(
     .join('\n');
 
   const episodeLines = episodes
-    .map(
-      (ep) =>
-        `- ${ep.title}: ${episodeRepoTree(ep.number)}`,
-    )
+    .map((ep) => `- ${ep.title}: ${episodeRepoTree(ep.number)}`)
     .join('\n');
 
   return `# Weeks on Fire
@@ -142,24 +138,16 @@ function emitLlmsFullTxt(
   characters: ReturnType<typeof loadCharacters>,
   cutaways: ReturnType<typeof loadCutaways>,
   daisyBell: ReturnType<typeof loadDaisyBell>,
+  staff: ReturnType<typeof loadStaff>,
   episodes: EpisodeSummary[],
 ): string {
   const viewLines = siteViews
-    .map(
-      (view, index) =>
-        `${index + 1}. **${view.label}** (${view.eyebrow}) — ${view.description}`,
-    )
+    .map((view, index) => `${index + 1}. **${view.label}** (${view.eyebrow}) — ${view.description}`)
     .join('\n');
 
   const episodeSections = episodes
     .map((ep) => {
-      const paths = [
-        `synopsis.md`,
-        `subtitles.srt`,
-        `scenes.json`,
-        `screenplay.md`,
-        `scenes.md`,
-      ]
+      const paths = [`synopsis.md`, `subtitles.srt`, `scenes.json`, `screenplay.md`, `scenes.md`]
         .filter((file) => existsSync(join(repoRoot, 'episodes', `episode-${ep.number}`, file)))
         .map((file) => `  - ${episodeBlob(ep.number, file)}`)
         .join('\n');
@@ -189,6 +177,8 @@ ${paths}`;
   const cutawayLines = cutaways
     .map((cutaway) => `- **${cutaway.title}** (${cutaway.id}) — ${cutaway.summary}`)
     .join('\n');
+
+  const staffLines = staff.map((member) => `- **${member.name}** — ${member.role}`).join('\n');
 
   return `# Weeks on Fire — full agent brief
 
@@ -237,6 +227,10 @@ Markdown sources live under ${REPO_BASE}/tree/main/songs with STYLE / LYRICS / N
 
 ${characterLines}
 
+## Series crew (fictional)
+
+${staffLines}
+
 ## Cutaways & suggestions
 
 ${cutawayLines}
@@ -252,7 +246,7 @@ ${cutawayLines}
 \`\`\`
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, cutaways, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills
@@ -341,11 +335,20 @@ function main() {
   const gallery = loadGallery(repoRoot);
   const characters = loadCharacters(repoRoot);
   const daisyBell = loadDaisyBell(repoRoot);
+  const staff = loadStaff(repoRoot);
   const episodes = loadEpisodes();
 
   const outputs = {
     'llms.txt': emitLlmsTxt(songs, gallery, episodes),
-    'llms-full.txt': emitLlmsFullTxt(songs, gallery, characters, cutaways, daisyBell, episodes),
+    'llms-full.txt': emitLlmsFullTxt(
+      songs,
+      gallery,
+      characters,
+      cutaways,
+      daisyBell,
+      staff,
+      episodes,
+    ),
     'sitemap.xml': emitSitemap(episodes),
   };
 
@@ -358,10 +361,13 @@ function main() {
   );
 
   if (checkMode) {
-    const status = execSync('git status --porcelain public/llms.txt public/llms-full.txt public/sitemap.xml', {
-      cwd: repoRoot,
-      encoding: 'utf8',
-    }).trim();
+    const status = execSync(
+      'git status --porcelain public/llms.txt public/llms-full.txt public/sitemap.xml',
+      {
+        cwd: repoRoot,
+        encoding: 'utf8',
+      },
+    ).trim();
     if (status) {
       throw new Error('Agent docs are out of date. Run npm run agent-docs and commit the changes.');
     }

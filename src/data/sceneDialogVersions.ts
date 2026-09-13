@@ -1,3 +1,14 @@
+/**
+ * Intentional hand-authored TypeScript exception.
+ *
+ * Dialog audition pages live in `notes/scenes/versions/` as prose (competing
+ * registers, fragments, juxtaposition notes). That format is not a stable JSON
+ * schema, so codegen does not ingest it. This module only exports the Riley
+ * Rosencrantz exchanges surfaced in the Suggestions workspace.
+ *
+ * New catalog arrays belong in `content/` — do not add more hand-maintained
+ * data tables here.
+ */
 export interface DialogLine {
   speaker: string;
   text: string;

@@ -130,6 +130,28 @@ export const DaisyBellSchema = z.object({
   frames: z.array(DaisyBellFrameSchema),
 });
 
+export const StaffRoleSchema = z.enum([
+  'Writer',
+  'Producer',
+  'Director',
+  'Music Supervisor',
+  'Visual Designer',
+]);
+
+export const StaffMemberSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  role: StaffRoleSchema,
+  location: z.string().min(1),
+  yearsOnSeries: z.string().min(1),
+  specialty: z.string().min(1),
+  bio: z.string().min(1),
+  quote: z.string().min(1),
+  credits: z.array(z.string()),
+  /** Filename under public/cast/ (copied to dist/cast on Vite build). */
+  imageFile: z.string().min(1),
+});
+
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
 export type SightCandidate = z.infer<typeof SightCandidateSchema>;
@@ -137,3 +159,4 @@ export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
+export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;

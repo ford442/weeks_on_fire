@@ -35,17 +35,20 @@ export function validateContent(
       }
 
       const timelineCount = countEditTimelineRows(repoRoot, cutaway.segmentsSource);
-      if (timelineCount !== null && timelineCount !== cutaway.segments.length) {
+      const segmentCount = cutaway.segments?.length ?? 0;
+      if (timelineCount !== null && timelineCount !== segmentCount) {
         errors.push(
-          `Cutaway ${cutaway.id}: segment count ${cutaway.segments.length} != edit timeline rows ${timelineCount} in ${cutaway.segmentsSource}`,
+          `Cutaway ${cutaway.id}: segment count ${segmentCount} != edit timeline rows ${timelineCount} in ${cutaway.segmentsSource}`,
         );
       }
     }
 
-    for (const segment of cutaway.segments) {
+    for (const segment of cutaway.segments ?? []) {
       const stillPath = segment.stillImagePath;
       if (stillPath && !existsSync(join(repoRoot, stillPath))) {
-        errors.push(`Cutaway ${cutaway.id} segment ${segment.id} stillImagePath not found: ${stillPath}`);
+        errors.push(
+          `Cutaway ${cutaway.id} segment ${segment.id} stillImagePath not found: ${stillPath}`,
+        );
       }
     }
   }
@@ -56,10 +59,14 @@ export function validateContent(
 
   if (checkOrphans) {
     const usedSources = new Set(
-      cutaways.map((cutaway) => cutaway.segmentsSource).filter((value): value is string => Boolean(value)),
+      cutaways
+        .map((cutaway) => cutaway.segmentsSource)
+        .filter((value): value is string => Boolean(value)),
     );
     const cutawayIds = new Set(cutaways.map((cutaway) => cutaway.id));
-    const promptFiles = readdirSync(join(repoRoot, 'prompts')).filter((file) => file.endsWith('-segments.md'));
+    const promptFiles = readdirSync(join(repoRoot, 'prompts')).filter((file) =>
+      file.endsWith('-segments.md'),
+    );
     for (const file of promptFiles) {
       const path = `prompts/${file}`;
       const stemId = file.replace(/-segments\.md$/, '');
@@ -79,6 +86,8 @@ export function validateContent(
   }
 
   if (errors.length > 0) {
-    throw new Error(`Content validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`);
+    throw new Error(
+      `Content validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
   }
 }

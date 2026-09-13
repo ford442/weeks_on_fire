@@ -90,6 +90,26 @@ export interface SeriesCharacter {
   imageUrl?: string;
 }
 
+export type StaffRole = 'Writer' | 'Producer' | 'Director' | 'Music Supervisor' | 'Visual Designer';
+
+export interface StaffRecord {
+  id: string;
+  name: string;
+  role: StaffRole;
+  location: string;
+  yearsOnSeries: string;
+  specialty: string;
+  bio: string;
+  quote: string;
+  credits: string[];
+  imageFile: string;
+}
+
+export interface StaffMember extends Omit<StaffRecord, 'imageFile'> {
+  /** Public URL under /cast, with optional subdirectory prefix in production. */
+  imageUrl: string;
+}
+
 export type DaisyFrameTreatment = 'color' | 'period';
 
 export interface DaisyBellFrame {

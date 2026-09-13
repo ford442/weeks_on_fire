@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Quote, Users } from 'lucide-react';
 import { staffMembers, type StaffMember } from '../data/staff';
+import { firstCatalogItem } from '../lib/catalog';
 
 export default function Staff() {
-  const [selected, setSelected] = useState<StaffMember>(staffMembers[0]);
+  const [selected, setSelected] = useState<StaffMember>(firstCatalogItem(staffMembers, 'staff'));
 
   return (
     <section className="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-8">

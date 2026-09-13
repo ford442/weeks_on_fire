@@ -35,6 +35,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Format
+        run: npm run format
+
       - name: Codegen check
         run: npm run codegen:check
 
@@ -45,7 +48,7 @@ jobs:
         run: npm run build
 
       - name: Bundle size check
-        run: node scripts/check-bundle-size.mjs
+        run: npx tsx scripts/check-bundle-size.ts
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

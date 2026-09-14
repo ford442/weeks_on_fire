@@ -1,0 +1,23 @@
+{
+  "id": "possum-poker",
+  "title": "Possum Poker",
+  "premise": "Five possums are mid-hand inside a pizza delivery bag. A human hand reaches in. They all play dead without putting the cards down.",
+  "visual": "Interior of an open red pizza bag, warm pizza light. Five grey possums around a slice-as-table, pepperoni chips, cards fanned. A giant human hand entering from above. All five belly-up, tongues out, still holding their hands.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "The hand is the Pizza Guy's. Face never shown. The possums have been commuting in the bag for weeks.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "possums",
+    "poker",
+    "pizza",
+    "slapstick"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: inside an open red insulated pizza delivery bag, five grey possums sitting around a pizza-slice table playing poker with cards fanned in their paws and pepperoni slices as chips, a giant human hand reaching down from the top of frame, all five possums belly-up playing dead with tongues out but still holding their cards perfectly fanned, warm pizza-colored light, one chip still falling, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache bag interior, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. One beat of eye contact with the hand. All five flop dead in unison — same frame, same tongues. Cards stay fanned. One ear twitches. The hand hesitates and does not grab. No faces on the human.",
+  "notes": "The cards staying up is the newspaper-comic test. If they drop the cards it becomes a scare gag. Not a heist, not talking animals with jobs — they just live in the bag.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/possum-poker.jpg"
+}

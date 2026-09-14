@@ -1,0 +1,23 @@
+{
+  "id": "fence-cat-opera",
+  "title": "Fence Cat Opera",
+  "premise": "The black cat on the repeating fence opens its mouth. An entire opera chorus of tiny tuxedoed frogs marches out. The cat does not change expression.",
+  "visual": "Night suburban fence, purple sky. Sleek black cat, yellow eyes, mouth a perfect O. Tiny frogs in tuxedos and bow ties filing out along the rail with sheet music. Behind them: house, plastic skeleton, three recycling bins in slightly different blues.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "saturday-morning weird",
+  "characterLean": "Same black cat as Episode 3 / the Delivery Loop background. It has been waiting three episodes to do this.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "cat",
+    "frogs",
+    "opera",
+    "weird"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: night suburban wooden fence, a sleek black cat with yellow eyes sitting in profile, mouth open in a perfect round O, a procession of tiny frogs in black tuxedos and bow ties marching out of the cat's mouth along the fence rail carrying tiny sheet music, the cat's face otherwise completely deadpan and unchanged, painted gouache background of a house, a plastic skeleton, and three recycling bins in slightly different blues, purple night sky, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. Frogs keep coming, two-by-two, never running out. The cat blinks once. The mouth stays a perfect O. One frog drops a tiny music sheet and keeps marching. No camera move. Do not animate the cat's expression.",
+  "notes": "Weird, not cute. The frogs are a real chorus — posture and tuxedos, not gag hats. The repeating-background props are a wink, not the punchline. If the cat smiles, kill the take.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/fence-cat-opera.jpg"
+}

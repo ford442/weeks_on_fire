@@ -1,0 +1,22 @@
+{
+  "id": "pin-cat",
+  "title": "Pin Cat",
+  "premise": "Cats bowling. One of them is standing in the pin triangle holding a tiny white flag. The ball is already halfway down the lane.",
+  "visual": "Bowling alley, forced perspective. Team of cats in tiny shirts cheering at left. Huge ball rolling. Nine pins and one orange tabby in the back row with a surrender flag and a single giant sweat drop.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Not the Episode 3 black cat — this is an orange tabby who lost a bet. The cheering cats do not care.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "cats",
+    "bowling",
+    "slapstick"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a bowling alley lane in forced perspective, a team of cats in tiny bowling shirts cheering at left, a huge cartoon bowling ball with three finger holes rolling toward the pins, among the ten-pin triangle nine ordinary pins and one orange tabby cat standing nervously in the back row holding a tiny white surrender flag on a stick, one giant sweat drop flying off the tabby's head, overhead bowling-alley lights, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache alley, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The ball rolls and grows. Pins chatter. The tabby waves the flag faster. The sweat drop hits the lane. Cut on the squash, or hold one frame before impact — either works; do not play a slow-motion tragedy.",
+  "notes": "Broad is correct here. The flag has to read at thumbnail size. Do not give the tabby a last-second dive out of the triangle; the joke is that this is his job now.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/pin-cat.jpg"
+}

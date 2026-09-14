@@ -1,0 +1,23 @@
+{
+  "id": "mailbox-mallard",
+  "title": "Mailbox Mallard",
+  "premise": "A mallard in a too-small red convertible knocks down every mailbox on the cul-de-sac, then tips his cap at us like this was always the plan.",
+  "visual": "Flat suburban street. Yellow duck squeezed into a cherry-red convertible, driving cap, whitewall tires, catching air as he demolishes a mailbox. Four already-flattened boxes in a dust trail behind him. A black cat sits unimpressed on the next one.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "The fence cat from the Delivery Loop is the only witness and is not impressed. The Pizza Guy is not in this one — the duck has his own route.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "duck",
+    "suburban",
+    "slapstick",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a yellow mallard duck wearing a tiny driving cap and a determined grin, squeezed into a too-small cherry-red convertible with whitewall tires, catching air as the car smashes through a suburban mailbox, four already-flattened mailboxes in a trail of cartoon dust behind him down a cul-de-sac, a black cat sitting unimpressed on the next mailbox that has not been hit yet, painted gouache suburban houses and a purple-tinged blue sky, speed lines, a big impact star on the current mailbox, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, faint cel dust, exaggerated squash-and-stretch, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second locked side-on chase. The convertible hops mailbox to mailbox. Each hit is one squash, one clang, one dust puff. On the last mailbox the duck tips his cap at camera without slowing down. The cat does not blink. Camera: pan with the car, repeating-background suburban houses.",
+  "notes": "This lane is allowed to be slapstick — do not dry it out into a valet gag. Keep photoreal lens language out of the prompt. The cat is a cameo, not the joke. No readable street names.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/mailbox-mallard.jpg"
+}

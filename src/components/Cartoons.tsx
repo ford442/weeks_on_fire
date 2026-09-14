@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Check, Copy, PenLine, Search, Sparkles } from 'lucide-react';
 
 import {
+  cartoonClipSrc,
   cartoons,
   cartoonStatusMeta,
   type CartoonRecord,
@@ -91,11 +92,12 @@ export default function Cartoons() {
                 </code>{' '}
                 and run <code className="whitespace-nowrap text-zinc-300">npm run codegen</code>.
                 Keep it short: premise, still, optional Grok prompt. No song id, no timed segments.
-                Promote winners to{' '}
+                Two lanes: dry elegant stills, or mid-90s animal / Family Guy cutaways (cel, not
+                photoreal). Promote winners to the{' '}
                 <Link to="/suggestions" className="text-orange-300 underline underline-offset-2">
                   Suggestions
-                </Link>
-                . Tone lock: dry, elegant, slightly menacing — not slapstick.
+                </Link>{' '}
+                view.
               </p>
             </div>
           </div>
@@ -157,38 +159,47 @@ export default function Cartoons() {
                   <button
                     type="button"
                     onClick={() => selectCartoon(cartoon)}
-                    className="block w-full p-5 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
+                    className="block w-full text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
                   >
-                    <div className="flex items-center justify-between gap-2">
-                      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                        {cartoon.register ?? 'Short cartoon'}
-                      </p>
-                      <span
-                        className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
-                      >
-                        {meta.label}
-                      </span>
-                    </div>
-                    <h2 className="mt-2 text-xl font-semibold leading-tight text-white">
-                      {cartoon.title}
-                    </h2>
-                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-zinc-300">
-                      {cartoon.premise}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {cartoon.tags.slice(0, 4).map((tag) => (
+                    {cartoon.stillUrl ? (
+                      <img
+                        src={cartoon.stillUrl}
+                        alt=""
+                        className="aspect-[4/3] w-full object-cover"
+                      />
+                    ) : null}
+                    <div className="p-5">
+                      <div className="flex items-center justify-between gap-2">
+                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                          {cartoon.register ?? 'Short cartoon'}
+                        </p>
                         <span
-                          key={tag}
-                          className="rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-xs text-zinc-300"
+                          className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
                         >
-                          {tag}
+                          {meta.label}
                         </span>
-                      ))}
-                      {cartoon.agent ? (
-                        <span className="rounded-md border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-xs text-violet-200">
-                          {cartoon.agent}
-                        </span>
-                      ) : null}
+                      </div>
+                      <h2 className="mt-2 text-xl font-semibold leading-tight text-white">
+                        {cartoon.title}
+                      </h2>
+                      <p className="mt-2 line-clamp-3 text-sm leading-6 text-zinc-300">
+                        {cartoon.premise}
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {cartoon.tags.slice(0, 4).map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-xs text-zinc-300"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {cartoon.agent ? (
+                          <span className="rounded-md border border-violet-500/30 bg-violet-500/10 px-2 py-1 text-xs text-violet-200">
+                            {cartoon.agent}
+                          </span>
+                        ) : null}
+                      </div>
                     </div>
                   </button>
                   {cartoon.grokImaginePrompt ? (
@@ -267,6 +278,43 @@ interface CartoonDetailProps {
   onCopy: (text: string, label: string, key: string) => void;
 }
 
+function CartoonMedia({ cartoon }: { cartoon: CartoonRecord }) {
+  const [clipFailed, setClipFailed] = useState(false);
+
+  useEffect(() => {
+    setClipFailed(false);
+  }, [cartoon.id]);
+
+  if (!clipFailed) {
+    return (
+      <video
+        key={cartoon.id}
+        className="mt-3 w-full rounded-md border border-zinc-800 bg-black"
+        src={cartoonClipSrc(cartoon.id)}
+        poster={cartoon.stillUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls
+        onError={() => setClipFailed(true)}
+      />
+    );
+  }
+
+  if (cartoon.stillUrl) {
+    return (
+      <img
+        src={cartoon.stillUrl}
+        alt=""
+        className="mt-3 w-full rounded-md border border-zinc-800 bg-black object-cover"
+      />
+    );
+  }
+
+  return null;
+}
+
 function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
   const meta = cartoonStatusMeta[cartoon.status];
 
@@ -284,6 +332,7 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
           </span>
         </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{cartoon.title}</h2>
+        <CartoonMedia cartoon={cartoon} />
         {cartoon.characterLean ? (
           <p className="mt-2 text-sm text-zinc-400">{cartoon.characterLean}</p>
         ) : null}

@@ -220,6 +220,7 @@ export interface CartoonRecord {
   motion?: string;
   notes?: string;
   agent?: string;
+  stillUrl?: string;
 }
 
 export const cartoonStatusMeta: Record<CartoonStatus, { label: string; accent: string }> = {

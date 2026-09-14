@@ -1,0 +1,23 @@
+{
+  "id": "witness-chicken",
+  "title": "Witness Chicken",
+  "premise": "A chicken in witness protection sits on a park bench in a trenchcoat and a mustache that is also obviously a chicken. The pigeons are not fooled. One of them is taking notes.",
+  "visual": "Green park bench. Fat white chicken, oversized brown trenchcoat, fedora, Groucho mustache, newspaper with two eye-holes it is not looking through. Six pigeons staring. One pigeon in tiny glasses with a notepad. The chicken whistles at the sky.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "No Vale sisters. This is a cutaway you drop after anyone says they are keeping a low profile.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "chicken",
+    "pigeons",
+    "disguise",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a fat white chicken on a green park bench wearing an oversized brown trenchcoat, a fedora, and a Groucho Marx mustache, holding a newspaper with two eye-holes it is not looking through because its real eyes are beside the holes, six city pigeons crowded on the other end of the bench staring directly at the chicken, one pigeon wearing tiny glasses and writing on a tiny notepad, the chicken whistling at the sky pretending nothing is happening, park trees and a trash can, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache park, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The chicken whistles; eyes dart. Pigeons blink in unison. Notepad pigeon writes one line. The mustache slips one millimeter. The chicken shoves it back with a wing without looking down.",
+  "notes": "The eye-holes being in the wrong place is the still. Keep the mustache attached to the beak, not floating. Do not add cops or a punchline caption. The pigeons already know.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/witness-chicken.jpg"
+}

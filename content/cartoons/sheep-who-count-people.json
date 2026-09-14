@@ -1,0 +1,23 @@
+{
+  "id": "sheep-who-count-people",
+  "title": "Sheep Who Count People",
+  "premise": "A sheep is trying to sleep by counting humans jumping a fence. The humans are the pizza guy, two women in black lace, and a plastic skeleton, on a loop. It is not working. The sheep is furious.",
+  "visual": "Dark bedroom. Sheep in a nightcap and tiny glasses, sitting up in a too-small bed, pillow clutched like a weapon, steam out the ears. Window: four figures looping a fence. Nightstand notepad buried in tally marks.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "The jumpers are Pizza Guy, toon Lillith, toon Rubella, and the Episode 3 skeleton. The sheep is the new lead and is not coping.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "sheep",
+    "insomnia",
+    "family-guy-cutaway",
+    "the-two"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a fluffy white sheep in a striped nightcap and tiny glasses sitting up furious in a too-small bed, clutching a pillow like a weapon, pointing out a bedroom window, outside the window four figures looping over a wooden fence in a night yard — a lanky pizza delivery man with a perfectly level pizza bag, two elegant women in black lace dresses with red lips, and a grinning plastic skeleton — a notepad on the nightstand covered in tally marks, a full moon, steam coming out of the sheep's ears, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache bedroom, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. The four jump the fence once. The sheep slams the pillow. A tally mark draws itself on the pad. They jump again, same order, same height. The sheep silent-screams. They do not notice the window.",
+  "notes": "The loop is the Delivery Loop seen from the other side of the fence. Keep the jumpers on-model with Episode 4 toon sheets if they exist; if they drift, the sheep still reads. Do not let the sheep fall asleep — the gag is that counting people makes it worse.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/sheep-who-count-people.jpg"
+}

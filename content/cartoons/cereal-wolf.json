@@ -1,0 +1,23 @@
+{
+  "id": "cereal-wolf",
+  "title": "Cereal Wolf",
+  "premise": "A wolf in a bathrobe pours cereal. The wolf on the box is also in a bathrobe, also pouring cereal, also looking at a smaller box. He notices. He shrugs. He keeps eating.",
+  "visual": "Bright cartoon kitchen. Big grey wolf in a faded blue bathrobe, drool string, overflowing bowl. The box art is the same wolf, same robe, same pour, two recursions deep, then dots. Morning sun. Slippers.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "Nobody from the series. This is a pure cutaway that could drop into any episode after anyone says breakfast.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "wolf",
+    "breakfast",
+    "recursion",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: bright cartoon kitchen, a big grey wolf in a faded blue bathrobe and slippers standing at a table pouring cereal, a drool string from one fang, the cereal box illustration is the exact same wolf in the exact same bathrobe also pouring cereal and looking at a smaller box, two levels of recursion then dots, the bowl already overflowing in a mountain of cereal, a dripping carton of milk, morning sun through a window, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache kitchen background, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. Milk pours. The heap grows. The wolf looks at the box, looks at camera, shrugs one shoulder, and takes a bite anyway. One frame later the box-art wolf shrugs too. No new characters enter.",
+  "notes": "Family Guy cutaway energy: the recursion is the joke, the shrug is the button. Do not put readable cereal branding on the box — picture only, or it will garble. Do not make the wolf horrified; he is fine with this.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/cereal-wolf.jpg"
+}

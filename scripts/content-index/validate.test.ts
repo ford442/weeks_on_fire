@@ -127,11 +127,13 @@ function makeCartoon(overrides: Partial<CartoonRecord> = {}): CartoonRecord {
 
 describe('validateCartoons', () => {
   it('passes for unique cartoon ids', () => {
-    expect(() => validateCartoons([makeCartoon(), makeCartoon({ id: 'cartoon-2' })])).not.toThrow();
+    expect(() =>
+      validateCartoons('/tmp', [makeCartoon(), makeCartoon({ id: 'cartoon-2' })]),
+    ).not.toThrow();
   });
 
   it('flags duplicate cartoon ids', () => {
-    expect(() => validateCartoons([makeCartoon(), makeCartoon()])).toThrow(
+    expect(() => validateCartoons('/tmp', [makeCartoon(), makeCartoon()])).toThrow(
       /Duplicate cartoon id: cartoon-1/,
     );
   });

@@ -122,12 +122,15 @@ export function validateEpisodes(repoRoot: string, episodes: EpisodeRecord[]): v
   }
 }
 
-export function validateCartoons(cartoons: CartoonRecord[]): void {
+export function validateCartoons(repoRoot: string, cartoons: CartoonRecord[]): void {
   const errors: string[] = [];
   const idCounts = new Map<string, number>();
 
   for (const cartoon of cartoons) {
     idCounts.set(cartoon.id, (idCounts.get(cartoon.id) ?? 0) + 1);
+    if (cartoon.stillImagePath && !existsSync(join(repoRoot, cartoon.stillImagePath))) {
+      errors.push(`Cartoon ${cartoon.id} stillImagePath not found: ${cartoon.stillImagePath}`);
+    }
   }
 
   for (const [id, count] of idCounts) {

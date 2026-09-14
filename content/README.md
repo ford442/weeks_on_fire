@@ -134,14 +134,18 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
   "grokImaginePrompt": "optional copy-ready still prompt",
   "motion": "optional 6–8s motion note",
   "notes": "optional production notes",
-  "agent": "optional — which model/agent dropped this"
+  "agent": "optional — which model/agent dropped this",
+  "stillImagePath": "optional — repo-relative still, e.g. images/cartoons/your-idea.jpg"
 }
 ```
 
 - `status` is one of `seed`, `sketched`, `ready-to-generate`, `promoted`.
 - Required: `id`, `title`, `premise`, `visual`, `status`, `tags`.
-- Tone lock matches [`notes/one-panel-gags.md`](../notes/one-panel-gags.md): dry, elegant, slightly
-  menacing. No broad slapstick. Do not reuse the locked gags listed there.
+- Two lanes:
+  - Dry elegant stills, matching [`notes/one-panel-gags.md`](../notes/one-panel-gags.md).
+  - Mid-90s animal / Family Guy cutaways: talking animals, unmotivated gags, 4:3 cel. Lead with the Episode 4 style block (`2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D`). Do not use photoreal lens language on those prompts.
+- Do not reuse the locked gags listed in `notes/one-panel-gags.md`.
+- Optional `stillImagePath` is shown on the Cartoons view. Local 6–8s I2V loops may live at `public/cartoons/<id>.mp4` (gitignored).
 - When a seed is ready, promote it to `content/cutaways/` (Suggestions). Leave `status: "promoted"`
   on the cartoon file so the parking lot keeps the credit.
 - Run `npm run codegen` and commit the JSON + `src/data/generated/cartoons.ts`.

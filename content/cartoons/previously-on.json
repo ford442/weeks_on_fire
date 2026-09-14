@@ -1,0 +1,23 @@
+{
+  "id": "previously-on",
+  "title": "Previously On",
+  "premise": "The goldfish has watched every episode. It is briefing the empty couch. Nobody is home. It mouths the entire recap anyway.",
+  "visual": "Empty living room. Wood-grain CRT with color bars. Goldfish bowl on top of the set, orange fish pressed to the glass mid-rant, tiny chalkboard in the gravel covered in arrows and a stick-figure pizza man. Remote on the floor. Speech-bubble-shaped bubbles.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "The fish is the only one who followed Episode 3. Continuity Voice would be proud. The Two stepped out.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "goldfish",
+    "recap",
+    "television",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: empty living room, a wood-grain CRT television with color bars, a round goldfish bowl sitting on top of the TV, an orange goldfish pressed against the front glass facing camera with its mouth wide open mid-rant, a tiny chalkboard in the gravel covered in frantic arrows and a stick-figure pizza man, empty couch, remote on the floor, speech-bubble-shaped bubbles rising, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache living room, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. The goldfish mouths rapidly. Bubbles rise in speech-bubble shapes and pop. A pebble bumps the chalkboard and adds one more arrow. Color bars flicker. Nobody enters. Camera: static.",
+  "notes": "Humor first: the recap nobody asked for. Do not make the fish sad. The chalkboard is the still — if it needs a caption the arrows aren't frantic enough. Color bars, not a technical-difficulties card.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/previously-on.jpg"
+}

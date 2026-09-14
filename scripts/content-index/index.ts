@@ -44,7 +44,7 @@ function main() {
 
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
-  validateCartoons(cartoons);
+  validateCartoons(repoRoot, cartoons);
 
   writeGenerated('songs.ts', emitSongsModule(songs));
   writeGenerated(

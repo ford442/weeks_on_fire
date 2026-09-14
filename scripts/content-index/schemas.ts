@@ -192,6 +192,7 @@ export const CartoonSchema = z.object({
   motion: z.string().optional(),
   notes: z.string().optional(),
   agent: z.string().optional(),
+  stillImagePath: z.string().optional(),
 });
 
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;

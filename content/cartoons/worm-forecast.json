@@ -1,0 +1,23 @@
+{
+  "id": "worm-forecast",
+  "title": "Worm Forecast",
+  "premise": "An earthworm does the weather. Behind him the map says rain. It is raining worms. He does not mention this.",
+  "visual": "Cheap local-news desk. Pink earthworm in a tiny blue blazer, professional smile, pointing at a sun-and-cloud map. Cartoon worms falling from the studio ceiling, bouncing off the pointer and the mug. He does not look up.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "saturday-morning weird",
+  "characterLean": "Could air as an EyeWash Station bumper. The worm is talent. The rain is staffing.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "worm",
+    "weather",
+    "news",
+    "weird"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cheap local-news studio, a pink earthworm in a tiny blue blazer standing at a weather map pointing with a stick, the map showing a smiling sun and a rain cloud, cartoon worms raining from the studio ceiling and bouncing off the pointer and the desk, the earthworm keeping a huge professional news-anchor smile and not looking up, a tiny mug on the desk, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache news set, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. Worms fall at a steady sitcom rate. The pointer tracks a cold front. One worm lands in the mug. The smile does not change. He never looks up. No chyron text.",
+  "notes": "Completely weird, completely professional. If he acknowledges the rain it becomes a workplace joke, which is the dry lane we are leaving. No readable station logo.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/worm-forecast.jpg"
+}

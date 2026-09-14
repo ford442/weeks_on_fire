@@ -1,0 +1,23 @@
+{
+  "id": "crow-channel",
+  "title": "Crow Channel",
+  "premise": "A crow has the remote. Every channel is the same crow, in the same chair, with the same remote. He thinks this is excellent television.",
+  "visual": "Living room recliner. Glossy black crow, popcorn bowl, remote in one claw. The TV shows the same crow watching a smaller TV that also shows the crow, nested twice. He is laughing so hard his wings slap the chair.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "saturday-morning weird",
+  "characterLean": "No series regulars. Pure channel-surf ouroboros. Could air as an EyeWash ident between programs.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "crow",
+    "television",
+    "recursion",
+    "weird"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a glossy black crow sitting in a worn living-room recliner holding a TV remote in one claw, a bowl of popcorn spilling, the television screen shows the exact same crow in the exact same recliner watching a smaller TV that also shows the crow, nested two times, the crow laughing with wings slapping the chair arms, living room lamps, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache living room, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. Click. The nested image updates one level deeper. The crow laughs harder. Click. Popcorn flies. The innermost crow laughs too, a frame late. Do not break the nest with a different show.",
+  "notes": "Completely weird, completely pleased. If the TV ever shows something else the joke dies. No channel logos, no readable guide text.",
+  "agent": "grok",
+  "stillImagePath": "images/cartoons/crow-channel.jpg"
+}

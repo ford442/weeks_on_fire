@@ -1,0 +1,22 @@
+{
+  "id": "big-city",
+  "kind": "musical",
+  "title": "Big City",
+  "status": "ready-to-generate",
+  "runtime": "~2:47 (option_a bed)",
+  "episode": "Musical Cutaway / Glam catalog",
+  "songId": "big-city",
+  "songTitle": "Big City",
+  "summary": "Lillith starts, Rubella answers, Kenji spoken tag. Small Glamora club stage as A-roll; B-roll is inappropriately huge hair as architecture — skyline, fire-escape strands, lunch-volume dos, ELO afros in slow-motion argument. Product off-screen. Not the Ultra Screech ad. Imagine audio prompt is stems the same length as each clip, not the full 2:47.",
+  "visualArc": "Kenji tag on stage → Lillith verse → fire-escape strand → pre-chorus lift → chorus hair-skyline → Rubella under the fringe / lunch dos → laundry look-through → Kenji solo hair-blocks → bridge on stage → stacked chorus intercut → Kenji tag again.",
+  "tags": [
+    "glam-metal",
+    "catalog",
+    "lillith",
+    "rubella",
+    "kenji",
+    "glamora",
+    "hair-city"
+  ],
+  "segmentsSource": "prompts/big-city-segments.md"
+}

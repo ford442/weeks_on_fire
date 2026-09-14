@@ -23,6 +23,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `eyewash-idents.md` – six 5–10s bumpers + three fake 15s ads
 - `cat-pov.md` – silent black-cat witness cutaway (no dialog)
 - `glam-sham-poo-commercial.md` – Ultra Screech joke-commercial cutaway (stills package, lipsync notes). Living ideas: [`notes/glam-sham-poo-ideas.md`](../notes/glam-sham-poo-ideas.md) and issue [#32](https://github.com/ford442/weeks_on_fire/issues/32)
+- `big-city-cutaway.md` – catalog-single video for *Big City* (~2:47 option_a): small Glamora club stage A-roll + hair-as-skyline B-roll. Imagine audio-prompt stems. Not the Ultra Screech ad. Prompts: [`prompts/big-city-segments.md`](../prompts/big-city-segments.md). Origin [#32](https://github.com/ford442/weeks_on_fire/issues/32).
 - `ultra-refreshed-water-lab.md` – over-engineered window-apparatus ice-water cutaway
 - `soft-gyre/` – locked stills A–E for the 30s psychedelic gel-over-clouds cutaway (also on Visual Archive + Suggestions)
 - `marble-tick-tack.md` – Roley Voss animation bridge (~2:03): cabinet chorus → dirt alley / Rodin → unreal lawn / electromagnet tower → ferrofluid rain. Segment bible (2026-09-06) plus Songs + Suggestions after codegen.

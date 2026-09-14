@@ -53,7 +53,7 @@ say so under **Juxtaposition**. Wrong register needs full commitment.
 
 ## Promoted: Full Dialog Scripts
 
-Seven of the ideas below have been written out as long-form screenplay drafts in
+Ten of the ideas below have been written out as long-form screenplay drafts in
 [`notes/scenes/`](scenes/README.md) — sluglines, cast, music cues, emotional
 notes, per-beat Grok prompts, production notes:
 
@@ -64,6 +64,9 @@ notes, per-beat Grok prompts, production notes:
 - **[Empty Highway Confession](scenes/empty-highway-confession.md)** (3–4 min) — full script for the entry below; Ep2 expansion.
 - **[The Long Way Up](scenes/the-long-way-up.md)** (9–12 min) — the wordy episode; meeting Riley. **Episode 5 candidate.** **Versions:** [`scenes/versions/the-long-way-up-versions.md`](scenes/versions/the-long-way-up-versions.md) (V1 cold open · V2 Mulholland · V3 daytime · V4 ultra-wordy).
 - **[No Other Human Sounds](scenes/no-other-human-sounds.md)** (6–8 min) — Rubella & Riley rally on the cut-through, rejoin Lillith, drive to Pulpit Overlook. **Episode 5 candidate insert.** **Versions:** [`scenes/versions/no-other-human-sounds-versions.md`](scenes/versions/no-other-human-sounds-versions.md).
+- **[Car Twelve, This Is Twelve](scenes/negotiating-with-the-elevator.md)** (4–5 min) — Lillith negotiates with a stopped freight elevator that answers in floor numbers; Rubella files a ticket. Tango in a descending car. **Versions:** [`scenes/versions/negotiating-with-the-elevator-versions.md`](scenes/versions/negotiating-with-the-elevator-versions.md).
+- **[Ambient Lighting with Ambition](scenes/ambient-lighting-with-ambition.md)** (4–5 min) — Lillith repairs a corridor EXIT sign with a vacuum tube from the weather-predicting ping-pong table. Forty seconds of neon noir, then EXI again. **Versions:** [`scenes/versions/ambient-lighting-with-ambition-versions.md`](scenes/versions/ambient-lighting-with-ambition-versions.md).
+- **[Natural Ventilation](scenes/natural-ventilation.md)** (3–4 min) — The roof of vacant 12-A has opened. Lillith wants to fix it. Rubella says no, once. Two-hander ruin ballad. **Versions:** [`scenes/versions/natural-ventilation-versions.md`](scenes/versions/natural-ventilation-versions.md).
 
 Cast table (who appears in which scene): [`scenes/README.md`](scenes/README.md).
 
@@ -836,6 +839,133 @@ See per-segment prompts in `prompts/studio-huddle-segments.md` and the site **Su
 - Hold the drop offscreen; they only talk about the cliff, then smash to the saddle.
 
 **Status / Next Step:** Draft ready for asset gen. Not blocked on a song. Episode 5 candidate insert — not the Episode 4 HOA spine.
+
+
+---
+
+## Scene Idea: "Car Twelve, This Is Twelve" (elevator negotiation)
+
+**Scene / Beat Title:** Car Twelve, This Is Twelve — Lillith negotiates with the freight elevator
+
+**Fits Episode / New Episode Concept:** Building-cast connective tissue. Works between any two Rubella/Lillith cutaways, the same job Master Control does for EyeWash. First of the three-scene building set.
+
+**Juxtaposition / Wrong channel:** Silent-ish building comedy → **crisis-negotiation procedural**. Rapport, mirroring, small concessions, *we have all night*. The subject's entire vocabulary is integers. The joke is that the technique is correct and it works.
+
+**Setting & Atmosphere:** Freight car 2, night. Quilted moving pads on hooks, one caged fluorescent tube, a brass panel of twelve buttons of which three are lit from somewhere else. Doors close on twelve. Nothing happens for nine seconds.
+
+**Key Visuals (Grok Imagine prompt seeds):** Two women and a floor indicator stuck on twelve; a woman addressing a button panel at eye height; a maintenance ticket that loads instantly on twelve inside a steel box; a service diagram behind a moving pad showing thirteen floors; a slow tango danced with a coil of speaker wire in a descending car.
+
+**Narrative Beats / Action:**
+1. Doors close. "Twelve." The car does not move. Lillith puts the wire down, which is the thing she does before.
+2. Rapport. She gives her name, her floor, and a concession. The elevator answers in floor numbers, in tune.
+3. Rubella opens a ticket — *car two is holding a position* — because QA describes behavior, never intent. The ticket hums back at the exact frequency of the laundromat's off-balance dryer.
+4. Madelyn on the intercom: extended dwell is an amenity, page four, Vertical Transit, Courtesies. "Everyone is brought down."
+5. **The song.** One floor per section, one beat lost per section, 5/4 → 2/4. Rubella's heel is the only percussion.
+6. Lobby. The doors open a semitone late. Rubella writes the counteroffer line into her notes app and does not say it.
+
+**Dialogue, Voiceover or Narration (if any):** Full dialog in [`notes/scenes/negotiating-with-the-elevator.md`](scenes/negotiating-with-the-elevator.md). **The elevator says floor numbers and nothing else.** The alarm button is discussed and never pressed.
+
+**Dialog versions page:** [`scenes/versions/negotiating-with-the-elevator-versions.md`](scenes/versions/negotiating-with-the-elevator-versions.md) — V1 Rubella-negotiates (defect-report register), V2 cold open on the closed doors, elevator fragments.
+
+**Interpersonal subjects:** Rubella & Lillith (method vs. method, never stated as affection); Madelyn as a voice with a good speaker; Qing in the lobby with noodles, no line.
+
+**Emotional Tone & Themes:** Nobody is frightened; this is Tuesday. Warmth through procedure. Neither of them says anything true on purpose.
+
+**Music / Song Sync Opportunity:** [`songs/Negotiating_with_the_Elevator.md`](../songs/Negotiating_with_the_Elevator.md) — Argentine tango duet, 116 BPM, bandoneón and heel-stomp. The metric flaw is the descent. Do not correct it. Door chime a semitone above the final chord ends the cue.
+
+**Suggested Grok Imagine Full Prompt:**
+"Cinematic interior of an old freight elevator at night, quilted moving pads hanging on the walls, one caged fluorescent tube overhead, worn brass button panel, a woman dancing a slow tango alone with a coil of speaker wire while a second woman watches from the corner holding a mug and a laundry basket, floor indicator sweeping downward, glamorous and absurd and completely sincere, 35mm, Grok Imagine style"
+
+**Variations or Alternate Takes:**
+- Rubella runs the negotiation as a defect report (loses the tango set-up — requires rewriting the song beat).
+- Cold open with the doors already closed and the indicator already on twelve.
+- Cut Madelyn entirely; the building never comments and the car simply descends.
+
+**Status / Next Step:** Draft ready for asset gen once Minimax renders the track. **Never adjudicated:** malfunction vs. negotiation, the thirteenth floor on the diagram, whether Madelyn was watching.
+
+---
+
+## Scene Idea: "Ambient Lighting with Ambition" (neon EXIT repair)
+
+**Scene / Beat Title:** Ambient Lighting with Ambition — Lillith fixes the corridor sign, Rubella holds the ladder
+
+**Fits Episode / New Episode Concept:** Building-cast cutaway. Second of the three-scene set; same corridor as Car Twelve, three days earlier.
+
+**Juxtaposition / Wrong channel:** Building comedy → **daytime home-improvement makeover program**. Segment structure, sourcing patter, a reveal held for a music sting. No crew, no camera, no b-roll of a truck arriving. Lillith hosts it without acknowledging she is hosting it.
+
+**Setting & Atmosphere:** Sixth-floor corridor, night. Carpet that was once a pattern. A neon EXIT sign that has read **EXI** for three weeks, a ceiling fluorescent that is technically present, and a stepladder already open with a laminated memo taped to it at a height that required intent.
+
+**Key Visuals (Grok Imagine prompt seeds):** E X I at the end of a dim hallway; a vacuum tube unwrapped from a dish towel like an egg; two fingers resting on a dark neon letter as it warms; **the corridor drenched red** while a pizza courier walks through it without looking up; the empty hallway after, folded ladder, EXI.
+
+**Narrative Beats / Action:**
+1. Rubella arrives with a five-pound fire extinguisher she was not asked to bring, sets it at the ladder foot, and squares it with her toe. Neither of them mentions it. "Third Thursday."
+2. Sourcing patter. A 6BQ5 from the ping-pong table. The table does Thursday's weather on Tuesday — it's early, not broken.
+3. The insult, delivered in full, because the whole thing has to be done. The T comes up dull. "That's a control."
+4. **Forty seconds.** Eleven hundred volts into a fixture rated for a quieter life; the corridor goes neon noir and neither of them moves. Pizza Guy walks the length of it, order name almost right, never corrected.
+5. The tube gives out with a glassy tick in the pre-chorus. The red drains toward camera. Fluorescent returns, having missed its moment.
+6. "It's not a fire hazard. It's ambient lighting with ambition." Two doors, not together.
+
+**Dialogue, Voiceover or Narration (if any):** Full dialog in [`notes/scenes/ambient-lighting-with-ambition.md`](scenes/ambient-lighting-with-ambition.md). Locked lines kept: the insult-data line and the ambient-lighting line. **The extinguisher never discharges.**
+
+**Dialog versions page:** [`scenes/versions/ambient-lighting-with-ambition-versions.md`](scenes/versions/ambient-lighting-with-ambition-versions.md) — V1 full host commitment, V2 Rubella admits she counted, V3 chorus-plays (**shelved**), Pizza Guy name variants.
+
+**Interpersonal subjects:** Rubella & Lillith — a love scene conducted entirely in logistics; Madelyn as a laminated memo, no voice, no body; Pizza Guy, one pass.
+
+**Emotional Tone & Themes:** Affection expressed as who brought what and who stands where. No confession, no hug. One glorious slightly radioactive minute, which is Lillith's stated success rate.
+
+**Music / Song Sync Opportunity:** [`songs/Neon_Exit_Sign.md`](../songs/Neon_Exit_Sign.md) — **intro hum + Verse 1 only.** The chorus belongs to Episode 1 and the burning-town walk; the corridor gets one verse on loan and the tube fails before it can keep more.
+
+**Suggested Grok Imagine Full Prompt:**
+"Cinematic residential corridor at night drenched in deep red neon from an EXIT sign at the far end, worn carpet and brass door numbers glowing, two women standing motionless at an aluminum stepladder — one holding a fire extinguisher, one with a soldering iron — a pizza courier walking toward camera through the red without looking up, neon noir, 35mm, Grok Imagine style"
+
+**Variations or Alternate Takes:**
+- Lillith addresses a camera that is not there, with segment-break cadence (funnier, colder — stops being a love scene).
+- Rubella admits she counted the forty seconds (spends the whole account in one line).
+- No Pizza Guy: forty seconds of red with nobody walking through it.
+
+**Status / Next Step:** Draft ready for asset gen. Uses the existing Neon Exit Sign render; needs a hard cut at the end of Verse 1 and a mid-phrase kill in the pre-chorus.
+
+---
+
+## Scene Idea: "Natural Ventilation" (the roof of 12-A)
+
+**Scene / Beat Title:** Natural Ventilation — the ceiling has opened and nobody is fixing it tonight
+
+**Fits Episode / New Episode Concept:** Building-cast two-hander. **Third and last** of the set — the refusal only costs something after the audience has watched Lillith fix two other things. Works as an act-out or a season tail.
+
+**Juxtaposition / Wrong channel:** The channel changes **down**. After a tango and a neon corridor, the show becomes a **late cabaret ruin ballad** where a structural failure is treated as a furniture question. The wrongness is the calm.
+
+**Setting & Atmosphere:** Vacant unit 12-A, night. Parquet, a radiator that still works, two mismatched kitchen chairs. A clean-edged opening the size of a dining table straight through lath, plaster and roof deck — less like damage than like a decision. Orange city underlight on the clouds above it.
+
+**Key Visuals (Grok Imagine prompt seeds):** Plaster spread across parquet like a seating chart; two chairs, two glasses, a clamshell of blackberries; **overhead through the hole**, looking down at two small figures; a radiator glowing under a window in a room with no ceiling; **a clean rectangle of rain** darkening the floor while nobody moves.
+
+**Narrative Beats / Action:**
+1. Eleven seconds of looking up. It has been open since Tuesday. There is no ticket category; she looked for a while.
+2. Lillith starts pricing it — deck failure, one joist, a guy in the annex with a roll of EPDM. "Sit down." She sits. **The entire scene is paid for by how fast she sits.**
+3. "That's not a no." / "It's a no." / "Okay." She never raises it again, and the change is never marked.
+4. **The song.** Extra bar after every verse: silence plus dust, locked off, no cutaway, no fill. Rubella tips her chair back on two legs for a whole verse — the first careless thing she has done in three scenes.
+5. Under the bridge: they are heating a room with a hole in it. "Finally. Natural ventilation." Flat. Not a punchline.
+6. The room echo on the last *wait* is Lillith, unexplained. Then rain, in a rectangle, and the only acknowledgment it gets is a container of blackberries moved six inches.
+
+**Dialogue, Voiceover or Narration (if any):** Full dialog in [`notes/scenes/natural-ventilation.md`](scenes/natural-ventilation.md). **Two-hander — no third voice, no intercom, no memo, no Continuity Voice.** The vocal is not diegetic; neither of them sings on camera.
+
+**Dialog versions page:** [`scenes/versions/natural-ventilation-versions.md`](scenes/versions/natural-ventilation-versions.md) — V1 longer refusal, V2 no rain, V3 Lillith's-own-unit (**shelved**).
+
+**Interpersonal subjects:** Rubella & Lillith only. The most either admits is a preference about furniture and that it is warmer in here than in hers.
+
+**Emotional Tone & Themes:** Warmth, not melancholy. The only scene of the three where neither has a job to do, which is why it is the hardest for both. No confession, no backstory on camera, no crying.
+
+**Music / Song Sync Opportunity:** [`songs/The_Roof_Knows_How_to_Wait.md`](../songs/The_Roof_Knows_How_to_Wait.md) — dark cabaret ruin ballad, 72 BPM, Rubella voice, optional Lillith room-echo on the last "wait." **The extra bar is the roof still deciding. Do not fill it.**
+
+**Suggested Grok Imagine Full Prompt:**
+"Cinematic wide interior of an empty apartment at night, rain falling in a clean rectangular column through a large hole in the ceiling onto a parquet floor scattered with plaster, two women seated in mismatched kitchen chairs just outside the wet rectangle, two wine glasses and a container of blackberries beside them, neither moving, orange city skyglow overhead, quiet and strange and warm, 35mm, Grok Imagine style"
+
+**Variations or Alternate Takes:**
+- Lillith argues three more lines before she sits (makes the no land harder; costs the speed, which is the good part).
+- No rain: end on the extra bar and two people not leaving a room with no ceiling.
+- Shelved: put the hole in an occupied unit — it becomes a housing problem instead of a ruin ballad.
+
+**Status / Next Step:** Draft ready for asset gen. **Do not import the ballroom** — no chandelier, no paddles, no flute, no mascara beat. **Never adjudicated:** what opened the roof, whether the building is safe, why the heat is still on, whose voice the room used.
 
 ---
 

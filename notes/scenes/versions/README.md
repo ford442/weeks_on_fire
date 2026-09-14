@@ -15,6 +15,9 @@ or wrong-genre, that is a **juxtaposition gag** in the same family as:
 | **Rubella's "monkey science"** | Cable science lecture | Ground current / rats / the whole rest of it — until Riley corrects it once |
 | **The Long Way Up** | Mid-season cable procedural → chatty sci-fi | Eleven minutes of dialog on a hill |
 | **No Other Human Sounds** | Silent show remembering itself, then a rally | Cost of a line; short turns |
+| **Car Twelve, This Is Twelve** | Crisis-negotiation procedural | Rapport technique, correctly applied, to an elevator that says integers |
+| **Ambient Lighting with Ambition** | Daytime home-makeover program | Sourcing patter and a held reveal, in a hallway with no crew |
+| **Natural Ventilation** | Cabaret ruin ballad (channel change *down*) | Treating a hole in the roof as a furniture question |
 
 The wordiness should **stand out**. Alternate versions are how we push density,
 interpersonal heat (Mulholland / daytime triangulation), or colder noir without
@@ -32,6 +35,9 @@ overwriting the baseline until the room picks a cut.
 | [`../house-of-mirrors-rally.md`](../house-of-mirrors-rally.md) | [`house-of-mirrors-rally-versions.md`](house-of-mirrors-rally-versions.md) |
 | [`../empty-highway-confession.md`](../empty-highway-confession.md) | [`empty-highway-confession-versions.md`](empty-highway-confession-versions.md) |
 | [`../rubella-stand-up.md`](../rubella-stand-up.md) | [`rubella-stand-up-versions.md`](rubella-stand-up-versions.md) |
+| [`../negotiating-with-the-elevator.md`](../negotiating-with-the-elevator.md) | [`negotiating-with-the-elevator-versions.md`](negotiating-with-the-elevator-versions.md) |
+| [`../ambient-lighting-with-ambition.md`](../ambient-lighting-with-ambition.md) | [`ambient-lighting-with-ambition-versions.md`](ambient-lighting-with-ambition-versions.md) |
+| [`../natural-ventilation.md`](../natural-ventilation.md) | [`natural-ventilation-versions.md`](natural-ventilation-versions.md) |
 
 **New scene?** Copy [`_template.md`](_template.md) → `[slug]-versions.md`, fill
 the juxtaposition box, then link it from the parent and from

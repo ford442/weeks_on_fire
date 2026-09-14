@@ -1,0 +1,13 @@
+{
+  "id": "valet-of-the-tide",
+  "title": "Valet",
+  "premise": "The valet stand is at the edge of the sea. The ticket is number 12. There are no cars, there have never been cars, and a valet in a red jacket is already jogging into the surf with the fob held over his head.",
+  "visual": "Overcast noon, wet sand, a proper brass-and-mahogany valet podium with a numbered key board — every hook full. A woman in sunglasses holds ticket 12 and waits with ordinary patience. Tyre tracks lead into the water and do not come back. Far out, a red jacket at chest height in the swell, arm up.",
+  "status": "seed",
+  "runtime": "~7 seconds",
+  "register": "grounded surreal",
+  "characterLean": "Liliane will wait the full quarter hour out of politeness. Vivienne tips first and leaves.",
+  "tags": ["beach", "valet", "service", "manners", "daylight"],
+  "notes": "Seed only — still prompt not locked. Keep it flat overcast noon and completely ordinary in every other respect; sunset or night turns it into a dream sequence and the gag dies. The valet is professional, unhurried, and not drowning. Not the Pizza Guy — do not borrow his uniform or his persistence.",
+  "agent": "claude-code"
+}

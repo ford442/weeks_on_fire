@@ -1,0 +1,15 @@
+{
+  "id": "the-far-end-of-the-table",
+  "title": "The Far End of the Table",
+  "premise": "The near end of the dinner party is photoreal. The far end has not finished. Those guests are smooth, beautiful, and blank, their silverware has the wrong number of tines, and the service continues down the length of the table without comment.",
+  "visual": "Long formal banquet table shot down its length. Foreground: sharp skin, pores, a chipped nail, a real cigarette burn on the linen. Receding into the background the guests get smoother and more symmetrical until the last three are lovely featureless approximations with beautiful hair. Their forks have six tines. One of their wine glasses has no opening. A waiter is serving the far end exactly as carefully as the near end.",
+  "status": "sketched",
+  "runtime": "~8 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Vivienne is seated at the sharp end, obviously. Liliane took a far chair on purpose and is already halfway smooth.",
+  "tags": ["banquet", "dinner", "resolution", "ai-artifact", "the-two"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, long formal black-tie banquet table shot straight down its length under a row of chandeliers, the nearest guests rendered in extreme photoreal detail — skin texture, pores, a chipped red nail, a cigarette burn in the white linen, condensation on a glass — and each successive guest further down the table progressively smoother, more symmetrical, and less specific until the three at the far end are lovely blank approximations of faces with perfect hair and no features, their place settings subtly wrong with a six-tine fork, a spoon that is also a knife, and a wine glass with no opening at the top, a waiter in white gloves serving the far end with exactly the same care as the near end, warm candle and chandelier light falling off toward the far end into a soft creamy haze rather than darkness, no one reacting, luxury materials, strong perspective, 35mm anamorphic, T2.0, quiet dread, Grok Imagine style",
+  "motion": "8-second slow push down the table's center line. The near guests breathe, blink, and gesture. The far guests move in a smooth average of movement — always mid-gesture, never completing one. The waiter pours for a blank guest and the level rises correctly. One six-tine fork is lifted. Camera: push only, never reaches the far end.",
+  "notes": "The falloff must be gradual and continuous — a gradient, not two zones, and never a visible seam. The far guests are beautiful and calm, not corpses or horror faces. Distinct from Consensus: that one is everyone agreeing on the same face; this one is nobody at the far end having finished. Do not let the chandeliers go out.",
+  "agent": "claude-code"
+}

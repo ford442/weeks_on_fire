@@ -272,8 +272,19 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 
 Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>.json`. Promote winners to Suggestions.
 
+- **Consensus** (consensus, sketched) — Every model on the runway, every guest in the seats, and the designer taking her bow have arrived at the same beautiful face. One bored woman in the front row is the last remaining variation, and nobody has told her she won.
 - **Courtesy Shuttle** (courtesy-shuttle, sketched) — The afterlife boards like a regional airport. The gate is polite. The weather system in first class is a carry-on dispute.
+- **Fig. 4** (fig-four, sketched) — The diagram is exquisite: labeled, cross-sectioned, arrowed, dimensioned in units that are not units. It describes a device that does not exist and is not mentioned anywhere else. It is captioned Fig. 4. There is no Fig. 1, 2, or 3. Everyone is taking notes.
+- **Fluent** (fluent, sketched) — Every sign in the arcade is beautifully set, expensively lit, and not quite a word. She is the only person in the building who knows where she is going.
+- **Hold Music** (hold-music, sketched) — A full symphony orchestra in a gilded hall, playing beautifully, to one telephone on a velvet chair. Somebody is on hold. The conductor will not stop until they pick up.
+- **Service for Six** (service-for-six, sketched) — The sommelier presents the bottle with a hand that has one finger too many. The extra finger is doing the most careful part of the job — steadying the label so it faces the guest. Nobody at the table looks up.
+- **The Far End of the Table** (the-far-end-of-the-table, sketched) — The near end of the dinner party is photoreal. The far end has not finished. Those guests are smooth, beautiful, and blank, their silverware has the wrong number of tines, and the service continues down the length of the table without comment.
+- **The Long Weekend** (the-long-weekend, seed) — The calendar on the kitchen wall has run out of days and kept going. Saturday appears nine times in a row, in the same confident handwriting, and somebody has been dutifully crossing each one off.
+- **The Loupe** (the-loupe, sketched) — She magnifies the photograph and finds a street that was never in it. She magnifies the street and finds a window. She magnifies the window and someone is looking back. She has not stopped.
+- **The Mirror Disagrees** (the-mirror-disagrees, seed) — She is wearing the green dress. The mirror has her in the black one. Every movement matches perfectly. Neither of them considers this a problem worth raising.
+- **The Understudy** (the-understudy, sketched) — She is still putting on her lipstick. Her shadow finished ten minutes ago and is waiting with its arms crossed.
 - **Unscheduled Rain** (unscheduled-rain, seed) — Rain falls in a perfect rectangle over the coffee table. Nobody moves the magazines. The cat walks around the wet zone as if this is the house rule.
+- **Valet** (valet-of-the-tide, seed) — The valet stand is at the edge of the sea. The ticket is number 12. There are no cars, there have never been cars, and a valet in a red jacket is already jogging into the surf with the fob held over his head.
 
 ## Daisy Bell cutaway
 

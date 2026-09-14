@@ -1,0 +1,15 @@
+{
+  "id": "consensus",
+  "title": "Consensus",
+  "premise": "Every model on the runway, every guest in the seats, and the designer taking her bow have arrived at the same beautiful face. One bored woman in the front row is the last remaining variation, and nobody has told her she won.",
+  "visual": "Fashion show, hard white runway light. Six models walking, forty guests seated, one designer bowing — all wearing the identical lovely, slightly averaged face, rendered pleasantly and without menace. Phones up. In the front row, one woman with an actual specific face, red lipstick, and an expression of total boredom, not filming.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "grounded surreal",
+  "characterLean": "Vivienne is the variance and she is furious about how little it is helping.",
+  "tags": ["runway", "fashion", "faces", "ai-artifact", "vivienne"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, high-fashion runway show under hard white overhead light, six models mid-walk in different black couture looks and roughly forty seated front-row guests in the background, every single one of them sharing the exact same beautiful slightly averaged face — same nose, same mouth, same calm symmetry — rendered pleasant and photoreal rather than uncanny or deformed, a designer taking a small bow at the end of the runway with that same face, dozens of raised phones whose bright screens all show the same face again, and in the near front row a single glamorous woman with a genuinely specific face, long black hair, blood-red lipstick and a bored unimpressed expression, not filming, arms folded, seamless white cyclorama, glossy runway floor doubling the models, high key with hard shadows under the heels, strong repetition and rhythm across the frame, 35mm anamorphic, T2.8, deadpan, Grok Imagine style",
+  "motion": "7-second locked wide. The models walk and turn in near-unison, a half-beat off each other. Every phone screen updates at once. Forty identical faces track the runway together. The one specific woman looks at camera for a quarter second, then away. Nothing is corrected. Camera: static.",
+  "notes": "Not the Third Shift mannequins — these are living, warm, and having a lovely time. The menace is the agreement, not the faces, so keep them attractive and un-creepy. Exactly one variation in frame; two would make it a team. Do not name her on screen.",
+  "agent": "claude-code"
+}

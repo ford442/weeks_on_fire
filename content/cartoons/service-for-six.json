@@ -1,0 +1,15 @@
+{
+  "id": "service-for-six",
+  "title": "Service for Six",
+  "premise": "The sommelier presents the bottle with a hand that has one finger too many. The extra finger is doing the most careful part of the job — steadying the label so it faces the guest. Nobody at the table looks up.",
+  "visual": "Candlelit private dining room, table set for two. A white glove has been removed and folded on the tray. The bare hand under the bottle has six fingers, all groomed, one wearing its own small signet ring, and the sixth is the one holding the label square to the guest. Perfect etiquette. One woman's eyes have already flicked to the hand and away again; she is still mid-sentence.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Liliane counted. Vivienne will order a second bottle to watch it happen again.",
+  "tags": ["restaurant", "hands", "service", "ai-artifact", "manners"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 4:5, candlelit private dining room at night, tight medium on a sommelier's bare right hand presenting a dark wine bottle at table height, the hand has six long well-groomed fingers arranged naturally and confidently with the sixth finger resting flat against the label to hold it square to the guest, a small gold signet ring on that sixth finger, a folded white service glove and a foil cutter on a silver tray behind the hand, black dinner jacket sleeve and white cuff, a glamorous woman with long black hair and blood-red lipstick seated beyond the bottle mid-sentence with her eyes just leaving the hand, a second empty place setting with a lipstick-marked glass, candle flame and warm tungsten sconces against deep oxblood walls, shallow focus so the hand is razor sharp and the room falls away, the extra finger fully anatomical and calm, never monstrous, never claw-like, high contrast, luxury materials, 35mm, T1.4, deadpan elegance, Grok Imagine style",
+  "motion": "Locked-off 7-second photoreal loop. The bottle rotates a few degrees so the label stays square. The sixth finger adjusts once, competently. Candle flame leans. Her sentence continues silently; she does not look back. No reaction shot, no reveal, no pull-out. Camera: 2 percent push only.",
+  "notes": "The joke is competence, not horror. If the hand reads as a monster the still has failed — it should read as good service. Do not zoom to the finger. Do not put a second wrong hand in frame; one is a fact, two is a bit. Newspaper-comic test: no caption. Promote to Suggestions if the hand lands anatomical on the first pass.",
+  "agent": "claude-code"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "the-long-weekend",
+  "title": "The Long Weekend",
+  "premise": "The calendar on the kitchen wall has run out of days and kept going. Saturday appears nine times in a row, in the same confident handwriting, and somebody has been dutifully crossing each one off.",
+  "visual": "Bright ordinary kitchen, mid-morning, coffee made. A wall calendar where the week reads MON TUE WED SATURDAY SATURDAY SATURDAY SATURDAY SATURDAY SATURDAY — the grid stretched to fit them all, printed not scrawled. Six are crossed off in red pen. A hand holds the pen over the seventh. Groceries on the counter for one more day than anyone needs.",
+  "status": "seed",
+  "runtime": "~6 seconds",
+  "register": "grounded surreal",
+  "characterLean": "Nobody's sister. This is a house where somebody lives alone and is coping beautifully.",
+  "tags": ["kitchen", "calendar", "repetition", "ai-artifact", "domestic"],
+  "notes": "Seed only — still prompt not locked. The calendar must look professionally printed, not hand-altered — the repetition is the publisher's error, not a joke somebody made. Daylight, tidy house, no dread props. Do not put a clock in frame and do not use 3:44. Sibling in spirit to Fig. 4: the authority of a printed thing that is wrong.",
+  "agent": "claude-code"
+}

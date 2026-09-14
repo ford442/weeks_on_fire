@@ -149,12 +149,14 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | pad-kid-poured-curd | Pad Kid Poured Curd (Pulled Cold) | Cold patter electro / recall bulletin | EyeWash Station / late correction |
 | pearls-in-the-ashtray | Pearls in the Ashtray | Smoked midnight jazz | After-gala cutaway |
 | pepperoni-or-margherita | Pepperoni or Margherita | Commercial jingle → minor-key piano ballad | Episode 03 / any crossover |
+| permit-for-the-purple-light | Permit for the Purple Light | Bureaucratic bossa nova / clipboard lounge | Episode 04 / HOA |
 | porch-light-meridian | Porch Light Meridian | Progressive downtempo | Episode 03 |
 | quarter-to-seventy-five | Quarter to Seventy-Five | Ambient lullaby / detuned soft rock | Episode 02 |
 | receipt-dated-thursday | Receipt Dated Thursday | Institutional receipt recitation | Musical cutaway / Biscuit |
 | recycling-bin-rebellion | Recycling Bin Rebellion | Absurd punk-ska | Episode 04 / HOA |
 | rinse-cycle | Rinse Cycle (Fifteen Minutes, Do Not Blink) | Institutional soft rock / sign-off theme | Series framing device |
 | rubella-stand-up | Rubella Stand-Up (Voice Bed) | Spoken gag / Voice bed | Short packet farm / spoken cutaway |
+| slide-between-stations | Slide Between Stations | Broadcast dream-pop / test-pattern shoegaze | EyeWash station-break / channel slide |
 | snow-on-glass | Snow on Glass | Driving techno | Catalog / Night Side |
 | soft-pull-forward | Soft Pull-Forward | Progressive house | Catalog / Night Side |
 | spooky-telephone-poles-dialog | Spooky Telephone Poles (Dialog) | Halloween sidewalk pseudoscience | Episode 03 |
@@ -176,6 +178,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | this-program-contains-dialogue | This Program Contains Dialogue | Institutional torch / legal-bumper hymn | EyeWash Station / The Long Way Up |
 | triphthong-table | Triphthong Table | Educational cabaret duet | Musical cutaway |
 | twilight-time | Twilight Time | 90s rave / eurodance | Character Archive |
+| two-chairs-one-mirror | Two Chairs, One Mirror | Torch-song waltz / dressing-room chamber pop | Musical cutaway / The Two |
 | two-db-and-dont-tell-me | Two dB and Don't Tell Me | Fader blues | Catalog / Cue Sheets |
 | under-dialogue | Under Dialogue | Ducked soul / room-tone ballad | Catalog / Cue Sheets |
 | well-fall | Well Fall | Instrumental heavy metal | Musical Cutaway / Visual Experiment |

@@ -24,6 +24,9 @@ caption, the still is unfinished). Then animate with the motion prompt only.
 Promote winners to `prompts/` as timed segments. Live on the site
 **Suggestions** view (`src/data/gagCutaways.ts`).
 
+New short cartoon *seeds* from agents belong in [`content/cartoons/`](../content/cartoons/)
+(hub **Cartoons** view). Do not append them here until they are locked like the eight below.
+
 | # | Title | Register | Character lean | Pairs with |
 |---|-------|----------|----------------|------------|
 | 1 | Closed for Cosmic Reasons | grounded + impossible | Vivienne | [Closed for Cosmic Reasons](../songs/Closed_for_Cosmic_Reasons.md) |

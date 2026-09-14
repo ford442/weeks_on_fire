@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CutawayRecord } from './schemas';
+import type { CartoonRecord, CutawayRecord, EpisodeRecord } from './schemas';
 import type { ParsedSong } from './load';
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
@@ -35,17 +35,20 @@ export function validateContent(
       }
 
       const timelineCount = countEditTimelineRows(repoRoot, cutaway.segmentsSource);
-      if (timelineCount !== null && timelineCount !== cutaway.segments.length) {
+      const segmentCount = cutaway.segments?.length ?? 0;
+      if (timelineCount !== null && timelineCount !== segmentCount) {
         errors.push(
-          `Cutaway ${cutaway.id}: segment count ${cutaway.segments.length} != edit timeline rows ${timelineCount} in ${cutaway.segmentsSource}`,
+          `Cutaway ${cutaway.id}: segment count ${segmentCount} != edit timeline rows ${timelineCount} in ${cutaway.segmentsSource}`,
         );
       }
     }
 
-    for (const segment of cutaway.segments) {
+    for (const segment of cutaway.segments ?? []) {
       const stillPath = segment.stillImagePath;
       if (stillPath && !existsSync(join(repoRoot, stillPath))) {
-        errors.push(`Cutaway ${cutaway.id} segment ${segment.id} stillImagePath not found: ${stillPath}`);
+        errors.push(
+          `Cutaway ${cutaway.id} segment ${segment.id} stillImagePath not found: ${stillPath}`,
+        );
       }
     }
   }
@@ -56,10 +59,14 @@ export function validateContent(
 
   if (checkOrphans) {
     const usedSources = new Set(
-      cutaways.map((cutaway) => cutaway.segmentsSource).filter((value): value is string => Boolean(value)),
+      cutaways
+        .map((cutaway) => cutaway.segmentsSource)
+        .filter((value): value is string => Boolean(value)),
     );
     const cutawayIds = new Set(cutaways.map((cutaway) => cutaway.id));
-    const promptFiles = readdirSync(join(repoRoot, 'prompts')).filter((file) => file.endsWith('-segments.md'));
+    const promptFiles = readdirSync(join(repoRoot, 'prompts')).filter((file) =>
+      file.endsWith('-segments.md'),
+    );
     for (const file of promptFiles) {
       const path = `prompts/${file}`;
       const stemId = file.replace(/-segments\.md$/, '');
@@ -79,6 +86,57 @@ export function validateContent(
   }
 
   if (errors.length > 0) {
-    throw new Error(`Content validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`);
+    throw new Error(
+      `Content validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+export function validateEpisodes(repoRoot: string, episodes: EpisodeRecord[]): void {
+  const errors: string[] = [];
+
+  const idCounts = new Map<string, number>();
+  const numberCounts = new Map<number, number>();
+  for (const episode of episodes) {
+    idCounts.set(episode.id, (idCounts.get(episode.id) ?? 0) + 1);
+    numberCounts.set(episode.number, (numberCounts.get(episode.number) ?? 0) + 1);
+
+    for (const [key, path] of Object.entries(episode.files)) {
+      if (path && !existsSync(join(repoRoot, path))) {
+        errors.push(`Episode ${episode.id} files.${key} not found: ${path}`);
+      }
+    }
+  }
+
+  for (const [id, count] of idCounts) {
+    if (count > 1) errors.push(`Duplicate episode id: ${id}`);
+  }
+  for (const [number, count] of numberCounts) {
+    if (count > 1) errors.push(`Duplicate episode number: ${number}`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Episode validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+export function validateCartoons(cartoons: CartoonRecord[]): void {
+  const errors: string[] = [];
+  const idCounts = new Map<string, number>();
+
+  for (const cartoon of cartoons) {
+    idCounts.set(cartoon.id, (idCounts.get(cartoon.id) ?? 0) + 1);
+  }
+
+  for (const [id, count] of idCounts) {
+    if (count > 1) errors.push(`Duplicate cartoon id: ${id}`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Cartoon validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
   }
 }

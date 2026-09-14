@@ -1,0 +1,15 @@
+{
+  "id": "the-understudy",
+  "title": "The Understudy",
+  "premise": "She is still putting on her lipstick. Her shadow finished ten minutes ago and is waiting with its arms crossed.",
+  "visual": "Backstage dressing room, bulb-lined mirror. She leans in close, mouth open, mid-stroke, one hand braced on the counter. On the wall behind her, her cast shadow stands fully upright, arms folded, weight on one hip, head tilted — a posture her body is nowhere near. Everything else in the room casts an honest shadow. Only hers has moved on.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Either sister. The shadow is whichever one of them is always ready first.",
+  "tags": ["dressing-room", "shadow", "backstage", "the-two", "quiet-menace"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 4:5, cramped backstage dressing room, a glamorous woman with long black hair in a black slip leaning close to a bulb-lined mirror mid-lipstick stroke with her mouth slightly open and one hand braced on the cluttered counter, on the wall behind her right shoulder her own cast shadow standing completely upright with arms folded, weight on one hip and head tilted in mild impatience, a posture her body is nowhere near, every other object in the room — chair, hairbrush, garment rack, bottles — casting a correct and honest shadow in the same light, warm bare vanity bulbs as the only source, a rack of black dresses, a cold cup of coffee, tissue with a lip print, high contrast with hard shadow edges, no second person, no reflection trick, 35mm, T1.8, elegant and slightly dangerous, Grok Imagine style",
+  "motion": "6-second lockoff. The lipstick completes its stroke. Bulbs hum and one dims. The shadow shifts its weight to the other hip and re-folds its arms — the body does not. She presses her lips together and reaches for tissue. The shadow waits. Camera: static, no rack focus.",
+  "notes": "Not a ghost, not a twin, not a mirror gag. The light source must be unambiguous so the shadow is clearly hers and clearly wrong. Distinct from The Mirror Disagrees: that one differs in wardrobe, this one in posture — do not combine them. No reveal, no turn.",
+  "agent": "claude-code"
+}

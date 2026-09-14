@@ -13,12 +13,13 @@
     "agent-docs:check": "tsx scripts/content-index/emit-agent-docs.ts --check",
     "migrate:content": "tsx scripts/content-index/migrate-from-ts.ts",
     "dev": "vite",
-    "lint": "eslint src --max-warnings 0",
-    "format": "prettier --check src",
-    "format:write": "prettier --write src",
-    "build": "npm run codegen && npm run agent-docs && tsc -b && vite build && cp dist/index.html dist/404.html",
-    "build:check": "npm run build && node scripts/check-bundle-size.mjs",
-    "preview": "vite preview"
+    "lint": "eslint src scripts --max-warnings 0",
+    "format": "prettier --check src scripts",
+    "format:write": "prettier --write src scripts",
+    "build": "npm run codegen && npm run agent-docs && tsc -b && vite build && tsx scripts/check-index-encoding.ts && cp dist/index.html dist/404.html",
+    "build:check": "npm run build && tsx scripts/check-bundle-size.ts",
+    "preview": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.0",
@@ -26,12 +27,15 @@
     "lucide-react": "1.17.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
+    "react-markdown": "10.1.0",
     "react-router-dom": "7.18.3",
-    "tailwindcss": "4.3.0"
+    "remark-gfm": "4.0.1",
+    "tailwindcss": "4.3.0",
+    "zod": "4.5.2"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/react": "19.2.17",
+    "@types/node": "22.19.15",
     "@types/react-dom": "19.2.3",
     "autoprefixer": "10.5.0",
     "eslint": "10.9.1",
@@ -44,6 +48,6 @@
     "typescript": "6.0.3",
     "typescript-eslint": "8.68.0",
     "vite": "8.0.16",
-    "zod": "4.5.2"
+    "vitest": "5.0.0"
   }
 }

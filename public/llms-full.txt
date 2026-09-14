@@ -15,7 +15,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with seven views: Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Characters, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -26,8 +26,10 @@ The hub is a single-page app. Views are toggled in-app:
 3. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
 4. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
 5. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
-6. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
-7. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+6. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
+7. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+8. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+9. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
 
@@ -91,6 +93,10 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 23. **The Soft Gyre — D Answer** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
 24. **The Soft Gyre — E Soft set** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
 25. **Well Fall — Lip of the Well** (Musical Cutaway / Visual Experiment, theme: Well Fall)
+26. **Rubella Stand-Up — Podium Lock** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
+27. **Rubella Stand-Up — Detergent Relic** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
+28. **Rubella Stand-Up — Heckle Wide** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
+29. **Rubella Stand-Up — Land** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
 
 ## Minimax song catalog (content index)
 
@@ -147,6 +153,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | receipt-dated-thursday | Receipt Dated Thursday | Institutional receipt recitation | Musical cutaway / Biscuit |
 | recycling-bin-rebellion | Recycling Bin Rebellion | Absurd punk-ska | Episode 04 / HOA |
 | rinse-cycle | Rinse Cycle (Fifteen Minutes, Do Not Blink) | Institutional soft rock / sign-off theme | Series framing device |
+| rubella-stand-up | Rubella Stand-Up (Voice Bed) | Spoken gag / Voice bed | Short packet farm / spoken cutaway |
 | snow-on-glass | Snow on Glass | Driving techno | Catalog / Night Side |
 | soft-pull-forward | Soft Pull-Forward | Progressive house | Catalog / Night Side |
 | spooky-telephone-poles-dialog | Spooky Telephone Poles (Dialog) | Halloween sidewalk pseudoscience | Episode 03 |
@@ -188,11 +195,20 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **Riley Smith** — The stranger on the center line — unemployed technician with good data
 - **Kenji “Shred” Sato** — Glam-Sham-Poo brand ambassador / alumnus
 
+## Series crew (fictional)
+
+- **Mara Vell** — Writer
+- **Julian Rook** — Producer
+- **Soren Kade** — Director
+- **Nova Chen** — Music Supervisor
+- **Elio Marsh** — Visual Designer
+
 ## Cutaways & suggestions
 
 - **911 for the Wrong Shade of Blue** (911-wrong-shade) — Karen reports existential zoning. Operator asks if anyone is bleeding. “Democracy is bleeding, Steven.” Transfer loop until pizza arrives.
 - **Cat POV** (cat-pov) — No dialog. The Episode 3 black cat walks Halloween, watches the laser lawn, clocks the Pizza Guy from ankle height, and is still on the driveway when the purple light becomes décor.
 - **Choose Your Basalt** (choose-your-basalt) — Dead-pan educational cabaret duet: Lillith and Rubella classify lava types in their gothic living room, then the floor opens onto magma. Ends with “That’s nature for us” / “Science.” before a Twilight Time trance smash-cut.
+- **Chroma Bath** (chroma-bath) — Pure non-representational color. No object at all — no blob, no sphere, no horizon, no figure. Eight segments, each a different processing dialect applied to a swirling color field: ink bleed, video feedback, slit-scan, datamosh, refraction, print misregistration, granulation, bleach. There is no black in the piece; the darkest value is a glowing indigo.
 - **Empty Highway Confession** (empty-highway-confession) — 4:17 a.m. The driver talks to the radio. Billboard: KEEP GOING. No advertiser.
 - **EyeWash Station Idents** (eyewash-idents) — Six analog bumpers: Please Stand By, Rinse Cycle, Unscheduled Programming, Aspect Ratio Matters, We Always Return, 3:44 Again. One still, one sting, one Continuity Voice line each. Nobody comments on the frame.
 - **Cities in the Shell** (gag-cities-in-the-shell) — 2 a.m. oyster bar; each opened shell holds a tiny lit city; she squeezes lemon over one and sets it aside. Tonight's selection is a little metropolitan. Vivienne.
@@ -239,6 +255,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **Ping-Pong vs. AI Robot Showdown** (ping-pong-ai) — Pong-Bot 3000 vs the ladies. Biscuit steals the ball. The robot does not want to be turned off. Justine: “If we lose, I'm buying the robot a latte.”
 - **Please Stand By** (please-stand-by) — Full-frame TECHNICAL DIFFICULTIES card. Everything happens in the audio. Never cut away.
 - **Riley Was a Space Cop** (riley-space-cop) — HSV table is the door: Alright, you caught me. I used to be a space cop, okay? Cut to nineteen at Transportation Patrol Annex. Years of two lines and one cube, nights, a yard over a canyon, Appendix C, then a bestowal — hollow-chevron wings, an odd short sword, a hymn that also files. She inhales for the first posting. Rubella cuts: we are expected back down to Earth, right away. Not a fight movie. Scenery beds hold the black hole; rooms stay short.
+- **Rubella Stand-Up** (rubella-stand-up) — Item Seven: Resident Comments. The podium is a laundry-room intercom. Madelyn put her on the list. Folding chairs creak; they do not clap. Spoken Voice bed, not a musical.
 - **Short Packet Farm — Generate-First Boards** (short-packet-farm) — The three boarded packets off the joke / strange-3D farm: a 5s seamless loop tile, a 7s joke interrupt, and a 30s strange-3D gag. One room each, one job each, no faces, no lipsync. Full boards in prompts/short-packet-farm-segments.md.
 - **Short Packet Farm — Joke Interrupts** (short-packet-jokes) — Ten 3–10s interrupts on the cowboy-chimp / bird-flock shelf. Building bureaucracy: forms, inventory, HOA, elevators, bags at chest height. Cut in, echo a prior line off camera, land one physical punch, cut out. No faces, one line maximum, never on screen.
 - **Short Packet Farm — Strange 3D** (short-packet-strange-3d) — Thirteen packets of objects with jobs, doing the job wrong or too well. Porcelain, marble insert, honey-oak, brass, wet enamel on the ground only, geometric white panels, short honeycomb guards. Locked camera or slow orbit. No HUD, no lightning, no nebula — these things are employed.
@@ -249,7 +266,25 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **The Soft Gyre** (the-soft-gyre) — A house-sized translucent gel blob hovers above anvil thunderheads, spins, and throws sparks and jello at the weather. Clouds dent, lantern, and grow glass flowers. The gyre spins clockwise; every ejecta counter-rotates. Five locked stills, ready to animate.
 - **Ultra-Refreshed Water Lab** (ultra-refreshed-water-lab) — The most refreshing glass of ice water in human history, delivered by an insanely complex window apparatus. Played completely straight.
 - **The Velvet Rope at the End of the World** (velvet-rope) — Bouncer enforces heels-or-no-entry while the skyline burns. She produces emergency stilettos. Approved.
-- **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Six open fall-sights plus an open bottom — write what we see on the way down in ideas/well-fall.md.
+- **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Click a sight into open slots B–G, or an ending into H — previews fill [SIGHT] in the prompts.
+
+## Cartoon ideas (agent parking lot)
+
+Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>.json`. Promote winners to Suggestions.
+
+- **Consensus** (consensus, sketched) — Every model on the runway, every guest in the seats, and the designer taking her bow have arrived at the same beautiful face. One bored woman in the front row is the last remaining variation, and nobody has told her she won.
+- **Courtesy Shuttle** (courtesy-shuttle, sketched) — The afterlife boards like a regional airport. The gate is polite. The weather system in first class is a carry-on dispute.
+- **Fig. 4** (fig-four, sketched) — The diagram is exquisite: labeled, cross-sectioned, arrowed, dimensioned in units that are not units. It describes a device that does not exist and is not mentioned anywhere else. It is captioned Fig. 4. There is no Fig. 1, 2, or 3. Everyone is taking notes.
+- **Fluent** (fluent, sketched) — Every sign in the arcade is beautifully set, expensively lit, and not quite a word. She is the only person in the building who knows where she is going.
+- **Hold Music** (hold-music, sketched) — A full symphony orchestra in a gilded hall, playing beautifully, to one telephone on a velvet chair. Somebody is on hold. The conductor will not stop until they pick up.
+- **Service for Six** (service-for-six, sketched) — The sommelier presents the bottle with a hand that has one finger too many. The extra finger is doing the most careful part of the job — steadying the label so it faces the guest. Nobody at the table looks up.
+- **The Far End of the Table** (the-far-end-of-the-table, sketched) — The near end of the dinner party is photoreal. The far end has not finished. Those guests are smooth, beautiful, and blank, their silverware has the wrong number of tines, and the service continues down the length of the table without comment.
+- **The Long Weekend** (the-long-weekend, seed) — The calendar on the kitchen wall has run out of days and kept going. Saturday appears nine times in a row, in the same confident handwriting, and somebody has been dutifully crossing each one off.
+- **The Loupe** (the-loupe, sketched) — She magnifies the photograph and finds a street that was never in it. She magnifies the street and finds a window. She magnifies the window and someone is looking back. She has not stopped.
+- **The Mirror Disagrees** (the-mirror-disagrees, seed) — She is wearing the green dress. The mirror has her in the black one. Every movement matches perfectly. Neither of them considers this a problem worth raising.
+- **The Understudy** (the-understudy, sketched) — She is still putting on her lipstick. Her shadow finished ten minutes ago and is waiting with its arms crossed.
+- **Unscheduled Rain** (unscheduled-rain, seed) — Rain falls in a perfect rectangle over the coffee table. Nobody moves the magazines. The cat walks around the wet zone as if this is the house rule.
+- **Valet** (valet-of-the-tide, seed) — The valet stand is at the edge of the sea. The ticket is number 12. There are no cars, there have never been cars, and a valet in a red jacket is already jogging into the surf with the fob held over his head.
 
 ## Daisy Bell cutaway
 
@@ -262,7 +297,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 ```
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, cutaways, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills

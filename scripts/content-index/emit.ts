@@ -2,33 +2,41 @@ function toTsString(value: string): string {
   return JSON.stringify(value);
 }
 
+function requiredBinding(map: Map<string, string>, path: string): string {
+  const alias = map.get(path);
+  if (!alias) {
+    throw new Error(`Missing generated import binding for ${path}`);
+  }
+  return alias;
+}
+
 function toTsStringArray(values: string[]): string {
   return `[${values.map((value) => toTsString(value)).join(', ')}]`;
 }
 
-export function emitSongsModule(songs: Array<{
-  id: string;
-  title: string;
-  genre: string;
-  description: string;
-  episode: string;
-  tags: string[];
-  instrumental: boolean;
-  sourceFile: string;
-  stylePrompt: string;
-  lyrics: string | null;
-  notes: string | null;
-  audioFile: string | null;
-}>): string {
+export function emitSongsModule(
+  songs: Array<{
+    id: string;
+    title: string;
+    genre: string;
+    description: string;
+    episode: string;
+    tags: string[];
+    instrumental: boolean;
+    sourceFile: string;
+    stylePrompt: string;
+    lyrics: string | null;
+    notes: string | null;
+    audioFile: string | null;
+  }>,
+): string {
   const linked = songs
     .map((song) => song.audioFile)
     .filter((file): file is string => Boolean(file));
 
   const songBlocks = songs
     .map((song) => {
-      const audioLine = song.audioFile
-        ? `,\n    audioFile: ${toTsString(song.audioFile)}`
-        : '';
+      const audioLine = song.audioFile ? `,\n    audioFile: ${toTsString(song.audioFile)}` : '';
 
       return `  {
     id: ${toTsString(song.id)},
@@ -59,23 +67,29 @@ ${songBlocks}
 `;
 }
 
-function emitCutawaySegment(segment: {
-  id: string;
-  label: string;
-  start: string;
-  end: string;
-  durationSec: number;
-  onScreen: string;
-  lyrics: string;
-  musicCue: string;
-  grokImaginePrompt: string;
-  geminiOmniPrompt: string;
-  promptVariations: string[];
-  stillImagePath?: string;
-}, imageBindings: Map<string, string>): string {
+function emitCutawaySegment(
+  segment: {
+    id: string;
+    label: string;
+    start: string;
+    end: string;
+    durationSec: number;
+    onScreen: string;
+    lyrics: string;
+    musicCue: string;
+    grokImaginePrompt: string;
+    geminiOmniPrompt: string;
+    promptVariations: string[];
+    stillImagePath?: string;
+    previewUrl?: string;
+  },
+  imageBindings: Map<string, string>,
+): string {
   const stillLine = segment.stillImagePath
-    ? `stillUrl: ${imageBindings.get(segment.stillImagePath)},`
+    ? `stillUrl: ${requiredBinding(imageBindings, segment.stillImagePath)},`
     : '';
+  const previewLine = segment.previewUrl ? `previewUrl: ${toTsString(segment.previewUrl)},` : '';
+  const extraLines = [stillLine, previewLine].filter(Boolean).join('\n        ');
 
   return `      {
         id: ${toTsString(segment.id)},
@@ -89,8 +103,16 @@ function emitCutawaySegment(segment: {
         grokImaginePrompt: ${toTsString(segment.grokImaginePrompt)},
         geminiOmniPrompt: ${toTsString(segment.geminiOmniPrompt)},
         promptVariations: ${toTsStringArray(segment.promptVariations)},
-        ${stillLine}
+        ${extraLines}
       }`;
+}
+
+function emitJsonValue(value: unknown, indent: number): string {
+  const pad = ' '.repeat(indent);
+  return JSON.stringify(value, null, 2)
+    .split('\n')
+    .map((line, index) => (index === 0 ? line : `${pad}${line}`))
+    .join('\n');
 }
 
 export function emitCutawaysModule(
@@ -106,6 +128,14 @@ export function emitCutawaysModule(
     summary: string;
     visualArc: string;
     tags: string[];
+    sightBank?: Array<{
+      id: string;
+      title: string;
+      category: string;
+      lane: string;
+      prompt: string;
+      description: string;
+    }>;
     segments: Array<{
       id: string;
       label: string;
@@ -119,6 +149,7 @@ export function emitCutawaysModule(
       geminiOmniPrompt: string;
       promptVariations: string[];
       stillImagePath?: string;
+      previewUrl?: string;
     }>;
   }>,
 ): { code: string; imageImports: Map<string, string> } {
@@ -143,6 +174,10 @@ export function emitCutawaysModule(
         .map((segment) => emitCutawaySegment(segment, imageImports))
         .join(',\n');
 
+      const sightBankLine = cutaway.sightBank?.length
+        ? `\n    sightBank: ${emitJsonValue(cutaway.sightBank, 4)},`
+        : '';
+
       return `  {
     id: ${toTsString(cutaway.id)},
     kind: ${toTsString(cutaway.kind)},
@@ -154,7 +189,7 @@ export function emitCutawaysModule(
     songTitle: ${toTsString(cutaway.songTitle)},
     summary: ${toTsString(cutaway.summary)},
     visualArc: ${toTsString(cutaway.visualArc)},
-    tags: ${toTsStringArray(cutaway.tags)},
+    tags: ${toTsStringArray(cutaway.tags)},${sightBankLine}
     segments: [
 ${segments}
     ],
@@ -208,7 +243,7 @@ export function emitGalleryModule(
   const blocks = scenes
     .map((scene) => {
       const imageLine = scene.imagePath
-        ? `imageUrl: ${imageImports.get(scene.imagePath)},`
+        ? `imageUrl: ${requiredBinding(imageImports, scene.imagePath)},`
         : '';
 
       return `  {
@@ -270,11 +305,9 @@ export function emitCharactersModule(
   const blocks = characters
     .map((character) => {
       const imageLine = character.imagePath
-        ? `imageUrl: ${imageImports.get(character.imagePath)},`
+        ? `imageUrl: ${requiredBinding(imageImports, character.imagePath)},`
         : '';
-      const nameNoteLine = character.nameNote
-        ? `nameNote: ${toTsString(character.nameNote)},`
-        : '';
+      const nameNoteLine = character.nameNote ? `nameNote: ${toTsString(character.nameNote)},` : '';
 
       return `  {
     id: ${toTsString(character.id)},
@@ -347,7 +380,7 @@ export function emitDaisyBellModule(data: {
   const frameBlocks = data.frames
     .map((frame) => {
       const imageLine = frame.imagePath
-        ? `imageUrl: ${imageImports.get(frame.imagePath)},`
+        ? `imageUrl: ${requiredBinding(imageImports, frame.imagePath)},`
         : '';
 
       return `  {
@@ -385,6 +418,153 @@ export const daisyBellSights: DaisyBellSight[] = ${JSON.stringify(data.sights, n
 
 export const daisyBellFrames: DaisyBellFrame[] = [
 ${frameBlocks}
+];
+`;
+}
+
+export function emitStaffModule(
+  staff: Array<{
+    id: string;
+    name: string;
+    role: string;
+    location: string;
+    yearsOnSeries: string;
+    specialty: string;
+    bio: string;
+    quote: string;
+    credits: string[];
+    imageFile: string;
+  }>,
+): string {
+  const blocks = staff
+    .map(
+      (member) => `  {
+    id: ${toTsString(member.id)},
+    name: ${toTsString(member.name)},
+    role: ${toTsString(member.role)},
+    location: ${toTsString(member.location)},
+    yearsOnSeries: ${toTsString(member.yearsOnSeries)},
+    specialty: ${toTsString(member.specialty)},
+    bio: ${toTsString(member.bio)},
+    quote: ${toTsString(member.quote)},
+    credits: ${toTsStringArray(member.credits)},
+    imageFile: ${toTsString(member.imageFile)},
+  }`,
+    )
+    .join(',\n');
+
+  return `// AUTO-GENERATED by scripts/content-index — do not edit
+import type { StaffRecord } from '../types';
+
+export const staffRecords: StaffRecord[] = [
+${blocks}
+];
+`;
+}
+
+export function emitEpisodesModule(
+  episodes: Array<{
+    id: string;
+    number: number;
+    title: string;
+    register?: string;
+    status: string;
+    runtime?: string;
+    logline: string;
+    isCandidate?: boolean;
+    files: {
+      synopsis?: string;
+      scenes?: string;
+      screenplay?: string;
+      subtitles?: string;
+      notes?: string;
+      seasonArc?: string;
+    };
+  }>,
+): string {
+  const blocks = episodes
+    .map((episode) => {
+      const registerLine = episode.register
+        ? `\n    register: ${toTsString(episode.register)},`
+        : '';
+      const runtimeLine = episode.runtime ? `\n    runtime: ${toTsString(episode.runtime)},` : '';
+      const candidateLine = episode.isCandidate ? `\n    isCandidate: true,` : '';
+      const filesEntries = Object.entries(episode.files)
+        .filter((entry): entry is [string, string] => Boolean(entry[1]))
+        .map(([key, value]) => `      ${key}: ${toTsString(value)},`)
+        .join('\n');
+
+      return `  {
+    id: ${toTsString(episode.id)},
+    number: ${episode.number},
+    title: ${toTsString(episode.title)},${registerLine}
+    status: ${toTsString(episode.status)},${runtimeLine}
+    logline: ${toTsString(episode.logline)},${candidateLine}
+    files: {
+${filesEntries}
+    },
+  }`;
+    })
+    .join(',\n');
+
+  return `// AUTO-GENERATED by scripts/content-index — do not edit
+import type { EpisodeRecord } from '../types';
+
+export const episodeRecords: EpisodeRecord[] = [
+${blocks}
+];
+`;
+}
+
+export function emitCartoonsModule(
+  cartoons: Array<{
+    id: string;
+    title: string;
+    premise: string;
+    visual: string;
+    status: string;
+    tags: string[];
+    runtime?: string;
+    register?: string;
+    characterLean?: string;
+    grokImaginePrompt?: string;
+    motion?: string;
+    notes?: string;
+    agent?: string;
+  }>,
+): string {
+  const blocks = cartoons
+    .map((cartoon) => {
+      const optionalLines = [
+        cartoon.runtime ? `    runtime: ${toTsString(cartoon.runtime)},` : '',
+        cartoon.register ? `    register: ${toTsString(cartoon.register)},` : '',
+        cartoon.characterLean ? `    characterLean: ${toTsString(cartoon.characterLean)},` : '',
+        cartoon.grokImaginePrompt
+          ? `    grokImaginePrompt: ${toTsString(cartoon.grokImaginePrompt)},`
+          : '',
+        cartoon.motion ? `    motion: ${toTsString(cartoon.motion)},` : '',
+        cartoon.notes ? `    notes: ${toTsString(cartoon.notes)},` : '',
+        cartoon.agent ? `    agent: ${toTsString(cartoon.agent)},` : '',
+      ]
+        .filter(Boolean)
+        .join('\n');
+
+      return `  {
+    id: ${toTsString(cartoon.id)},
+    title: ${toTsString(cartoon.title)},
+    premise: ${toTsString(cartoon.premise)},
+    visual: ${toTsString(cartoon.visual)},
+    status: ${toTsString(cartoon.status)},
+    tags: ${toTsStringArray(cartoon.tags)},${optionalLines ? `\n${optionalLines}` : ''}
+  }`;
+    })
+    .join(',\n');
+
+  return `// AUTO-GENERATED by scripts/content-index — do not edit
+import type { CartoonRecord } from '../types';
+
+export const cartoonRecords: CartoonRecord[] = [
+${blocks}
 ];
 `;
 }

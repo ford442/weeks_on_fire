@@ -1,13 +1,14 @@
 import { useMemo, useState } from 'react';
 import { Copy, ImageIcon, PanelRightClose, PanelRightOpen, Search } from 'lucide-react';
 import { filmScenes, imageKindMeta, type FilmScene, type ImageKind } from '../data/films';
+import { firstCatalogItem } from '../lib/catalog';
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
 
 const allValue = 'All';
 
 export default function Gallery() {
-  const [selected, setSelected] = useState<FilmScene>(filmScenes[0]);
+  const [selected, setSelected] = useState<FilmScene>(firstCatalogItem(filmScenes, 'gallery'));
   const [lightboxScene, setLightboxScene] = useState<FilmScene | null>(null);
   const [query, setQuery] = useState('');
   const [episode, setEpisode] = useState(allValue);

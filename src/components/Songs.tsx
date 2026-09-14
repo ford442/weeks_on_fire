@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Copy, Headphones, Music2, Search, SlidersHorizontal } from 'lucide-react';
 import { linkedAudioFilenames, songs, type Song } from '../data/songs';
+import { firstCatalogItem } from '../lib/catalog';
 import { getUnlistedTracks } from '../lib/songAudio';
 import SongAudioPlayer from './SongAudioPlayer';
 import SongDetail from './SongDetail';
@@ -11,7 +12,7 @@ const allValue = 'All';
 export default function Songs() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [selected, setSelected] = useState<Song>(songs[0]);
+  const [selected, setSelected] = useState<Song>(firstCatalogItem(songs, 'songs'));
   const [query, setQuery] = useState('');
   const [episode, setEpisode] = useState(allValue);
   const [genre, setGenre] = useState(allValue);

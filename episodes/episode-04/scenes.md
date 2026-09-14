@@ -144,6 +144,105 @@ PIZZA GUY: Extra napkins are in the bag.
 
 ---
 
+## Optional insert — EyeWash Toon Break: “Delivery Loop” (~40s)
+
+**Placement:** Between “The Meeting Persists” (4:40) and “Extra Napkins” (5:40). Pushes the doorway button to ~6:20. Cut the whole block if the meeting is running long; Extra Napkins plays clean without it.  
+**Duration:** ~0:40 (four ~10s chunks)  
+**Location:** Clubhouse corner CRT → inside the EyeWash broadcast (a Saturday-morning cartoon nobody scheduled)  
+**Style break:** Hand-drawn, cel-shaded **early-1990s Warner Bros. TV animation** (the Tiny Toons / Taz-Mania era): thick ink lines, flat cel color with one hard shadow tone, painted gouache backgrounds, squash-and-stretch, smear frames, dust-cloud exits. Photoreal only for the CRT push-in. This is the Episode 4 version of the Marble Tick Tack bridge, but it has an in-world reason: EyeWash is airing it.  
+**Tone:** The chase is full-energy cartoon physics. The Pizza Guy's face never animates. Lillith and Rubella are drawn in the same cartoon style but refuse the style's energy: held drawings, only mouths and blinks move.  
+**Characters:** Pizza Guy (toon), LILLITH and RUBELLA (toon, mock-academic lecturers), plus the cat, the skeleton, and Brad's bin as looping background props  
+**Music:** Brassy 1990s cartoon-orchestra chase cue (xylophone runs, trombone slides, a timpani hit on the skid). It hard-cuts to clubhouse Muzak on the knock.
+
+---
+
+### 0:00 – 0:08  “Channel 12½”
+
+**Description**  
+Live-action. The clubhouse corner CRT sits on a rolling AV cart, volume low, and nobody is watching it. An EyeWash card flickers and gives way to a cartoon title card. Biscuit, gavel still in mouth, is the only one facing the screen. The Two stay at the back wall and do not look.
+
+**Camera**  
+Slow push-in across the folding chairs into the CRT until the scanlines fill the frame. The last frame is all curved glass and phosphor.
+
+**Grok Imagine Prompt**  
+"Photoreal slow push-in on an old wood-grain CRT television on a rolling AV cart in the corner of a fluorescent suburban HOA clubhouse at night, screen glowing with a bright hand-drawn cartoon title card, a standard poodle in a purple bandana holding a cracked gavel sitting in front of the TV watching it, blurred residents in folding chairs ignoring it, two women in black lace out of focus at the back wall not looking, violet light through blinds, camera ends with visible scanlines and curved phosphor glass filling the frame, deadpan comedy, Grok Imagine style"
+
+---
+
+### 0:08 – 0:18  “The Run Cycle”
+
+**Description**  
+Full cartoon. The Pizza Guy sprints left to right with his legs in a wheel-blur, pizza bag held level, cap flapping, face completely flat and dead-eyed. The background repeats: house, black cat on the fence, plastic skeleton, three blue bins. Then the same house, cat, skeleton, and bins again. On the third pass the audience notices, and nothing in the frame does.
+
+**Camera**  
+Locked side-on tracking with a horizontal pan, the classic repeating-background chase. No depth. No camera shake.
+
+**Grok Imagine Prompt**  
+"2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, flat side-view: a lanky pizza delivery man in a red uniform and cap sprinting left to right, legs drawn as a circular speed-blur wheel, pizza bag held perfectly level, completely blank dead-eyed deadpan face, speed lines trailing behind him, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, behind him a softer painted gouache suburban background that visibly repeats: same house, same black cat sitting on a fence, same plastic skeleton, same three recycling bins in slightly different blues, night sky with a purple glow, exaggerated squash-and-stretch cartoon motion, 4:3 1990s TV cel look with faint cel dust, hand-drawn cartoon, Grok Imagine style"
+
+---
+
+### 0:18 – 0:28  “A Brief Lecture on the Loop”
+
+**Description**  
+Cut to the cartoon Lillith and Rubella at a lectern beside a chalkboard, drawn in black lace with red lips, a pointer, and a chalk diagram of the running Pizza Guy with arrows labeled 1–8. The chase is still repeating in a small inset window behind them. They are drawn in the chase's style but stay nearly motionless: held poses, mouths moving, one blink each.
+
+**Dialog**  
+RUBELLA: Observe the delivery run cycle. Eight drawings, repeated until morale improves.  
+LILLITH: The background is also repeating.  
+RUBELLA: House. Cat. Skeleton. Bin. Every four seconds.  
+LILLITH: The bin is still the wrong blue.  
+RUBELLA: That was not in the budget.
+
+**Camera**  
+Locked two-shot, straight-on, and flat like a cartoon classroom set. No push.
+
+**Grok Imagine Prompt**  
+"2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D: two elegant cartoon women with long black hair, blood-red lips, heavy eyeliner, and matching black lace dresses, one standing at a wooden lectern and one holding a long pointer at a green chalkboard, chalk diagram of a running pizza delivery man split into eight numbered poses with arrows, a small inset TV window showing the same pizza man running past a repeating house and cat, both women posed stiffly with bored half-lidded deadpan expressions and no exaggeration, thick uniform black ink outlines, flat cel color with one hard shadow tone, painted gouache classroom background, limited-animation held poses where only the mouths move, 4:3 1990s TV cartoon cel look, hand-drawn cartoon, Grok Imagine style"
+
+---
+
+### 0:28 – 0:40  “Skid / Knock”
+
+**Description**  
+Back to the chase. The Pizza Guy plants his heels: a full stretch anticipation, a smear frame, a skid that throws a dust cloud and two smoking grooves in the sidewalk, and his cap spinning straight up. He stops exactly at a clubhouse-shaped cartoon door. Everything around him is still wobbling from the stop. His face hasn't changed. He raises one knuckle and knocks twice. On the second knock, **hard cut to live action**: the real clubhouse door gets the same two knocks, and Extra Napkins begins.
+
+**Camera**  
+Side-on, locked, then a quick cartoon zoom-in to the knuckle on the knock. Cut on the second knock.
+
+**Sound Design**  
+- Brakes squeal with a trombone slide  
+- Timpani hit on the dust cloud  
+- Two knocks that are the same recording in both the cartoon and live action
+
+**Grok Imagine Prompt**  
+"2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D: a lanky pizza delivery man in a red uniform skidding to a dead stop in front of a flat cartoon door, body stretched backward with heels dug in, big billowing cartoon dust cloud and two smoking skid grooves behind him, his cap spinning in the air above his head with motion lines, pizza bag still perfectly level, face completely blank and deadpan, one knuckle raised to knock, wobble lines on the door frame, exaggerated squash-and-stretch and smear-frame energy, thick black ink outlines with slight taper, flat saturated cel fills with one hard shadow tone, painted gouache night background with a purple glow, 4:3 1990s TV cartoon cel look with faint cel dust, hand-drawn cartoon, Grok Imagine style"
+
+---
+
+### Toon break — style lock notes
+
+- **Keep photoreal defaults out of the three cartoon prompts.** Don't use *cinematic*, *filmic*, *lens*, *T-stop*, *depth of field*, *anamorphic*, *film grain*, or *lighting* on them. Each one pulls Grok Imagine back toward photoreal. Lead with the style block, restate "hand-drawn cartoon" at the end, and keep "NOT photoreal, NOT 3D" in the first clause.
+- **Line weight:** thick uniform ink with a slight taper at the ends. If it comes back with thin sketchy lines or no outlines, add "bold black ink outlines" again.
+- **Color:** flat cel fills with *one* hard shadow tone and no airbrush gradients on characters. Painted backgrounds may be soft. The crisp cels against soft gouache is what sells the 1993 look.
+- **Motion (image-to-video):** one job per clip. Run cycle = loop the background. Lecture = held drawings, mouths only. Skid = one stretch, one smear, one dust cloud. If the Pizza Guy's face moves, kill the take.
+- **Model sheet needed — yes.** Three consecutive cartoon clips of the same four characters will drift without one. See below.
+
+### Cartoon model sheets (needed before generation)
+
+Generate one turnaround sheet per character and use it as the image reference for every toon clip: front, 3/4, side, back, plus 3 expressions. Only the Pizza Guy's sheet should show a single identical expression three times. That is the joke.
+
+- **Lillith & Rubella (toon):** one sheet with both side by side, so hair, lace, and lip red are drawn to one spec. Tell them apart by props: Lillith gets the pointer, Rubella the lectern and silver mic.
+- **Pizza Guy (toon):** red uniform, cap, level bag, and one fixed expression.
+- **Loop props:** cat, skeleton, the three blue bins, and the house. These are a background sheet, so the repeat reads as the *same* painting.
+
+Where it lives: prompt + spec in `characters/model-sheets/toon-1993.md`, and small `.webp` sheets alongside (`characters/model-sheets/*.webp`), matching how `characters/image_00*.webp` are stored. Once a sheet is locked, host large variants externally. Don't wire them into `content/characters.json` `imagePath`; those stay the photoreal canon.
+
+**Model sheet prompt seed**  
+"2D character model sheet in early-1990s Warner Bros. television animation style, NOT photoreal, NOT 3D, white background, two elegant cartoon women with long black hair, blood-red lips, and heavy eyeliner in matching black lace dresses, shown in front, three-quarter, side, and back turnaround poses, plus a row of three bored deadpan expressions each, thick uniform black ink outlines, flat cel color with one hard shadow tone, color swatch chips along the bottom edge, clean animation reference sheet layout, hand-drawn cartoon"
+
+---
+
 ## Production notes
 
 - Play every line as weather. Comedy dies if anyone is frightened.

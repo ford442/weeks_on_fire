@@ -26,9 +26,21 @@ export interface CutawaySegment {
   geminiOmniPrompt: string;
   promptVariations: string[];
   stillUrl?: string;
+  previewUrl?: string;
 }
 
 export type SuggestionKind = 'musical' | 'gag' | 'scene';
+
+export type SightLane = 'fall' | 'ending';
+
+export interface SightCandidate {
+  id: string;
+  title: string;
+  category: string;
+  lane: SightLane;
+  prompt: string;
+  description: string;
+}
 
 export interface CutawaySuggestion {
   id: string;
@@ -43,6 +55,7 @@ export interface CutawaySuggestion {
   visualArc: string;
   tags: string[];
   segments: CutawaySegment[];
+  sightBank?: SightCandidate[];
 }
 
 export type MediaType = 'image' | 'video';
@@ -76,6 +89,26 @@ export interface SeriesCharacter {
   props: string[];
   tags: string[];
   imageUrl?: string;
+}
+
+export type StaffRole = 'Writer' | 'Producer' | 'Director' | 'Music Supervisor' | 'Visual Designer';
+
+export interface StaffRecord {
+  id: string;
+  name: string;
+  role: StaffRole;
+  location: string;
+  yearsOnSeries: string;
+  specialty: string;
+  bio: string;
+  quote: string;
+  credits: string[];
+  imageFile: string;
+}
+
+export interface StaffMember extends Omit<StaffRecord, 'imageFile'> {
+  /** Public URL under /cast, with optional subdirectory prefix in production. */
+  imageUrl: string;
 }
 
 export type DaisyFrameTreatment = 'color' | 'period';
@@ -130,6 +163,81 @@ export const imageKindMeta: Record<
     label: 'Character',
     description: 'Casting and continuity reference frames.',
     accent: 'border-amber-500/40 bg-amber-500/10 text-amber-200',
+  },
+};
+
+export type EpisodeStatus = 'synopsis-ready' | 'in-production' | 'candidate';
+
+export interface EpisodeFiles {
+  synopsis?: string;
+  scenes?: string;
+  screenplay?: string;
+  subtitles?: string;
+  notes?: string;
+  seasonArc?: string;
+}
+
+export interface EpisodeRecord {
+  id: string;
+  number: number;
+  title: string;
+  register?: string;
+  status: EpisodeStatus;
+  runtime?: string;
+  logline: string;
+  isCandidate?: boolean;
+  files: EpisodeFiles;
+}
+
+export const episodeStatusMeta: Record<EpisodeStatus, { label: string; accent: string }> = {
+  'synopsis-ready': {
+    label: 'Synopsis ready',
+    accent: 'border-sky-500/40 bg-sky-500/10 text-sky-200',
+  },
+  'in-production': {
+    label: 'In production',
+    accent: 'border-orange-500/40 bg-orange-500/10 text-orange-200',
+  },
+  candidate: {
+    label: 'Candidate',
+    accent: 'border-violet-500/40 bg-violet-500/10 text-violet-200',
+  },
+};
+
+export type CartoonStatus = 'seed' | 'sketched' | 'ready-to-generate' | 'promoted';
+
+export interface CartoonRecord {
+  id: string;
+  title: string;
+  premise: string;
+  visual: string;
+  status: CartoonStatus;
+  tags: string[];
+  runtime?: string;
+  register?: string;
+  characterLean?: string;
+  grokImaginePrompt?: string;
+  motion?: string;
+  notes?: string;
+  agent?: string;
+}
+
+export const cartoonStatusMeta: Record<CartoonStatus, { label: string; accent: string }> = {
+  seed: {
+    label: 'Seed',
+    accent: 'border-zinc-500/40 bg-zinc-500/10 text-zinc-200',
+  },
+  sketched: {
+    label: 'Sketched',
+    accent: 'border-sky-500/40 bg-sky-500/10 text-sky-200',
+  },
+  'ready-to-generate': {
+    label: 'Ready to generate',
+    accent: 'border-orange-500/40 bg-orange-500/10 text-orange-200',
+  },
+  promoted: {
+    label: 'Promoted',
+    accent: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-200',
   },
 };
 

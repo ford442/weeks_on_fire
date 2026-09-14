@@ -49,6 +49,12 @@ Musical cutaway for **Rubella** and **Lillith** on a **living flower bicycle**, 
 - Fog parts on St. Paul’s dome, closes behind them.
 - Bicycle-sign run on the road into London (connecting motif).
 - Cats, girl-doubles, overhead phone wires as a light extra layer — not the plot. Girl-doubles are not her.
+- **Giant hair-dos (Big City / downtown act):** civic-scale Gibson Girls —
+  roundabout, revolving-door compartment, cafe with no eye-line, sofa-width
+  handshake instead of a kiss, pigeons roosting, wires as clothesline,
+  landau sunroof, lantern in a curl, hair arrives in the lift first.
+  Full dump: [`big-city-hairdos.md`](big-city-hairdos.md). Rubella & Lillith
+  keep small hair. Not Glam-Sham-Poo.
 
 ---
 

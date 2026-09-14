@@ -1,0 +1,13 @@
+{
+  "id": "the-mirror-disagrees",
+  "title": "The Mirror Disagrees",
+  "premise": "She is wearing the green dress. The mirror has her in the black one. Every movement matches perfectly. Neither of them considers this a problem worth raising.",
+  "visual": "Hotel suite, full-length mirror, late afternoon. She stands square to the glass adjusting a strap. The reflection stands square, adjusting the same strap at the same instant — in a different dress. Same woman, same hair, same lipstick, same room reflected correctly behind her. Only the dress has been overruled.",
+  "status": "seed",
+  "runtime": "~6 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Vivienne would take the mirror's note. Liliane already packed both.",
+  "tags": ["mirror", "wardrobe", "continuity", "ai-artifact", "hotel"],
+  "notes": "Seed only — still prompt not locked. The reflection must be perfectly synchronised; if the timing drifts it becomes a ghost story, which is the wrong genre. Everything else in the reflected room must be correct, including reflected text reading the right way round. Not the Understudy's shadow (posture, not wardrobe). Do not let her notice.",
+  "agent": "claude-code"
+}

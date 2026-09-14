@@ -51,12 +51,28 @@ export const siteViews: SiteViewMeta[] = [
       'Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.',
   },
   {
+    id: 'cartoons',
+    label: 'Cartoons',
+    path: '/cartoons',
+    eyebrow: 'Cartoon Ideas',
+    description:
+      'Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.',
+  },
+  {
     id: 'characters',
     label: 'Characters',
     path: '/characters',
     eyebrow: 'Character Bible',
     description:
       'Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.',
+  },
+  {
+    id: 'episodes',
+    label: 'Episodes',
+    path: '/episodes',
+    eyebrow: 'Episode Bible',
+    description:
+      'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
   },
   {
     id: 'staff',

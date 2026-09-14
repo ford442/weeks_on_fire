@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { execSync } from 'node:child_process';
 import {
@@ -7,14 +7,20 @@ import {
   loadGallery,
   loadCharacters,
   loadDaisyBell,
+  loadStaff,
+  loadEpisodes,
+  loadCartoons,
 } from './load';
-import { validateContent } from './validate';
+import { validateContent, validateEpisodes, validateCartoons } from './validate';
 import {
   emitSongsModule,
   emitCutawaysModule,
   emitGalleryModule,
   emitCharactersModule,
   emitDaisyBellModule,
+  emitStaffModule,
+  emitEpisodesModule,
+  emitCartoonsModule,
 } from './emit';
 
 const repoRoot = join(import.meta.dirname, '../..');
@@ -32,17 +38,33 @@ function main() {
   const gallery = loadGallery(repoRoot);
   const characters = loadCharacters(repoRoot);
   const daisyBell = loadDaisyBell(repoRoot);
+  const staff = loadStaff(repoRoot);
+  const episodes = loadEpisodes(repoRoot);
+  const cartoons = loadCartoons(repoRoot);
 
   validateContent(repoRoot, songs, cutaways, checkMode);
+  validateEpisodes(repoRoot, episodes);
+  validateCartoons(cartoons);
 
   writeGenerated('songs.ts', emitSongsModule(songs));
-  writeGenerated('cutaways.ts', emitCutawaysModule(cutaways).code);
+  writeGenerated(
+    'cutaways.ts',
+    emitCutawaysModule(
+      cutaways.map((cutaway) => ({
+        ...cutaway,
+        segments: cutaway.segments ?? [],
+      })),
+    ).code,
+  );
   writeGenerated('gallery.ts', emitGalleryModule(gallery));
   writeGenerated('characters.ts', emitCharactersModule(characters));
   writeGenerated('daisy-bell.ts', emitDaisyBellModule(daisyBell));
+  writeGenerated('staff.ts', emitStaffModule(staff));
+  writeGenerated('episodes.ts', emitEpisodesModule(episodes));
+  writeGenerated('cartoons.ts', emitCartoonsModule(cartoons));
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${staff.length} staff, ${episodes.length} episodes, ${cartoons.length} cartoons.`,
   );
 
   if (checkMode) {
@@ -51,7 +73,9 @@ function main() {
       encoding: 'utf8',
     }).trim();
     if (status) {
-      throw new Error('Generated files are out of date. Run npm run codegen and commit the changes.');
+      throw new Error(
+        'Generated files are out of date. Run npm run codegen and commit the changes.',
+      );
     }
   }
 }

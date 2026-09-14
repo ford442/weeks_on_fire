@@ -1,0 +1,24 @@
+{
+  "id": "chroma-bath",
+  "kind": "musical",
+  "title": "Chroma Bath",
+  "status": "ready-to-generate",
+  "runtime": "2:00 (8 segments)",
+  "episode": "Musical Cutaway / Visual Experiment",
+  "songId": "deep-space-drift",
+  "songTitle": "Deep Space Drift (instrumental bed)",
+  "summary": "Pure non-representational color. No object at all — no blob, no sphere, no horizon, no figure. Eight segments, each a different processing dialect applied to a swirling color field: ink bleed, video feedback, slit-scan, datamosh, refraction, print misregistration, granulation, bleach. There is no black in the piece; the darkest value is a glowing indigo.",
+  "visualArc": "Ink bleeding in water → feedback tunnel → slit-scan lanes → compression smear → refraction through turning glass → misregistered print → granular shatter and reassembly → everything bleaches to warm white.",
+  "tags": [
+    "abstract",
+    "psychedelic",
+    "pure-visual",
+    "color-field",
+    "processing",
+    "no-objects",
+    "eyewash",
+    "visual-experiment",
+    "long-form-prompts"
+  ],
+  "segmentsSource": "prompts/chroma-bath-segments.md"
+}

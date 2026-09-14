@@ -12,7 +12,7 @@ Weeks on Fire is a personal cinematic experiment combining:
 - **Visuals**: stills and frames from Grok Imagine (xAI)
 - **Music**: Minimax Music style prompts, lyrics, and cutaway cues
 - **Writing**: episode synopses, screenplays, scene breakdowns
-- **Hub UI**: React + Vite gallery with seven production views
+- **Hub UI**: React + Vite gallery with production views
 
 ## Primary content (crawl these)
 
@@ -22,7 +22,9 @@ Weeks on Fire is a personal cinematic experiment combining:
 - Songs — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
 - Daisy Bell — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
 - Suggestions — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+- Cartoons — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
 - Characters — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+- Episodes — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
 - Crew — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 ### Episodes (markdown, fully readable without JS)
@@ -34,10 +36,11 @@ Weeks on Fire is a personal cinematic experiment combining:
 ### Songs (style prompts + lyrics)
 - https://github.com/ford442/weeks_on_fire/tree/main/songs
 
-### Prompts & notes
+### Prompts, notes, cartoon seeds
 - https://github.com/ford442/weeks_on_fire/tree/main/prompts
 - https://github.com/ford442/weeks_on_fire/tree/main/notes
 - https://github.com/ford442/weeks_on_fire/tree/main/ai-contributions
+- https://github.com/ford442/weeks_on_fire/tree/main/content/cartoons
 
 ## Featured visual scenes
 

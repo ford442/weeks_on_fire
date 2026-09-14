@@ -6,7 +6,9 @@ export const viewPaths: Record<SiteView, string> = {
   songs: '/songs',
   'daisy-bell': '/daisy-bell',
   suggestions: '/suggestions',
+  cartoons: '/cartoons',
   characters: '/characters',
+  episodes: '/episodes',
   staff: '/staff',
 };
 
@@ -17,8 +19,10 @@ export function pathnameToView(pathname: string): SiteView {
   if (normalized.startsWith('/songs')) return 'songs';
   if (normalized === '/timeline') return 'timeline';
   if (normalized === '/daisy-bell') return 'daisy-bell';
-  if (normalized === '/suggestions') return 'suggestions';
+  if (normalized.startsWith('/suggestions')) return 'suggestions';
+  if (normalized.startsWith('/cartoons')) return 'cartoons';
   if (normalized === '/characters') return 'characters';
+  if (normalized.startsWith('/episodes')) return 'episodes';
   if (normalized === '/staff') return 'staff';
 
   return 'gallery';

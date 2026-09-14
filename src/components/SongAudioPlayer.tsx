@@ -1,5 +1,6 @@
 import { Loader2, Pause, Play } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { useCoordinatedAudio } from '../hooks/useCoordinatedAudio';
 import { useSongAudio } from '../hooks/useSongAudio';
 
 interface SongAudioPlayerProps {
@@ -18,6 +19,8 @@ export default function SongAudioPlayer({
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const { url, loading, load } = useSongAudio(audioFile);
+
+  useCoordinatedAudio(audioFile, audioRef, title);
 
   useEffect(() => {
     if (!compact) {

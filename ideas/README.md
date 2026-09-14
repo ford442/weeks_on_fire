@@ -11,7 +11,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `episode-concepts.md` – overall series arcs and episode pitches
 - `song-ideas.md` – track shortlist + emotional fit
 - `visual-themes.md` – recurring motifs, color palettes, style references
-- `short-packet-farm.md` – 2026-09-09 farm sheet for the joke / strange-3D shelf: **28** short cutaway packets — 9 loop tiles (2–8s), 11 joke interrupts (3–10s), 6 gag sketches (~30s), one bridge and one musical-optional. Three marked generate-first (`bag-at-chest-height`, `we-will-stand`, `the-approval-desk`). Includes the five-idea kill list. Boards: [`prompts/short-packet-farm-segments.md`](../prompts/short-packet-farm-segments.md). Live on Suggestions as `short-packet-farm` / `short-packet-jokes` / `short-packet-strange-3d`.
+- `short-packet-farm.md` – farm sheet for the joke / strange-3D / spoken shelf: **29** short cutaway packets — 9 loop tiles, 11 joke interrupts, 6 gag sketches (~30s), one spoken gag (`rubella-stand-up`, 60–75s + tags), one bridge and one musical-optional. Three marked generate-first (`bag-at-chest-height`, `we-will-stand`, `the-approval-desk`) plus spoken stills A+D first. Boards: [`prompts/short-packet-farm-segments.md`](../prompts/short-packet-farm-segments.md) and [`prompts/rubella-stand-up-segments.md`](../prompts/rubella-stand-up-segments.md). Live on Suggestions as `short-packet-farm` / `short-packet-jokes` / `short-packet-strange-3d` / `rubella-stand-up`.
 - `loop-grammar.md` – shared rules for seamless loop tiles: last frame = first frame, one moving system only, hold a rest pose, silent picture but for one diegetic click. Job vocabulary and cycle lengths. Not a cutaway.
 - `night-side.md` – Nova Chen's instrumental work-session record (10 tracks, 120–132 BPM techno / progressive grid). Catalog, not a cutaway bed.
 - `cue-sheets.md` – Nova Chen's second record: 10 short **sung** tracks, 68–100 BPM, lyrics written in music-supervisor mix language (hold for eight, under dialogue, out on the cut). One uncredited session contralto, one structural flaw per track, MiniMax 3.0 STYLE blocks written to the 2000-character ceiling. Generate first: Hold for Eight, Under Dialogue, Cue Sheets.
@@ -32,6 +32,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `marble-tick-tack-agentic.md` – Grok 4.6 build + Claude agentic runbook for the remaining magnet–magnet half (generate C/D/G first).
 - `marble-tick-tack-worlds.md` – sibling *Wrong Sets* on the same song: magnets never notice while the episode regenerates (Halbach desert, hopping lion, Meissner ice, Helmholtz saucer, London / Seoul, souvenir chain).
 - `daisy-bell-cutaway.md` – Rubella & Lillith living-flower tandem, wildflower field → period London, B&W scratch ↔ HD color. Indoor-river room and paint rivulets pointed from here.
+- `big-city-hairdos.md` – downtown / Fleet Street think tank: giant awkward 1890s hairdos as civic obstacles (roundabout, cafe with no eye-line, revolving door). Feeds Daisy Bell street sights. Not Ultra Screech.
 - `daisy-bell-timing.md` – 4:20 cue sheet for `songs/Daisy+Bell.mp3`.
 - `daisy-bell-themes.md` – partnership / class / time-slip, viewer seats, indoor river, end girl as the title.
 - `daisy-bell-nuance.md` – C0–C19 object / continuity / ¾ hit. Bare foot, flower count, tire rut, girl.
@@ -41,7 +42,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `home-sweet-void.md` – space visual-experiment table cutaway (~71s): bag greeting → space-speeding talk → floor worms → sit-up **cut** → cat glow-stop. Not a new episode. Daisy / Hanshaw week stays the musical spine. Suggestions id `home-sweet-void`. Canonical board local: `artifacts/space_house_return_board.md`.
 - `riley-space-cop-cutaway.md` – Riley years montage. Table door (“you caught me / space cop”) then Annex: two lines, one cube, nights, canyon yard, Appendix C, bestowal of an odd sword. Rubella cuts before the second verse. Suggestions id `riley-space-cop`. Issue [#57](https://github.com/ford442/weeks_on_fire/issues/57).
 - `riley-space-cop-agentic.md` – Claude runbook for scene expansion (year cards, scenery twins, bestowal harden, codegen).
-- `well-fall.md` – POV down a real well, instrumental heavy metal, no vocal. Lip locked. Sight bank B–H is empty on purpose — write what we see as we fall. Suggestions id `well-fall`.
+- `well-fall.md` – POV down a real well, instrumental heavy metal, no vocal. Lip locked. Sight bank lives on Suggestions (`/suggestions/well-fall`) — click a candidate into open slots B–H. Suggestions id `well-fall`.
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

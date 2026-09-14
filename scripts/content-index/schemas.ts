@@ -25,6 +25,16 @@ export const CutawaySegmentSchema = z.object({
   promptVariations: z.array(z.string()),
   stillUrl: z.string().optional(),
   stillImagePath: z.string().optional(),
+  previewUrl: z.string().optional(),
+});
+
+export const SightCandidateSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  category: z.string().min(1),
+  lane: z.enum(['fall', 'ending']),
+  prompt: z.string().min(1),
+  description: z.string().min(1),
 });
 
 export const CutawaySchema = z.object({
@@ -42,6 +52,7 @@ export const CutawaySchema = z.object({
   segmentsSource: z.string().optional(),
   segmentStills: z.record(z.string(), z.string()).optional(),
   segments: z.array(CutawaySegmentSchema).optional(),
+  sightBank: z.array(SightCandidateSchema).optional(),
 });
 
 export const FilmSceneSchema = z.object({
@@ -120,9 +131,79 @@ export const DaisyBellSchema = z.object({
   frames: z.array(DaisyBellFrameSchema),
 });
 
+export const StaffRoleSchema = z.enum([
+  'Writer',
+  'Producer',
+  'Director',
+  'Music Supervisor',
+  'Visual Designer',
+]);
+
+export const StaffMemberSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  role: StaffRoleSchema,
+  location: z.string().min(1),
+  yearsOnSeries: z.string().min(1),
+  specialty: z.string().min(1),
+  bio: z.string().min(1),
+  quote: z.string().min(1),
+  credits: z.array(z.string()),
+  /** Filename under public/cast/ (copied to dist/cast on Vite build). */
+  imageFile: z.string().min(1),
+});
+
+export const EpisodeStatusSchema = z.enum(['synopsis-ready', 'in-production', 'candidate']);
+
+export const EpisodeFilesSchema = z.object({
+  synopsis: z.string().optional(),
+  scenes: z.string().optional(),
+  screenplay: z.string().optional(),
+  subtitles: z.string().optional(),
+  notes: z.string().optional(),
+  seasonArc: z.string().optional(),
+});
+
+export const EpisodeSchema = z.object({
+  id: z.string().min(1),
+  number: z.number(),
+  title: z.string().min(1),
+  register: z.string().optional(),
+  status: EpisodeStatusSchema,
+  runtime: z.string().optional(),
+  logline: z.string().min(1),
+  isCandidate: z.boolean().optional(),
+  files: EpisodeFilesSchema,
+});
+
+export const CartoonStatusSchema = z.enum(['seed', 'sketched', 'ready-to-generate', 'promoted']);
+
+export const CartoonSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  premise: z.string().min(1),
+  visual: z.string().min(1),
+  status: CartoonStatusSchema,
+  tags: z.array(z.string()),
+  runtime: z.string().optional(),
+  register: z.string().optional(),
+  characterLean: z.string().optional(),
+  grokImaginePrompt: z.string().optional(),
+  motion: z.string().optional(),
+  notes: z.string().optional(),
+  agent: z.string().optional(),
+});
+
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
+export type SightCandidate = z.infer<typeof SightCandidateSchema>;
 export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
+export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;
+export type EpisodeStatus = z.infer<typeof EpisodeStatusSchema>;
+export type EpisodeFiles = z.infer<typeof EpisodeFilesSchema>;
+export type EpisodeRecord = z.infer<typeof EpisodeSchema>;
+export type CartoonStatus = z.infer<typeof CartoonStatusSchema>;
+export type CartoonRecord = z.infer<typeof CartoonSchema>;

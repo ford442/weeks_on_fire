@@ -1,9 +1,12 @@
 import { useMemo, useState } from 'react';
 import { Search, UserCircle } from 'lucide-react';
 import { seriesCharacters, type SeriesCharacter } from '../data/characters';
+import { firstCatalogItem } from '../lib/catalog';
 
 export default function Characters() {
-  const [selected, setSelected] = useState<SeriesCharacter>(seriesCharacters[0]);
+  const [selected, setSelected] = useState<SeriesCharacter>(
+    firstCatalogItem(seriesCharacters, 'characters'),
+  );
   const [query, setQuery] = useState('');
 
   const filtered = useMemo(() => {
@@ -93,7 +96,7 @@ export default function Characters() {
                   )}
                   <div className="p-5">
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                      {character.episodes[0]}
+                      {character.episodes[0] ?? character.role}
                     </p>
                     <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">
                       {character.name}

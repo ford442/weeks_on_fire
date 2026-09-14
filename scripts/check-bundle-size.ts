@@ -4,7 +4,7 @@ import { join } from 'node:path';
 const DIST_DIR = 'dist/assets';
 const MAIN_ENTRY_LIMIT_BYTES = 500 * 1024;
 
-function formatKb(bytes) {
+function formatKb(bytes: number): string {
   return `${(bytes / 1024).toFixed(1)} KB`;
 }
 
@@ -33,4 +33,6 @@ if (mainSize > MAIN_ENTRY_LIMIT_BYTES) {
   process.exit(1);
 }
 
-console.log(`\ncheck-bundle-size: main entry ${formatKb(mainSize)} is within ${formatKb(MAIN_ENTRY_LIMIT_BYTES)} limit`);
+console.log(
+  `\ncheck-bundle-size: main entry ${formatKb(mainSize)} is within ${formatKb(MAIN_ENTRY_LIMIT_BYTES)} limit`,
+);

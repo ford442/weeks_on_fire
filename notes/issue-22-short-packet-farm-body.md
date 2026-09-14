@@ -3,8 +3,8 @@
 Paste on [#22](https://github.com/ford442/weeks_on_fire/issues/22) (general idea farm).
 Not #42 — that stays the Ep4 production hub. Song beds go to #18 / #33.
 
-Four short comments: one for the farm sheet, one per generate-first packet. Post the
-farm sheet first.
+Five comments: farm sheet, three generate-first packets, plus the spoken laundry open mic.
+Post the farm sheet first. The spoken packet is Comment 5 — picture and Voice on #22, not #42.
 
 ---
 
@@ -117,3 +117,41 @@ the wait — same framing, so the audience reads patience instead of a repeat. T
 approval beat is liftable later as its own 4s loop tile, cut fresh rather than carved out.
 
 Six stills + motion prompt on the board.
+
+---
+
+## Comment 5 — `rubella-stand-up` (spoken gag, 60–75s)
+
+**Spoken gag — Item Seven is a laundry intercom**
+
+Paste on [#22](https://github.com/ford442/weeks_on_fire/issues/22). Picture and Voice bed
+live here. **Do not dump on #42.**
+
+Not a musical. Not Ultra Screech. Not Lace Waterfall stage. Not Big City club. Rubella is
+already doing stand-up in the bios; this is Item Seven, Resident Comments, and Madelyn put
+her name on the list. The audience is folding chairs. They creak. They do not clap.
+
+Locked lines kept, punched to ~70s at her pace:
+
+- "The elevator just tried to negotiate. I told it I already pay rent."
+- "I don't need a hero. I need the detergent that still works."
+- "If the floor is on fire again, I'm charging it for emotional damages."
+
+QA / pension / elevator / detergent / fire-form stay. One Lillith heckle, off-mic, too
+helpful. Qing optional: noodles, one wrong-time laugh, no line. Building bureaucracy is
+the comic engine — no dating material, no airline food, no mystical register.
+
+Four stills, mouths on, silent picture on a Voice bed (same as table-reads; do not wait on
+lipsync). Shoot **podium lock** and **land** first. Three interrupt tags (7s / 6s / 8s)
+cut from the same mic, not a second packet. Laugh track = chair creak (peggy-babcock-second
+sibling) + one fluorescent tick. No Minimax song. If a sting is needed later: one dry snare
++ chair creak.
+
+Siblings, not remakes: elevator-counteroffer (she talks about the car; we do not cut
+inside it) · lint-inventory (same laundry possible, different night, no Rubella, no
+detergent bottle) · we-will-stand (chairs are audience here) · Mara album *I Already Pay
+Rent* is a player shelf, not this title card.
+
+Catalog: `songs/Rubella_Stand_Up.md` · boards:
+`prompts/rubella-stand-up-segments.md` · punched set: `notes/scenes/rubella-stand-up.md` ·
+Suggestions: `rubella-stand-up`.

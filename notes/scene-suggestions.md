@@ -73,6 +73,94 @@ Cast table (who appears in which scene): [`scenes/README.md`](scenes/README.md).
 
 ---
 
+## Scene Idea: "Rubella Stand-Up" (laundry-room open mic)
+
+**Scene / Beat Title:** Rubella Stand-Up — short spoken gag
+
+**Fits Episode / New Episode Concept:** Short packet farm (#22 picture · Voice
+bed here · not #42). Joke / micro-duel spoken cutaway. Not a musical. Not Ultra
+Screech. Not Lace Waterfall. Not Big City club.
+
+**Juxtaposition / Wrong channel:** Item Seven on the HOA agenda is Resident
+Comments. The designated podium is a laundry-room intercom. Full commitment.
+She did not sign up. Madelyn put her on the list.
+
+**Setting & Atmosphere:** Laundry-room open mic. Honey-oak folding table,
+unused brass-stem mic, flickering fluorescent, wet enamel on the grout only,
+World's Okayest Tenant mug, unlabeled contraband detergent, empty folding
+chairs. They creak. They do not clap.
+
+**Key Visuals (Grok Imagine prompt seeds):** Four stills — podium lock,
+detergent relic, heckle wide (Rubella does not turn), land with duplicate
+forms. Shoot 1 and 4 first. Boards:
+[`prompts/rubella-stand-up-segments.md`](../prompts/rubella-stand-up-segments.md).
+
+**Narrative Beats / Action:** Four bits + land (~72s). Three interrupt tags
+(elevator 7s / detergent 6s / damages 8s) cut from the same mic.
+
+**Dialogue, Voiceover or Narration (if any):** Punched set in
+[`notes/scenes/rubella-stand-up.md`](scenes/rubella-stand-up.md) and
+[`songs/Rubella_Stand_Up.md`](../songs/Rubella_Stand_Up.md). Locked lines kept:
+elevator / pay rent · detergent that still works · emotional damages. Beat C
+plants the fire-hazard log ("That tube is pinker than the other one") before
+Lillith's heckle. Overflow bits live in
+[`notes/scenes/versions/rubella-stand-up-versions.md`](scenes/versions/rubella-stand-up-versions.md);
+do not dump them into the 60–75s A-roll.
+
+**Interpersonal subjects:** Rubella; Lillith one heckle off-mic; Madelyn
+clipboard silhouette; Qing optional (noodles, wrong-time laugh, no line).
+
+**Emotional Tone & Themes:** Dry, slightly raspy, zero fucks left. Filing a
+complaint that happens to have a mic. Building bureaucracy is the comic engine.
+
+**Music / Song Sync Opportunity:** Voice bed only. No Minimax song. Laugh
+track = chair creak (peggy-babcock-second) + fluorescent tick. Later sting if
+needed: one dry snare + chair creak.
+
+**Status / Next Step:** Ready-to-generate. Suggestions id `rubella-stand-up`.
+Heckle-setup pass 2026-09-12. Versions page exists.
+
+---
+
+## Scene Idea: "Big City Hair-dos" (Daisy Bell downtown)
+
+**Scene / Beat Title:** Giant hair-dos as civic obstacles on the Fleet Street /
+crowded-downtown act
+
+**Fits Episode / New Episode Concept:** Daisy Bell musical cutaway — Big City
+video (`db-x01` and street sights). Not a new song. Not Ultra Screech.
+
+**Juxtaposition / Wrong channel:** A period city has a millinery zoning
+problem and treats it as weather. Full commitment. Awkward, not slapstick.
+
+**Setting & Atmosphere:** Late-Victorian London street and the tight rooms
+that still belong to it (cafe, revolving door, lift). Soft daylight or
+nitrate grain if the Daisy flip is on.
+
+**Key Visuals (Grok Imagine prompt seeds):** Gibson Girl updo at kiosk /
+traffic-island scale. People at true human size. Rubella & Lillith keep
+small hair and still fit. Board: [`ideas/big-city-hairdos.md`](../ideas/big-city-hairdos.md).
+
+**Narrative Beats / Action:** City goes around the hair. Faces miss. The
+flower tandem threads a gap the hair forgot.
+
+**Dialogue, Voiceover or Narration (if any):** none on camera. Optional
+off-camera “After you.” / “I’ll go around the block.”
+
+**Interpersonal subjects (if any):** Stylish 1890s women; a couple who can
+only shake hands; a policeman directing around hair as if it were a stalled
+cart.
+
+**Emotional Tone & Themes:** Polite dread. Looking sweet as a civic fault.
+
+**Music / Song Sync Opportunity:** *You’ll look sweet upon the seat* — Daisy
+Bell downtown.
+
+**Status / Next Step:** Idea — generate-first stills: roundabout or cafe
+no-eye-line.
+
+---
+
 ## Scene Idea: "Well Fall" (Instrumental metal / open sights)
 
 **Scene / Beat Title:** Well Fall — POV down a well, heavy metal, no vocal
@@ -86,9 +174,10 @@ instrumental metal because someone went down a well. Full stack. No wink.
 **Setting & Atmosphere:** Real stone well. Dry California hills or a backyard
 that forgot it had a well. The well is quiet. The metal is non-diegetic.
 
-**Key Visuals (Grok Imagine prompt seeds):** Lip locked. Sights B–H are empty —
-fill the bank in [`ideas/well-fall.md`](../ideas/well-fall.md). Templates:
-[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md).
+**Key Visuals (Grok Imagine prompt seeds):** Lip locked. Sight bank is on
+Suggestions (`/suggestions/well-fall`). Templates:
+[`prompts/well-fall-segments.md`](../prompts/well-fall-segments.md). Workshop:
+[`ideas/well-fall.md`](../ideas/well-fall.md).
 
 **Narrative Beats / Action:** Stand at the ring → fall → see things (unassigned)
 → bottom or none.
@@ -112,7 +201,7 @@ Open slots use a `[SIGHT]` template.
 **Variations or Alternate Takes:** Looking-up twin (mouth as a shrinking coin).
 H can be impact, reverse, sky, or still falling.
 
-**Status / Next Step:** Idea — fill the sight bank, then generate stills.
+**Status / Next Step:** Idea — preview sights on Suggestions, lock B–H later, then generate stills.
 
 ---
 

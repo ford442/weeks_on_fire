@@ -1,0 +1,15 @@
+{
+  "id": "hold-music",
+  "title": "Hold Music",
+  "premise": "A full symphony orchestra in a gilded hall, playing beautifully, to one telephone on a velvet chair. Somebody is on hold. The conductor will not stop until they pick up.",
+  "visual": "Two thousand empty red seats. A single cherry-red telephone sitting upright on a velvet chair alone in the center stalls, receiver off the cradle and laid politely beside it, cord running away into the dark. Eighty musicians in full evening dress, mid-phrase, every stand lit. The conductor is deep into the third movement. Nobody is looking at the seats.",
+  "status": "sketched",
+  "runtime": "~8 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Liliane is the caller and has been holding since the overture. Vivienne would have hung up and had the hall closed.",
+  "tags": ["concert-hall", "telephone", "waiting", "bureaucracy", "liliane"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, gilded nineteenth-century concert hall seen from the rear stalls, two thousand empty red velvet seats stretching away, a single cherry-red 1960s telephone standing upright on one velvet seat in the exact center of the empty house with its receiver lifted off the cradle and laid politely on the armrest, coiled red cord trailing away under the seats into darkness, on stage a full eighty-piece symphony orchestra in white tie mid-phrase with every music stand lamp lit and the conductor's arms raised deep into a movement, gold leaf, boxes, a vast unlit chandelier above, warm stage light against cold empty house, dust in the beams, not one face turned toward the seats, strong symmetry broken only by the one occupied chair, 35mm anamorphic, T2.8, patient absurdity, Grok Imagine style",
+  "motion": "8-second locked wide from the rear stalls. Bows move together. The conductor's left hand asks for more. The receiver on the armrest does not move at all. One stand light flickers. The music does not resolve and does not stop. Camera: 2 percent push down the center aisle.",
+  "notes": "Nobody is holding the phone and nobody ever will be — do not add a person in the seats. The orchestra must look genuinely excellent, not comic. No visible hold-music joke props, no ON HOLD sign, no clock. Newspaper-comic test: the single red phone in an empty house is the whole panel.",
+  "agent": "claude-code"
+}

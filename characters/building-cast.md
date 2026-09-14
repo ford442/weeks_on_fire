@@ -32,6 +32,11 @@ Dry, slightly raspy, zero fucks left to give. Perfect for deadpan call-and-respo
 **Episode / Cutaway Fit**  
 Any late-night building sequence, laundry-room musical numbers, HOA confrontation aftermaths, and every scene where someone needs to say the quiet part out loud with maximum dryness. Spoken packet: [`notes/scenes/rubella-stand-up.md`](../notes/scenes/rubella-stand-up.md) — Item Seven at the laundry intercom.
 
+**Building-cast scene set (with Lillith):**
+[`notes/scenes/negotiating-with-the-elevator.md`](../notes/scenes/negotiating-with-the-elevator.md) — she files the ticket and never says the counteroffer line (that one is banked for the mic) ·
+[`notes/scenes/ambient-lighting-with-ambition.md`](../notes/scenes/ambient-lighting-with-ambition.md) — she holds the ladder and brings an extinguisher nobody asked for ·
+[`notes/scenes/natural-ventilation.md`](../notes/scenes/natural-ventilation.md) — she says no, once, and it holds.
+
 **Status**  
 Core protagonist. Already heavy in Episode 3 scripts, audio cuts, and multiple musical cutaways (Choose Your Basalt, Monster Mash, etc.). Expand freely.
 
@@ -62,6 +67,11 @@ Bright, conspiratorial, full of sudden energy spikes. Excellent for call-and-res
 
 **Episode / Cutaway Fit**  
 Musical cutaways that start in the living room and explode outward, spy-heist subplots (see Monster Mash finale), any scene requiring sudden energy or an improvised solution that makes everything worse in the most beautiful way.
+
+**Building-cast scene set (with Rubella):**
+[`notes/scenes/negotiating-with-the-elevator.md`](../notes/scenes/negotiating-with-the-elevator.md) — she negotiates with car two by the book, and the book works ·
+[`notes/scenes/ambient-lighting-with-ambition.md`](../notes/scenes/ambient-lighting-with-ambition.md) — the 6BQ5 out of the weather-predicting ping-pong table; forty seconds of neon ·
+[`notes/scenes/natural-ventilation.md`](../notes/scenes/natural-ventilation.md) — **the one time she is told no and sits down.** The change is never marked.
 
 **Status**  
 Key dynamic force alongside Rubella. Already present in dialogue cuts, scene drafts, and multiple Minimax tracks.

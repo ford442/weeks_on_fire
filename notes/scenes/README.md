@@ -23,6 +23,9 @@ they go when they get long enough to act.
 | **Rubella's monkey science** | Cable lecture that is almost right | Correct once (Long Way Up); never again |
 | **The Long Way Up** | Mid-season procedural / chatty sci-fi | **Wordiness must stand out** |
 | **No Other Human Sounds** | Silent show, then a short-line rally | Cost of a line; not a second wordy ep |
+| **Car Twelve, This Is Twelve** | Crisis-negotiation procedural | The technique is correct and it works |
+| **Ambient Lighting with Ambition** | Daytime home-makeover program | Host it; never acknowledge hosting it |
+| **Natural Ventilation** | Ruin ballad — the channel changes *down* | The wrongness is the calm |
 
 ---
 
@@ -38,6 +41,9 @@ they go when they get long enough to act.
 | **The Long Way Up** | [`the-long-way-up.md`](the-long-way-up.md) | [`versions/…`](versions/the-long-way-up-versions.md) **full alts** | 9–12 min | Ridge → Kestrel Ridge | Procedural / sci-fi parody |
 | **No Other Human Sounds** | [`no-other-human-sounds.md`](no-other-human-sounds.md) | [`versions/…`](versions/no-other-human-sounds-versions.md) | 6–8 min | 4N22-C → Pulpit Overlook | Quiet rally / two-hander |
 | **Rubella Stand-Up** | [`rubella-stand-up.md`](rubella-stand-up.md) | [`versions/…`](versions/rubella-stand-up-versions.md) | 60–75s + tags | Laundry-room open mic | Spoken gag / HOA Item Seven |
+| **Car Twelve, This Is Twelve** | [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) | [`versions/…`](versions/negotiating-with-the-elevator-versions.md) | 4–5 min | Freight elevator, car 2 | Negotiation procedural / tango |
+| **Ambient Lighting with Ambition** | [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) | [`versions/…`](versions/ambient-lighting-with-ambition-versions.md) | 4–5 min | Sixth-floor corridor | Makeover show / neon noir |
+| **Natural Ventilation** | [`natural-ventilation.md`](natural-ventilation.md) | [`versions/…`](versions/natural-ventilation-versions.md) | 3–4 min | Vacant unit 12-A, open roof | Ruin cabaret / two-hander |
 
 **The Long Way Up is deliberately the longest continuous dialog block in the
 series** — the "wordy episode," where the show appears to change channels into a
@@ -79,6 +85,27 @@ New scene version page: copy [`versions/_template.md`](versions/_template.md).
 
 ● principal · ○ cameo / single beat · ◐ deliberately unresolved
 
+### Building-Cast Set (Rubella & Lillith)
+
+Three scenes in the same decaying, rule-obsessed building. Shot order is index
+order; **Natural Ventilation must play last** — the no only costs something after
+the audience has watched Lillith fix two other things.
+
+| Character | Car Twelve | Ambient Lighting | Natural Ventilation |
+|---|:--:|:--:|:--:|
+| Rubella | ● lead (documents) | ● lead (ladder foot) | ● lead |
+| Lillith | ● lead (negotiates) | ● lead (ladder) | ● lead |
+| The Elevator | ● V.O. — **floor numbers only** | — | — |
+| Madelyn | ○ V.O. intercom, never seen | ○ one laminated memo, no voice | — |
+| Pizza Guy | — | ○ (order name almost right) | — |
+| Qing | ○ (lobby, noodles, no line) | — | — |
+
+**Natural Ventilation is a two-hander.** No third voice, no intercom, no memo, no
+Continuity Voice. If a draft adds one, the draft is wrong.
+
+**Madelyn is never seen in this set.** She is a good speaker in Car Twelve and a
+piece of laminate in Ambient Lighting. Do not cast a face.
+
 **Note on the Voices:** the Continuity Voice (EyeWash Station) and the Radio
 Voice (Ep2) are never confirmed to be the same person. Empty Highway uses the
 Radio Voice. Do not cast a face for either.
@@ -97,6 +124,12 @@ Radio Voice. Do not cast a face for either.
 - **Rubella's pseudoscience is corrected exactly once** (Long Way Up, Beat D). She simply stops giving that lecture afterward. The change is never marked.
 - **Riley is never wrong about a fact and never smug about it.** No mystical register, no tragic backstory on camera, no crying scene. Inventory lives in `characters/riley-smith.md`.
 - **No Other Human Sounds has no other human sounds** between Lillith's fork line and the sedan at the reunion. No Continuity Voice, no radio, no score in the woods. The tower stays offscreen. The pendant is fourteen dollars. They drive to Pulpit Overlook. The car does not attempt the tower.
+- **The elevator speaks only floor numbers.** Vocoded, in tune, PA bandwidth, never a word. Malfunction vs. negotiation is never adjudicated — Lillith says one, Rubella says the other, the doors open.
+- **"The elevator just tried to negotiate. I told it I already pay rent." is filed in Car Twelve and told at the mic in Rubella Stand-Up.** It is never spoken inside the elevator scene. The gag is spent once.
+- **The extinguisher never discharges.** Rubella carries it into every Lillith repair, full, and carries it out full. Neither of them has ever mentioned it and neither of them ever will.
+- **Neon Exit Sign's chorus belongs to Episode 1.** The sixth-floor corridor gets the hum and one verse; the tube fails in the pre-chorus.
+- **Lillith is told no exactly once** (Natural Ventilation, Beat B). She sits down. She never raises it again, and the change is never marked — same mechanism as Rubella's pseudoscience.
+- **The plaster in 12-A is never swept**, nobody fixes the roof, and no one rules on whether the building is safe.
 
 ---
 
@@ -110,6 +143,7 @@ Radio Voice. Do not cast a face for either.
    - **No Other Human Sounds** inserts between Long Way Up Beats E and F (cut-through, rally, drive to Pulpit Overlook). It is not a second wordy episode.
    - **Empty Highway Confession** is an Episode 2 tail or Episode 5 opener.
    - **Master Control** works as connective tissue between any two cutaways.
+   - **The building-cast set** (Car Twelve → Ambient Lighting → Natural Ventilation) is a self-contained Rubella/Lillith block: two repairs and a refusal. Plays as three cutaways across an episode, or as one ~12-minute run. It is **not** a wordy episode — three separate register changes, none of them eleven minutes.
 
 ---
 

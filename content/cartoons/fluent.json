@@ -1,0 +1,15 @@
+{
+  "id": "fluent",
+  "title": "Fluent",
+  "premise": "Every sign in the arcade is beautifully set, expensively lit, and not quite a word. She is the only person in the building who knows where she is going.",
+  "visual": "Marble shopping arcade at closing time. Brass and backlit signage everywhere — BOVTIQVE, RESTAVRANTE, ENTRANGE, LADIES & LADIES, WAY OUT ONLY ONE — all in flawless expensive typography. An illuminated directory of plausible nonsense. A woman in black walks through the middle of frame without slowing, heels certain, not reading anything. A tourist couple is frozen at the directory with their heads tilted.",
+  "status": "sketched",
+  "runtime": "~8 seconds",
+  "register": "grounded surreal",
+  "characterLean": "Vivienne has never once read a sign. Liliane has read them all and is deciding whether to say something.",
+  "tags": ["arcade", "signage", "language", "ai-artifact", "retail"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, luxury marble shopping arcade after hours, a receding colonnade of illuminated retail signage in flawless expensive brass and backlit acrylic typography where every word is confident, well-kerned, and not a real word — BOVTIQVE, RESTAVRANTE, ENTRANGE, PARFVMERIE DE LA DE, LADIES & LADIES, WAY OUT ONLY ONE — plus a tall illuminated wayfinding directory dense with similar plausible non-words and arrows pointing to each other, a glamorous bored woman with long black hair, blood-red lipstick and a tailored black coat walking briskly through the center of the arcade without glancing at any sign, a tourist couple stalled at the directory with heads tilted in identical confusion, polished marble floor doubling every sign as a reflection, cold retail light against warm brass, shuttered storefronts, no shoppers, strong one-point perspective and deep negative space, lettering crisp and premium never messy or scribbled, 35mm anamorphic, T2.8, dry institutional comedy, Grok Imagine style",
+  "motion": "8-second locked wide. One backlit sign flickers and comes back spelled differently. The directory cycles to a second screen of equally confident non-words. Her heels cross frame at a constant pace and exit. The tourists do not move. Nothing is ever corrected. Camera: static.",
+  "notes": "This is the only gag in the parking lot that asks the generator for its own artifact on purpose — write the near-words into the prompt rather than fighting garbled text. Keep the type expensive: crisp, kerned, backlit. The moment it looks like sloppy scribble the joke dies. Do not add a punchline sign; no sign may be funnier than the others.",
+  "agent": "claude-code"
+}

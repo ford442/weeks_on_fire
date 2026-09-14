@@ -1,0 +1,15 @@
+{
+  "id": "fig-four",
+  "title": "Fig. 4",
+  "premise": "The diagram is exquisite: labeled, cross-sectioned, arrowed, dimensioned in units that are not units. It describes a device that does not exist and is not mentioned anywhere else. It is captioned Fig. 4. There is no Fig. 1, 2, or 3. Everyone is taking notes.",
+  "visual": "Raked lecture hall in shadow. One enormous illuminated technical plate on the board — beautiful draughtsmanship, callouts, a legend reading in candela-hours and 3.44 kg of dusk, arrows that leave the device and return to it having learned nothing. Two hundred pens moving in the dark. The lecturer's hand rests on the plate with total confidence. No podium light on the face.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "grounded surreal",
+  "characterLean": "Liliane is in row nine, writing it all down correctly. She will file it.",
+  "tags": ["lecture", "diagram", "confidence", "ai-artifact", "bureaucracy"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 3:2, darkened raked university lecture hall, a single enormous illuminated technical plate projected on the front board showing a gorgeously draughted cross-section of a machine that cannot exist — precise hatching, exploded views, numbered callouts, dimension lines, and a legend listing units that are not units such as candela-hours, 3.44 kg of dusk, and two per-inverse-Tuesday — several arrows leaving the device and curving back into it, the caption beneath the plate reading only Fig. 4 in clean serif with no other figure anywhere in frame, two hundred students in shadow with pens moving and notebook pages catching the projector spill, the lecturer visible only as a black silhouette and one confident hand laid flat against the plate, dust in the projector beam, deep blacks in the hall against the brilliant white diagram, strong negative space, 35mm, T2.0, dry academic dread, Grok Imagine style",
+  "motion": "6-second lockoff. The projector fan hum. Dust crosses the beam. Two hundred pens move at slightly different speeds. One arrow on the diagram completes its loop and begins again. The plate advances once — to Fig. 4. Camera: static.",
+  "notes": "The draughtsmanship has to be genuinely excellent; the gag is authority, not sloppiness. Only one small nod to the 3:44 motif in the legend — do not turn it into an EyeWash callback. No laughter, no confused student. Everyone believes it, including the viewer for about two seconds.",
+  "agent": "claude-code"
+}

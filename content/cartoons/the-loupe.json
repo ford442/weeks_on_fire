@@ -1,0 +1,15 @@
+{
+  "id": "the-loupe",
+  "title": "The Loupe",
+  "premise": "She magnifies the photograph and finds a street that was never in it. She magnifies the street and finds a window. She magnifies the window and someone is looking back. She has not stopped.",
+  "visual": "Archive room, cotton gloves, a small dull snapshot of an empty field under a loupe. Pinned in a row across the wall behind her: six successive enlargements, each one impossibly richer than the last — the field becomes a road, the road becomes a town at dusk, the town becomes a lit window, the window becomes a face. The face is in focus. The original snapshot is not.",
+  "status": "sketched",
+  "runtime": "~8 seconds",
+  "register": "grounded + impossible",
+  "characterLean": "Liliane is doing the work. Vivienne is out of frame telling her to go one more.",
+  "tags": ["archive", "photograph", "detail", "ai-artifact", "quiet-apocalypse"],
+  "grokImaginePrompt": "Photoreal one-panel film still, 3:2, institutional photo-archive room at night, a woman in white cotton gloves and a black dress bent over a lightbox with a jeweler's loupe pressed to a small dull black-and-white snapshot of an empty field, pinned in an even row on the wall behind her six successive enlargements of that same snapshot in which the picture gets impossibly richer instead of coarser — bare field, then a gravel road, then a small town at dusk with sodium lamps, then one lit upstairs window, then a curtain, then a human face in perfect focus looking straight out of the final print — the enlargements sharp and detailed while the original snapshot on the lightbox is soft and empty, grain going the wrong direction as the sequence progresses, archival boxes and a wheeled ladder in shadow, hard lightbox glow under her face and one green desk lamp, everything else dim, high contrast, strong negative space, 35mm, T2.0, patient menace, Grok Imagine style",
+  "motion": "8-second lockoff. She moves the loupe two millimeters. The lightbox hums. On the wall, the last print in the row — the face — very slightly changes its expression between one blink and the next, or did not. She reaches for a seventh sheet of paper. She does not look up at the wall. Camera: 1 percent push.",
+  "notes": "The escalation lives in the pinned row, so the wall must read left-to-right at thumbnail size. Detail should be invented, not recovered — the source must look obviously too poor to contain any of it. No jump scare on the face; it is simply in focus and that is enough. Do not make it a crime-lab bit.",
+  "agent": "claude-code"
+}

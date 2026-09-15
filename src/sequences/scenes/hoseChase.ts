@@ -142,7 +142,10 @@ export function createHoseChase(): SequenceScene {
       const skidT = smoothstep(12, 14.5, t);
       const hold = smoothstep(14.5, 16, t);
 
-      const scroll = run ? (t - 2) * 3.6 : 10 * 3.6 * (1 - skidT * 0.15);
+      const runTime = Math.max(0, Math.min(t - 2, 10));
+      const skidElapsed = Math.max(0, Math.min(t - 12, 2.5));
+      const skidDistance = 3.6 * (skidElapsed - (skidElapsed * skidElapsed) / (2 * 2.5));
+      const scroll = runTime * 3.6 + skidDistance;
       const tile = 4.2;
       const scrollMod = ((scroll % tile) + tile) % tile;
 
@@ -207,7 +210,13 @@ export function createHoseChase(): SequenceScene {
       });
       puppet.dust.updatePositions(dustData.positions);
       if (skidT > 0.05) {
-        engine.drawPoints(puppet.dust, identityModel, [0.55, 0.45, 0.32], 7, 0.55 * skidT);
+        engine.drawPoints(
+          puppet.dust,
+          identityModel,
+          [0.55, 0.45, 0.32],
+          7,
+          0.55 * skidT * (1 - hold),
+        );
         engine.drawLit(puppet.limb, modelTRSX(x - 0.55, 0.02, 0.08, 0, 0, 1.57, 0.7, 0.15, 0.15), {
           color: [0.2, 0.16, 0.12],
           emissive: [0.12, 0.06, 0.02],

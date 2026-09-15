@@ -27,7 +27,7 @@ The hub is a single-page app. Views are toggled in-app:
 4. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
 5. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
 6. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
-7. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.
+7. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 8. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
 9. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
 10. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
@@ -322,6 +322,10 @@ Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>
 
 Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in `content/sequences/<id>.json`. No song id.
 
+- **Spoon Whip** (spoon-whip, photoreal, ~12 seconds) — Same mug, same spoon, same orange. The camera commits a crime: a horizontal whip that never settles. The spoon is a propeller. Steam streaks. Nobody comes back for them any faster.
+- **Tunnel Smash** (tunnel-smash, unreal, ~12 seconds) — Concentric brass rings rush the lens. Each kick is a smash-zoom toward a matte ember that never arrives. The vanishing point is off-center. Not a wormhole. Not a sphere in a cave.
+- **Hose Chase** (hose-chase, cartoon, ~16 seconds) — The errand-runner is already wearing the cube. The 4:3 stage is a treadmill. Rubber-hose legs blur into a wheel. The stop is a skid that throws two grooves. The hat stays on.
+- **Kick Lattice** (kick-lattice, unreal, ~16 seconds) — The lattices from the hymn, already assembled, hop on a 150 BPM kick. The camera is locked. Black exists only as a one-frame punch. The core stays matte.
 - **Lattice Hymn** (lattice-hymn, unreal, ~16 seconds) — Nested brass lattices assemble around a single ember core and refuse to share a rotation. The hymn is the beat they miss together.
 - **Rubber-Hose Errand** (rubber-hose-errand, cartoon, ~32 seconds) — A round errand-runner with rubber-hose limbs is sent across a 4:3 stage to fetch a cube. The cube becomes a hat. The errand was always a costume change.
 - **Kitchen Counter Orbit** (kitchen-counter-orbit, photoreal, ~48 seconds) — A porcelain mug, a brass teaspoon, and one orange share a honey-oak counter. Nobody is coming back for them. The camera does the visiting.

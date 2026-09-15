@@ -1,0 +1,17 @@
+{
+  "id": "kick-lattice",
+  "title": "Kick Lattice",
+  "medium": "unreal",
+  "runtime": "~16 seconds",
+  "durationSec": 16,
+  "aspect": "16:9",
+  "register": "fast strobe",
+  "premise": "The lattices from the hymn, already assembled, hop on a 150 BPM kick. The camera is locked. Black exists only as a one-frame punch. The core stays matte.",
+  "visual": "Dark void, no floor. Four brass wireframe cubes and one icosahedron nested on a shared origin, a matte coal-orange core. No slow scale-in — they are already on the job. No HUD, no nebula, no faces, no rays.",
+  "motion": "Locked 3/4 camera the whole 16s. Forty kicks at 150 BPM (0.4s). Each kick: one black frame, shells snap 15°, core pulses, sparks jump a radius. Never an orbit. Loop on kick zero.",
+  "tags": ["fast-motion", "strobe", "brass", "kick", "150-bpm", "no-faces"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, four nested brass wireframe cubes and one brass icosahedron sharing a single origin in a black void, caught mid-kick with a one-frame black punch tearing a missing edge, a matte coal-orange sphere at the center with no rays, lattices at disagreeing snap angles, no floor, no HUD, no stars, no faces, three supporting figures: a torn brass edge, a spark off one vertex, a second lattice one kick behind, locked camera at chest height, 50mm, T2.8, fine grain, satin brass against matte ember against true black, Grok Imagine style",
+  "geminiOmniPrompt": "16-second locked loop. Nested brass wireframe cubes hop on every 150 BPM kick — forty punches. One black frame on each kick, then the next snap already present. Core pulses, never blooms. No camera orbit, no slow assemble, no faces. Ends on kick zero.",
+  "notes": "Fast sibling of Lattice Hymn. Do not steal the slow orbit. Keep the core matte. In-hub sequence is procedural WebGL.",
+  "agent": "cursor-grok-4.6"
+}

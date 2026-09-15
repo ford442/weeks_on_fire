@@ -60,22 +60,22 @@ export function createScreenDoorRecessional(): SequenceScene {
       if (!kit) return;
       identity(identityModel);
 
-      const camZ = 7.2 - progress * 22;
+      const camZ = 5.6 - progress * 20;
       const enterVoid = smoothstep(0.78, 0.92, progress);
       const eye: Vec3 = [0.08 * Math.sin(progress * 4), 1.25, camZ];
       const target: Vec3 = [0, 1.05, camZ - 4.5];
       perspective(proj, 52 * DEG, aspect, 0.08, 50);
       lookAt(view, eye, target, [0, 1, 0]);
       engine.setCamera(proj, view, eye);
-      engine.lightDir = [0.15, 0.9, 0.3];
-      engine.lightColor = [1, 0.78, 0.5];
-      engine.ambient = [0.06, 0.05, 0.045];
-      engine.fogDensity = 0.09 + enterVoid * 0.04;
-      engine.fogColor = [0.03, 0.025, 0.02];
+      engine.lightDir = [0.2, 0.85, 0.55];
+      engine.lightColor = [1, 0.82, 0.55];
+      engine.ambient = [0.1, 0.08, 0.07];
+      engine.fogDensity = 0.07 + enterVoid * 0.04;
+      engine.fogColor = [0.04, 0.032, 0.025];
       engine.pointPos = [0, 2.15, camZ - 1.2];
-      engine.pointColor = [1, 0.7, 0.35];
-      engine.pointRange = 5.5;
-      engine.clear(0.03, 0.025, 0.02);
+      engine.pointColor = [1, 0.75, 0.4];
+      engine.pointRange = 6.5;
+      engine.clear(0.035, 0.028, 0.022);
 
       engine.drawLit(kit.floor, modelTRSX(0, 0, -FRAME_COUNT), {
         color: [0.28, 0.22, 0.16],

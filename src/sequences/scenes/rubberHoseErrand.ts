@@ -30,7 +30,7 @@ export function createRubberHoseErrand(): SequenceScene {
     model: ReturnType<typeof modelTRSX>,
     color: Vec3,
   ) {
-    engine.drawOutline(mesh, model, 1.08);
+    engine.drawOutline(mesh, model, 1.055);
     engine.drawLit(mesh, model, { color, cel: true, shininess: 8 });
   }
 
@@ -58,10 +58,10 @@ export function createRubberHoseErrand(): SequenceScene {
       const hopT = smoothstep(18, 24, t);
       const exitT = smoothstep(24, 31, t);
 
-      const startX = -1.7;
-      const cubeX = 0.7;
-      const walkX = startX + (cubeX - 0.35 - startX) * walkT;
-      const x = walkX + 2.3 * exitT;
+      const startX = -0.85;
+      const cubeX = 0.65;
+      const walkX = startX + (cubeX - 0.28 - startX) * walkT;
+      const x = walkX + 2.1 * exitT;
       const hop = Math.abs(Math.sin((t - 18) * 8)) * 0.28 * hopT * (1 - exitT);
       const dropY = 2.2 * (1 - squashIn) + 0.55 * squashIn + hop;
       const squash = 1 + 0.35 * Math.sin(squashIn * Math.PI) * (1 - squashIn);
@@ -69,16 +69,18 @@ export function createRubberHoseErrand(): SequenceScene {
       const leg = Math.sin(stride) * 0.55 * Math.max(walkT, hopT) * (1 - hatT * 0.4);
       const arm = Math.sin(stride + Math.PI) * 0.7;
 
-      const eye: Vec3 = [0, 1.15, 3.35];
-      perspective(proj, 42 * DEG, aspect, 0.1, 30);
-      lookAt(view, eye, [0, 0.7, 0], [0, 1, 0]);
+      const eye: Vec3 = [0, 1.2, 3.55];
+      perspective(proj, 48 * DEG, aspect, 0.1, 30);
+      lookAt(view, eye, [0, 0.72, 0], [0, 1, 0]);
       engine.setCamera(proj, view, eye);
-      engine.lightDir = [0.25, 0.9, 0.55];
-      engine.lightColor = [1, 0.95, 0.85];
-      engine.ambient = [0.28, 0.24, 0.2];
+      engine.lightDir = [0.2, 0.75, 0.7];
+      engine.lightColor = [1.05, 0.98, 0.88];
+      engine.ambient = [0.46, 0.4, 0.34];
       engine.fogDensity = 0;
-      engine.pointRange = 0;
-      engine.clear(0.12, 0.1, 0.09);
+      engine.pointPos = [0.1, 1.6, 2.4];
+      engine.pointColor = [1, 0.9, 0.75];
+      engine.pointRange = 7;
+      engine.clear(0.16, 0.13, 0.11);
 
       engine.drawLit(puppet.floor, modelTRSX(0, 0, 0), {
         color: [0.25, 0.22, 0.18],

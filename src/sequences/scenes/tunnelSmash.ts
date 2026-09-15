@@ -62,7 +62,14 @@ export function createTunnelSmash(): SequenceScene {
       rings.forEach((ring, index) => {
         const z = -index * 1.05;
         const dir = index % 2 === 0 ? 1 : -1;
-        const model = modelTRSX(0.08 * index, -0.04 * index, z, timeSec * 3.4 * dir, 0, 0);
+        const model = modelTRSX(
+          0.08 * index,
+          -0.04 * index,
+          z,
+          Math.PI / 2,
+          timeSec * 3.4 * dir,
+          0,
+        );
         const brass: Vec3 = [0.72 + index * 0.02, 0.48, 0.22];
         engine.drawLit(ring, model, {
           color: brass,

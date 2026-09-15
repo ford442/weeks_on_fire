@@ -181,3 +181,322 @@ button:disabled {
     animation: none;
   }
 }
+
+/* Color Whip — live field preview when stills are not linked */
+.color-whip-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.color-whip-field__layer {
+  position: absolute;
+  inset: -30%;
+}
+
+.color-whip-field--strobe {
+  background: #ff00aa;
+  animation: color-whip-strobe 0.4s steps(1, end) infinite;
+}
+
+@keyframes color-whip-strobe {
+  0%,
+  45% {
+    background: #ff00aa;
+  }
+  46%,
+  52% {
+    background: #000;
+  }
+  53%,
+  100% {
+    background: #c8ff00;
+  }
+}
+
+.color-whip-field--whip {
+  background: repeating-linear-gradient(
+    90deg,
+    #00e5ff 0 10px,
+    #ff7a00 10px 22px,
+    #00e5ff 22px 28px,
+    #ff7a00 28px 48px
+  );
+  background-size: 240% 100%;
+  transform: skewX(-14deg) scale(1.35);
+  animation: color-whip-whip 0.18s linear infinite;
+}
+
+@keyframes color-whip-whip {
+  from {
+    background-position: 0 0;
+    transform: skewX(-18deg) scale(1.4);
+  }
+  to {
+    background-position: 48% 0;
+    transform: skewX(10deg) scale(1.4);
+  }
+}
+
+.color-whip-field--phosphor {
+  background: #2a0066;
+}
+
+.color-whip-field--phosphor .color-whip-field__layer {
+  background: radial-gradient(circle at 38% 42%, #ffd000 0 18%, transparent 42%),
+    radial-gradient(circle at 62% 58%, #7a00ff 0 28%, transparent 55%);
+  mix-blend-mode: screen;
+}
+
+.color-whip-field--phosphor .color-whip-field__layer:nth-child(1) {
+  animation: color-whip-ghost 0.4s linear infinite;
+  opacity: 1;
+}
+
+.color-whip-field--phosphor .color-whip-field__layer:nth-child(2) {
+  animation: color-whip-ghost 0.4s linear infinite;
+  animation-delay: 0.12s;
+  opacity: 0.55;
+  filter: hue-rotate(-20deg);
+}
+
+.color-whip-field--phosphor .color-whip-field__layer:nth-child(3) {
+  animation: color-whip-ghost 0.4s linear infinite;
+  animation-delay: 0.24s;
+  opacity: 0.3;
+  filter: hue-rotate(40deg);
+}
+
+@keyframes color-whip-ghost {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(2%, -1.5%) scale(1.04);
+  }
+  100% {
+    transform: translate(-1.5%, 2%) scale(0.98);
+  }
+}
+
+.color-whip-field--smash {
+  background: repeating-radial-gradient(
+    circle at 38% 55%,
+    #ff4fa3 0 4%,
+    #00c9a7 4% 8%
+  );
+  animation: color-whip-smash 0.4s cubic-bezier(0.15, 0.9, 0.3, 1) infinite;
+}
+
+@keyframes color-whip-smash {
+  0% {
+    transform: scale(1);
+    filter: contrast(1.2);
+  }
+  70% {
+    transform: scale(3.4);
+    filter: contrast(1.6);
+  }
+  100% {
+    transform: scale(1.05);
+    filter: contrast(1.1);
+  }
+}
+
+.color-whip-field--chase {
+  background: #050505;
+}
+
+.color-whip-field--chase .color-whip-field__layer:nth-child(1) {
+  background: radial-gradient(circle at 40% 50%, #ff0033 0 28%, transparent 52%);
+  mix-blend-mode: screen;
+  animation: color-whip-chase-red 0.4s linear infinite;
+}
+
+.color-whip-field--chase .color-whip-field__layer:nth-child(2) {
+  background: radial-gradient(circle at 52% 48%, #00ff66 0 28%, transparent 52%);
+  mix-blend-mode: screen;
+  animation: color-whip-chase-green 0.46s linear infinite;
+}
+
+.color-whip-field--chase .color-whip-field__layer:nth-child(3) {
+  background: radial-gradient(circle at 46% 58%, #0044ff 0 28%, transparent 52%);
+  mix-blend-mode: screen;
+  animation: color-whip-chase-blue 0.34s linear infinite;
+}
+
+@keyframes color-whip-chase-red {
+  from {
+    transform: translateX(-8%);
+  }
+  to {
+    transform: translateX(8%);
+  }
+}
+
+@keyframes color-whip-chase-green {
+  from {
+    transform: translateX(6%);
+  }
+  to {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes color-whip-chase-blue {
+  from {
+    transform: translateY(-7%);
+  }
+  to {
+    transform: translateY(9%);
+  }
+}
+
+.color-whip-field--cuts {
+  animation: color-whip-cuts 2.4s steps(1, end) infinite;
+}
+
+@keyframes color-whip-cuts {
+  0%,
+  15% {
+    background: #1a2bff;
+  }
+  16%,
+  18% {
+    background: #000;
+  }
+  19%,
+  32% {
+    background: #ffe14a;
+  }
+  33%,
+  35% {
+    background: #000;
+  }
+  36%,
+  49% {
+    background: #1a2bff;
+  }
+  50%,
+  52% {
+    background: #000;
+  }
+  53%,
+  66% {
+    background: #ffe14a;
+  }
+  67%,
+  69% {
+    background: #000;
+  }
+  70%,
+  83% {
+    background: #1a2bff;
+  }
+  84%,
+  86% {
+    background: #000;
+  }
+  87%,
+  100% {
+    background: #ffe14a;
+  }
+}
+
+.color-whip-field--vortex {
+  background: conic-gradient(
+    from 0deg at 38% 58%,
+    #7a1028 0 18%,
+    #7dffc3 18% 28%,
+    #7a1028 28% 48%,
+    #7dffc3 48% 55%,
+    #7a1028 55% 78%,
+    #7dffc3 78% 100%
+  );
+  animation: color-whip-vortex 0.8s linear infinite;
+}
+
+@keyframes color-whip-vortex {
+  from {
+    transform: rotate(0deg) scale(1.4);
+  }
+  to {
+    transform: rotate(360deg) scale(1.4);
+  }
+}
+
+.color-whip-field--hit {
+  background: #fff6e8;
+  animation: color-whip-hit 0.8s steps(1, end) infinite;
+}
+
+.color-whip-field--hit .color-whip-field__layer {
+  background: conic-gradient(
+    from 90deg at 60% 40%,
+    #ff00aa,
+    #00e5ff,
+    #7a00ff,
+    #00c9a7,
+    #ff0033,
+    #1a2bff,
+    #7a1028,
+    #ff00aa
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+  animation: color-whip-hit-shards 0.4s linear infinite;
+}
+
+@keyframes color-whip-hit {
+  0%,
+  18% {
+    background: #3a1020;
+  }
+  19%,
+  28% {
+    background: #fff6e8;
+  }
+  29%,
+  100% {
+    background: #1a0a12;
+  }
+}
+
+@keyframes color-whip-hit-shards {
+  from {
+    transform: rotate(0deg) scale(1.5);
+    opacity: 0.9;
+  }
+  to {
+    transform: rotate(-25deg) scale(1.7);
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .color-whip-field--strobe,
+  .color-whip-field--whip,
+  .color-whip-field--smash,
+  .color-whip-field--cuts,
+  .color-whip-field--vortex,
+  .color-whip-field--hit {
+    animation: none;
+  }
+
+  .color-whip-field--strobe {
+    background: linear-gradient(90deg, #ff00aa 50%, #c8ff00 50%);
+  }
+
+  .color-whip-field--whip,
+  .color-whip-field--smash,
+  .color-whip-field--vortex {
+    transform: none;
+  }
+
+  .color-whip-field--phosphor .color-whip-field__layer,
+  .color-whip-field--chase .color-whip-field__layer,
+  .color-whip-field--hit .color-whip-field__layer {
+    animation: none;
+  }
+}

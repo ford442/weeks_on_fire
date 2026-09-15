@@ -1,0 +1,27 @@
+{
+  "id": "color-whip",
+  "kind": "musical",
+  "title": "Color Whip",
+  "status": "ready-to-generate",
+  "runtime": "0:48 (8 × 6s)",
+  "episode": "Musical Cutaway / Visual Experiment",
+  "songId": "twilight-time",
+  "songTitle": "Twilight Time (kick grid)",
+  "summary": "Pure non-representational color at warehouse tempo. No object — no blob, no sphere, no horizon, no figure. Eight six-second dialects: strobe invert, whip smear, phosphor stack, smash zoom, channel chase, hard cuts, vortex spin-up, white hit. The slow sibling is Chroma Bath. This one hits.",
+  "visualArc": "Kick-locked invert → smear streaks → afterimage pile → smash zoom tunnel → RGB plates at three speeds → six hard hue swaps → vortex past readable → one white punch and wreckage.",
+  "tags": [
+    "abstract",
+    "psychedelic",
+    "pure-visual",
+    "color-field",
+    "fast-motion",
+    "fast-chroma",
+    "strobe",
+    "beat-sync",
+    "no-objects",
+    "eyewash",
+    "visual-experiment",
+    "long-form-prompts"
+  ],
+  "segmentsSource": "prompts/color-whip-segments.md"
+}

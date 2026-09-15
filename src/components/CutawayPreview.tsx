@@ -3,6 +3,43 @@ import { useEffect, useState } from 'react';
 import type { CutawaySegment } from '../data/suggestions';
 
 const MIN_DWELL_SEC = 2.5;
+const COLOR_WHIP_DIALECTS = [
+  'strobe',
+  'whip',
+  'phosphor',
+  'smash',
+  'chase',
+  'cuts',
+  'vortex',
+  'hit',
+] as const;
+
+type ColorWhipDialect = (typeof COLOR_WHIP_DIALECTS)[number];
+
+function colorWhipDialect(segmentId: string): ColorWhipDialect | null {
+  const match = /color-whip-[a-h]-([a-z]+)/.exec(segmentId);
+  const dialect = match?.[1];
+  if (!dialect) return null;
+  return (COLOR_WHIP_DIALECTS as readonly string[]).includes(dialect)
+    ? (dialect as ColorWhipDialect)
+    : null;
+}
+
+function ColorWhipField({ dialect }: { dialect: ColorWhipDialect }) {
+  const layered = dialect === 'phosphor' || dialect === 'chase' || dialect === 'hit';
+
+  return (
+    <div className={`color-whip-field color-whip-field--${dialect}`} aria-hidden="true">
+      {layered ? (
+        <>
+          <div className="color-whip-field__layer" />
+          <div className="color-whip-field__layer" />
+          <div className="color-whip-field__layer" />
+        </>
+      ) : null}
+    </div>
+  );
+}
 
 function segmentDwellSec(segment: CutawaySegment): number {
   return segment.durationSec === 0 ? MIN_DWELL_SEC : segment.durationSec;
@@ -80,11 +117,13 @@ export default function CutawayPreview({
     setIsPlaying((prev) => !prev);
   };
 
+  const whipDialect = colorWhipDialect(activeSegment.id);
+
   return (
     <div
       className={`overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950/95 ${className}`}
     >
-      <div className="relative aspect-video bg-black">
+      <div className="relative aspect-video overflow-hidden bg-black">
         {activeSegment.previewUrl ? (
           <video
             key={activeSegment.id}
@@ -109,6 +148,8 @@ export default function CutawayPreview({
                 : { animationDuration: `${Math.max(segmentDwellSec(activeSegment), 3)}s` }
             }
           />
+        ) : whipDialect ? (
+          <ColorWhipField key={activeSegment.id} dialect={whipDialect} />
         ) : (
           <div className="flex h-full flex-col items-center justify-center gap-2 p-4 text-center">
             <Sparkles size={22} className="text-zinc-600" />

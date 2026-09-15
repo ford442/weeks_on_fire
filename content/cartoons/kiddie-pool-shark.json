@@ -1,0 +1,22 @@
+{
+  "id": "kiddie-pool-shark",
+  "title": "Kiddie Pool Shark",
+  "premise": "A great white is doing laps in a two-foot plastic pool. It is wearing floaties. The rubber duck is the one having the crisis.",
+  "visual": "Backyard, chain-link, a cheap blue kiddie pool overflowing. A huge cartoon shark jammed in it, dorsal fin taller than the fence, two bright orange water-wings on its pectoral fins. It grins at a trembling yellow rubber duck on the rim. A garden gnome watches with opera glasses. Hose still running.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Pure cutaway. Use after anyone says they are keeping it casual. The gnome is the only adult in the yard and is not helping.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "shark",
+    "pool",
+    "slapstick",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a suburban backyard, a tiny cheap blue plastic kiddie pool overflowing, an enormous cartoon great white shark jammed into the pool so its dorsal fin is taller than the chain-link fence, bright orange inflatable water-wings on both pectoral fins, the shark smiling a huge toothy grin at a tiny yellow rubber duck shaking on the pool rim, a garden gnome on the grass watching through tiny opera glasses, a running garden hose pouring more water, summer sun, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache backyard, faint cel dust, exaggerated squash-and-stretch, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The shark inches one lap in a circle that the pool cannot support; the whole pool rotates with it. Water sloshes. The duck's beak chatters. The gnome lowers the opera glasses and raises them again. The floaties squeak. Do not have the shark eat the duck.",
+  "notes": "Floaties plus the duck's face is the thumbnail. If the shark looks scared the still has failed — it is thrilled to be here. No pool-rules sign, no readable text. Not a Jaws poster gag; it is a backyard problem.",
+  "agent": "grok"
+}

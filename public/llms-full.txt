@@ -120,6 +120,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | desert-rose-horizon | Desert Rose Horizon | Atmospheric pedal-steel | Series cutaway |
 | empty-parking-lot-waltz | Empty Parking Lot Waltz | Slow cinematic waltz / dark cabaret | Post-party cutaway |
 | end-card-holds | End Card Holds | Deep progressive | Catalog / Night Side |
+| exhibit-a | Exhibit A | Courtroom doo-wop / vanished choir | Musical cutaway / Laser Dot Jury |
 | first-light-salt-flats | First Light Salt Flats | Luminous dawn pedal-steel | Series cutaway |
 | g-train-fluorescent | G Train Fluorescent | Commute techno | Catalog / Night Side |
 | ghost-in-the-reverb | Ghost in the Reverb | Spectral slide-steel nocturne | Series cutaway |
@@ -147,6 +148,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | no-music-here | No Music Here | Sparse soul | Catalog / Cue Sheets |
 | out-on-the-cut | Out on the Cut | Clipped downtempo | Catalog / Cue Sheets |
 | pad-kid-poured-curd | Pad Kid Poured Curd (Pulled Cold) | Cold patter electro / recall bulletin | EyeWash Station / late correction |
+| passing-lane | Passing Lane | Outlaw country chase song at walking speed | Musical cutaway / Snail Passing Lane |
 | pearls-in-the-ashtray | Pearls in the Ashtray | Smoked midnight jazz | After-gala cutaway |
 | pepperoni-or-margherita | Pepperoni or Margherita | Commercial jingle → minor-key piano ballad | Episode 03 / any crossover |
 | permit-for-the-purple-light | Permit for the Purple Light | Bureaucratic bossa nova / clipboard lounge | Episode 04 / HOA |
@@ -179,6 +181,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | triphthong-table | Triphthong Table | Educational cabaret duet | Musical cutaway |
 | twilight-time | Twilight Time | 90s rave / eurodance | Character Archive |
 | two-chairs-one-mirror | Two Chairs, One Mirror | Torch-song waltz / dressing-room chamber pop | Musical cutaway / The Two |
+| two-left | Two Left | Vending-machine Motown / girl-group soul | Musical cutaway / Life Vending |
 | two-db-and-dont-tell-me | Two dB and Don't Tell Me | Fader blues | Catalog / Cue Sheets |
 | under-dialogue | Under Dialogue | Ducked soul / room-tone ballad | Catalog / Cue Sheets |
 | well-fall | Well Fall | Instrumental heavy metal | Musical Cutaway / Visual Experiment |
@@ -214,6 +217,7 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **Cat POV** (cat-pov) — No dialog. The Episode 3 black cat walks Halloween, watches the laser lawn, clocks the Pizza Guy from ankle height, and is still on the driveway when the purple light becomes décor.
 - **Choose Your Basalt** (choose-your-basalt) — Dead-pan educational cabaret duet: Lillith and Rubella classify lava types in their gothic living room, then the floor opens onto magma. Ends with “That’s nature for us” / “Science.” before a Twilight Time trance smash-cut.
 - **Chroma Bath** (chroma-bath) — Pure non-representational color. No object at all — no blob, no sphere, no horizon, no figure. Eight segments, each a different processing dialect applied to a swirling color field: ink bleed, video feedback, slit-scan, datamosh, refraction, print misregistration, granulation, bleach. There is no black in the piece; the darkest value is a glowing indigo.
+- **Color Whip** (color-whip) — Pure non-representational color at warehouse tempo. No object — no blob, no sphere, no horizon, no figure. Eight six-second dialects: strobe invert, whip smear, phosphor stack, smash zoom, channel chase, hard cuts, vortex spin-up, white hit. The slow sibling is Chroma Bath. This one hits.
 - **Empty Highway Confession** (empty-highway-confession) — 4:17 a.m. The driver talks to the radio. Billboard: KEEP GOING. No advertiser.
 - **EyeWash Station Idents** (eyewash-idents) — Six analog bumpers: Please Stand By, Rinse Cycle, Unscheduled Programming, Aspect Ratio Matters, We Always Return, 3:44 Again. One still, one sting, one Continuity Voice line each. Nobody comments on the frame.
 - **Cities in the Shell** (gag-cities-in-the-shell) — 2 a.m. oyster bar; each opened shell holds a tiny lit city; she squeezes lemon over one and sets it aside. Tonight's selection is a little metropolitan. Vivienne.
@@ -277,20 +281,32 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 
 Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>.json`. Promote winners to Suggestions.
 
+- **Bull in China** (bull-in-china, sketched) — The china shop's most fragile piece is a tiny porcelain elephant. The bull is the one tiptoeing. He is sweating through a bow tie.
 - **Cereal Wolf** (cereal-wolf, sketched) — A wolf in a bathrobe pours cereal. The wolf on the box is also in a bathrobe, also pouring cereal, also looking at a smaller box. He notices. He shrugs. He keeps eating.
 - **Consensus** (consensus, sketched) — Every model on the runway, every guest in the seats, and the designer taking her bow have arrived at the same beautiful face. One bored woman in the front row is the last remaining variation, and nobody has told her she won.
 - **Courtesy Shuttle** (courtesy-shuttle, sketched) — The afterlife boards like a regional airport. The gate is polite. The weather system in first class is a carry-on dispute.
+- **Cow Moon Claim** (cow-moon-claim, sketched) — The cow jumped over the moon. The moon has a cow-shaped dent. The cow is filing it. A sheep is taking photos for the claim.
 - **Crow Channel** (crow-channel, sketched) — A crow has the remote. Every channel is the same crow, in the same chair, with the same remote. He thinks this is excellent television.
 - **Fence Cat Opera** (fence-cat-opera, sketched) — The black cat on the repeating fence opens its mouth. An entire opera chorus of tiny tuxedoed frogs marches out. The cat does not change expression.
 - **Fig. 4** (fig-four, sketched) — The diagram is exquisite: labeled, cross-sectioned, arrowed, dimensioned in units that are not units. It describes a device that does not exist and is not mentioned anywhere else. It is captioned Fig. 4. There is no Fig. 1, 2, or 3. Everyone is taking notes.
 - **Fluent** (fluent, sketched) — Every sign in the arcade is beautifully set, expensively lit, and not quite a word. She is the only person in the building who knows where she is going.
+- **Fly of the Day** (fly-of-the-day, sketched) — The waiter is a fly. The diner is a frog. The fly is presenting the menu. The frog is looking at the waiter.
+- **Giraffe Window** (giraffe-window, sketched) — The giraffe uses the drive-thru. The neck goes in one window, around the building, and out the other window so it can talk to the cashier from behind. The cashier is a mouse. The giraffe is still in the car.
 - **Hold Music** (hold-music, sketched) — A full symphony orchestra in a gilded hall, playing beautifully, to one telephone on a velvet chair. Somebody is on hold. The conductor will not stop until they pick up.
+- **Kiddie Pool Shark** (kiddie-pool-shark, sketched) — A great white is doing laps in a two-foot plastic pool. It is wearing floaties. The rubber duck is the one having the crisis.
+- **Laser Dot Jury** (laser-dot-jury, sketched) — The prosecutor points to Exhibit A: a red laser dot on the wall. The entire jury of cats is already gone. They are the exhibit.
+- **Life Vending** (life-vending, sketched) — A cat buys another life from a vending machine. The coil drops a heart. The display says two left. The cat pays with a fish and does not say thank you.
 - **Mailbox Mallard** (mailbox-mallard, sketched) — A mallard in a too-small red convertible knocks down every mailbox on the cul-de-sac, then tips his cap at us like this was always the plan.
+- **Moose Hygienist** (moose-hygienist, sketched) — The patient is a moose. The dentist is a woodpecker. The antlers are already through the ceiling tiles. Both of them are acting like this is a cleaning.
 - **Pin Cat** (pin-cat, sketched) — Cats bowling. One of them is standing in the pin triangle holding a tiny white flag. The ball is already halfway down the lane.
 - **Possum Poker** (possum-poker, sketched) — Five possums are mid-hand inside a pizza delivery bag. A human hand reaches in. They all play dead without putting the cards down.
 - **Previously On** (previously-on, sketched) — The goldfish has watched every episode. It is briefing the empty couch. Nobody is home. It mouths the entire recap anyway.
+- **Rooster Snooze** (rooster-snooze, sketched) — The rooster hits snooze. The sun is already in the window tapping a watch. The farmers are on the lawn with pitchforks. The rooster puts in earplugs.
 - **Service for Six** (service-for-six, sketched) — The sommelier presents the bottle with a hand that has one finger too many. The extra finger is doing the most careful part of the job — steadying the label so it faces the guest. Nobody at the table looks up.
+- **Shade Hearing** (shade-hearing, sketched) — Three raccoons in tiny robes are hearing a squirrel for the wrong blue. The evidence is the bin. The swatch is taped to the gavel. This is going on the record.
 - **Sheep Who Count People** (sheep-who-count-people, sketched) — A sheep is trying to sleep by counting humans jumping a fence. The humans are the pizza guy, two women in black lace, and a plastic skeleton, on a loop. It is not working. The sheep is furious.
+- **Snail Passing Lane** (snail-passing-lane, sketched) — A snail with a spoiler is using the passing lane. The cars behind it have cobwebs. One driver is a skeleton still honking.
+- **Stork Wrong Address** (stork-wrong-address, sketched) — The stork has the right nest and the wrong baby. The flamingos check the clipboard. The baby alligator waves. Nobody is sending it back.
 - **The Far End of the Table** (the-far-end-of-the-table, sketched) — The near end of the dinner party is photoreal. The far end has not finished. Those guests are smooth, beautiful, and blank, their silverware has the wrong number of tines, and the service continues down the length of the table without comment.
 - **The Long Weekend** (the-long-weekend, seed) — The calendar on the kitchen wall has run out of days and kept going. Saturday appears nine times in a row, in the same confident handwriting, and somebody has been dutifully crossing each one off.
 - **The Loupe** (the-loupe, sketched) — She magnifies the photograph and finds a street that was never in it. She magnifies the street and finds a window. She magnifies the window and someone is looking back. She has not stopped.

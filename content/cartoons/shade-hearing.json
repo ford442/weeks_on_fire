@@ -1,0 +1,22 @@
+{
+  "id": "shade-hearing",
+  "title": "Shade Hearing",
+  "premise": "Three raccoons in tiny robes are hearing a squirrel for the wrong blue. The evidence is the bin. The swatch is taped to the gavel. This is going on the record.",
+  "visual": "Backyard fence used as a bench. Three raccoons in black robes and white wigs, middle one with a gavel that has a paint chip taped to it. Defendant squirrel in a tiny tie. Exhibit: a recycling bin that is obviously a different blue, sitting in the grass with a color-swatch card hung on it. Neighborhood cats in lawn chairs as the gallery, eating popcorn.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "HOA energy with the species swapped. Brad's wrong-blue bin, now a criminal case. Karen would approve the robes. Dale is the middle raccoon if you need him.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "raccoons",
+    "squirrel",
+    "hoa",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a suburban backyard, a wooden fence used as a judge's bench, three raccoons in black robes and white wigs, the middle raccoon raising a gavel with a paint-color chip taped to it, a squirrel defendant in a tiny necktie standing next to a recycling bin that is a clearly different shade of blue from two other bins in a row, a color-swatch card hanging on the wrong bin with no readable words, neighborhood cats sitting in lawn chairs eating popcorn as the gallery, a plastic skeleton watching from the next yard, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache backyard, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. The gavel chips once. The squirrel's tail bushed. One gallery cat claps. The two correct-blue bins look smug. Do not correct the color. No captions, no HOA lettering on the robes.",
+  "notes": "The joke is the three bins in a row — two match, one does not — so the color difference has to be loud. Not Karen with a clipboard; she is retired from this gag. The skeleton is a wink, not the punchline. Distinct from laser-dot-jury: this courtroom stays seated.",
+  "agent": "grok"
+}

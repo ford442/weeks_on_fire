@@ -1,0 +1,22 @@
+{
+  "id": "cow-moon-claim",
+  "title": "Cow Moon Claim",
+  "premise": "The cow jumped over the moon. The moon has a cow-shaped dent. The cow is filing it. A sheep is taking photos for the claim.",
+  "visual": "Night pasture. Cow in a neck brace and one tiny sling, sitting on a stool, filling a clipboard with a hoof. The moon hangs low with a clear cow-shaped crater and is slightly crooked. Flash: a sheep photographer in a vest. A dish of spilled milk. Stars like they'd been knocked a half-inch.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Nursery-rhyme aftermath as an insurance commercial. Could air as an EyeWash Station bump. No series regulars.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "cow",
+    "moon",
+    "sheep",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a night pasture, a cartoon cow sitting on a milking stool wearing a white neck brace and one tiny arm sling, filling out a clipboard with a pencil held in a hoof, behind the cow a huge full moon hanging too low with a clear cow-shaped dent in it and the moon knocked slightly crooked, a sheep photographer in a press vest popping a bright camera flash at the dent, a spilled bucket of milk, a wooden fence, a few stars knocked off their grid, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache night field, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The flash pops once. The moon wobbles and settles still crooked. The cow ticks a box. The neck brace squeaks. Do not have the cow jump again — this is the paperwork scene.",
+  "notes": "The dent has to read as a cow silhouette at thumbnail size. Clipboard is a prop; no readable form text, no CLAIM TITLE. Not a space gag and not Complaint Window — this is a field, a brace, a flash. Keep the cow annoyed, not tragic.",
+  "agent": "grok"
+}

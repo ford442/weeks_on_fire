@@ -1,0 +1,22 @@
+{
+  "id": "bull-in-china",
+  "title": "Bull in China",
+  "premise": "The china shop's most fragile piece is a tiny porcelain elephant. The bull is the one tiptoeing. He is sweating through a bow tie.",
+  "visual": "Aisle of teacups and plates. A huge nervous bull in a tiny bow tie, on tiptoe, two fingers of hoof holding a teacup. Pedestal in the center: a palm-sized porcelain elephant with a price tag that is just a dollar sign. Sweat drops. A mouse shopkeeper watching with a feather duster, equally nervous.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "Idiom with the polarity flipped. Cutaway after anyone says they will be careful. The mouse is management. The bull is trying.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "bull",
+    "elephant",
+    "shop",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a china shop aisle packed with teacups and plates, a huge nervous cartoon bull in a tiny bow tie standing on tiptoe holding a teacup with two hoof-fingers, giant sweat drops flying off the bull, on a central pedestal a palm-sized porcelain elephant figurine with a tiny price tag that is only a dollar sign, a mouse shopkeeper on a ladder watching with a feather duster equally nervous, shelves receding, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache shop interior, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The bull's knee wobbles. The teacup rattles. The porcelain elephant does not move. One sweat drop hits a saucer and rings. The mouse covers its eyes. Nothing breaks. Hold the tiptoe.",
+  "notes": "Tiny elephant vs huge bull is the still — if they are the same scale the reverse-idiom dies. No shop-name lettering. Do not smash the aisle on the last frame; the joke is the care, not the crash. Distinct from mailbox-mallard slapstick: this one is not allowed to connect.",
+  "agent": "grok"
+}

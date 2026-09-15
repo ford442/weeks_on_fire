@@ -1,0 +1,22 @@
+{
+  "id": "stork-wrong-address",
+  "title": "Stork Wrong Address",
+  "premise": "The stork has the right nest and the wrong baby. The flamingos check the clipboard. The baby alligator waves. Nobody is sending it back.",
+  "visual": "Cliff nest at sunset. Tall pink stork in a courier cap, delivery satchel, holding a bundled baby alligator with a blue bow. Two flamingos on the nest, one holding a clipboard with a picture of a flamingo chick, the other poking the alligator. The alligator is waving. A trail of other storks in the sky, all carrying equally wrong animals.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "Cutaway after anyone says they confirmed the reservation. The stork is the Pizza Guy's energy without the bag — calm, already leaving.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "stork",
+    "alligator",
+    "flamingo",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cliffside stick nest at sunset, a tall pink stork wearing a courier cap and a delivery satchel holding out a bundled baby alligator with a blue bow, two adult flamingos standing on the nest one holding a clipboard that shows a picture of a baby flamingo not words, the other flamingo poking the alligator with one wing, the baby alligator waving happily, distant storks in the sky carrying a baby penguin and a baby octopus, painted gouache canyon and orange sky, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. The alligator waves. The flamingo with the clipboard flips it, sees the same picture, looks back. The stork checks a wristwatch that is a sundial. One distant stork drops a baby cactus into a nest. The local stork is already leaning away to leave. No dialogue card.",
+  "notes": "The clipboard must be a picture of a flamingo chick, never readable text. The alligator has to look pleased, not scary. Extra wrong deliveries in the sky sell that this is a logistics day, not a one-off mix-up. Do not put the Pizza Guy in the satchel.",
+  "agent": "grok"
+}

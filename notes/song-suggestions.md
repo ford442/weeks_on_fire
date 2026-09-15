@@ -26,6 +26,7 @@ weeks_of_fire tracks should feel like **late-night affiliate programming** that 
 - [Article Seven](../songs/Article_Seven.md) · [Heart Rate Optimal](../songs/Heart_Rate_Optimal.md) · [This Program Contains Dialogue](../songs/This_Program_Contains_Dialogue.md) — joke/unusual pack, graduated 2026-08-19: union pause on the Ep3 lawn, wellness-notification ballad locked at 78 BPM, EyeWash legal bumper that is not dialogue until someone talks
 - [Heels or No Entry](../songs/Heels_or_No_Entry.md) · [Call Forty-Seven](../songs/Call_Forty-Seven.md) · [The Roof Knows How to Wait](../songs/The_Roof_Knows_How_to_Wait.md) · [Receipt Dated Thursday](../songs/Receipt_Dated_Thursday.md) · [Closed Since Ninety-Eight](../songs/Closed_Since_Ninety-Eight.md) · [The Most Refreshing Drink](../songs/The_Most_Refreshing_Drink.md) — original-title pack, graduated 2026-09-06: Velvet Rope door policy, 911 hold accretion, ruin ventilation, Biscuit’s Thursday receipt, dead-station carpool, Ultra-Refreshed sponsor bed
 - [Well Fall](../songs/Well_Fall.md) — instrumental heavy metal well-drop (~90s, no vocal); sight bank open in [`ideas/well-fall.md`](../ideas/well-fall.md), graduated 2026-09-11
+- [Two Left](../songs/Two_Left.md) · [Exhibit A](../songs/Exhibit_A.md) · [Passing Lane](../songs/Passing_Lane.md) — cartoon-cutaway joke pack, graduated 2026-09-14: vending-machine Motown that counts down remaining lives, courtroom doo-wop whose choir follows a laser tick off the grid, outlaw-country chase song at 48 BPM with a 140 click
 
 Gag pairings: [`one-panel-gags.md`](one-panel-gags.md). All of the above also appear on the site **Suggestions** view.
 
@@ -80,6 +81,50 @@ Suggestions id `well-fall`.
 Glam-Sham-Poo joke-commercial energy.
 
 **Status:** ✅ **GRADUATED** → [`songs/Well_Fall.md`](../songs/Well_Fall.md)
+
+---
+
+## Cartoon-cutaway joke pack (graduated 2026-09-14)
+
+Three Minimax comedy tracks for the 90s-animal parking lot. Professionally
+neutral; the joke is the meter. Not *Nine Percent Battery* (dying device),
+not *Article Seven* (union pause), not *Pepperoni or Margherita* (delivery).
+
+| Pitch | Cartoon still | Production file | Status |
+|-------|---------------|-----------------|--------|
+| **Two Left** | [`life-vending`](../content/cartoons/life-vending.json) | [`songs/Two_Left.md`](../songs/Two_Left.md) | ✅ graduated — ready for Minimax |
+| **Exhibit A** | [`laser-dot-jury`](../content/cartoons/laser-dot-jury.json) | [`songs/Exhibit_A.md`](../songs/Exhibit_A.md) | ✅ graduated — ready for Minimax |
+| **Passing Lane** | [`snail-passing-lane`](../content/cartoons/snail-passing-lane.json) | [`songs/Passing_Lane.md`](../songs/Passing_Lane.md) | ✅ graduated — ready for Minimax |
+
+### Pitch: "Two Left"
+
+**Type:** musical cutaway / gag pairing  
+**Working title:** Two Left  
+**Genre / BPM / voice:** Vending-machine Motown, 108 BPM, Lillith  
+**Show fit:** Life Vending cartoon; 2 AM sidewalk  
+**Hook or structural flaw:** Coil-drop dings count down 3–2–1–0; zero is silence.  
+**Why it might be fun:** She can reach the machine. She is restocking, not praying.  
+**Status:** ✅ **GRADUATED** → [`songs/Two_Left.md`](../songs/Two_Left.md)
+
+### Pitch: "Exhibit A"
+
+**Type:** musical cutaway / gag pairing  
+**Working title:** Exhibit A  
+**Genre / BPM / voice:** Courtroom doo-wop, 92 BPM, dog prosecutor tenor  
+**Show fit:** Laser Dot Jury cartoon  
+**Hook or structural flaw:** 5 kHz laser tick every 7 seconds, off-grid; choir leaves mid-vowel.  
+**Why it might be fun:** The evidence speaks. The evidence is a dot. The jury is airborne.  
+**Status:** ✅ **GRADUATED** → [`songs/Exhibit_A.md`](../songs/Exhibit_A.md)
+
+### Pitch: "Passing Lane"
+
+**Type:** musical cutaway / gag pairing  
+**Working title:** Passing Lane  
+**Genre / BPM / voice:** Outlaw country chase song, 48 BPM against a 140 click, proud baritone  
+**Show fit:** Snail Passing Lane cartoon  
+**Hook or structural flaw:** Kick every two bars; drum fill counted and never played.  
+**Why it might be fun:** He has a spoiler. He is using the lane as labeled.  
+**Status:** ✅ **GRADUATED** → [`songs/Passing_Lane.md`](../songs/Passing_Lane.md)
 
 ---
 

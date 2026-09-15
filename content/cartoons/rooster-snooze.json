@@ -1,0 +1,22 @@
+{
+  "id": "rooster-snooze",
+  "title": "Rooster Snooze",
+  "premise": "The rooster hits snooze. The sun is already in the window tapping a watch. The farmers are on the lawn with pitchforks. The rooster puts in earplugs.",
+  "visual": "Farmhouse bedroom. Rooster in a striped nightcap in a too-small bed, slamming a giant red snooze mushroom. Sun with a face filling the window, tapping a wristwatch. Three farmers on the lawn with pitchforks and coffee, looking up. Alarm clock with its bells already fallen off.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Cutaway after anyone says five more minutes. The sun is management. The rooster is labor.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "rooster",
+    "sun",
+    "farm",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a farmhouse bedroom, a cartoon rooster in a striped nightcap lying in a too-small bed slamming a giant red snooze button the size of a mushroom, a sun with a face filling the window and tapping a wristwatch, three farmers on the lawn outside holding pitchforks and coffee mugs looking up at the window, a brass alarm clock with both bells fallen off, slippers, a quilt, morning light, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache bedroom, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. Snooze slams. The sun taps the watch twice. One farmer sips coffee. The rooster inserts tiny earplugs and pulls the quilt up. The alarm clock's last spring pings out. The sun does not go away.",
+  "notes": "Sun-with-a-watch is the thumbnail; do not skip the face. No readable AM digits on the clock — bells on the floor do the time joke. Do not let the rooster crow; the gag is the refusal. Farmers are background, not a mob.",
+  "agent": "grok"
+}

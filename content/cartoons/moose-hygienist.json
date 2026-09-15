@@ -1,0 +1,22 @@
+{
+  "id": "moose-hygienist",
+  "title": "Moose Hygienist",
+  "premise": "The patient is a moose. The dentist is a woodpecker. The antlers are already through the ceiling tiles. Both of them are acting like this is a cleaning.",
+  "visual": "Dental office, too small. Moose crammed in the chair, antlers punched through two ceiling tiles with dust raining. Woodpecker in a tiny white coat, goggles, drill like a jackhammer, tapping a tooth professionally. Beaver receptionist in the window giving a thumbs-up. Tray of comically small tools.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Workplace professionalism as the gag. No series faces. The beaver is the only one who knows this happens every Tuesday.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "moose",
+    "woodpecker",
+    "dentist",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a too-small dental office, a huge cartoon moose crammed into a dental chair with its enormous antlers punched up through two ceiling tiles and plaster dust raining down, a woodpecker dentist in a tiny white coat and goggles holding a drill the size of a jackhammer tapping one front tooth very professionally, a beaver receptionist visible through the window giving a thumbs-up, a tray of comically tiny dental tools, a hanging lamp, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache clinic, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The woodpecker drills one burst. A third ceiling tile cracks. The moose's eye twitches; the smile stays a polite grimace. Dust puffs. The beaver flips a magazine. No screaming. No tooth flying out of frame.",
+  "notes": "Antlers through the ceiling is the thumbnail. If the moose is panicking it becomes a pain gag; keep it a scheduling gag. No readable clinic name on the window. Distinct from Pin Cat — nobody here is being used as equipment; they just do not fit.",
+  "agent": "grok"
+}

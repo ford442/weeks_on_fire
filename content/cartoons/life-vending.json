@@ -1,0 +1,22 @@
+{
+  "id": "life-vending",
+  "title": "Life Vending",
+  "premise": "A cat buys another life from a vending machine. The coil drops a heart. The display says two left. The cat pays with a fish and does not say thank you.",
+  "visual": "Night sidewalk. Beat-up vending machine stocked with cartoon hearts in coils. Cat on its hind legs punching a button, a fish hanging from the coin slot like a bill. One heart thunked in the tray. A little window of remaining lives: two hearts, one empty coil. A dog watching with a rolled newspaper, judging.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "saturday-morning weird",
+  "characterLean": "Could air as an EyeWash ident. Not the Episode 3 fence cat — this is a street cat with a tab. The dog is the only moral authority and is unused.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "cat",
+    "vending",
+    "lives",
+    "weird"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a night city sidewalk, a beat-up vending machine whose coils hold cartoon hearts instead of snacks, an orange tabby cat standing on its hind legs punching a button, a whole fish stuck in the coin slot like a dollar bill, one heart already thunked into the delivery tray, a small remaining-stock window showing two hearts and one empty coil, a dog standing to the side holding a rolled newspaper and looking judgmental, a streetlamp, a trash can, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache street, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The coil turns. A heart drops. The remaining window ticks from two to one by the heart sliding down — or just sit on two. The cat picks up the heart without looking at the dog. The fish wags once in the slot. No readable branding on the machine.",
+  "notes": "Hearts in the coils are the thumbnail; if they look like candy the gag is a snack joke. No LIFE 1UP lettering — the machine should read as lives without text. Distinct from laser-dot-jury: this cat is shopping, not serving. Do not make it sad; the cat is restocking.",
+  "agent": "grok"
+}

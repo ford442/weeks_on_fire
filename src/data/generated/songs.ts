@@ -248,6 +248,19 @@ export const songs: Song[] = [
     sourceFile: "End_Card_Holds.md"
   },
   {
+    id: "exhibit-a",
+    title: "Exhibit A",
+    genre: "Courtroom doo-wop / vanished choir",
+    description: "A dog prosecutor presents a red laser dot. The cat choir never finishes a vowel. The downbeat is the click they follow instead of the conductor.",
+    episode: "Musical cutaway / Laser Dot Jury",
+    stylePrompt: "Courtroom doo-wop, 92 BPM, B-flat major. Deadpan tenor lead (dog prosecutor in a rumpled suit — warm, sincere, selling the case to an empty box). Finger snaps on 2 and 4. Upright bass walking. One piano stab on the word \"exhibit.\" No drums except a gavel that is always late. Backup: a cat choir stacked in close harmony who are supposed to hold \"ooo.\" **Structural flaw:** a 5 kHz laser-pointer tick lands every 7 seconds, off the grid, never on a bar line. Each tick, the choir abandons the chord mid-phoneme and the stereo image of them yanks hard right toward the tick; the prosecutor keeps conducting the space they left. By the last chorus there is no choir, only the lead and the tick. Do not bring the cats back for a button. Mood: a trial that is going extremely well for nobody. Runtime ~1:30–1:50. Do not use Continuity Voice (this is not the station). Do not use Dale's gavel as a joke prop — a different bulldog, a different local.",
+    lyrics: "[Intro — snaps, one late gavel]\nThe people call Exhibit A.\n(tick)\nPlease remain seated.\n\n[Verse 1]\nLadies and gentlemen of the jury\nI have a light\nI have a wall\nI have a theory of the case\nThe theory is: look\nThe theory is: look again\nYou may not pounce\nThat is in the instructions\n\n[Pre-Chorus]\nIf you would hold the \"ooo\"\nIf you would hold the room\nIf you would not\n\n[Chorus]\nExhibit A\nA red fact on a beige wall\nExhibit A\nI rest, I rise, I point\nExhibit A\nPlease do not follow it\nPlease follow me\n(tick)\n(choir gone for one bar)\n\n[Verse 2]\nThe defendant is also a cat\nThe defendant is also airborne\nI did not call the defendant to the air\nI called the defendant to the stand\nThe stand is still here\nThe defendant is not\n\n[Pre-Chorus]\nYour honor I object to physics\nYour honor I object to joy\nYour honor I object to the way\nA red thing wins a room\n\n[Chorus 2 — choir thinner]\nExhibit A\nStill the same dot\nExhibit A\nStill the same wall\nExhibit A\nI have notes\nI have a suit\nI have no jury\n(tick)\n\n[Bridge — tenor alone, snaps continue]\nI was told the evidence would speak\nThe evidence is a circle\nThe evidence does not speak\nThe evidence moves one inch\nAnd the law moves with it\nI am still talking\nThat is also in the instructions\n\n[Final]\nExhibit A\nI point\nExhibit A\nI rest\nExhibit A\n(tick)\n(no choir)\nPlease remain seated.\nThe seats are empty.\nThat is my case.",
+    notes: "## What the song is\nThe prosecutor did not bring a laser to court so the jury would leave. He brought it because it was Exhibit A. The cats did what cats do. He continues, professionally, to an empty box, because the instructions said remain seated and he is the only one who read them.\n\nThe joke is the tick, not the cats being cute. Nobody meows on the record. Nobody says \"cats, am I right.\"",
+    instrumental: false,
+    tags: ["doo-wop", "courtroom", "comedy", "cats", "laser", "cartoon"],
+    sourceFile: "Exhibit_A.md"
+  },
+  {
     id: "first-light-salt-flats",
     title: "First Light Salt Flats",
     genre: "Luminous dawn pedal-steel",
@@ -600,6 +613,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["continuity-voice", "eyewash-station", "patter", "recall", "comedy"],
     sourceFile: "Pad_Kid_Poured_Curd.md"
+  },
+  {
+    id: "passing-lane",
+    title: "Passing Lane",
+    genre: "Outlaw country chase song at walking speed",
+    description: "A proud baritone sells a high-speed pass. The click is 140. The band is 48. A skeleton horn is the only thing on time, and it has been honking since last autumn.",
+    episode: "Musical cutaway / Snail Passing Lane",
+    stylePrompt: "Outlaw country chase song, advertised as 140 BPM, performed at 48 BPM, E major. Deadpan baritone lead (professionally proud, zero wink, not Pizza Guy). Telecaster with slight slapback, pedal steel that takes four bars to finish a two-note phrase, upright bass on one and three only. A click track at 140 BPM is audible in the headphones and leaks into the left side of the mix; the band ignores it. **Structural flaw:** the kick is one beat every two bars. A distant skeleton car-horn sits on the 140 grid and never desyncs from the click; it is the only on-time performer. A drum fill is counted off at the end of every chorus and never arrives because the fill would take four bars at this tempo. Mood: left lane, slime trail, cobwebs on the bumpers, a checkered flag that has not moved. Runtime ~1:45–2:05. Do not use Rubella. Do not swing it into a waltz to be clever.",
+    lyrics: "[Intro — click leaking, one horn]\nI am passing.\nI have been passing.\nI will complete the pass.\n\n[Verse 1]\nGot a stripe on the shell and a spoiler I paid for\nGot a helmet that fits if I don't breathe in\nLeft lane is a promise I intend to keep\nThe cars behind me can wait their turn\nThey have been waiting\nThat is their contribution\n\n[Pre-Chorus]\nYou can go around\nYou will not go around\nThat is also a lane\nI checked\n\n[Chorus]\nPassing lane\nI live here\nPassing lane\nI am the traffic\nPassing lane\nWave if you want\nI will wave when I arrive\n(horn, on the click)\n(drum fill counted: a-one, a-two — fill does not start)\n\n[Verse 2]\nThere's a nest on a hood two lengths back\nThere's a web in a grille that has weather now\nThere's a gentleman in a convertible\nWho has been honking since the leaves were on\nI respect the commitment\nI will not pull over for it\n\n[Pre-Chorus]\nCheckered flag is still a rumor\nCheckered flag is still ahead\nI can see it if I don't blink\nI don't blink\n\n[Chorus 2]\nPassing lane\nI live here\nPassing lane\nI am the traffic\nPassing lane\nThey can change lanes\nThey have not\nThat is the hymn\n(horn)\n(a-one, a-two — no fill)\n\n[Bridge — steel takes the whole section to say two notes]\nI am not slow\nI am thorough\nI am not blocking\nI am using the lane as labeled\nIf you wanted a different label\nYou should have brought a different sign\nI brought a spoiler\nThat should have been enough\n\n[Final]\nPassing lane\nI live here\nPassing lane\n(horn, still on time)\nPassing lane\nI will complete the pass\n(click continues)\n(band does not)\n(a-one, a-two)\n(the fill would have been here)",
+    notes: "## What the song is\nA chase song whose hero is a snail in the passing lane. He is not embarrassed. He has the correct equipment. The skeleton in the convertible has been honking since Episode 3 and is still on the clock; that is respect, not a complaint. The cobwebs are a time signature.\n\nThe joke is the tempo. Nobody says \"snail's pace.\" Nobody asks him to move.",
+    instrumental: false,
+    tags: ["country", "comedy", "snail", "highway", "cartoon", "skeleton"],
+    sourceFile: "Passing_Lane.md"
   },
   {
     id: "pearls-in-the-ashtray",
@@ -1018,6 +1044,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["waltz", "torch-song", "chamber-pop", "lillith", "rubella", "vale-sisters", "the-two", "house-of-mirrors", "made-by-fable"],
     sourceFile: "Two_Chairs_One_Mirror.md"
+  },
+  {
+    id: "two-left",
+    title: "Two Left",
+    genre: "Vending-machine Motown / girl-group soul",
+    description: "Lillith buys another life at 2 AM. The coil is honest. Each chorus has one fewer ding; the last chorus has none and she still holds out her hand.",
+    episode: "Musical cutaway / Life Vending",
+    stylePrompt: "Vending-machine Motown / girl-group soul, 108 BPM, F-sharp minor. Dry close female lead (Lillith, bright, transactional, no belt). Three deadpan backing singers who only sing inventory counts — \"three,\" \"two,\" \"one\" — never \"love,\" never \"baby.\" Kick is a coin slot. Snare is a coil-release thunk. Tambourine on the ands. Baritone sax that plays the vending-motor hum as a riff. No strings. No key change. **Structural flaw:** a sampled coil-drop ding after every chorus, counting down remaining stock. Intro has three dings. After chorus 1, two. After chorus 2, one. After the final chorus, silence where the ding belongs; she still holds the last note as if the heart is coming. Do not add a fake ding in the outro to be kind. Mood: 2 AM sidewalk, one streetlamp, a machine that is better at accounting than anyone she knows. Runtime ~1:40–2:00. Do not use Rubella (she already has a dying device). Do not use Continuity Voice.",
+    lyrics: "[Intro — three dings, then the slot]\n(ding)\n(ding)\n(ding)\nTwo left after this.\nI know. I counted.\n\n[Verse 1]\nI did not come here to discuss it\nI came here with a fish\nThe slot takes what the slot takes\nThe coil does not negotiate\nYou can see the hearts from the sidewalk\nYou can see how many are not there\n\n[Pre-Chorus]\nI am not asking for nine\nI am asking for the one that drops\nI have been this person before\nI have the receipt in my mouth\n\n[Chorus]\nTwo left\nTwo left after this\nI pay, it drops, I leave\nNobody has to watch\nTwo left\nThat is still a number\nThat is still enough to be rude about\n(ding)\n(ding)\n\n[Verse 2]\nThe dog on the corner has a newspaper\nHe is not the clerk\nHe is not the choir\nHe is the only one here with an opinion\nI do not owe him a thank you\nThe machine does not either\n\n[Pre-Chorus]\nOne of these is for later\nOne of these is for the thing I already did\nI am restocking. That is all.\nDo not make it a lesson\n\n[Chorus 2]\nTwo left\nThen one left\nI pay, it drops, I leave\nThe tray is cold on purpose\nTwo left\nI will be back when I am back\nThe coil will still be honest\n(ding)\n\n[Bridge — sax motor-hum only]\nI have used more than I am admitting\nThe empty coil is not a metaphor\nIt is an empty coil\nI can see the next heart from here\nI am not taking it. I said two.\nI am keeping my word to a machine\nWhich is more than I do for a room\n\n[Final Chorus — no ding]\nTwo left\nThen none that I am allowed\nI pay, it drops, I leave\nI hold out my hand\nTwo left\n(silence where the ding belongs)\nI am still holding it.\nI know.\nI counted.",
+    notes: "## What the song is\nLillith at a vending machine that sells lives. She is restocking, not praying. The cat from the cartoon parking lot (`life-vending`) is the usual customer; tonight she is doing the errand herself and does not want a witness. The dog with the newspaper can judge. The machine cannot. That is why she likes it.\n\nThe joke is inventory. Nobody says \"nine lives.\" Nobody thanks the coil.",
+    instrumental: false,
+    tags: ["motown", "soul", "comedy", "lillith", "vending", "cartoon", "lives"],
+    sourceFile: "Two_Left.md"
   },
   {
     id: "two-db-and-dont-tell-me",

@@ -1,0 +1,22 @@
+{
+  "id": "snail-passing-lane",
+  "title": "Snail Passing Lane",
+  "premise": "A snail with a spoiler is using the passing lane. The cars behind it have cobwebs. One driver is a skeleton still honking.",
+  "visual": "Three-lane highway, forced perspective. Tiny racing snail, red stripe, helmet, spoiler, occupying the left lane on a trail of slime. Traffic packed behind: cobwebs between bumpers, a bird nest on a hood, a skeleton in a convertible still pressing the horn. The snail looks thrilled. Checkered flag far ahead, unused.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Cutaway after anyone is 'just going to pass them.' The skeleton has been here since Episode 3 and is still on the clock.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "snail",
+    "highway",
+    "slapstick",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a three-lane cartoon highway in forced perspective, a tiny racing snail with a red stripe, a crash helmet, and a huge spoiler crawling in the left passing lane on a shiny slime trail, a traffic jam stacked behind the snail with cobwebs between car bumpers, a bird nest on one hood, a grinning plastic skeleton in a convertible still pressing the horn, the snail wearing a huge proud grin, a unused checkered flag on a pole far ahead, speed-limit shield with no readable numbers, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache highway and hills, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The snail advances one millimeter. A cobweb gains a fly. The skeleton honks in 4/4. The bird in the nest feeds a chick. The checkered flag does not move. Do not let a car change lanes — they are committed to waiting.",
+  "notes": "Cobwebs plus skeleton is the time joke; the spoiler is the character. No readable road signs or license plates. The skeleton can wink at Episode 3 but do not put the Pizza Guy in the convertible — this is the snail's bit.",
+  "agent": "grok"
+}

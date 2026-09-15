@@ -1,0 +1,22 @@
+{
+  "id": "laser-dot-jury",
+  "title": "Laser Dot Jury",
+  "premise": "The prosecutor points to Exhibit A: a red laser dot on the wall. The entire jury of cats is already gone. They are the exhibit.",
+  "visual": "Cartoon courtroom. Bulldog judge mid-gavel. Dog prosecutor in a tiny suit pointing a laser pointer at a glowing red dot on the far wall. Twelve empty jury chairs, some tipped. A streak of cats in mid-pounce aimed at the dot, eyes huge, claws out, one still wearing its juror badge in the air. The defendant, a calico, is also airborne toward the dot. Nobody is looking at the judge.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "Drop after anyone says 'the evidence speaks for itself.' No Vale sisters. The judge is Dale if you squint and then stop squinting.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "cats",
+    "court",
+    "laser",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cartoon courtroom, a bulldog judge in a black robe slamming a gavel, a dog prosecutor in a tiny rumpled suit pointing a red laser pointer, a bright red laser dot on the far wall, twelve empty jury chairs some tipped over, a streak of cartoon cats in mid-pounce flying toward the red dot with huge eyes and claws out, one cat still wearing a tiny juror badge in mid-air, a calico defendant also leaping at the dot with broken handcuff chains trailing, nobody looking at the judge, wood paneling and a ceiling fan, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache courtroom, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The dot twitches one inch. Every cat mid-course-corrects in the air. The gavel hits. One chair finishes falling. The prosecutor keeps pointing. Do not let a cat actually catch the dot — the miss is the loop.",
+  "notes": "The empty chairs plus the airborne jury is the still. If even one cat is still seated the joke is half-on. No readable case name, no Exhibit sticker text. Not the Episode 3 black cat — these are a random jury of tabbies.",
+  "agent": "grok"
+}

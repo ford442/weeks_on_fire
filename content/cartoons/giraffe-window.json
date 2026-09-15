@@ -1,0 +1,22 @@
+{
+  "id": "giraffe-window",
+  "title": "Giraffe Window",
+  "premise": "The giraffe uses the drive-thru. The neck goes in one window, around the building, and out the other window so it can talk to the cashier from behind. The cashier is a mouse. The giraffe is still in the car.",
+  "visual": "Fast-food shack. Giraffe's body in a too-small convertible at the left window, neck entering, wrapping the entire building as a visible loop, head popping out the right window behind a mouse cashier on a stool. The mouse is taking the order on a notepad of pictures. A bird is sitting on the neck like a railing.",
+  "status": "sketched",
+  "runtime": "~7 seconds",
+  "register": "90s animal gag",
+  "characterLean": "Unmotivated logistics gag. Cutaway after anyone says they will just go around. Not the mailbox mallard's car — different color, different crime.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "giraffe",
+    "drive-thru",
+    "mouse",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a small fast-food drive-thru shack, a giraffe squeezed into a too-small yellow convertible at the left window with its neck going into the window, wrapping all the way around the outside of the building in a big visible loop, and the giraffe's head coming out the right window behind a mouse cashier standing on a stool, the mouse taking an order on a notepad covered in food pictures not words, a small bird perched on the looping neck like a railing, speaker box, parking lot, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache suburban lot, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "7-second lockoff. The neck cinches one inch tighter around the building. The bird walks three steps along it. The mouse flips a page of pictures. The giraffe's head nods from behind. The convertible does not move. Do not collapse the building.",
+  "notes": "The wrap has to read as one continuous neck at thumbnail size — if it looks like two giraffes the gag is dead. No readable menu board. Different car from Mailbox Mallard (yellow, not cherry-red). The mouse is bored, not terrified.",
+  "agent": "grok"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "fly-of-the-day",
+  "title": "Fly of the Day",
+  "premise": "The waiter is a fly. The diner is a frog. The fly is presenting the menu. The frog is looking at the waiter.",
+  "visual": "Candlelit bistro table. Frog in a bib, knife and fork upright, huge hungry grin aimed at a sweating fly in a tiny tuxedo who is holding up a picture-menu of other flies. One giant sweat drop. A lizard at the next table hiding behind a wine list. Candle, checkered cloth, rose in a bottle.",
+  "status": "sketched",
+  "runtime": "~6 seconds",
+  "register": "family-guy cutaway",
+  "characterLean": "Cutaway after anyone asks what you recommend. The fly is talent. The frog is the room.",
+  "tags": [
+    "90s-cartoon",
+    "animals",
+    "fly",
+    "frog",
+    "restaurant",
+    "family-guy-cutaway"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cartoon bistro table with a red checkered cloth and a candle, a big green frog in a white bib holding a knife and fork upright with a huge hungry grin, a tiny fly waiter in a tuxedo and bow tie standing on the table holding up a picture-menu that shows drawings of other flies, one giant cartoon sweat drop flying off the fly, the frog's eyes locked on the waiter not the menu, a lizard diner at the next table hiding behind a wine list, a rose in a bottle, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache restaurant, faint cel dust, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-second lockoff. The fly's knees knock. The menu trembles. The frog's grin widens one click. The lizard peeks and hides. The candle leans. Do not have the frog eat the fly — hold the look.",
+  "notes": "Menu is pictures of flies, never words. The gag is eye-line: frog to waiter, not frog to food. If the fly looks cute instead of doomed the still is unfinished. Not Service for Six — this is the slapstick restaurant, not the six-fingered one.",
+  "agent": "grok"
+}

@@ -20,7 +20,7 @@ export function createRubberHoseErrand(): SequenceScene {
   const view = createMat4();
 
   const cream: Vec3 = [0.93, 0.86, 0.72];
-  const orange: Vec3 = [0.92, 0.42, 0.14];
+  const orange: Vec3 = [1, 0.48, 0.12];
   const ink: Vec3 = [0.08, 0.06, 0.05];
   const cubeColor: Vec3 = [0.35, 0.55, 0.82];
 
@@ -30,8 +30,12 @@ export function createRubberHoseErrand(): SequenceScene {
     model: ReturnType<typeof modelTRSX>,
     color: Vec3,
   ) {
-    engine.drawOutline(mesh, model, 1.055);
-    engine.drawLit(mesh, model, { color, cel: true, shininess: 8 });
+    engine.drawLit(mesh, model, {
+      color,
+      cel: true,
+      shininess: 6,
+      emissive: [color[0] * 0.22, color[1] * 0.22, color[2] * 0.22],
+    });
   }
 
   return {

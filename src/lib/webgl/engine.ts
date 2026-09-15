@@ -57,7 +57,7 @@ void main() {
   float diff = max(dot(N, L), 0.0);
   float spec = pow(max(dot(N, H), 0.0), uShininess);
   if (uCel > 0.5) {
-    diff = floor(diff * 3.0 + 0.04) / 3.0;
+    diff = max(floor(diff * 3.0 + 0.35) / 3.0, 0.34);
     spec = spec > 0.55 ? 1.0 : 0.0;
   }
   vec3 albedo = mix(uColor, vColor, uUseVertexColor);

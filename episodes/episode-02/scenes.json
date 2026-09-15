@@ -1,7 +1,7 @@
 {
   "episode": "02",
   "title": "Weeks on Fire - Episode 02",
-  "lastUpdated": "2026-08-29T12:00:00Z",
+  "lastUpdated": "2026-09-15T12:00:00Z",
   "scenes": [
     {
       "id": "scene-001",
@@ -40,6 +40,25 @@
           "note": "Seeded from studio-huddle.md writer meeting dialog arc"
         }
       ]
+    },
+    {
+      "id": "scene-003",
+      "order": 99,
+      "title": "Regulation Powder — Night Woods Snowball Fight (candidate insert)",
+      "timestamp": "00:00:00",
+      "description": "EXT. WOODS BEHIND THE BUILDING — THE FURNITURE CLEARING — NIGHT. Rubella and Lillith fight a seven-beat snowball fight under formal match rules nobody wrote down: terms, a service offer, body-and-below, a match to eleven. The abandoned upright piano — lid off, action open to the sky — is the scoreboard; every ball that lands on the strings is the entire score. Lillith has nine pre-built snowballs hidden in the bathing cabinet. Rubella turns her back to harvest the piano lid and is not thrown at. One ball has slab ice in it, lands, does not break, and draws a thin red line; nobody apologizes and the match gets slower instead of faster. At nine-all a bad throw hits a loaded pine bough and buries Lillith standing. The count is disputed, traded for the cabinet complaint, and abandoned at nine-all. Mostly choreography — the dialog is the paperwork. Parked at order 99 as an Episode 2 candidate insert off the Studio Huddle spine; it belongs to Ep2's night-furniture motif (bathing cabinet, piano). Full blocking, ammo continuity, written silences and priority shots in notes/scenes/regulation-powder.md.",
+      "prompt": "cinematic wide film still, night, snowy second-growth conifer clearing lit by flat orange city-underlight on low cloud, no moon, no shadows, two women in black lace forty feet apart on churned fresh snow mid snowball fight, an abandoned upright piano with its lid off and snow across its open strings, a snow-filled enameled hip-bath in a hinged wooden cabinet, visible breath, one woman in heels with no coat, one in an open coat and oversized rubber galoshes, eye makeup immaculate, competent throwing form, no slapstick, photoreal, 35mm, Grok Imagine style",
+      "mediaUrl": "",
+      "status": "draft",
+      "addedAt": "2026-09-15T12:00:00Z",
+      "lastEditedAt": "2026-09-15T12:00:00Z",
+      "history": [
+        {
+          "date": "2026-09-15T12:00:00Z",
+          "action": "added",
+          "note": "Seeded from notes/scenes/regulation-powder.md — Rubella vs Lillith snowball fight, night woods. Order 99 parks it off the Episode 2 spine (Studio Huddle leads the cut) while keeping it on the Timeline, same convention as the Ep5 candidate parked in episode-04/scenes.json."
+        }
+      ]
     }
   ],
   "episodeHistory": [
@@ -52,6 +71,11 @@
       "date": "2026-08-29T12:00:00Z",
       "action": "scenes-json-initialized",
       "note": "Sparse production timeline scaffold created for Episode 02"
+    },
+    {
+      "date": "2026-09-15T12:00:00Z",
+      "action": "scene-added",
+      "note": "Regulation Powder (night-woods snowball fight, Rubella + Lillith) added as a parked candidate insert at order 99."
     }
   ]
 }

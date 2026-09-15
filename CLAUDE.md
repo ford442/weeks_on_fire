@@ -18,11 +18,14 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, Crew (`/staff`).
+Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/staff`).
 
 Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short cartoon seeds
 (`content/cartoons/<id>.json` — premise, still, optional prompt). No song id. Promote winners to
 Suggestions.
+
+3D Sequences (`/sequences`, `/sequences/:id`) plays procedural WebGL video sequences
+(`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed.
 
 Episodes (`/episodes`, `/episodes/:id`) is a read-only episode bible: logline, status, runtime, and
 in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/episodes.json` +
@@ -31,7 +34,7 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 ## Repository Structure
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
-**`content/`** — Cutaways, gallery, characters, staff, episodes, cartoons, Daisy Bell JSON.  
+**`content/`** — Cutaways, gallery, characters, staff, episodes, cartoons, sequences, Daisy Bell JSON.  
 **`songs/`** — YAML-frontmatter markdown + optional mp3.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  
 **`prompts/`** — Segment / Grok Imagine prompt docs (`segmentsSource`).  

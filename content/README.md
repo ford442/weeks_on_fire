@@ -150,6 +150,35 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
   on the cartoon file so the parking lot keeps the credit.
 - Run `npm run codegen` and commit the JSON + `src/data/generated/cartoons.ts`.
 
+## Adding a 3D sequence (in-hub player)
+
+The **3D Sequences** hub view (`/sequences`, `/sequences/:id`) plays procedural WebGL
+video sequences — 10 seconds to 2 minutes, no song id. One JSON file per sequence
+under [`sequences/`](sequences/). Filename must match `id`. Each id also needs a
+renderer in `src/sequences/registry.ts`.
+
+```json
+{
+  "id": "your-sequence-id",
+  "title": "Title",
+  "medium": "unreal",
+  "runtime": "~18 seconds",
+  "durationSec": 18,
+  "premise": "What happens.",
+  "visual": "What we see.",
+  "motion": "Timed motion notes.",
+  "tags": ["tag"]
+}
+```
+
+- `medium` is one of `unreal`, `photoreal`, `cartoon`, `mixed`.
+- `durationSec` must be between 10 and 120.
+- Optional: `aspect` (`16:9` default, or `4:3`), `register`, `grokImaginePrompt`,
+  `geminiOmniPrompt`, `notes`, `agent`, `stillImagePath`.
+- The hub player is the sequence. Imagine prompts are copy-ready still / I2V
+  packets, not a substitute for the in-app animation.
+- Run `npm run codegen` and commit the JSON + `src/data/generated/sequences.ts`.
+
 ## Dialog versions (intentional TS exception)
 
 Long-form dialog audition pages live in [`notes/scenes/versions/`](../notes/scenes/versions/). They are prose (competing registers, fragments, juxtaposition notes), not a codegen schema.

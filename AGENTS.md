@@ -44,6 +44,7 @@ Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/vi
 | Daisy Bell     | `/daisy-bell`  | Keyframe board, period/color treatments, sequence     |
 | Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts      |
 | Cartoons       | `/cartoons`    | Short cartoon seeds from agents (no song id)          |
+| 3D Sequences   | `/sequences`   | Playable in-hub 3D video sequences (10s–2min)         |
 | Characters     | `/characters`  | Recurring cast bible                                  |
 | Episodes       | `/episodes`    | Read-only episode bible                               |
 | Crew           | `/staff`       | Fictional series crew bios                            |
@@ -56,7 +57,7 @@ Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/vi
 weeks_of_fire/
 ├── src/                 # React gallery (App, components, data shims)
 │   └── data/generated/  # AUTO-GENERATED — do not hand-edit
-├── content/             # Catalog JSON (cutaways, gallery, characters, staff, episodes, cartoons, Daisy Bell)
+├── content/             # Catalog JSON (cutaways, gallery, characters, staff, episodes, cartoons, sequences, Daisy Bell)
 ├── songs/               # Minimax markdown + some mp3
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, scenes.json
 ├── characters/          # Reference stills + character notes
@@ -78,15 +79,16 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 
 ### Content index (author here, not in generated TS)
 
-| What       | Source of truth           | Generated output                   |
-| ---------- | ------------------------- | ---------------------------------- |
-| Songs      | `songs/*.md`              | `src/data/generated/songs.ts`      |
-| Cutaways   | `content/cutaways/*.json` | `src/data/generated/cutaways.ts`   |
-| Gallery    | `content/gallery.json`    | `src/data/generated/gallery.ts`    |
-| Characters | `content/characters.json` | `src/data/generated/characters.ts` |
-| Staff      | `content/staff.json`      | `src/data/generated/staff.ts`      |
-| Daisy Bell | `content/daisy-bell.json` | `src/data/generated/daisy-bell.ts` |
-| Cartoons   | `content/cartoons/*.json` | `src/data/generated/cartoons.ts`   |
+| What       | Source of truth            | Generated output                   |
+| ---------- | -------------------------- | ---------------------------------- |
+| Songs      | `songs/*.md`               | `src/data/generated/songs.ts`      |
+| Cutaways   | `content/cutaways/*.json`  | `src/data/generated/cutaways.ts`   |
+| Gallery    | `content/gallery.json`     | `src/data/generated/gallery.ts`    |
+| Characters | `content/characters.json`  | `src/data/generated/characters.ts` |
+| Staff      | `content/staff.json`       | `src/data/generated/staff.ts`      |
+| Daisy Bell | `content/daisy-bell.json`  | `src/data/generated/daisy-bell.ts` |
+| Cartoons   | `content/cartoons/*.json`  | `src/data/generated/cartoons.ts`   |
+| Sequences  | `content/sequences/*.json` | `src/data/generated/sequences.ts`  |
 
 `src/data/*.ts` files are thin shims (types + re-exports). **Exception:** `src/data/sceneDialogVersions.ts` is hand-authored TypeScript. Dialog audition pages in `notes/scenes/versions/` are prose, not a codegen schema. See `content/README.md`.
 
@@ -134,6 +136,8 @@ There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 
 Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote.
+
+3D video sequences (10s–2min, in-hub WebGL players) go in `content/sequences/<id>.json` plus a renderer in `src/sequences/`.
 
 ---
 

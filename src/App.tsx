@@ -9,6 +9,7 @@ const Songs = lazy(() => import('./components/Songs'));
 const DaisyBell = lazy(() => import('./components/DaisyBell'));
 const Suggestions = lazy(() => import('./components/Suggestions'));
 const Cartoons = lazy(() => import('./components/Cartoons'));
+const Sequences = lazy(() => import('./components/Sequences'));
 const Characters = lazy(() => import('./components/Characters'));
 const Episodes = lazy(() => import('./components/Episodes'));
 const Staff = lazy(() => import('./components/Staff'));
@@ -38,6 +39,8 @@ export default function App() {
           <Route path="/suggestions/:id" element={<Suggestions />} />
           <Route path="/cartoons" element={<Cartoons />} />
           <Route path="/cartoons/:id" element={<Cartoons />} />
+          <Route path="/sequences" element={<Sequences />} />
+          <Route path="/sequences/:id" element={<Sequences />} />
           <Route path="/characters" element={<Characters />} />
           <Route path="/episodes" element={<Episodes />} />
           <Route path="/episodes/:id" element={<Episodes />} />

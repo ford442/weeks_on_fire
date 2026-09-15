@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
   BookOpen,
+  Box,
   Clock,
   Film,
   Flower2,
@@ -21,6 +22,7 @@ export type SiteView =
   | 'daisy-bell'
   | 'suggestions'
   | 'cartoons'
+  | 'sequences'
   | 'characters'
   | 'episodes'
   | 'staff';
@@ -61,6 +63,12 @@ const viewMeta: Record<SiteView, { eyebrow: string; description: string; icon: t
     description:
       'Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.',
     icon: PenLine,
+  },
+  sequences: {
+    eyebrow: '3D Sequences',
+    description:
+      'Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.',
+    icon: Box,
   },
   characters: {
     eyebrow: 'Character Bible',
@@ -128,6 +136,10 @@ export default function SiteHeader() {
             <TabLink to={viewPaths.cartoons}>
               <PenLine size={16} />
               Cartoons
+            </TabLink>
+            <TabLink to={viewPaths.sequences}>
+              <Box size={16} />
+              3D Sequences
             </TabLink>
             <TabLink to={viewPaths.characters}>
               <UserCircle size={16} />

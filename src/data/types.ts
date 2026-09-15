@@ -242,6 +242,56 @@ export const cartoonStatusMeta: Record<CartoonStatus, { label: string; accent: s
   },
 };
 
+export type SequenceMedium = 'unreal' | 'photoreal' | 'cartoon' | 'mixed';
+
+export type SequenceAspect = '16:9' | '4:3';
+
+export interface SequenceRecord {
+  id: string;
+  title: string;
+  medium: SequenceMedium;
+  runtime: string;
+  durationSec: number;
+  premise: string;
+  visual: string;
+  motion: string;
+  tags: string[];
+  aspect?: SequenceAspect;
+  register?: string;
+  grokImaginePrompt?: string;
+  geminiOmniPrompt?: string;
+  notes?: string;
+  agent?: string;
+  stillUrl?: string;
+}
+
+export const sequenceMediumMeta: Record<
+  SequenceMedium,
+  { label: string; accent: string; description: string }
+> = {
+  unreal: {
+    label: 'Unreal',
+    accent: 'border-violet-500/40 bg-violet-500/10 text-violet-200',
+    description: 'Impossible lattices, chrome ribbons, forms that do not occur in a kitchen.',
+  },
+  photoreal: {
+    label: 'Photoreal',
+    accent: 'border-amber-500/40 bg-amber-500/10 text-amber-200',
+    description: 'Real-world objects and rooms — porcelain, brass, honey-oak, steam, moths.',
+  },
+  cartoon: {
+    label: 'Cartoon',
+    accent: 'border-orange-500/40 bg-orange-500/10 text-orange-200',
+    description: 'Cel-shaded 3D, rubber-hose limbs, TV-paint flats, thick ink.',
+  },
+  mixed: {
+    label: 'Mixed',
+    accent: 'border-cyan-500/40 bg-cyan-500/10 text-cyan-200',
+    description:
+      'A grounded scene that opens onto geometry, or geometry that pretends to be a room.',
+  },
+};
+
 export const daisyTreatmentMeta: Record<
   DaisyFrameTreatment,
   { label: string; short: string; accent: string; description: string }

@@ -1,0 +1,17 @@
+{
+  "id": "screen-door-recessional",
+  "title": "Screen Door Recessional",
+  "medium": "mixed",
+  "runtime": "~1:50",
+  "durationSec": 110,
+  "aspect": "16:9",
+  "register": "grounded into void",
+  "premise": "A corridor of screen doors recedes the way a hymn does — each frame a little darker, moths still doing their job. The last door opens onto a brass lattice instead of a yard.",
+  "visual": "Night porch architecture, not a crane to the moon: honey-oak door frames, grey screen mesh as grid, hanging caged bulbs, moths as pale commas. Painted floorboards running to a vanishing point. No pizza box, no character, no second moon. After the last threshold the room is the Lattice Hymn void — nested brass wire, ember core — as if the porch had been employed to deliver you there.",
+  "motion": "0–20s: hold on the first porch, moths orbit the nearest bulb. 20–70s: slow dolly down eight door frames, lights passing. 70–90s: the last screen door swings inward. 90–110s: camera crosses into the lattice void and holds. Loop fades back to the first porch.",
+  "tags": ["porch", "corridor", "moths", "mixed", "lattice", "dolly"],
+  "grokImaginePrompt": "Photoreal interior still, 16:9, a receding night corridor of honey-oak screen-door frames with grey mesh, hanging caged bulbs throwing warm pools on painted floorboards, pale moths as commas around the nearest bulb, no people, no faces, no pizza box, no moon, three supporting figures: a worn threshold, a door closer, a painted floor runner, camera at chest height looking down the corridor, 35mm, T2.8, fine grain, warm bulb against grey mesh against honey-oak, Grok Imagine style",
+  "geminiOmniPrompt": "110-second sequence. Slow dolly down a night corridor of eight screen doors. Moths orbit bulbs. The last door opens onto nested brass lattices and a matte ember core. No crane to the sky, no second moon, no people. Loop returns to the first porch.",
+  "notes": "In-hub sequence is procedural WebGL. Not Porch Light Meridian (that one cranes to a wrong moon). Keep the yard offscreen the whole time.",
+  "agent": "cursor-grok-4.6"
+}

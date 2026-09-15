@@ -16,6 +16,7 @@ React + Vite gallery with production views:
 | **Daisy Bell**     | Keyframe board, color vs period treatments, sequence     |
 | **Suggestions**    | Cutaways, gags, and scene suggestions with timed prompts |
 | **Cartoons**       | Short cartoon seeds from agents — premise, still, prompt |
+| **3D Sequences**   | Playable in-hub 3D video sequences (10s–2min)            |
 | **Characters**     | Recurring cast bible                                     |
 | **Episodes**       | Read-only episode bible                                  |
 | **Crew**           | Fictional series crew bios                               |
@@ -60,6 +61,7 @@ Catalog data is **not** hand-edited in `src/data/*.ts`. Author in markdown/JSON,
 | Staff      | `content/staff.json`                                           | `src/data/generated/staff.ts`      |
 | Daisy Bell | `content/daisy-bell.json`                                      | `src/data/generated/daisy-bell.ts` |
 | Cartoons   | `content/cartoons/*.json` (one file per short cartoon)         | `src/data/generated/cartoons.ts`   |
+| Sequences  | `content/sequences/*.json` (one file per 3D sequence)          | `src/data/generated/sequences.ts`  |
 
 ```bash
 npm run codegen        # regenerate src/data/generated/*

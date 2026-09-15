@@ -23,6 +23,7 @@ Weeks on Fire is a personal cinematic experiment combining:
 - Daisy Bell — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
 - Suggestions — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
 - Cartoons — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
+- 3D Sequences — Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.
 - Characters — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
 - Episodes — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
 - Crew — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
@@ -36,11 +37,12 @@ Weeks on Fire is a personal cinematic experiment combining:
 ### Songs (style prompts + lyrics)
 - https://github.com/ford442/weeks_on_fire/tree/main/songs
 
-### Prompts, notes, cartoon seeds
+### Prompts, notes, cartoon seeds, 3D sequences
 - https://github.com/ford442/weeks_on_fire/tree/main/prompts
 - https://github.com/ford442/weeks_on_fire/tree/main/notes
 - https://github.com/ford442/weeks_on_fire/tree/main/ai-contributions
 - https://github.com/ford442/weeks_on_fire/tree/main/content/cartoons
+- https://github.com/ford442/weeks_on_fire/tree/main/content/sequences
 
 ## Featured visual scenes
 

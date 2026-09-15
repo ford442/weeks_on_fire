@@ -59,6 +59,14 @@ export const siteViews: SiteViewMeta[] = [
       'Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.',
   },
   {
+    id: 'sequences',
+    label: '3D Sequences',
+    path: '/sequences',
+    eyebrow: '3D Sequences',
+    description:
+      'Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.',
+  },
+  {
     id: 'characters',
     label: 'Characters',
     path: '/characters',

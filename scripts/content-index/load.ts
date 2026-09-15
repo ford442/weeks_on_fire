@@ -9,6 +9,7 @@ import {
   StaffMemberSchema,
   EpisodeSchema,
   CartoonSchema,
+  SequenceSchema,
 } from './schemas';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
@@ -22,6 +23,7 @@ import type {
   StaffMemberRecord,
   EpisodeRecord,
   CartoonRecord,
+  SequenceRecord,
 } from './schemas';
 
 export interface ParsedSong {
@@ -163,6 +165,29 @@ export function loadCartoons(repoRoot: string): CartoonRecord[] {
     }
     return record;
   });
+}
+
+export function loadSequences(repoRoot: string): SequenceRecord[] {
+  const sequencesDir = join(repoRoot, 'content/sequences');
+  if (!existsSync(sequencesDir)) {
+    throw new Error('Missing content/sequences/. Add one JSON file per 3D sequence.');
+  }
+
+  const files = readdirSync(sequencesDir)
+    .filter((file) => file.endsWith('.json'))
+    .sort();
+
+  return files
+    .map((file) => {
+      const raw = JSON.parse(readFileSync(join(sequencesDir, file), 'utf8'));
+      const record = SequenceSchema.parse(raw);
+      const expectedId = file.replace(/\.json$/, '');
+      if (record.id !== expectedId) {
+        throw new Error(`Sequence file ${file} id mismatch: ${record.id}`);
+      }
+      return record;
+    })
+    .sort((a, b) => a.durationSec - b.durationSec || a.id.localeCompare(b.id));
 }
 
 export function listMp3Filenames(repoRoot: string): string[] {

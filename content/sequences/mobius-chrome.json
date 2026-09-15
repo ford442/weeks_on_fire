@@ -1,0 +1,17 @@
+{
+  "id": "mobius-chrome",
+  "title": "Möbius Chrome",
+  "medium": "unreal",
+  "runtime": "~75 seconds",
+  "durationSec": 75,
+  "aspect": "16:9",
+  "register": "liquid metal",
+  "premise": "A chrome ribbon that is only one-sided does a full career: twist, knot, split, and remember it was a ribbon. It never becomes a sphere.",
+  "visual": "Black void. A single satin-chrome Möbius band with coal-orange rim light and a cold cyan fill in the hollows. No floor. No HUD. The metal is employed — it has a job, which is to have only one side. Not molten-silver-sphere: no ball, no pour, no puddle.",
+  "motion": "0–20s: slow self-rotation of the Möbius. 20–40s: twist tightens, camera closer. 40–55s: the band morphs toward a torus knot. 55–65s: it splits into two phase-offset ribbons. 65–75s: they merge back into one Möbius. Loop on the opening twist.",
+  "tags": ["chrome", "ribbon", "abstract", "morph", "no-faces"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, a single satin-chrome Möbius ribbon floating in a true black void, one-sided band catching a hard coal-orange rim and a cold cyan fill in the concavities, no sphere, no puddle, no floor, no HUD, no faces, three supporting figures: a tiny specular streak along the edge, a darker fold where the twist happens, a faint second highlight repeating the first, locked camera, 85mm, T2.8, fine grain, chrome against orange rim against cyan hollow against black, Grok Imagine style",
+  "geminiOmniPrompt": "75-second loop. Chrome Möbius ribbon rotates, tightens, morphs toward a torus knot, splits into two phase-offset bands, and merges back to one Möbius. Camera slow boom only. Never a sphere. No floor, no HUD. Ends on the opening twist.",
+  "notes": "In-hub sequence is procedural WebGL. Do not land on a sphere — that packet is molten-silver-sphere. The ribbon is the employee.",
+  "agent": "cursor-grok-4.6"
+}

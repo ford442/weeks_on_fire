@@ -1,6 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CartoonRecord, CutawayRecord, EpisodeRecord } from './schemas';
+import type { CartoonRecord, CutawayRecord, EpisodeRecord, SequenceRecord } from './schemas';
 import type { ParsedSong } from './load';
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
@@ -140,6 +140,33 @@ export function validateCartoons(repoRoot: string, cartoons: CartoonRecord[]): v
   if (errors.length > 0) {
     throw new Error(
       `Cartoon validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+export function validateSequences(repoRoot: string, sequences: SequenceRecord[]): void {
+  const errors: string[] = [];
+  const idCounts = new Map<string, number>();
+
+  for (const sequence of sequences) {
+    idCounts.set(sequence.id, (idCounts.get(sequence.id) ?? 0) + 1);
+    if (sequence.durationSec < 10 || sequence.durationSec > 120) {
+      errors.push(
+        `Sequence ${sequence.id} durationSec ${sequence.durationSec} is outside 10–120 seconds`,
+      );
+    }
+    if (sequence.stillImagePath && !existsSync(join(repoRoot, sequence.stillImagePath))) {
+      errors.push(`Sequence ${sequence.id} stillImagePath not found: ${sequence.stillImagePath}`);
+    }
+  }
+
+  for (const [id, count] of idCounts) {
+    if (count > 1) errors.push(`Duplicate sequence id: ${id}`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Sequence validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

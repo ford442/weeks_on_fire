@@ -67,7 +67,7 @@ const viewMeta: Record<SiteView, { eyebrow: string; description: string; icon: t
   sequences: {
     eyebrow: '3D Sequences',
     description:
-      'Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.',
+      'Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.',
     icon: Box,
   },
   characters: {

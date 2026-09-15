@@ -12,10 +12,19 @@ describe('sequence renderers', () => {
   });
 
   it('keeps every catalog duration between 10 and 120 seconds', () => {
-    expect(sequences).toHaveLength(5);
+    expect(sequences).toHaveLength(9);
     for (const sequence of sequences) {
       expect(sequence.durationSec).toBeGreaterThanOrEqual(10);
       expect(sequence.durationSec).toBeLessThanOrEqual(120);
+    }
+  });
+
+  it('tags the fast-motion kick pack', () => {
+    const pack = ['kick-lattice', 'spoon-whip', 'tunnel-smash', 'hose-chase'];
+    for (const id of pack) {
+      const sequence = sequences.find((entry) => entry.id === id);
+      expect(sequence).toBeDefined();
+      expect(sequence?.tags).toContain('fast-motion');
     }
   });
 });

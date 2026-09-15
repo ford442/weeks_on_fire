@@ -85,12 +85,12 @@ export default function Sequences() {
             <div>
               <p className="text-sm font-semibold text-zinc-200">In-hub 3D video sequences</p>
               <p className="mt-1 text-sm leading-6 text-zinc-400">
-                Five procedural WebGL sequences, 16 seconds to 1:50. Unreal lattices, a kitchen
-                still-life, a cel-shaded errand, chrome ribbon, and a porch that opens onto
-                geometry. Author more in{' '}
-                <code className="whitespace-nowrap text-zinc-300">content/sequences/</code> and run{' '}
-                <code className="whitespace-nowrap text-zinc-300">npm run codegen</code>. Copy the
-                Grok / Omni prompts when you want Imagine versions.
+                Procedural WebGL sequences, 12 seconds to 1:50 — slow orbits plus a fast-motion kick
+                pack (strobe, whip, smash, chase). Unreal lattices, a kitchen still-life, a
+                cel-shaded errand, chrome ribbon, and a porch that opens onto geometry. Author more
+                in <code className="whitespace-nowrap text-zinc-300">content/sequences/</code> and
+                run <code className="whitespace-nowrap text-zinc-300">npm run codegen</code>. Copy
+                the Grok / Omni prompts when you want Imagine versions.
               </p>
             </div>
           </div>

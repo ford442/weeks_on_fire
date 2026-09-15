@@ -1,0 +1,17 @@
+{
+  "id": "tunnel-smash",
+  "title": "Tunnel Smash",
+  "medium": "unreal",
+  "runtime": "~12 seconds",
+  "durationSec": 12,
+  "aspect": "16:9",
+  "register": "smash zoom",
+  "premise": "Concentric brass rings rush the lens. Each kick is a smash-zoom toward a matte ember that never arrives. The vanishing point is off-center. Not a wormhole. Not a sphere in a cave.",
+  "visual": "Black void. Eight satin-brass tori stacked along an off-center axis, a matte coal-orange core at the far end, no floor, no HUD, no checkerboard walls. Sparks as commas racing past. The tunnel is rings, not a graphic.",
+  "motion": "12 seconds, thirty kicks at 150 BPM. Camera lurches forward on each kick and holds between. FOV tightens. Vanishing point sits in the lower-left third and is never reached. Rings counter-rotate. Hard loop back to the first ring.",
+  "tags": ["fast-motion", "smash", "brass", "tunnel", "kick", "no-faces"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, a smash-zoom into concentric satin-brass rings filling the frame, off-center vanishing point in the lower-left third never reached, a matte coal-orange core the size of a fist far ahead with no rays, radial motion blur on the nearest ring, no floor, no HUD, no checkerboard, no faces, three supporting figures: a torn ring edge, a spark comma racing past, a colder cyan fill in one hollow, 35mm, T2.0, photographed zoom blur not a digital wormhole, brass against ember against true black, Grok Imagine style",
+  "geminiOmniPrompt": "12-second smash-zoom loop. Camera lurches toward an off-center matte ember through eight brass rings on every 150 BPM kick — thirty smashes. Vanishing point never arrives. No pull-back, no slow push, no cave, no sphere. Ends on the first ring.",
+  "notes": "Do not land this in Molten Silver Sphere's cave. The core is Lattice Hymn's ember, employed as a destination that refuses. In-hub sequence is procedural WebGL.",
+  "agent": "cursor-grok-4.6"
+}

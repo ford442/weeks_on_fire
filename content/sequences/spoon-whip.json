@@ -1,0 +1,17 @@
+{
+  "id": "spoon-whip",
+  "title": "Spoon Whip",
+  "medium": "photoreal",
+  "runtime": "~12 seconds",
+  "durationSec": 12,
+  "aspect": "16:9",
+  "register": "fast still-life",
+  "premise": "Same mug, same spoon, same orange. The camera commits a crime: a horizontal whip that never settles. The spoon is a propeller. Steam streaks. Nobody comes back for them any faster.",
+  "visual": "Honey-oak counter, glazed porcelain mug, brass teaspoon, one navel orange, cream plaster wall. Steam as a comb of streaks, not a lazy wisp. No hand, no clock, no calendar. Warm caged-bulb key, cool fill.",
+  "motion": "12 seconds, four full orbits — sixteen times the kitchen-counter hymn. Whip heading refreshes every 0.4s kick. Spoon spins as a propeller with three afterimage ghosts. Steam streaks with the shutter. Loop on the opening heading.",
+  "tags": ["fast-motion", "whip", "still-life", "porcelain", "brass", "honey-oak", "steam"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, a honey-oak kitchen counter smeared by a violent horizontal camera whip, glazed porcelain mug holding, brass teaspoon a propeller of afterimage ghosts, one navel orange, steam as a comb of streaks leaving the mug, no hands, no faces, no clock, three supporting figures: a caged bulb overhead, a wall socket with no plug, a folded tea towel at the far edge, warm pooled key with cool fill from camera left, 50mm, T2.8, photographed shutter smear not digital speed lines, glazed porcelain against satin brass against warm honey-oak, Grok Imagine style",
+  "geminiOmniPrompt": "12-second seamless whip. Camera completes four orbits around the mug, spoon, and orange at counter height. Heading refreshes on every 150 BPM kick. Spoon spins as a propeller with afterimage ghosts. Steam streaks. No hands. Ends on the opening heading.",
+  "notes": "Fast sibling of Kitchen Counter Orbit. Do not slow the camera into a visit. The mug does not move — it is employed. In-hub sequence is procedural WebGL.",
+  "agent": "cursor-grok-4.6"
+}

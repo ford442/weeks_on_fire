@@ -3,10 +3,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { loadCartoons } from './load';
+import { loadCartoons, loadSequences } from './load';
 import type { ParsedSong } from './load';
-import type { CartoonRecord, CutawayRecord } from './schemas';
-import { validateContent, validateCartoons } from './validate';
+import type { CartoonRecord, CutawayRecord, SequenceRecord } from './schemas';
+import { validateContent, validateCartoons, validateSequences } from './validate';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {
@@ -165,5 +165,72 @@ describe('loadCartoons', () => {
     writeFileSync(join(repoRoot, 'content/cartoons/cartoon-1.json'), JSON.stringify(makeCartoon()));
 
     expect(loadCartoons(repoRoot)).toEqual([makeCartoon()]);
+  });
+});
+
+function makeSequence(overrides: Partial<SequenceRecord> = {}): SequenceRecord {
+  return {
+    id: 'sequence-1',
+    title: 'Sequence One',
+    medium: 'unreal',
+    runtime: '~16 seconds',
+    durationSec: 16,
+    premise: 'A lattice turns.',
+    visual: 'Brass wire.',
+    motion: 'One orbit.',
+    tags: [],
+    ...overrides,
+  };
+}
+
+describe('validateSequences', () => {
+  it('passes for unique sequence ids in range', () => {
+    expect(() =>
+      validateSequences('/tmp', [makeSequence(), makeSequence({ id: 'sequence-2' })]),
+    ).not.toThrow();
+  });
+
+  it('flags duplicate sequence ids', () => {
+    expect(() => validateSequences('/tmp', [makeSequence(), makeSequence()])).toThrow(
+      /Duplicate sequence id: sequence-1/,
+    );
+  });
+
+  it('flags a duration outside 10–120 seconds', () => {
+    expect(() => validateSequences('/tmp', [makeSequence({ durationSec: 8 })])).toThrow(
+      /durationSec 8 is outside 10–120 seconds/,
+    );
+  });
+});
+
+describe('loadSequences', () => {
+  let repoRoot: string;
+
+  beforeEach(() => {
+    repoRoot = mkdtempSync(join(tmpdir(), 'wof-sequences-'));
+  });
+
+  afterEach(() => {
+    rmSync(repoRoot, { recursive: true, force: true });
+  });
+
+  it('rejects a filename that does not match id', () => {
+    mkdirSync(join(repoRoot, 'content/sequences'), { recursive: true });
+    writeFileSync(
+      join(repoRoot, 'content/sequences/wrong-name.json'),
+      JSON.stringify(makeSequence({ id: 'lattice-hymn' })),
+    );
+
+    expect(() => loadSequences(repoRoot)).toThrow(/id mismatch: lattice-hymn/);
+  });
+
+  it('loads sequences whose filename matches id', () => {
+    mkdirSync(join(repoRoot, 'content/sequences'), { recursive: true });
+    writeFileSync(
+      join(repoRoot, 'content/sequences/sequence-1.json'),
+      JSON.stringify(makeSequence()),
+    );
+
+    expect(loadSequences(repoRoot)).toEqual([makeSequence()]);
   });
 });

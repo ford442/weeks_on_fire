@@ -15,7 +15,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -27,9 +27,10 @@ The hub is a single-page app. Views are toggled in-app:
 4. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
 5. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
 6. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
-7. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
-8. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-9. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+7. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — unreal lattices, still-life orbits, cel-shaded errands, chrome ribbons, mixed porch walks. Ten seconds to two minutes.
+8. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+9. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+10. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
 
@@ -317,6 +318,16 @@ Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>
 - **Witness Chicken** (witness-chicken, sketched) — A chicken in witness protection sits on a park bench in a trenchcoat and a mustache that is also obviously a chicken. The pigeons are not fooled. One of them is taking notes.
 - **Worm Forecast** (worm-forecast, sketched) — An earthworm does the weather. Behind him the map says rain. It is raining worms. He does not mention this.
 
+## 3D sequences (in-hub players)
+
+Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in `content/sequences/<id>.json`. No song id.
+
+- **Lattice Hymn** (lattice-hymn, unreal, ~16 seconds) — Nested brass lattices assemble around a single ember core and refuse to share a rotation. The hymn is the beat they miss together.
+- **Rubber-Hose Errand** (rubber-hose-errand, cartoon, ~32 seconds) — A round errand-runner with rubber-hose limbs is sent across a 4:3 stage to fetch a cube. The cube becomes a hat. The errand was always a costume change.
+- **Kitchen Counter Orbit** (kitchen-counter-orbit, photoreal, ~48 seconds) — A porcelain mug, a brass teaspoon, and one orange share a honey-oak counter. Nobody is coming back for them. The camera does the visiting.
+- **Möbius Chrome** (mobius-chrome, unreal, ~75 seconds) — A chrome ribbon that is only one-sided does a full career: twist, knot, split, and remember it was a ribbon. It never becomes a sphere.
+- **Screen Door Recessional** (screen-door-recessional, mixed, ~1:50) — A corridor of screen doors recedes the way a hymn does — each frame a little darker, moths still doing their job. The last door opens onto a brass lattice instead of a yard.
+
 ## Daisy Bell cutaway
 
 - **Title**: Daisy Bell
@@ -328,7 +339,7 @@ Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>
 ```
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills

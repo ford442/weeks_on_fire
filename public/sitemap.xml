@@ -31,6 +31,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ford442.github.io/weeks_on_fire/sequences</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ford442.github.io/weeks_on_fire/characters</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

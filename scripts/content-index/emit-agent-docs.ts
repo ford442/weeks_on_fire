@@ -3,6 +3,7 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   loadCartoons,
+  loadSequences,
   loadCharacters,
   loadCutaways,
   loadDaisyBell,
@@ -110,11 +111,12 @@ ${episodeLines}
 ### Songs (style prompts + lyrics)
 - ${REPO_BASE}/tree/main/songs
 
-### Prompts, notes, cartoon seeds
+### Prompts, notes, cartoon seeds, 3D sequences
 - ${REPO_BASE}/tree/main/prompts
 - ${REPO_BASE}/tree/main/notes
 - ${REPO_BASE}/tree/main/ai-contributions
 - ${REPO_BASE}/tree/main/content/cartoons
+- ${REPO_BASE}/tree/main/content/sequences
 
 ## Featured visual scenes
 
@@ -142,6 +144,7 @@ function emitLlmsFullTxt(
   daisyBell: ReturnType<typeof loadDaisyBell>,
   staff: ReturnType<typeof loadStaff>,
   cartoons: ReturnType<typeof loadCartoons>,
+  sequences: ReturnType<typeof loadSequences>,
   episodes: EpisodeSummary[],
 ): string {
   const viewLines = siteViews
@@ -193,6 +196,16 @@ ${paths}`;
           .join('\n')
       : '- (none yet — add `content/cartoons/<id>.json`)';
 
+  const sequenceLines =
+    sequences.length > 0
+      ? sequences
+          .map(
+            (sequence) =>
+              `- **${sequence.title}** (${sequence.id}, ${sequence.medium}, ${sequence.runtime}) — ${sequence.premise}`,
+          )
+          .join('\n')
+      : '- (none yet — add `content/sequences/<id>.json`)';
+
   return `# Weeks on Fire — full agent brief
 
 This file is a dense, crawlable summary of the project for AI agents and research tools.
@@ -210,7 +223,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, Characters, Episodes, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -254,6 +267,12 @@ Short still + optional 6–8s loop. No song id. Author in \`content/cartoons/<id
 
 ${cartoonLines}
 
+## 3D sequences (in-hub players)
+
+Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in \`content/sequences/<id>.json\`. No song id.
+
+${sequenceLines}
+
 ## Daisy Bell cutaway
 
 - **Title**: ${daisyBell.meta.title}
@@ -265,7 +284,7 @@ ${cartoonLines}
 \`\`\`
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, Daisy Bell JSON
+├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills
@@ -356,6 +375,7 @@ function main() {
   const daisyBell = loadDaisyBell(repoRoot);
   const staff = loadStaff(repoRoot);
   const cartoons = loadCartoons(repoRoot);
+  const sequences = loadSequences(repoRoot);
   const episodes = loadEpisodes();
 
   const outputs = {
@@ -368,6 +388,7 @@ function main() {
       daisyBell,
       staff,
       cartoons,
+      sequences,
       episodes,
     ),
     'sitemap.xml': emitSitemap(episodes),
@@ -378,7 +399,7 @@ function main() {
   }
 
   console.log(
-    `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons.`,
+    `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
 
   if (checkMode) {

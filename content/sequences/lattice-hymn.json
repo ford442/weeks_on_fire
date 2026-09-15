@@ -1,0 +1,17 @@
+{
+  "id": "lattice-hymn",
+  "title": "Lattice Hymn",
+  "medium": "unreal",
+  "runtime": "~16 seconds",
+  "durationSec": 16,
+  "aspect": "16:9",
+  "register": "strange 3d",
+  "premise": "Nested brass lattices assemble around a single ember core and refuse to share a rotation. The hymn is the beat they miss together.",
+  "visual": "Dark void, no floor. Four wireframe cubes and one icosahedron nested on a shared origin, brass line against a coal-orange core. The core is a matte sphere, not a star — it does not emit rays, only warmth. No HUD, no nebula, no faces.",
+  "motion": "0–4s: lattices scale in from nothing while the camera pushes. 4–12s: each shell counter-rotates; the camera completes one slow orbit. 12–16s: the core pulses once, camera eases back, shells keep their jobs. Loop on the opening scale.",
+  "tags": ["geometric", "brass", "orbit", "wireframe", "no-faces"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, four nested brass wireframe cubes and one brass icosahedron sharing a single origin in a black void, a matte coal-orange sphere the size of a fist at the exact center with no rays and no glow bloom, lattices caught mid-rotation at disagreeing angles, no floor, no HUD, no stars, no faces, three supporting figures: a faint brass edge catching a hard specular, a second lattice shadowing the first, a tiny ember spark off one vertex, locked camera at chest height, 50mm, T2.8, fine grain, satin brass against matte ember against true black, Grok Imagine style",
+  "geminiOmniPrompt": "16-second loop. Nested brass wireframe cubes and one icosahedron assemble from scale zero, then counter-rotate around a matte ember core while the camera completes one slow orbit and eases back. Core pulses once near the end. No floor, no HUD, no bloom spikes, no faces. Ends on the opening scale.",
+  "notes": "In-hub sequence is procedural WebGL, not an Imagine clip. Keep the core matte — if it reads as a sun the gag dies. Not the annex cube, not Marble tick-tack.",
+  "agent": "cursor-grok-4.6"
+}

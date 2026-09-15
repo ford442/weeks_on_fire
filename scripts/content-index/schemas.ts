@@ -195,6 +195,29 @@ export const CartoonSchema = z.object({
   stillImagePath: z.string().optional(),
 });
 
+export const SequenceMediumSchema = z.enum(['unreal', 'photoreal', 'cartoon', 'mixed']);
+
+export const SequenceAspectSchema = z.enum(['16:9', '4:3']);
+
+export const SequenceSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  medium: SequenceMediumSchema,
+  runtime: z.string().min(1),
+  durationSec: z.number().min(10).max(120),
+  premise: z.string().min(1),
+  visual: z.string().min(1),
+  motion: z.string().min(1),
+  tags: z.array(z.string()),
+  aspect: SequenceAspectSchema.optional(),
+  register: z.string().optional(),
+  grokImaginePrompt: z.string().optional(),
+  geminiOmniPrompt: z.string().optional(),
+  notes: z.string().optional(),
+  agent: z.string().optional(),
+  stillImagePath: z.string().optional(),
+});
+
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
 export type SightCandidate = z.infer<typeof SightCandidateSchema>;
@@ -208,3 +231,6 @@ export type EpisodeFiles = z.infer<typeof EpisodeFilesSchema>;
 export type EpisodeRecord = z.infer<typeof EpisodeSchema>;
 export type CartoonStatus = z.infer<typeof CartoonStatusSchema>;
 export type CartoonRecord = z.infer<typeof CartoonSchema>;
+export type SequenceMedium = z.infer<typeof SequenceMediumSchema>;
+export type SequenceAspect = z.infer<typeof SequenceAspectSchema>;
+export type SequenceRecord = z.infer<typeof SequenceSchema>;

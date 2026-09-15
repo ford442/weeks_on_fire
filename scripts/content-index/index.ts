@@ -10,8 +10,9 @@ import {
   loadStaff,
   loadEpisodes,
   loadCartoons,
+  loadSequences,
 } from './load';
-import { validateContent, validateEpisodes, validateCartoons } from './validate';
+import { validateContent, validateEpisodes, validateCartoons, validateSequences } from './validate';
 import {
   emitSongsModule,
   emitCutawaysModule,
@@ -21,6 +22,7 @@ import {
   emitStaffModule,
   emitEpisodesModule,
   emitCartoonsModule,
+  emitSequencesModule,
 } from './emit';
 
 const repoRoot = join(import.meta.dirname, '../..');
@@ -41,10 +43,12 @@ function main() {
   const staff = loadStaff(repoRoot);
   const episodes = loadEpisodes(repoRoot);
   const cartoons = loadCartoons(repoRoot);
+  const sequences = loadSequences(repoRoot);
 
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
   validateCartoons(repoRoot, cartoons);
+  validateSequences(repoRoot, sequences);
 
   writeGenerated('songs.ts', emitSongsModule(songs));
   writeGenerated(
@@ -62,9 +66,10 @@ function main() {
   writeGenerated('staff.ts', emitStaffModule(staff));
   writeGenerated('episodes.ts', emitEpisodesModule(episodes));
   writeGenerated('cartoons.ts', emitCartoonsModule(cartoons));
+  writeGenerated('sequences.ts', emitSequencesModule(sequences));
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${staff.length} staff, ${episodes.length} episodes, ${cartoons.length} cartoons.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${staff.length} staff, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
 
   if (checkMode) {

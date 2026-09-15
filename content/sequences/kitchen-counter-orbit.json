@@ -1,0 +1,17 @@
+{
+  "id": "kitchen-counter-orbit",
+  "title": "Kitchen Counter Orbit",
+  "medium": "photoreal",
+  "runtime": "~48 seconds",
+  "durationSec": 48,
+  "aspect": "16:9",
+  "register": "grounded still life",
+  "premise": "A porcelain mug, a brass teaspoon, and one orange share a honey-oak counter. Nobody is coming back for them. The camera does the visiting.",
+  "visual": "Close still-life: glazed porcelain mug with coffee meniscus, brass teaspoon at a slight wrong angle, one navel orange, honey-oak grain running toward a cream plaster wall. Steam only — no hand, no window hero, no clock. Warm caged-bulb key, cool fill from the left. Real objects, employed, slightly too still.",
+  "motion": "48-second orbit, full 360, slight boom on a sine. Steam particles rise from the mug the whole time. The spoon yaws a few degrees and corrects. Light warmth ticks once, like a bulb on a dying ballast. Loop on the opening heading.",
+  "tags": ["still-life", "porcelain", "brass", "honey-oak", "steam", "orbit"],
+  "grokImaginePrompt": "Photoreal object still, 16:9, a honey-oak kitchen counter with a glazed porcelain mug of coffee, a brass teaspoon lying a few degrees off square, and one navel orange, cream plaster wall behind, a thin steam wisp leaving the mug, no hands, no faces, no clock, three supporting figures: a caged bulb overhead, a wall socket with no plug, a folded tea towel at the far edge, warm pooled key light with cool fill from camera left, camera at counter height, 50mm, T2.8, fine grain, glazed porcelain against satin brass against warm honey-oak, Grok Imagine style",
+  "geminiOmniPrompt": "48-second seamless orbit. Camera travels 360 degrees around the mug, spoon, and orange at counter height with a slight boom. Steam rises. The spoon yaws a few degrees and corrects. No hands enter. No clock. Ends on the opening heading.",
+  "notes": "In-hub sequence is procedural WebGL. Keep the steam the only moving weather. Not the Long Weekend kitchen, not a gag with a calendar.",
+  "agent": "cursor-grok-4.6"
+}

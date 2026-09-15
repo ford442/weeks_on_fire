@@ -1,0 +1,17 @@
+{
+  "id": "rubber-hose-errand",
+  "title": "Rubber-Hose Errand",
+  "medium": "cartoon",
+  "runtime": "~32 seconds",
+  "durationSec": 32,
+  "aspect": "4:3",
+  "register": "mid-90s 3D cel",
+  "premise": "A round errand-runner with rubber-hose limbs is sent across a 4:3 stage to fetch a cube. The cube becomes a hat. The errand was always a costume change.",
+  "visual": "4:3 TV stage, cream cyclorama, two flat orange curtain legs, muted checkerboard floor. Character: cream sphere head, orange sphere body, black hose limbs, two dot eyes. The cube is a TV-paint flat, not a metal box. Thick ink outline on every form. Not photoreal, not 2D cel on paper — 3D puppets that still read as Saturday-morning.",
+  "motion": "0–3s: squash-in from above. 3–12s: walk cycle stage left to the cube. 12–18s: pick up; cube scales onto the head as a hat. 18–24s: two victory hops. 24–32s: exit stage right. Camera locked. Loop from the empty stage.",
+  "tags": ["cartoon", "cel", "rubber-hose", "4:3", "errand"],
+  "grokImaginePrompt": "3D cel-shaded cartoon still, 4:3, early-1990s Saturday-morning TV paint, NOT photoreal, a round errand-runner with a cream sphere head and orange sphere body and black rubber-hose limbs frozen mid-stride on a muted checkerboard stage, two black dot eyes, thick ink outline on every form, a TV-paint flat cube waiting stage right, cream cyclorama, two orange curtain legs, locked camera, no film grain, no lens, no HUD, Grok Imagine style",
+  "geminiOmniPrompt": "32-second 4:3 loop. Locked camera. Character squash-drops in, walks to the cube, wears it as a hat, hops twice, exits stage right. Limbs are rubber-hose, not IK humans. Cube never looks metal. No photoreal lighting. Ends on empty stage.",
+  "notes": "In-hub sequence is procedural WebGL. Do not file this as a 2D Warner Bros. still — the medium is 3D cel. Not Pin Cat, not Courtesy Shuttle.",
+  "agent": "cursor-grok-4.6"
+}

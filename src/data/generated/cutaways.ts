@@ -5443,6 +5443,598 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         "description": "Real snakes. Not Ep3. Not a light show."
       },
       {
+        "id": "hollow-tree",
+        "title": "Hollow tree",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "the brick becoming the inside of a hollow tree — concentric growth rings, bark-dark, a beetle commuting up a ring, then wet brick again",
+        "description": "The shaft is a trunk for a moment. The beetle goes the other way."
+      },
+      {
+        "id": "book-lining",
+        "title": "Book-lined shaft",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "the lining becoming books for a storey, spines facing in, titles unreadable, then brick again",
+        "description": "A library that thinks it is a well. We cannot read the spines at this speed."
+      },
+      {
+        "id": "coral-course",
+        "title": "Living coral",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "one course of living coral, polyps open in the dark, then masonry",
+        "description": "A reef ring. No water required. Then brick."
+      },
+      {
+        "id": "chimney-flue",
+        "title": "Chimney for thirty feet",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "the shaft becoming a chimney for thirty feet — soot, a square of kitchen light far above through the flue, then round wet brick",
+        "description": "Someone's stove, far above. The well remembers being a flue."
+      },
+      {
+        "id": "stained-glass-ring",
+        "title": "Stained-glass ring",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "a stained-glass ring set into the cylinder, figures looking inward, light with no source, colored dust we fall through",
+        "description": "A church window that closes into a hoop. The dust is the light."
+      },
+      {
+        "id": "coal-seam",
+        "title": "Coal seam",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "a coal seam, black dust going up past us, then brick",
+        "description": "Geology for a few feet. The dust commutes the other way."
+      },
+      {
+        "id": "ships-hold",
+        "title": "Ship's hold",
+        "category": "The well forgets what it is",
+        "lane": "fall",
+        "prompt": "the brick becoming the inside of a ship's hold — ribs, tar, one lantern swaying, then the well again",
+        "description": "A hull that thinks it is a shaft. The lantern does not care which."
+      },
+      {
+        "id": "traffic-light",
+        "title": "Traffic light",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "a traffic light hanging on a cable in the center of the shaft, cycling green to yellow to red as we pass under it",
+        "description": "It changes for us. We do not stop."
+      },
+      {
+        "id": "i-beam",
+        "title": "I-beam through",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "a steel I-beam through the diameter, rivets, we drop past the web",
+        "description": "A girder that thinks the well is a building. We go past the web."
+      },
+      {
+        "id": "fire-hydrant",
+        "title": "Fire hydrant",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "a fire hydrant bolted to the curve, cap chain hanging inward",
+        "description": "Street iron on the brick. The chain points at the fall."
+      },
+      {
+        "id": "empty-scaffold",
+        "title": "Empty scaffolding",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "empty scaffolding wrapping the cylinder, one hard hat on a plank, no one on it",
+        "description": "A job site with no crew. The hat stayed."
+      },
+      {
+        "id": "well-pump",
+        "title": "Well pump turning",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "the original well pump, rusted, flywheel still turning slowly the wrong way",
+        "description": "The machine that belonged here. It is running in reverse."
+      },
+      {
+        "id": "storm-outfall",
+        "title": "Storm-drain outfall",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "a storm-drain outfall in the wall, dry leaves shooting up out of it",
+        "description": "Street weather arriving sideways. The leaves go up because we are faster."
+      },
+      {
+        "id": "rebar-cage",
+        "title": "Rebar cage",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "a rebar cage with no concrete poured, we fall inside the cage, then brick resumes",
+        "description": "The pour never happened. We are briefly in the skeleton."
+      },
+      {
+        "id": "water-tank",
+        "title": "Inside the water tank",
+        "category": "Infrastructure",
+        "lane": "fall",
+        "prompt": "the inside of a municipal water tank — rust bloom, a ladder we do not use — then the well again",
+        "description": "A cistern with no water. The ladder is not for us."
+      },
+      {
+        "id": "owl-tracking",
+        "title": "Owl tracking",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "an owl on a brick, head turning to keep us in frame, then we are past",
+        "description": "It watches the fall. It does not leave the brick."
+      },
+      {
+        "id": "hammock-sleeper",
+        "title": "Hammock sleeper",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "someone asleep in a hammock strung across the shaft, we pass within a foot, they do not wake",
+        "description": "A bed across the drop. Courtesy is not looking."
+      },
+      {
+        "id": "moth-cloud",
+        "title": "Moth cloud",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "moths in a dense cloud around a work light, we fall through the cloud",
+        "description": "A living halo. We are the interruption."
+      },
+      {
+        "id": "fishing-up",
+        "title": "Fishing up",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "a person fishing from a ledge, line going up, bobber going up",
+        "description": "Their down is our up. The fish, if any, are above."
+      },
+      {
+        "id": "janitor-tile",
+        "title": "Janitor, no floor",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "a night janitor mopping a wet square of tile that has no floor beyond it",
+        "description": "The job has a square. The square has no building."
+      },
+      {
+        "id": "goat-moss",
+        "title": "Goat eating moss",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "a goat on a ledge eating moss off the brick, does not look up",
+        "description": "Dinner is moss. We are not interesting."
+      },
+      {
+        "id": "librarian-brick",
+        "title": "Librarian in the brick",
+        "category": "Occupied",
+        "lane": "fall",
+        "prompt": "a librarian shelving volumes into cavities in the brick, spine-in",
+        "description": "The collection is the masonry. They do not check us out."
+      },
+      {
+        "id": "made-bed",
+        "title": "Made bed, falling",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "a made bed falling slower than we are, hospital corners, empty",
+        "description": "Turned down for nobody. We overtake it."
+      },
+      {
+        "id": "goldfish-bowl",
+        "title": "Goldfish bowl",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "a goldfish bowl hanging in the air, water not spilling, the fish going the other way",
+        "description": "The water stays in. The fish commutes up."
+      },
+      {
+        "id": "aging-portraits",
+        "title": "Portraits getting older",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "family portraits in a descending column on the brick, the faces older as we go down",
+        "description": "Same people. Depth is time. No labels."
+      },
+      {
+        "id": "hanging-plants",
+        "title": "Roots trailing up",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "houseplants in hanging pots, roots trailing straight up out of the soil",
+        "description": "The pots hang. The roots go the wrong way because we are faster."
+      },
+      {
+        "id": "wall-ceiling-fan",
+        "title": "Ceiling fan on the wall",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "a ceiling fan mounted on the wall as if it were a ceiling, spinning, we pass beside the blades",
+        "description": "Its down is our sideways. The blades keep their job."
+      },
+      {
+        "id": "hung-bicycle",
+        "title": "Hung bicycle",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "a bicycle hung on two hooks, both wheels turning slowly",
+        "description": "Stored. Still moving. We do not take it."
+      },
+      {
+        "id": "ironing-steam",
+        "title": "Ironing board steam",
+        "category": "Domestic, falling",
+        "lane": "fall",
+        "prompt": "an ironing board with a shirt on it, steam going up past us",
+        "description": "Someone pressed a shirt and left. The steam outruns us the other way."
+      },
+      {
+        "id": "snow-up",
+        "title": "Snow going up",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "snow inside the shaft, flakes going up because we are faster",
+        "description": "Interior winter. We outrun the weather."
+      },
+      {
+        "id": "cross-waterfall",
+        "title": "Cross-shaft waterfall",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "a waterfall entering from a side tunnel and leaving through the opposite wall, we fall through the sheet",
+        "description": "Weather with an entrance and an exit. We are the hole in the sheet."
+      },
+      {
+        "id": "soap-bubbles",
+        "title": "Soap-bubble band",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "a band of soap bubbles filling the diameter, we punch through",
+        "description": "A floor of film. Then wet brick again."
+      },
+      {
+        "id": "tide-line",
+        "title": "Tide line",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "a tide line of dried seaweed and salt crust on the brick, then dry",
+        "description": "The ocean visited. It left a ring and went."
+      },
+      {
+        "id": "plankton-air",
+        "title": "Plankton in the air",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "bioluminescent plankton in the air, a loose galaxy we fall through",
+        "description": "Living light with no water. Distinct from the starfield lining."
+      },
+      {
+        "id": "cobweb-diameter",
+        "title": "Cobwebs across",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "dew-heavy cobwebs spanning the diameter, we tear them, strands going up",
+        "description": "A diameter of silk. We are the tear. The dew goes up."
+      },
+      {
+        "id": "steam-ice-steam",
+        "title": "Steam, ice, steam",
+        "category": "Water and weather",
+        "lane": "fall",
+        "prompt": "three stacked bands: steam, then clear cold air, then steam again",
+        "description": "Weather in layers. No frost-line freeze — just stacked rooms of air."
+      },
+      {
+        "id": "model-train",
+        "title": "Model train loop",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "a model train on a continuous loop around the circumference, headlights on, no people",
+        "description": "A layout that thinks the well is a mountain. The train does not notice us."
+      },
+      {
+        "id": "ocean-porthole",
+        "title": "Ocean porthole",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "a brass porthole in the brick looking out on open ocean, daylight, then brick",
+        "description": "Daylight water through glass. The shaft stays a shaft."
+      },
+      {
+        "id": "ourselves-at-lip",
+        "title": "Ourselves at the lip",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "through a side mouth, ourselves still standing on the lip, not yet fallen",
+        "description": "A window onto the start. We have already left it."
+      },
+      {
+        "id": "nested-wells",
+        "title": "Nested wells",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "nested wells, concentric brick rings, we are in the innermost cylinder",
+        "description": "Wells inside wells. We only fall in one of them."
+      },
+      {
+        "id": "drinking-glass",
+        "title": "Inside a glass",
+        "category": "Scale breaks",
+        "lane": "fall",
+        "prompt": "the shaft becoming the inside of a drinking glass for a moment — condensation, a fingerprint the size of a door — then brick",
+        "description": "We are briefly a sip. Then masonry resumes."
+      },
+      {
+        "id": "diner-counter",
+        "title": "Diner counter",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a diner counter wrapping the shaft, one coffee cup, steam going up, no cook",
+        "description": "A place setting in the round. Service has not arrived."
+      },
+      {
+        "id": "laundromat-drum",
+        "title": "One drum spinning",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a row of laundromat machines bolted to the curve, one drum spinning, a sock going up out of it",
+        "description": "One machine is mid-cycle. The sock commutes the other way."
+      },
+      {
+        "id": "baggage-carousel",
+        "title": "Baggage carousel",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "an airport baggage carousel wrapping the curve, one suitcase going the long way around",
+        "description": "A claim with no hall. One bag is still looking for a hand."
+      },
+      {
+        "id": "escalator-up",
+        "title": "Escalator going up",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "an escalator going up, empty, we fall past the moving steps",
+        "description": "The way out is occupied and going the other direction. We do not take it."
+      },
+      {
+        "id": "photo-booth-flash",
+        "title": "Photo booth flash",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a photo booth set into the brick, curtain stirring, a flash as we pass",
+        "description": "It takes our picture at this speed. We do not get the strip."
+      },
+      {
+        "id": "inward-greenhouse",
+        "title": "Greenhouse inward",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "greenhouse glass instead of brick, plants growing inward toward the fall path",
+        "description": "A conservatory that faces the drop. The plants want the middle."
+      },
+      {
+        "id": "aquarium-wall",
+        "title": "Aquarium wall",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "an aquarium wall, fish on the other side of glass, water where masonry should be",
+        "description": "Water behind glass, not in the shaft. Distinct from fish swimming in air."
+      },
+      {
+        "id": "hotel-dnd",
+        "title": "Do Not Disturb",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a hotel door in the brick, a Do Not Disturb tag hanging, we pass the peephole and a chain lock",
+        "description": "A room we will not enter. The tag is sincere."
+      },
+      {
+        "id": "taxidermy-deer",
+        "title": "Deer in the brick",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a taxidermy deer head mounted looking at the center of the shaft",
+        "description": "Trophy posture. It watches the fall path. We pass the nose."
+      },
+      {
+        "id": "darkroom-trays",
+        "title": "Darkroom of the fall",
+        "category": "Wrong-channel",
+        "lane": "fall",
+        "prompt": "a darkroom, trays of developer, photographs of this fall still coming up in the liquid",
+        "description": "The picture is developing as we happen. Distinct from the polaroids already pinned."
+      },
+      {
+        "id": "cave-painting",
+        "title": "Ochre falling figure",
+        "category": "Time / records",
+        "lane": "fall",
+        "prompt": "a cave painting of a falling figure, ochre, already on the brick",
+        "description": "Someone recorded this before it happened. Or after."
+      },
+      {
+        "id": "seismograph",
+        "title": "Seismograph of us",
+        "category": "Time / records",
+        "lane": "fall",
+        "prompt": "a seismograph drum drawing a line that is our descent",
+        "description": "The needle is honest. The paper is the fall."
+      },
+      {
+        "id": "guestbook-pen",
+        "title": "Guestbook pen",
+        "category": "Time / records",
+        "lane": "fall",
+        "prompt": "a guestbook on a ledge, a pen rolling off into the shaft after us",
+        "description": "We did not sign. The pen tries to follow."
+      },
+      {
+        "id": "fossil-faller",
+        "title": "Fossil faller",
+        "category": "Time / records",
+        "lane": "fall",
+        "prompt": "a fossil of a previous faller in the brick, in profile, looking down",
+        "description": "Someone already went this way. They are the masonry now."
+      },
+      {
+        "id": "flight-recorder",
+        "title": "Flight recorder",
+        "category": "Time / records",
+        "lane": "fall",
+        "prompt": "a flight recorder on a ledge, one LED blinking, no labels we can read",
+        "description": "It is recording. We do not get the transcript."
+      },
+      {
+        "id": "wet-footprints",
+        "title": "Footprints that stop",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "wet footprints walking down the wall, then stopping, nothing below them",
+        "description": "Someone walked the brick until they did not. We keep going."
+      },
+      {
+        "id": "life-ring",
+        "title": "Unused life ring",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "a life ring hung on a bracket, unused, the well too narrow for it to matter",
+        "description": "Safety equipment for a hole it cannot help."
+      },
+      {
+        "id": "candle-stub",
+        "title": "Smoking candle stub",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "a candle stub in a niche, still smoking",
+        "description": "Someone was here with a light. The light is over."
+      },
+      {
+        "id": "empty-nest",
+        "title": "Empty nest",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "an empty bird's nest on a brick, lining blown up past us",
+        "description": "The nest stayed. The lining commutes the other way."
+      },
+      {
+        "id": "blank-name",
+        "title": "Blank where a name was",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "a name carved, a second name, then a blank rectangle the size of a name",
+        "description": "Two people marked the brick. The third space is waiting, or erased."
+      },
+      {
+        "id": "wedding-ring-ledge",
+        "title": "Wedding ring, no hand",
+        "category": "Absence",
+        "lane": "fall",
+        "prompt": "a wedding ring on a ledge, no hand",
+        "description": "Left as if the owner stepped out of it and continued."
+      },
+      {
+        "id": "fresnel-lens",
+        "title": "Fresnel lens",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "a lighthouse Fresnel lens filling the shaft, rotating, we fall through the beam",
+        "description": "A lighthouse that thinks the well is the sea. We go through the light."
+      },
+      {
+        "id": "facing-mirrors",
+        "title": "Facing mirrors",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "two mirrors facing across the diameter, the well repeating forever, we fall through the middle",
+        "description": "Infinite shafts. We only occupy one of them."
+      },
+      {
+        "id": "dust-mote-sun",
+        "title": "Sunbeam of dust",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "a side hole of real sunlight, a column of dust motes we fall through",
+        "description": "Daylight with an entrance. The motes are slower than we are."
+      },
+      {
+        "id": "candles-blow-out",
+        "title": "Candles blowing out",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "candle niches in a ring, each flame blowing out as we pass",
+        "description": "We are the wind. The ring goes dark behind us."
+      },
+      {
+        "id": "flash-from-below",
+        "title": "Flash from below",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "a camera flash from below, then the dark is darker",
+        "description": "Someone photographed the fall from the wrong end. Then nothing."
+      },
+      {
+        "id": "burning-match",
+        "title": "Burning match",
+        "category": "Light",
+        "lane": "fall",
+        "prompt": "a single wooden match still burning, falling slower, we overtake the flame",
+        "description": "The only moving light besides us. We leave it above."
+      },
+      {
+        "id": "root-curtain",
+        "title": "Root curtain",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "a curtain of living roots across the shaft, we tear through, dirt going up",
+        "description": "The hillside reaching in. We are the tear."
+      },
+      {
+        "id": "mushroom-rings",
+        "title": "Mushroom rings",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "mushrooms in a ring at every other course, pale, then gone",
+        "description": "Fairy rings stacked like floors. Then wet brick."
+      },
+      {
+        "id": "half-ivy",
+        "title": "Ivy meridian",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "ivy covering exactly half the cylinder, a clean meridian, the other half wet brick",
+        "description": "A well that is half garden. The line is too straight."
+      },
+      {
+        "id": "horizontal-tree",
+        "title": "Tree across",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "a tree growing horizontally across the diameter, we pass the trunk, leaves going up",
+        "description": "A trunk for a bridge. The leaves commute the other way."
+      },
+      {
+        "id": "thick-moss",
+        "title": "Moss so thick",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "moss so thick the brick is only a rumor, then brick again",
+        "description": "The lining grows over. Then it remembers masonry."
+      },
+      {
+        "id": "cave-crickets",
+        "title": "Cave crickets up",
+        "category": "Flora",
+        "lane": "fall",
+        "prompt": "pale cave crickets scattering up the wall as we drop",
+        "description": "They commute the other way. The well stays quiet."
+      },
+      {
         "id": "bottom-is-sky",
         "title": "The bottom is a sky",
         "category": "Endings",
@@ -5513,6 +6105,38 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         "lane": "ending",
         "prompt": "the riff inverting and we fall up — the lip from below, approaching",
         "description": "Cadence misses by reversing. H is the mouth again."
+      },
+      {
+        "id": "forest-floor-bottom",
+        "title": "Forest floor, looking up",
+        "category": "Endings",
+        "lane": "ending",
+        "prompt": "a forest floor where the bottom should be, looking up through a hollow tree",
+        "description": "The well was a trunk. Exit is leaf litter and sky the other way."
+      },
+      {
+        "id": "bucket-still-falling",
+        "title": "Bucket, still falling",
+        "category": "Endings",
+        "lane": "ending",
+        "prompt": "we arrive in a metal bucket, and the bucket is still falling",
+        "description": "A bottom that is a container. The container has no bottom."
+      },
+      {
+        "id": "bathroom-drain",
+        "title": "Bathroom drain",
+        "category": "Endings",
+        "lane": "ending",
+        "prompt": "a bathroom drain where the bottom should be, we are about to go through",
+        "description": "Household plumbing as an ending. The well was a pipe."
+      },
+      {
+        "id": "lens-looking-up",
+        "title": "Lens looking up",
+        "category": "Endings",
+        "lane": "ending",
+        "prompt": "a camera lens looking up, we fill the frame",
+        "description": "The bottom is an optic. Cut when we occupy the whole glass."
       }
     ],
     segments: [

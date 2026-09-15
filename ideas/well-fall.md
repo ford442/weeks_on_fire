@@ -85,6 +85,18 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - Mortar turning to beeswax comb, live bees going up through the cells
 - A full moon set into the brick like a window, cratered, close enough to touch
 - Faces in the mortar that look past us, never at us
+- Brick becoming the inside of a hollow tree — concentric rings, bark-dark, a
+  beetle commuting up a ring, then wet brick again
+- The lining is books for a storey, spines facing in, titles unreadable, then
+  brick
+- One course of living coral, polyps open in the dark, then masonry
+- The shaft is a chimney for thirty feet — soot, a square of kitchen light far
+  above through the flue, then round wet brick
+- A stained-glass ring set into the cylinder, figures looking inward, light
+  with no source, colored dust we fall through
+- A coal seam, black dust going up past us, then brick
+- The brick becoming the inside of a ship's hold — ribs, tar, one lantern
+  swaying, then the well again
 
 ### Infrastructure
 
@@ -104,6 +116,17 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   robots working the curve as if it were a floor; no logos
 - One finished unpainted sedan hanging on a single hook, waiting for a line
   that is not here; we fall past the grille
+- A traffic light hanging on a cable in the center of the shaft, cycling green
+  to yellow to red as we pass under it
+- A steel I-beam through the diameter, rivets, we drop past the web
+- A fire hydrant bolted to the curve, cap chain hanging inward
+- Empty scaffolding wrapping the cylinder, one hard hat on a plank, no one on it
+- The original well pump, rusted, flywheel still turning slowly the wrong way
+- A storm-drain outfall in the wall, dry leaves shooting up out of it
+- Rebar cage with no concrete poured — we fall inside the cage, then brick
+  resumes
+- The inside of a municipal water tank — rust bloom, a ladder we do not use —
+  then the well again
 
 ### Occupied
 
@@ -123,6 +146,14 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   heads down, chewing, none of them look up as we pass
 - Live snakes on the wet brick — ordinary scales, coiled and traveling the
   curve, no glow, no laser, no Halloween lawn; they do not strike
+- An owl on a brick, head turning to keep us in frame, then we are past
+- Someone asleep in a hammock strung across the shaft, we pass within a foot,
+  they do not wake
+- Moths in a dense cloud around a work light, we fall through the cloud
+- A person fishing from a ledge, line going up, bobber going up
+- A night janitor mopping a wet square of tile that has no floor beyond it
+- A goat on a ledge eating moss off the brick, does not look up
+- A librarian shelving volumes into cavities in the brick, spine-in
 
 ### Domestic, falling
 
@@ -144,6 +175,15 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   peanuts trailing straight up out of torn flaps
 - Empty cardboard boxes stacked as a spiral against the brick, flaps open,
   nothing in them
+- A made bed falling slower than we are, hospital corners, empty
+- A goldfish bowl hanging in the air, water not spilling, the fish going the
+  other way
+- Family portraits in a descending column, the faces older as we go down
+- Houseplants in hanging pots, roots trailing straight up
+- A ceiling fan mounted on the wall as if it were a ceiling, spinning, we pass
+  beside the blades
+- A bicycle hung on two hooks, both wheels turning slowly
+- An ironing board with a shirt on it, steam going up past us
 
 ### Water and weather
 
@@ -159,6 +199,14 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   frozen in it; we punch through and come out wet brick again
 - The wet brick sheathed in a skin of ice, our fall a blur inside the glaze,
   then brick again
+- Snow inside the shaft, flakes going up because we are faster
+- A waterfall entering from a side tunnel and leaving through the opposite
+  wall, we fall through the sheet
+- A band of soap bubbles filling the diameter, we punch through
+- A tide line of dried seaweed and salt crust on the brick, then dry
+- Bioluminescent plankton in the air, a loose galaxy we fall through
+- Dew-heavy cobwebs spanning the diameter, we tear them, strands going up
+- Three stacked bands: steam, then clear cold air, then steam again
 
 ### Scale breaks
 
@@ -177,6 +225,13 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick
 - A gap in the brick where there is no air, only stars through a missing
   course; we fall through and the air comes back
+- A model train on a continuous loop around the circumference, headlights on,
+  no people
+- A brass porthole in the brick looking out on open ocean, daylight, then brick
+- Through a side mouth: ourselves still standing on the lip, not yet fallen
+- Nested wells, concentric brick rings, we are in the innermost cylinder
+- The shaft is the inside of a drinking glass for a moment — condensation, a
+  fingerprint the size of a door — then brick
 
 ### Wrong-channel
 
@@ -194,6 +249,21 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - A circular trading pit built into the shaft: jackets, paper tickets,
   ticker tape falling up past us because we are faster; no readable prices,
   no HUD, no on-screen titles
+- A diner counter wrapping the shaft, one coffee cup, steam going up, no cook
+- A row of laundromat machines bolted to the curve, one drum spinning, a sock
+  going up out of it
+- An airport baggage carousel wrapping the curve, one suitcase going the long
+  way around
+- An escalator going up, empty, we fall past the moving steps
+- A photo booth set into the brick, curtain stirring, a flash as we pass
+- Greenhouse glass instead of brick, plants growing inward toward the fall path
+- An aquarium wall, fish on the other side of glass, water where masonry
+  should be
+- A hotel door in the brick, Do Not Disturb hanging, we pass the peephole and
+  a chain lock
+- A taxidermy deer head mounted looking at the center
+- A darkroom: trays of developer, photographs of this fall still coming up in
+  the liquid
 
 ### Time / records
 
@@ -201,12 +271,45 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
   reached
 - A punch-clock, cards stamped with depths
 - A single bare bulb on a long cord — we catch it, pass it, leave it above
+- A cave painting of a falling figure, ochre, already on the brick
+- A seismograph drum drawing a line that is our descent
+- A guestbook on a ledge, a pen rolling off into the shaft after us
+- A fossil of a previous faller in the brick, in profile, looking down
+- A flight recorder on a ledge, one LED blinking, no labels we can read
 
 ### Absence
 
 - A rope that ends. We pass the fray. Nothing below it.
 - Shoes, paired, on a ledge, laces tied together
 - A laminated missing-person flyer, face toward the center
+- Wet footprints walking down the wall, then stopping, nothing below them
+- A life ring hung on a bracket, unused, the well too narrow for it to matter
+- A candle stub in a niche, still smoking
+- An empty bird's nest on a brick, lining blown up past us
+- A name carved, a second name, then a blank rectangle the size of a name
+- A wedding ring on a ledge, no hand
+
+### Light
+
+- A lighthouse Fresnel lens filling the shaft, rotating, we fall through the
+  beam
+- Two mirrors facing across the diameter, the well repeating forever, we fall
+  through the middle
+- A side hole of real sunlight, a column of dust motes we fall through
+- Candle niches in a ring, each flame blowing out as we pass
+- A camera flash from below, then the dark is darker
+- A single wooden match still burning, falling slower, we overtake the flame
+
+### Flora
+
+- A curtain of living roots across the shaft, we tear through, dirt going up
+- Mushrooms in a ring at every other course, pale, then gone
+- Ivy covering exactly half the cylinder, a clean meridian, the other half wet
+  brick
+- A tree growing horizontally across the diameter, we pass the trunk, leaves
+  going up
+- Moss so thick the brick is only a rumor, then brick again
+- Pale cave crickets scattering up the wall as we drop
 
 ### Endings for H (do not use one in B–G)
 
@@ -220,6 +323,10 @@ shaft for a moment*. We do not cut away. The fall never pauses to explain.
 - We come out the top of a different well, same hills, night now
 - Inner face of a well cover, bolts, we stop one inch short
 - The riff inverts and we fall up — the lip from below, approaching
+- The bottom is a forest floor, looking up through a hollow tree
+- We arrive in a metal bucket, and the bucket is still falling
+- The bottom is a bathroom drain, we are about to go through
+- A camera lens looking up, we fill the frame
 
 ---
 

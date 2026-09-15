@@ -26,6 +26,7 @@ they go when they get long enough to act.
 | **Car Twelve, This Is Twelve** | Crisis-negotiation procedural | The technique is correct and it works |
 | **Ambient Lighting with Ambition** | Daytime home-makeover program | Host it; never acknowledge hosting it |
 | **Natural Ventilation** | Ruin ballad — the channel changes *down* | The wrongness is the calm |
+| **Regulation Powder** | Sanctioned match officiating, in a forest | Score it; never raise your voice |
 
 ---
 
@@ -44,6 +45,7 @@ they go when they get long enough to act.
 | **Car Twelve, This Is Twelve** | [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) | [`versions/…`](versions/negotiating-with-the-elevator-versions.md) | 4–5 min | Freight elevator, car 2 | Negotiation procedural / tango |
 | **Ambient Lighting with Ambition** | [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) | [`versions/…`](versions/ambient-lighting-with-ambition-versions.md) | 4–5 min | Sixth-floor corridor | Makeover show / neon noir |
 | **Natural Ventilation** | [`natural-ventilation.md`](natural-ventilation.md) | [`versions/…`](versions/natural-ventilation-versions.md) | 3–4 min | Vacant unit 12-A, open roof | Ruin cabaret / two-hander |
+| **Regulation Powder** | [`regulation-powder.md`](regulation-powder.md) | [`versions/…`](versions/regulation-powder-versions.md) | 3–4 min | Night woods, furniture clearing | Action / sporting deadpan |
 
 **The Long Way Up is deliberately the longest continuous dialog block in the
 series** — the "wordy episode," where the show appears to change channels into a
@@ -91,17 +93,22 @@ Three scenes in the same decaying, rule-obsessed building. Shot order is index
 order; **Natural Ventilation must play last** — the no only costs something after
 the audience has watched Lillith fix two other things.
 
-| Character | Car Twelve | Ambient Lighting | Natural Ventilation |
-|---|:--:|:--:|:--:|
-| Rubella | ● lead (documents) | ● lead (ladder foot) | ● lead |
-| Lillith | ● lead (negotiates) | ● lead (ladder) | ● lead |
-| The Elevator | ● V.O. — **floor numbers only** | — | — |
-| Madelyn | ○ V.O. intercom, never seen | ○ one laminated memo, no voice | — |
-| Pizza Guy | — | ○ (order name almost right) | — |
-| Qing | ○ (lobby, noodles, no line) | — | — |
+| Character | Car Twelve | Ambient Lighting | Natural Ventilation | Regulation Powder |
+|---|:--:|:--:|:--:|:--:|
+| Rubella | ● lead (documents) | ● lead (ladder foot) | ● lead | ● lead (throws) |
+| Lillith | ● lead (negotiates) | ● lead (ladder) | ● lead | ● lead (throws) |
+| The Elevator | ● V.O. — **floor numbers only** | — | — | — |
+| Madelyn | ○ V.O. intercom, never seen | ○ one laminated memo, no voice | — | — |
+| Pizza Guy | — | ○ (order name almost right) | — | — |
+| Qing | ○ (lobby, noodles, no line) | — | — | — |
 
 **Natural Ventilation is a two-hander.** No third voice, no intercom, no memo, no
 Continuity Voice. If a draft adds one, the draft is wrong.
+
+**Regulation Powder is also a two-hander**, and it is the only one of the set shot
+**outside the building** — night woods, winter, the Episode 2 furniture. Same no-third-voice
+rule. It is action-led: roughly two pages of dialog under seven beats of choreography.
+Do not schedule it inside the three-scene building block; it is an Episode 2 candidate insert.
 
 **Madelyn is never seen in this set.** She is a good speaker in Car Twelve and a
 piece of laminate in Ambient Lighting. Do not cast a face.

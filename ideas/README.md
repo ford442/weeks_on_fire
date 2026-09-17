@@ -33,6 +33,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `marble-tick-tack-worlds.md` – sibling *Wrong Sets* on the same song: magnets never notice while the episode regenerates (Halbach desert, hopping lion, Meissner ice, Helmholtz saucer, London / Seoul, souvenir chain).
 - `daisy-bell-cutaway.md` – Rubella & Lillith living-flower tandem, wildflower field → period London, B&W scratch ↔ HD color. Indoor-river room and paint rivulets pointed from here.
 - `big-city-hairdos.md` – downtown / Fleet Street think tank: giant awkward 1890s hairdos as civic obstacles (roundabout, cafe with no eye-line, revolving door). Feeds Daisy Bell street sights. Not Ultra Screech.
+- `big-city-hair-incidents.md` – real-scale sight bank for the *Big City* B-roll: believably big salon hair vs. normal-size turnstiles, headrests, elevators and weather. Awkward, quiet, 10–20s per beat. The modern sibling of `big-city-hairdos.md` (which stays Victorian / civic-scale for Daisy Bell).
 - `daisy-bell-timing.md` – 4:20 cue sheet for `songs/Daisy+Bell.mp3`.
 - `daisy-bell-themes.md` – partnership / class / time-slip, viewer seats, indoor river, end girl as the title.
 - `daisy-bell-nuance.md` – C0–C19 object / continuity / ¾ hit. Bare foot, flower count, tire rut, girl.

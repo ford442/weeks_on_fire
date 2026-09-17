@@ -8,6 +8,7 @@
 **Grok build:** `ai-contributions/grok-4.6/big-city-video.md`  
 **Local board:** `artifacts/big_city_video.md`  
 **Suggestions id:** `big-city`
+**Sight bank (B-roll):** [`big-city-hair-incidents.md`](big-city-hair-incidents.md) — real-scale awkward hair incidents, 10–20s each
 
 Bed in hand: local `big_city(option_a).mp3` (~2:46.82). Kenji tag lands **0:05–0:07**: *“The hair is in big city man.”* Use the take. Do not rewrite him. Binary is not in `songs/` yet.
 

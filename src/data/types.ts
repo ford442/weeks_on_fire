@@ -1,145 +1,43 @@
-import type { SequenceGraph } from '../sequences/graph/types';
-export interface Song {
-  id: string;
-  title: string;
-  genre: string;
-  description: string;
-  episode: string;
-  stylePrompt: string;
-  lyrics: string | null;
-  notes: string | null;
-  instrumental: boolean;
-  tags: string[];
-  sourceFile: string;
-  audioFile?: string;
-}
+import type {
+  CartoonStatus,
+  DaisyFrameTreatment,
+  EpisodeStatus,
+  ImageKind,
+  SequenceMedium,
+} from '../../scripts/content-index/catalog-types';
 
-export interface CutawaySegment {
-  id: string;
-  label: string;
-  start: string;
-  end: string;
-  durationSec: number;
-  onScreen: string;
-  lyrics: string;
-  musicCue: string;
-  grokImaginePrompt: string;
-  geminiOmniPrompt: string;
-  promptVariations: string[];
-  stillUrl?: string;
-  previewUrl?: string;
-}
-
-export type SuggestionKind = 'musical' | 'gag' | 'scene';
-
-export type SightLane = 'fall' | 'ending';
-
-export interface SightCandidate {
-  id: string;
-  title: string;
-  category: string;
-  lane: SightLane;
-  prompt: string;
-  description: string;
-}
-
-export interface CutawaySuggestion {
-  id: string;
-  kind: SuggestionKind;
-  title: string;
-  status: 'suggested' | 'ready-to-generate' | 'in-production';
-  runtime: string;
-  episode: string;
-  songId: string;
-  songTitle: string;
-  summary: string;
-  visualArc: string;
-  tags: string[];
-  segments: CutawaySegment[];
-  sightBank?: SightCandidate[];
-}
-
-export type MediaType = 'image' | 'video';
-
-export type ImageKind = 'scene' | 'suggestion' | 'test' | 'character';
-
-export interface FilmScene {
-  id: string;
-  imageKind: ImageKind;
-  episode: string;
-  title: string;
-  prompt: string;
-  promptVariations: string[];
-  imageUrl?: string;
-  mediaType: MediaType;
-  musicCue: string;
-  musicStyle: string;
-  description: string;
-  theme: string;
-  tags: string[];
-}
-
-export interface SeriesCharacter {
-  id: string;
-  name: string;
-  nameNote?: string;
-  role: string;
-  episodes: string[];
-  traits: string[];
-  bio: string;
-  props: string[];
-  tags: string[];
-  imageUrl?: string;
-}
-
-export type StaffRole = 'Writer' | 'Producer' | 'Director' | 'Music Supervisor' | 'Visual Designer';
-
-export interface StaffRecord {
-  id: string;
-  name: string;
-  role: StaffRole;
-  location: string;
-  yearsOnSeries: string;
-  specialty: string;
-  bio: string;
-  quote: string;
-  credits: string[];
-  imageFile: string;
-}
-
-export interface StaffMember extends Omit<StaffRecord, 'imageFile'> {
-  /** Public URL under /cast, with optional subdirectory prefix in production. */
-  imageUrl: string;
-}
-
-export type DaisyFrameTreatment = 'color' | 'period';
-
-export interface DaisyBellFrame {
-  id: string;
-  order: number;
-  title: string;
-  treatment: DaisyFrameTreatment;
-  beat: string;
-  description: string;
-  prompt: string;
-  imageUrl?: string;
-  tags: string[];
-}
-
-export interface DaisyBellSight {
-  id: string;
-  lyricCue: string | null;
-  title: string;
-  description: string;
-}
-
-export interface DaisyBellSequenceBeat {
-  id: string;
-  step: number;
-  title: string;
-  treatment: DaisyFrameTreatment | 'flip';
-  summary: string;
-}
+/**
+ * Catalog record types are derived from the Zod schemas in `scripts/content-index/schemas.ts`
+ * (see `catalog-types.ts`). Only UI chrome — labels and accent classes — is authored here.
+ */
+export type {
+  CartoonRecord,
+  CartoonStatus,
+  CutawaySegment,
+  CutawaySuggestion,
+  DaisyBellFrame,
+  DaisyBellSequenceBeat,
+  DaisyBellSight,
+  DaisyFrameTreatment,
+  EpisodeFiles,
+  EpisodeRecord,
+  EpisodeStatus,
+  FilmScene,
+  ImageKind,
+  MediaType,
+  SequenceAspect,
+  SequenceMedium,
+  SequenceRecord,
+  SequenceRenderer,
+  SeriesCharacter,
+  SightCandidate,
+  SightLane,
+  Song,
+  StaffMember,
+  StaffRecord,
+  StaffRole,
+  SuggestionKind,
+} from '../../scripts/content-index/catalog-types';
 
 export const imageKindMeta: Record<
   ImageKind,
@@ -167,29 +65,6 @@ export const imageKindMeta: Record<
   },
 };
 
-export type EpisodeStatus = 'synopsis-ready' | 'in-production' | 'candidate';
-
-export interface EpisodeFiles {
-  synopsis?: string;
-  scenes?: string;
-  screenplay?: string;
-  subtitles?: string;
-  notes?: string;
-  seasonArc?: string;
-}
-
-export interface EpisodeRecord {
-  id: string;
-  number: number;
-  title: string;
-  register?: string;
-  status: EpisodeStatus;
-  runtime?: string;
-  logline: string;
-  isCandidate?: boolean;
-  files: EpisodeFiles;
-}
-
 export const episodeStatusMeta: Record<EpisodeStatus, { label: string; accent: string }> = {
   'synopsis-ready': {
     label: 'Synopsis ready',
@@ -204,25 +79,6 @@ export const episodeStatusMeta: Record<EpisodeStatus, { label: string; accent: s
     accent: 'border-violet-500/40 bg-violet-500/10 text-violet-200',
   },
 };
-
-export type CartoonStatus = 'seed' | 'sketched' | 'ready-to-generate' | 'promoted';
-
-export interface CartoonRecord {
-  id: string;
-  title: string;
-  premise: string;
-  visual: string;
-  status: CartoonStatus;
-  tags: string[];
-  runtime?: string;
-  register?: string;
-  characterLean?: string;
-  grokImaginePrompt?: string;
-  motion?: string;
-  notes?: string;
-  agent?: string;
-  stillUrl?: string;
-}
 
 export const cartoonStatusMeta: Record<CartoonStatus, { label: string; accent: string }> = {
   seed: {
@@ -242,35 +98,6 @@ export const cartoonStatusMeta: Record<CartoonStatus, { label: string; accent: s
     accent: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-200',
   },
 };
-
-export type SequenceMedium = 'unreal' | 'photoreal' | 'cartoon' | 'mixed';
-
-export type SequenceAspect = '16:9' | '4:3';
-
-/** `graph` plays from JSON; `custom` has a hand-written factory in `src/sequences/registry.ts`. */
-export type SequenceRenderer = 'graph' | 'custom';
-
-export interface SequenceRecord {
-  id: string;
-  title: string;
-  medium: SequenceMedium;
-  runtime: string;
-  durationSec: number;
-  premise: string;
-  visual: string;
-  motion: string;
-  tags: string[];
-  aspect?: SequenceAspect;
-  register?: string;
-  grokImaginePrompt?: string;
-  geminiOmniPrompt?: string;
-  notes?: string;
-  agent?: string;
-  stillUrl?: string;
-  renderer: SequenceRenderer;
-  /** Present when `renderer` is `graph`. */
-  graph?: SequenceGraph;
-}
 
 export const sequenceMediumMeta: Record<
   SequenceMedium,

@@ -288,7 +288,6 @@ export const filmScenes: FilmScene[] = [
     title: "Molten Silver Sphere — Beat-Sync Pulse",
     prompt: "Cinematic 8K still of a glossy molten silver liquid-metal sphere hovering dead-center in a vast pitch-black cave, mercury-chrome skin with capillary ripples pulsating to a deep musical kick, cavern walls mid-flash between razor-sharp black-and-white checkerboard and electric neon line grids, chromatic specular ribbons racing across the chrome, Grok Imagine style.",
     promptVariations: ["Orbital still: neon veins crawl along cave fault lines like circuitry, checkerboard afterimages ghost on wet stone.", "Extreme macro dive into chrome surface — warped checkerboard and neon ribbons reflected in liquid metal."],
-    
     mediaType: "image",
     musicCue: "Twilight Time — warehouse pulse",
     musicStyle: "90s rave / beat-sync visual",
@@ -303,7 +302,6 @@ export const filmScenes: FilmScene[] = [
     title: "Glam-Sham-Poo — Commercial Still Package",
     prompt: "Cinematic still of exhausted glam-metal shampoo commercial energy: chrome bathroom set, screeching product bottle center frame, two women in black lace dead-pan behind a fog machine, Gang vocals on GLAM-SHAM-POO spelled in neon, joke-commercial short-film still, Grok Imagine style.",
     promptVariations: ["Product hero: oversized chrome shampoo bottle with GLAM-SHAM-POO label, stage fog, ring light, 80s commercial parody.", "Two-shot: Lillith committed, Rubella exhausted, both mouthing an impossible high note in a fogged glam set."],
-    
     mediaType: "image",
     musicCue: "Ultra Screech (Glam-Sham-Poo)",
     musicStyle: "Glam metal joke commercial",
@@ -408,7 +406,6 @@ export const filmScenes: FilmScene[] = [
     title: "Rubella Stand-Up — Podium Lock",
     prompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella a glamorous exhausted woman with long dark hair and blood-red lipstick in a modern black lace evening dress, no corset, no century costume, standing behind a honey-oak folding table used as a stage in a basement laundry room, mouths on mid-clause as if filing a complaint, unused brass-stem microphone on a short stand sitting on the table unused in spirit, World's Okayest Tenant mug half empty set down like evidence, empty first row of beige steel folding chairs facing her, resignation face, wet enamel only in the floor grout lines, flickering fluorescent troffer, fluorescent hallway bleed, Grok Imagine style",
     promptVariations: ["Rest-pose twin: same lock, mouths closed, mug already down, Grok Imagine", "Closer: mug and unused brass-stem microphone, her hands, chairs soft in the first row, Grok Imagine"],
-    
     mediaType: "image",
     musicCue: "Rubella Stand-Up Voice bed — Item Seven",
     musicStyle: "Spoken Voice bed, dry raspy, no music",
@@ -423,7 +420,6 @@ export const filmScenes: FilmScene[] = [
     title: "Rubella Stand-Up — Detergent Relic",
     prompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella mid-set behind a honey-oak folding table used as a stage, modern black lace, mouths on, unused brass-stem microphone on a short stand, World's Okayest Tenant mug, contraband unlabeled detergent bottle in her off-hand held like a sacred relic for this one beat only, no readable brand text, beige steel folding chairs in soft focus, wet enamel only in the floor grout lines, flickering fluorescent, Grok Imagine style",
     promptVariations: ["Bottle down again by the end of the beat, never the hero twice, Grok Imagine", "Macro of the unlabeled bottle against lace, mug bokeh, Grok Imagine"],
-    
     mediaType: "image",
     musicCue: "Rubella Stand-Up Voice bed — detergent that still works",
     musicStyle: "Spoken Voice bed, dry raspy, no music",
@@ -438,7 +434,6 @@ export const filmScenes: FilmScene[] = [
     title: "Rubella Stand-Up — Heckle Wide",
     prompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, wide laundry-room open mic, Rubella in modern black lace behind a honey-oak folding table used as a stage, she does not turn, mouths on toward the unused brass-stem microphone, rows of empty beige steel folding chairs, Lillith one chair in the back row in black lace, mouth open one frame, not a two-shot concert photo, clipboard silhouette in the last chair and no gavel, flickering fluorescent, wet enamel only in the floor grout lines, Grok Imagine style",
     promptVariations: ["Qing optional: noodles, one wrong-time laugh, no line, side chair only, Grok Imagine", "Without Lillith's face, only the open mouth as a small shape in the back row, Grok Imagine"],
-    
     mediaType: "image",
     musicCue: "Rubella Stand-Up Voice bed — Lillith heckle once",
     musicStyle: "Spoken Voice bed, dry raspy, no music",
@@ -453,12 +448,11 @@ export const filmScenes: FilmScene[] = [
     title: "Rubella Stand-Up — Land",
     prompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella in a modern black lace evening dress behind a honey-oak folding table used as a stage, mouths on at the end of the complaint, two identical carbon forms already in her hand, World's Okayest Tenant mug empty, unused brass-stem microphone still unused in spirit, beige steel folding chairs that have crept one inch back, flickering fluorescent troffer, wet enamel only in the floor grout lines, clipboard silhouette in the last chair, Grok Imagine style",
     promptVariations: ["Forms catching the fluorescent, no readable text, Grok Imagine", "Same lock as podium, only the empty mug and the duplicate sheets have changed, Grok Imagine"],
-    
     mediaType: "image",
     musicCue: "Rubella Stand-Up Voice bed — emotional damages",
     musicStyle: "Spoken Voice bed, dry raspy, no music",
     description: "Still D, shoot first with A. Duplicate forms. Chairs crept one inch back.",
     theme: "Rubella Stand-Up",
     tags: ["suggestion", "rubella", "laundry", "hoa", "spoken", "farm-22"],
-  }
+  },
 ];

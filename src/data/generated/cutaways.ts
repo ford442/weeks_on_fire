@@ -29,8 +29,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Split cinematic composition: suburban woman in bathrobe on cordless phone holding color swatches, purple glow through kitchen blinds, tired 911 operator in headset under harsh office lighting, deadpan comedy, high contrast, Grok Imagine style",
         geminiOmniPrompt: "15-second split: kitchen vs dispatch. Photoreal deadpan.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -58,7 +57,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from a small nightclub stage, not an arena: two women in modern black lace at two mics, one brighter, one dry, a glam guitarist with teased hair and leather fringe stage right, guitar down at his side. Magenta and cyan light only in the gaps of the backline, no logo wall, no shampoo bottle, no EyeWash bug. He looks at someone else's enormous hair and speaks one dry sentence, mouth barely open, not shouting, not smiling. 8 seconds. Gated snare is a micro-push not a whip pan. No Daisy bicycle, no marble cabinet, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-b-lillith-verse",
@@ -72,7 +70,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked small Glamora club stage: Lillith in modern black lace at the left silver mic, brighter face, looking up as if the hair above the room were a neon tube she just poured, Rubella in matching black lace one stop darker at the right mic, Kenji stage right playing guitar, leather fringe, teased hair. Magenta and cyan only in backline gaps. No logo wall, no bottle. She sings. Camera locked with micro-pushes on the gated snare. 15 seconds. Photoreal glam, not cartoon beehives, no Daisy tandem, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-c-fire-escape",
@@ -86,7 +83,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "No lip sync. No one is singing. The hair performs the beat. Night alley, wet brick, one enormous lock of photoreal glam hair climbing the wall like a fire escape, neon magenta and cyan sitting only in the gaps between strands, never painted on the hair as a logo. Wind combs the strand on the gated snare. No faces required. No shampoo bottle, no cartoon beehive, no concert stage in this frame. 8 seconds. Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-d-pre-chorus",
@@ -100,7 +96,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the same small club stage, two women in modern black lace at two silver mics, Lillith brighter leaping the pre-chorus, Rubella dry underneath, Kenji working stage right. Their teased hair lifts like a comb through a crown on the snare, still photoreal, not a cartoon. Magenta and cyan only in the gaps. No logo, no bottle. 8 seconds. Micro-push on the cowbell if it hits, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-e-hair-skyline",
@@ -114,7 +109,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "No lip sync. No one is singing. The hair performs the beat. Photoreal night city street looking up: the skyline is enormous teased glam hair reading as towers and fire escapes, not a cartoon beehive. Magenta and cyan neon sits in the gaps BETWEEN strands, never as a logo on the hair. Two small figures on wet asphalt looking up. Title hits brighten building-lights in the hair, not signage. No shampoo bottle, no concert stage, no billboard product. 15 seconds. Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-f-rubella-verse",
@@ -128,7 +122,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked small club stage: Rubella in modern black lace at the right mic, dry cabaret, she is in the city and she did not ask for a skyline on her head, Lillith one step back, Kenji playing. Honest skin under backline gaps of magenta and cyan. She sings. 15 seconds. No smile for camera, no bottle, no logo wall, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-g-fringe-lunch",
@@ -142,7 +135,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "No lip sync. No one is singing. The hair performs the beat. Street-level walk under a colossal photoreal glam hair fringe that forms a canopy over a city block, shopfront fluorescents underneath. A woman in modern black lace walks in line under the fringe, dry expression. Split ends catch window light like open windows. Magenta neon only in far gaps. No product bottle, no stage. 8 seconds. Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-h-solo-headstock",
@@ -156,7 +148,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "No lip sync. Kenji's hands and a guitar headstock fill the first seconds, leather fringe in frame, then the camera finds a wide night street where city blocks are photoreal teased-hair towers. Dive bomb is a vertical slam in the hair, not a whip pan. Magenta and cyan in the gaps only. No bottle, no meter-as-prop, no logo. 15 seconds. Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-i-bridge-on",
@@ -170,7 +161,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked small club two-shot: Rubella dry at the mic, Lillith answering high, Kenji thinned back. They wanted a formula; she gave them a map. No bottle in frame. Magenta and cyan only in gaps. 15 seconds. Photoreal glam, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "big-city-j-final-chorus",
@@ -184,8 +174,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -213,7 +202,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic ultra-low tracking still at cat-eye height along a wet suburban Halloween sidewalk at night, a sleek black cat with yellow-green eyes walking toward camera slightly off-center, jack-o'-lanterns glowing at face level, string lights hanging like a low ceiling, damp leaves, porch lights in bokeh, photoreal fur detail, shallow depth of field, filmic, Grok Imagine style",
         geminiOmniPrompt: "10-second ultra-low tracking video following a sleek black cat along a wet Halloween sidewalk. Pumpkins at eye level. No people speaking. Soft footfalls, distant kids, a weightless pedal-steel pad. Photoreal, no cuts to human faces.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-b-shed-discovery",
@@ -227,7 +215,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic close-up still of a sleek black cat with yellow-green eyes frozen at the edge of a suburban shed, fur slightly puffed, two glowing cyan and magenta serpents coiled in the shadows ahead, Halloween decorations out of focus, dramatic low lighting, photoreal, tense but not horror-movie, Grok Imagine style",
         geminiOmniPrompt: "10-second locked close-up: black cat stares, pupils wide, one ear flicks. Two neon serpents breathe in the dark. No dialog. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-c-hay-bale",
@@ -241,7 +228,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still from behind a hay bale: a sleek black cat in the foreground watching a chaotic Halloween backyard laser battle, two glowing serpents firing cyan and magenta beams, an animated plastic skeleton dancing and returning fire, suburban fence, the cat not running, witness posture, neon chaos vs calm fur, photoreal, Grok Imagine style",
         geminiOmniPrompt: "12-second video from hay-bale height. Lasers in the background. Black cat watches, blinks once, does not flee. No human faces sharp. Photoreal deadpan.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-d-pizza-ankles",
@@ -255,7 +241,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic ground-level still of a pizza delivery person's shoes and lower red uniform on a suburban porch, a pizza bag hanging, porch light harsh from above, a sleek black cat in the immediate foreground looking at the shoes not the face, laser light spilling from the backyard, Halloween doormat, photoreal, Grok Imagine style",
         geminiOmniPrompt: "10-second ground-level video: porch lights click on. A pizza bag enters frame. Black cat inspects the shoes. The person does not run. No spoken line on mic. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-e-crane-from",
@@ -269,7 +254,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still beginning a slow upward crane from a sleek black cat on a Halloween lawn, already rising past the cat, laser serpents and a pizza delivery person shrinking below, suburban rooftops and jack-o'-lanterns coming into view, moonlit sky, soft mysterious comedy, photoreal, Grok Imagine style",
         geminiOmniPrompt: "13-second continuous crane up from cat height until the black cat is a speck on a Halloween lawn, neighborhood revealing, pizza guy still on the porch. No dialog. Weightless pad swells slightly. Photoreal cinematic.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-f-dawn-residue",
@@ -283,7 +267,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic dawn still, golden hour on the same suburban driveway, faint purple residue evaporating from concrete, a power-washer wand leaning unused, a sleek black cat sitting in the wet, plastic skeleton still upright in the yard, bathrobed neighbor out of focus in the background, quiet, photoreal, Grok Imagine style",
         geminiOmniPrompt: "13-second locked wide at dawn. Black cat sits by evaporating purple shimmer. Distant power-washer. Birds. No dialog. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cat-pov-g-clubhouse-sill",
@@ -297,8 +280,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a sleek black cat sitting on an exterior windowsill at night, looking in through horizontal blinds at a fluorescent HOA meeting, violet light on the parking-lot glass, tiny figures in folding chairs inside, two women in black lace standing at the back, the cat not entering, photoreal, Grok Imagine style",
         geminiOmniPrompt: "10-second locked shot: black cat on the sill, meeting muffled through glass, no intelligible dialog. Cat blinks and looks away. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -326,7 +308,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still of two glamorous women in matching black lace dresses and bright pink-and-yellow Hawaiian leis standing dead-pan in a gothic living room, velvet sofa and mantel behind them, a cheap framed volcano painting on the wall, soft key light from the left, cool backlight rim, educational-cabaret comedy mood, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "8-second locked-off wide video inside a gothic living room. Two women in black lace with bright Hawaiian leis stand dead-pan facing camera, lips barely moving as they sing a sweet educational duet. Slight piano-lounge feel. Velvet sofa, mantel, cheap volcano painting behind them. Soft left key light, cool rim light. No cuts. Subtle stillness, tiny blinks only. Photoreal cinematic short film.",
         promptVariations: [],
-        
       },
       {
         id: "choose-your-b-p-hoehoe",
@@ -340,7 +321,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Same gothic living room wide shot, two women in black lace and Hawaiian leis, one making a tiny classroom conducting gesture, faint orange heat shimmer rising through the hardwood floorboards under their feet, dead-pan faces, soft cinematic lighting, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second continuous wide video, same living-room setup. Duo sings call-and-response about smooth lava. On the chant “Pā-ho-e-ho-e” one woman makes a tiny classroom hand-wave. Spoken aside “Viscosity: agreeable.” Faint orange heat shimmer begins under the floorboards. Locked camera, dead-pan faces, no dancing. Photoreal cinematic.",
         promptVariations: [],
-        
       },
       {
         id: "choose-your-c-a-verse",
@@ -354,7 +334,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Gothic living room floor cracking into jagged plates like ‘a‘ā lava, orange magma light glowing up through the gaps under two dead-pan women in black lace and Hawaiian leis, dust in the air, clinical comedy lighting mixed with volcanic underglow, cinematic short-film still, Grok Imagine style",
         geminiOmniPrompt: "15-second video: living-room floorboards split into jagged plates while the duet continues dead-pan. Magma light rises through cracks. They chant “‘A-‘ā,” deliver the folk-etymology correction, then mirror “Ah. Ah.” Camera still mostly locked; subtle vibration as the floor fails. Photoreal, short-film comedy-horror tone.",
         promptVariations: [],
-        
       },
       {
         id: "choose-your-d-pillow-lava",
@@ -368,7 +347,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic downward view from a ruptured gothic living-room floor into a glowing lava tube beneath a suburban house foundation, two silhouetted women in black lace and Hawaiian leis standing on the broken edge above, magma light painting the cavern, dead-pan educational-cabaret mood meeting geological sublime, short-film still, Grok Imagine style",
         geminiOmniPrompt: "15-second slow camera push or tilt down through cracked living-room floor into lava tubes beneath the house. Duo remains silhouetted at the top edge. Soft glockenspiel energy. They finish with dead-pan “That’s nature for us” then “Science.” Magma glow intensifies. Photoreal cinematic transition from domestic interior to subterranean lava.",
         promptVariations: [],
-        
       },
       {
         id: "choose-your-e-smash-cut",
@@ -382,8 +360,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Sudden cinematic smash-cut still: the same two women in black lace and Hawaiian leis now standing on glowing pāhoehoe lava crust above an open magma chamber, bright white flash remnants, house debris floating in heat haze, euphoric trance-rave energy colliding with volcanic night, short-film impact frame, Grok Imagine style",
         geminiOmniPrompt: "5-second smash-cut video: white flash, then the duo on real lava crust above magma as a trance drop hits. Hard cut from house interior world to open volcanic night. Heat distortion, floating debris, dead-pan faces for one beat then lights strobe. Photoreal music-video punch.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -411,7 +388,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K macro still of magenta and acid-lime ink bleeding into cold water, filling the entire frame with no object and no horizon, three ink threads unfurling asymmetrically off-center, capillary tendrils fine as hair at their tips and dense as smoke at their roots, the two colors holding a hard vibrating seam where they meet instead of mixing into brown, faint glowing indigo in the deepest folds and absolutely no pure black, soft anamorphic halation around the brightest magenta, fine swimming film grain, shallow macro depth of field, photoreal photographed liquid not digital illustration, asymmetric, not kaleidoscopic, not mirrored, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 12 seconds, one continuous shot. Extreme macro on magenta and acid-lime ink bleeding through cold water. Full-frame color field, no objects, no horizon, no figures. Camera drifts slowly left at a constant rate — one move only. Three ink threads unfurl off-center and stop halfway across frame. Where magenta meets lime the boundary holds a hard seam and vibrates; the two colors never mix into brown. Deepest folds glow indigo — no pure black anywhere in frame. Soft halation blooms around the brightest magenta. Fine film grain swims. Nothing resolves into a recognizable shape. No cuts, no new elements enter.",
         promptVariations: ["Same bleed but ink dropped from above so the threads fall toward camera, macro, magenta and acid lime, no objects, Grok Imagine", "Tighter macro on the seam only: the vibrating magenta/lime boundary fills the frame, capillary fingers at the edge, Grok Imagine", "Wider tank shot: the whole volume of water clouding, threads at three different depths, still no object, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-b-feedback",
@@ -425,7 +401,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of video feedback: a full-frame recursive tunnel of cyan and sodium-orange light where each successive generation is smaller, hotter, and rotated a few degrees off the last, the vanishing point deliberately off-center and never reaching an end, soft blooming halation growing with each generation until the innermost ring is nearly white-hot, one drifting scanline brighter than the field crossing the frame, chromatic fringing red on one side of every ring and cyan on the other, glowing indigo in the widest outer rings and no pure black anywhere, photographed CRT phosphor texture on curved glass rather than clean digital render, asymmetric, not kaleidoscopic, not mirrored, no objects no faces no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 16 seconds, one continuous shot. Full-frame video feedback in cyan and sodium orange — the image re-entering itself, each generation smaller, hotter, and rotated a few degrees, receding toward an off-center vanishing point that never arrives. Camera pushes gently inward, one move only. Rings rotate slowly clockwise and breathe: inward, then slightly out. Twice during the shot one feedback generation arrives late and lands visibly out of register before catching up. A single bright scanline drifts across the frame at its own speed. Every ring edge fringes red on one side, cyan on the other. Outer rings glow indigo; there is no pure black in frame. Photographed phosphor on curved glass, not clean vector graphics. No objects, no faces, nothing resolves. No cuts.",
         promptVariations: ["Feedback with the tunnel axis horizontal instead of centered, cyan and sodium orange, rings shearing sideways, Grok Imagine", "Feedback caught mid-collapse: the tunnel eating itself, generations piling up at the edge of frame, Grok Imagine", "Extreme close on three feedback rings only, phosphor texture and halation visible, no vanishing point in frame, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-c-slit-scan",
@@ -439,7 +414,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K slit-scan still: a violet and gold color field sheared into parallel horizontal lanes, a single instant stretched across the full width of frame so that swirl becomes comb, lanes of different lengths starting and ending at different x-positions to keep it asymmetric, fine threads of gold running the whole width without changing hue while violet lanes stutter and restart, soft vertical streaking where the smear begins, glowing indigo in the darkest lanes and no pure black, gentle chromatic fringing along every lane boundary, visible 16mm grain swimming heavier in the shadows, photographed light streak rather than digital line art, no objects no horizon no figures no text, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 16 seconds, one continuous locked-off shot. A violet and gold color field sheared by slit-scan into parallel horizontal lanes — swirl flattened into comb, a single instant stretched the width of frame. Lanes travel steadily right; new smears are continuously drawn in from the left edge so the frame never empties. Lane lengths are uneven and asymmetric. One gold thread crosses the entire frame without changing hue or breaking. Violet lanes stutter, restart, and occasionally double. Vertical streaking marks where each smear begins. Darkest lanes glow indigo; no pure black. Chromatic fringing on every lane boundary. Camera does not move at all. No objects, no recognizable shapes. No cuts.",
         promptVariations: ["Vertical slit-scan instead of horizontal: violet and gold drawn top to bottom, lanes as columns, Grok Imagine", "Slit-scan mid-break: half the frame still swirling, half already combed into lanes, the boundary ragged, Grok Imagine", "Slit-scan on a curve so the lanes bow, violet and gold, still no object, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-d-datamosh",
@@ -453,7 +427,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a datamoshed color field in teal and hot coral, full frame, no objects: chunky macroblocks of the wrong color dragged in rectangular trails across a smooth gradient, motion vectors surviving without their picture so old teal is smeared into new coral in clean 16-pixel steps, quantization banding visible only in the smoothest passages, one region still sharp and untouched at an off-center position, ghost edges of a shape that never existed persisting through the mush, glowing indigo where the blocks pile deepest and no pure black, dot crawl along the single hardest edge, photographed off a screen with faint moire, asymmetric, not kaleidoscopic, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 16 seconds, one continuous shot. A full-frame teal and hot-coral color field degrading through compression failure — datamosh. Motion vectors persist after the picture is gone: chunky macroblocks drag old teal color into new coral shapes in clean rectangular steps, leaving trails that refuse to refresh. Camera performs one slow clockwise roll, no other move. One off-center region stays sharp and untouched for the first half, then dissolves into the smear. Quantization banding appears in the smoothest gradients. Ghost edges of shapes that were never there persist and fade. Dot crawl on the hardest remaining edge. Deepest block pileups glow indigo; no pure black in frame. Nothing resolves into a recognizable object. No cuts.",
         promptVariations: ["Datamosh at the moment of failure: the frame half-clean and half-smeared, the tear line vertical and off-center, Grok Imagine", "Heavier mosh — macroblocks so large the field reads as a coarse grid of wrong colors, teal and hot coral, Grok Imagine", "Datamosh with one surviving swirl: a coral vortex intact inside a teal block-smear, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-e-refraction",
@@ -467,7 +440,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of an emerald and rose color field seen through a slab of slowly turning optical glass, full frame and no objects, every boundary split by chromatic dispersion into a spectral fringe so that edges become thin rainbows without the field ever becoming a rainbow, caustic light concentrating into two bright off-center knots, the glass surface carrying fine grinding scratches that trap and bend color, rose light bending further than emerald at each interface, soft anamorphic halation on the caustic knots, glowing indigo in the thickest glass and no pure black, shallow depth of field with lens breathing, photoreal photographed refraction not digital prism graphic, asymmetric, not kaleidoscopic, not mirrored, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 16 seconds, one continuous shot. An emerald and rose color field viewed through a slab of optical glass that turns slowly throughout. Camera pulls back a short distance — one move only. As the glass turns, every boundary in the field splits into a spectral fringe; rose bends further than emerald at each interface. Two bright caustic knots travel across the frame and cross once without merging. Fine grinding scratches in the glass trap and bend color into thin bright threads. Thickest glass glows indigo; no pure black in frame. Halation blooms softly on the caustics. Focus breathes slightly against the pull-back. No objects, no horizon, nothing resolves into a recognizable shape. No cuts.",
         promptVariations: ["Refraction through water-surface instead of glass: emerald and rose bent by a slow ripple ceiling, caustics on nothing, Grok Imagine", "Extreme close on one caustic knot, spectral fringes resolving into countable bands, Grok Imagine", "Refraction through cracked glass: the field split into wedges that each bend differently, still no object, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-f-misregistration",
@@ -481,7 +453,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a misregistered four-color print: an ultramarine and sulphur-yellow swirl where the magenta plate has slipped a few millimeters off register, full frame no objects, a thin bare white gap opening along one whole edge of the swirl where no plate covers, visible halftone rosettes and moire interference in the overlap zones, dot crawl crawling along the slipped edge, the paper texture faintly readable through the lightest sulphur, one corner where all plates still align and the color is momentarily correct, glowing indigo in the densest overprint and no pure black, photographed print under raking light not a digital halftone filter, asymmetric, not kaleidoscopic, not mirrored, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 14 seconds, one continuous locked-off shot. A misregistered four-color print of an ultramarine and sulphur-yellow swirl. The magenta plate drifts steadily further out of register across the shot, widening a bare white gap along one edge of the swirl. Halftone rosettes and moire interference crawl and beat through every overlap zone. Dot crawl travels along the slipped edge. One corner where all plates still align stays correct until the last two seconds, then slips too. Paper grain readable through the lightest sulphur. Densest overprint glows indigo; no pure black. Camera does not move. No objects, no text, nothing resolves. No cuts.",
         promptVariations: ["Registration slipping in two directions at once, ultramarine and sulphur, the swirl tripled at its edges, Grok Imagine", "Macro on the rosette pattern itself until the halftone dots are individually countable, Grok Imagine", "Misregistration on a curve so the plates slip more at the frame edge than the center, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-g-granulation",
@@ -495,7 +466,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of an oxblood and mint color field mid-granulation, full frame and no objects: the swirl has shattered into hundreds of countable suspended grains, denser at the vortex and sparse at the frame edge, each grain carrying its own hue and its own tiny highlight, a faint ghost of the original swirl still legible in the way the cloud is distributed, three grains larger than the rest at off-center positions, soft depth of field so foreground grains bloom and background grains stay sharp, glowing indigo in the gaps between grains and absolutely no pure black, drifting film grain on top of the particle grain, photoreal suspended pigment not a digital particle system, asymmetric, not kaleidoscopic, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 16 seconds, one continuous shot. An oxblood and mint color field shattered into hundreds of individually visible suspended grains. The cloud drifts apart, hangs, then slowly reassembles into a swirl that is recognizably not the same swirl it left — the vortex lands off its original center. Camera pushes in gently, one move only. Three grains larger than the rest travel independently; one crosses the full width of frame without changing color. Foreground grains bloom out of focus while the deep field stays sharp. Gaps between grains glow indigo; no pure black anywhere. Film grain drifts on top of the particle grain. No objects, nothing resolves into a recognizable shape. No cuts.",
         promptVariations: ["Granulation at its sparsest: almost empty frame, a few dozen oxblood and mint grains and a lot of glowing indigo, Grok Imagine", "Reassembly moment: grains pulling back together, motion trails behind each one, Grok Imagine", "Macro on nine grains only, each with its own highlight and halation, background entirely out of focus, Grok Imagine"],
-        
       },
       {
         id: "chroma-bath-h-bleach",
@@ -509,8 +479,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a color field bleaching out: magenta, lime, cyan, orange, violet, gold, teal, coral, emerald, rose, ultramarine, sulphur, oxblood and mint all arriving in the same frame and cancelling into a single warm overexposed white, full frame no objects, one faint swirl still readable turning inside the white as a difference in warmth rather than in hue, the last saturated color surviving only as a thin glowing indigo rim in the lower corners, heavy anamorphic halation across the whole frame, film grain still visible in the white, gentle vignette that never darkens to black, photoreal overexposed film not a digital white screen, asymmetric, not kaleidoscopic, no faces no figures no text, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 14 seconds, one continuous shot. A full-frame color field bleaching out: every remaining saturated hue arrives and cancels into a single warm overexposed white. Camera pulls back slowly, one move only. One faint swirl keeps turning inside the white, readable as a difference in warmth rather than hue; it completes one rotation and stills. A thin glowing indigo rim survives in the lower corners longer than anything else, then fades last. Heavy halation spreads across the whole frame. Film grain stays visible in the white. Vignette softens but never darkens to black. No objects, no text, nothing resolves. No cuts. End on warm white, still grained, still faintly moving.",
         promptVariations: ["Bleach that blooms from one off-center point outward instead of arriving everywhere at once, Grok Imagine", "Bleach held one beat earlier: the hues still separable but already washing, the swirl still colored, Grok Imagine", "Post-bleach frame: pure warm white with grain, one indigo corner, nothing else, Grok Imagine"],
-        
-      }
+      },
     ],
   },
   {
@@ -538,7 +507,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure non-representational color field filling the entire frame, caught mid-invert between full-frame magenta and full-frame acid lime, the two hues occupying the frame as hard adjacent slabs meeting on an off-center jagged seam rather than a blend, one-frame black punch visible as a thin torn edge along the seam, no objects no horizon no figures no text, asymmetric, not kaleidoscopic, not mirrored, photographed CRT phosphor not digital gradient, anamorphic 2.39:1, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, one continuous locked-off shot. Full-frame non-representational color field, no objects, no horizon, no figures. The entire frame hard-inverts between saturated magenta and acid lime on every musical kick at 150 BPM — fifteen inversions. Each kick is one black frame then the other hue already present. No fades, no dissolves, no slow drift, no camera move. Jagged off-center seam during the invert, never a blend, never brown. Asymmetric, not kaleidoscopic, not mirrored. Photoreal CRT phosphor texture. Nothing resolves into a shape. No cuts, no new elements.",
         promptVariations: ["Same invert, tighter on the jagged seam only, magenta and acid lime, no objects, Grok Imagine", "Wider: the invert rolling left to right in one frame like a shutter, Grok Imagine", "Same pair but lime occupies 80 percent of frame, magenta a torn corner, Grok Imagine"],
-        
       },
       {
         id: "color-whip-b-whip",
@@ -552,7 +520,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure color field smeared into a horizontal comb of cyan and sodium-orange streaks filling the entire frame, motion-blur so extreme that hue becomes parallel ribbons of uneven length, three brighter orange threads racing ahead of the pack, off-center, no objects no horizon no figures, photographed shutter smear not digital speed lines, one-frame black punch tearing a gap in three ribbons, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, one continuous shot. Full-frame non-representational color, no objects, no horizon, no figures. Camera performs a violent horizontal whip on every kick at 150 BPM, fifteen times, cyan and sodium orange smearing into a comb of uneven streaks that refresh rather than settle. Three brighter orange threads lead. One-frame black punch on each kick tears a gap in the ribbons. No slow pan, no drift, no fade. Asymmetric, not kaleidoscopic, not mirrored. Photoreal shutter smear. Nothing becomes a shape. No cuts.",
         promptVariations: ["Vertical whip instead of horizontal, cyan and sodium orange streak comb, Grok Imagine", "Diagonal whip, streaks of uneven thickness, off-center, Grok Imagine", "Macro on three leading orange threads only, Grok Imagine"],
-        
       },
       {
         id: "color-whip-c-phosphor",
@@ -566,7 +533,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure violet and gold color field filling the frame as stacked CRT afterimages, five visible delayed ghosts of the same off-center swirl sitting slightly apart like badly registered prints, gold hottest on the newest ghost and violet remaining in the oldest, phosphor grain on curved glass, one-frame black punch cutting through the stack as a missing ghost, no objects no figures no text, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, locked-off. Full-frame non-representational violet and gold, no objects, no figures. Each kick at 150 BPM stamps a new afterimage of the field one frame late; previous ghosts remain, dimming, until five or more layers are readable. Gold on the newest layer, violet on the oldest. One-frame black punch on each kick as a missing layer. No camera move, no fade to clear. Asymmetric, not kaleidoscopic. Photoreal CRT phosphor on curved glass. Nothing becomes a face or planet. No cuts.",
         promptVariations: ["Only three ghosts, widely spaced, violet and gold, Grok Imagine", "Ghosts drifting one pixel per kick, stack still off-center, Grok Imagine", "Extreme phosphor grain, ghosts almost dissolved except gold cores, Grok Imagine"],
-        
       },
       {
         id: "color-whip-d-smash",
@@ -580,7 +546,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a smash-zoom into a pure teal and hot-coral color tunnel filling the frame, concentric off-center rings of hue rushing toward a vanishing point that is not the middle and never reached, radial motion blur, two coral knots brighter than the field, one-frame black punch as a missing ring, no objects no horizon no figures, photographed zoom blur not digital tunnel graphic, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, one continuous shot. Full-frame non-representational teal and hot coral, no objects, no figures. Camera smash-zooms on every kick at 150 BPM — fifteen smashes — into an off-center color tunnel whose vanishing point is never reached. Radial motion blur. Two coral knots stay brighter. One-frame black punch as a missing ring each kick. No pull-back, no slow push, no settle. Asymmetric, not kaleidoscopic, not a wormhole object. Photoreal zoom blur. Nothing becomes a shape. No cuts.",
         promptVariations: ["Smash already mid-blur, rings unreadable, teal and coral, Grok Imagine", "Vanishing point in the lower-left third, Grok Imagine", "One coral knot occupying a third of frame inside the tunnel, Grok Imagine"],
-        
       },
       {
         id: "color-whip-e-chase",
@@ -594,7 +559,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure color field misregistered into three chasing plates — electric red, phosphor green, and cobalt — filling the frame, the same off-center swirl printed three times and offset by different distances, red leading, green trailing, cobalt already around the far side, chromatic split not a rainbow, one-frame black punch eating the green plate only, no objects no figures no text, asymmetric, not kaleidoscopic, not mirrored, photographed RGB channel separation on film, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, locked-off. Full-frame non-representational color split into three plates — electric red, phosphor green, cobalt — no objects, no figures. The same off-center swirl runs at three speeds: red lands on the 150 BPM kick, green a sixteenth late, cobalt a sixteenth early. They never register. One-frame black punch eats only the green plate each kick. No camera move, no fade into alignment. Asymmetric, not kaleidoscopic, not a rainbow graphic. Photoreal RGB separation. Nothing becomes a shape. No cuts.",
         promptVariations: ["Extreme offset, plates barely overlapping, Grok Imagine", "Only red and cobalt chasing, green missing, Grok Imagine", "Macro on the gap where all three miss, Grok Imagine"],
-        
       },
       {
         id: "color-whip-f-cuts",
@@ -608,7 +572,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure ultramarine color field filling the entire frame with a sulphur rectangle already invading from the right third, hard edge no blend, the invasion off-center and not a wipe graphic, one-frame black punch as a vertical tear between the two hues, no objects no figures no text, photographed projector-gate cut not digital transition, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, locked-off. Full-frame non-representational color, no objects, no figures. Six hard cuts alternate the entire frame between saturated ultramarine and sulphur — no dissolves, no wipes, no blends. Each swap is preceded by one black frame. Cuts land off the snare, not on a pretty grid. Asymmetric, not kaleidoscopic. Photoreal projector-gate. Nothing becomes a shape. No camera move. No extra hues.",
         promptVariations: ["Sulphur already 90 percent of frame, ultramarine a strip, Grok Imagine", "Tear between hues is ragged like torn print, Grok Imagine", "Both hues full-frame in a single still as a mistake double-exposure, Grok Imagine"],
-        
       },
       {
         id: "color-whip-g-vortex",
@@ -622,7 +585,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure oxblood and mint color vortex filling the frame, spiral arms already motion-blurred toward smear, the eye of the spiral off-center and empty of any object, mint threads peeling outward, oxblood packing the core, rotation implied as unreadable speed, one-frame black punch as a missing arm, no figures no horizon no text, photographed spinning liquid not digital fractal, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, one continuous shot. Full-frame non-representational oxblood and mint, no objects, no figures. An off-center vortex spins and only accelerates — speed doubles every four kicks at 150 BPM until the last second is unreadable smear. Camera may roll with the spin but must not zoom. One-frame black punch on each kick as a missing arm. Never kaleidoscopic, never mirrored, never a mandala. Photoreal spinning liquid. The empty eye stays empty. Nothing becomes a shape. No cuts.",
         promptVariations: ["Already unreadable smear, oxblood and mint only, Grok Imagine", "Eye of the spiral in the upper-right third, Grok Imagine", "Mint arms only, oxblood as the ground they tear, Grok Imagine"],
-        
       },
       {
         id: "color-whip-h-hit",
@@ -636,8 +598,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a pure color field in wreckage after a white punch, overexposed warm white still blooming in an off-center core while torn remnants of magenta, cyan, violet, teal, red, ultramarine, and oxblood hang as afterimage shards around it, no objects no figures no text, one-frame black already used, the white still too hot to be a sun or a planet, photographed overexposure not a lens flare graphic, asymmetric, not kaleidoscopic, not mirrored, 2.39:1 anamorphic, Grok Imagine style",
         geminiOmniPrompt: "Photoreal cinematic 8K video, 6 seconds, one continuous shot. Full-frame non-representational color, no objects, no figures. First second is accelerating wreckage of previous hues. On one kick the entire frame punches to overexposed warm white — not a sun, not a planet, not a flare graphic. Remaining seconds: torn afterimage shards of magenta, cyan, violet, teal, red, ultramarine, and oxblood chatter on the leftover kicks around an off-center white core. Hard out at six seconds, no fade, no black rest. Asymmetric, not kaleidoscopic. Photoreal overexposure. Nothing becomes a shape. No cuts.",
         promptVariations: ["White core only, shards as thin threads, Grok Imagine", "White already gone, only wreckage shards, Grok Imagine", "White occupying two-thirds, wreckage a torn margin, Grok Imagine"],
-        
-      }
+      },
     ],
   },
   {
@@ -665,7 +626,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic interior of a car on an empty four-lane highway at 4 AM, driver in silhouette lit only by green dashboard glow, vast dark landscape outside, radio face illuminated, introspective and dreamlike, filmic, Grok Imagine style",
         geminiOmniPrompt: "12-second interior night drive. Photoreal, no score except radio.",
         promptVariations: [],
-        
       },
       {
         id: "hwy-billboard",
@@ -679,8 +639,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Enormous illuminated highway billboard at dawn reading KEEP GOING in plain friendly letters with no logo or advertiser, a single car passing beneath it, sky just beginning to lighten, surreal and sincere, cinematic, Grok Imagine style",
         geminiOmniPrompt: "30-second approach and pass under KEEP GOING. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -708,7 +667,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Full-frame 1980s television TECHNICAL DIFFICULTIES PLEASE STAND BY card, institutional blue background, chunky broadcast typeface, color bars strip along the bottom, visible scan lines and VHS chroma bleed, faint dust on the glass as if photographed off a CRT, static locked shot, analog affiliate ident, cinematic still, Grok Imagine style",
         geminiOmniPrompt: "8-second locked shot of a 1980s TECHNICAL DIFFICULTIES PLEASE STAND BY card filling the frame. Image never changes. Imperceptible CRT flicker and scan lines. Late-resolving Rhodes chord on the soundtrack, no VO until the last two seconds. Photoreal analog television, no cuts.",
         promptVariations: [],
-        
       },
       {
         id: "eyewash-idents-b-rinse-cycle",
@@ -722,7 +680,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a 15-minute analog countdown clock mounted above an industrial wall-mounted emergency eyewash station in a tiled institutional bathroom, the timer reading 14:59, twin chrome rinse nozzles below, pale green subway tile, fluorescent flicker, a bottom-third caption DO NOT BLINK in broadcast type, VHS chroma bleed, 1980s ident aesthetic, Grok Imagine style",
         geminiOmniPrompt: "8-second locked shot: a 15-minute analog countdown in a tiled eyewash room ticks from 15:00 to 14:59 and soft-resets back to 15:00. Soft tick bed. No people. Fluorescent hum. Photoreal analog ident.",
         promptVariations: [],
-        
       },
       {
         id: "eyewash-idents-c-unscheduled-programming",
@@ -736,7 +693,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cramped 1980s television master-control room at 4 AM, wall of glowing CRT monitors each showing a different Weeks on Fire scene (lava floor, Halloween lawn, laundromat, HOA folding chairs), one center monitor showing this same room from a few seconds ahead with the operator standing while in the real room the chair is still occupied, grease-pencil log sheet, desk lamp, rack glow, faint haze, quiet, cinematic, Grok Imagine style",
         geminiOmniPrompt: "8-second locked wide of master control. Monitors glow. One self-monitor is a second ahead of the room. Rack hum only. Photoreal, no scare sting, no host.",
         promptVariations: [],
-        
       },
       {
         id: "eyewash-idents-d-aspect-ratio",
@@ -750,7 +706,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of an industrial wall-mounted emergency eyewash station in a flickering fluorescent hallway, twin chrome nozzles slowly rotated toward the camera as if they are looking, institutional green tile, faint steam, 1980s broadcast ident aesthetic, slight VHS chroma bleed, no people, cinematic, Grok Imagine style",
         geminiOmniPrompt: "8-second close-up: twin chrome eyewash nozzles rotate a few degrees toward the lens and stop. Fluorescent flicker. Four bars of warm pad, then one bar that is the wrong chord. Photoreal analog ident, no face.",
         promptVariations: [],
-        
       },
       {
         id: "eyewash-idents-e-we-always",
@@ -764,7 +719,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a blank television studio with seamless gray cyc, a standard poodle in an inexplicably purple bandana trotting left to right across the empty floor carrying a printed EyeWash Station Channel 12½ logo card in her mouth, the card just exiting frame, no host, no set dressing except a single floor mark, analog broadcast grain, deadpan, Grok Imagine style",
         geminiOmniPrompt: "8-second tracking shot: a standard poodle in a purple bandana trots across a blank studio floor with a station logo card in her mouth. The card leaves frame. The show does not put up a replacement card. Warm pad that never resolves. Photoreal, no cute music sting.",
         promptVariations: [],
-        
       },
       {
         id: "eyewash-idents-f-3-44",
@@ -778,8 +732,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Television sign-off card reading WE NOW CONCLUDE OUR BROADCAST DAY over slightly wrong stock footage of a suburban cul-de-sac at night, analog color, a wall clock in the lower corner stuck at 3:44, faint flag that is not quite the right flag, scan lines, institutional solemnity it has not earned, cinematic still, Grok Imagine style",
         geminiOmniPrompt: "8-second hold on a sign-off card over cul-de-sac stock. Clock 3:44. National-anthem-adjacent pad that runs a bar too long and does not conclude. Photoreal analog broadcast. Loopable.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -807,7 +760,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel close-to-medium film still, 4:5, 2 a.m. luxury oyster bar, black marble counter beaded with seawater, a single warm Edison bulb on a cloth cord, a glamorous bored woman with long black hair, blood-red lips, and a dark sequined dress shucking with a short silver knife, each opened shell lined in wet nacre holding a tiny still-lit night city — sodium windows, microscopic traffic, a harbor no bigger than a thumbnail — she is squeezing a lemon wedge over one city so a single bead of juice hangs above a boulevard, a small pile of rejected city-oysters to her left, one empty shell containing only dark ocean to her right which she is keeping, no other patrons, high contrast, luxury materials, macro detail in the nacre and the miniature streetlights, 35mm, T1.4, quiet apocalypse, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel close-to-medium film still, 4:5, 2 a.m. luxury oyster bar, black marble counter beaded with seawater, a single warm Edison bulb on a cloth cord, a glamorous bored woman with long black hair, blood-red lips, and a dark sequined dress shucking with a short silver knife, each opened shell lined in wet nacre holding a tiny still-lit night city — sodium windows, microscopic traffic, a harbor no bigger than a thumbnail — she is squeezing a lemon wedge over one city so a single bead of juice hangs above a boulevard, a small pile of rejected city-oysters to her left, one empty shell containing only dark ocean to her right which she is keeping, no other patrons, high contrast, luxury materials, macro detail in the nacre and the miniature streetlights, 35mm, T1.4, quiet apocalypse, Grok Imagine style",
         promptVariations: ["She keeps only the dark-ocean oyster, cities piled as rejects, Grok Imagine"],
-        
       },
       {
         id: "gag-04-motion",
@@ -821,8 +773,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "7-second macro-leaning lockoff. The lemon bead falls in slow motion and hits the miniature boulevard. One skyscraper window blinks out. Tiny headlights crawl a three-block grid. Her mouth almost smiles and does not. She does not eat. Steam from the lemon oil only. Photoreal, no camera orbit.",
         geminiOmniPrompt: "7-second macro-leaning lockoff. The lemon bead falls in slow motion and hits the miniature boulevard. One skyscraper window blinks out. Tiny headlights crawl a three-block grid. Her mouth almost smiles and does not. She does not eat. Steam from the lemon oil only. Photoreal, no camera orbit.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -850,7 +801,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 2.39:1, night luxury hotel rooftop infinity pool, the entire rectangular sheet of dark chlorinated water hovering three feet above the empty pale-blue tiled basin as one unbroken pane, underside faintly convex, still rippling, still reflecting a distant sodium-and-neon city skyline, a small laminated institutional sign on a chrome stanchion at pool's edge reading CLOSED FOR COSMIC REASONS in polite Helvetica, under the hovering water a bored glamorous woman with long black hair, blood-red lipstick, a black one-piece maillot, and black stiletto heels sitting dry on a white woven deck chair, an open glossy fashion magazine on her lap that is not wet, a thin cigarette between two fingers, smoke rising and flattening against the water's underside like a ceiling, a room-service tumbler of amber liquid on the dry limestone deck, a tiny lobby CRT in the far colonnade playing EyeWash Station color bars, high-contrast silver moonlight from above-right plus one submerged pool lamp shining upward through the levitating water so her face is lit by the moon and by green-cyan caustics, wet chrome, dry stone, lots of negative night sky, 35mm anamorphic, T2.0, fine grain, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 2.39:1, night luxury hotel rooftop infinity pool, the entire rectangular sheet of dark chlorinated water hovering three feet above the empty pale-blue tiled basin as one unbroken pane, underside faintly convex, still rippling, still reflecting a distant sodium-and-neon city skyline, a small laminated institutional sign on a chrome stanchion at pool's edge reading CLOSED FOR COSMIC REASONS in polite Helvetica, under the hovering water a bored glamorous woman with long black hair, blood-red lipstick, a black one-piece maillot, and black stiletto heels sitting dry on a white woven deck chair, an open glossy fashion magazine on her lap that is not wet, a thin cigarette between two fingers, smoke rising and flattening against the water's underside like a ceiling, a room-service tumbler of amber liquid on the dry limestone deck, a tiny lobby CRT in the far colonnade playing EyeWash Station color bars, high-contrast silver moonlight from above-right plus one submerged pool lamp shining upward through the levitating water so her face is lit by the moon and by green-cyan caustics, wet chrome, dry stone, lots of negative night sky, 35mm anamorphic, T2.0, fine grain, Grok Imagine style",
         promptVariations: ["Same frame, magazine swapped for a dry room-service tray, Grok Imagine", "Sign handwritten in lipstick on the laminated card, otherwise identical, Grok Imagine"],
-        
       },
       {
         id: "gag-01-motion",
@@ -864,8 +814,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Locked-off 6-second photoreal loop. A slow ripple travels left to right across the hovering water sheet. Cigarette smoke rises, hits the underside, and sheets sideways. The submerged lamp's caustic crawls once across her collarbone. The ember pulses on beat two. The magazine page does not turn. The sign does not flutter. No one enters. Camera: 2 percent push only.",
         geminiOmniPrompt: "Locked-off 6-second photoreal loop. A slow ripple travels left to right across the hovering water sheet. Cigarette smoke rises, hits the underside, and sheets sideways. The submerged lamp's caustic crawls once across her collarbone. The ember pulses on beat two. The magazine page does not turn. The sign does not flutter. No one enters. Camera: 2 percent push only.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -893,7 +842,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 2.39:1, a single old-fashioned wood-and-brass customer-service window floating alone in deep space against a Hubble deep-field of distant galaxies, a glamorous woman in a black dress and pearls in microgravity sliding a triplicate carbon form through the slot, only a clerk's pale hands and a red rubber stamp visible inside the booth, the stamp just marking DENIED in wet red ink, a ticket display above the window reading NOW SERVING: — (an em dash, no number), her paper ticket printed 000000, a brass plaque reading PLEASE TAKE A NUMBER, her pearl earring lifting in zero-g, high contrast practical fluorescent window light against cosmic black, strong silhouette, no planet, no ship, 35mm anamorphic, T2.0, dry bureaucratic dread, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 2.39:1, a single old-fashioned wood-and-brass customer-service window floating alone in deep space against a Hubble deep-field of distant galaxies, a glamorous woman in a black dress and pearls in microgravity sliding a triplicate carbon form through the slot, only a clerk's pale hands and a red rubber stamp visible inside the booth, the stamp just marking DENIED in wet red ink, a ticket display above the window reading NOW SERVING: — (an em dash, no number), her paper ticket printed 000000, a brass plaque reading PLEASE TAKE A NUMBER, her pearl earring lifting in zero-g, high contrast practical fluorescent window light against cosmic black, strong silhouette, no planet, no ship, 35mm anamorphic, T2.0, dry bureaucratic dread, Grok Imagine style",
         promptVariations: ["Stamp reads PLEASE STAND BY instead of DENIED, Grok Imagine", "Her form is a seating chart, otherwise identical, Grok Imagine"],
-        
       },
       {
         id: "gag-05-motion",
@@ -907,8 +855,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "8-second slow drift. The stamp comes down. The form's edges lift as if in a draft vacuum should not have. Stars crawl. The booth's fluorescent tube flickers once. Her earring rotates a quarter turn. The display never advances. Photoreal, camera almost locked, one percent drift to imply no floor.",
         geminiOmniPrompt: "8-second slow drift. The stamp comes down. The form's edges lift as if in a draft vacuum should not have. Stars crawl. The booth's fluorescent tube flickers once. Her earring rotates a quarter turn. The display never advances. Photoreal, camera almost locked, one percent drift to imply no floor.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -936,7 +883,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 2.39:1, industrial iron foundry converted into a black-tie gala, a slow ribbon of molten iron pouring in the background from a lip into a trough, a string quartet in evening wear playing without looking back, glamorous guests in couture standing at a bored, safe distance, one woman in a torn black lace dress warming her hands at the pour as if it were a fireplace, orange molten light versus cold chrome and black silk, sparks dying on a mink stole over her shoulders, place cards that look fireproof, heat shimmer between her fingers and the trough, high contrast, strong silhouettes, 35mm anamorphic, T2.0, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 2.39:1, industrial iron foundry converted into a black-tie gala, a slow ribbon of molten iron pouring in the background from a lip into a trough, a string quartet in evening wear playing without looking back, glamorous guests in couture standing at a bored, safe distance, one woman in a torn black lace dress warming her hands at the pour as if it were a fireplace, orange molten light versus cold chrome and black silk, sparks dying on a mink stole over her shoulders, place cards that look fireproof, heat shimmer between her fingers and the trough, high contrast, strong silhouettes, 35mm anamorphic, T2.0, Grok Imagine style",
         promptVariations: ["Quartet rosin smoke matching the pour color, Grok Imagine"],
-        
       },
       {
         id: "gag-07-motion",
@@ -950,8 +896,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "8-second perfect loop. The pour never stops. Sparks drift and extinguish on the mink. One violin bow draws slowly. Heat shimmer. Her fingers flex once toward the iron. The quartet does not look back. Photoreal, locked camera, loop on the pour cycle.",
         geminiOmniPrompt: "8-second perfect loop. The pour never stops. Sparks drift and extinguish on the mink. One violin bow draws slowly. Heat shimmer. Her fingers flex once toward the iron. The quartet does not look back. Photoreal, locked camera, loop on the pour cycle.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -979,7 +924,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 3:2, formal banquet table with white linen and polished silver, a tall clear ice sculpture of an elegant woman mid-curtsy that is melting into dense cigarette-colored smoke instead of water, the tablecloth perfectly dry, a waiter in white gloves adjusting the sculpture a quarter inch as if this were still a centerpiece problem, a lipstick-stained napkin, one empty chair, two wine glasses and scattered berries at the far setting, candlelight leaning away from the smoke, high contrast, luxury and unease, 35mm, T2.0, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 3:2, formal banquet table with white linen and polished silver, a tall clear ice sculpture of an elegant woman mid-curtsy that is melting into dense cigarette-colored smoke instead of water, the tablecloth perfectly dry, a waiter in white gloves adjusting the sculpture a quarter inch as if this were still a centerpiece problem, a lipstick-stained napkin, one empty chair, two wine glasses and scattered berries at the far setting, candlelight leaning away from the smoke, high contrast, luxury and unease, 35mm, T2.0, Grok Imagine style",
         promptVariations: ["Place card in front of the sculpture has her real name, Grok Imagine", "Smoke spells nothing, which is worse, Grok Imagine"],
-        
       },
       {
         id: "gag-08-motion",
@@ -993,8 +937,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "7-second lockoff. Smoke thickens from the sculpture's mouth and shoulders. The waiter's gloves make a micro-adjustment. Candle flames lean away. One ice earring drops and becomes a puff. The cloth stays dry. Photoreal, no whip, no face of the waiter.",
         geminiOmniPrompt: "7-second lockoff. Smoke thickens from the sculpture's mouth and shoulders. The waiter's gloves make a micro-adjustment. Candle flames lean away. One ice earring drops and becomes a puff. The cloth stays dry. Photoreal, no whip, no face of the waiter.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1022,7 +965,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 2.39:1, black-lacquer penthouse interior at 2 a.m., a single cherry-red 1960s rotary telephone ringing on a leather blotter, the coiled red plastic cord running out an open floor-to-ceiling window and stretching taut across high thin cloud all the way to a huge detailed full moon filling the upper right, empty oxblood leather chair pulled back as if someone just stood, crystal ashtray crowded with lipstick-stained filter ends, a pair of black evening gloves abandoned on the blotter with one finger still slightly curled, two wine glasses (one upright, one stem-down) and a few crushed berries on a saucer at the far edge of the desk, city grid far below the window, practical desk lamp off, the only warm light the telephone's tiny indicator, high-contrast red plastic against black lacquer and cold silver moonlight, strong negative space, 35mm, T1.8, quiet menace, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 2.39:1, black-lacquer penthouse interior at 2 a.m., a single cherry-red 1960s rotary telephone ringing on a leather blotter, the coiled red plastic cord running out an open floor-to-ceiling window and stretching taut across high thin cloud all the way to a huge detailed full moon filling the upper right, empty oxblood leather chair pulled back as if someone just stood, crystal ashtray crowded with lipstick-stained filter ends, a pair of black evening gloves abandoned on the blotter with one finger still slightly curled, two wine glasses (one upright, one stem-down) and a few crushed berries on a saucer at the far edge of the desk, city grid far below the window, practical desk lamp off, the only warm light the telephone's tiny indicator, high-contrast red plastic against black lacquer and cold silver moonlight, strong negative space, 35mm, T1.8, quiet menace, Grok Imagine style",
         promptVariations: ["Moon with a tiny NO CHARGES ACCEPTED sticker, otherwise identical, Grok Imagine", "Gloves still faintly steaming, otherwise identical, Grok Imagine"],
-        
       },
       {
         id: "gag-02-motion",
@@ -1036,8 +978,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "5-second locked interior. The receiver trembles on three rings. The cord sways in high-altitude wind. The moon brightens a half-stop on each ring and dims between. One ash cylinder lengthens a millimeter. The gloves do not move. No one returns. Photoreal, no whip-pans, no face.",
         geminiOmniPrompt: "5-second locked interior. The receiver trembles on three rings. The cord sways in high-altitude wind. The moon brightens a half-stop on each ring and dims between. One ash cylinder lengthens a millimeter. The gloves do not move. No one returns. Photoreal, no whip-pans, no face.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1065,7 +1006,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 3:2, classical sculpture gallery at 3 a.m., a woman in a torn black ballgown and smeared red lipstick dusting a white marble kouros with a small conservator's brush, the statue calmly holding her champagne flute at the correct height, she holding the statue's broken marble forearm like a clipboard and initialing a condition-report form in lipstick, hard museum spotlight pools on marble and silk, everything else velvet black, marble dust hanging in the beam, a second statue in the dark holding her black heels by the straps, a tiny security monitor in the far corner playing EyeWash Station snow, high contrast, 35mm, T2.0, elegant and slightly dangerous, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 3:2, classical sculpture gallery at 3 a.m., a woman in a torn black ballgown and smeared red lipstick dusting a white marble kouros with a small conservator's brush, the statue calmly holding her champagne flute at the correct height, she holding the statue's broken marble forearm like a clipboard and initialing a condition-report form in lipstick, hard museum spotlight pools on marble and silk, everything else velvet black, marble dust hanging in the beam, a second statue in the dark holding her black heels by the straps, a tiny security monitor in the far corner playing EyeWash Station snow, high contrast, 35mm, T2.0, elegant and slightly dangerous, Grok Imagine style",
         promptVariations: ["Condition report rates her for surface cracks, Grok Imagine"],
-        
       },
       {
         id: "gag-06-motion",
@@ -1079,8 +1019,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "6-second locked gallery. Dust motes drift through the spotlight. One champagne bubble rises in the statue's glass. She turns a page. Stone eyes catch the light as if they blinked — maybe they did not. The second statue does not move. Photoreal, no dolly, no jump scare.",
         geminiOmniPrompt: "6-second locked gallery. Dust motes drift through the spotlight. One champagne bubble rises in the statue's glass. She turns a page. Stone eyes catch the light as if they blinked — maybe they did not. The second statue does not move. Photoreal, no dolly, no jump scare.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1108,7 +1047,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal one-panel film still, 3:2, after-hours luxury department store, pale fashion mannequins in black couture, pearls, and identical tired painted smiles lined up at an industrial factory time-clock bolted to a marble column, punch-cards in a steel slot, one mannequin already clocked out standing in a loading-dock doorway with a perfectly chrome cigarette, no lungs, a thin ribbon of metallic smoke, banks of cold fluorescent tubes in receding rows, one bank already dead, marble floor reflecting the lineup, a single red security-camera LED in the upper corner, a tiny wall-mounted CRT behind the clock playing EyeWash Station with the sound off, high contrast, strong silhouettes, no shoppers, no staff, 35mm, T2.8, deadpan and slightly menacing, Grok Imagine style",
         geminiOmniPrompt: "Photoreal one-panel film still, 3:2, after-hours luxury department store, pale fashion mannequins in black couture, pearls, and identical tired painted smiles lined up at an industrial factory time-clock bolted to a marble column, punch-cards in a steel slot, one mannequin already clocked out standing in a loading-dock doorway with a perfectly chrome cigarette, no lungs, a thin ribbon of metallic smoke, banks of cold fluorescent tubes in receding rows, one bank already dead, marble floor reflecting the lineup, a single red security-camera LED in the upper corner, a tiny wall-mounted CRT behind the clock playing EyeWash Station with the sound off, high contrast, strong silhouettes, no shoppers, no staff, 35mm, T2.8, deadpan and slightly menacing, Grok Imagine style",
         promptVariations: ["Heels with time-clock stamps on the soles, otherwise identical, Grok Imagine", "One mannequin smile slightly more tired than the factory paint allows, Grok Imagine"],
-        
       },
       {
         id: "gag-03-motion",
@@ -1122,8 +1060,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "6-second locked wide. Time-clock thunks once. A punch-card drops into the catch. Chrome-cigarette smoke drifts toward the dock air. Fluorescents die one bank at a time, left to right. The camera LED blinks in 4/4. Downbeat of bar 5 is late — the lineup does not move on it. Mannequin faces do not change. Photoreal, no smile animation.",
         geminiOmniPrompt: "6-second locked wide. Time-clock thunks once. A punch-card drops into the catch. Chrome-cigarette smoke drifts toward the dock air. Fluorescents die one bank at a time, left to right. The camera LED blinks in 4/4. Downbeat of bar 5 is late — the lineup does not move on it. Mannequin faces do not change. Photoreal, no smile animation.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1151,8 +1088,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Surreal art gallery opening, large melon on pedestal connected to espresso machine emitting artistic fog, fashionable crowd in black, one woman deadpan eating crackers, cinematic soft lighting, absurdist comedy, Grok Imagine style",
         geminiOmniPrompt: "12-second gallery wide. Fog begins. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1180,7 +1116,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked still of a glass lounge table, jumbo Earth marshmallow bag just set down, Riley Elaine Smith blonde in a sage backless crop and amethyst pendant, Rubella in black lace long sleeve, Lillith in black lace, three tall pale unnamed hosts standing in sheer grey gowns as weather, no worms in the chairs. Soft steam off a cup. One marshmallow rolls a few inches on the glass. Hosts breathe. Camera locked medium-wide. 10 seconds. No beams into bodies, no morph, no new wardrobe, no looking at camera, no extra species, no porch, no snakes seated, Grok Imagine style",
         geminiOmniPrompt: "10-second locked-off medium-wide of the same glass table. Jumbo Earth marshmallow bag already down. Soft steam. One marshmallow rolls. Three hosts in sheer grey gowns breathe and do not sit. Riley, Rubella, and Lillith in locked wardrobe look at the bag, not the floor. Soft hull hum. No worms in chairs. No beams, no morph, no eye contact with camera. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-b-space-speeding",
@@ -1194,7 +1129,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Continue the same glass lounge table from the greeting still, jumbo Earth marshmallow bag on the glass, Riley Elaine Smith in sage backless crop and amethyst, Rubella black lace long sleeve, Lillith black lace, three unnamed hosts in sheer grey gowns standing behind. They chew one marshmallow. They look at each other, not the floor. Slow face drift. 16 seconds. No worms in chairs, no floor reveal, no beams into bodies, no morph, no new wardrobe, no looking at camera, no extra species, Grok Imagine style",
         geminiOmniPrompt: "16-second continuous table two-and-three-shot. Same lounge, same bag, same wardrobe. They chew. They look at each other, not the floor. Camera never tilts down. Hosts remain standing weather. Hull hum and bag plastic. Still no worms sitting. No beams, no morph, no camera look. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-c-floor-sneak",
@@ -1208,7 +1142,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked floor still: pale lounge tiles, long pale white worms sneaking the baseboard, same asteroid-ride bodies from behind the rocks, table legs and sheer grey gown hems above, ladies still talking off the floor. Worms slide an inch or two along the baseboard. Ladies do not look down. Camera low, almost no music. 10 seconds. No sit-up, no melt, no beams into bodies, no looking at camera, no extra species, no new wardrobe, Grok Imagine style",
         geminiOmniPrompt: "10-second low floor shot. White worms slide an inch or two along the baseboard. Dialog continues above. Ladies do not look down. Almost no music, hull hum only. Same pale tiles. No sit-up, no morph, no camera look, no extra animals. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-d-same-ones",
@@ -1222,7 +1155,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Hold the floor still of pale white worms on lounge tiles. One head turns down from above — Riley Elaine Smith blonde sage crop or Lillith dark hair black lace, inventory look, not fear. Worms still worms, still on the floor. 5 seconds. No sit-up, no melt, no beams into bodies, no new wardrobe, no looking at camera, no extra species, Grok Imagine style",
         geminiOmniPrompt: "5-second hold on the floor worms. One head turns down into the top of frame. Recognition, not panic. Worms do not sit up yet. No morph, no beams, no camera look. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-e-sit-up",
@@ -1236,7 +1168,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Hard cut to the locked seated still: pale white snake-figures already sitting in the lounge chairs as Hollywood scene-hogs, eyes on, coffee cup on the glass table, jumbo Earth marshmallow bag still there, white building cat in frame, Riley Elaine Smith sage crop, Rubella and Lillith black lace, hosts standing unused. Hold. Eyes on. Cup steams. Sit-up already happened off the cut. 8 seconds. No melt, no person-becomes-snake, no beams into bodies, no looking at camera, no new wardrobe, no extra species, Grok Imagine style",
         geminiOmniPrompt: "8-second hold after a hard cut to seated pale figures already in the chairs. Eyes on. Coffee cup steams. No interpolation from floor worms. No laser fight. No beams into bodies. Snake voice pleased, industry. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-f-coffee-house",
@@ -1250,7 +1181,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked coffee-house still: a pale snake-figure in a wool coat at an Earth coffee house, heating a paper cup, one blink of eye-glow, steam off the cup. 4 to 6 seconds, hold 5. Hard cutaway, not a morph. No beams into bodies, no looking at camera, no extra species, no new lounge, Grok Imagine style",
         geminiOmniPrompt: "5-second hard cutaway. Wool coat, Earth coffee house, steam off a paper cup, one blink of pink eye-glow. Then we will cut back to the table. No monster roar. No beams into bodies. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-g-cat-stops",
@@ -1264,7 +1194,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked still of the glass table, jumbo Earth marshmallow bag, white building cat mid-open mouth, seated pale snake-figures, Riley Elaine Smith sage crop, Rubella and Lillith black lace. Cat mouth opens. Snake eyes go hot pink. No beam. Cat mouth closes. Glow holds so the cat stays in frame. 10 seconds. One half-sentence only. No beams into bodies, no morph, no new wardrobe, no looking at camera, no extra species, no second cat, Grok Imagine style",
         geminiOmniPrompt: "10-second table hold. White cat opens its mouth for one dry close line. Snake eyes brighten. No laser beam. Cat mouth closes. Glow stays. Jumbo bag in frame. Silence after the cut-off. Photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "home-sweet-h-bag-first",
@@ -1278,8 +1207,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Hold the same glass-table composition: jumbo Earth marshmallow bag, white building cat with leftover pink eye-glow, seated pale snake-figures, Riley Elaine Smith blonde sage crop and amethyst, Rubella black lace long sleeve, Lillith black lace, three hosts standing unused. Camera not moving. Hold 7 seconds. No new action, no beams into bodies, no morph, no new wardrobe, no looking at camera, no extra species, Grok Imagine style",
         geminiOmniPrompt: "7-second hold. Same table, same bag, same faces. Cat remains in frame with glow. No new motion. Riley and Rubella shut the credit grab. Then the packet ends. Photoreal short film.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1307,7 +1235,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Wide shot of two nearly identical women in black lace dresses playing ping-pong in an abandoned grand ballroom, low-hanging lit chandelier, buckled parquet floor, water-stained fresco ceiling, moonlight and warm chandelier glow, dramatic chiaroscuro, elegant decay, cinematic, Grok Imagine style",
         geminiOmniPrompt: "10-second wide of a ping-pong rally in a ruined ballroom. Deadpan faces. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rally-chin",
@@ -1321,7 +1248,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic close-up of one woman tilting the other's chin toward the light with a single knuckle, both in black lace with blood-red lipstick, chandelier glow, ruined ballroom, unbearable tenderness held at arm's length, filmic, Grok Imagine style",
         geminiOmniPrompt: "15-second close two-shot, chin tilt, no smile. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rally-pizza",
@@ -1335,8 +1261,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Wide shot of two women in black lace standing beside a ping-pong table split in half by fallen ceiling plaster, a lit chandelier above, stars visible through the hole in the roof, an unopened pizza box on the intact half of the table, dark glamour, cinematic, Grok Imagine style",
         geminiOmniPrompt: "20-second hold on the split table and pizza box. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1364,7 +1289,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Wide low-angle shot of a drab suburban HOA clubhouse meeting room at night, crooked rows of folding chairs, tired residents, cracked gavel on a card table, horizontal blinds glowing violet from outside, fluorescent overhead light, deadpan comedy atmosphere, filmic, Grok Imagine style",
         geminiOmniPrompt: "8-second locked wide of an HOA clubhouse at night. Violet glow through blinds. Residents seated. Chairman with a cracked gavel. Deadpan. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "item3-gavel",
@@ -1378,7 +1302,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Medium shot of an HOA chairman gaveling at a card table, cracked wooden gavel mid-strike, small puff of violet smoke rising from the strike point, residents unmoved in folding chairs behind him, fluorescent institutional lighting, mundane horror comedy, filmic, Grok Imagine style",
         geminiOmniPrompt: "8-second video: gavel strike, violet puff, residents unmoved. Photoreal deadpan.",
         promptVariations: [],
-        
       },
       {
         id: "item3-biscuit",
@@ -1392,7 +1315,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Low tracking shot of a standard poodle in a glowing purple bandana trotting under rows of folding chairs with a cracked wooden gavel in her mouth, violet light, HOA meeting in progress above, deadpan comedy, filmic, Grok Imagine style",
         geminiOmniPrompt: "10-second low tracking video of a poodle stealing a gavel under folding chairs. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "item3-pizza",
@@ -1406,8 +1328,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Doorway shot from inside a fluorescent-lit clubhouse looking out at a pizza delivery man in a red uniform holding two boxes, behind him a suburban driveway filled with an enormous violet rift, he is completely unbothered, cinematic contrast between warm interior and violet exterior, Grok Imagine style",
         geminiOmniPrompt: "15-second doorway video: pizza delivery, rift behind, he does not look back. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1435,7 +1356,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Interior of a 24-hour laundromat at 2 AM, harsh fluorescent overhead light mixed with the warm amber glow of a single running dryer, rain streaking the front windows, two strangers standing several machines apart watching one off-balance dryer, an attendant in a hi-vis vest mopping in the background, lonely and warm, filmic, Grok Imagine style",
         geminiOmniPrompt: "10-second locked laundromat interior. One dryer off-balance. Rain. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "laundry-dance",
@@ -1449,8 +1369,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Two strangers slow-dancing between rows of humming dryers in a 24-hour laundromat at 2am, one with faded glitter on her cheek and a wool coat, the other in a wrinkled work uniform, harsh fluorescents above and warm dryer glow below, steam in the air, rain on the big windows, tender and slightly surreal, filmic, Grok Imagine style",
         geminiOmniPrompt: "40-second slow dance between dryers. Attendant mops around them without looking. Photoreal, no cuts.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1478,7 +1397,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still of the same warm-lamp wooden display cabinet packed with glass marbles on shallow shelves as the Marble Tick Tack night-lot take, two small speakers under the wood, neodymium cube magnets stacked two and three high shivering on the marble shelf, a glossy red-painted horseshoe magnet standing on its tips like a cartoon cliché that is also a real magnet mid-ring, one faint translucent prompt card and a thin generation progress bar filling along the lower edge of frame with a blinking text cursor, no readable model name, three empty wine glasses on the next bay, no people, no faces, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Same warm-lamp wooden display cabinet as the night-lot Marble Tick Tack cabinet. Camera not inventing a second room. Slow track right. Glass marbles hop in place on the beat. Neodymium cubes stacked two and three high shiver and do not fall. A glossy red horseshoe magnet stands on its tips and rings like a dinner triangle on each tick, snapping a little toward the cubes then holding. A faint translucent prompt card and a thin progress bar fill along the lower edge; a text cursor blinks on the tick; no readable model name; nobody comments. Speakers pump. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-b-desert-wipe",
@@ -1492,7 +1410,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still mid-regenerate: the warm marble cabinet dissolving into an unrealistically vast white salt-flat desert at hard noon, wooden shelf boards becoming cracked alkali crust, glass marbles and a red horseshoe and two silver sphere magnets still mid-slide in the same positions as the cabinet, a noise-to-image wipe crawling left to right like inpaint, heat shimmer already on the horizon, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "6-second continuous single take, no cut. The job is the regenerate. Magnets keep the same slide they had on the cabinet — horseshoe, cubes, two silver spheres — while the warm indoor room inpaints into an unrealistically vast salt-flat desert at hard noon. Noise-to-image crawl left to right. Wooden shelves become alkali crust under them. Heat shimmer arrives. Camera follows the same slide. Do not finish a new physics job. No people, no faces, no creatures. Photoreal short-film, ~6 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-c-halbach-eddy",
@@ -1506,7 +1423,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K hard-noon still on unrealistically endless salt flats, a precision Halbach array of alternating neodymium cubes skating on its live face a millimeter above white crust with the dead face clean on top, a copper plate stuck in the alkali like a discarded sign, a chrome eddy-current puck mid-slow-fall down the copper as if the drop were in syrup, a cheap black ferrite block slumping like warm chocolate in the heat while a small gold samarium-cobalt cylinder sits unbothered beside it, heat shimmer fake in the air, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Hold the unrealistically vast salt-flat desert. Camera follows the Halbach array as it skates on its live underside a millimeter above the crust; the top face is dead and picks up no grit. A chrome puck meets a copper plate and slow-falls down it, eddy-damped, delayed, the real motion; heat shimmer is fake and does not move the metal. In the background a cheap black ferrite block slumps in the heat like a joke while a small samarium-cobalt cylinder does not care. One world. No rain. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-d-woods-wipe",
@@ -1520,7 +1436,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still mid-regenerate: salt flats inpainting into dense pine woods, alkali crust becoming needle duff and a galvanized cattle trough, the Halbach array and eddy puck still mid-motion in the same places, a mountain lion already sitting in the midground like furniture mid-hop an inch off the duff, no snarl, no hunt, noise-to-image wipe crawling across the frame, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "6-second continuous single take, no cut. The job is the regenerate. Desert inpaints into dense pine woods. Magnets keep the same motion they had on the flats. A mountain lion is already there, sitting like a station object, hopping an inch on the beat, no snarl, no hunt, no face performance, no lips. Noise-to-image wipe. Camera follows the magnets, not the animal. No people, no acting creatures. Photoreal short-film, ~6 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-e-woods-vibration",
@@ -1534,7 +1449,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still in unrealistically dense pine woods, a square Chladni plate on a stump with pine pollen piled into sharp nodal stars, blunt alnico cow magnet mid-rattle in a galvanized trough, a row of silvery magnetostrictive nickel bars mid-lengthen like they just caught a bass hit, mountain lion in the background hopping in place as the wrong metronome, duff shivering, no hunt, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Hold the pine woods. Camera follows the nickel bars: on each bass hit they lengthen a visible fraction and in the gaps they slump short again. Pine pollen on the Chladni plate hops into stars then scatters. The cow magnet rattles the trough and does not travel. The mountain lion hops in place on the beat as the wrong metronome, no snarl, no hunt, no lips, no acting. One world. No rain. No people, no faces performing. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-f-ice-almost",
@@ -1548,7 +1462,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of unrealistically clear sheet ice over black water in a snowfield, a superconducting flux-pinned disc hovering a thumb’s width above a frosted copper puck with a faint LN2 fog joke hugging the ice, two small sphere magnets on the sheet stopped a millimeter short of touching, disc mid-wobble and not falling, pine woods gone, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "6-second continuous single take, no cut. Arrive on unrealistically clear sheet ice. A flux-pinned disc hovers and wobbles and does not fall; the wobble is the vibration. Two sphere magnets slide toward each other and stop a millimeter short of touching. At the end everything freezes for the Almost. Hold. Disc still in the air. No smash. No people, no faces, no creatures. Photoreal short-film, ~6 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-g-space-bottle",
@@ -1562,7 +1475,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still in hard outer space, no atmosphere, a magnetic bottle of two facing Helmholtz coils dressed as a cheap flying saucer with the coils obviously the whole vehicle, glowing mid-kick, spiked ferrofluid shivering silently along field lines inside the bottle, three vinyl-toy space aliens with painted faces hopping in place on a floating ice shard like furniture, a faint regenerating shimmer at the frame edge, Earth far and unserious, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Already in outer space. No air: vibration is visible only. On each kick the Helmholtz coils of the cheap saucer glow and the magnetic bottle tightens; in the gaps it slumps dim. Ferrofluid spikes shiver along the field and do not fall as rain. Three vinyl-toy aliens hop in place on a shard, painted faces, no lips, no acting, no waving. Soft regenerating shimmer at the edge, no readable model name. Camera follows the bottle. One world. No people, no face performance. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-h-london-maglev",
@@ -1576,7 +1488,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K daylight still of a late-Victorian Fleet Street looking toward the dome of St. Paul’s, unrealistically dense horse traffic frozen as station extras, a tandem bicycle whose entire frame is living wildflowers hopping in place and not pedaling, chrome sphere magnets maglev an inch off the cobbles which hop on the tick, bicycle spokes mid-ping, no people performing, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Already on late-Victorian Fleet Street, St. Paul’s in the haze. Camera follows chrome sphere magnets maglev an inch off the cobbles; cobbles hop in place on the tick; spokes of the living wildflower tandem ping. The flower bicycle hops as a station object and never pedals. Period extras are furniture: hop an inch or hold, no lips, no acting, no building-cast. One world. No rain. No people performing. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-i-seoul-gears",
@@ -1590,7 +1501,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still of an unrealistically dense Seoul night market spilling into a subway entrance, neon signage, a pair of huge non-contact magnetic gears hovering in the street meshing without touching, Helmholtz coils disguised as streetlamps mid-hum, a faint text cursor highlighting the word Seoul on a translucent prompt card at the edge, tiles waiting to rumble, no people performing, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Already night Seoul, market into subway. Camera follows the non-contact magnetic gears: they mesh without touching and keep time. Helmholtz streetlamps hum and glow on the kick. Subway rumble hops the tiles. Hysteresis joke: one gear tooth lands late, off the beat, hangs a frame, then snaps caught. A faint cursor selects Seoul on a prompt card at the edge; neon arrives as if checked. Extras hop an inch or hold. No lips, no acting. One world. No people performing. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-j-quiet-film",
@@ -1604,7 +1514,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K quiet still of green magnetic-field viewing film stretched like a curtain in dark air, domain patterns crawling as a tiny aurora, glossy black spiked ferrofluid droplets hanging frozen and not falling, two sphere magnets a millimeter apart, a text cursor blinking on the tick at the lower edge, no smash, no tower, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "6-second continuous single take, no cut. Quiet pocket. Hold. Green viewing film crawls its domains like a small aurora. Spiked ferrofluid hangs and shivers and does not drop. Two spheres a millimeter apart. Text cursor blinks on the tick. No smash yet. No city. No people, no faces, no creatures. Photoreal short-film, ~6 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-k-ferrofluid-smash",
@@ -1618,7 +1527,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still at an ice-and-snow seam, frozen ferrofluid rain mid-thaw becoming liquid black mercury mid-air, drops colliding with chrome sphere magnets on the ice, black spikes wrapping the metal, first crystals of unrealistically bright snow, no tower, no city, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. This is the only liquid job. Hold hung spiked ferrofluid for the first beats if the quiet is still going, then the frozen drops go liquid mid-air, fall, and collide with the sphere magnets on the ice and the first crystals of unrealistically bright snow. Black ferrofluid reaches, spikes, wraps the chrome. More drops hit. No tower in frame. No Seoul, no London. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-l-souvenir-parade",
@@ -1632,7 +1540,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of cheap fridge souvenir magnets rolling in a line — a red London bus, a Seoul tower, a desert cactus, a tiny mountain lion — still wearing black ferrofluid, leftover set pieces of pine, cobble, and neon peeling at the edges like stickers, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "6-second continuous single take, no cut. Camera follows a parade of fridge souvenir magnets rolling through leftover sets: a red London bus, a Seoul tower, a desert cactus, a tiny mountain lion, still slick with black ferrofluid. Pine, cobble, and neon peel at the edges like stickers. The souvenirs travel. They do not act. No people, no faces. Photoreal short-film, ~6 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-m-gauss-home",
@@ -1646,7 +1553,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still pulling toward a warm doorway lamp through leftover pine woods, a Gauss-rifle line of staged neodymium cylinders aiming a single clear glass marble at the lamp, mountain lion still hopping in place in the peeling woods like furniture, prompt window closing at the frame edge, set pieces peeling like stickers, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Pull toward the warm cabinet-doorway lamp. A Gauss-rifle cradle of neodymium cylinders stages and fires one clear glass marble at the lamp. The mountain lion is still in the leftover woods, hopping in place, no hunt, no lips. Sets peel like stickers. The prompt window closes at the edge; no readable model name. Camera follows the marble. No people, no face performance. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-n-cabinet-chain",
@@ -1660,7 +1566,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still back on the original warm-lamp marble shelf, the same wooden display cabinet as clip A and the night-lot take, glass marbles hopping on the wood, fridge souvenir magnets — London bus, Seoul tower, cactus, tiny lion — still wearing black ferrofluid snapping into a locked chain down the line with the red horseshoe and cube stacks, small speakers under the cabinet, nothing exploding off the wood, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Back on the original marble shelf, same cabinet as A. Marbles hop. The groove holds a small pile — marbles, souvenir fridge magnets still wearing black ferrofluid, the red horseshoe, cube stacks. Magnets snap down the line and lock. Speakers pump. Camera holds. Nothing explodes off the wood. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-o-decay-hold",
@@ -1674,8 +1579,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K quiet still of one clear glass marble on the wooden shelf, two magnets a millimeter apart, a dead text cursor at the lower edge not blinking, speakers dead, warm lamp, no people, short-film still, Grok Imagine style",
         geminiOmniPrompt: "3-second hold, camera not moving. One clear marble. Two magnets a millimeter apart. Text cursor dead, not blinking. Speakers dead. Hold. Cut. No people, no faces. Photoreal short-film, ~3 seconds.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1703,7 +1607,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still inside a small interior: honey-oak wooden display cabinet with shallow grooved shelves packed with clear, cat's-eye, and swirl glass marbles catching a single brass-shaded warm practical, two small black speaker cones set into the wood under the lowest shelf mid-pump, neodymium cube magnets stacked two and three high shivering on a pale marble shelf insert so the stacks look about to fail and do not, a short column of cylindrical N52 disc magnets standing on their flat ends beside the cubes with alternating discs frozen mid-spin in opposite directions, one loose cube unstuck from a speaker basket mid-slide toward three empty wine glasses already waiting on the next bay with rims catching lamp gold, a hanging brass pull-chain against the cabinet side, steel washers loose on a nail, a tin lid of ball bearings, shelf dust hanging in the tungsten beam, crushed-black hallway beyond, no people, no faces, 35mm, T1.8, micro-contrast on glass and nickel, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Same warm-lamp honey-oak display cabinet, camera not inventing a second room. Slow track right along the grooved shelves. Clear and swirl glass marbles hop in their grooves on every eighth, never leaving the wood. Neodymium cubes stacked two and three high shiver on the pale marble insert and do not fall. Beside them a short column of cylindrical disc magnets stands on its flat ends, alternating discs spinning opposite directions at once at a fast watchable rate, axes wobbling a hair. A hanging brass pull-chain ticks the cabinet side; washers rattle on a nail; shelf dust jumps in the lamp beam; two small speaker cones pump the wood. One cube unsticks from the speaker basket and slides toward three empty wine glasses already sitting on the next bay, rims ringing without the glasses travelling. Camera follows that one slide only. Nothing else travels. No people, no faces, no creatures, no building-cast. Photoreal short-film, warm tungsten against crushed hallway black, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-b-doorway-roll",
@@ -1717,7 +1620,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still leaving a warm marble cabinet toward a dark interior doorway of the same night building, honey-oak floorboards giving way to a scuffed painted threshold with grit already on the sill, two silver sphere magnets on the wood with a clean empty gap of several body-widths of bare floor between them so the empty boards are the subject, both dead still, packed dirt and an old weathered fence already visible beyond the black doorway like the next room of the same lot, three wine glasses ringing out of frame left with gold rims catching the brass lamp, a hanging pull-chain still against the cabinet, red tower light a pinprick far down the alley through the opening, tungsten spill cutting a hard rectangle on the floor then dying in crushed black, dust motes in that spill, 35mm low angle, T2.0, micro-contrast on nickel and oak grain, no people, no faces, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Leave the ringing wine glasses. Camera follows two silver sphere magnets rolling off the cabinet and across honey-oak floorboards toward a dark interior doorway of the same night building. At the threshold they stop dead, a clean empty gap of several body-widths of bare wood between them, and hold still for a full beat so the gap is readable. On the next bass hit one sphere crosses that gap in a single frame — a streak, motion blur, nothing in between — and slams into the other, throwing a small puff of grit already waiting on the sill, then the pair buzzes together and settles over about four eighths. They roll on through the dark doorway and out onto packed dirt. An old weathered fence is already there. Red tower light far down the alley so the lot is one place. One jump only. Do not cut during the jump. Do not let the cross read as a roll or a throw. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-c-alley-rodin",
@@ -1731,7 +1633,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still of a dirt alley between peeling wooden fences and rusted corrugated metal, silver spheres of mixed sizes mid-orbit around a large copper Rodin-coil torus leaning on the fence — nested vortex windings, flower-of-life lattice, verdigris in the recesses, the metal humming so fine dust hangs off the windings — a cylindrical disc magnet standing on its flat end on the torus's top winding spinning like a top with the axis already a few degrees off vertical, grit and small gravel hopping in the ruts, frost ticking on fence wire, slats shivering, a section of chain-link mid-buzz, a warm window in one building face throwing a cheap interior rectangle, a distant red tower light down the alley so the lot continues, moonlight and window gold fighting on copper, no ferrofluid, no people, no faces, 35mm, T2.0, grit micro-detail, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Track down the dirt alley between peeling wooden fences and rusted corrugated metal. Silver spheres of different sizes lap a large copper Rodin-coil torus leaning on the fence — nested vortex windings, flower-of-life lattice, verdigris in the recesses — circling the torus about once per beat, kicking a little dust, never climbing into a marble bowl, never treating gravity as the center. The torus vibrates in place and does not roll and does not travel. On its top winding a cylindrical disc magnet stands on its flat end and spins like a top at a fast watchable rate, its axis wobbling slowly, never settling like a coin. Fence slats shiver, frost ticks on the wire, grit hops in the ruts, a section of chain-link buzzes like a screen. A warm window and a red tower light down the alley keep the lot one place. No ferrofluid. No people, no faces, no creatures. Photoreal short-film, moonlight on copper, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-d-jump-gap",
@@ -1745,7 +1646,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K low-angle night still on packed dirt, a large chrome sphere and a smaller black sphere sitting dead still with six body-widths of clean empty dirt between them so the gap is the subject, a streak of motion blur just starting to close that gap, grit and moonlit dust hanging in a shallow layer, fence slats and frost ticking on wire, a loose corrugated sheet mid-oil-can, a hubcap leaning on the fence catching a cold highlight, nails standing in a board, copper Rodin torus soft and out of focus down the alley behind them, red tower light far, cheap window gold leaking from one fence gap, 24mm low, T2.8, crushed blacks, grit micro-detail, no people, no faces, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Leave the Rodin behind but keep the same alley. Low camera on packed dirt. A large chrome sphere and a smaller black sphere sit dead still, six body-widths of clean empty dirt between them. Hold on that gap for at least one full beat; both bodies dead still, no creep. On the bass hit the smaller one crosses the whole gap in a single frame — a blurred streak, nothing in between — and slams into the chrome one. Grit puffs, one skid, then the pair buzzes hard together and settles over about four eighths. Immediately after, the two counter-rotate around each other without ever touching again, turning about once per beat, gearing in the air, never grinding, never contacting. Grit hops in the ruts, a loose corrugated sheet oil-cans on the kick, a hubcap rings against the fence. One jump only, no cut during the jump, no contact after the gear starts. Do not let the cross read as a roll. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-e-lawn-threshold",
@@ -1759,7 +1659,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still at a fence gap where packed dirt meets an unrealistically vivid emerald lawn, flowers too saturated for night — wet poppies, tulips, daisies, pigment almost wet-paint, petals too red and too yellow for moonlight — dew beads on every blade, two sphere magnets stopped a millimeter short of touching on the seam so the air between chrome and chrome is the subject, grass tips mid-shiver, a footprint of standing water just starting concentric rings, a distant magnet tower only a silhouette in the far dark with a red lamp on top, last alley spill dying at the fence, moonlight making the too-green look fake on purpose, no rain, no people, no faces, 35mm, T1.8, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. The dirt street ends at a fence gap. Beyond it an unrealistically vivid emerald lawn, flowers too saturated for night — poppies, tulips, daisies, pigment almost wet-paint — dew shivering on the grass, flower heads nodding on the kick until they must stop, a footprint of standing water ringing until the freeze. Two sphere magnets roll to the threshold of dirt and grass and stop a millimeter short of touching. No orbit. No jump. At eight seconds everything freezes, dancers included: dew hanging, petals mid-nod, grit mid-hop, the millimeter gap held as the subject. Hold. Tower only in the far dark with a red lamp so the lot is still one place. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-f-tower-stands",
@@ -1773,7 +1672,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still on an unrealistically vivid emerald lawn, flowers too saturated for night, three industrial electromagnet coils in the wet grass under a tall precarious tower of mixed magnets — cubes, bars, spheres, a spinning column of cylindrical discs partway up with alternating discs mid-counter-rotate, a small copper Rodin torus near the top — coils mid-glow as if just switched on, copper windings catching bloom, tower mid-rise fighting collapse so the silhouette is almost straight, dew jumping off the blades, a footprint of standing water with concentric rings, a sprinkler head, too-saturated petals mid-nod, moonlight plus coil bloom turning wet grass into fake jewelry, no rain, no people, no faces, 35mm, T2.0, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Hold the frozen spheres two seconds. At the slam the camera is already on the unrealistically green lawn. Three industrial electromagnet coils sit in the grass under a tall precarious tower of mixed magnets — cubes, bars, spheres, a small Rodin torus near the top. Partway up the tower a column of cylindrical disc magnets spins, alternating discs turning opposite directions at once. On each bass hit the coils switch on and glow and the tower stands up straighter. In the gaps it slumps and starts to fall, then the next hit catches it. Do not let it walk. Do not let it sit inert. Flower heads nod on the kick, dew beads jump off the grass, standing water in a footprint rings, a sprinkler head ticks. No rain. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-g-three-phase",
@@ -1787,7 +1685,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K closer night still of the same magnet tower on unrealistically green wet grass, three industrial coils pulsing in sequence around the base so one is bright and two are dim, silver spheres mid-orbit around the coil base riding that sequence, a pair of cylindrical rod magnets joined end to end tumbling end-over-end across the wet grass rotating around their shared middle while the pair travels, the stack mid-slump being sucked back into shape, dew beads caught in the air like glass, grass tips blurred with shiver, coil housings humming with a visible vibration, too-saturated petals shedding, wet chrome reflections of coil bloom, no rain, no people, no faces, 50mm, T1.8, wet-green micro-contrast, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Push closer to the same tower. It is the drum. The three coils fire in sequence around the base, one after another, a rotating field, and silver spheres lap the base about once per beat riding that sequence, center of the orbit the coils not gravity. A pair of cylindrical rod magnets joined end to end tumbles end-over-end across the wet grass, rotating around its own middle while the whole pair travels — not a stick being carried, not a propeller on a post. The stack falls a foot and is sucked back into shape. Grass tips shiver, dew jumps, coil housings hum visibly, too-saturated petals shed one at a time on the downbeat. Do not let the tower collapse all the way. Do not let the rods be carried by anything. No rain. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-h-rain-appears",
@@ -1801,7 +1698,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still at the dirt-and-grass seam, glossy black spiked ferrofluid raindrops hanging frozen in mid-air not yet falling, some faceted like cut mercury, some liquid with needle spikes, each drop caught mid-tremble so the field of hanging rain is a held chord, two sphere magnets waiting on the packed dirt, two cylindrical rod magnets standing upright in the dirt vibrating in place hard enough that their outlines blur, fence behind with frost on the wire, first blades of unrealistically green grass at the seam, moonlight raking black mercury so every spike throws a tiny specular, no magnet tower in frame, no people, no faces, 85mm, T1.4, macro spikes, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Follow the loose sphere back to the dirt-and-grass seam. Above the seam, glossy black ferrofluid rain is hanging in the air, spiked, still frozen, not yet falling, each drop trembling on the tick without dropping — some faceted, some liquid. Spheres on the ground wait. Two cylindrical rod magnets stand upright in the dirt buzzing hard enough to blur and going nowhere: standing vibration, not sliding, not falling over. Fence behind. Unrealistically green first blades at the seam. No tower in frame. No people, no faces, no creatures. Photoreal short-film, moonlight on black mercury, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-i-quiet-rain",
@@ -1815,7 +1711,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K moonlight still of frozen ferrofluid rain hanging as spiked black mercury droplets, some faceted some liquid, shivering and not dropping, two sphere magnets on packed dirt a millimeter apart so the air between chrome and chrome is the quiet, fence wire frost still and not hopping, unrealistically green grass only a thin seam at frame edge, crushed blacks, almost no other motion in the room, no tower, no extra dancers, no people, no faces, 85mm, T1.4, quiet pocket, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Hold on the frozen ferrofluid rain. Spiked black droplets shiver in moonlight and do not drop — some faceted, some liquid. Two spheres on the dirt a millimeter apart. Quiet pocket. Almost no other dancers: no hopping grit show, no nodding flowers, no buzzing fence — only the tremble of the hung drops and the millimeter gap. Fence frost may remain as texture but it does not hop. No smash yet. No tower. No orbit. No jump. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-j-thaw-and",
@@ -1829,7 +1724,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still at the dirt-and-unreal-green-grass seam, frozen ferrofluid rain mid-thaw becoming liquid black mercury mid-air, drops colliding with chrome sphere magnets, black spikes wrapping the metal in wet needles, rebound rings of ferrofluid still hanging off the chrome from the last hit, first blades of too-green grass beaded with black, packed dirt taking splash that does not become weather covering the lot, moonlight plus wet specular, fence behind, no tower, no people, no faces, 50mm, T1.8, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. The frozen drops go liquid mid-air, fall, and collide with the sphere magnets on the dirt and the first blades of unrealistically green grass. Black ferrofluid reaches, spikes, wraps the chrome. After each hit a rebound ring of ferrofluid buzzes on the metal and settles. More drops hit. This is the only liquid job. Do not freeze them again. Do not turn it into rain weather covering the lot. Fence stays behind the seam. No tower in frame. No people, no faces, no creatures. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-k-bound-binary",
@@ -1843,7 +1737,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K night still pulling back up the same dirt alley, two equal ferrofluid-slick spheres mid-orbit around the empty point between them with nothing in the middle — no third magnet, no support, no moon-and-planet — the pair travelling up the rut as it rotates, black smear still on the chrome, the copper Rodin torus still clean and dry on the fence humming as if it never took the rain, grit hopping, a bare bulb swinging a few degrees, warm doorway lamp ahead as a small gold rectangle, red tower light behind us so the lot is one place, peeling fences, ruts, 35mm, T2.0, no people, no faces, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Pull back up the dirt alley the way we came. Two equal ferrofluid-slick spheres rotate around the empty point between them, about once per beat, with nothing at all in the middle — no third object, no support — and the whole rotating pair travels up the rut toward the doorway. Neither one is the center. Do not invent a marble bowl. Do not give one sphere a moon. Grit hops in the ruts, the bare bulb swings a few degrees, dust motes pulse. The copper Rodin torus is still on the fence, clean, humming, and does not travel. Camera goes through the same doorway toward the warm lamp. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-l-jump-gap",
@@ -1857,7 +1750,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still back on the original warm-lamp marble shelf, same honey-oak as the opening so home is the same cabinet, glass marbles on the grooved wood, one wine glass, two sphere magnets still wearing black ferrofluid spinning around each other at the near end of a clean empty gap of several body-widths of pale marble insert, a line of neodymium cube stacks waiting at the far end mid-snap into a locked chain, small speakers under the cabinet, hanging brass pull-chain, washers on a nail, tin lid of ball bearings, shelf dust in the tungsten beam, nothing exploding off the wood, crushed hallway black at the doorway, 35mm, T1.8, no people, no faces, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. Back on the original marble shelf, same honey-oak wood as the opening. Marbles hop in the grooves, the pull-chain ticks, washers rattle, ball bearings jump in a tin lid, speaker cones pump. The spinning ferrofluid-slick pair arrives at the near end of the shelf and stops, a clean empty gap of several body-widths between it and a waiting line of cube stacks. Hold on that gap; both sides dead still for a beat. On the bass hit the pair crosses it in a single frame — streak, nothing in between — and slams into the line, and the snap runs away down the row, each stack locking to the next in sequence until the whole chain is one locked line. A rebound buzz, then still. Speakers pump. Camera holds. Nothing explodes off the wood. One jump only. Do not cut during the jump. No people, no faces. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "marble-tick-m-decay-hold",
@@ -1871,8 +1763,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K quiet still of one clear glass marble on the honey-oak shelf, two magnets a millimeter apart, one cylindrical disc magnet still standing on its flat end spinning down with a slow widening wobble that has not fallen over, a single frozen ferrofluid spike hanging in air and not falling, speakers dead and cones still, warm lamp filament almost still, crushed blacks at the doorway, no hop, no extra dancers, no people, no faces, 85mm, T1.4, decay hold, short-film still, Grok Imagine style",
         geminiOmniPrompt: "3-second hold, camera not moving. One clear marble on the honey-oak. Two magnets a millimeter apart. One cylindrical disc still standing on its flat end, spinning down, its axis wobbling wider and wider but never falling over. A single frozen ferrofluid spike hanging and not falling. Speakers dead, cones still. No hop. No orbit. Hold. Cut before the disc stops. No people, no faces. Photoreal short-film, ~3 seconds.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1900,7 +1791,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cramped 1980s television master-control room at 4 AM, wall of glowing CRT monitors each showing a different scene, lone operator in a cardigan filling out a paper log sheet with a grease pencil, single desk lamp, equipment rack glow, faint haze, cinematic low-key lighting, quiet melancholy, Grok Imagine style",
         geminiOmniPrompt: "10-second locked wide of master control at 4 AM. Operator writes. Monitors glow. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mc-offset",
@@ -1914,7 +1804,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "A single CRT monitor in a wall of monitors showing the same master-control room it sits in, the operator visible from behind on the screen standing up while in the real room he remains seated, slight scan-line offset, uncanny, quiet, cinematic, Grok Imagine style",
         geminiOmniPrompt: "15-second video: seated operator, standing operator on the self-monitor, then he stands to match. Photoreal, no scare sting.",
         promptVariations: [],
-        
       },
       {
         id: "mc-signoff",
@@ -1928,8 +1817,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Television sign-off card reading WE NOW CONCLUDE OUR BROADCAST DAY on a CRT in a dark master-control room, wall clock above reading 3:44, operator's hand resting on a master fader without moving it, deep analog blues and greens, quiet dread, cinematic, Grok Imagine style",
         geminiOmniPrompt: "20-second hold on sign-off card and 3:44 clock. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -1957,7 +1845,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K still of a glossy molten silver liquid-metal sphere hovering dead-center in a vast pitch-black cave, mercury-chrome skin with capillary ripples, meniscus ridges, and subsurface convection cells mid-pulse as if locked to a deep musical kick, cavern walls mid-flash between a razor-sharp black-and-white checkerboard projection and a lattice of electric-blue magenta and neon-green glowing line grids, chromatic specular ribbons racing across the chrome curvature, wet basalt stalactites barely visible in crushed blacks, volumetric dust motes catching strobe edges, anamorphic bokeh, Arri Alexa look, extreme micro-contrast on metal, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "A detailed cinematic 8K photoreal video of a glossy molten silver sphere of liquid metal hovering precisely in the center of a pitch-black cave. The sphere shows intricate fluid dynamics: capillary waves, rolling mercury folds, meniscus ridges, and subsurface convection cells rhythmically morphing and pulsating as if reacting to an unseen deep musical beat — each kick softens then re-tensions the chrome skin. Surrounding cavern walls of dark wet basalt transform through abrupt dramatic lighting shifts, snapping instantly between a stark high-contrast black-and-white checkerboard grid and vibrant glowing multi-colored neon line grids in electric blues, vivid magentas, and neon greens before collapsing back into void. Each flash casts high-contrast colorful caustic reflections that ripple, shear, and dance across the fluid chrome surface with physically accurate specular delay. Tiny sparks of reflected neon crawl into micro-dents and filament seams on the metal. Seamless camera slow zoom steadily approaches the sphere from medium-wide to tight close-up, emphasizing complex liquid-metal textures and the dramatic play of strobing light in the dark space. Continuous single shot, no cuts, photoreal short film, ~12–15 seconds.",
         promptVariations: ["Macro still: chrome sphere surface only, checkerboard and neon grids warped in reflection, capillary ripples mid-beat, Grok Imagine", "Wide cavern establishing: tiny molten sphere centered in crushed-black void, walls mid-checkerboard snap, Grok Imagine"],
-        
       },
       {
         id: "sphere-v2-orbit",
@@ -1971,7 +1858,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 8K orbital still of a hovering molten silver liquid-metal orb in a lightless cave, chrome surface fracturing into slow liquid petals then resealing, cavern rock etched with crawling neon vein circuitry in electric blue magenta and acid green that pulses along fault lines, residual black-and-white checkerboard afterimage ghosting across wet stone, elongated chromatic reflections streaking the sphere like oil-slick aurora, floating mica dust, anamorphic flare from neon edges, deep crushed blacks, hyper-detailed fluid chrome, short-film still, Grok Imagine style",
         geminiOmniPrompt: "Detailed cinematic 8K photoreal video: a glossy molten silver liquid-metal sphere hovers at the exact center of a pitch-black cave while the camera performs a seamless slow lateral orbit. The sphere exhibits denser fluid dynamics than a simple pulse — mercury petals peel outward on the beat, filament threads of liquid chrome stretch and snap back, and concentric shock-rings travel across the surface synced to an unseen sub-bass. Cave walls begin as dark basalt then ignite with abrupt lighting modes: first a hard black-and-white checkerboard that tiles around the full 360° cavern, then a living lattice of neon veins (electric blue, vivid magenta, neon green) that crawl like circuitry along cracks and stalactites before snapping to black. Mode switches are instantaneous and rhythmic. Neon and checkerboard flashes leave lingering afterimage trails that smear across the chrome as elongated caustics, aurora-like ribbons, and delayed specular ghosts. Micro-sparks of color sink into temporary dimples then resurface as the sphere reseals. Continuous orbiting shot, no cuts, dramatic high-contrast reflections, photoreal short film, ~12–15 seconds.",
         promptVariations: ["Three-quarter orbit frame: sphere left-third, neon-vein cavern wall right, checkerboard ghost on rock, Grok Imagine", "Top-down still looking down on molten silver sphere, neon veins radiating on cave floor, Grok Imagine"],
-        
       },
       {
         id: "sphere-v3-macro",
@@ -1985,8 +1871,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Extreme macro cinematic 8K still diving into a molten silver liquid-metal sphere surface inside a pitch-black cave, chrome skin filling frame with capillary valleys, mercury whirlpools, and mirror-perfect micro-facets reflecting a warped black-and-white checkerboard colliding with electric-blue magenta and neon-green line grids, environment readable only as distorted light architecture inside the metal, shallow depth of field, anamorphic micro-flare, Arri Alexa photoreal, short-film still, Grok Imagine style",
         geminiOmniPrompt: "Detailed cinematic 8K photoreal video beginning on a hovering molten silver liquid-metal sphere centered in a pitch-black cave, then executing a seamless aggressive slow zoom that becomes an extreme macro journey into the chrome surface. Early frames establish the full object and the cavern: walls slamming between stark black-and-white checkerboard grids and vibrant neon line lattices in electric blues, vivid magentas, and neon greens, then void. As the lens closes in, the sphere's intricate fluid dynamics dominate — viscous mercury folds, capillary turbulence, pulsing subsurface cells, and beat-locked morph waves that swell toward camera then recede. Environmental flashes no longer read as walls; they become abstract architectures warped across the curved mirror: checkerboard tiles stretch into trapezoids and fractal edge-bleeds, neon lines ribbon into spirals and knife-edge caustics racing through micro-ridges. High-contrast colorful reflections ripple and dance with physically delayed specular response. Final third of the shot is almost entirely liquid metal texture and light, cave implied only by darkness beyond the sphere's limb. Continuous single-shot push-in, no cuts, photoreal short film, ~12–15 seconds.",
         promptVariations: ["Abstract reflection landscape inside chrome: warped checkerboard colliding with neon ribbons, no full sphere visible, Grok Imagine", "Limb of the sphere only: thin crescent of molten silver against pure black, neon caustic crawling the edge, Grok Imagine"],
-        
-      }
+      },
     ],
   },
   {
@@ -2014,7 +1899,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic low-angle push-in still of a glamorous woman in a black lace dress singing into a large silver vintage broadcast microphone on a foggy suburban Halloween lawn, head tipped back, one hand wrapped around the mic stand, theatrical cabaret-spooky energy, enormous defeated snake coils lying on the grass behind her catching rim light, a brown-and-white tabby cat sitting at her feet guarding an orange plastic trick-or-treat bucket, carved jack-o'-lanterns glowing low in the foreground, string lights bokeh across the top of frame, drifting ground fog lit warm from below and cold blue from behind, the rest of the yard still and empty, no monsters visible yet, deliberately almost-normal composition, 35mm anamorphic, shallow depth of field, heavy filmic grain, warm-orange and teal grade, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "23-second slow push-in video. A woman sings Verse 1 of Monster Mash into a silver vintage microphone on a suburban Halloween lawn in the aftermath of a battle. Giant defeated snake coils lie on the grass behind her. A brown-and-white tabby cat sits at her feet beside an orange trick-or-treat bucket, blinking slowly. Drifting fog, sagging string lights, glowing jack-o'-lanterns. She performs with theatrical cabaret-spooky commitment, working the mic like a lounge act. The yard stays almost normal — no monsters yet, only one silhouette too tall in the deep background fog. Camera pushes in steadily from wide to medium over the full clip. Photoreal cinematic, warm practical light against cool moonlight.",
         promptVariations: [],
-        
       },
       {
         id: "monster-mash-2-cursed-guest",
@@ -2028,7 +1912,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Chaotic wide still of a cursed Halloween lawn party — Richard Nixon in tattered suit stiffly doing the Monster Mash, Ayatollah Khomeini in traditional robes stern and unmoved also stiffly doing the Monster Mash, swarm of 1990s Furbies in tiny Dracula capes, feral sick kittens on hind legs holding tiny switchblades, cracked Victorian porcelain dolls in rigid dance poses, half-melted Stay-Puft Marshmallow Man with Nixon's face emerging, neon green and purple fog, red emergency light flashes, silver microphone and singer still center, defeated snake coils, Grok Imagine style\nChaotic cinematic wide still of a cursed suburban Halloween lawn party erupting mid-song, Richard Nixon in a tattered gray suit stiffly doing the Monster Mash with his arms locked at the elbows, a swarm of 1990s Furbies in tiny high-collared Dracula capes waddling aggressively across the grass in formation, feral sick kittens standing on their hind legs holding realistic tiny switchblades, cracked Victorian porcelain dolls with missing eyes performing rigid synchronized dance choreography in a row, a half-melted Stay-Puft Marshmallow Man slumping sideways with Nixon's face emerging from the sagging marshmallow, the singer still center frame at her silver vintage microphone unbothered, defeated giant snake coils on the grass, neon green and purple fog rolling knee-high, a red emergency light strobing from off-frame left, string lights and jack-o'-lanterns still warm in the background, deliberately mismatched render styles colliding in one frame, wide anamorphic lens, filmic grain, Grok Imagine style",
         geminiOmniPrompt: "25-second unstable tracking shot moving left to right across a foggy suburban Halloween lawn. Richard Nixon in a tattered suit dances the Monster Mash with stiff locked elbows. A swarm of Furbies in tiny Dracula capes waddles aggressively through the foreground. Sick kittens on hind legs brandish switchblades at each other. Cracked porcelain dolls perform rigid synchronized choreography in a line. A half-melted Stay-Puft Marshmallow Man slumps in the background, Nixon's face surfacing in the marshmallow. The singer stays center at her silver mic delivering the Monster Mash chorus, entirely unbothered. Neon green and purple fog, occasional red emergency flash. Camera weaves and bobs like a handheld operator dodging dancers. Photoreal cursed collage energy with deliberately mismatched styles.",
         promptVariations: ["Wide pan: Nixon mash center-left, Furbie swarm crossing foreground in cape formation, knife-kittens mid-ground, singer at silver mic in right third, defeated snake coils along bottom edge, neon fog, red flash, Grok Imagine", "Close-medium on three cracked porcelain doll faces mid-choreography, missing eyes, hairline fractures catching neon green light, while Nixon's stiff legs mash in soft bokeh behind them, Halloween lawn, Grok Imagine"],
-        
       },
       {
         id: "monster-mash-2b-amy-alec",
@@ -2042,7 +1925,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium-wide still of two hikers crashing a cursed Halloween lawn party mid-dance, a frantic woman in head-to-toe loud REI technical gear — magenta and safety-orange shell jacket, teal zip-off convertible hiking pants, an enormous number of carabiners clipped to every loop, a headlamp still switched on and blazing a white beam sideways out of frame — mid-flail with both arms thrown too wide, mouth open, over-committed and slightly panicked, beside her a deadpan older man in a heavy oatmeal wool fisherman's sweater wearing aviator sunglasses at night and a battered park-ranger hat, holding a sharpened walking-stick spear upright like a ceremonial staff, dancing almost imperceptibly with tiny weight shifts and total conviction, Furbies in Dracula capes swirling around their ankles, Nixon mashing in the background, defeated snake coils, neon green fog, string lights, harsh headlamp flare across the lens, 35mm anamorphic, filmic grain, Grok Imagine style",
         geminiOmniPrompt: "25-second unstable tracking shot across foggy Halloween lawn. Nixon dances the Monster Mash stiffly. Ayatollah Khomeini beside him, stern and rigid, also doing the Monster Mash without expression. Furbies in Dracula capes waddle aggressively. Sick kittens on hind legs with switchblades. Porcelain dolls perform rigid choreography. Half-melted Stay-Puft with Nixon face. Singer at silver mic continues Monster Mash chorus. Neon fog, occasional red flash. Photoreal cursed collage energy.\n12-second video. Two hikers from an earlier scene walk out of the fog onto a cursed Halloween lawn party, still in full costume. The woman wears loud magenta and safety-orange REI gear, teal zip-off pants, a lit headlamp, and dozens of carabiners that jingle audibly on every beat — she dances frantically, arms too wide, over-committed, glancing over her shoulder mid-move as if still looking for someone. The man wears a heavy wool sweater, aviator sunglasses at night, and a park-ranger hat, and holds a sharpened walking-stick spear upright; he dances almost not at all — micro weight shifts, one slow nod, absolutely dead serious. Furbies in Dracula capes swarm their ankles. Nixon mashes in the background. Her headlamp beam sweeps the camera and blows out the frame for a beat. Photoreal comedic cinematic.",
         promptVariations: ["Two-shot, waist up: frantic REI hiker mid-flail with carabiners flying, deadpan sweater-and-aviators man beside her barely moving, spear upright, cursed lawn party bokeh behind, headlamp lens flare, Grok Imagine", "Low-angle hero shot of the deadpan man in wool sweater and aviator sunglasses planting his sharpened walking stick into the lawn on the downbeat while monsters dance around him, neon fog, Grok Imagine"],
-        
       },
       {
         id: "monster-mash-3-the-heist",
@@ -2056,7 +1938,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Noir cinematic still of a woman in a black lace dress creeping into a dim cluttered bedroom-office, caught mid-step looking back over her shoulder toward the door, approaching a massive scarred mahogany desk stacked with papers and dead houseplants, sliding open the deep bottom drawer and lifting out an oversized black trenchcoat, hard chiaroscuro lighting from a single slatted window casting venetian blind bars across her face and the wall, dust hanging in the light shaft, a half-full glass of water on the desk rippling from the muffled bass of a party outside, framed photos turned face down, cigarette smoke haze, deep crushed blacks, 1970s paranoid thriller aesthetic, 35mm lens, heavy grain, Grok Imagine style",
         geminiOmniPrompt: "25-second suspense video, no dialogue. A woman in a black lace dress creeps into a dim cluttered bedroom-office and pauses, listening. She eases open the deep bottom drawer of a massive mahogany desk and lifts out an oversized black trenchcoat, draping it over her arm. She turns to a worn office chair, unzips the seat cushion, and pulls a large wide-brimmed black circular spy hat from inside it. Venetian blind bars of light slide across her as she moves. A glass of water on the desk trembles with muffled bass — Monster Mash plays clearly but distant, through the walls. Slow deliberate pan following her, then a hold on the hat. Photoreal noir thriller, crushed blacks, heavy grain.",
         promptVariations: [],
-        
       },
       {
         id: "monster-mash-4-party-escalates",
@@ -2070,7 +1951,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Maximum-density cinematic wide still of a cursed Halloween lawn party at full escalation, an animatronic Skeksis in ragged robes drinking punch beside 1970s Alice Cooper and a hyper-realistic grotesque three-dimensional South Park Satan with a tiny Karl Rove perched on his shoulder whispering strategy, a rotting jack-o'-lantern vomiting a stream of glowing green candy corn onto the grass, a ring of hollow rubber cultist suits with empty hoods dancing in a circle, a wet Cthulhu tentacle rising from an open manhole and tapping the beat on the lawn, a vintage velvet couch dragged onto the grass holding three women in black lace and a younger dark-haired woman with a glowing transparent crystal skull between them, a fluffy white dog at their feet, a giant beige tote bag with a 3D skull, a floating inflatable pizza slice whose pepperoni eyes stare directly at the lens, a low-poly PS1 zombie clipping through a lawn chair, string lights, neon fog, everything slightly too crowded and slightly wrong, colliding render styles, wide anamorphic, filmic grain, Grok Imagine style",
         geminiOmniPrompt: "45-second rapid-cut video montage of a cursed Halloween lawn party at maximum escalation. Cuts every two to three seconds: a Skeksis mingling with Alice Cooper and a grotesque photoreal South Park Satan with tiny Karl Rove on his shoulder at the punch bowl; a rotting jack-o'-lantern vomiting glowing green candy corn; hollow rubber cultist suits dancing in a ring; a wet Cthulhu tentacle tapping the beat from an open manhole; the couch ensemble on the lawn passing a glowing crystal skull; the singer still center at her silver mic; an inflatable pizza slice drifting past with staring pepperoni eyes. Everything is too crowded and slightly wrong. Monster Mash chorus and verse three continue unbroken under the cuts. Photoreal chaotic collage with deliberately mismatched render styles.",
         promptVariations: ["Skeksis, Alice Cooper, and grotesque photoreal South Park Satan in a three-shot at the punch bowl, tiny Karl Rove on Satan's shoulder mid-whisper, lawn chaos soft in background, neon fog, Grok Imagine", "Vintage velvet couch wide on the lawn: three women in black lace, younger dark-haired woman, glowing crystal skull, fluffy white dog, giant skull tote, defeated snake coils behind, string lights, Grok Imagine", "Low-poly PS1 Resident Evil zombie clipping halfway through a plastic lawn chair, textures stretching, while photoreal Furbies in Dracula capes pass in sharp foreground, deliberate style clash, Grok Imagine"],
-        
       },
       {
         id: "monster-mash-4b-thriller-werewolf",
@@ -2084,7 +1964,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic tracking still of a Thriller-style werewolf moonwalking backwards in a slow orbit around a silver vintage microphone stand on a cursed Halloween lawn, wearing a red-and-black leather varsity jacket with heavy shoulders and a single white sequined glove, muzzle caught mid-transformation with yellow lupine eyes staring directly down the lens, claws splayed, one foot gliding backwards across the wet grass leaving a smear in the dew, the singer at the mic in the near background continuing her number without acknowledging him, a line of monsters behind him falling into loose synchronized choreography — Nixon, cultist suits, porcelain dolls, a frantic hiker in loud REI gear and a deadpan man in a wool sweater and aviators — neon green fog rolling low, hard blue rim light from behind and warm jack-o'-lantern glow from below, slight slow-motion smear, anamorphic wide, filmic grain, Grok Imagine style",
         geminiOmniPrompt: "12-second video, subtle slow motion. A Thriller-style werewolf in a red-and-black leather varsity jacket and a single white sequined glove moonwalks backwards in a slow arc around a silver microphone stand on a cursed Halloween lawn. His feet glide smoothly across wet grass, shoulders rolling, muzzle mid-transformation, yellow eyes locked on the camera and never blinking. The singer at the mic keeps performing and does not acknowledge him. Behind him a line of monsters — Nixon, hollow cultist suits, porcelain dolls, a frantic hiker in loud REI gear with a lit headlamp, a deadpan man in a wool sweater and aviator sunglasses — drifts into loose synchronized choreography and drops out of it again. Neon fog, blue rim light, warm pumpkin glow. Camera arcs opposite his direction. Photoreal cinematic.",
         promptVariations: ["Close on werewolf's feet gliding backwards across wet dewy grass in a moonwalk, sequined glove hanging in frame edge, neon green fog, jack-o'-lantern glow raking low across the lawn, Grok Imagine", "Over-the-shoulder from behind the singer: Thriller werewolf moonwalking away toward a ragged line of monsters attempting the choreography and failing at different speeds, Grok Imagine"],
-        
       },
       {
         id: "monster-mash-5-hologram-reveal",
@@ -2098,7 +1977,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium still of a woman singing at a silver vintage microphone as her body begins to fail — volumetric hologram scan lines rolling up her torso, RGB channel split fringing her outline, digital static eating one shoulder, her expression unchanged and still performing — while below and behind her in the dark shadows under the stage platform the real woman climbs quietly down the scaffolding, reaching into a hidden duffel bag for a bright white trenchcoat and a large white wide-brimmed circular spy hat, half her face already shadowed under the hat brim, the cursed Halloween lawn party blurred and glowing far behind, projector haze in the air, cold cyan hologram light against warm orange party light, deep blacks under the platform, anamorphic, filmic grain, deliberate digital artifacting on the hologram layer only, Grok Imagine style",
         geminiOmniPrompt: "35-second video. The singer at the silver microphone begins to glitch mid-lyric — hologram scan lines roll up her body, RGB split fringes her edges, her voice stutters and drops out for a beat while the band continues. She keeps performing as if nothing is wrong. The camera tilts and cranes down past the stage lip into the dark under-platform scaffolding, where the real woman climbs down quietly, opens a hidden duffel bag, pulls on a bright white trenchcoat and settles a large white wide-brimmed circular spy hat over her eyes. The party continues glowing behind her, out of focus. Monster Mash bridge lyrics play throughout. Photoreal, with deliberate digital artifacting applied only to the hologram layer.",
         promptVariations: [],
-        
       },
       {
         id: "monster-mash-6-spy-vs",
@@ -2112,8 +1990,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "High-contrast black-and-white noir still in the style of Spy vs. Spy comics, a woman in an oversized black trenchcoat and a large black circular wide-brimmed hat and a woman in a matching white trenchcoat and white circular hat stalking each other around the perimeter of an ongoing Halloween lawn party, both in exaggerated tiptoe stealth poses with knees high and shoulders hunched, ducking behind giant pumpkins and the melting Stay-Puft Marshmallow Man, oversized cartoon spy gadgets in their hands — a spring-loaded boxing glove and a net gun — the party still visible in the deep background as pure silhouette chaos with a moonwalking werewolf and a frantic hiker's headlamp beam cutting the fog, crushed blacks and blown highlights, hard single-source key, heavy fog, all color drained except absolute black coat and absolute white coat, filmic grain, Grok Imagine style",
         geminiOmniPrompt: "45-second black-and-white noir video. A black-coated spy and a white-coated spy creep around the edges of a Halloween lawn party in exaggerated comic stealth poses, knees high, shoulders hunched. They duck behind giant pumpkins, defeated snake coils, and dancing hollow cultist suits, each just missing the other. In the deep background the party continues as silhouettes — a werewolf still moonwalking, a headlamp beam swinging through fog, a man in a ranger hat holding a spear perfectly still. Final beat: both spies step out from opposite sides of the same tree and aim oversized cartoon gadgets at each other, freeze. Hard cut to black. Monster Mash plays faintly and distant throughout. High-contrast Spy vs. Spy comic energy, crushed blacks.",
         promptVariations: ["Black-coated spy crouched behind a giant pumpkin peering across the lawn at the white-coated spy, noir black and white, party chaos in deep-background silhouette, hard key, heavy fog, Grok Imagine", "Final standoff: both spies emerging from opposite sides of one bare tree, oversized cartoon gadgets aimed, perfectly symmetrical composition, black and white, crushed blacks, Grok Imagine"],
-        
-      }
+      },
     ],
   },
   {
@@ -2141,8 +2018,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Golden hour dawn in a quiet suburban cul-de-sac the morning after Halloween, neighbors in bathrobes calmly cleaning up after some kind of strange event, one man power-washing a glowing sigil off his driveway, plastic skeletons still standing, faint purple residue evaporating, deadpan comedic atmosphere, cinematic lighting, Grok Imagine style",
         geminiOmniPrompt: "15-second dawn cul-de-sac wide. Power-washer. Photoreal deadpan.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2170,7 +2046,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal POV behind a mountain lion on a thin leash, the cat looking back over its shoulder with focused yellow eyes and a slightly open mouth as if insisting we follow, purple lupines already rising toward waist height, park trees and golden hour light, motion blur at the edges, leash taut toward camera, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second continuous single take, no cut. POV being pulled by a mountain lion on a leash. The cat glances back once, deadpan and determined, then faces forward again. Lupines start to look too tall. Camera bounces with the pull. Photoreal short-film, ~10 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-b-deeper-pull",
@@ -2184,7 +2059,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal still from behind a mountain lion on a leash walking into a dense field of oversized multi-colored lupines, purple pink and blue blooms towering around the path, golden hour light ahead, motion blur on the edges, lush foliage, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second continuous single take, no cut. Follow the same lion deeper. Flowers get larger and denser. Camera stays low and slightly unstable from the pull. No new characters. Photoreal short-film, ~12 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-c-painted-architecture",
@@ -2198,7 +2072,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic botanical surrealism, immersive tunnel of an almost impossible number of different oversized flowers, photoreal lupines mixed with painted watercolor roses poppies foxgloves and lilies, golden sunlight that feels generative, surrounding living architecture, Weeks on Fire visual style, short-film still",
         geminiOmniPrompt: "12-second continuous single take, no cut. Push through a tunnel of giant mixed flowers, some photoreal and some with painted edges. Light flares. Optional brief glimpse of the lion's hindquarters and leash; do not lose the field. Photoreal-plus-painterly short-film, ~12 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-d-the-field",
@@ -2212,7 +2085,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal still of a dense field of oversized wildflowers thinning into open ocean, the last towering lupines standing in shallow surf, fallen petals and sea foam blending into one substance along the tideline, silver-gold light, horizon opening ahead, POV leash and a mountain lion in silhouette at frame left, short-film still, Grok Imagine style",
         geminiOmniPrompt: "16-second continuous single take, no cut. The flower field thins and the ground becomes shallow water. Petals and foam mix at the tideline. The lion walks into the shallows without hesitating and does not look back. Light shifts from gold to silver. No peril, no swimming. Photoreal short-film, ~16 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-e-the-crossing",
@@ -2226,7 +2098,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal still of a narrow causeway of packed floating flowers crossing open ocean, a mountain lion walking it on a thin leash with the POV walker behind, water perfectly calm on both sides to the horizon, kelp and blossom drifting under the surface, brilliant silver-gold light, dreamlike but grounded, short-film still, Grok Imagine style",
         geminiOmniPrompt: "20-second continuous single take, no cut. Cross open ocean on a path of floating flowers that should not hold weight and does. The lion's pace never changes. Calm water to the horizon on both sides. Light building toward brilliant. No swimming, no peril, no other characters. Photoreal short-film, ~20 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-f-far-shore",
@@ -2240,7 +2111,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal still of a far shore where an even larger and stranger flower field begins right at the waterline, colossal painted-edge blooms and photoreal lupines mixed together and taller than before, wet sand giving way to petals, golden light returning after silver, POV leash and mountain lion walking up out of the shallows, Weeks on Fire visual style, short-film still",
         geminiOmniPrompt: "18-second continuous single take, no cut. Come up out of shallow water into a flower field that is bigger and more painted than the one we left. Light warms back to gold. The lion shakes water off once and keeps walking. Photoreal-plus-painterly short-film, ~18 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-g-they-re",
@@ -2254,7 +2124,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic photoreal Weeks on Fire still: POV leash in the foreground, a mountain lion in profile at frame left, a sun-drenched clearing of giant multi-colored lupines and mixed wildflowers, several other mountain lions lounging peacefully among the blooms and looking at the light, brilliant golden rays, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second continuous single take, no cut. Arrive in the clearing. Other mountain lions are already there, still, watching the flowers and the sunlight. Original lion stops pulling. Light gets brighter. Photoreal short-film, ~12 seconds.",
         promptVariations: [],
-        
       },
       {
         id: "mountain-lion-h-light-and",
@@ -2268,8 +2137,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a vast sun-stunned field of giant mixed wildflowers, mountain lions resting among the blooms, brilliant almost-overwhelming golden light, gratifying and quiet, no leash pull, Weeks on Fire visual style",
         geminiOmniPrompt: "14-second hold that breathes. Wide field. Other cats present. Light flares once, then settles. Camera almost still. The leash goes slack in frame. Photoreal short-film, ~14 seconds.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2297,7 +2165,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Halloween suburban backyard frozen mid laser battle, animated plastic skeleton holding a laminated ON BREAK sign, glowing snakes paused mid-strike, black cat watching, suburban fence, deadpan comedy, cinematic, Grok Imagine style",
         geminiOmniPrompt: "10-second locked-off freeze. Sign does not flutter. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "a7-fourteen",
@@ -2311,8 +2178,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Plastic skeleton doing mandated workplace stretches beside an ON BREAK sign, analog kitchen clock 3:44 in a window, laser snakes powered down, suburban night, deadpan, Grok Imagine style",
         geminiOmniPrompt: "20-second hold. Clock does not advance. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2340,7 +2206,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal kitchen at night, suburban woman in a bathrobe on a cordless phone, clipboard under one arm, color swatches fanned in the other hand, purple glow through horizontal blinds, deadpan, Grok Imagine style",
         geminiOmniPrompt: "12-second kitchen hold. She does not pace fast. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "c47-swatches",
@@ -2354,7 +2219,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Split: close-up of three slightly different blue recycling-bin swatches on a kitchen table, and through the window a man power-washing a glowing sigil off a driveway, purple light, cinematic, Grok Imagine style",
         geminiOmniPrompt: "26-second split. Power-washer. Photoreal deadpan.",
         promptVariations: [],
-        
       },
       {
         id: "c47-steven",
@@ -2368,7 +2232,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Tired 911 operator in a headset under harsh fluorescent office lighting, screen reading CALL #47 — CUL-DE-SAC, he does not look alarmed, photoreal, Grok Imagine style",
         geminiOmniPrompt: "20-second dispatch. No alarm. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "c47-sticker",
@@ -2382,7 +2245,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of a clipboard sticker reading I SURVIVED THE PURPLE LIGHT '25 on a suburban kitchen counter, cordless phone, swatches, no smile, Grok Imagine style",
         geminiOmniPrompt: "24-second sticker macro. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "c47-voicemail",
@@ -2396,7 +2258,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Woman in a bathrobe listening to her own voicemail on speaker, purple blinds, she does not leave a message, cinematic deadpan, Grok Imagine style",
         geminiOmniPrompt: "23-second voicemail loop. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "c47-doorbell",
@@ -2410,8 +2271,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Front door from inside: pizza delivery man in a red uniform with two boxes, suburban woman in a robe still on the cordless phone, she does not hang up, porch light, photoreal, Grok Imagine style",
         geminiOmniPrompt: "25-second doorway. Phone stays up. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2439,7 +2299,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Macro of a car radio tuner needle parked on a dead frequency, dashboard green glow, a tiny station ID card in the visor reading 1998, night windshield rain, photoreal, Grok Imagine style",
         geminiOmniPrompt: "12-second macro. Needle does not hunt. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cs98-lot",
@@ -2453,7 +2312,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Two nearly identical women in black lace walking arm in arm across a wet night parking lot away from a house of mirrors, their faces in the puddles do not quite match the women walking, cinematic, Grok Imagine style",
         geminiOmniPrompt: "28-second lot walk. Puddles disagree. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cs98-rearview",
@@ -2467,7 +2325,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Interior car at night, rearview mirror showing a mouth singing last bar's words while the driver sings this bar, dashboard glow, empty wet lot through the windshield, photoreal, Grok Imagine style",
         geminiOmniPrompt: "25-second interior. Mouth late. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cs98-hands",
@@ -2481,7 +2338,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close on gloved hands at ten and two on a steering wheel, two reflections in the dark windshield slightly out of register, radio glow, nocturnal, Grok Imagine style",
         geminiOmniPrompt: "23-second hands. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cs98-studio",
@@ -2495,7 +2351,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Empty 1990s radio studio at night, cart machines still threaded, ON AIR lamp dark, no people, dust, the feeling the furniture is still broadcasting, cinematic, Grok Imagine style",
         geminiOmniPrompt: "22-second empty studio. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "cs98-drive",
@@ -2509,8 +2364,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Taillights on a wet empty road, two silhouettes in the front seats, the passenger's head turns a beat late, rain, no other cars, photoreal, Grok Imagine style",
         geminiOmniPrompt: "30-second taillights. Head turn late. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2538,8 +2392,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still of a vast empty wet parking lot at 1am, only two cars left, their headlights the only lights, a woman in a rumpled evening dress leaning against a car door, reflections of streetlights in puddles forming a grid of stars, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "20-second slow orbit around two figures who almost dance without touching. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2567,7 +2420,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Windowless broadcast master control at 4 AM, wall of CRT monitors showing lava, snakes, laundromat, mirrors, grease-pencil log sheet, analog clock stuck approaching 3:44, rack hum atmosphere, warm procedural calm, cinematic, Grok Imagine style",
         geminiOmniPrompt: "15-second locked wide of master control. Clock near 3:44. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hou-344",
@@ -2581,8 +2433,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Master control wall of CRT monitors, analog clock reading 3:44, operator hand on fader without moving, one screen showing an unscheduled program, warm institutional dread, cinematic, Grok Imagine style",
         geminiOmniPrompt: "30-second hold: 3:44 motif twice. Second pass adds quiet absurd bleed. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2610,7 +2461,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Macro of a sleek wellness smartwatch face reading HR 78 and a second ring also at 78, café neon reflecting in the glass, nocturnal, cinematic, Grok Imagine style",
         geminiOmniPrompt: "12-second macro. Chime once. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hro-elevated",
@@ -2624,8 +2474,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close two-shot: watch face flashing ELEVATED in soft mint while a deadpan woman in a retro-tech café does not speed up, ping-pong paddle on the table, photoreal, Grok Imagine style",
         geminiOmniPrompt: "20-second hold. No tempo change. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2653,7 +2502,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal 2.39:1 rooftop nightclub entrance at night, red velvet rope on chrome stanchions, stone-faced bouncer in a black suit, city skyline burning orange behind floor-to-ceiling glass, ash drifting, mirrorball light spilling from the door, high contrast, dark glamour, Grok Imagine style",
         geminiOmniPrompt: "12-second locked rooftop entrance. Ash drifts. Bouncer does not look at the fire. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hne-list",
@@ -2667,7 +2515,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Medium shot of a bouncer holding a closed clipboard list, ash on the velvet rope, sirens reflected in the glass, he does not look at the fire, cinematic, Grok Imagine style",
         geminiOmniPrompt: "26-second medium. Clipboard stays closed. Photoreal deadpan.",
         promptVariations: [],
-        
       },
       {
         id: "hne-purse",
@@ -2681,7 +2528,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "A woman in a soot-stained evening gown opening a small purse to produce a pair of emergency stilettos still in tissue paper, rooftop club, burning city bokeh, photoreal, Grok Imagine style",
         geminiOmniPrompt: "22-second purse open. Tissue. No wink. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hne-shoes",
@@ -2695,7 +2541,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Low shot of soot-stained hem and bare feet stepping into black stilettos on a rooftop terrace, velvet rope in the background, ash on the stone, the bouncer's shoes unmoving, cinematic, Grok Imagine style",
         geminiOmniPrompt: "22-second low shot. She steps in. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hne-tuesday",
@@ -2709,7 +2554,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Interior nightclub: handful of beautifully dressed people dancing under a dull mirrorball as if it were Tuesday, torn couture, no panic, burning city visible through the windows, photoreal, Grok Imagine style",
         geminiOmniPrompt: "20-second interior. No panic dancing. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "hne-approved",
@@ -2723,8 +2567,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of a stiletto heel hitting stone one beat after the bouncer's mouth finishes the word Approved, velvet rope, orange skyline, he does not smile, cinematic, Grok Imagine style",
         geminiOmniPrompt: "23-second close. Kick late on the click. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2752,7 +2595,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Extreme close-up of a flickering neon EXIT sign in rain, pink-magenta tube glow, condensation beads, wet metal housing, 80s neon noir, cinematic shallow depth of field, Grok Imagine style",
         geminiOmniPrompt: "12-second macro of a neon EXIT tube flickering in rain. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "nes-alley",
@@ -2766,8 +2608,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Wide tracking shot down a rain-soaked alley lined with mismatched neon EXIT signs, doorways leading only to more alley, twin glamorous reflections of two women in black lace visible only in puddles, never full faces, surreal neon noir, Grok Imagine style",
         geminiOmniPrompt: "30-second tracking shot down the EXIT alley. Photoreal, no full faces of The Two.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2795,8 +2636,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium still of a deadpan pizza delivery man holding a box at chest height, a chaotic backyard laser battle in soft focus behind him, suburban night, he is not looking at the battle, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "25-second hold on the delivery. He does not look back. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2824,8 +2664,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic crane still from a suburban porch at night, a single warm porch bulb holding a small circle on the lawn, roofs and a pale moon with a faint wrong second glow above, after-chaos quiet, pizza box on the step, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "20-second crane up from porch bulb through roofs to a moon with one extra glow. Photoreal, no lasers in the hero frame.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2853,8 +2692,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Extreme close-up of an analog car clock stuck at 3:44, AM/FM radio face glowing green, slight tape-hiss atmosphere, nocturnal, cinematic macro, Grok Imagine style",
         geminiOmniPrompt: "20-second macro of the frozen clock. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2882,7 +2720,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Macro photoreal of a cheap thermal receipt, slightly purple-tinted paper, item line GAVEL CRACKED, date THURSDAY, barcode with the last digit missing, fluorescent lobby light, Grok Imagine style",
         geminiOmniPrompt: "10-second macro. Printer advance. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rdt-heist",
@@ -2896,7 +2733,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Low tracking shot of a standard poodle in a glowing purple bandana trotting under rows of folding chairs with a cracked wooden gavel in her mouth, HOA meeting in progress above, deadpan comedy, filmic, Grok Imagine style",
         geminiOmniPrompt: "22-second low track. Nails on tile. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rdt-scan",
@@ -2910,7 +2746,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of a grocery barcode scanner beeping seven tones over a receipt dated Thursday, poodle nose at the edge of frame, EyeWash Station color bars on a tiny lobby CRT, photoreal, Grok Imagine style",
         geminiOmniPrompt: "20-second scan. Beep incomplete. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rdt-lot",
@@ -2924,7 +2759,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Empty suburban lot at night where a store should be, a violet rift where the parking spaces would go, a receipt taped to a survey stake, no people, cinematic, Grok Imagine style",
         geminiOmniPrompt: "22-second empty lot. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rdt-minutes",
@@ -2938,7 +2772,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "HOA clipboard with a thermal receipt tucked into the minutes, purple bandana caught on the clip, fluorescent clubhouse, deadpan, Grok Imagine style",
         geminiOmniPrompt: "18-second clipboard. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "rdt-return",
@@ -2952,8 +2785,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Poodle sitting politely in a fluorescent aisle that does not exist yet, cracked gavel on the linoleum, receipt in a bow, last barcode beep missing its digit, photoreal, Grok Imagine style",
         geminiOmniPrompt: "23-second sit. No bark. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -2981,8 +2813,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of an industrial wall-mounted emergency eyewash station in a flickering fluorescent hallway, twin chrome nozzles slowly rotating toward camera, institutional green tile, 1980s broadcast ident aesthetic, slight VHS chroma bleed, cinematic, Grok Imagine style",
         geminiOmniPrompt: "10-second ident. Nozzles rotate toward lens. Photoreal analog TV.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3010,8 +2841,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of a car radio face at night, analog needle parked between two stations, green backlight, driver's hand resting on the dial without turning it, shallow focus, filmic, Grok Imagine style",
         geminiOmniPrompt: "15-second macro of a tuner needle that does not move. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3039,8 +2869,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still, middle of the day, sun still burning and a pale full moon hanging in the same blue sky over a quiet suburban street, shadows stretching in two directions at once, one lone figure standing still looking up, no eclipse, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "20-second locked wide of a quiet street under sun and moon in the same blue sky. Shadows in two directions. One witness. Photoreal, no panic.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3068,7 +2897,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Interior of a 24-hour laundromat at 2 AM, two strangers several machines apart watching one off-balance dryer, rain on front glass, corner CRT showing EyeWash Station, attendant mopping, warm liminal, filmic, Grok Imagine style",
         geminiOmniPrompt: "12-second locked laundromat intro. Wrong-time dryer thump. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "tls-dance",
@@ -3082,8 +2910,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Two strangers slow-dancing between rows of humming dryers in a 24-hour laundromat at 2am, harsh fluorescents and warm dryer glow, steam in the air, rain on windows, tender and plain, filmic, Grok Imagine style",
         geminiOmniPrompt: "45-second slow dance between dryers. Attendant mops around them. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3111,7 +2938,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal dark laboratory interior, magenta and blue LED readouts, digital waveforms, neon diagnostics, pneumatic bubbling chambers, no people yet, cinematic, Grok Imagine style",
         geminiOmniPrompt: "12-second lab interior. Dials spin. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mrd-window",
@@ -3125,7 +2951,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Modern laboratory window opening onto a bright exterior desk, chrome cryogenic vortex cannons and frosted brass valves reaching into harsh afternoon sunlight, dry-ice fog over the sill, over-engineered refreshment, photoreal, Grok Imagine style",
         geminiOmniPrompt: "16-second window. Fog cascades. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mrd-laminar",
@@ -3139,7 +2964,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Macro of laminar-flow water droplets from a carbon-fiber robotic arm into a glass of dense hovering ice, noon sun, no splash, scientific absurdity played straight, Grok Imagine style",
         geminiOmniPrompt: "16-second macro droplets. No splash. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mrd-gulp",
@@ -3153,7 +2977,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close-up of a man drinking ice water in harsh sunlight, swallow on the beat, ice cube visibly hitting the glass one beat later, slow motion, photoreal, Grok Imagine style",
         geminiOmniPrompt: "8-second slow-motion gulp. Ice late. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mrd-repeat",
@@ -3167,7 +2990,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Same exterior desk, same gulp-before-ice timing, apparatus still running, he does not react, cinematic, Grok Imagine style",
         geminiOmniPrompt: "16-second repeat. Uncorrected. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mrd-print",
@@ -3181,8 +3003,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Hovering ice cube over a glass rim on a sunlit lab desk, tiny unread legal type reflected in the glass, dark lab behind the window, photoreal, Grok Imagine style",
         geminiOmniPrompt: "20-second hover. Cube does not fall yet. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3210,7 +3031,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal abandoned grand ballroom at night, a hole in the water-stained fresco ceiling showing stars, plaster dust hanging in chandelier light, buckled parquet, two wine glasses and scattered berries on a side table, dark glamour, Grok Imagine style",
         geminiOmniPrompt: "12-second locked wide. Dust only. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "roof-chandelier",
@@ -3224,7 +3044,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Wide shot of a chandelier hanging three feet too low in a ruined ballroom, plaster on the floor like a seating chart, a woman in black lace not brushing it off, moonlight through the roof, cinematic, Grok Imagine style",
         geminiOmniPrompt: "28-second wide. Extra bar: nobody moves. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "roof-draft",
@@ -3238,7 +3057,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Medium shot of a glamorous bored woman in a torn black lace dress standing under a hole in a ballroom ceiling, night air moving her hair almost not at all, she looks bored not frightened, photoreal, Grok Imagine style",
         geminiOmniPrompt: "22-second medium. Hair almost still. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "roof-glasses",
@@ -3252,7 +3070,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Close table: two wine glasses, crushed berries, plaster dust on white linen, stars reflected in the wine, abandoned ballroom background, cinematic, Grok Imagine style",
         geminiOmniPrompt: "26-second table lockoff. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "roof-job",
@@ -3266,7 +3083,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "The low chandelier still lit in a ruined ballroom, chain taut, plaster drifting, no one looking up, high contrast, Grok Imagine style",
         geminiOmniPrompt: "20-second chandelier hold. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "roof-late",
@@ -3280,8 +3096,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Locked wide of the hole in the ceiling, dust motes only, no one moving, then a woman in black lace steps half a beat late into frame, natural ventilation, photoreal, Grok Imagine style",
         geminiOmniPrompt: "27-second lockoff. She enters late. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3309,7 +3124,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Full-frame 1980s analog TV card reading THE FOLLOWING PROGRAM CONTAINS DIALOGUE, EyeWash Station color bars at the edge, institutional blue, photoreal, Grok Imagine style",
         geminiOmniPrompt: "10-second locked card. Image never changes. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "tpcd-stamp",
@@ -3323,8 +3137,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Extreme close-up of a rubber stamp PROBABLY FINE hitting a script in a tiny Standards & Practices booth, plastic skeleton steward, CRT glow, cinematic, Grok Imagine style",
         geminiOmniPrompt: "17-second stamp, then dark booth mic. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3352,7 +3165,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a pitch-black frame torn open by a single magenta neon flare, a silhouette of enormous teased glam-metal hair backlit in the gap, sparks of guitar feedback as light, late-80s Japanese TV commercial cold open, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "6-second clip: hard black, then a single snap-cut flash to the neon hair silhouette on the scream, then hold. No mouths. Feedback and cymbal wash. Photoreal joke commercial.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-b-kenji-hero",
@@ -3366,7 +3178,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a Japanese glam-metal spokesman with enormous teased hair and leather fringe, arms wide in a neon temple street in Glamora, magenta and cyan signage, late-80s commercial hero pitch, photoreal music-video still, 35mm, Grok Imagine style",
         geminiOmniPrompt: "15-second Ken Burns slow push on Kenji mid-hype in neon Glamora. One short on-camera line at the top, then attitude only. Photoreal joke commercial, no sustained lipsync.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-c-verse-1",
@@ -3380,7 +3191,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of two glamorous women in a fluorescent laundry room, one deadpan exhausted cabaret energy, one brighter chaotic grin, huge metal hair, a vending machine glowing behind them, institutional tile, late-night joke TV commercial, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "21-second slow Ken Burns drift across the laundry-room still. Dual frontwomen hold attitude poses, no clear mouth shapes. Fluorescent hum under glam metal. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-d-pre-chorus",
@@ -3394,7 +3204,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a Japanese open-plan office under harsh fluorescent lights, two salarymen in rumpled suits shouting at a spreadsheet, a heavy-metal shampoo bottle standing on the conference table like a trophy, panic comedy, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "11-second sequence: three hard snap cuts on the shouting samples, then a Ken Burns push into the bottle warning label on \"Who approved this formula?!\". No lipsync. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-e-chorus-1",
@@ -3408,7 +3217,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Hero product still of a chrome-and-neon heavy-metal shampoo bottle labeled Ultra Screech Formula, lightning and hair-metal decals, standing on black gloss, magenta rim light, late-night Japanese TV commercial shine, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "22-second hold with a very slow Ken Burns push on the bottle, three snap zooms landing exactly on the gang-chant hits. No mouths except an optional cutaway to the chant. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-f-verse-2",
@@ -3422,7 +3230,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a chaotic glam-metal woman pouring shampoo into the glass tube of a neon sign on a Glamora rooftop, the letters flaring magenta as the liquid hits, night city behind, late-night joke TV commercial, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "22-second A/B trade: 11 seconds drifting on the neon-pour still, hard cut on the line break, 11 seconds slow push on the deadpan citation still. No lipsync. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-g-pre-chorus",
@@ -3436,7 +3243,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Macro still of a ring-bound college student handbook open to Section 12 AUTHORIZED VOLUME, dense regulation text, fluorescent library light, a scorch mark on the facing page, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "11-second push from the handbook page across to the scorch mark, one snap cut to the campus noise meter pinned in the red on the last dive bomb. No mouths. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-h-chorus-2",
@@ -3450,7 +3256,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still of a neon glam-metal club stage, two frontwomen in huge hair and leather, a hype man with leather fringe between them, magenta fog, dive-bomb guitar silhouette, joke TV commercial saturation, photoreal music-video still, 35mm, Grok Imagine style",
         geminiOmniPrompt: "15-second Ken Burns drift across the club still with snap zooms on gang-chant hits only. Attitude and lights, not lipsync. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-i-bridge-office",
@@ -3464,7 +3269,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a fluorescent Japanese office mid-collapse, sales chart on the wall bending downward, papers suspended in the air, a single heavy-metal shampoo bottle glowing magenta on the conference table while two salarymen argue past it, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "26-second block: 15 seconds of hard snap cuts between arguing salarymen and the untouched bottle, then 11 seconds of accelerating cuts through neon and pyro as the solo climbs. No lipsync anywhere. Photoreal.",
         promptVariations: [],
-        
       },
       {
         id: "mv-ultra-j-final-chorus",
@@ -3478,8 +3282,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic still of a glowing GLAM-SHAM-POO logo end card over a hallway vending machine stocked with Ultra Screech bottles, fluorescent institutional corridor, late-night joke TV commercial, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "22-second hold: logo card on the final chorus, slow pull back to the vending machine on the feedback outro, small print legible at the end. One short on-camera Kenji line. Photoreal stills pipeline.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3507,7 +3310,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide film still, late-afternoon, a dusty sedan idling at a fork on a California fire road, gold hillside above, a dark seam of mixed conifer down and west. A faded county arrow: GRADED / UNMAINTAINED. A woman in black lace at the open driver's door, one trail boot and one stiletto. Two figures — one in black lace, one in a light green halter with a 40-liter pack — at the tree line about to enter deep shade. Still air, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "6-second video at a fire-road fork. A sedan turns up the graded road. Two women step into a dark tree line. Idle fades. No music, no birds.",
         promptVariations: [],
-        
       },
       {
         id: "nohs-e",
@@ -3521,7 +3323,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium two-shot at walking pace, deep late-afternoon forest shade on an unmaintained needle-covered dirt road. A sun-bleached blonde in a light green halter with a taped amethyst pendant and a large trail pack, and a woman in black lace with one trail boot and one stiletto, talking in short turns, not looking at each other. Absolutely still woods, no birds, no wind, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "8-second tracking two-shot of two women walking and talking in short, clean turns on an unmaintained forest road. No overlap, no music, no birds. Photoreal cinematic, deadpan.",
         promptVariations: [],
-        
       },
       {
         id: "nohs-f",
@@ -3535,7 +3336,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic locked-off wide film still, two women stopped dead on an unmaintained forest road, not looking at each other, closed canopy, no particles, no wind, enormous quiet. Black lace and a green halter, one pack, one boot and one stiletto. The road ahead disappearing into trees. Photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "8-second locked-off wide video on an unmaintained forest road. Two women stand still. A jay does not call. A branch does not move. No music, no dialogue for the full eight seconds. Photoreal cinematic.",
         promptVariations: [],
-        
       },
       {
         id: "nohs-h",
@@ -3549,8 +3349,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide film still, golden hour, a Forest Service overlook bolted to a cliff — picnic table on rock, no useful guardrail, four hundred feet of copper air and a distant valley highway. Dusty sedan parked short of the edge. Three women: two in black lace (one boot, one stiletto), one blonde in a green halter with a pack. Nobody looking at a tower. Photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "6-second wide video at a cliff overlook at golden hour. Three women get out of a dusty sedan. Wind. A bolted picnic table on rock. The drop. No tower in frame. No music. Photoreal cinematic.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3578,8 +3377,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide shot of a neon-lit retro-tech café interior, sleek chrome ping-pong robot with a glowing camera-lens eye facing three women with mismatched improvised paddles, glowing ping-pong ball leaving a neon trail in mid-air, 1980s arcade aesthetic mixed with modern chrome, a small poodle running across the table, a wall screen showing a corporate boardroom watching live, high contrast neon lighting, absurdist comedy atmosphere, Grok Imagine style",
         geminiOmniPrompt: "12-second rally. Neon trail. Poodle crosses. Photoreal comedy.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3607,8 +3405,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Full-frame 1980s television TECHNICAL DIFFICULTIES PLEASE STAND BY card, institutional blue background, chunky broadcast typeface, visible scan lines and VHS chroma bleed, static locked shot, nostalgic analog television aesthetic, Grok Imagine style",
         geminiOmniPrompt: "60-second locked card. Image never changes. Optional imperceptible zoom. Photoreal analog TV.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3636,7 +3433,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked space-lounge table: jumbo Earth marshmallow bag, pale snake at the glass, Rubella and Lillith in black lace seated, Riley Elaine Smith blonde in a sage backless crop and amethyst, no wings, no glowing eyes. She stands and speaks. Camera locked. 16 seconds. She does not grow wings. No eye beams, no host gown, no marshmallow lasers, no looking at camera, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-b-nineteen-in",
@@ -3650,7 +3446,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked orbital still of a violet-tan canyon planet, two thin orbital lanes, tiny white cargo cubes as traffic, one small pale moon, no ships in the foreground, no HUD, no text. Slow drift along the lanes. Cubes crawl. 12 seconds. No people, no titles, no cockpit glass, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-c-two-lines",
@@ -3664,7 +3459,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from a pale annex yard or classroom: two painted rings on the floor, one white cargo cube hovering correctly between them, Riley Elaine Smith blonde sage crop under a short slate cadet coat, small hollow-chevron training wings or none, no second Riley, no hologram text. Cube hovers. She writes. 14 seconds. No HUD, no duck-bill heads, no feathers, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-d-second-year",
@@ -3678,7 +3472,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked night-dorm still: Riley Elaine Smith at a desk under one moon, sage crop, slate cadet coat, hovering practice cube on a berth diagram, another cadet asleep in the bunk, small training wings on a rack. Quiet hold. 16 seconds. No sword, no full wings, no HUD, no second Riley standing, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-e-yard-over",
@@ -3692,7 +3485,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked empty terrace still: two faded rings on pale concrete, one white cube sitting correctly, violet canyon city in the drop, two pale lines already drawn on the dusk sky, no people. Dust moves. Sky holds. 12 seconds. No HUD, no second Riley, no titles, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-f-further-exercises",
@@ -3706,7 +3498,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the annex gym or yard: Riley Elaine Smith and a class holding white cargo cubes at chest height on painted lines, slate coats, hollow-chevron training wings small or none, porcelain wedge-head instructor pointing, no duck-bill classmates, no subtitle text on the frame. Arms hold. Pointer taps. 12 seconds. No beams, no HUD, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-g-appendix-c",
@@ -3720,7 +3511,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked circular reading room: floor-to-ceiling identical volumes marked C, white table, Form 7-09B, a book titled Appendix C of Appendix C, Riley Elaine Smith seated, hollow-chevron wings folded like a chair-back, slate coat, sage crop. She turns one page. Room holds. 14 seconds. No HUD, no lace guests, no new labels, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-h-bestowal",
@@ -3734,7 +3524,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked bestowal hall: painted aisle of two lines, Riley Elaine Smith in slate coat over sage crop, full white hollow-chevron architectural wings open, soft pink scanner lamps, porcelain wedge-head instructor in a long slate coat placing a short odd white sword with a honeycomb guard into her two hands. She receives. She does not swing. Cadets in a row behind. 14 seconds. No feathers, no katana, no beam sword, no blood, no HUD, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-i-two-moons",
@@ -3748,7 +3537,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Start from the locked two-moon sky: bone moon over copper moon, violet aurora like filing lines, distant bazaar glow far below, dark ridge, no people, no HUD, no text. Aurora drifts. 6 seconds. She does not arrive. Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "riley-space-j-right-away",
@@ -3762,8 +3550,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cut back to the locked space-lounge table. Riley Elaine Smith blonde sage crop, amethyst, no wings, no lamps. Rubella and Lillith in black lace. Jumbo bag. Pale snake still on the marshmallows. Rubella speaks. 8 seconds. No wings growing, no sword, no annex in the windows, no looking at camera, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -3791,7 +3578,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella a glamorous exhausted woman with long dark hair and blood-red lipstick in a modern black lace evening dress, no corset, no century costume, standing behind a honey-oak folding table used as a stage in a basement laundry room, mouths on mid-clause as if filing a complaint, unused brass-stem microphone on a short stand sitting on the table unused in spirit, World's Okayest Tenant mug half empty set down like evidence, empty first row of beige steel folding chairs facing her, resignation face, three supporting figures: a contraband unlabeled detergent bottle in reach but not the hero of this frame, wet enamel only in the floor grout lines, a flickering fluorescent troffer with one tube pinker than the other, institutional cream plaster, wet grey tile, fluorescent hallway bleed through an open door, locked camera at seated eye height, 35mm anamorphic, T2.8, fine grain, dry honey-oak against brass against black lace, no Glam magenta, no night-lot cabinet, no Daisy field, no space lounge, no cowboy-chimp, no bird flock, no Ultra Screech, Grok Imagine style",
         geminiOmniPrompt: "20-second silent picture on a Voice bed. Rubella at the honey-oak folding table used as a stage, unused brass-stem microphone on a short stand, World's Okayest Tenant mug, flickering fluorescent troffer, empty beige steel folding chairs. Mouths on; do not wait on lipsync. Mug is set down once like evidence. Chairs do not clap. Photoreal, camera locked, 2.39:1. Grok Imagine building-cast, no real actor names.",
         promptVariations: ["Rest-pose twin: same lock, mouths closed, mug already down, Grok Imagine", "Closer: mug and unused brass-stem microphone on a short stand, her hands, chairs soft in the first row, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-b-detergent-relic",
@@ -3805,7 +3591,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella a glamorous exhausted woman with long dark hair and blood-red lipstick in a modern black lace evening dress, no century costume, mid-set behind a honey-oak folding table used as a stage, mouths on, unused brass-stem microphone on a short stand still on the table, World's Okayest Tenant mug at her elbow, a contraband unlabeled detergent bottle in her off-hand held like a sacred relic for this one beat only, no readable brand text, beige steel folding chairs in soft focus behind her, three supporting figures: wet enamel only in the floor grout lines, a flickering fluorescent troffer, a washer row in deep falloff, institutional cream plaster, wet grey tile, locked camera slightly closer than the podium lock, 50mm anamorphic, T2.8, fine grain, matte plastic bottle against black lace against honey-oak, no Glam magenta, no night-lot cabinet, no Daisy field, no space lounge, no cowboy-chimp, no bird flock, no Ultra Screech, Grok Imagine style",
         geminiOmniPrompt: "18-second silent picture on a Voice bed. Bottle rises into the off-hand for one beat and stays unlabeled. Unused brass-stem microphone on a short stand does not get closer. Chairs creak once in unison on the ding, then stop. Photoreal, camera almost locked, 2.39:1. Grok Imagine building-cast, no real actor names.",
         promptVariations: ["Bottle down again by the end of the beat, never the hero twice, Grok Imagine", "Macro of the unlabeled bottle against lace, mug bokeh, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-c-heckle-wide",
@@ -3819,7 +3604,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, wide laundry-room open mic, Rubella a glamorous exhausted woman in a modern black lace evening dress behind a honey-oak folding table used as a stage in the foreground, she does not turn, mouths on toward the unused brass-stem microphone on a short stand, World's Okayest Tenant mug on the table, rows of empty beige steel folding chairs facing her, Lillith one chair in the back row in black lace, mouth open one frame, off-mic, not a two-shot concert photo, a clipboard silhouette in the last chair and no gavel, three supporting figures: wet enamel only in the floor grout lines, a flickering fluorescent troffer, a dryer row in the dark, institutional cream plaster, wet grey tile, locked camera at standing height behind the last row, 28mm anamorphic, T4, fine grain, dry honey-oak against brass against black lace, no Glam magenta, no night-lot cabinet, no Daisy field, no space lounge, no cowboy-chimp, no bird flock, no Ultra Screech, Grok Imagine style",
         geminiOmniPrompt: "14-second silent picture on a Voice bed. Hold Rubella not turning. Lillith's mouth opens for one frame in the back row and closes. Clipboard silhouette does not move. Optional: Qing in a side chair with noodles, one wrong-time laugh, no line, not looking at the mic. Photoreal, camera locked, 2.39:1. Grok Imagine building-cast, no real actor names.",
         promptVariations: ["Qing optional: noodles, one wrong-time laugh, no line, side chair only, Grok Imagine", "Without Lillith's face, only the open mouth as a small shape in the back row, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-d-land",
@@ -3833,7 +3617,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella a glamorous exhausted woman with long dark hair and blood-red lipstick in a modern black lace evening dress behind a honey-oak folding table used as a stage, mouths on at the end of the complaint, two identical carbon forms already in her hand, World's Okayest Tenant mug empty, unused brass-stem microphone on a short stand still unused in spirit even if it is on, beige steel folding chairs that have crept one inch back from the first row, three supporting figures: wet enamel only in the floor grout lines, a flickering fluorescent troffer, a clipboard silhouette in the last chair, institutional cream plaster, wet grey tile, fluorescent hallway bleed, locked camera at seated eye height matching the podium lock, 35mm anamorphic, T2.8, fine grain, dry paper against honey-oak against black lace, no Glam magenta, no night-lot cabinet, no Daisy field, no space lounge, no cowboy-chimp, no bird flock, no Ultra Screech, Grok Imagine style",
         geminiOmniPrompt: "20-second silent picture on a Voice bed. Forms are already two identical sheets. Mug is empty. Chairs creep one inch back once and stop. Fluorescent tick on the out. Photoreal, camera locked to the podium angle, 2.39:1. Grok Imagine building-cast, no real actor names. Shoot this with still A first.",
         promptVariations: ["Forms catching the fluorescent, no readable text, Grok Imagine", "Same lock as A, only the empty mug and the duplicate sheets have changed, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-e-tag-elevator",
@@ -3847,7 +3630,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, interrupt close of Rubella in a modern black lace evening dress behind a honey-oak folding table used as a stage, mouths on, unused brass-stem microphone on a short stand, World's Okayest Tenant mug, empty beige steel folding chairs, flickering fluorescent troffer, wet enamel only in the floor grout lines, locked camera, 50mm anamorphic, T2.8, Grok Imagine style",
         geminiOmniPrompt: "7-second interrupt. Same mic, same room. Echo the elevator line. One chair creak. Cut. Photoreal, 2.39:1. We do not cut inside the freight car.",
         promptVariations: ["Tighter on the unused brass-stem microphone on a short stand while she talks past it, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-f-tag-detergent",
@@ -3861,7 +3643,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella in a modern black lace evening dress behind a honey-oak folding table used as a stage, unlabeled detergent bottle in the off-hand, unused brass-stem microphone on a short stand, World's Okayest Tenant mug, flickering fluorescent troffer, wet enamel only in the floor grout lines, empty beige steel folding chairs, mouths on, locked camera, 50mm anamorphic, T2.8, Grok Imagine style",
         geminiOmniPrompt: "6-second interrupt. Bottle up, line, bottle not the hero after the cut. Photoreal, 2.39:1.",
         promptVariations: ["Bottle already down, only the unlabeled shoulder in frame, Grok Imagine"],
-        
       },
       {
         id: "rubella-stand-g-tag-emotional",
@@ -3875,8 +3656,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella in a modern black lace evening dress behind a honey-oak folding table used as a stage, two identical carbon forms in her hand, unused brass-stem microphone on a short stand, empty World's Okayest Tenant mug, beige steel folding chairs crept one inch back, flickering fluorescent troffer, wet enamel only in the floor grout lines, mouths on, locked camera, 35mm anamorphic, T2.8, Grok Imagine style",
         geminiOmniPrompt: "8-second interrupt. Duplicate sheets already in hand. Fluorescent tick. Cut. Photoreal, 2.39:1.",
         promptVariations: ["Two sheets fanned so the duplication reads without readable text, Grok Imagine"],
-        
-      }
+      },
     ],
   },
   {
@@ -3904,7 +3684,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal product-lab still, 4:5, an oval honey-oak service counter island in a small municipal mail room, three pale porcelain human hands mounted on short brass wrist-posts spaced evenly around the outer edge of the island, fingers relaxed and open, no arms, no bodies, no faces anywhere in frame, a single kraft paper grocery bag with one crisp square fold across its top standing upright in the first hand at exactly chest height, the island's outer edge worn to a pale rubbed line at chest height around the outer edge from decades of the same pass, bag closed and full and completely unlabelled, three supporting figures in the room: a wall of small unlit brass pigeonholes behind the island, a rubber date-stamp lying face down on the oak, and a short honeycomb-pattern floor vent guard at the wainscot, institutional cream plaster walls, grey terrazzo floor, one caged bulb hanging directly over the island pooling warm light on the oak and cool spill on the terrazzo, everything beyond the island in soft falloff, locked camera at counter height, 50mm, T2.8, fine grain, matte porcelain against satin brass against dry kraft paper, no chrome, no signage, no legible text, Grok Imagine style",
         geminiOmniPrompt: "5-second seamless loop. Three porcelain hands pass one kraft bag once around the oval oak island and return it to the first hand in the exact opening position, fold facing camera. Height never changes. Nothing else in the room moves. Camera locked, no push, no drift. The bag does not open, does not soften, does not gain a crease per lap. Ends on the opening frame.",
         promptVariations: ["Board has five stills: A rest pose (in/out point), B first pass, C far side, D closing the circuit, E macro of the rub line.", "Loop check: in-point equals out-point on pose, fold angle and bulb intensity. If lap two looks worn against lap one, regenerate — do not stitch."],
-        
       },
       {
         id: "spf-we-will-stand",
@@ -3918,7 +3697,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a suburban HOA clubhouse meeting room, one beige steel folding chair with a grey polyester seat standing open and empty dead centre, no hands anywhere in frame, no faces, the room composed and patient as though it expects to be sat in, three supporting figures: a stacked chair trolley against the far wall loaded eight deep, a folding banquet table with a cracked wooden gavel on it, a corkboard of overlapping unreadable notices, clubhouse linoleum with one cracked gavel mark in it running across the foreground, cream cinderblock walls, a fluorescent troffer with one tube pinker than the other directly overhead, flat institutional light, two overlapping soft shadows under the chair, generous empty floor to the left with nothing in it, locked camera at seated eye height, 35mm, T2.8, mild grain, dry beige steel against grey polyester against yellowed linoleum, no signage legible, Grok Imagine style",
         geminiOmniPrompt: "7-second locked interior, no camera move. Hand sets the chair down, opens it, withdraws. Hold two seconds. The seat hinges once more than it should and a second identical chair separates out and stands itself beside the first as clean hinge mechanics: no stretch, no melt, no glow, no particles. Both settle and hold one second. Nobody sits.",
         promptVariations: ["Board has five stills: A the offer, B set down and opened, C the dead hold, D the split, E two chairs.", "Four-slot clip_stacker, straight cuts only. A wipe would sell the joke harder than the joke — the punch is that nobody reacted."],
-        
       },
       {
         id: "spf-the-approval-desk",
@@ -3932,8 +3710,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 16:9, an articulated brass desk lamp with two small pale pink lenses set in the shade rim standing folded and at rest on a honey-oak desk with a rectangular grey marble insert, a second brass arm ending in a wooden-handled rubber stamp hanging folded at the lamp's side like a tool at rest, the marble insert bare and clean, no face, no mouth, no eyes beyond the two pink lenses, the lamp posed as equipment and not as a character, three supporting figures on the desk: a wire in-tray holding nothing, a brass paper spike, and a porcelain cup of pencils, a short honeycomb-pattern vent guard in the wainscot behind, dark green painted office walls, a closed panelled door far left, warm practical light coming only from the lamp's own bulb pooling on the marble and falling off fast into the oak grain, the two pink lenses glowing faintly at half intensity, locked camera at desk height, 40mm, T2.8, fine grain, satin brass against cold grey marble against warm honey-oak against matte porcelain, no chrome, no legible text on any paper, Grok Imagine style",
         geminiOmniPrompt: "Locked or slow-orbit photoreal object shot. The lamp is the only thing that moves — one arm, one job. Stamp strikes are mechanical: lift, drive, contact, lift, no wobble, no recoil bounce. The pink lenses change intensity only, never shape, never blink like eyes. Tray, spike, pencil cup and vent guard are furniture. No glow, no particles, no sparks, no HUD. The orbit runs at a constant slow rate and never stops mid-move.",
         promptVariations: ["Board has six stills: A rest, B the strike, C the bare marble, D desk edge and drawer pull, E the self-stamp, F the unstamped form.", "Eight-slot clip_stacker. The one real trick is reusing the rest take as the wait — same framing reads as patience, not a repeat.", "The 3–7s approval beat is liftable later as its own 4s loop tile. Cut it fresh, do not carve it out of the finished 30."],
-        
-      }
+      },
     ],
   },
   {
@@ -3961,7 +3738,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a clubhouse refreshment counter, a chrome napkin dispenser with one gloved hand drawing a napkin from it, the napkin already a continuous unbroken sheet a metre long and still coming, gathering in soft folds at chest height, framing cuts off above the elbow so there are no faces, three supporting figures: a coffee urn with a paper cup under it, a stack of laminated cards, a corkboard of unreadable notices, clubhouse linoleum, cream cinderblock, a fluorescent troffer with one tube pinker than the other, flat institutional light, locked camera, 35mm, T2.8, mild grain, dry chrome against soft white paper against yellowed linoleum, Grok Imagine style",
         geminiOmniPrompt: "6-second locked shot. The hand pulls steadily and the napkin never separates. Nothing else moves. No reaction, no face, no cut. Ends mid-pull.",
         promptVariations: ["Alt: the sheet reaches the floor and keeps going, still uncreased."],
-        
       },
       {
         id: "spj-break-card",
@@ -3975,7 +3751,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 16:9, a break-room vending machine front in a windowless staff room, a gloved hand at the keypad, a laminated card lying in the delivery tray reading PROBABLY FINE in institutional Helvetica, a second identical card already in the tray beside it, framing cuts off above the elbow so there are no faces, three supporting figures: a folding chair pushed against the wall, a wall clock with no hands, a stained coffee maker, grey vinyl floor, cream cinderblock, one flickering fluorescent, flat cold light with the machine's own interior glow raking across the tray, locked camera, 40mm, T2.8, mild grain, scuffed plastic against laminate against vinyl, Grok Imagine style",
         geminiOmniPrompt: "6-second locked shot. Press, thunk, card. Press, thunk, identical card. Press, thunk — the clipboard arrives in the tray. Hand does not react. No faces, no cut, camera locked.",
         promptVariations: ["Alt: the third delivery is the glove itself, still holding the pen."],
-        
       },
       {
         id: "spj-chest-height-ordinance",
@@ -3989,7 +3764,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a lobby vestibule with a small institutional notice board on a hinged steel bracket mounted high on cream plaster, the board tilted down and part-way through descending its bracket, a pale rubbed line on the wall at chest height where boards have stopped before, nobody in frame, no faces, no hands, three supporting figures: a brass mail slot, a rubber floor mat with a worn tread path, a radiator under the window, grey terrazzo floor, one caged bulb, warm pooled light on the plaster and cool spill on the terrazzo, locked camera at standing eye height, 35mm, T2.8, fine grain, dry steel against cream plaster against terrazzo, no legible text on the notice, Grok Imagine style",
         geminiOmniPrompt: "5-second locked shot. The board descends its bracket in one smooth mechanical move, stops dead at chest height, and holds. One squeak. Nothing else in the vestibule moves. No people enter.",
         promptVariations: ["Alt: a second board higher on the wall begins the same descent as we cut."],
-        
       },
       {
         id: "spj-peggy-babcock-second",
@@ -4003,7 +3777,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a suburban HOA clubhouse meeting room seen wide from the front, forty beige steel folding chairs with grey polyester seats in neat empty rows facing camera, a single gloved hand raised above the back row with no head or shoulders visible, no faces anywhere in frame, three supporting figures: a folding banquet table with a cracked wooden gavel, a lectern with a gooseneck mic, a corkboard of overlapping unreadable notices, clubhouse linoleum with one cracked gavel mark in it, cream cinderblock walls, fluorescent troffers with one tube pinker than the others, flat institutional light, locked camera at seated eye height, 28mm, T4, mild grain, dry beige steel against grey polyester against yellowed linoleum, Grok Imagine style",
         geminiOmniPrompt: "8-second locked wide. Hold three seconds. The raised hand does not move. Then every chair in the room slides one inch backwards together, in one move, and stops. Nothing else. No people, no faces, camera locked.",
         promptVariations: ["Alt: the chairs go forward one inch instead. Test both; the funnier direction is whichever reads as agreement."],
-        
       },
       {
         id: "spj-storage-cage-one",
@@ -4017,7 +3790,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 4:5, a basement storage cage of heavy galvanised mesh packed solid floor to ceiling with beige steel folding chairs pressed flat against the wire, a small brass-eyeleted paper inventory tag wired to the cage door hanging in shadow, no people, no faces, three supporting figures: a concrete floor with an old painted line, a coiled hose on a wall hook, a fuse panel with the door open, unpainted block walls, a single caged bulb on the corridor side throwing hard mesh shadows across the chairs and leaving the tag unlit, locked camera, 40mm, T2.8, fine grain, galvanised wire against beige steel against raw concrete, Grok Imagine style",
         geminiOmniPrompt: "5-second locked shot. The stack settles a half inch and the cage rattles once. On the last beat the bulb swings a few degrees and the light finds the tag. Nothing else moves. No people.",
         promptVariations: ["Alt: hold the tag unlit for the whole clip and let the rattle be the only event."],
-        
       },
       {
         id: "spj-inspection-tag",
@@ -4031,7 +3803,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a building corridor with a recessed red fire extinguisher cabinet, its glass door open, a steel inspection hook beside the extinguisher carrying a thick fan of forty yellowed paper inspection tags, one gloved hand adding one more, framing cuts off above the elbow so there are no faces, the extinguisher still seated on its wall bracket, three supporting figures: a wall-mounted alarm pull with a painted-over lever, a rubber corridor mat, a door closer on the fire door beyond, cream painted cinderblock, grey vinyl tile, a fluorescent troffer with one tube pinker than the other, flat institutional light with a warm red bounce off the cabinet, locked camera, 35mm, T2.8, mild grain, chipped red enamel against galvanised steel against yellowed paper, no legible text on the tags, Grok Imagine style",
         geminiOmniPrompt: "7-second locked shot. The hand hangs the tag and withdraws. Hold. The extinguisher slips its bracket, drops six inches, catches on the tag hook and swings once before settling. The tags do not tear. Nothing discharges. No alarm, no strobe, no faces.",
         promptVariations: ["Alt: the hook bends a few degrees under the weight and holds anyway."],
-        
       },
       {
         id: "spj-stall-forty-seven",
@@ -4045,7 +3816,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 2.39:1, a concrete parking garage seen along a row of stencilled numbered bays, one bay number freshly repainted in crisp white and visibly one digit wider than its neighbours, the painted bay line beside it already shifted a foot down the row and the next lines shifting in sequence into the distance, wet paint sheen on the fresh line, no cars in the near bays, no people, no faces, three supporting figures: a painted structural column with a bay letter on it, a floor drain, a low concrete kerb, sodium-tinged fluorescent strips overhead, oil-stained concrete, flat garage light with long specular streaks on the wet paint, locked camera low at bumper height, 28mm, T4, mild grain, wet white paint against grey concrete, Grok Imagine style",
         geminiOmniPrompt: "6-second locked shot. The ripple travels away from camera down the row, one line at a time, and stops. The last bay in the row is a foot wide. Nothing else moves, no cars, no people. Show the ripple once — never cut back to it.",
         promptVariations: ["Alt: end on the foot-wide bay with a fresh number stencilled in it, correctly."],
-        
       },
       {
         id: "spj-chute-return",
@@ -4059,7 +3829,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 4:5, a building trash chute room, a heavy steel hopper door set in a painted block wall standing part open, a single sheet of pale form paper folded into a crisp square sitting squarely on the hopper lip, one gloved hand withdrawing at frame edge, no faces, three supporting figures: a wheeled bin with the lid down, a coiled hose bib, a painted stencil on the wall worn illegible, grey sealed concrete floor, cream block walls, one caged bulb directly above the hopper, hard top light on the steel with the chute mouth in total black behind, locked camera, 40mm, T2.8, fine grain, scratched steel against clean paper against sealed concrete, no legible text on the form, Grok Imagine style",
         geminiOmniPrompt: "5-second locked shot. The hand drops the form into the chute and the door swings shut. The door swings back open and the form is on the lip, refolded tighter. The hand drops it again. It comes back tighter still. Never open the chute onto a shaft — the mouth stays black. No rat, no smell gag, no faces.",
         promptVariations: ["Alt: the third return is the same form folded to the size of a stamp."],
-        
       },
       {
         id: "spj-lint-inventory",
@@ -4073,7 +3842,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 16:9, a building laundry room, a commercial dryer with its lint screen half withdrawn carrying one clean rectangular sheet of grey felted lint with perfectly square corners, one gloved hand on the screen tab, no faces, a squared and counted stack of a dozen identical grey sheets already on the folding table beside the machine, not one fibre anywhere on the floor, three supporting figures: a wheeled canvas cart, a wall of coin slots, a taped handwritten notice gone illegible, speckled vinyl floor, cream block walls, fluorescent troffers, flat even light with warm spill from the dryer drum, locked camera, 35mm, T2.8, mild grain, grey felt against enamelled steel against speckled vinyl, Grok Imagine style",
         geminiOmniPrompt: "7-second locked shot. The screen is drawn out with a sheet on it, set on the stack, and pushed back in. It is drawn out again — the screen was empty and there is another identical sheet on it. Nothing else moves. The floor stays spotless. No faces.",
         promptVariations: ["Alt: the stack on the table is numbered on the edge, the numbers unreadable."],
-        
       },
       {
         id: "spj-bulk-item-pickup",
@@ -4087,8 +3855,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal exterior still, 2.39:1, a suburban kerb outside a multi-unit building at grey morning, forty beige steel folding chairs with grey polyester seats standing on the verge in perfect meeting-room rows all facing the empty street, each chair carrying a small municipal BULK ITEM tag tied to the frame, chairs squared to each other to the inch, nobody on the street, no faces, no cars, three supporting figures: a bin pad with the gate shut, a fire hydrant, a leaning mailbox post, cracked kerb concrete and thin verge grass, flat overcast light with no shadows and no colour, locked camera at standing height, 28mm, T4, mild grain, dry beige steel against wet grey concrete, no legible text on the tags, Grok Imagine style",
         geminiOmniPrompt: "8-second shot. Open tight on one tagged chair for three seconds. One slow pull back to the wide, revealing the full rows. Stop. Nothing moves, nobody arrives, no wind on the tags. Hold two seconds and cut.",
         promptVariations: ["Alt: hold the wide the whole time and let the tags be the only thing that moves.", "Alt: the front row is one chair short and the gap is squared like the rest."],
-        
-      }
+      },
     ],
   },
   {
@@ -4116,7 +3883,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 4:5, a single sheet of pale carbon-blue form paper lying squarely on a honey-oak counter, caught mid-split as it separates into two identical sheets sliding apart along a seam that should not exist, edges crisp and uncurled, no hands, no faces, three supporting figures: a wire in-tray holding nothing, a rubber date-stamp lying face down, a porcelain cup of pencils, cream plaster wall behind, one caged bulb directly overhead, warm pooled light on the oak with fast falloff, locked camera looking down at forty degrees, 50mm, T2.8, fine grain, dry paper against warm honey-oak against matte porcelain, no legible text anywhere on the form, Grok Imagine style",
         geminiOmniPrompt: "8-second seamless loop. One form slides apart into two and back into one, returning to the exact opening position. Nothing else moves. Camera locked. No stack grows, no third sheet, no hands. Ends on the opening frame.",
         promptVariations: ["If you can read the form twice the gag dies — keep all text illegible."],
-        
       },
       {
         id: "sp3-grout-rivulet-circuit",
@@ -4130,7 +3896,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal floor-level still, 16:9, a white tiled utility room floor seen low and raking, a thin bright ultramarine wet enamel rivulet running along one grout line toward a brass floor drain with a short honeycomb-pattern guard over it, the enamel feathering at its edges into the grout dust and never touching the tile faces, a second faint streak already emerging from the far grout line, no people, no faces, three supporting figures: a mop bucket wheel, a skirting cove, a coiled hose bib low on the wall, cream block wall above, one caged bulb throwing a long specular sheen down the wet grout, locked camera at floor height, 35mm, T2.8, fine grain, wet pigment against dry white tile against satin brass, Grok Imagine style",
         geminiOmniPrompt: "6-second seamless loop. The rivulet travels one grout line, reaches the drain, and re-emerges at the far line in the exact opening position. No pooling, no level rising, no second colour. The enamel never climbs the tile face, a wall, or an object. Camera locked. Ends on the opening frame.",
         promptVariations: ["Alt colours from the field bank: sap green, cadmium yellow, alizarin. One per take, never mixed."],
-        
       },
       {
         id: "sp3-cube-at-chest",
@@ -4144,7 +3909,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 4:5, a matte white geometric panel cube about the size of a filing box hanging unsupported at chest height in the centre of an empty vestibule of geometric white wall panels, caught between detents at a clean forty-five degrees, hard-edged and completely without glow or emission, no cables, no rig, no people, no faces, three supporting figures: a flush skirting shadow gap, a closed panel door with no handle, a grey terrazzo floor seam, cool even light from a concealed cove throwing one crisp cube shadow onto the floor, locked camera at chest height, 50mm, T4, fine grain, matte white panel against matte white panel with only shadow separating them, no HUD, no glow, no lens flare, Grok Imagine style",
         geminiOmniPrompt: "3-second seamless loop. The cube quarter-turns four times on hard detents and returns to the opening orientation. The floor shadow turns with it. Nothing else moves. Camera locked. No glow, no particles, no fifth tick. Ends on the opening frame.",
         promptVariations: ["Not the annex. No wings, no pink, no geometry that reads as a wing."],
-        
       },
       {
         id: "sp3-key-cabinet-audit",
@@ -4158,7 +3922,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 16:9, a honey-oak key cabinet mounted flat on a corridor wall with its sliding front half open, four ranks of small brass keys hanging on numbered hooks inside, one single key rotated ninety degrees on its hook to face the camera while every other key hangs flat, no hands, no faces, three supporting figures: a corridor door closer, a rubber floor mat with a worn tread path, a fuse panel with the door shut, cream painted plaster, grey vinyl tile, one warm wall sconce raking across the oak grain and picking out the turned key, locked camera, 50mm, T2.8, fine grain, satin brass against warm honey-oak against cream plaster, no legible numbers on the hooks, Grok Imagine style",
         geminiOmniPrompt: "7-second seamless loop. The cabinet front slides open, one key rotates on its hook to face out, and the front slides closed. Returns to the exact opening position with the key flat again. The cabinet never leaves the wall. Nothing else moves. Camera locked. Ends on the opening frame.",
         promptVariations: ["Not the Marble cabinet: this one stays on the wall, never travels, never comes home."],
-        
       },
       {
         id: "sp3-honeycomb-guard-fan",
@@ -4172,7 +3935,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 4:5, a floor fan in a boiler room behind a short honeycomb-pattern guard fixed with a brass wingnut, one hex cell of the guard missing its web so the blade behind it is seen clean, the blade caught mid-revolution and visibly slower where it crosses that one cell, dust on the guard everywhere except the open cell, no people, no faces, three supporting figures: a lagged pipe run, a pressure gauge, a painted floor line, unpainted block walls, sealed concrete floor, one caged bulb behind the fan so the blade reads as a moving silhouette against warm haze, locked camera, 50mm, T2.8, fine grain, dusty steel against satin brass against raw block, Grok Imagine style",
         geminiOmniPrompt: "5-second seamless loop. The blade completes revolutions at a constant rate except across the one open cell, where it visibly slows and then catches up. Nothing else in the room moves in the wind — no dust drift, no swinging cable. Camera locked. Ends on the opening frame.",
         promptVariations: ["Alt: the dust ring on the guard is worn away only around the open cell."],
-        
       },
       {
         id: "sp3-tare-loop",
@@ -4186,7 +3948,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 4:5, a porcelain-bodied postal balance scale with a brass weighing pan standing on a honey-oak package counter, the enamelled dial face caught with its needle mid-swing between a small reading and zero, the pan empty and lifted a half inch clear of its seat, no hands, no faces, no parcels anywhere in frame, three supporting figures: a brass paper spike, a roll of gummed tape on a cast-iron dispenser, a porcelain cup of pencils, cream plaster wall behind, one caged bulb directly over the counter, warm pooled light on the oak with the dial face catching a clean specular, locked camera at counter height, 50mm, T2.8, fine grain, glazed porcelain against satin brass against warm honey-oak, no legible numbers on the dial, Grok Imagine style",
         geminiOmniPrompt: "6-second seamless loop. The needle swings off zero, returns to zero, the pan lifts a half inch and resettles, and the scale returns to the exact opening position. Nothing is ever placed on the pan. The needle never passes the same mark twice in a cycle. Camera locked. Ends on the opening frame.",
         promptVariations: ["Alt: the pan resettles a hair off-centre each cycle and corrects itself before the loop point."],
-        
       },
       {
         id: "sp3-honeycomb-drip-tray",
@@ -4200,7 +3961,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal macro still, 4:5, a brass utility tap over a short honeycomb-pattern drip tray in a tiled sink alcove, one clear droplet hanging fully formed at the lip of the spout, one hex cell of the tray directly below darkened with water while every surrounding cell is bone dry and dusty, no pooling anywhere in the tray, no people, no faces, three supporting figures: a chained plug, a soap bracket with no soap, a wall of small white tiles with one cracked, cream grout, one caged bulb above and behind throwing a hard specular down the brass and a single bright caustic into the wet cell, locked camera, 100mm macro, T4, fine grain, polished brass against matte honeycomb against dry white tile, Grok Imagine style",
         geminiOmniPrompt: "4-second seamless loop. One drop forms, falls, is taken by the same single hex cell, and that cell dries completely before the next drop forms at the spout. No pooling, no rising level, never a second cell. The water stays in the tray and never reaches the floor. Camera locked. Ends on the opening frame.",
         promptVariations: ["Not the grout rivulet — that one is on the floor and this one never is."],
-        
       },
       {
         id: "sp3-pneumatic-return",
@@ -4214,7 +3974,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 16:9, a brass pneumatic tube station mounted on a basement wall, its hinged hatch standing open on a seated carrier whose felt-lipped lid is also open and completely empty inside, polished brass tube runs entering and leaving the housing overhead, no hands, no faces, nothing anywhere in the carrier, three supporting figures: a pressure gauge with a cracked glass, a bundled conduit run, a painted floor line, unpainted block walls, sealed concrete floor, one caged bulb directly over the station throwing a hard specular along the tube runs, locked camera, 40mm, T2.8, fine grain, polished brass against dull felt against raw block, Grok Imagine style",
         geminiOmniPrompt: "6-second seamless loop. The carrier lands with a thunk, the hatch opens, the empty carrier sits one beat, the hatch closes and the carrier departs on a hiss, returning the station to the exact opening position. Nothing is ever inside. No hand ever reaches in. Station light stays at one level. Camera locked. Ends on the opening frame.",
         promptVariations: ["Alt: the carrier's lid is already open when it lands."],
-        
       },
       {
         id: "sp3-chest-height-audit",
@@ -4228,7 +3987,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 2.39:1, a loading dock interior, two pale porcelain human hands on short brass wrist-posts facing each other across a gap, the second post visibly shorter than the first, a kraft paper grocery bag with one crisp square fold across its top passing between them, the concrete dock floor beneath the shorter post risen a clean inch above the surrounding slab with a fresh unweathered edge, no arms, no bodies, no faces, three supporting figures: a roll-up door with its bottom seal, a wheeled pallet jack, a short honeycomb-pattern vent guard low on the wall, raw concrete and painted safety line, one high sodium bay light and cold daylight under the roll-up door, locked camera at dock height, 35mm, T4, fine grain, matte porcelain against satin brass against dry kraft and raw concrete, Grok Imagine style",
         geminiOmniPrompt: "Locked camera per beat. Only the hands and the floor move — one handoff, one rise, in that order, never together. The rises are clean mechanical steps with a fresh concrete edge each time, no dust cloud, no crumbling, no glow. The bag never opens and never changes height relative to the hands. No people, no faces.",
         promptVariations: ["Not the mail room — that is bag-at-chest-height, and the two must never share a frame.", "Land on a hand-lettered card sliding in at the old floor level: CHEST HEIGHT MAINTAINED."],
-        
       },
       {
         id: "sp3-the-directory-board",
@@ -4242,7 +4000,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 4:5, a lobby building directory board of black felt and slide-in white plastic letters, a resident name mid-correction with two letters part-way out of their channels and one empty slot waiting, a floor number in the column beside it now missing a digit and showing bare felt, no people, no faces, no hands, three supporting figures: a brushed steel elevator call panel with one button unlit, a rubber floor mat with a worn tread path, a radiator under the window, cream plaster and grey terrazzo, one warm lobby sconce raking across the felt so the letters cast small hard shadows, locked camera square to the board, 50mm, T2.8, fine grain, white plastic against black felt against brushed steel, letters legible only as shapes, Grok Imagine style",
         geminiOmniPrompt: "Locked camera on the board, one clean cut to the call panel and one to the open car. Letters slide in their channels as mechanical moves, no floating, no glow. When the digit leaves the floor number, the matching button on the panel goes dark in the same frame. Land on the car opening onto flat unlit shaft wall. No people, no faces, no purple light.",
         promptVariations: ["No elevator interior beyond the open doorway — the car interior belongs to elevator-counteroffer."],
-        
       },
       {
         id: "sp3-elevator-counteroffer",
@@ -4256,7 +4013,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal interior still, 4:5, the inside of a freight elevator car hung with quilted grey moving pads, the doors standing open on a shallow supply closet of steel shelving, mop handles and cartons, one beige steel folding chair standing incongruously in the middle of the closet floor facing the car, brass floor-indicator dial above the doors with the needle between two numbers, no people, no faces, three supporting figures: a keyed service panel, a scuffed brass handrail, a rubber bumper strip at floor level, worn steel plate floor, one caged bulb in the car ceiling throwing hard light into the closet, locked camera from the back of the car, 28mm, T4, mild grain, quilted grey pad against scuffed brass against grey steel, Grok Imagine style",
         geminiOmniPrompt: "Locked camera from the back of the car for the whole packet. The doors close and open; between each cycle exactly one more folding chair has appeared in the closet, arranged into rows with the others. Nothing else changes: same closet, same shelving, same light. No lift movement, no floor change, no voice, no music. No people, no faces.",
         promptVariations: ["Alt land: the last opening shows the closet full, chairs in rows, and the car itself now has one chair in it."],
-        
       },
       {
         id: "sp3-the-weighing-room",
@@ -4270,7 +4026,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 16:9, a large porcelain-bodied balance scale with two polished brass pans standing on a grey marble plinth in the centre of a bare room of matte white geometric wall panels, the left pan holding a single small brass weight and the right pan holding an identical brass weight, the beam dead level, no hands, no faces, no people, three supporting figures: a flush skirting shadow gap, a closed panel door with no handle, a single grey terrazzo floor seam running under the plinth, cool even light from a concealed cove with one soft specular down each pan chain, locked camera at plinth height, 50mm, T4, fine grain, glazed porcelain against polished brass against cold marble against matte white panel, no glow, no emission, Grok Imagine style",
         geminiOmniPrompt: "Locked camera, or one slow orbit at constant rate. The scale is the only thing that moves. Twins appear in the right pan as clean cuts between held frames, never as a melt, a morph or a materialisation glow. The beam settles fully between events. No hands after the setup, no people, no faces, no particles.",
         promptVariations: ["Land: the right pan lifts off its chains, is set in the left pan, and the beam reads level with one pan. Hold five seconds.", "Alt wrong turn: it matches the plinth by producing a second plinth, then abandons that and returns to the pans."],
-        
       },
       {
         id: "sp3-the-filing-cabinet",
@@ -4284,8 +4039,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Photoreal object still, 2.39:1, a honey-oak filing cabinet standing alone against a corridor wall, four drawers of four different heights stacked in ascending order with a fifth drawer front visibly newer than the rest and sized to an odd tall format, one drawer standing open on a single sheet of pale form paper, brass drawer pulls and small brass card frames on each front, no hands, no faces, no people, three supporting figures: a corridor door closer on the fire door beyond, a rubber floor mat with a worn tread path, a wall sconce with one dark bulb, cream painted plaster, grey vinyl tile, warm raking sconce light down the oak grain, locked camera square to the cabinet, 40mm, T2.8, fine grain, warm honey-oak against satin brass against cream plaster, no legible text on the cards, Grok Imagine style",
         geminiOmniPrompt: "Locked camera square to the cabinet, one slow orbit permitted on the last beat only. New drawers appear between held frames as clean cuts — the cabinet is never seen stretching, morphing or growing on camera. Runners, pulls and fronts stay in the same material and finish as the originals. Nothing else in the corridor moves. No people, no faces, no glow.",
         promptVariations: ["Land: a drawer exactly the cabinet's own size opens, one cut, and the corridor holds one drawer front lying on the floor.", "Not the Marble cabinet: this one never travels, never comes home, and is never in the night lot."],
-        
-      }
+      },
     ],
   },
   {
@@ -4313,8 +4067,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Halloween backyard frozen mid laser battle, animated plastic skeleton holding ON BREAK sign, glowing snakes paused, black cat watching, suburban fence, deadpan comedy, cinematic, Grok Imagine style",
         geminiOmniPrompt: "12-second frozen battle. Skeleton stretches. Photoreal comedy.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4342,7 +4095,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still of three glamorous women in matching black lace dresses walking a wet Halloween suburban sidewalk at night, jack-o'-lanterns and string lights, one woman on the left turning her head toward a distant wooden utility pole, dead-pan faces, blood-red lipstick, trick-or-treaters far in background, filmic streetlight and moonlight, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "8-second slow tracking video on a Halloween suburban sidewalk at night. Three women in matching black lace dresses walk in a loose line. The woman on the left stops slightly and turns her head toward a faint electrical crackle off-screen near a utility pole. Wet leaves, jack-o'-lantern glow, string lights. Dead-pan faces, no panic. Photoreal cinematic short film.",
         promptVariations: [],
-        
       },
       {
         id: "spooky-telephone-b-why-telephone",
@@ -4356,7 +4108,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium-wide still of three women in black lace on a Halloween sidewalk facing a looming old wooden telephone pole, center woman speaking with clinical calm, faint blue-white electrical spark at the pole base, a tiny rat silhouette near the ground, dead-pan educational-horror comedy mood, orange pumpkin light mixing with cool streetlight, Grok Imagine style",
         geminiOmniPrompt: "10-second locked-off medium-wide video. Center woman in black lace delivers a dead-pan line about telephone poles being spooky. Faint electrical crackle and tiny squeak from the pole base. The other two listen without reacting. Halloween decorations, wet pavement reflections. No cuts. Photoreal cinematic.",
         promptVariations: [],
-        
       },
       {
         id: "spooky-telephone-c-rubella-s",
@@ -4370,7 +4121,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic close-medium still of a woman in black lace and red lipstick lecturing dead-pan on a Halloween night sidewalk, wooden utility pole behind her with subtle ground-current glow in the dirt, hydrogen-sulfide haze suggestion at ankle height, two identical women flanking her listening like a seminar, suburban horror-comedy educational tone, Grok Imagine style",
         geminiOmniPrompt: "17-second continuous video: center woman in black lace delivers a long dead-pan monologue about phone poles, rats, ground current, chemical equilibrium, and hydrogen sulfide gas. Lips barely move. Flanking women stare forward. Subtle heat shimmer or faint greenish vapor near the pole base. Halloween night ambience. Locked camera, photoreal short-film comedy tone.",
         promptVariations: [],
-        
       },
       {
         id: "spooky-telephone-d-lillith-s",
@@ -4384,7 +4134,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic two-shot still of woman in black lace on the left nodding once and adding to a lecture, old utility pole and exposed sewer-pipe brace visible at the curb, third woman silent on the right, hydrogen-sulfide mist hugging the pole base, Halloween jack-o'-lanterns in soft bokeh, dead-pan suburban pseudoscience mood, Grok Imagine style",
         geminiOmniPrompt: "13-second video: woman on the left completes the theory about sewer pipes bracing utility poles and hydrogen sulfide around poles. One small nod only. Silent woman on the right unchanged. Camera drifts slightly closer. Pole and curb infrastructure visible. Dead-pan delivery, photoreal cinematic.",
         promptVariations: [],
-        
       },
       {
         id: "spooky-telephone-e-dodge-the",
@@ -4398,8 +4147,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still of three women in matching black lace leaning away from a wooden telephone pole in perfect unison on a Halloween sidewalk, mouths barely open on a shared punchline, rat tail twitching at the pole base unnoticed, jack-o'-lanterns and string lights, dead-pan comedy button shot, filmic night lighting, Grok Imagine style",
         geminiOmniPrompt: "7-second video: all three women lean away from the utility pole in synchronized etiquette—not quite running—while delivering the final line together. They resume walking past camera. Tiny rat tail twitch at pole base. Halloween night. Quick hold on their backs as they leave frame. Photoreal cinematic punchline.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4427,7 +4175,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide still inside a cavernous retrofitted historical gold-mining warehouse film studio at night, grainy 480p retro-modern look, massive camera crane sweeping across a chaotic active set in the deep background, scaffolding and softboxes, distant neon sign reading WEEK ON FIRE with WEEK in blue and ON FIRE in red, high contrast overhead lighting into crushed blacks, short-film production still, Grok Imagine style",
         geminiOmniPrompt: "12-second video: grainy 480p feed flickers to life inside a vast dark warehouse film studio. Slow push toward a distant huddle of folding chairs under one harsh softbox while a massive camera crane sweeps across the active set behind. Scan lines, soft tape hiss, neon WEEK ON FIRE sign glowing blue and red on a far wall. Photoreal cinematic short film, retro broadcast texture.",
         promptVariations: [],
-        
       },
       {
         id: "studio-huddle-b-hot-seats",
@@ -4441,7 +4188,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium still of an intense production huddle under a single harsh overhead softbox in a dark warehouse studio, writer Mara with wild black hair and oversized black knit sweater clutching an annotated clipboard across from two exhausted women in black lace dresses at a cluttered folding table covered in script pages, blue-and-orange cereal box on the table, grainy 480p texture, high contrast faces, Grok Imagine style",
         geminiOmniPrompt: "16-second locked medium video under one softbox. Writer with glasses adjusts frames and speaks about episode pacing while two women in black lace lean in, listening hard. Folding chairs, cluttered papers, cereal box on the table. Background warehouse stays dark with a crane silhouette. Grainy 480p, photoreal, no cuts.",
         promptVariations: [],
-        
       },
       {
         id: "studio-huddle-c-cereal-shoot",
@@ -4455,7 +4201,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic close-medium still of a glamorous exhausted woman in black lace slamming a printed storyboard onto a folding table, storyboard shows gothic estate sports car and black lace cereal commercial, blue-and-orange Weeks on Fire cereal box beside her hand, writer with clipboard opposite, second lace-clad woman arms crossed smirking, harsh softbox key, grainy 480p film set huddle, Grok Imagine style",
         geminiOmniPrompt: "30-second continuous video: woman in black lace leans forward tapping a cereal-commercial storyboard print, complaining intensely while gesturing at a prop cereal box. Writer scribbles defensively. Second woman in matching lace smirks with arms crossed. Softbox overhead, papers everywhere, warehouse dark behind. Grainy 480p photoreal comedy-drama tone.",
         promptVariations: [],
-        
       },
       {
         id: "studio-huddle-d-barista-safehouse",
@@ -4469,7 +4214,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic three-shot still at a warehouse set table, woman in black lace pointing at a glossy photo print of a dimly lit moody coffee bar safehouse, writer Mara mid-listen with pen raised, other lace-clad lead watching the print, tense analytical energy, harsh overhead softbox, cereal box and neon fixture on table, grainy 480p, Grok Imagine style",
         geminiOmniPrompt: "30-second video: analytical woman in black lace points at a coffee-bar location still and argues the baristas look too normal — they should read as informants. Low synth bass begins under dialogue. Writer nods and starts scribbling. Softbox flicker once. Grainy 480p, photoreal, locked medium shot with tiny push-in.",
         promptVariations: [],
-        
       },
       {
         id: "studio-huddle-e-mara-bridges",
@@ -4483,7 +4227,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic close-up still of writer Mara Vell scribbling furiously on a heavily annotated clipboard under a harsh softbox, wild black hair, chunky black knit, glasses reflecting set lights, two blurred black-lace leads across the table, Weeks on Fire cereal box soft in foreground, warehouse neon WEEK ON FIRE glowing behind, grainy 480p intensity, Grok Imagine style",
         geminiOmniPrompt: "27-second video: writer speaks fast while scribbling — coded HOA Meeting dialogue for the barista scene, tense one-octave chromatic synth bass under, dialogue stays clear. Leads react with dry asides. Clipboard pages flip. Softbox bloom on lens. Grainy 480p photoreal short film.",
         promptVariations: [],
-        
       },
       {
         id: "studio-huddle-f-button-feed",
@@ -4497,8 +4240,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide-to-medium still of the studio huddle under softbox as the harsh light flickers, three figures at the folding table mid-laugh mid-argument, massive camera crane resetting in background, neon WEEK ON FIRE sign, image beginning to dissolve into 480p static and scan lines, standby broadcast energy, Grok Imagine style",
         geminiOmniPrompt: "15-second video: dry button jokes about oatmeal rebrand, writer says she'll put it in the draft without looking up, warehouse crane whines, softbox flickers, feed softens into grainy static. Optional distant continuity voice. Hold on static. Photoreal then broadcast decay.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4526,7 +4268,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide film still, flat brutal overhead 2 PM summer light, no shadows to hide in. A sun-bleached blonde woman in a light green halter top with an amethyst pendant and a large trail backpack walks the faded center line of an empty two-lane county road through dry gold California hills. A dusty sedan crawls alongside her at exact walking pace, two women in black lace visible inside, one leaning out the passenger window. Heat shimmer off the asphalt, no shoulder, no other cars, telephone poles receding to the horizon. Deadpan procedural comedy staging, photoreal, 35mm, Grok Imagine style",
         geminiOmniPrompt: "10-second slow tracking video alongside a woman with a backpack walking the center line of an empty county road in flat 2 PM heat. A dusty sedan pulls even with her and matches her walking speed exactly instead of passing. A woman in black lace leans out the passenger window and speaks. The walker does not stop, does not look over, and answers. Heat shimmer, dry gold hills, no other traffic. Photoreal cinematic, deadpan, no music.",
         promptVariations: [],
-        
       },
       {
         id: "the-long-b-2-40",
@@ -4540,7 +4281,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic interior car still, harsh hazy high-sun afternoon light through dusty glass. Three women in a moving sedan: driver in black lace with jet-black hair watching the road, passenger in matching black lace turned fully around with one knee up on the seat like a detective conducting an interview, and a sun-bleached blonde woman in a green halter in the back seat with a backpack belted in beside her like a passenger. Cooler on the floor. Interrogation blocking played completely casual, warm dust in the air, photoreal, anamorphic feel, Grok Imagine style",
         geminiOmniPrompt: "12-second handheld interior video inside a moving sedan in hazy afternoon light. The passenger in black lace turns fully around in her seat to question the blonde woman in the back, rapid overlapping dialogue, cop-show rhythm played casually. The driver never looks over and interjects once, flatly. The back-seat woman answers each question with a small precise correction. Dust, sun flare through the windshield, dry hills scrolling past. Photoreal cinematic, no score.",
         promptVariations: [],
-        
       },
       {
         id: "the-long-c-3-25",
@@ -4554,7 +4294,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic medium-wide film still, hard 3 PM shadows and hanging dust. Three women stand shoulder to shoulder in a row facing a faded official forest-service sign on a steel swing gate across a graded dirt fire road — two in black cocktail lace and heels, one sun-bleached in a green halter and hiking pack. All three read the dense wordy ordinance text with the exact posture of a jury reviewing evidence. A cut padlock hangs re-hung on the chain to look locked. Dry gold hillside, deadpan absurdity of formalwear at a trailhead, photoreal, Grok Imagine style",
         geminiOmniPrompt: "10-second locked-off medium-wide video at a steel gate across a dirt fire road, hard mid-afternoon shadows. Three women stand in a row reading a wordy closure sign aloud like evidence, one in a green halter, two in black lace and heels. One steps forward and examines a padlock without touching it. The driver in black lace walks out of frame, the gate swings open behind them, and nobody closes it. Photoreal cinematic, deadpan comedy, no music.",
         promptVariations: [],
-        
       },
       {
         id: "the-long-e-5-20",
@@ -4568,7 +4307,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide film still, warm 5 PM light with very long shadows across a dirt turnout on a steep fire road. A dusty sedan sits at an angle with its hood up, faint steam. A sun-bleached blonde woman is buried under the hood to the shoulders. A woman in black lace holds a phone flashlight up for her in full daylight with total sincerity. A second woman in black lace sits on a cooler watching. One pair of trail boots sits open on the bumper beside a discarded stiletto. Golden dust, dry hills falling away below, deadpan roadside comedy, photoreal, Grok Imagine style",
         geminiOmniPrompt: "12-second video at a dirt turnout in long warm late-afternoon light. A blonde woman emerges from under the hood of a steaming sedan and pulls a single pair of trail boots from her backpack. Two women in black lace divide them — each removes one heel and puts on one boot. One stands and takes two experimental steps uphill in one boot and one stiletto. It works badly. Nobody comments. Photoreal cinematic, deadpan, no music.",
         promptVariations: [],
-        
       },
       {
         id: "the-long-f-6-45",
@@ -4582,7 +4320,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic extreme-long-lens film still at full golden hour: three tiny figures strung out over forty yards along a dirt switchback cut across a vast gold California hillside, the valley opening blue and hazy behind them, light raking long and orange and specific. Two figures in black lace, one in a green halter with a backpack, all mid-climb, compressed telephoto perspective flattening the ridges into gold bands. Epic scale against three people having an argument about radio geometry, photoreal, Grok Imagine style",
         geminiOmniPrompt: "14-second long-lens video of three women climbing a dirt switchback across a gold hillside at golden hour, strung out over forty yards, compressed telephoto perspective. Overlapping continuous dialogue — nobody waits for a turn, the woman farthest downhill calls up, the woman uphill answers without turning around. Gravel underfoot, long orange light, huge hazy valley behind. Photoreal cinematic, no score, breath and footsteps audible.",
         promptVariations: [],
-        
       },
       {
         id: "the-long-g-8-05",
@@ -4596,8 +4333,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic wide film still at blue hour, dusk: three women stopped dead at the crest of a mountain saddle, silhouetted, the eastern world opening below them into deep blue valley with a single string of distant highway lights. Above and ahead of them a skeletal one-hundred-and-ninety-foot decommissioned lattice weather antenna with guy wires, absolutely still, black against a deep gradient sky with the first stars. Two silhouettes in black lace, one with a backpack. Nobody speaking, enormous quiet, photoreal, Grok Imagine style",
         geminiOmniPrompt: "14-second locked-off wide video at blue hour on a mountain saddle. Three women come over the crest and stop walking because the grade ended. A skeletal dead lattice antenna stands above them against a deep blue dusk sky. Nobody speaks for the entire clip. Wind only — and the cicadas stop partway through. No camera move, no music, no dialogue. Photoreal cinematic.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4625,7 +4361,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "gyre-b",
@@ -4639,7 +4374,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "gyre-c",
@@ -4653,7 +4387,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "gyre-d",
@@ -4667,7 +4400,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
       },
       {
         id: "gyre-e",
@@ -4681,8 +4413,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4710,7 +4441,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "A dramatic wide-angle cinematic shot of a modern laboratory window where an insanely complex over-engineered matrix of industrial science equipment stretches out into bright afternoon sun. Chrome-finished cryogenic vortex cones swirling with micro-frost, glowing blue copper Tesla-coil towers pulling condensation from the air into clear glass spiral tubes, thick translucent quartz cylinders flowing with neon-turquoise cooling fluid, brass Joule-Thomson expansion valves with visible frost, heavy white dry-ice fog cascading over the rusted metal window sill. A precise carbon-fiber robotic arm extends over a wooden desk outside holding a heavy glass filled with crystal-clear water and large dense textured ice blocks. Dark laboratory interior behind the window glows with sharp magenta and blue digital LED monitors, waveforms, and technical diagnostics. Hyper-realistic, 8k, shot on Arri Alexa, intense photorealism, sharp macro ice texture, cinematic lighting, high contrast between harsh outdoor sunlight and neon indoor gloom, Grok Imagine style",
         geminiOmniPrompt: "",
         promptVariations: ["Macro close-up starter: dense clear ice cubes in heavy glass, laminar water droplet frozen mid-air from micro-injector nozzle, dry-ice fog soft background, Arri Alexa photoreal, Grok Imagine", "Interior POV from lab: window frame silhouetted, apparatus explosion into blinding daylight, LED monitors flanking frame, Grok Imagine"],
-        
       },
       {
         id: "ultra-refreshed-b-video-generation",
@@ -4724,8 +4454,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "",
         geminiOmniPrompt: "Photorealistic video matching the starter image. Camera slowly zooms from wide shot of massive over-engineered laboratory window apparatus to tight macro close-up of the glass. Liquid dynamics fluid and continuous: perfect laminar-flow droplets of crystal-clear water stream from a micro-injector nozzle into the glass, hitting dense steaming ice cubes without splashing. Heavy dense white dry-ice fog actively cascades and pours downward over the window frame in smooth rhythmic current. Background: massive chrome vortex fans slowly spin, internal chambers bubble with pressure, neon-turquoise coolant pulses through glass spiral pipes. Dark lab interior flickers with moving digital graphs and audio waveforms. A hand reaches into frame, lifts the glass, and a man takes a slow-motion satisfying gulp of ice water. High-fidelity motion, realistic gravity, cinematic slow-motion, seamless continuous shot, 20 seconds, photoreal short film.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4753,8 +4482,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Dramatic cinematic shot of a velvet rope at the entrance to a still-open nightclub on a rooftop while the city burns in the background, stone-faced bouncer in a black suit enforcing dress code on a woman in a soot-stained evening gown, mirrorball light spilling out the door, ash in the air, high contrast lighting, dark glamour, Grok Imagine style",
         geminiOmniPrompt: "20-second velvet-rope standoff. She produces stilettos from a purse. Approved. Photoreal.",
         promptVariations: [],
-        
-      }
+      },
     ],
   },
   {
@@ -4771,1373 +4499,1373 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     tags: ["well", "fall", "instrumental", "heavy-metal", "visual-experiment", "pov", "open-sights"],
     sightBank: [
       {
-        "id": "ring-of-fire",
-        "title": "Ring of fire",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "a ring of fire around the full circumference — no source, no heat haze on the brick, we pass through the middle of it and come out the other side unlit",
-        "description": "A hoop of flame with no source. We go through the middle and come out unlit."
-      },
-      {
-        "id": "mine-timber",
-        "title": "Mine timber",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "the brick giving way to raw mine timber and rail, an abandoned drift shaft, an ore cart tipped on its side halfway up a wall that is now a ceiling",
-        "description": "Brick becomes a drift. The cart is on what used to be a wall."
-      },
-      {
-        "id": "tile-then-brick",
-        "title": "Rock, concrete, tile, brick",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "cut rock becoming poured concrete becoming hospital tile becoming brick again",
-        "description": "The lining changes under us and forgets to pick one material."
-      },
-      {
-        "id": "clay-doorknob",
-        "title": "Doorknob in clay",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "a seam of wet clay with a doorknob in it, at the height a door would be",
-        "description": "A door that was never framed. The knob is at the right height anyway."
-      },
-      {
-        "id": "shower-course",
-        "title": "Someone's shower",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "one course of brick that is bathroom tile, grouted, clean, someone's shower",
-        "description": "One ring of clean grout in the wet shaft, then brick again."
-      },
-      {
-        "id": "numbered-courses",
-        "title": "Feet, fathoms, years",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "brick courses numbered like a measuring tape, feet then fathoms then years",
-        "description": "The well starts counting depth in the wrong units."
-      },
-      {
-        "id": "honeycomb-mortar",
-        "title": "Honeycomb mortar",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "mortar turning to beeswax comb, live bees going up past us through the cells",
-        "description": "The joints become comb. The bees commute the other way."
-      },
-      {
-        "id": "moon-window",
-        "title": "Moon in the brick",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "a full moon set into the brick like a window, cratered, close enough to touch, then gone",
-        "description": "A cratered disk in the masonry. We pass it like a porthole."
-      },
-      {
-        "id": "faces-in-mortar",
-        "title": "Faces in the mortar",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "faces in the mortar that look past us, never at us",
-        "description": "Relief faces in the joints. None of them track the fall."
-      },
-      {
-        "id": "pipe-drip-up",
-        "title": "Pipe dripping up",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a leaking cast-iron pipe crossing the shaft, dripping up past us because we are faster than the water",
-        "description": "The leak is slower than the fall, so the drips go the wrong way."
-      },
-      {
-        "id": "pipe-chandelier",
-        "title": "Pipe chandelier",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a junction of six pipes, all leaking, a chandelier of small falling streams we fall through, each one a different color",
-        "description": "Six leaks, six colors. We drop through the chandelier."
-      },
-      {
-        "id": "breaker-panel",
-        "title": "Breaker panel",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "conduit, then a breaker panel bolted to the curve, its door swinging open",
-        "description": "Someone wired the shaft. The door is still moving."
-      },
-      {
-        "id": "water-meter",
-        "title": "Water meter reverse",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a water meter still counting, numbers rolling the wrong direction",
-        "description": "The meter is working. It is counting us out."
+        id: "ring-of-fire",
+        title: "Ring of fire",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "a ring of fire around the full circumference — no source, no heat haze on the brick, we pass through the middle of it and come out the other side unlit",
+        description: "A hoop of flame with no source. We go through the middle and come out unlit.",
+      },
+      {
+        id: "mine-timber",
+        title: "Mine timber",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "the brick giving way to raw mine timber and rail, an abandoned drift shaft, an ore cart tipped on its side halfway up a wall that is now a ceiling",
+        description: "Brick becomes a drift. The cart is on what used to be a wall.",
+      },
+      {
+        id: "tile-then-brick",
+        title: "Rock, concrete, tile, brick",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "cut rock becoming poured concrete becoming hospital tile becoming brick again",
+        description: "The lining changes under us and forgets to pick one material.",
+      },
+      {
+        id: "clay-doorknob",
+        title: "Doorknob in clay",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "a seam of wet clay with a doorknob in it, at the height a door would be",
+        description: "A door that was never framed. The knob is at the right height anyway.",
+      },
+      {
+        id: "shower-course",
+        title: "Someone's shower",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "one course of brick that is bathroom tile, grouted, clean, someone's shower",
+        description: "One ring of clean grout in the wet shaft, then brick again.",
+      },
+      {
+        id: "numbered-courses",
+        title: "Feet, fathoms, years",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "brick courses numbered like a measuring tape, feet then fathoms then years",
+        description: "The well starts counting depth in the wrong units.",
+      },
+      {
+        id: "honeycomb-mortar",
+        title: "Honeycomb mortar",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "mortar turning to beeswax comb, live bees going up past us through the cells",
+        description: "The joints become comb. The bees commute the other way.",
+      },
+      {
+        id: "moon-window",
+        title: "Moon in the brick",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "a full moon set into the brick like a window, cratered, close enough to touch, then gone",
+        description: "A cratered disk in the masonry. We pass it like a porthole.",
+      },
+      {
+        id: "faces-in-mortar",
+        title: "Faces in the mortar",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "faces in the mortar that look past us, never at us",
+        description: "Relief faces in the joints. None of them track the fall.",
+      },
+      {
+        id: "pipe-drip-up",
+        title: "Pipe dripping up",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a leaking cast-iron pipe crossing the shaft, dripping up past us because we are faster than the water",
+        description: "The leak is slower than the fall, so the drips go the wrong way.",
+      },
+      {
+        id: "pipe-chandelier",
+        title: "Pipe chandelier",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a junction of six pipes, all leaking, a chandelier of small falling streams we fall through, each one a different color",
+        description: "Six leaks, six colors. We drop through the chandelier.",
+      },
+      {
+        id: "breaker-panel",
+        title: "Breaker panel",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "conduit, then a breaker panel bolted to the curve, its door swinging open",
+        description: "Someone wired the shaft. The door is still moving.",
+      },
+      {
+        id: "water-meter",
+        title: "Water meter reverse",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a water meter still counting, numbers rolling the wrong direction",
+        description: "The meter is working. It is counting us out.",
       },
       {
-        "id": "horizontal-pole",
-        "title": "Horizontal telephone pole",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a telephone pole, horizontal, cleats and all, crossbar strung with dead line",
-        "description": "A pole that thinks the shaft is a street."
+        id: "horizontal-pole",
+        title: "Horizontal telephone pole",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a telephone pole, horizontal, cleats and all, crossbar strung with dead line",
+        description: "A pole that thinks the shaft is a street.",
       },
       {
-        "id": "orange-telecom",
-        "title": "ORANGE TELECOM",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "utility flags and spray paint on the stone: ORANGE TELECOM, marking nothing",
-        "description": "Locate paint on a well. It marks nothing we can use."
+        id: "orange-telecom",
+        title: "ORANGE TELECOM",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "utility flags and spray paint on the stone: ORANGE TELECOM, marking nothing",
+        description: "Locate paint on a well. It marks nothing we can use.",
       },
       {
-        "id": "elevator-door",
-        "title": "Elevator that never opens",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a closed elevator door in the brick, floor indicator counting down with us, never opening",
-        "description": "The car is keeping pace. The doors stay shut."
+        id: "elevator-door",
+        title: "Elevator that never opens",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a closed elevator door in the brick, floor indicator counting down with us, never opening",
+        description: "The car is keeping pace. The doors stay shut.",
       },
       {
-        "id": "fiber-coil",
-        "title": "Fiber-optic coil",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a glowing fiber-optic cable, one unspooling coil we pass through",
-        "description": "Live glass in the dark. We fall through the loop."
+        id: "fiber-coil",
+        title: "Fiber-optic coil",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a glowing fiber-optic cable, one unspooling coil we pass through",
+        description: "Live glass in the dark. We fall through the loop.",
       },
       {
-        "id": "city-manhole",
-        "title": "CITY manhole",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a manhole cover set into the wall, labeled CITY, daylight leaking around the rim",
-        "description": "Street iron on the curve. Daylight at the gasket."
+        id: "city-manhole",
+        title: "CITY manhole",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a manhole cover set into the wall, labeled CITY, daylight leaking around the rim",
+        description: "Street iron on the curve. Daylight at the gasket.",
       },
       {
-        "id": "bats-poker",
-        "title": "Bats at poker",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "bats playing poker on a ledge — full table, chips, a hanging bulb, none of them look up as we pass",
-        "description": "A complete game. We are not in it."
+        id: "bats-poker",
+        title: "Bats at poker",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "bats playing poker on a ledge — full table, chips, a hanging bulb, none of them look up as we pass",
+        description: "A complete game. We are not in it.",
       },
       {
-        "id": "bat-holds-deal",
-        "title": "The deal waits",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "one bat, mid-deal, holding the deal until we are gone",
-        "description": "Courtesy. Then the game continues."
+        id: "bat-holds-deal",
+        title: "The deal waits",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "one bat, mid-deal, holding the deal until we are gone",
+        description: "Courtesy. Then the game continues.",
       },
       {
-        "id": "painter-ladder",
-        "title": "Painter on a ladder",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a ladder with a man on it, painting the shaft, six feet of fresh white above him and nothing below",
-        "description": "He has a job. The job has no bottom."
+        id: "painter-ladder",
+        title: "Painter on a ladder",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a ladder with a man on it, painting the shaft, six feet of fresh white above him and nothing below",
+        description: "He has a job. The job has no bottom.",
       },
       {
-        "id": "cat-no-stairs",
-        "title": "Cat, no stairs",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a cat on a landing that has no stairs",
-        "description": "The landing is enough. The cat does not care about us."
+        id: "cat-no-stairs",
+        title: "Cat, no stairs",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a cat on a landing that has no stairs",
+        description: "The landing is enough. The cat does not care about us.",
       },
       {
-        "id": "brass-diver",
-        "title": "Brass diver",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a diver in a full brass helmet standing on the wall as if it were the floor",
-        "description": "His down is our sideways. He does not correct it."
+        id: "brass-diver",
+        title: "Brass diver",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a diver in a full brass helmet standing on the wall as if it were the floor",
+        description: "His down is our sideways. He does not correct it.",
       },
       {
-        "id": "pigeons-on-pipe",
-        "title": "Pigeons turning",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a line of pigeons on a pipe, facing in, all turning their heads as we drop",
-        "description": "They track us. They do not leave the pipe."
+        id: "pigeons-on-pipe",
+        title: "Pigeons turning",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a line of pigeons on a pipe, facing in, all turning their heads as we drop",
+        description: "They track us. They do not leave the pipe.",
       },
       {
-        "id": "silent-choir",
-        "title": "Silent choir",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a choir in the round, facing inward, mouths open, no sound we can hear",
-        "description": "The well stays quiet. Their mouths are already open."
+        id: "silent-choir",
+        title: "Silent choir",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a choir in the round, facing inward, mouths open, no sound we can hear",
+        description: "The well stays quiet. Their mouths are already open.",
       },
       {
-        "id": "balcony-dinner",
-        "title": "Dinner on the brick",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "two people having dinner on a tiny balcony bolted to the brick, not looking down",
-        "description": "A table for two on the curve. They do not look down."
+        id: "balcony-dinner",
+        title: "Dinner on the brick",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "two people having dinner on a tiny balcony bolted to the brick, not looking down",
+        description: "A table for two on the curve. They do not look down.",
       },
       {
-        "id": "pipe-swing",
-        "title": "Swing on a pipe",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a child sitting on a swing hung from a pipe, swinging in a circle around the shaft, we fall through the arc",
-        "description": "The arc is a circle. We are in the way of it once."
+        id: "pipe-swing",
+        title: "Swing on a pipe",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a child sitting on a swing hung from a pipe, swinging in a circle around the shaft, we fall through the arc",
+        description: "The arc is a circle. We are in the way of it once.",
       },
       {
-        "id": "table-for-one",
-        "title": "Table for one",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a dining table set for one, falling slower than we are — we pass it",
-        "description": "Place setting in free fall. We overtake it."
+        id: "table-for-one",
+        title: "Table for one",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a dining table set for one, falling slower than we are — we pass it",
+        description: "Place setting in free fall. We overtake it.",
       },
       {
-        "id": "open-freezer",
-        "title": "Open freezer",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a chest freezer, open, still lit, ice fog trailing straight up out of it",
-        "description": "The fog goes up because we are going down faster."
+        id: "open-freezer",
+        title: "Open freezer",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a chest freezer, open, still lit, ice fog trailing straight up out of it",
+        description: "The fog goes up because we are going down faster.",
       },
       {
-        "id": "level-window",
-        "title": "Level window",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a window — framed, curtained, lit from inside — set into the brick, the room behind it level",
-        "description": "A real room, level, behind glass in a vertical shaft."
+        id: "level-window",
+        title: "Level window",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a window — framed, curtained, lit from inside — set into the brick, the room behind it level",
+        description: "A real room, level, behind glass in a vertical shaft.",
       },
       {
-        "id": "helix-stair",
-        "title": "Helix stair, empty",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a staircase going down the wall in a helix, no one on it",
-        "description": "A way down that we are not using."
+        id: "helix-stair",
+        title: "Helix stair, empty",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a staircase going down the wall in a helix, no one on it",
+        description: "A way down that we are not using.",
       },
       {
-        "id": "clock-in-masonry",
-        "title": "Clock in the masonry",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a grandfather clock face in the masonry, hands spinning down",
-        "description": "The hands agree with the fall. The face is brick."
+        id: "clock-in-masonry",
+        title: "Clock in the masonry",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a grandfather clock face in the masonry, hands spinning down",
+        description: "The hands agree with the fall. The face is brick.",
       },
       {
-        "id": "bundled-mail",
-        "title": "Bundled mail",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "someone's mail, still bundled, rubber-banded, passing us",
-        "description": "Addressed. Still wrapped. Going our way, slower."
+        id: "bundled-mail",
+        title: "Bundled mail",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "someone's mail, still bundled, rubber-banded, passing us",
+        description: "Addressed. Still wrapped. Going our way, slower.",
       },
       {
-        "id": "sideways-tub",
-        "title": "Bathtub still full",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a bathtub on its side, still full, water not spilling, hanging in the air we pass",
-        "description": "The water stays in. Gravity is busy with us."
+        id: "sideways-tub",
+        title: "Bathtub still full",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a bathtub on its side, still full, water not spilling, hanging in the air we pass",
+        description: "The water stays in. Gravity is busy with us.",
       },
       {
-        "id": "fridge-magnets",
-        "title": "Fridge of this well",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a refrigerator door, magnet photos of this well from above",
-        "description": "Family snapshots of the mouth we just left."
+        id: "fridge-magnets",
+        title: "Fridge of this well",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a refrigerator door, magnet photos of this well from above",
+        description: "Family snapshots of the mouth we just left.",
       },
       {
-        "id": "clothesline-sheet",
-        "title": "Clothesline across",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "laundry on a line strung across the diameter, we tear through a sheet",
-        "description": "A diameter of wet cotton. We are the tear."
+        id: "clothesline-sheet",
+        title: "Clothesline across",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "laundry on a line strung across the diameter, we tear through a sheet",
+        description: "A diameter of wet cotton. We are the tear.",
       },
       {
-        "id": "keys-chair-piano",
-        "title": "Keys, chair, piano",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "keys, then a folding chair, then a piano, each falling slower than we are",
-        "description": "Household objects in order of size. We pass all three."
+        id: "keys-chair-piano",
+        title: "Keys, chair, piano",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "keys, then a folding chair, then a piano, each falling slower than we are",
+        description: "Household objects in order of size. We pass all three.",
       },
       {
-        "id": "slow-rain",
-        "title": "Rain slower than us",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "rain falling inside the shaft, and it is falling slower than we are",
-        "description": "Interior weather. We outrun the drops."
+        id: "slow-rain",
+        title: "Rain slower than us",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "rain falling inside the shaft, and it is falling slower than we are",
+        description: "Interior weather. We outrun the drops.",
       },
       {
-        "id": "fog-layer",
-        "title": "Fog, then dry",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a layer of fog we punch through and come out the bottom of, dry",
-        "description": "A ceiling of mist. Dry brick underneath it."
+        id: "fog-layer",
+        title: "Fog, then dry",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a layer of fog we punch through and come out the bottom of, dry",
+        description: "A ceiling of mist. Dry brick underneath it.",
       },
       {
-        "id": "fish-in-air",
-        "title": "Fish in air",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "fish, just fish, swimming in air, in a school, in the shaft, going up",
-        "description": "A school commuting the other direction. No water required."
+        id: "fish-in-air",
+        title: "Fish in air",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "fish, just fish, swimming in air, in a school, in the shaft, going up",
+        description: "A school commuting the other direction. No water required.",
       },
       {
-        "id": "frost-line",
-        "title": "Frost line",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a frost line — one horizontal band where everything is white, then gone",
-        "description": "One cold ring. Then the shaft is wet brick again."
+        id: "frost-line",
+        title: "Frost line",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a frost line — one horizontal band where everything is white, then gone",
+        description: "One cold ring. Then the shaft is wet brick again.",
       },
       {
-        "id": "sideways-storm",
-        "title": "Sideways thunderstorm",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a thunderstorm happening sideways in a gap in the wall",
-        "description": "Lightning in a niche. The rain is horizontal."
+        id: "sideways-storm",
+        title: "Sideways thunderstorm",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a thunderstorm happening sideways in a gap in the wall",
+        description: "Lightning in a niche. The rain is horizontal.",
       },
       {
-        "id": "hail-then-dry",
-        "title": "One layer of hail",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "one layer of hail, then dry brick again",
-        "description": "Ice for a few feet. Nothing above or below it."
+        id: "hail-then-dry",
+        title: "One layer of hail",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "one layer of hail, then dry brick again",
+        description: "Ice for a few feet. Nothing above or below it.",
       },
       {
-        "id": "full-circle-rainbow",
-        "title": "Rainbow as a ring",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a rainbow that is a full circle because we are inside it",
-        "description": "The shaft is the missing ground. The bow closes."
+        id: "full-circle-rainbow",
+        title: "Rainbow as a ring",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a rainbow that is a full circle because we are inside it",
+        description: "The shaft is the missing ground. The bow closes.",
       },
       {
-        "id": "still-water-breathing",
-        "title": "Still water, still falling",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "the shaft filling with still water while we keep falling through it, breathing",
-        "description": "We are underwater and still falling and still breathing."
+        id: "still-water-breathing",
+        title: "Still water, still falling",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "the shaft filling with still water while we keep falling through it, breathing",
+        description: "We are underwater and still falling and still breathing.",
       },
       {
-        "id": "wet-cathedral",
-        "title": "Cathedral, then narrow",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the shaft widening into a cathedral of wet brick, then narrowing back before we can read the far wall",
-        "description": "Too much room, then none. We never get a wide shot."
+        id: "wet-cathedral",
+        title: "Cathedral, then narrow",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the shaft widening into a cathedral of wet brick, then narrowing back before we can read the far wall",
+        description: "Too much room, then none. We never get a wide shot.",
       },
       {
-        "id": "second-mouth",
-        "title": "Second well mouth",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "a second well mouth opening in the wall — daylight the wrong hour",
-        "description": "Another sky in the brick. The hour does not match ours."
+        id: "second-mouth",
+        title: "Second well mouth",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "a second well mouth opening in the wall — daylight the wrong hour",
+        description: "Another sky in the brick. The hour does not match ours.",
       },
       {
-        "id": "outside-and-back",
-        "title": "Outside, then back in",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "we fall past the outside of a well, seen from a dry hillside, and re-enter",
-        "description": "A cut that is not a cut: the shaft shows us its own exterior."
+        id: "outside-and-back",
+        title: "Outside, then back in",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "we fall past the outside of a well, seen from a dry hillside, and re-enter",
+        description: "A cut that is not a cut: the shaft shows us its own exterior.",
       },
       {
-        "id": "throat",
-        "title": "A throat",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the shaft becoming a throat — not a metaphor — then brick again",
-        "description": "Flesh for a moment. Then masonry resumes."
+        id: "throat",
+        title: "A throat",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the shaft becoming a throat — not a metaphor — then brick again",
+        description: "Flesh for a moment. Then masonry resumes.",
       },
       {
-        "id": "two-coins",
-        "title": "Coin above, coin below",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "a bright coin above us, and a bright coin below us, both shrinking",
-        "description": "Two mouths. Both getting smaller. We are between them."
+        id: "two-coins",
+        title: "Coin above, coin below",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "a bright coin above us, and a bright coin below us, both shrinking",
+        description: "Two mouths. Both getting smaller. We are between them.",
       },
       {
-        "id": "cathedral-to-racks",
-        "title": "Cathedral to racks",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "brick becoming wet cathedral becoming server racks",
-        "description": "Holy brick, then a data center lining the cylinder."
+        id: "cathedral-to-racks",
+        title: "Cathedral to racks",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "brick becoming wet cathedral becoming server racks",
+        description: "Holy brick, then a data center lining the cylinder.",
       },
       {
-        "id": "reflection-other-way",
-        "title": "Reflection falling up",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the well's own reflection falling the other way",
-        "description": "A twin fall, opposite heading, same brick."
+        id: "reflection-other-way",
+        title: "Reflection falling up",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the well's own reflection falling the other way",
+        description: "A twin fall, opposite heading, same brick.",
       },
       {
-        "id": "dollhouse-rooms",
-        "title": "Dollhouse rooms",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "dollhouse rooms stacked in the brick, lamps on, no dolls",
-        "description": "Tiny interiors with the lights left on. Empty."
+        id: "dollhouse-rooms",
+        title: "Dollhouse rooms",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "dollhouse rooms stacked in the brick, lamps on, no dolls",
+        description: "Tiny interiors with the lights left on. Empty.",
       },
       {
-        "id": "other-camera",
-        "title": "The other camera",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "another falling camera looking at us, same speed",
-        "description": "A second POV. We see its lens. It sees ours."
+        id: "other-camera",
+        title: "The other camera",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "another falling camera looking at us, same speed",
+        description: "A second POV. We see its lens. It sees ours.",
       },
       {
-        "id": "brick-as-wall",
-        "title": "One brick is a wall",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the bricks enlarging until one brick is a wall, then returning to normal",
-        "description": "Scale forgets, then remembers, without a cut."
+        id: "brick-as-wall",
+        title: "One brick is a wall",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the bricks enlarging until one brick is a wall, then returning to normal",
+        description: "Scale forgets, then remembers, without a cut.",
       },
       {
-        "id": "tv-live-well",
-        "title": "Live from above",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a television on a shelf in the brick, playing the well, from above, live",
-        "description": "Our fall, already on TV, shot from the lip."
+        id: "tv-live-well",
+        title: "Live from above",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a television on a shelf in the brick, playing the well, from above, live",
+        description: "Our fall, already on TV, shot from the lip.",
       },
       {
-        "id": "vending-machine",
-        "title": "Vending machine",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a vending machine, humming, fully stocked, one row empty",
-        "description": "It has power. One row is sold out. We do not stop."
+        id: "vending-machine",
+        title: "Vending machine",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a vending machine, humming, fully stocked, one row empty",
+        description: "It has power. One row is sold out. We do not stop.",
       },
       {
-        "id": "garage-levels",
-        "title": "P4, then P9",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a parking garage level marker: P4. Then P9. Then P4 again",
-        "description": "The levels are lying, or the shaft is looping."
+        id: "garage-levels",
+        title: "P4, then P9",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a parking garage level marker: P4. Then P9. Then P4 again",
+        description: "The levels are lying, or the shaft is looping.",
       },
       {
-        "id": "exit-into-stone",
-        "title": "Exit into stone",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "an exit sign, green, arrow pointing sideways into solid stone",
-        "description": "The sign is sincere. The wall is not an exit."
+        id: "exit-into-stone",
+        title: "Exit into stone",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "an exit sign, green, arrow pointing sideways into solid stone",
+        description: "The sign is sincere. The wall is not an exit.",
       },
       {
-        "id": "rotary-stops",
-        "title": "Rotary that stops",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a rotary phone ringing on a hook, and it stops the instant we are past it",
-        "description": "It was ringing for us. Then it was not."
+        id: "rotary-stops",
+        title: "Rotary that stops",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a rotary phone ringing on a hook, and it stops the instant we are past it",
+        description: "It was ringing for us. Then it was not.",
       },
       {
-        "id": "eyewash-radio",
-        "title": "EyeWash on a radio",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a radio still playing EyeWash, getting louder as we drop — diegetic, not the metal",
-        "description": "Station bleed in the shaft. The metal stays non-diegetic."
+        id: "eyewash-radio",
+        title: "EyeWash on a radio",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a radio still playing EyeWash, getting louder as we drop — diegetic, not the metal",
+        description: "Station bleed in the shaft. The metal stays non-diegetic.",
       },
       {
-        "id": "drive-in-lip",
-        "title": "Drive-in of the lip",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a drive-in screen in the brick showing the lip we just left",
-        "description": "The last frame we stood in, projected on the way down."
+        id: "drive-in-lip",
+        title: "Drive-in of the lip",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a drive-in screen in the brick showing the lip we just left",
+        description: "The last frame we stood in, projected on the way down.",
       },
       {
-        "id": "atm-pin",
-        "title": "ATM in the brick",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "an ATM asking for a PIN, its screen lighting the brick",
-        "description": "A prompt we cannot answer at this speed."
+        id: "atm-pin",
+        title: "ATM in the brick",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "an ATM asking for a PIN, its screen lighting the brick",
+        description: "A prompt we cannot answer at this speed.",
       },
       {
-        "id": "next-well",
-        "title": "NEXT WELL 2 MIN",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "subway tiles and a delay board: NEXT WELL 2 MIN",
-        "description": "A platform announcement for a hole."
+        id: "next-well",
+        title: "NEXT WELL 2 MIN",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "subway tiles and a delay board: NEXT WELL 2 MIN",
+        description: "A platform announcement for a hole.",
       },
       {
-        "id": "scoreboard-clock",
-        "title": "Scoreboard clock",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a sports scoreboard: HOME 0 AWAY 0, the clock running our fall time",
-        "description": "No score. The clock is honest about the drop."
+        id: "scoreboard-clock",
+        title: "Scoreboard clock",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a sports scoreboard: HOME 0 AWAY 0, the clock running our fall time",
+        description: "No score. The clock is honest about the drop.",
       },
       {
-        "id": "polaroids-ahead",
-        "title": "Polaroids of later",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "polaroids of the fall, already developed, pinned in a sequence we have not reached",
-        "description": "The next sights, already photographed, waiting on the wall."
+        id: "polaroids-ahead",
+        title: "Polaroids of later",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "polaroids of the fall, already developed, pinned in a sequence we have not reached",
+        description: "The next sights, already photographed, waiting on the wall.",
       },
       {
-        "id": "punch-clock-depths",
-        "title": "Punch-clock depths",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a punch-clock, cards stamped with depths",
-        "description": "Time cards that clock distance instead of hours."
+        id: "punch-clock-depths",
+        title: "Punch-clock depths",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a punch-clock, cards stamped with depths",
+        description: "Time cards that clock distance instead of hours.",
       },
       {
-        "id": "bare-bulb-cord",
-        "title": "Bare bulb on a cord",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a single bare bulb on a long cord, we catch up to it, pass it, it recedes above",
-        "description": "We overtake the only light, then leave it."
+        id: "bare-bulb-cord",
+        title: "Bare bulb on a cord",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a single bare bulb on a long cord, we catch up to it, pass it, it recedes above",
+        description: "We overtake the only light, then leave it.",
       },
       {
-        "id": "rope-ends",
-        "title": "The rope ends",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a rope that ends — we pass the fray — nothing below it",
-        "description": "Someone climbed until there was no rope. We keep going."
+        id: "rope-ends",
+        title: "The rope ends",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a rope that ends — we pass the fray — nothing below it",
+        description: "Someone climbed until there was no rope. We keep going.",
       },
       {
-        "id": "paired-shoes",
-        "title": "Paired shoes",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "shoes, paired, on a ledge, laces tied together",
-        "description": "Left as if the owner stepped out of them and continued."
+        id: "paired-shoes",
+        title: "Paired shoes",
+        category: "Absence",
+        lane: "fall",
+        prompt: "shoes, paired, on a ledge, laces tied together",
+        description: "Left as if the owner stepped out of them and continued.",
       },
       {
-        "id": "missing-flyer",
-        "title": "Missing-person flyer",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a laminated missing-person flyer taped to the brick, face toward the center",
-        "description": "The flyer is looking at the fall path. We pass the face."
+        id: "missing-flyer",
+        title: "Missing-person flyer",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a laminated missing-person flyer taped to the brick, face toward the center",
+        description: "The flyer is looking at the fall path. We pass the face.",
       },
       {
-        "id": "ice-plug",
-        "title": "Ice plug",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a solid plug of clear lake ice filling the shaft for twenty feet, bubbles frozen in it, we punch through and come out wet brick again",
-        "description": "A cork of ice. We go through the middle. Brick resumes."
+        id: "ice-plug",
+        title: "Ice plug",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a solid plug of clear lake ice filling the shaft for twenty feet, bubbles frozen in it, we punch through and come out wet brick again",
+        description: "A cork of ice. We go through the middle. Brick resumes.",
       },
       {
-        "id": "ice-lining",
-        "title": "Ice lining",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "the wet brick sheathed in a skin of ice, thick enough to show our fall as a blur inside it, no frost-line cutoff, just ice then not",
-        "description": "The cylinder is glazed. We are inside the glaze for a moment."
+        id: "ice-lining",
+        title: "Ice lining",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "the wet brick sheathed in a skin of ice, thick enough to show our fall as a blur inside it, no frost-line cutoff, just ice then not",
+        description: "The cylinder is glazed. We are inside the glaze for a moment.",
       },
       {
-        "id": "piano-key-ring",
-        "title": "Piano-key ring",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a complete circle of piano keys set into the brick like a course, ivory and ebony, keys depressing one after another as we pass through the ring, no piano body, no player",
-        "description": "A keyboard that thinks the shaft is a wrist. Distinct from the falling piano."
+        id: "piano-key-ring",
+        title: "Piano-key ring",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a complete circle of piano keys set into the brick like a course, ivory and ebony, keys depressing one after another as we pass through the ring, no piano body, no player",
+        description: "A keyboard that thinks the shaft is a wrist. Distinct from the falling piano.",
       },
       {
-        "id": "loose-piano-keys",
-        "title": "Loose piano keys",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "loose piano keys falling slower than we are, ivory and ebony tumbling, we pass a cloud of them",
-        "description": "The instrument is gone. The notes are still falling."
+        id: "loose-piano-keys",
+        title: "Loose piano keys",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "loose piano keys falling slower than we are, ivory and ebony tumbling, we pass a cloud of them",
+        description: "The instrument is gone. The notes are still falling.",
       },
       {
-        "id": "car-assembly",
-        "title": "Cars being born",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "an auto assembly line wrapped around the inside of the shaft, unfinished car bodies hanging sideways from an overhead conveyor, spot-weld sparks going up past us, robots working the curve as if it were a floor, no logos, no HUD",
-        "description": "The factory thinks the well is a plant. Cars hang. We do not stop."
+        id: "car-assembly",
+        title: "Cars being born",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "an auto assembly line wrapped around the inside of the shaft, unfinished car bodies hanging sideways from an overhead conveyor, spot-weld sparks going up past us, robots working the curve as if it were a floor, no logos, no HUD",
+        description: "The factory thinks the well is a plant. Cars hang. We do not stop.",
       },
       {
-        "id": "finished-sedan",
-        "title": "One finished sedan",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "one finished unpainted sedan hanging in the shaft on a single hook, doors shut, waiting for a line that is not here, we fall past the grille",
-        "description": "The line ended. The car stayed."
+        id: "finished-sedan",
+        title: "One finished sedan",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "one finished unpainted sedan hanging in the shaft on a single hook, doors shut, waiting for a line that is not here, we fall past the grille",
+        description: "The line ended. The car stayed.",
       },
       {
-        "id": "starfield-lining",
-        "title": "Outer space lining",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the brick giving way to a lining of real outer space — stars, a little dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick again",
-        "description": "Space is the masonry for a moment. Not Annex. Not a cutaway."
+        id: "starfield-lining",
+        title: "Outer space lining",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the brick giving way to a lining of real outer space — stars, a little dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick again",
+        description: "Space is the masonry for a moment. Not Annex. Not a cutaway.",
       },
       {
-        "id": "vacuum-gap",
-        "title": "Vacuum gap",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "a gap in the brick where there is no air and no dust, only stars through a missing course, we fall through the missing course and the air comes back",
-        "description": "One course is vacuum. The next course is wet brick."
+        id: "vacuum-gap",
+        title: "Vacuum gap",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "a gap in the brick where there is no air and no dust, only stars through a missing course, we fall through the missing course and the air comes back",
+        description: "One course is vacuum. The next course is wet brick.",
       },
       {
-        "id": "cats-eating",
-        "title": "Cats eating",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "several cats on staggered ledges eating from bowls and one shared tin, heads down, chewing, none of them look up as we pass",
-        "description": "Dinner is on. We are not dinner. Distinct from the cat with no stairs."
+        id: "cats-eating",
+        title: "Cats eating",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "several cats on staggered ledges eating from bowls and one shared tin, heads down, chewing, none of them look up as we pass",
+        description: "Dinner is on. We are not dinner. Distinct from the cat with no stairs.",
       },
       {
-        "id": "trading-pit",
-        "title": "Stock market pit",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a circular trading pit built into the shaft, jackets, paper tickets, ticker tape falling up past us because we are faster, no readable prices, no HUD, no on-screen titles",
-        "description": "The pit is in the round. Paper goes the wrong way. Numbers stay off-screen."
+        id: "trading-pit",
+        title: "Stock market pit",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a circular trading pit built into the shaft, jackets, paper tickets, ticker tape falling up past us because we are faster, no readable prices, no HUD, no on-screen titles",
+        description: "The pit is in the round. Paper goes the wrong way. Numbers stay off-screen.",
       },
       {
-        "id": "cardboard-chute",
-        "title": "Cardboard boxes",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "the shaft packed with sealed cardboard boxes we have to fall through, packing peanuts trailing straight up out of torn flaps, labels facing in, unreadable",
-        "description": "A chute of brown cardboard. We are the tear."
+        id: "cardboard-chute",
+        title: "Cardboard boxes",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "the shaft packed with sealed cardboard boxes we have to fall through, packing peanuts trailing straight up out of torn flaps, labels facing in, unreadable",
+        description: "A chute of brown cardboard. We are the tear.",
       },
       {
-        "id": "empty-boxes",
-        "title": "Empty boxes stacked",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "empty cardboard boxes stacked as a spiral staircase against the brick, flaps open, nothing in them, we pass the spiral without using it",
-        "description": "A way down made of boxes. We do not take it."
+        id: "empty-boxes",
+        title: "Empty boxes stacked",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "empty cardboard boxes stacked as a spiral staircase against the brick, flaps open, nothing in them, we pass the spiral without using it",
+        description: "A way down made of boxes. We do not take it.",
       },
       {
-        "id": "snakes-on-brick",
-        "title": "Snakes on the brick",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "live snakes on the wet brick, ordinary scales, coiled and traveling the curve, no glow, no laser, no Halloween lawn, they do not strike, we pass",
-        "description": "Real snakes. Not Ep3. Not a light show."
+        id: "snakes-on-brick",
+        title: "Snakes on the brick",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "live snakes on the wet brick, ordinary scales, coiled and traveling the curve, no glow, no laser, no Halloween lawn, they do not strike, we pass",
+        description: "Real snakes. Not Ep3. Not a light show.",
       },
       {
-        "id": "hollow-tree",
-        "title": "Hollow tree",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "the brick becoming the inside of a hollow tree — concentric growth rings, bark-dark, a beetle commuting up a ring, then wet brick again",
-        "description": "The shaft is a trunk for a moment. The beetle goes the other way."
+        id: "hollow-tree",
+        title: "Hollow tree",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "the brick becoming the inside of a hollow tree — concentric growth rings, bark-dark, a beetle commuting up a ring, then wet brick again",
+        description: "The shaft is a trunk for a moment. The beetle goes the other way.",
       },
       {
-        "id": "book-lining",
-        "title": "Book-lined shaft",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "the lining becoming books for a storey, spines facing in, titles unreadable, then brick again",
-        "description": "A library that thinks it is a well. We cannot read the spines at this speed."
+        id: "book-lining",
+        title: "Book-lined shaft",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "the lining becoming books for a storey, spines facing in, titles unreadable, then brick again",
+        description: "A library that thinks it is a well. We cannot read the spines at this speed.",
       },
       {
-        "id": "coral-course",
-        "title": "Living coral",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "one course of living coral, polyps open in the dark, then masonry",
-        "description": "A reef ring. No water required. Then brick."
+        id: "coral-course",
+        title: "Living coral",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "one course of living coral, polyps open in the dark, then masonry",
+        description: "A reef ring. No water required. Then brick.",
       },
       {
-        "id": "chimney-flue",
-        "title": "Chimney for thirty feet",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "the shaft becoming a chimney for thirty feet — soot, a square of kitchen light far above through the flue, then round wet brick",
-        "description": "Someone's stove, far above. The well remembers being a flue."
+        id: "chimney-flue",
+        title: "Chimney for thirty feet",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "the shaft becoming a chimney for thirty feet — soot, a square of kitchen light far above through the flue, then round wet brick",
+        description: "Someone's stove, far above. The well remembers being a flue.",
       },
       {
-        "id": "stained-glass-ring",
-        "title": "Stained-glass ring",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "a stained-glass ring set into the cylinder, figures looking inward, light with no source, colored dust we fall through",
-        "description": "A church window that closes into a hoop. The dust is the light."
+        id: "stained-glass-ring",
+        title: "Stained-glass ring",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "a stained-glass ring set into the cylinder, figures looking inward, light with no source, colored dust we fall through",
+        description: "A church window that closes into a hoop. The dust is the light.",
       },
       {
-        "id": "coal-seam",
-        "title": "Coal seam",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "a coal seam, black dust going up past us, then brick",
-        "description": "Geology for a few feet. The dust commutes the other way."
+        id: "coal-seam",
+        title: "Coal seam",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "a coal seam, black dust going up past us, then brick",
+        description: "Geology for a few feet. The dust commutes the other way.",
       },
       {
-        "id": "ships-hold",
-        "title": "Ship's hold",
-        "category": "The well forgets what it is",
-        "lane": "fall",
-        "prompt": "the brick becoming the inside of a ship's hold — ribs, tar, one lantern swaying, then the well again",
-        "description": "A hull that thinks it is a shaft. The lantern does not care which."
+        id: "ships-hold",
+        title: "Ship's hold",
+        category: "The well forgets what it is",
+        lane: "fall",
+        prompt: "the brick becoming the inside of a ship's hold — ribs, tar, one lantern swaying, then the well again",
+        description: "A hull that thinks it is a shaft. The lantern does not care which.",
       },
       {
-        "id": "traffic-light",
-        "title": "Traffic light",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a traffic light hanging on a cable in the center of the shaft, cycling green to yellow to red as we pass under it",
-        "description": "It changes for us. We do not stop."
+        id: "traffic-light",
+        title: "Traffic light",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a traffic light hanging on a cable in the center of the shaft, cycling green to yellow to red as we pass under it",
+        description: "It changes for us. We do not stop.",
       },
       {
-        "id": "i-beam",
-        "title": "I-beam through",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a steel I-beam through the diameter, rivets, we drop past the web",
-        "description": "A girder that thinks the well is a building. We go past the web."
+        id: "i-beam",
+        title: "I-beam through",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a steel I-beam through the diameter, rivets, we drop past the web",
+        description: "A girder that thinks the well is a building. We go past the web.",
       },
       {
-        "id": "fire-hydrant",
-        "title": "Fire hydrant",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a fire hydrant bolted to the curve, cap chain hanging inward",
-        "description": "Street iron on the brick. The chain points at the fall."
+        id: "fire-hydrant",
+        title: "Fire hydrant",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a fire hydrant bolted to the curve, cap chain hanging inward",
+        description: "Street iron on the brick. The chain points at the fall.",
       },
       {
-        "id": "empty-scaffold",
-        "title": "Empty scaffolding",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "empty scaffolding wrapping the cylinder, one hard hat on a plank, no one on it",
-        "description": "A job site with no crew. The hat stayed."
+        id: "empty-scaffold",
+        title: "Empty scaffolding",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "empty scaffolding wrapping the cylinder, one hard hat on a plank, no one on it",
+        description: "A job site with no crew. The hat stayed.",
       },
       {
-        "id": "well-pump",
-        "title": "Well pump turning",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "the original well pump, rusted, flywheel still turning slowly the wrong way",
-        "description": "The machine that belonged here. It is running in reverse."
+        id: "well-pump",
+        title: "Well pump turning",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "the original well pump, rusted, flywheel still turning slowly the wrong way",
+        description: "The machine that belonged here. It is running in reverse.",
       },
       {
-        "id": "storm-outfall",
-        "title": "Storm-drain outfall",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a storm-drain outfall in the wall, dry leaves shooting up out of it",
-        "description": "Street weather arriving sideways. The leaves go up because we are faster."
+        id: "storm-outfall",
+        title: "Storm-drain outfall",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a storm-drain outfall in the wall, dry leaves shooting up out of it",
+        description: "Street weather arriving sideways. The leaves go up because we are faster.",
       },
       {
-        "id": "rebar-cage",
-        "title": "Rebar cage",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "a rebar cage with no concrete poured, we fall inside the cage, then brick resumes",
-        "description": "The pour never happened. We are briefly in the skeleton."
+        id: "rebar-cage",
+        title: "Rebar cage",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "a rebar cage with no concrete poured, we fall inside the cage, then brick resumes",
+        description: "The pour never happened. We are briefly in the skeleton.",
       },
       {
-        "id": "water-tank",
-        "title": "Inside the water tank",
-        "category": "Infrastructure",
-        "lane": "fall",
-        "prompt": "the inside of a municipal water tank — rust bloom, a ladder we do not use — then the well again",
-        "description": "A cistern with no water. The ladder is not for us."
+        id: "water-tank",
+        title: "Inside the water tank",
+        category: "Infrastructure",
+        lane: "fall",
+        prompt: "the inside of a municipal water tank — rust bloom, a ladder we do not use — then the well again",
+        description: "A cistern with no water. The ladder is not for us.",
       },
       {
-        "id": "owl-tracking",
-        "title": "Owl tracking",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "an owl on a brick, head turning to keep us in frame, then we are past",
-        "description": "It watches the fall. It does not leave the brick."
+        id: "owl-tracking",
+        title: "Owl tracking",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "an owl on a brick, head turning to keep us in frame, then we are past",
+        description: "It watches the fall. It does not leave the brick.",
       },
       {
-        "id": "hammock-sleeper",
-        "title": "Hammock sleeper",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "someone asleep in a hammock strung across the shaft, we pass within a foot, they do not wake",
-        "description": "A bed across the drop. Courtesy is not looking."
+        id: "hammock-sleeper",
+        title: "Hammock sleeper",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "someone asleep in a hammock strung across the shaft, we pass within a foot, they do not wake",
+        description: "A bed across the drop. Courtesy is not looking.",
       },
       {
-        "id": "moth-cloud",
-        "title": "Moth cloud",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "moths in a dense cloud around a work light, we fall through the cloud",
-        "description": "A living halo. We are the interruption."
+        id: "moth-cloud",
+        title: "Moth cloud",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "moths in a dense cloud around a work light, we fall through the cloud",
+        description: "A living halo. We are the interruption.",
       },
       {
-        "id": "fishing-up",
-        "title": "Fishing up",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a person fishing from a ledge, line going up, bobber going up",
-        "description": "Their down is our up. The fish, if any, are above."
+        id: "fishing-up",
+        title: "Fishing up",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a person fishing from a ledge, line going up, bobber going up",
+        description: "Their down is our up. The fish, if any, are above.",
       },
       {
-        "id": "janitor-tile",
-        "title": "Janitor, no floor",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a night janitor mopping a wet square of tile that has no floor beyond it",
-        "description": "The job has a square. The square has no building."
+        id: "janitor-tile",
+        title: "Janitor, no floor",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a night janitor mopping a wet square of tile that has no floor beyond it",
+        description: "The job has a square. The square has no building.",
       },
       {
-        "id": "goat-moss",
-        "title": "Goat eating moss",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a goat on a ledge eating moss off the brick, does not look up",
-        "description": "Dinner is moss. We are not interesting."
+        id: "goat-moss",
+        title: "Goat eating moss",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a goat on a ledge eating moss off the brick, does not look up",
+        description: "Dinner is moss. We are not interesting.",
       },
       {
-        "id": "librarian-brick",
-        "title": "Librarian in the brick",
-        "category": "Occupied",
-        "lane": "fall",
-        "prompt": "a librarian shelving volumes into cavities in the brick, spine-in",
-        "description": "The collection is the masonry. They do not check us out."
+        id: "librarian-brick",
+        title: "Librarian in the brick",
+        category: "Occupied",
+        lane: "fall",
+        prompt: "a librarian shelving volumes into cavities in the brick, spine-in",
+        description: "The collection is the masonry. They do not check us out.",
       },
       {
-        "id": "made-bed",
-        "title": "Made bed, falling",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a made bed falling slower than we are, hospital corners, empty",
-        "description": "Turned down for nobody. We overtake it."
+        id: "made-bed",
+        title: "Made bed, falling",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a made bed falling slower than we are, hospital corners, empty",
+        description: "Turned down for nobody. We overtake it.",
       },
       {
-        "id": "goldfish-bowl",
-        "title": "Goldfish bowl",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a goldfish bowl hanging in the air, water not spilling, the fish going the other way",
-        "description": "The water stays in. The fish commutes up."
+        id: "goldfish-bowl",
+        title: "Goldfish bowl",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a goldfish bowl hanging in the air, water not spilling, the fish going the other way",
+        description: "The water stays in. The fish commutes up.",
       },
       {
-        "id": "aging-portraits",
-        "title": "Portraits getting older",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "family portraits in a descending column on the brick, the faces older as we go down",
-        "description": "Same people. Depth is time. No labels."
+        id: "aging-portraits",
+        title: "Portraits getting older",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "family portraits in a descending column on the brick, the faces older as we go down",
+        description: "Same people. Depth is time. No labels.",
       },
       {
-        "id": "hanging-plants",
-        "title": "Roots trailing up",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "houseplants in hanging pots, roots trailing straight up out of the soil",
-        "description": "The pots hang. The roots go the wrong way because we are faster."
+        id: "hanging-plants",
+        title: "Roots trailing up",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "houseplants in hanging pots, roots trailing straight up out of the soil",
+        description: "The pots hang. The roots go the wrong way because we are faster.",
       },
       {
-        "id": "wall-ceiling-fan",
-        "title": "Ceiling fan on the wall",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a ceiling fan mounted on the wall as if it were a ceiling, spinning, we pass beside the blades",
-        "description": "Its down is our sideways. The blades keep their job."
+        id: "wall-ceiling-fan",
+        title: "Ceiling fan on the wall",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a ceiling fan mounted on the wall as if it were a ceiling, spinning, we pass beside the blades",
+        description: "Its down is our sideways. The blades keep their job.",
       },
       {
-        "id": "hung-bicycle",
-        "title": "Hung bicycle",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "a bicycle hung on two hooks, both wheels turning slowly",
-        "description": "Stored. Still moving. We do not take it."
+        id: "hung-bicycle",
+        title: "Hung bicycle",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "a bicycle hung on two hooks, both wheels turning slowly",
+        description: "Stored. Still moving. We do not take it.",
       },
       {
-        "id": "ironing-steam",
-        "title": "Ironing board steam",
-        "category": "Domestic, falling",
-        "lane": "fall",
-        "prompt": "an ironing board with a shirt on it, steam going up past us",
-        "description": "Someone pressed a shirt and left. The steam outruns us the other way."
+        id: "ironing-steam",
+        title: "Ironing board steam",
+        category: "Domestic, falling",
+        lane: "fall",
+        prompt: "an ironing board with a shirt on it, steam going up past us",
+        description: "Someone pressed a shirt and left. The steam outruns us the other way.",
       },
       {
-        "id": "snow-up",
-        "title": "Snow going up",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "snow inside the shaft, flakes going up because we are faster",
-        "description": "Interior winter. We outrun the weather."
+        id: "snow-up",
+        title: "Snow going up",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "snow inside the shaft, flakes going up because we are faster",
+        description: "Interior winter. We outrun the weather.",
       },
       {
-        "id": "cross-waterfall",
-        "title": "Cross-shaft waterfall",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a waterfall entering from a side tunnel and leaving through the opposite wall, we fall through the sheet",
-        "description": "Weather with an entrance and an exit. We are the hole in the sheet."
+        id: "cross-waterfall",
+        title: "Cross-shaft waterfall",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a waterfall entering from a side tunnel and leaving through the opposite wall, we fall through the sheet",
+        description: "Weather with an entrance and an exit. We are the hole in the sheet.",
       },
       {
-        "id": "soap-bubbles",
-        "title": "Soap-bubble band",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a band of soap bubbles filling the diameter, we punch through",
-        "description": "A floor of film. Then wet brick again."
+        id: "soap-bubbles",
+        title: "Soap-bubble band",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a band of soap bubbles filling the diameter, we punch through",
+        description: "A floor of film. Then wet brick again.",
       },
       {
-        "id": "tide-line",
-        "title": "Tide line",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "a tide line of dried seaweed and salt crust on the brick, then dry",
-        "description": "The ocean visited. It left a ring and went."
+        id: "tide-line",
+        title: "Tide line",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "a tide line of dried seaweed and salt crust on the brick, then dry",
+        description: "The ocean visited. It left a ring and went.",
       },
       {
-        "id": "plankton-air",
-        "title": "Plankton in the air",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "bioluminescent plankton in the air, a loose galaxy we fall through",
-        "description": "Living light with no water. Distinct from the starfield lining."
+        id: "plankton-air",
+        title: "Plankton in the air",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "bioluminescent plankton in the air, a loose galaxy we fall through",
+        description: "Living light with no water. Distinct from the starfield lining.",
       },
       {
-        "id": "cobweb-diameter",
-        "title": "Cobwebs across",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "dew-heavy cobwebs spanning the diameter, we tear them, strands going up",
-        "description": "A diameter of silk. We are the tear. The dew goes up."
+        id: "cobweb-diameter",
+        title: "Cobwebs across",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "dew-heavy cobwebs spanning the diameter, we tear them, strands going up",
+        description: "A diameter of silk. We are the tear. The dew goes up.",
       },
       {
-        "id": "steam-ice-steam",
-        "title": "Steam, ice, steam",
-        "category": "Water and weather",
-        "lane": "fall",
-        "prompt": "three stacked bands: steam, then clear cold air, then steam again",
-        "description": "Weather in layers. No frost-line freeze — just stacked rooms of air."
+        id: "steam-ice-steam",
+        title: "Steam, ice, steam",
+        category: "Water and weather",
+        lane: "fall",
+        prompt: "three stacked bands: steam, then clear cold air, then steam again",
+        description: "Weather in layers. No frost-line freeze — just stacked rooms of air.",
       },
       {
-        "id": "model-train",
-        "title": "Model train loop",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "a model train on a continuous loop around the circumference, headlights on, no people",
-        "description": "A layout that thinks the well is a mountain. The train does not notice us."
+        id: "model-train",
+        title: "Model train loop",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "a model train on a continuous loop around the circumference, headlights on, no people",
+        description: "A layout that thinks the well is a mountain. The train does not notice us.",
       },
       {
-        "id": "ocean-porthole",
-        "title": "Ocean porthole",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "a brass porthole in the brick looking out on open ocean, daylight, then brick",
-        "description": "Daylight water through glass. The shaft stays a shaft."
+        id: "ocean-porthole",
+        title: "Ocean porthole",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "a brass porthole in the brick looking out on open ocean, daylight, then brick",
+        description: "Daylight water through glass. The shaft stays a shaft.",
       },
       {
-        "id": "ourselves-at-lip",
-        "title": "Ourselves at the lip",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "through a side mouth, ourselves still standing on the lip, not yet fallen",
-        "description": "A window onto the start. We have already left it."
+        id: "ourselves-at-lip",
+        title: "Ourselves at the lip",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "through a side mouth, ourselves still standing on the lip, not yet fallen",
+        description: "A window onto the start. We have already left it.",
       },
       {
-        "id": "nested-wells",
-        "title": "Nested wells",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "nested wells, concentric brick rings, we are in the innermost cylinder",
-        "description": "Wells inside wells. We only fall in one of them."
+        id: "nested-wells",
+        title: "Nested wells",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "nested wells, concentric brick rings, we are in the innermost cylinder",
+        description: "Wells inside wells. We only fall in one of them.",
       },
       {
-        "id": "drinking-glass",
-        "title": "Inside a glass",
-        "category": "Scale breaks",
-        "lane": "fall",
-        "prompt": "the shaft becoming the inside of a drinking glass for a moment — condensation, a fingerprint the size of a door — then brick",
-        "description": "We are briefly a sip. Then masonry resumes."
+        id: "drinking-glass",
+        title: "Inside a glass",
+        category: "Scale breaks",
+        lane: "fall",
+        prompt: "the shaft becoming the inside of a drinking glass for a moment — condensation, a fingerprint the size of a door — then brick",
+        description: "We are briefly a sip. Then masonry resumes.",
       },
       {
-        "id": "diner-counter",
-        "title": "Diner counter",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a diner counter wrapping the shaft, one coffee cup, steam going up, no cook",
-        "description": "A place setting in the round. Service has not arrived."
+        id: "diner-counter",
+        title: "Diner counter",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a diner counter wrapping the shaft, one coffee cup, steam going up, no cook",
+        description: "A place setting in the round. Service has not arrived.",
       },
       {
-        "id": "laundromat-drum",
-        "title": "One drum spinning",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a row of laundromat machines bolted to the curve, one drum spinning, a sock going up out of it",
-        "description": "One machine is mid-cycle. The sock commutes the other way."
+        id: "laundromat-drum",
+        title: "One drum spinning",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a row of laundromat machines bolted to the curve, one drum spinning, a sock going up out of it",
+        description: "One machine is mid-cycle. The sock commutes the other way.",
       },
       {
-        "id": "baggage-carousel",
-        "title": "Baggage carousel",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "an airport baggage carousel wrapping the curve, one suitcase going the long way around",
-        "description": "A claim with no hall. One bag is still looking for a hand."
+        id: "baggage-carousel",
+        title: "Baggage carousel",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "an airport baggage carousel wrapping the curve, one suitcase going the long way around",
+        description: "A claim with no hall. One bag is still looking for a hand.",
       },
       {
-        "id": "escalator-up",
-        "title": "Escalator going up",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "an escalator going up, empty, we fall past the moving steps",
-        "description": "The way out is occupied and going the other direction. We do not take it."
+        id: "escalator-up",
+        title: "Escalator going up",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "an escalator going up, empty, we fall past the moving steps",
+        description: "The way out is occupied and going the other direction. We do not take it.",
       },
       {
-        "id": "photo-booth-flash",
-        "title": "Photo booth flash",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a photo booth set into the brick, curtain stirring, a flash as we pass",
-        "description": "It takes our picture at this speed. We do not get the strip."
+        id: "photo-booth-flash",
+        title: "Photo booth flash",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a photo booth set into the brick, curtain stirring, a flash as we pass",
+        description: "It takes our picture at this speed. We do not get the strip.",
       },
       {
-        "id": "inward-greenhouse",
-        "title": "Greenhouse inward",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "greenhouse glass instead of brick, plants growing inward toward the fall path",
-        "description": "A conservatory that faces the drop. The plants want the middle."
+        id: "inward-greenhouse",
+        title: "Greenhouse inward",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "greenhouse glass instead of brick, plants growing inward toward the fall path",
+        description: "A conservatory that faces the drop. The plants want the middle.",
       },
       {
-        "id": "aquarium-wall",
-        "title": "Aquarium wall",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "an aquarium wall, fish on the other side of glass, water where masonry should be",
-        "description": "Water behind glass, not in the shaft. Distinct from fish swimming in air."
+        id: "aquarium-wall",
+        title: "Aquarium wall",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "an aquarium wall, fish on the other side of glass, water where masonry should be",
+        description: "Water behind glass, not in the shaft. Distinct from fish swimming in air.",
       },
       {
-        "id": "hotel-dnd",
-        "title": "Do Not Disturb",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a hotel door in the brick, a Do Not Disturb tag hanging, we pass the peephole and a chain lock",
-        "description": "A room we will not enter. The tag is sincere."
+        id: "hotel-dnd",
+        title: "Do Not Disturb",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a hotel door in the brick, a Do Not Disturb tag hanging, we pass the peephole and a chain lock",
+        description: "A room we will not enter. The tag is sincere.",
       },
       {
-        "id": "taxidermy-deer",
-        "title": "Deer in the brick",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a taxidermy deer head mounted looking at the center of the shaft",
-        "description": "Trophy posture. It watches the fall path. We pass the nose."
+        id: "taxidermy-deer",
+        title: "Deer in the brick",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a taxidermy deer head mounted looking at the center of the shaft",
+        description: "Trophy posture. It watches the fall path. We pass the nose.",
       },
       {
-        "id": "darkroom-trays",
-        "title": "Darkroom of the fall",
-        "category": "Wrong-channel",
-        "lane": "fall",
-        "prompt": "a darkroom, trays of developer, photographs of this fall still coming up in the liquid",
-        "description": "The picture is developing as we happen. Distinct from the polaroids already pinned."
+        id: "darkroom-trays",
+        title: "Darkroom of the fall",
+        category: "Wrong-channel",
+        lane: "fall",
+        prompt: "a darkroom, trays of developer, photographs of this fall still coming up in the liquid",
+        description: "The picture is developing as we happen. Distinct from the polaroids already pinned.",
       },
       {
-        "id": "cave-painting",
-        "title": "Ochre falling figure",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a cave painting of a falling figure, ochre, already on the brick",
-        "description": "Someone recorded this before it happened. Or after."
+        id: "cave-painting",
+        title: "Ochre falling figure",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a cave painting of a falling figure, ochre, already on the brick",
+        description: "Someone recorded this before it happened. Or after.",
       },
       {
-        "id": "seismograph",
-        "title": "Seismograph of us",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a seismograph drum drawing a line that is our descent",
-        "description": "The needle is honest. The paper is the fall."
+        id: "seismograph",
+        title: "Seismograph of us",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a seismograph drum drawing a line that is our descent",
+        description: "The needle is honest. The paper is the fall.",
       },
       {
-        "id": "guestbook-pen",
-        "title": "Guestbook pen",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a guestbook on a ledge, a pen rolling off into the shaft after us",
-        "description": "We did not sign. The pen tries to follow."
+        id: "guestbook-pen",
+        title: "Guestbook pen",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a guestbook on a ledge, a pen rolling off into the shaft after us",
+        description: "We did not sign. The pen tries to follow.",
       },
       {
-        "id": "fossil-faller",
-        "title": "Fossil faller",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a fossil of a previous faller in the brick, in profile, looking down",
-        "description": "Someone already went this way. They are the masonry now."
+        id: "fossil-faller",
+        title: "Fossil faller",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a fossil of a previous faller in the brick, in profile, looking down",
+        description: "Someone already went this way. They are the masonry now.",
       },
       {
-        "id": "flight-recorder",
-        "title": "Flight recorder",
-        "category": "Time / records",
-        "lane": "fall",
-        "prompt": "a flight recorder on a ledge, one LED blinking, no labels we can read",
-        "description": "It is recording. We do not get the transcript."
+        id: "flight-recorder",
+        title: "Flight recorder",
+        category: "Time / records",
+        lane: "fall",
+        prompt: "a flight recorder on a ledge, one LED blinking, no labels we can read",
+        description: "It is recording. We do not get the transcript.",
       },
       {
-        "id": "wet-footprints",
-        "title": "Footprints that stop",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "wet footprints walking down the wall, then stopping, nothing below them",
-        "description": "Someone walked the brick until they did not. We keep going."
+        id: "wet-footprints",
+        title: "Footprints that stop",
+        category: "Absence",
+        lane: "fall",
+        prompt: "wet footprints walking down the wall, then stopping, nothing below them",
+        description: "Someone walked the brick until they did not. We keep going.",
       },
       {
-        "id": "life-ring",
-        "title": "Unused life ring",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a life ring hung on a bracket, unused, the well too narrow for it to matter",
-        "description": "Safety equipment for a hole it cannot help."
+        id: "life-ring",
+        title: "Unused life ring",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a life ring hung on a bracket, unused, the well too narrow for it to matter",
+        description: "Safety equipment for a hole it cannot help.",
       },
       {
-        "id": "candle-stub",
-        "title": "Smoking candle stub",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a candle stub in a niche, still smoking",
-        "description": "Someone was here with a light. The light is over."
+        id: "candle-stub",
+        title: "Smoking candle stub",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a candle stub in a niche, still smoking",
+        description: "Someone was here with a light. The light is over.",
       },
       {
-        "id": "empty-nest",
-        "title": "Empty nest",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "an empty bird's nest on a brick, lining blown up past us",
-        "description": "The nest stayed. The lining commutes the other way."
+        id: "empty-nest",
+        title: "Empty nest",
+        category: "Absence",
+        lane: "fall",
+        prompt: "an empty bird's nest on a brick, lining blown up past us",
+        description: "The nest stayed. The lining commutes the other way.",
       },
       {
-        "id": "blank-name",
-        "title": "Blank where a name was",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a name carved, a second name, then a blank rectangle the size of a name",
-        "description": "Two people marked the brick. The third space is waiting, or erased."
+        id: "blank-name",
+        title: "Blank where a name was",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a name carved, a second name, then a blank rectangle the size of a name",
+        description: "Two people marked the brick. The third space is waiting, or erased.",
       },
       {
-        "id": "wedding-ring-ledge",
-        "title": "Wedding ring, no hand",
-        "category": "Absence",
-        "lane": "fall",
-        "prompt": "a wedding ring on a ledge, no hand",
-        "description": "Left as if the owner stepped out of it and continued."
+        id: "wedding-ring-ledge",
+        title: "Wedding ring, no hand",
+        category: "Absence",
+        lane: "fall",
+        prompt: "a wedding ring on a ledge, no hand",
+        description: "Left as if the owner stepped out of it and continued.",
       },
       {
-        "id": "fresnel-lens",
-        "title": "Fresnel lens",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "a lighthouse Fresnel lens filling the shaft, rotating, we fall through the beam",
-        "description": "A lighthouse that thinks the well is the sea. We go through the light."
+        id: "fresnel-lens",
+        title: "Fresnel lens",
+        category: "Light",
+        lane: "fall",
+        prompt: "a lighthouse Fresnel lens filling the shaft, rotating, we fall through the beam",
+        description: "A lighthouse that thinks the well is the sea. We go through the light.",
       },
       {
-        "id": "facing-mirrors",
-        "title": "Facing mirrors",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "two mirrors facing across the diameter, the well repeating forever, we fall through the middle",
-        "description": "Infinite shafts. We only occupy one of them."
+        id: "facing-mirrors",
+        title: "Facing mirrors",
+        category: "Light",
+        lane: "fall",
+        prompt: "two mirrors facing across the diameter, the well repeating forever, we fall through the middle",
+        description: "Infinite shafts. We only occupy one of them.",
       },
       {
-        "id": "dust-mote-sun",
-        "title": "Sunbeam of dust",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "a side hole of real sunlight, a column of dust motes we fall through",
-        "description": "Daylight with an entrance. The motes are slower than we are."
+        id: "dust-mote-sun",
+        title: "Sunbeam of dust",
+        category: "Light",
+        lane: "fall",
+        prompt: "a side hole of real sunlight, a column of dust motes we fall through",
+        description: "Daylight with an entrance. The motes are slower than we are.",
       },
       {
-        "id": "candles-blow-out",
-        "title": "Candles blowing out",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "candle niches in a ring, each flame blowing out as we pass",
-        "description": "We are the wind. The ring goes dark behind us."
+        id: "candles-blow-out",
+        title: "Candles blowing out",
+        category: "Light",
+        lane: "fall",
+        prompt: "candle niches in a ring, each flame blowing out as we pass",
+        description: "We are the wind. The ring goes dark behind us.",
       },
       {
-        "id": "flash-from-below",
-        "title": "Flash from below",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "a camera flash from below, then the dark is darker",
-        "description": "Someone photographed the fall from the wrong end. Then nothing."
+        id: "flash-from-below",
+        title: "Flash from below",
+        category: "Light",
+        lane: "fall",
+        prompt: "a camera flash from below, then the dark is darker",
+        description: "Someone photographed the fall from the wrong end. Then nothing.",
       },
       {
-        "id": "burning-match",
-        "title": "Burning match",
-        "category": "Light",
-        "lane": "fall",
-        "prompt": "a single wooden match still burning, falling slower, we overtake the flame",
-        "description": "The only moving light besides us. We leave it above."
+        id: "burning-match",
+        title: "Burning match",
+        category: "Light",
+        lane: "fall",
+        prompt: "a single wooden match still burning, falling slower, we overtake the flame",
+        description: "The only moving light besides us. We leave it above.",
       },
       {
-        "id": "root-curtain",
-        "title": "Root curtain",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "a curtain of living roots across the shaft, we tear through, dirt going up",
-        "description": "The hillside reaching in. We are the tear."
+        id: "root-curtain",
+        title: "Root curtain",
+        category: "Flora",
+        lane: "fall",
+        prompt: "a curtain of living roots across the shaft, we tear through, dirt going up",
+        description: "The hillside reaching in. We are the tear.",
       },
       {
-        "id": "mushroom-rings",
-        "title": "Mushroom rings",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "mushrooms in a ring at every other course, pale, then gone",
-        "description": "Fairy rings stacked like floors. Then wet brick."
+        id: "mushroom-rings",
+        title: "Mushroom rings",
+        category: "Flora",
+        lane: "fall",
+        prompt: "mushrooms in a ring at every other course, pale, then gone",
+        description: "Fairy rings stacked like floors. Then wet brick.",
       },
       {
-        "id": "half-ivy",
-        "title": "Ivy meridian",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "ivy covering exactly half the cylinder, a clean meridian, the other half wet brick",
-        "description": "A well that is half garden. The line is too straight."
+        id: "half-ivy",
+        title: "Ivy meridian",
+        category: "Flora",
+        lane: "fall",
+        prompt: "ivy covering exactly half the cylinder, a clean meridian, the other half wet brick",
+        description: "A well that is half garden. The line is too straight.",
       },
       {
-        "id": "horizontal-tree",
-        "title": "Tree across",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "a tree growing horizontally across the diameter, we pass the trunk, leaves going up",
-        "description": "A trunk for a bridge. The leaves commute the other way."
+        id: "horizontal-tree",
+        title: "Tree across",
+        category: "Flora",
+        lane: "fall",
+        prompt: "a tree growing horizontally across the diameter, we pass the trunk, leaves going up",
+        description: "A trunk for a bridge. The leaves commute the other way.",
       },
       {
-        "id": "thick-moss",
-        "title": "Moss so thick",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "moss so thick the brick is only a rumor, then brick again",
-        "description": "The lining grows over. Then it remembers masonry."
+        id: "thick-moss",
+        title: "Moss so thick",
+        category: "Flora",
+        lane: "fall",
+        prompt: "moss so thick the brick is only a rumor, then brick again",
+        description: "The lining grows over. Then it remembers masonry.",
       },
       {
-        "id": "cave-crickets",
-        "title": "Cave crickets up",
-        "category": "Flora",
-        "lane": "fall",
-        "prompt": "pale cave crickets scattering up the wall as we drop",
-        "description": "They commute the other way. The well stays quiet."
+        id: "cave-crickets",
+        title: "Cave crickets up",
+        category: "Flora",
+        lane: "fall",
+        prompt: "pale cave crickets scattering up the wall as we drop",
+        description: "They commute the other way. The well stays quiet.",
       },
       {
-        "id": "bottom-is-sky",
-        "title": "The bottom is a sky",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "a sky where the bottom should be",
-        "description": "No water. No brick. Daylight underneath us."
-      },
-      {
-        "id": "lip-from-below",
-        "title": "Lip from below",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "the lip of the well from below, as if we are about to arrive at the start",
-        "description": "The mouth we left, approaching from the wrong side."
-      },
-      {
-        "id": "water-one-inch",
-        "title": "Water, one inch",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "the water surface, one inch away, held there",
-        "description": "Impact delayed. The surface does not move."
-      },
-      {
-        "id": "still-falling-cut",
-        "title": "Still falling, cut",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "nothing changing — the brick keeps coming — a still-falling frame",
-        "description": "No bottom event. Cut on a frame that is still dropping."
-      },
-      {
-        "id": "ice-ceiling",
-        "title": "Water as a ceiling",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "water that is a ceiling — we look up from under ice",
-        "description": "We hit a surface and it is over our heads."
-      },
-      {
-        "id": "through-the-rug",
-        "title": "Underside of a floor",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "the underside of a living-room floor, joists, about to come through the rug",
-        "description": "The well ends in somebody's house, from below."
-      },
-      {
-        "id": "other-well-night",
-        "title": "A different well, night",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "we come out the top of a different well, same hills, night now",
-        "description": "Exit is another mouth. The hour has changed."
-      },
-      {
-        "id": "cover-from-inside",
-        "title": "Cover, one inch short",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "the inner face of a well cover, bolts, we stop one inch short",
-        "description": "The lid from underneath. We never quite hit it."
-      },
-      {
-        "id": "fall-inverts",
-        "title": "The fall inverts",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "the riff inverting and we fall up — the lip from below, approaching",
-        "description": "Cadence misses by reversing. H is the mouth again."
-      },
-      {
-        "id": "forest-floor-bottom",
-        "title": "Forest floor, looking up",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "a forest floor where the bottom should be, looking up through a hollow tree",
-        "description": "The well was a trunk. Exit is leaf litter and sky the other way."
-      },
-      {
-        "id": "bucket-still-falling",
-        "title": "Bucket, still falling",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "we arrive in a metal bucket, and the bucket is still falling",
-        "description": "A bottom that is a container. The container has no bottom."
-      },
-      {
-        "id": "bathroom-drain",
-        "title": "Bathroom drain",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "a bathroom drain where the bottom should be, we are about to go through",
-        "description": "Household plumbing as an ending. The well was a pipe."
-      },
-      {
-        "id": "lens-looking-up",
-        "title": "Lens looking up",
-        "category": "Endings",
-        "lane": "ending",
-        "prompt": "a camera lens looking up, we fill the frame",
-        "description": "The bottom is an optic. Cut when we occupy the whole glass."
-      }
+        id: "bottom-is-sky",
+        title: "The bottom is a sky",
+        category: "Endings",
+        lane: "ending",
+        prompt: "a sky where the bottom should be",
+        description: "No water. No brick. Daylight underneath us.",
+      },
+      {
+        id: "lip-from-below",
+        title: "Lip from below",
+        category: "Endings",
+        lane: "ending",
+        prompt: "the lip of the well from below, as if we are about to arrive at the start",
+        description: "The mouth we left, approaching from the wrong side.",
+      },
+      {
+        id: "water-one-inch",
+        title: "Water, one inch",
+        category: "Endings",
+        lane: "ending",
+        prompt: "the water surface, one inch away, held there",
+        description: "Impact delayed. The surface does not move.",
+      },
+      {
+        id: "still-falling-cut",
+        title: "Still falling, cut",
+        category: "Endings",
+        lane: "ending",
+        prompt: "nothing changing — the brick keeps coming — a still-falling frame",
+        description: "No bottom event. Cut on a frame that is still dropping.",
+      },
+      {
+        id: "ice-ceiling",
+        title: "Water as a ceiling",
+        category: "Endings",
+        lane: "ending",
+        prompt: "water that is a ceiling — we look up from under ice",
+        description: "We hit a surface and it is over our heads.",
+      },
+      {
+        id: "through-the-rug",
+        title: "Underside of a floor",
+        category: "Endings",
+        lane: "ending",
+        prompt: "the underside of a living-room floor, joists, about to come through the rug",
+        description: "The well ends in somebody's house, from below.",
+      },
+      {
+        id: "other-well-night",
+        title: "A different well, night",
+        category: "Endings",
+        lane: "ending",
+        prompt: "we come out the top of a different well, same hills, night now",
+        description: "Exit is another mouth. The hour has changed.",
+      },
+      {
+        id: "cover-from-inside",
+        title: "Cover, one inch short",
+        category: "Endings",
+        lane: "ending",
+        prompt: "the inner face of a well cover, bolts, we stop one inch short",
+        description: "The lid from underneath. We never quite hit it.",
+      },
+      {
+        id: "fall-inverts",
+        title: "The fall inverts",
+        category: "Endings",
+        lane: "ending",
+        prompt: "the riff inverting and we fall up — the lip from below, approaching",
+        description: "Cadence misses by reversing. H is the mouth again.",
+      },
+      {
+        id: "forest-floor-bottom",
+        title: "Forest floor, looking up",
+        category: "Endings",
+        lane: "ending",
+        prompt: "a forest floor where the bottom should be, looking up through a hollow tree",
+        description: "The well was a trunk. Exit is leaf litter and sky the other way.",
+      },
+      {
+        id: "bucket-still-falling",
+        title: "Bucket, still falling",
+        category: "Endings",
+        lane: "ending",
+        prompt: "we arrive in a metal bucket, and the bucket is still falling",
+        description: "A bottom that is a container. The container has no bottom.",
+      },
+      {
+        id: "bathroom-drain",
+        title: "Bathroom drain",
+        category: "Endings",
+        lane: "ending",
+        prompt: "a bathroom drain where the bottom should be, we are about to go through",
+        description: "Household plumbing as an ending. The well was a pipe.",
+      },
+      {
+        id: "lens-looking-up",
+        title: "Lens looking up",
+        category: "Endings",
+        lane: "ending",
+        prompt: "a camera lens looking up, we fill the frame",
+        description: "The bottom is an optic. Cut when we occupy the whole glass.",
+      },
     ],
     segments: [
       {
@@ -6166,7 +5894,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, no faces unless the sight names them, short-film still, Grok Imagine style",
         geminiOmniPrompt: "10-second photoreal POV fall down a circular masonry well. The metal drop hits. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "Macro brick rushing past, [SIGHT] only as a blur in the dark, Grok Imagine"],
-        
       },
       {
         id: "well-fall-c-open-sight",
@@ -6180,7 +5907,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV fall down a circular masonry well. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "Wide cutaway of the well from outside, interior [SIGHT] glowing in the cylinder, Grok Imagine"],
-        
       },
       {
         id: "well-fall-d-open-sight",
@@ -6194,7 +5920,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV fall down a circular masonry well. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "Three-quarter: brick rushing, [SIGHT] occupying the vanishing point, Grok Imagine"],
-        
       },
       {
         id: "well-fall-e-open-sight",
@@ -6208,7 +5933,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV fall down a circular masonry well. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "Extreme wide inside an impossibly deep shaft, [SIGHT] as a small event below, Grok Imagine"],
-        
       },
       {
         id: "well-fall-f-open-sight",
@@ -6222,7 +5946,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV fall down a circular masonry well. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "Macro: wet mortar and [SIGHT] at arm's length as we pass, Grok Imagine"],
-        
       },
       {
         id: "well-fall-g-open-sight",
@@ -6236,7 +5959,6 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still, POV falling down a circular wet-brick well shaft, shrinking disk of sky above, [SIGHT] in the shaft with us, one moving system is the fall, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV fall down a circular masonry well. [SIGHT] is what we see. Camera never stops falling. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Looking up: well mouth as a bright coin getting smaller, [SIGHT] on the walls, Grok Imagine", "The shaft darkening, [SIGHT] as the last readable thing, Grok Imagine"],
-        
       },
       {
         id: "well-fall-h-bottom-or",
@@ -6250,8 +5972,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         grokImaginePrompt: "Cinematic 2.39:1 photoreal still at the unresolved end of a well fall, POV still in a circular masonry shaft, [SIGHT] as the bottom or the proof there is none, shrinking or vanished disk of sky, crushed blacks, anamorphic, no text, short-film still, Grok Imagine style",
         geminiOmniPrompt: "12-second photoreal POV at the end of a well fall. [SIGHT] is the bottom, or we keep falling. The riff reaches for a cadence and misses. No titles. Photoreal cinematic short film, 2.39:1.",
         promptVariations: ["Impact frame that never quite hits, Grok Imagine", "The bottom is a sky, Grok Imagine"],
-        
-      }
+      },
     ],
-  }
+  },
 ];

@@ -17,7 +17,7 @@ import { parseSongSections } from './parsers/song-sections';
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
 import type {
   CutawayRecord,
-  CutawaySegment,
+  CutawaySegmentRecord,
   FilmSceneRecord,
   SeriesCharacterRecord,
   DaisyBellRecord,
@@ -81,7 +81,7 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
     const raw = JSON.parse(readFileSync(join(cutawaysDir, file), 'utf8'));
     const record = CutawaySchema.parse(raw);
 
-    let segments: CutawaySegment[] = record.segments ?? [];
+    let segments: CutawaySegmentRecord[] = record.segments ?? [];
 
     if (record.segmentsSource) {
       const sourcePath = join(repoRoot, record.segmentsSource);

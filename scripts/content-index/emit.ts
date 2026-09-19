@@ -1,13 +1,17 @@
+import type {
+  CartoonRecord,
+  CutawayRecord,
+  CutawaySegmentRecord,
+  DaisyBellRecord,
+  EpisodeRecord,
+  FilmSceneRecord,
+  SequenceRecord,
+  SeriesCharacterRecord,
+  StaffMemberRecord,
+} from './schemas';
+
 function toTsString(value: string): string {
   return JSON.stringify(value);
-}
-
-function requiredBinding(map: Map<string, string>, path: string): string {
-  const alias = map.get(path);
-  if (!alias) {
-    throw new Error(`Missing generated import binding for ${path}`);
-  }
-  return alias;
 }
 
 function toTsStringArray(values: string[]): string {
@@ -67,340 +71,158 @@ ${songBlocks}
 `;
 }
 
-function emitCutawaySegment(
-  segment: {
-    id: string;
-    label: string;
-    start: string;
-    end: string;
-    durationSec: number;
-    onScreen: string;
-    lyrics: string;
-    musicCue: string;
-    grokImaginePrompt: string;
-    geminiOmniPrompt: string;
-    promptVariations: string[];
-    stillImagePath?: string;
-    previewUrl?: string;
-  },
-  imageBindings: Map<string, string>,
-): string {
-  const stillLine = segment.stillImagePath
-    ? `stillUrl: ${requiredBinding(imageBindings, segment.stillImagePath)},`
-    : '';
-  const previewLine = segment.previewUrl ? `previewUrl: ${toTsString(segment.previewUrl)},` : '';
-  const extraLines = [stillLine, previewLine].filter(Boolean).join('\n        ');
-
-  return `      {
-        id: ${toTsString(segment.id)},
-        label: ${toTsString(segment.label)},
-        start: ${toTsString(segment.start)},
-        end: ${toTsString(segment.end)},
-        durationSec: ${segment.durationSec},
-        onScreen: ${toTsString(segment.onScreen)},
-        lyrics: ${toTsString(segment.lyrics)},
-        musicCue: ${toTsString(segment.musicCue)},
-        grokImaginePrompt: ${toTsString(segment.grokImaginePrompt)},
-        geminiOmniPrompt: ${toTsString(segment.geminiOmniPrompt)},
-        promptVariations: ${toTsStringArray(segment.promptVariations)},
-        ${extraLines}
-      }`;
+/** A pre-rendered TS expression (an imported asset binding) inside an emitted literal. */
+class Raw {
+  constructor(readonly code: string) {}
 }
 
-function emitJsonValue(value: unknown, indent: number): string {
-  const pad = ' '.repeat(indent);
-  return JSON.stringify(value, null, 2)
-    .split('\n')
-    .map((line, index) => (index === 0 ? line : `${pad}${line}`))
-    .join('\n');
+interface RecordsSpec {
+  /** Prefix for generated image import names, e.g. `cartoonImg`. */
+  importPrefix: string;
+  /** Source key holding a repo-relative image path → emitted key holding the imported URL. */
+  imageKeys?: Record<string, string>;
+  /** Source-only keys that codegen resolves elsewhere and never emits. */
+  omit?: readonly string[];
+  /** Keys whose values are emitted as compact single-line JSON (large opaque payloads). */
+  inline?: readonly string[];
 }
 
-export function emitCutawaysModule(
-  cutaways: Array<{
-    id: string;
-    kind: string;
-    title: string;
-    status: string;
-    runtime: string;
-    episode: string;
-    songId: string;
-    songTitle: string;
-    summary: string;
-    visualArc: string;
-    tags: string[];
-    sightBank?: Array<{
-      id: string;
-      title: string;
-      category: string;
-      lane: string;
-      prompt: string;
-      description: string;
-    }>;
-    segments: Array<{
-      id: string;
-      label: string;
-      start: string;
-      end: string;
-      durationSec: number;
-      onScreen: string;
-      lyrics: string;
-      musicCue: string;
-      grokImaginePrompt: string;
-      geminiOmniPrompt: string;
-      promptVariations: string[];
-      stillImagePath?: string;
-      previewUrl?: string;
-    }>;
-  }>,
-): { code: string; imageImports: Map<string, string> } {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
+const identifier = /^[A-Za-z_$][\w$]*$/;
 
-  for (const cutaway of cutaways) {
-    for (const segment of cutaway.segments) {
-      if (segment.stillImagePath && !imageImports.has(segment.stillImagePath)) {
-        imageImports.set(segment.stillImagePath, `cutawayImg${importIndex++}`);
+function formatLiteral(value: unknown, depth: number): string {
+  if (value instanceof Raw) return value.code;
+  if (value === null || typeof value !== 'object') return JSON.stringify(value);
+
+  const pad = '  '.repeat(depth + 1);
+  const closePad = '  '.repeat(depth);
+
+  if (Array.isArray(value)) {
+    if (value.length === 0) return '[]';
+    if (value.every((item) => typeof item === 'string')) {
+      return `[${value.map((item) => JSON.stringify(item)).join(', ')}]`;
+    }
+    return `[\n${value.map((item) => `${pad}${formatLiteral(item, depth + 1)},`).join('\n')}\n${closePad}]`;
+  }
+
+  const entries = Object.entries(value);
+  if (entries.length === 0) return '{}';
+  return `{\n${entries
+    .map(([key, item]) => {
+      const name = identifier.test(key) ? key : JSON.stringify(key);
+      return `${pad}${name}: ${formatLiteral(item, depth + 1)},`;
+    })
+    .join('\n')}\n${closePad}}`;
+}
+
+/**
+ * Emits records generically from their own keys, so a field added to a Zod schema reaches the
+ * generated module without touching this file. Only image paths (→ bundler imports) and
+ * source-only keys are special-cased.
+ */
+function emitRecords(
+  records: readonly object[],
+  spec: RecordsSpec,
+): { literal: string; importLines: string } {
+  const imports = new Map<string, string>();
+  const omit = new Set(spec.omit ?? []);
+  const inline = new Set(spec.inline ?? []);
+  const imageKeys = spec.imageKeys ?? {};
+
+  const resolve = (value: unknown): unknown => {
+    if (Array.isArray(value)) return value.map(resolve);
+    if (value === null || typeof value !== 'object') return value;
+    const out: Record<string, unknown> = {};
+    for (const [key, item] of Object.entries(value)) {
+      if (item === undefined || omit.has(key)) continue;
+      const imageKey = imageKeys[key];
+      if (imageKey && typeof item === 'string') {
+        let alias = imports.get(item);
+        if (!alias) {
+          alias = `${spec.importPrefix}${imports.size}`;
+          imports.set(item, alias);
+        }
+        out[imageKey] = new Raw(alias);
+      } else if (inline.has(key)) {
+        out[key] = new Raw(JSON.stringify(item));
+      } else {
+        out[key] = resolve(item);
       }
     }
-  }
-
-  const importLines = [...imageImports.entries()]
-    .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
-    .join('\n');
-
-  const blocks = cutaways
-    .map((cutaway) => {
-      const segments = cutaway.segments
-        .map((segment) => emitCutawaySegment(segment, imageImports))
-        .join(',\n');
-
-      const sightBankLine = cutaway.sightBank?.length
-        ? `\n    sightBank: ${emitJsonValue(cutaway.sightBank, 4)},`
-        : '';
-
-      return `  {
-    id: ${toTsString(cutaway.id)},
-    kind: ${toTsString(cutaway.kind)},
-    title: ${toTsString(cutaway.title)},
-    status: ${toTsString(cutaway.status)},
-    runtime: ${toTsString(cutaway.runtime)},
-    episode: ${toTsString(cutaway.episode)},
-    songId: ${toTsString(cutaway.songId)},
-    songTitle: ${toTsString(cutaway.songTitle)},
-    summary: ${toTsString(cutaway.summary)},
-    visualArc: ${toTsString(cutaway.visualArc)},
-    tags: ${toTsStringArray(cutaway.tags)},${sightBankLine}
-    segments: [
-${segments}
-    ],
-  }`;
-    })
-    .join(',\n');
-
-  const code = `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines}
-
-import type { CutawaySuggestion } from '../types';
-
-export const cutawaySuggestions: CutawaySuggestion[] = [
-${blocks}
-];
-`;
-
-  return { code, imageImports };
-}
-
-export function emitGalleryModule(
-  scenes: Array<{
-    id: string;
-    imageKind: string;
-    episode: string;
-    title: string;
-    prompt: string;
-    promptVariations: string[];
-    imagePath?: string;
-    mediaType: string;
-    musicCue: string;
-    musicStyle: string;
-    description: string;
-    theme: string;
-    tags: string[];
-  }>,
-): string {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
-
-  for (const scene of scenes) {
-    if (scene.imagePath && !imageImports.has(scene.imagePath)) {
-      imageImports.set(scene.imagePath, `galleryImg${importIndex++}`);
-    }
-  }
-
-  const importLines = [...imageImports.entries()]
-    .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
-    .join('\n');
-
-  const blocks = scenes
-    .map((scene) => {
-      const imageLine = scene.imagePath
-        ? `imageUrl: ${requiredBinding(imageImports, scene.imagePath)},`
-        : '';
-
-      return `  {
-    id: ${toTsString(scene.id)},
-    imageKind: ${toTsString(scene.imageKind)},
-    episode: ${toTsString(scene.episode)},
-    title: ${toTsString(scene.title)},
-    prompt: ${toTsString(scene.prompt)},
-    promptVariations: ${toTsStringArray(scene.promptVariations)},
-    ${imageLine}
-    mediaType: ${toTsString(scene.mediaType)},
-    musicCue: ${toTsString(scene.musicCue)},
-    musicStyle: ${toTsString(scene.musicStyle)},
-    description: ${toTsString(scene.description)},
-    theme: ${toTsString(scene.theme)},
-    tags: ${toTsStringArray(scene.tags)},
-  }`;
-    })
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines}
-
-import type { FilmScene } from '../types';
-
-export const filmScenes: FilmScene[] = [
-${blocks}
-];
-`;
-}
-
-export function emitCharactersModule(
-  characters: Array<{
-    id: string;
-    name: string;
-    nameNote?: string;
-    role: string;
-    episodes: string[];
-    traits: string[];
-    bio: string;
-    props: string[];
-    tags: string[];
-    imagePath?: string;
-  }>,
-): string {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
-
-  for (const character of characters) {
-    if (character.imagePath && !imageImports.has(character.imagePath)) {
-      imageImports.set(character.imagePath, `characterImg${importIndex++}`);
-    }
-  }
-
-  const importLines = [...imageImports.entries()]
-    .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
-    .join('\n');
-
-  const blocks = characters
-    .map((character) => {
-      const imageLine = character.imagePath
-        ? `imageUrl: ${requiredBinding(imageImports, character.imagePath)},`
-        : '';
-      const nameNoteLine = character.nameNote ? `nameNote: ${toTsString(character.nameNote)},` : '';
-
-      return `  {
-    id: ${toTsString(character.id)},
-    name: ${toTsString(character.name)},
-    ${nameNoteLine}
-    role: ${toTsString(character.role)},
-    episodes: ${toTsStringArray(character.episodes)},
-    traits: ${toTsStringArray(character.traits)},
-    bio: ${toTsString(character.bio)},
-    props: ${toTsStringArray(character.props)},
-    tags: ${toTsStringArray(character.tags)},
-    ${imageLine}
-  }`;
-    })
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines}
-
-import type { SeriesCharacter } from '../types';
-
-export const seriesCharacters: SeriesCharacter[] = [
-${blocks}
-];
-`;
-}
-
-export function emitDaisyBellModule(data: {
-  meta: {
-    id: string;
-    title: string;
-    subtitle: string;
-    duo: string;
-    audioFile: string;
-    conceptFile: string;
-    slideshowUrl: string;
-    pitch: string;
-    constant: string;
+    return out;
   };
-  subjectLock: string;
-  stylish1890s: string;
-  working1890s: string;
-  sequence: Array<{ id: string; step: number; title: string; treatment: string; summary: string }>;
-  sights: Array<{ id: string; lyricCue: string | null; title: string; description: string }>;
-  frames: Array<{
-    id: string;
-    order: number;
-    title: string;
-    treatment: string;
-    beat: string;
-    description: string;
-    prompt: string;
-    imagePath?: string;
-    tags: string[];
-  }>;
-}): string {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
 
-  for (const frame of data.frames) {
-    if (frame.imagePath && !imageImports.has(frame.imagePath)) {
-      imageImports.set(frame.imagePath, `daisyImg${importIndex++}`);
-    }
-  }
-
-  const importLines = [...imageImports.entries()]
+  const resolved = records.map(resolve);
+  const importLines = [...imports.entries()]
     .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
     .join('\n');
 
-  const frameBlocks = data.frames
-    .map((frame) => {
-      const imageLine = frame.imagePath
-        ? `imageUrl: ${requiredBinding(imageImports, frame.imagePath)},`
-        : '';
+  return { literal: formatLiteral(resolved, 0), importLines };
+}
 
-      return `  {
-    id: ${toTsString(frame.id)},
-    order: ${frame.order},
-    title: ${toTsString(frame.title)},
-    treatment: ${toTsString(frame.treatment)},
-    beat: ${toTsString(frame.beat)},
-    description: ${toTsString(frame.description)},
-    prompt: ${toTsString(frame.prompt)},
-    ${imageLine}
-    tags: ${toTsStringArray(frame.tags)},
-  }`;
-    })
-    .join(',\n');
+function emitModule(
+  importLines: string,
+  typeImport: string,
+  exportName: string,
+  typeName: string,
+  literal: string,
+): string {
+  const imports = importLines ? `${importLines}\n\n` : '';
+  return `// AUTO-GENERATED by scripts/content-index — do not edit
+${imports}import type { ${typeImport} } from '../types';
+
+export const ${exportName}: ${typeName}[] = ${literal};
+`;
+}
+
+const stillKeys = { stillImagePath: 'stillUrl' } as const;
+const pathKeys = { imagePath: 'imageUrl' } as const;
+
+export function emitCutawaysModule(
+  cutaways: Array<CutawayRecord & { segments: CutawaySegmentRecord[] }>,
+): {
+  code: string;
+} {
+  const { literal, importLines } = emitRecords(cutaways, {
+    importPrefix: 'cutawayImg',
+    imageKeys: stillKeys,
+    omit: ['segmentsSource', 'segmentStills'],
+  });
+  return {
+    code: emitModule(
+      importLines,
+      'CutawaySuggestion',
+      'cutawaySuggestions',
+      'CutawaySuggestion',
+      literal,
+    ),
+  };
+}
+
+export function emitGalleryModule(scenes: FilmSceneRecord[]): string {
+  const { literal, importLines } = emitRecords(scenes, {
+    importPrefix: 'galleryImg',
+    imageKeys: pathKeys,
+  });
+  return emitModule(importLines, 'FilmScene', 'filmScenes', 'FilmScene', literal);
+}
+
+export function emitCharactersModule(characters: SeriesCharacterRecord[]): string {
+  const { literal, importLines } = emitRecords(characters, {
+    importPrefix: 'characterImg',
+    imageKeys: pathKeys,
+  });
+  return emitModule(importLines, 'SeriesCharacter', 'seriesCharacters', 'SeriesCharacter', literal);
+}
+
+export function emitDaisyBellModule(data: DaisyBellRecord): string {
+  const { literal, importLines } = emitRecords(data.frames, {
+    importPrefix: 'daisyImg',
+    imageKeys: pathKeys,
+  });
+  const imports = importLines ? `${importLines}\n\n` : '';
 
   return `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines}
-
-import type { DaisyBellFrame, DaisyBellSequenceBeat, DaisyBellSight } from '../types';
+${imports}import type { DaisyBellFrame, DaisyBellSequenceBeat, DaisyBellSight } from '../types';
 
 export const daisyBellMeta = ${JSON.stringify(data.meta, null, 2)} as const;
 
@@ -416,251 +238,35 @@ export const daisyBellSequence: DaisyBellSequenceBeat[] = ${JSON.stringify(data.
 
 export const daisyBellSights: DaisyBellSight[] = ${JSON.stringify(data.sights, null, 2)};
 
-export const daisyBellFrames: DaisyBellFrame[] = [
-${frameBlocks}
-];
+export const daisyBellFrames: DaisyBellFrame[] = ${literal};
 `;
 }
 
-export function emitStaffModule(
-  staff: Array<{
-    id: string;
-    name: string;
-    role: string;
-    location: string;
-    yearsOnSeries: string;
-    specialty: string;
-    bio: string;
-    quote: string;
-    credits: string[];
-    imageFile: string;
-  }>,
-): string {
-  const blocks = staff
-    .map(
-      (member) => `  {
-    id: ${toTsString(member.id)},
-    name: ${toTsString(member.name)},
-    role: ${toTsString(member.role)},
-    location: ${toTsString(member.location)},
-    yearsOnSeries: ${toTsString(member.yearsOnSeries)},
-    specialty: ${toTsString(member.specialty)},
-    bio: ${toTsString(member.bio)},
-    quote: ${toTsString(member.quote)},
-    credits: ${toTsStringArray(member.credits)},
-    imageFile: ${toTsString(member.imageFile)},
-  }`,
-    )
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-import type { StaffRecord } from '../types';
-
-export const staffRecords: StaffRecord[] = [
-${blocks}
-];
-`;
+export function emitStaffModule(staff: StaffMemberRecord[]): string {
+  const { literal } = emitRecords(staff, { importPrefix: 'staffImg' });
+  return emitModule('', 'StaffRecord', 'staffRecords', 'StaffRecord', literal);
 }
 
-export function emitEpisodesModule(
-  episodes: Array<{
-    id: string;
-    number: number;
-    title: string;
-    register?: string;
-    status: string;
-    runtime?: string;
-    logline: string;
-    isCandidate?: boolean;
-    files: {
-      synopsis?: string;
-      scenes?: string;
-      screenplay?: string;
-      subtitles?: string;
-      notes?: string;
-      seasonArc?: string;
-    };
-  }>,
-): string {
-  const blocks = episodes
-    .map((episode) => {
-      const registerLine = episode.register
-        ? `\n    register: ${toTsString(episode.register)},`
-        : '';
-      const runtimeLine = episode.runtime ? `\n    runtime: ${toTsString(episode.runtime)},` : '';
-      const candidateLine = episode.isCandidate ? `\n    isCandidate: true,` : '';
-      const filesEntries = Object.entries(episode.files)
-        .filter((entry): entry is [string, string] => Boolean(entry[1]))
-        .map(([key, value]) => `      ${key}: ${toTsString(value)},`)
-        .join('\n');
-
-      return `  {
-    id: ${toTsString(episode.id)},
-    number: ${episode.number},
-    title: ${toTsString(episode.title)},${registerLine}
-    status: ${toTsString(episode.status)},${runtimeLine}
-    logline: ${toTsString(episode.logline)},${candidateLine}
-    files: {
-${filesEntries}
-    },
-  }`;
-    })
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-import type { EpisodeRecord } from '../types';
-
-export const episodeRecords: EpisodeRecord[] = [
-${blocks}
-];
-`;
+export function emitEpisodesModule(episodes: EpisodeRecord[]): string {
+  const { literal } = emitRecords(episodes, { importPrefix: 'episodeImg' });
+  return emitModule('', 'EpisodeRecord', 'episodeRecords', 'EpisodeRecord', literal);
 }
 
-export function emitCartoonsModule(
-  cartoons: Array<{
-    id: string;
-    title: string;
-    premise: string;
-    visual: string;
-    status: string;
-    tags: string[];
-    runtime?: string;
-    register?: string;
-    characterLean?: string;
-    grokImaginePrompt?: string;
-    motion?: string;
-    notes?: string;
-    agent?: string;
-    stillImagePath?: string;
-  }>,
-): string {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
-
-  for (const cartoon of cartoons) {
-    if (cartoon.stillImagePath && !imageImports.has(cartoon.stillImagePath)) {
-      imageImports.set(cartoon.stillImagePath, `cartoonImg${importIndex++}`);
-    }
-  }
-
-  const importLines = [...imageImports.entries()]
-    .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
-    .join('\n');
-
-  const blocks = cartoons
-    .map((cartoon) => {
-      const optionalLines = [
-        cartoon.runtime ? `    runtime: ${toTsString(cartoon.runtime)},` : '',
-        cartoon.register ? `    register: ${toTsString(cartoon.register)},` : '',
-        cartoon.characterLean ? `    characterLean: ${toTsString(cartoon.characterLean)},` : '',
-        cartoon.grokImaginePrompt
-          ? `    grokImaginePrompt: ${toTsString(cartoon.grokImaginePrompt)},`
-          : '',
-        cartoon.motion ? `    motion: ${toTsString(cartoon.motion)},` : '',
-        cartoon.notes ? `    notes: ${toTsString(cartoon.notes)},` : '',
-        cartoon.agent ? `    agent: ${toTsString(cartoon.agent)},` : '',
-        cartoon.stillImagePath
-          ? `    stillUrl: ${requiredBinding(imageImports, cartoon.stillImagePath)},`
-          : '',
-      ]
-        .filter(Boolean)
-        .join('\n');
-
-      return `  {
-    id: ${toTsString(cartoon.id)},
-    title: ${toTsString(cartoon.title)},
-    premise: ${toTsString(cartoon.premise)},
-    visual: ${toTsString(cartoon.visual)},
-    status: ${toTsString(cartoon.status)},
-    tags: ${toTsStringArray(cartoon.tags)},${optionalLines ? `\n${optionalLines}` : ''}
-  }`;
-    })
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines ? `${importLines}\n\n` : ''}import type { CartoonRecord } from '../types';
-
-export const cartoonRecords: CartoonRecord[] = [
-${blocks}
-];
-`;
+export function emitCartoonsModule(cartoons: CartoonRecord[]): string {
+  const { literal, importLines } = emitRecords(cartoons, {
+    importPrefix: 'cartoonImg',
+    imageKeys: stillKeys,
+  });
+  return emitModule(importLines, 'CartoonRecord', 'cartoonRecords', 'CartoonRecord', literal);
 }
 
-export function emitSequencesModule(
-  sequences: Array<{
-    id: string;
-    title: string;
-    medium: string;
-    runtime: string;
-    durationSec: number;
-    premise: string;
-    visual: string;
-    motion: string;
-    tags: string[];
-    aspect?: string;
-    register?: string;
-    grokImaginePrompt?: string;
-    geminiOmniPrompt?: string;
-    notes?: string;
-    agent?: string;
-    stillImagePath?: string;
-    graph?: unknown;
-  }>,
-): string {
-  const imageImports = new Map<string, string>();
-  let importIndex = 0;
-
-  for (const sequence of sequences) {
-    if (sequence.stillImagePath && !imageImports.has(sequence.stillImagePath)) {
-      imageImports.set(sequence.stillImagePath, `sequenceImg${importIndex++}`);
-    }
-  }
-
-  const importLines = [...imageImports.entries()]
-    .map(([path, alias]) => `import ${alias} from '../../../${path}';`)
-    .join('\n');
-
-  const blocks = sequences
-    .map((sequence) => {
-      const optionalLines = [
-        sequence.aspect ? `    aspect: ${toTsString(sequence.aspect)},` : '',
-        sequence.register ? `    register: ${toTsString(sequence.register)},` : '',
-        sequence.grokImaginePrompt
-          ? `    grokImaginePrompt: ${toTsString(sequence.grokImaginePrompt)},`
-          : '',
-        sequence.geminiOmniPrompt
-          ? `    geminiOmniPrompt: ${toTsString(sequence.geminiOmniPrompt)},`
-          : '',
-        sequence.notes ? `    notes: ${toTsString(sequence.notes)},` : '',
-        sequence.agent ? `    agent: ${toTsString(sequence.agent)},` : '',
-        `    renderer: ${toTsString(sequence.graph ? 'graph' : 'custom')},`,
-        sequence.graph ? `    graph: ${JSON.stringify(sequence.graph)},` : '',
-        sequence.stillImagePath
-          ? `    stillUrl: ${requiredBinding(imageImports, sequence.stillImagePath)},`
-          : '',
-      ]
-        .filter(Boolean)
-        .join('\n');
-
-      return `  {
-    id: ${toTsString(sequence.id)},
-    title: ${toTsString(sequence.title)},
-    medium: ${toTsString(sequence.medium)},
-    runtime: ${toTsString(sequence.runtime)},
-    durationSec: ${sequence.durationSec},
-    premise: ${toTsString(sequence.premise)},
-    visual: ${toTsString(sequence.visual)},
-    motion: ${toTsString(sequence.motion)},
-    tags: ${toTsStringArray(sequence.tags)},${optionalLines ? `\n${optionalLines}` : ''}
-  }`;
-    })
-    .join(',\n');
-
-  return `// AUTO-GENERATED by scripts/content-index — do not edit
-${importLines ? `${importLines}\n\n` : ''}import type { SequenceRecord } from '../types';
-
-export const sequenceRecords: SequenceRecord[] = [
-${blocks}
-];
-`;
+export function emitSequencesModule(sequences: SequenceRecord[]): string {
+  const { literal, importLines } = emitRecords(
+    sequences.map((sequence) => ({
+      ...sequence,
+      renderer: sequence.graph ? 'graph' : 'custom',
+    })),
+    { importPrefix: 'sequenceImg', imageKeys: stillKeys, inline: ['graph'] },
+  );
+  return emitModule(importLines, 'SequenceRecord', 'sequenceRecords', 'SequenceRecord', literal);
 }

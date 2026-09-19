@@ -90,8 +90,8 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "16-second loop. Nested brass wireframe cubes and one icosahedron assemble from scale zero, then counter-rotate around a matte ember core while the camera completes one slow orbit and eases back. Core pulses once near the end. No floor, no HUD, no bloom spikes, no faces. Ends on the opening scale.",
     notes: "In-hub sequence is procedural WebGL, not an Imagine clip. Keep the core matte — if it reads as a sun the gag dies. Not the annex cube, not Marble tick-tack.",
     agent: "cursor-grok-4.6",
-    renderer: "graph",
     graph: {"camera":{"type":"orbit","radius":[{"t":0,"v":5.4,"ease":"inOut"},{"t":3.5,"v":5}],"height":[{"t":0,"v":1.35,"ease":"inOut"},{"t":4,"v":1.8,"ease":"inOut"},{"t":8,"v":1.35,"ease":"inOut"},{"t":12,"v":0.9,"ease":"inOut"},{"t":16,"v":1.35}],"angle":[{"t":0,"v":0},{"t":16,"v":360}],"fov":48},"environment":{"background":[0.025,0.02,0.018],"lightDir":[0.4,0.75,0.5],"lightColor":[1,0.72,0.42],"ambient":[0.05,0.04,0.035],"fogDensity":0.04,"fogColor":[0.03,0.025,0.02]},"nodes":[{"id":"cube-1","geometry":{"type":"lineCube","size":0.9},"material":{"kind":"line","color":[0.72,0.5,0.28]},"spin":[22.9,20.1,10.3]},{"id":"cube-2","geometry":{"type":"lineCube","size":1.55},"material":{"kind":"line","color":[0.76,0.5,0.28]},"spin":[-22.9,-32.7,10.3]},{"id":"cube-3","geometry":{"type":"lineCube","size":2.25},"material":{"kind":"line","color":[0.8,0.5,0.28]},"spin":[22.9,45.3,10.3]},{"id":"cube-4","geometry":{"type":"lineCube","size":3.15},"material":{"kind":"line","color":[0.84,0.5,0.28]},"spin":[-22.9,-57.9,10.3]},{"id":"icosahedron","geometry":{"type":"icosahedronLines","radius":1.85},"material":{"kind":"line","color":[0.82,0.62,0.32]},"spin":[11.5,-18.9,0]},{"id":"core","geometry":{"type":"sphere","radius":0.28,"lat":18,"long":24},"material":{"kind":"lit","color":[0.55,0.18,0.05],"emissive":[0.55,0.16,0.04],"shininess":8},"spin":[0,28.6,0]},{"id":"sparks","geometry":{"type":"points","count":28,"radius":[0.55,1.75],"flatten":0.4,"seed":7},"material":{"kind":"unlit","color":[1,0.45,0.12],"size":4,"alpha":0.7},"spin":[0,24,0]}],"clips":[{"target":"cube-1","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-2","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-3","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-4","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"icosahedron","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"core","property":"scale","keys":[{"t":11,"v":[1,1,1]},{"t":12.5,"v":[1.16,1.16,1.16]},{"t":14,"v":[1,1,1]}],"ease":"inOut"},{"target":"sparks","property":"alpha","keys":[{"t":0,"v":0},{"t":3.5,"v":0.7}],"ease":"inOut"}]},
+    renderer: "graph",
   },
   {
     id: "rubber-hose-errand",
@@ -164,5 +164,5 @@ export const sequenceRecords: SequenceRecord[] = [
     notes: "In-hub sequence is procedural WebGL. Not Porch Light Meridian (that one cranes to a wrong moon). Keep the yard offscreen the whole time.",
     agent: "cursor-grok-4.6",
     renderer: "custom",
-  }
+  },
 ];

@@ -9,7 +9,6 @@ export const seriesCharacters: SeriesCharacter[] = [
   {
     id: "lillith",
     name: "Lillith Vale",
-    
     role: "The Instigator — black-lace cabaret energy",
     episodes: ["Episode 01", "Episode 02", "Episode 03", "Musical Cutaways"],
     traits: ["Deadpan", "Competitive", "Never smudges mascara"],
@@ -21,7 +20,6 @@ export const seriesCharacters: SeriesCharacter[] = [
   {
     id: "rubella",
     name: "Rubella Vale",
-    
     role: "The Witness — lead singer & hologram bait",
     episodes: ["Episode 01", "Episode 02", "Episode 03", "Musical Cutaways"],
     traits: ["Elegant deadpan", "Cabaret-spooky commitment", "Precise wrongness"],
@@ -45,31 +43,26 @@ export const seriesCharacters: SeriesCharacter[] = [
   {
     id: "justine",
     name: "Justine",
-    
     role: "Deadpan finisher — fourth core lawn cast",
     episodes: ["Episode 03 — Monster Mash Finale"],
     traits: ["Younger", "Dark-haired", "Dry one-liners like gavels"],
     bio: "Fourth member of the Halloween lawn ensemble — younger and dark-haired, distinct from the lace sisters. Appears uninvolved until she is the only one with a solution. On the vintage couch during chorus 2; may hold the crystal skull while Qing Rao mingles.",
     props: ["Coffee cup", "USB cores", "Crystal skull (alternate shots)"],
     tags: ["ep3", "monster-mash", "lawn-ensemble"],
-    
   },
   {
     id: "madelin",
     name: "Madelin",
-    
     role: "Manic bag lady — skull-tote chaos agent",
     episodes: ["Episode 03 — Monster Mash Finale", "Ping-pong scene concept"],
     traits: ["Cheerful disaster energy", "Everything in the bag is relevant", "Grins during catastrophes"],
     bio: "Clutches an enormous beige tote with a huge 3D skull molded on the side. Improvises backstories for offended objects and encourages the sing-us-out chant with manic sincerity.",
     props: ["Giant skull tote bag", "Corkscrew paddle", "Receipts from impossible stores"],
     tags: ["ep3", "monster-mash", "skull"],
-    
   },
   {
     id: "scarlet",
     name: "Scarlet",
-    
     role: "Silent third sister — sidewalk lecture flank",
     episodes: ["Episode 03 — Spooky Telephone Poles"],
     traits: ["Matching black lace", "Almost no dialogue", "Perfect synchronized dodge"],
@@ -81,37 +74,31 @@ export const seriesCharacters: SeriesCharacter[] = [
   {
     id: "pizza-guy",
     name: "The Pizza Guy",
-    
     role: "Running anchor of mundane persistence",
     episodes: ["Episode 03", "Series-wide cameo potential"],
     traits: ["Completely unfazed", "Dead eyes", "Perfect posture", "Phone always at 23% battery"],
     bio: "The universe’s only constant. Red uniform rotates by episode. Never explains, never lingers, never wrong about the name on the order. Delivers through laser battles like any other Tuesday.",
     props: ["Pizza bag", "Red uniform (rotating)", "Extra napkins"],
     tags: ["recurring-gag", "deadpan", "ep3"],
-    
   },
   {
     id: "riley-smith",
     name: "Riley Smith",
-    
     role: "The stranger on the center line — unemployed technician with good data",
     episodes: ["Episode 04 — The Long Way Up", "Episode 04 — No Other Human Sounds"],
     traits: ["Never wrong about a fact", "Never smug", "Answers the question asked, then the number", "Last name is aggressively adequate"],
     bio: "Sun-bleached, trail-worn, size-seven boots. Nine years of site surveys: drive to hardware nobody has thought about since the Clinton administration and write down whether it is still there. It is almost always still there. That is the finding. Contract ended; she declined a desk in Bakersfield. The 4Runner is in her brother Darren’s driveway in Tulare. The amethyst was fourteen dollars in Bishop. Songs get a date and a wind direction. Keep her above five thousand feet.",
     props: ["Forty-liter pack", "Notebook (left page site, right page weather)", "Spare boots, size seven", "Amethyst pendant (bail taped)", "Pencil, never a pen"],
     tags: ["ep4", "ridge", "kestrel", "straight-woman"],
-    
   },
   {
     id: "kenji-shred-sato",
     name: "Kenji “Shred” Sato",
-    
     role: "Glam-Sham-Poo brand ambassador / alumnus",
     episodes: ["Musical Cutaway / EyeWash"],
     traits: ["Pure hype", "Alumni immunity", "Cannot tell product from college"],
     bio: "Official face of Ultra Screech. Big hair, leather fringe, spoken-word salesman energy from the neon temples of Glamora. Glam-Sham-Poo College class of loud. Will accidentally sell the school instead of the shampoo. Noise ordinance is a suggestion.",
     props: ["Leather fringe", "Noise meter (in the red)", "Product bottle", "Campus tour lanyard"],
     tags: ["glam-sham-poo", "commercial", "eyewash-station", "cutaway"],
-    
-  }
+  },
 ];

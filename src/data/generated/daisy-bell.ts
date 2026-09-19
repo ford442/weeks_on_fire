@@ -505,7 +505,6 @@ export const daisyBellFrames: DaisyBellFrame[] = [
     beat: "You’ll look sweet upon the seat",
     description: "Open landau; society ladies lean the same way at once toward the flower bicycle.",
     prompt: "Photoreal color still, open landau carriage full of society ladies with leg-of-mutton sleeves and enormous feathered hats all leaning the same direction at once to watch two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background, Victorian London avenue, crisp HD, comic elegance, 16:9",
-    
     tags: ["todo", "landau", "hats"],
   },
   {
@@ -516,7 +515,6 @@ export const daisyBellFrames: DaisyBellFrame[] = [
     beat: "Bridge / atmosphere",
     description: "Fog parts on the dome; flower bike silhouette; scratches and soft focus.",
     prompt: "Heavily scratched fog-bound black-and-white film still, London, the dome of St. Paul's briefly visible through parting fog, silhouette of two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background, fog closing behind, soft focus, nitrate grain, vertical scratches, 16:9 atmospheric",
-    
     tags: ["todo", "fog", "st-pauls"],
   },
   {
@@ -527,7 +525,6 @@ export const daisyBellFrames: DaisyBellFrame[] = [
     beat: "Button",
     description: "Modern meadow again; London gone; last line lands in pollen light.",
     prompt: "Soft photoreal color still, golden-hour wildflower field again, living flower tandem bicycle with Rubella and Lillith in black lace slowing as if the ride is ending, no London, only meadow and sky, pollen haze, gentle backlight, gothic softness, 16:9 cinematic still",
-    
     tags: ["todo", "field", "button"],
-  }
+  },
 ];

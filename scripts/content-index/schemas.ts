@@ -30,20 +30,26 @@ export const CutawaySegmentSchema = z.object({
   previewUrl: z.string().optional(),
 });
 
+export const SightLaneSchema = z.enum(['fall', 'ending']);
+
 export const SightCandidateSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
   category: z.string().min(1),
-  lane: z.enum(['fall', 'ending']),
+  lane: SightLaneSchema,
   prompt: z.string().min(1),
   description: z.string().min(1),
 });
 
+export const SuggestionKindSchema = z.enum(['musical', 'gag', 'scene']);
+
+export const SuggestionStatusSchema = z.enum(['suggested', 'ready-to-generate', 'in-production']);
+
 export const CutawaySchema = z.object({
   id: z.string().min(1),
-  kind: z.enum(['musical', 'gag', 'scene']),
+  kind: SuggestionKindSchema,
   title: z.string().min(1),
-  status: z.enum(['suggested', 'ready-to-generate', 'in-production']),
+  status: SuggestionStatusSchema,
   runtime: z.string(),
   episode: z.string(),
   songId: z.string(),
@@ -57,15 +63,19 @@ export const CutawaySchema = z.object({
   sightBank: z.array(SightCandidateSchema).optional(),
 });
 
+export const ImageKindSchema = z.enum(['scene', 'suggestion', 'test', 'character']);
+
+export const MediaTypeSchema = z.enum(['image', 'video']);
+
 export const FilmSceneSchema = z.object({
   id: z.string().min(1),
-  imageKind: z.enum(['scene', 'suggestion', 'test', 'character']),
+  imageKind: ImageKindSchema,
   episode: z.string(),
   title: z.string(),
   prompt: z.string(),
   promptVariations: z.array(z.string()),
   imagePath: z.string().optional(),
-  mediaType: z.enum(['image', 'video']),
+  mediaType: MediaTypeSchema,
   musicCue: z.string(),
   musicStyle: z.string(),
   description: z.string(),
@@ -86,11 +96,13 @@ export const SeriesCharacterSchema = z.object({
   imagePath: z.string().optional(),
 });
 
+export const DaisyFrameTreatmentSchema = z.enum(['color', 'period']);
+
 export const DaisyBellFrameSchema = z.object({
   id: z.string(),
   order: z.number(),
   title: z.string(),
-  treatment: z.enum(['color', 'period']),
+  treatment: DaisyFrameTreatmentSchema,
   beat: z.string(),
   description: z.string(),
   prompt: z.string(),
@@ -109,7 +121,7 @@ export const DaisyBellSequenceBeatSchema = z.object({
   id: z.string(),
   step: z.number(),
   title: z.string(),
-  treatment: z.enum(['color', 'period', 'flip']),
+  treatment: z.union([DaisyFrameTreatmentSchema, z.literal('flip')]),
   summary: z.string(),
 });
 
@@ -201,6 +213,8 @@ export const SequenceMediumSchema = z.enum(['unreal', 'photoreal', 'cartoon', 'm
 
 export const SequenceAspectSchema = z.enum(['16:9', '4:3']);
 
+export const SequenceRendererSchema = z.enum(['graph', 'custom']);
+
 export const SequenceSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -222,17 +236,18 @@ export const SequenceSchema = z.object({
    * `graph`: played from a scene graph (`<id>.graph.json` or the `graph` key). `custom`: a
    * hand-written factory in `src/sequences/registry.ts`. Derived from the graph when omitted.
    */
-  renderer: z.enum(['graph', 'custom']).optional(),
+  renderer: SequenceRendererSchema.optional(),
   graph: SequenceGraphSchema.optional(),
 });
 
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
-export type CutawaySegment = z.infer<typeof CutawaySegmentSchema>;
-export type SightCandidate = z.infer<typeof SightCandidateSchema>;
+export type CutawaySegmentRecord = z.infer<typeof CutawaySegmentSchema>;
+export type SightCandidateRecord = z.infer<typeof SightCandidateSchema>;
 export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
+export type StaffRole = z.infer<typeof StaffRoleSchema>;
 export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;
 export type EpisodeStatus = z.infer<typeof EpisodeStatusSchema>;
 export type EpisodeFiles = z.infer<typeof EpisodeFilesSchema>;
@@ -242,3 +257,13 @@ export type CartoonRecord = z.infer<typeof CartoonSchema>;
 export type SequenceMedium = z.infer<typeof SequenceMediumSchema>;
 export type SequenceAspect = z.infer<typeof SequenceAspectSchema>;
 export type SequenceRecord = z.infer<typeof SequenceSchema>;
+export type SightLane = z.infer<typeof SightLaneSchema>;
+export type SuggestionKind = z.infer<typeof SuggestionKindSchema>;
+export type SuggestionStatus = z.infer<typeof SuggestionStatusSchema>;
+export type ImageKind = z.infer<typeof ImageKindSchema>;
+export type MediaType = z.infer<typeof MediaTypeSchema>;
+export type DaisyFrameTreatment = z.infer<typeof DaisyFrameTreatmentSchema>;
+export type DaisyBellFrameRecord = z.infer<typeof DaisyBellFrameSchema>;
+export type DaisyBellSight = z.infer<typeof DaisyBellSightSchema>;
+export type DaisyBellSequenceBeat = z.infer<typeof DaisyBellSequenceBeatSchema>;
+export type SequenceRenderer = z.infer<typeof SequenceRendererSchema>;

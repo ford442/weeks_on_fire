@@ -537,5 +537,5 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Completely weird, completely professional. If he acknowledges the rain it becomes a workplace joke, which is the dry lane we are leaving. No readable station logo.",
     agent: "grok",
     stillUrl: cartoonImg9,
-  }
+  },
 ];

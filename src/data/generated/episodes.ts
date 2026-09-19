@@ -71,5 +71,5 @@ export const episodeRecords: EpisodeRecord[] = [
       notes: "notes/scenes/the-long-way-up.md",
       seasonArc: "docs/season-arc.md",
     },
-  }
+  },
 ];

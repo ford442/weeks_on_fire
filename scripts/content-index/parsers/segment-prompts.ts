@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CutawaySegment } from '../schemas';
+import type { CutawaySegmentRecord } from '../schemas';
 
 function parseTimeToSeconds(value: string): number {
   const parts = value.trim().split(':').map(Number);
@@ -49,10 +49,10 @@ export function parseSegmentPromptsFile(
   repoRoot: string,
   relativePath: string,
   cutawayId: string,
-): CutawaySegment[] {
+): CutawaySegmentRecord[] {
   const fullPath = join(repoRoot, relativePath);
   const markdown = readFileSync(fullPath, 'utf8');
-  const segments: CutawaySegment[] = [];
+  const segments: CutawaySegmentRecord[] = [];
 
   const headerPattern = /^##\s+([A-Z0-9]+)\s+—\s+(.+?)\s+\(([^)]+)\)/gm;
   const matches = [...markdown.matchAll(headerPattern)];
@@ -99,8 +99,8 @@ export function parseSegmentPromptsFile(
   return parseSoftGyreTable(markdown, cutawayId);
 }
 
-function parseSoftGyreTable(markdown: string, cutawayId: string): CutawaySegment[] {
-  const segments: CutawaySegment[] = [];
+function parseSoftGyreTable(markdown: string, cutawayId: string): CutawaySegmentRecord[] {
+  const segments: CutawaySegmentRecord[] = [];
   const rowPattern = /\|\s*([0-9:]+)[–-]([0-9:]+)\s*\|\s*\*\*([A-Z])\s+—\s+([^*]+)\*\*/g;
 
   for (const match of markdown.matchAll(rowPattern)) {

@@ -95,5 +95,5 @@ When importing a `clip-stacker-*.json` file:
 - Schema: [`src/schemas/production.ts`](../src/schemas/production.ts) (`ClipStackerPayloadSchema`, `EpisodeProductionSchema`, `StoredProductionSchema`)
 - Export/import logic: [`src/data/production.ts`](../src/data/production.ts) (`exportToClipStacker`, `clipStackerToProduction`)
 - Storage wrapper: [`src/lib/productionStorage.ts`](../src/lib/productionStorage.ts)
-- Timeline UI: [`src/App.tsx`](../src/App.tsx)
+- Timeline UI: [`src/components/TimelinePage.tsx`](../src/components/TimelinePage.tsx)
 - Committed scene data: [`episodes/episode-NN/scenes.json`](../episodes/)

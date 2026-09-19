@@ -61,5 +61,5 @@ export const staffRecords: StaffRecord[] = [
     quote: "If you cannot copy the prompt and get something close to the still, we did not finish the shot. We only finished a screenshot.",
     credits: ["Prompt variation sets per episode", "Theme & tag taxonomy", "Lightbox copy-ready workflow"],
     imageFile: "elio-marsh.jpg",
-  }
+  },
 ];

@@ -13,5 +13,6 @@
   "grokImaginePrompt": "Photoreal interior still, 16:9, a receding night corridor of honey-oak screen-door frames with grey mesh, hanging caged bulbs throwing warm pools on painted floorboards, pale moths as commas around the nearest bulb, no people, no faces, no pizza box, no moon, three supporting figures: a worn threshold, a door closer, a painted floor runner, camera at chest height looking down the corridor, 35mm, T2.8, fine grain, warm bulb against grey mesh against honey-oak, Grok Imagine style",
   "geminiOmniPrompt": "110-second sequence. Slow dolly down a night corridor of eight screen doors. Moths orbit bulbs. The last door opens onto nested brass lattices and a matte ember core. No crane to the sky, no second moon, no people. Loop returns to the first porch.",
   "notes": "In-hub sequence is procedural WebGL. Not Porch Light Meridian (that one cranes to a wrong moon). Keep the yard offscreen the whole time.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

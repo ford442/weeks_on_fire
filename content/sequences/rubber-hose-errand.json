@@ -13,5 +13,6 @@
   "grokImaginePrompt": "3D cel-shaded cartoon still, 4:3, early-1990s Saturday-morning TV paint, NOT photoreal, a round errand-runner with a cream sphere head and orange sphere body and black rubber-hose limbs frozen mid-stride on a muted checkerboard stage, two black dot eyes, thick ink outline on every form, a TV-paint flat cube waiting stage right, cream cyclorama, two orange curtain legs, locked camera, no film grain, no lens, no HUD, Grok Imagine style",
   "geminiOmniPrompt": "32-second 4:3 loop. Locked camera. Character squash-drops in, walks to the cube, wears it as a hat, hops twice, exits stage right. Limbs are rubber-hose, not IK humans. Cube never looks metal. No photoreal lighting. Ends on empty stage.",
   "notes": "In-hub sequence is procedural WebGL. Do not file this as a 2D Warner Bros. still — the medium is 3D cel. Not Pin Cat, not Courtesy Shuttle.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

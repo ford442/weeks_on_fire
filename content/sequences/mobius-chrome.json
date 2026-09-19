@@ -13,5 +13,6 @@
   "grokImaginePrompt": "Photoreal object still, 16:9, a single satin-chrome Möbius ribbon floating in a true black void, one-sided band catching a hard coal-orange rim and a cold cyan fill in the concavities, no sphere, no puddle, no floor, no HUD, no faces, three supporting figures: a tiny specular streak along the edge, a darker fold where the twist happens, a faint second highlight repeating the first, locked camera, 85mm, T2.8, fine grain, chrome against orange rim against cyan hollow against black, Grok Imagine style",
   "geminiOmniPrompt": "75-second loop. Chrome Möbius ribbon rotates, tightens, morphs toward a torus knot, splits into two phase-offset bands, and merges back to one Möbius. Camera slow boom only. Never a sphere. No floor, no HUD. Ends on the opening twist.",
   "notes": "In-hub sequence is procedural WebGL. Do not land on a sphere — that packet is molten-silver-sphere. The ribbon is the employee.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

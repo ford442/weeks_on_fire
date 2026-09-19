@@ -1,18 +1,33 @@
 import { describe, expect, it } from 'vitest';
 
 import { sequences } from '../data/sequences';
-import { createSequenceScene, sequenceRendererIds } from './registry';
+import { customRendererIds, createSequenceScene } from './registry';
 
 describe('sequence renderers', () => {
-  it('covers every catalog sequence', () => {
+  it('gives every catalog sequence a graph or a registered custom factory', () => {
     for (const sequence of sequences) {
-      expect(sequenceRendererIds).toContain(sequence.id);
-      expect(createSequenceScene(sequence.id)).toBeDefined();
+      if (sequence.renderer === 'graph') {
+        expect(sequence.graph, sequence.id).toBeDefined();
+        expect(customRendererIds, sequence.id).not.toContain(sequence.id);
+      } else {
+        expect(sequence.graph, sequence.id).toBeUndefined();
+        expect(customRendererIds, sequence.id).toContain(sequence.id);
+      }
+      expect(createSequenceScene(sequence.id), sequence.id).toBeDefined();
     }
   });
 
+  it('has no factory without a catalog record', () => {
+    const ids = new Set(sequences.map((sequence) => sequence.id));
+    for (const id of customRendererIds) expect(ids.has(id), id).toBe(true);
+  });
+
+  it('keeps at least one graph-only and one custom sequence shipped', () => {
+    expect(sequences.some((sequence) => sequence.renderer === 'graph')).toBe(true);
+    expect(sequences.some((sequence) => sequence.renderer === 'custom')).toBe(true);
+  });
+
   it('keeps every catalog duration between 10 and 120 seconds', () => {
-    expect(sequences).toHaveLength(9);
     for (const sequence of sequences) {
       expect(sequence.durationSec).toBeGreaterThanOrEqual(10);
       expect(sequence.durationSec).toBeLessThanOrEqual(120);

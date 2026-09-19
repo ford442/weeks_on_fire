@@ -1,6 +1,7 @@
 import { Pause, Play, SkipBack, SkipForward, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { CutawaySegment } from '../data/suggestions';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
 const MIN_DWELL_SEC = 2.5;
 const COLOR_WHIP_DIALECTS = [
@@ -43,23 +44,6 @@ function ColorWhipField({ dialect }: { dialect: ColorWhipDialect }) {
 
 function segmentDwellSec(segment: CutawaySegment): number {
   return segment.durationSec === 0 ? MIN_DWELL_SEC : segment.durationSec;
-}
-
-function usePrefersReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(
-    () =>
-      typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-  );
-
-  useEffect(() => {
-    const query = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const onChange = () => setReduced(query.matches);
-    query.addEventListener('change', onChange);
-    return () => query.removeEventListener('change', onChange);
-  }, []);
-
-  return reduced;
 }
 
 interface CutawayPreviewProps {

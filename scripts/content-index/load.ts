@@ -11,6 +11,7 @@ import {
   CartoonSchema,
   SequenceSchema,
 } from './schemas';
+import { SequenceGraphSchema } from './graph-schema';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
@@ -173,11 +174,18 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
     throw new Error('Missing content/sequences/. Add one JSON file per 3D sequence.');
   }
 
-  const files = readdirSync(sequencesDir)
-    .filter((file) => file.endsWith('.json'))
-    .sort();
+  const isGraphFile = (file: string) => file.endsWith('.graph.json');
+  const files = readdirSync(sequencesDir).filter((file) => file.endsWith('.json'));
+  const recordFiles = files.filter((file) => !isGraphFile(file)).sort();
+  const ids = new Set(recordFiles.map((file) => file.replace(/\.json$/, '')));
 
-  return files
+  for (const file of files.filter(isGraphFile)) {
+    if (!ids.has(file.replace(/\.graph\.json$/, ''))) {
+      throw new Error(`Graph file ${file} has no matching content/sequences/<id>.json record`);
+    }
+  }
+
+  return recordFiles
     .map((file) => {
       const raw = JSON.parse(readFileSync(join(sequencesDir, file), 'utf8'));
       const record = SequenceSchema.parse(raw);
@@ -185,9 +193,31 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
       if (record.id !== expectedId) {
         throw new Error(`Sequence file ${file} id mismatch: ${record.id}`);
       }
+      const graphFile = `${expectedId}.graph.json`;
+      if (files.includes(graphFile)) {
+        if (record.graph) {
+          throw new Error(`Sequence ${record.id} has both a graph key and ${graphFile}`);
+        }
+        try {
+          record.graph = SequenceGraphSchema.parse(
+            JSON.parse(readFileSync(join(sequencesDir, graphFile), 'utf8')),
+          );
+        } catch (error) {
+          throw new Error(
+            `Invalid ${graphFile}: ${error instanceof Error ? error.message : error}`,
+            { cause: error },
+          );
+        }
+      }
       return record;
     })
     .sort((a, b) => a.durationSec - b.durationSec || a.id.localeCompare(b.id));
+}
+
+/** Ids with a hand-written factory in `src/sequences/registry.ts` (`'id': createFoo,`). */
+export function loadCustomRendererIds(repoRoot: string): Set<string> {
+  const source = readFileSync(join(repoRoot, 'src/sequences/registry.ts'), 'utf8');
+  return new Set([...source.matchAll(/^\s*'([a-z0-9-]+)':\s*create\w+,?\s*$/gm)].map((m) => m[1]!));
 }
 
 export function listMp3Filenames(repoRoot: string): string[] {

@@ -5,6 +5,8 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { loadCartoons, loadSequences } from './load';
 import type { ParsedSong } from './load';
+import { SequenceGraphSchema } from './graph-schema';
+import { SequenceSchema } from './schemas';
 import type { CartoonRecord, CutawayRecord, SequenceRecord } from './schemas';
 import { validateContent, validateCartoons, validateSequences } from './validate';
 
@@ -179,9 +181,31 @@ function makeSequence(overrides: Partial<SequenceRecord> = {}): SequenceRecord {
     visual: 'Brass wire.',
     motion: 'One orbit.',
     tags: [],
+    renderer: 'custom',
     ...overrides,
   };
 }
+
+const graph: NonNullable<SequenceRecord['graph']> = {
+  camera: { type: 'locked', eye: [0, 1, 5], target: [0, 0, 0] },
+  nodes: [
+    {
+      id: 'cube',
+      geometry: { type: 'box', size: [1, 1, 1] },
+      material: { kind: 'lit', color: [1, 1, 1] },
+    },
+  ],
+  clips: [
+    {
+      target: 'cube',
+      property: 'scale',
+      keys: [
+        { t: 0, v: [0, 0, 0] },
+        { t: 4, v: [1, 1, 1] },
+      ],
+    },
+  ],
+};
 
 describe('validateSequences', () => {
   it('passes for unique sequence ids in range', () => {
@@ -200,6 +224,102 @@ describe('validateSequences', () => {
     expect(() => validateSequences('/tmp', [makeSequence({ durationSec: 8 })])).toThrow(
       /durationSec 8 is outside 10–120 seconds/,
     );
+  });
+
+  it('accepts a graph sequence without a factory', () => {
+    expect(() =>
+      validateSequences('/tmp', [makeSequence({ renderer: undefined, graph })], new Set()),
+    ).not.toThrow();
+  });
+
+  it('flags a non-custom sequence with no graph', () => {
+    expect(() => validateSequences('/tmp', [makeSequence({ renderer: undefined })])).toThrow(
+      /sequence-1 has no graph/,
+    );
+  });
+
+  it('flags a custom sequence with no registered factory', () => {
+    expect(() => validateSequences('/tmp', [makeSequence()], new Set(['other']))).toThrow(
+      /no factory in src\/sequences\/registry.ts/,
+    );
+    expect(() =>
+      validateSequences('/tmp', [makeSequence()], new Set(['sequence-1'])),
+    ).not.toThrow();
+  });
+
+  it('flags graph + custom conflicts', () => {
+    expect(() => validateSequences('/tmp', [makeSequence({ graph })])).toThrow(
+      /declares renderer "custom"/,
+    );
+    expect(() =>
+      validateSequences(
+        '/tmp',
+        [makeSequence({ renderer: 'graph', graph })],
+        new Set(['sequence-1']),
+      ),
+    ).toThrow(/graph and a custom factory/);
+  });
+
+  it('flags graph times past the duration', () => {
+    const late = { ...graph, loop: { inSec: 0, outSec: 40 } };
+    expect(() =>
+      validateSequences('/tmp', [makeSequence({ renderer: 'graph', graph: late })]),
+    ).toThrow(/past durationSec 16: 40/);
+  });
+});
+
+describe('SequenceGraphSchema', () => {
+  const invalid = (patch: Record<string, unknown>) =>
+    SequenceSchema.safeParse({ ...makeSequence(), graph: { ...graph, ...patch } });
+
+  it('parses a valid graph', () => {
+    expect(SequenceGraphSchema.safeParse(graph).success).toBe(true);
+  });
+
+  it('rejects out-of-order keys, unknown targets and mismatched value shapes', () => {
+    const clip = graph.clips![0]!;
+    expect(
+      invalid({
+        clips: [
+          {
+            ...clip,
+            keys: [
+              { t: 2, v: [0, 0, 0] },
+              { t: 1, v: [1, 1, 1] },
+            ],
+          },
+        ],
+      }).success,
+    ).toBe(false);
+    expect(invalid({ clips: [{ ...clip, target: 'nope' }] }).success).toBe(false);
+    expect(invalid({ clips: [{ ...clip, keys: [{ t: 0, v: 1 }] }] }).success).toBe(false);
+    expect(
+      invalid({ clips: [{ ...clip, property: 'fogDensity', keys: [{ t: 0, v: 1 }] }] }).success,
+    ).toBe(false);
+  });
+
+  it('rejects duplicate ids, unknown keys and geometry/material mismatches', () => {
+    const node = graph.nodes[0]!;
+    expect(invalid({ nodes: [node, node] }).success).toBe(false);
+    expect(invalid({ nodes: [{ ...node, translate: [0, 0, 0] }] }).success).toBe(false);
+    expect(
+      invalid({ nodes: [{ ...node, material: { kind: 'line', color: [1, 1, 1] } }] }).success,
+    ).toBe(false);
+    expect(
+      invalid({
+        nodes: [
+          {
+            ...node,
+            geometry: { type: 'lineCube', size: 1 },
+            material: { kind: 'lit', color: [1, 1, 1] },
+          },
+        ],
+      }).success,
+    ).toBe(false);
+  });
+
+  it('rejects an inverted loop', () => {
+    expect(invalid({ loop: { inSec: 5, outSec: 2 } }).success).toBe(false);
   });
 });
 
@@ -232,5 +352,31 @@ describe('loadSequences', () => {
     );
 
     expect(loadSequences(repoRoot)).toEqual([makeSequence()]);
+  });
+
+  it('attaches <id>.graph.json and does not treat it as a record', () => {
+    mkdirSync(join(repoRoot, 'content/sequences'), { recursive: true });
+    const record = makeSequence({ renderer: undefined });
+    writeFileSync(join(repoRoot, 'content/sequences/sequence-1.json'), JSON.stringify(record));
+    writeFileSync(join(repoRoot, 'content/sequences/sequence-1.graph.json'), JSON.stringify(graph));
+
+    expect(loadSequences(repoRoot)).toEqual([{ ...record, graph }]);
+  });
+
+  it('fails on an invalid or orphaned graph file', () => {
+    mkdirSync(join(repoRoot, 'content/sequences'), { recursive: true });
+    writeFileSync(
+      join(repoRoot, 'content/sequences/sequence-1.json'),
+      JSON.stringify(makeSequence({ renderer: undefined })),
+    );
+    writeFileSync(
+      join(repoRoot, 'content/sequences/sequence-1.graph.json'),
+      JSON.stringify({ ...graph, nodes: [] }),
+    );
+    expect(() => loadSequences(repoRoot)).toThrow(/Invalid sequence-1.graph.json/);
+
+    rmSync(join(repoRoot, 'content/sequences/sequence-1.graph.json'));
+    writeFileSync(join(repoRoot, 'content/sequences/ghost.graph.json'), JSON.stringify(graph));
+    expect(() => loadSequences(repoRoot)).toThrow(/ghost.graph.json has no matching/);
   });
 });

@@ -2,7 +2,10 @@ import { Pause, Play, RotateCcw } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 import { useMediaCoordinator } from '../contexts/MediaSessionContext';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import { createSequenceGl } from '../lib/webgl/context';
 import { SequenceEngine } from '../lib/webgl/engine';
+import { shouldAnimate } from '../lib/webgl/loop';
 import { formatTimecode } from '../lib/timecode';
 import { createSequenceScene } from '../sequences/registry';
 import type { SequenceRecord } from '../data/sequences';
@@ -20,11 +23,15 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
   const lastUiRef = useRef(0);
   const engineRef = useRef<SequenceEngine | null>(null);
   const sceneRef = useRef<ReturnType<typeof createSequenceScene>>(undefined);
+  const wakeRef = useRef<(() => void) | null>(null);
+  const reducedMotion = usePrefersReducedMotion();
+  const reducedMotionRef = useRef(reducedMotion);
 
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(!reducedMotion);
   const [loop, setLoop] = useState(true);
   const [uiTime, setUiTime] = useState(0);
   const [unsupported, setUnsupported] = useState(false);
+  const [contextLost, setContextLost] = useState(false);
 
   const coordinator = useMediaCoordinator();
   const duration = sequence.durationSec;
@@ -32,7 +39,17 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
 
   useEffect(() => {
     playingRef.current = playing;
+    wakeRef.current?.();
   }, [playing]);
+
+  useEffect(() => {
+    reducedMotionRef.current = reducedMotion;
+    if (reducedMotion && playingRef.current) {
+      offsetRef.current += (performance.now() - originRef.current) / 1000;
+      playingRef.current = false;
+      setPlaying(false);
+    }
+  }, [reducedMotion]);
 
   useEffect(() => {
     loopRef.current = loop;
@@ -43,26 +60,55 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     originRef.current = performance.now();
     lastUiRef.current = 0;
     setUiTime(0);
-    setPlaying(true);
-    playingRef.current = true;
+    const start = !reducedMotionRef.current;
+    setPlaying(start);
+    playingRef.current = start;
   }, [sequence.id]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const gl = canvas.getContext('webgl', { antialias: true, alpha: false });
+    const gl = createSequenceGl(canvas);
     if (!gl) {
       setUnsupported(true);
       return;
     }
     setUnsupported(false);
+    setContextLost(false);
 
-    const engine = new SequenceEngine(gl);
-    const scene = createSequenceScene(sequence.id);
-    engineRef.current = engine;
-    sceneRef.current = scene;
-    scene?.init(engine);
+    let lost = false;
+    let hidden = document.hidden;
+
+    const setup = (): boolean => {
+      try {
+        const engine = new SequenceEngine(gl);
+        const scene = createSequenceScene(sequence.id);
+        scene?.init(engine);
+        engineRef.current = engine;
+        sceneRef.current = scene;
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
+    const teardown = () => {
+      try {
+        sceneRef.current?.dispose();
+        engineRef.current?.dispose();
+      } catch {
+        // GL objects are already gone after a context loss.
+      }
+      engineRef.current = null;
+      sceneRef.current = undefined;
+    };
+
+    if (!setup()) {
+      teardown();
+      setUnsupported(true);
+      return;
+    }
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -116,24 +162,78 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       }
     };
 
+    // The loop only keeps ticking while playing and visible. Paused players draw single frames
+    // on demand (seek, resize, resume) through `wake`.
     let raf = 0;
-    const tick = (now: number) => {
+    const frame = (now: number) => {
+      raf = 0;
       draw(now);
-      raf = requestAnimationFrame(tick);
+      if (
+        shouldAnimate({ playing: playingRef.current, documentHidden: hidden, contextLost: lost })
+      ) {
+        raf = requestAnimationFrame(frame);
+      }
     };
-    raf = requestAnimationFrame(tick);
+    const wake = () => {
+      if (raf === 0 && !lost && !hidden) raf = requestAnimationFrame(frame);
+    };
+    wakeRef.current = wake;
     originRef.current = performance.now();
+    wake();
 
-    const onResize = () => resize();
+    const onVisibility = () => {
+      const now = performance.now();
+      if (document.hidden) {
+        hidden = true;
+        cancelAnimationFrame(raf);
+        raf = 0;
+        // Freeze the film clock so it does not jump ahead while the tab is in the background.
+        if (playingRef.current) offsetRef.current += (now - originRef.current) / 1000;
+        originRef.current = now;
+      } else {
+        hidden = false;
+        originRef.current = now;
+        wake();
+      }
+    };
+
+    const onLost = (event: Event) => {
+      event.preventDefault();
+      lost = true;
+      cancelAnimationFrame(raf);
+      raf = 0;
+      if (playingRef.current) offsetRef.current += (performance.now() - originRef.current) / 1000;
+      originRef.current = performance.now();
+      teardown();
+      setContextLost(true);
+    };
+
+    const onRestored = () => {
+      if (!setup()) {
+        teardown();
+        setUnsupported(true);
+        return;
+      }
+      lost = false;
+      originRef.current = performance.now();
+      setContextLost(false);
+      wake();
+    };
+
+    const onResize = () => wake();
     window.addEventListener('resize', onResize);
+    document.addEventListener('visibilitychange', onVisibility);
+    canvas.addEventListener('webglcontextlost', onLost);
+    canvas.addEventListener('webglcontextrestored', onRestored);
 
     return () => {
       cancelAnimationFrame(raf);
+      wakeRef.current = null;
       window.removeEventListener('resize', onResize);
-      scene?.dispose();
-      engine.dispose();
-      engineRef.current = null;
-      sceneRef.current = undefined;
+      document.removeEventListener('visibilitychange', onVisibility);
+      canvas.removeEventListener('webglcontextlost', onLost);
+      canvas.removeEventListener('webglcontextrestored', onRestored);
+      teardown();
     };
   }, [coordinator, duration, mediaId, sequence.id]);
 
@@ -180,6 +280,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     setUiTime(0);
     playingRef.current = true;
     setPlaying(true);
+    wakeRef.current?.();
   };
 
   const seek = (next: number) => {
@@ -187,6 +288,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     offsetRef.current = clamped;
     originRef.current = performance.now();
     setUiTime(clamped);
+    wakeRef.current?.();
   };
 
   const aspectClass = sequence.aspect === '4:3' ? 'aspect-[4/3]' : 'aspect-video';
@@ -203,6 +305,15 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
         {unsupported ? (
           <p className="absolute inset-0 flex items-center justify-center p-4 text-center text-sm text-zinc-400">
             WebGL is unavailable in this browser, so the in-hub player cannot run.
+          </p>
+        ) : null}
+        {contextLost && !unsupported ? (
+          <p
+            role="status"
+            className="absolute inset-0 flex items-center justify-center bg-black p-4 text-center text-sm text-zinc-400"
+          >
+            The graphics context was lost. The player will resume automatically if the browser
+            restores it; otherwise reload the page.
           </p>
         ) : null}
       </div>

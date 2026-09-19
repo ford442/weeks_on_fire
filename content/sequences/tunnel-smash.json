@@ -13,5 +13,6 @@
   "grokImaginePrompt": "Photoreal object still, 16:9, a smash-zoom into concentric satin-brass rings filling the frame, off-center vanishing point in the lower-left third never reached, a matte coal-orange core the size of a fist far ahead with no rays, radial motion blur on the nearest ring, no floor, no HUD, no checkerboard, no faces, three supporting figures: a torn ring edge, a spark comma racing past, a colder cyan fill in one hollow, 35mm, T2.0, photographed zoom blur not a digital wormhole, brass against ember against true black, Grok Imagine style",
   "geminiOmniPrompt": "12-second smash-zoom loop. Camera lurches toward an off-center matte ember through eight brass rings on every 150 BPM kick — thirty smashes. Vanishing point never arrives. No pull-back, no slow push, no cave, no sphere. Ends on the first ring.",
   "notes": "Do not land this in Molten Silver Sphere's cave. The core is Lattice Hymn's ember, employed as a destination that refuses. In-hub sequence is procedural WebGL.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

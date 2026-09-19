@@ -604,6 +604,7 @@ export function emitSequencesModule(
     notes?: string;
     agent?: string;
     stillImagePath?: string;
+    graph?: unknown;
   }>,
 ): string {
   const imageImports = new Map<string, string>();
@@ -632,6 +633,8 @@ export function emitSequencesModule(
           : '',
         sequence.notes ? `    notes: ${toTsString(sequence.notes)},` : '',
         sequence.agent ? `    agent: ${toTsString(sequence.agent)},` : '',
+        `    renderer: ${toTsString(sequence.graph ? 'graph' : 'custom')},`,
+        sequence.graph ? `    graph: ${JSON.stringify(sequence.graph)},` : '',
         sequence.stillImagePath
           ? `    stillUrl: ${requiredBinding(imageImports, sequence.stillImagePath)},`
           : '',

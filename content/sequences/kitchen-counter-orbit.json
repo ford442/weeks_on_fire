@@ -13,5 +13,6 @@
   "grokImaginePrompt": "Photoreal object still, 16:9, a honey-oak kitchen counter with a glazed porcelain mug of coffee, a brass teaspoon lying a few degrees off square, and one navel orange, cream plaster wall behind, a thin steam wisp leaving the mug, no hands, no faces, no clock, three supporting figures: a caged bulb overhead, a wall socket with no plug, a folded tea towel at the far edge, warm pooled key light with cool fill from camera left, camera at counter height, 50mm, T2.8, fine grain, glazed porcelain against satin brass against warm honey-oak, Grok Imagine style",
   "geminiOmniPrompt": "48-second seamless orbit. Camera travels 360 degrees around the mug, spoon, and orange at counter height with a slight boom. Steam rises. The spoon yaws a few degrees and corrects. No hands enter. No clock. Ends on the opening heading.",
   "notes": "In-hub sequence is procedural WebGL. Keep the steam the only moving weather. Not the Long Weekend kitchen, not a gag with a calendar.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

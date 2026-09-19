@@ -18,6 +18,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "12-second seamless whip. Camera completes four orbits around the mug, spoon, and orange at counter height. Heading refreshes on every 150 BPM kick. Spoon spins as a propeller with afterimage ghosts. Steam streaks. No hands. Ends on the opening heading.",
     notes: "Fast sibling of Kitchen Counter Orbit. Do not slow the camera into a visit. The mug does not move — it is employed. In-hub sequence is procedural WebGL.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "tunnel-smash",
@@ -35,6 +36,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "12-second smash-zoom loop. Camera lurches toward an off-center matte ember through eight brass rings on every 150 BPM kick — thirty smashes. Vanishing point never arrives. No pull-back, no slow push, no cave, no sphere. Ends on the first ring.",
     notes: "Do not land this in Molten Silver Sphere's cave. The core is Lattice Hymn's ember, employed as a destination that refuses. In-hub sequence is procedural WebGL.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "hose-chase",
@@ -52,6 +54,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "16-second 4:3 loop. Locked camera. Character squash-drops in already wearing the cube, sprints on a repeating treadmill stage with wheel-blur legs and afterimage ghosts, then skids with a dust cloud and two grooves. Hat stays on. Limbs are rubber-hose. No photoreal lighting. Ends on empty stage.",
     notes: "Fast sibling of Rubber-Hose Errand. Do not lecture on the loop. Do not borrow the Pizza Guy, the fence cat, or Delivery Loop props. In-hub sequence is procedural WebGL.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "kick-lattice",
@@ -69,6 +72,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "16-second locked loop. Nested brass wireframe cubes hop on every 150 BPM kick — forty punches. One black frame on each kick, then the next snap already present. Core pulses, never blooms. No camera orbit, no slow assemble, no faces. Ends on kick zero.",
     notes: "Fast sibling of Lattice Hymn. Do not steal the slow orbit. Keep the core matte. In-hub sequence is procedural WebGL.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "lattice-hymn",
@@ -86,6 +90,8 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "16-second loop. Nested brass wireframe cubes and one icosahedron assemble from scale zero, then counter-rotate around a matte ember core while the camera completes one slow orbit and eases back. Core pulses once near the end. No floor, no HUD, no bloom spikes, no faces. Ends on the opening scale.",
     notes: "In-hub sequence is procedural WebGL, not an Imagine clip. Keep the core matte — if it reads as a sun the gag dies. Not the annex cube, not Marble tick-tack.",
     agent: "cursor-grok-4.6",
+    renderer: "graph",
+    graph: {"camera":{"type":"orbit","radius":[{"t":0,"v":5.4,"ease":"inOut"},{"t":3.5,"v":5}],"height":[{"t":0,"v":1.35,"ease":"inOut"},{"t":4,"v":1.8,"ease":"inOut"},{"t":8,"v":1.35,"ease":"inOut"},{"t":12,"v":0.9,"ease":"inOut"},{"t":16,"v":1.35}],"angle":[{"t":0,"v":0},{"t":16,"v":360}],"fov":48},"environment":{"background":[0.025,0.02,0.018],"lightDir":[0.4,0.75,0.5],"lightColor":[1,0.72,0.42],"ambient":[0.05,0.04,0.035],"fogDensity":0.04,"fogColor":[0.03,0.025,0.02]},"nodes":[{"id":"cube-1","geometry":{"type":"lineCube","size":0.9},"material":{"kind":"line","color":[0.72,0.5,0.28]},"spin":[22.9,20.1,10.3]},{"id":"cube-2","geometry":{"type":"lineCube","size":1.55},"material":{"kind":"line","color":[0.76,0.5,0.28]},"spin":[-22.9,-32.7,10.3]},{"id":"cube-3","geometry":{"type":"lineCube","size":2.25},"material":{"kind":"line","color":[0.8,0.5,0.28]},"spin":[22.9,45.3,10.3]},{"id":"cube-4","geometry":{"type":"lineCube","size":3.15},"material":{"kind":"line","color":[0.84,0.5,0.28]},"spin":[-22.9,-57.9,10.3]},{"id":"icosahedron","geometry":{"type":"icosahedronLines","radius":1.85},"material":{"kind":"line","color":[0.82,0.62,0.32]},"spin":[11.5,-18.9,0]},{"id":"core","geometry":{"type":"sphere","radius":0.28,"lat":18,"long":24},"material":{"kind":"lit","color":[0.55,0.18,0.05],"emissive":[0.55,0.16,0.04],"shininess":8},"spin":[0,28.6,0]},{"id":"sparks","geometry":{"type":"points","count":28,"radius":[0.55,1.75],"flatten":0.4,"seed":7},"material":{"kind":"unlit","color":[1,0.45,0.12],"size":4,"alpha":0.7},"spin":[0,24,0]}],"clips":[{"target":"cube-1","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-2","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-3","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"cube-4","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"icosahedron","property":"scale","keys":[{"t":0,"v":[0,0,0]},{"t":3.5,"v":[1,1,1]}],"ease":"inOut"},{"target":"core","property":"scale","keys":[{"t":11,"v":[1,1,1]},{"t":12.5,"v":[1.16,1.16,1.16]},{"t":14,"v":[1,1,1]}],"ease":"inOut"},{"target":"sparks","property":"alpha","keys":[{"t":0,"v":0},{"t":3.5,"v":0.7}],"ease":"inOut"}]},
   },
   {
     id: "rubber-hose-errand",
@@ -103,6 +109,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "32-second 4:3 loop. Locked camera. Character squash-drops in, walks to the cube, wears it as a hat, hops twice, exits stage right. Limbs are rubber-hose, not IK humans. Cube never looks metal. No photoreal lighting. Ends on empty stage.",
     notes: "In-hub sequence is procedural WebGL. Do not file this as a 2D Warner Bros. still — the medium is 3D cel. Not Pin Cat, not Courtesy Shuttle.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "kitchen-counter-orbit",
@@ -120,6 +127,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "48-second seamless orbit. Camera travels 360 degrees around the mug, spoon, and orange at counter height with a slight boom. Steam rises. The spoon yaws a few degrees and corrects. No hands enter. No clock. Ends on the opening heading.",
     notes: "In-hub sequence is procedural WebGL. Keep the steam the only moving weather. Not the Long Weekend kitchen, not a gag with a calendar.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "mobius-chrome",
@@ -137,6 +145,7 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "75-second loop. Chrome Möbius ribbon rotates, tightens, morphs toward a torus knot, splits into two phase-offset bands, and merges back to one Möbius. Camera slow boom only. Never a sphere. No floor, no HUD. Ends on the opening twist.",
     notes: "In-hub sequence is procedural WebGL. Do not land on a sphere — that packet is molten-silver-sphere. The ribbon is the employee.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   },
   {
     id: "screen-door-recessional",
@@ -154,5 +163,6 @@ export const sequenceRecords: SequenceRecord[] = [
     geminiOmniPrompt: "110-second sequence. Slow dolly down a night corridor of eight screen doors. Moths orbit bulbs. The last door opens onto nested brass lattices and a matte ember core. No crane to the sky, no second moon, no people. Loop returns to the first porch.",
     notes: "In-hub sequence is procedural WebGL. Not Porch Light Meridian (that one cranes to a wrong moon). Keep the yard offscreen the whole time.",
     agent: "cursor-grok-4.6",
+    renderer: "custom",
   }
 ];

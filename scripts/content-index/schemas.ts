@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+import { SequenceGraphSchema } from './graph-schema';
+
 export const SongFrontmatterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -216,6 +218,12 @@ export const SequenceSchema = z.object({
   notes: z.string().optional(),
   agent: z.string().optional(),
   stillImagePath: z.string().optional(),
+  /**
+   * `graph`: played from a scene graph (`<id>.graph.json` or the `graph` key). `custom`: a
+   * hand-written factory in `src/sequences/registry.ts`. Derived from the graph when omitted.
+   */
+  renderer: z.enum(['graph', 'custom']).optional(),
+  graph: SequenceGraphSchema.optional(),
 });
 
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;

@@ -8,7 +8,9 @@ import {
   type Vec3,
 } from './math';
 import type { MeshData } from './mesh';
-import { compileProgram, uniform } from './program';
+import type { SequenceGl } from './context';
+import { compileProgram, type ShaderProgram } from './program';
+import { createVaoSupport, getVaoSupport, type VaoSupport } from './vao';
 
 const LIT_VS = `
 attribute vec3 aPosition;
@@ -134,11 +136,14 @@ export class GpuMesh {
   private readonly col: WebGLBuffer | null;
   private readonly idx: WebGLBuffer | null;
   private readonly hasIndex: boolean;
+  private readonly vaos: VaoSupport | null;
+  private vao: WebGLVertexArrayObject | WebGLVertexArrayObjectOES | null = null;
 
   constructor(
-    private readonly gl: WebGLRenderingContext,
+    private readonly gl: SequenceGl,
     mesh: MeshData,
   ) {
+    this.vaos = getVaoSupport(gl);
     const posBuf = gl.createBuffer();
     if (!posBuf) throw new Error('Unable to create buffer');
     this.pos = posBuf;
@@ -195,41 +200,61 @@ export class GpuMesh {
     this.gl.bufferData(this.gl.ARRAY_BUFFER, normals, this.gl.DYNAMIC_DRAW);
   }
 
-  bindPosition(location: number): void {
+  /**
+   * Binds position (0), normal (1) and color (2) attributes. Attributes the mesh lacks are
+   * disabled and fed a constant. Unused attributes are ignored by the line / point programs.
+   */
+  bind(fallbackColor: Vec3): void {
     const gl = this.gl;
-    gl.bindBuffer(gl.ARRAY_BUFFER, this.pos);
-    gl.enableVertexAttribArray(location);
-    gl.vertexAttribPointer(location, 3, gl.FLOAT, false, 0, 0);
-  }
-
-  bindNormal(location: number): void {
-    const gl = this.gl;
-    if (this.nrm) {
-      gl.bindBuffer(gl.ARRAY_BUFFER, this.nrm);
-      gl.enableVertexAttribArray(location);
-      gl.vertexAttribPointer(location, 3, gl.FLOAT, false, 0, 0);
-    } else {
-      gl.disableVertexAttribArray(location);
-      gl.vertexAttrib3f(location, 0, 1, 0);
+    const vaos = this.vaos;
+    if (vaos) {
+      this.vao ??= this.buildVao(vaos);
     }
+    if (vaos && this.vao) {
+      vaos.bind(this.vao);
+    } else {
+      this.bindAttributes();
+      if (this.hasIndex) gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.idx);
+    }
+    if (!this.nrm) gl.vertexAttrib3f(1, 0, 1, 0);
+    if (!this.col) gl.vertexAttrib3f(2, fallbackColor[0], fallbackColor[1], fallbackColor[2]);
   }
 
-  bindColor(location: number, fallback: Vec3): void {
+  unbind(): void {
+    if (this.vao) this.vaos?.bind(null);
+  }
+
+  private buildVao(vaos: VaoSupport): WebGLVertexArrayObject | WebGLVertexArrayObjectOES | null {
+    const vao = vaos.create();
+    if (!vao) return null;
+    vaos.bind(vao);
+    this.bindAttributes();
+    if (this.idx) this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.idx);
+    vaos.bind(null);
+    return vao;
+  }
+
+  private bindAttributes(): void {
     const gl = this.gl;
-    if (this.col) {
-      gl.bindBuffer(gl.ARRAY_BUFFER, this.col);
-      gl.enableVertexAttribArray(location);
-      gl.vertexAttribPointer(location, 3, gl.FLOAT, false, 0, 0);
-    } else {
-      gl.disableVertexAttribArray(location);
-      gl.vertexAttrib3f(location, fallback[0], fallback[1], fallback[2]);
+    const layout: [number, WebGLBuffer | null][] = [
+      [0, this.pos],
+      [1, this.nrm],
+      [2, this.col],
+    ];
+    for (const [location, buffer] of layout) {
+      if (buffer) {
+        gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+        gl.enableVertexAttribArray(location);
+        gl.vertexAttribPointer(location, 3, gl.FLOAT, false, 0, 0);
+      } else {
+        gl.disableVertexAttribArray(location);
+      }
     }
   }
 
   draw(): void {
     const gl = this.gl;
-    if (this.hasIndex && this.idx) {
-      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this.idx);
+    if (this.hasIndex) {
       gl.drawElements(this.mode, this.indexCount, gl.UNSIGNED_SHORT, 0);
     } else {
       gl.drawArrays(this.mode, 0, this.vertexCount);
@@ -238,6 +263,7 @@ export class GpuMesh {
 
   dispose(): void {
     const gl = this.gl;
+    if (this.vao) this.vaos?.delete(this.vao);
     gl.deleteBuffer(this.pos);
     if (this.nrm) gl.deleteBuffer(this.nrm);
     if (this.col) gl.deleteBuffer(this.col);
@@ -246,10 +272,10 @@ export class GpuMesh {
 }
 
 export class SequenceEngine {
-  readonly gl: WebGLRenderingContext;
-  private readonly lit: WebGLProgram;
-  private readonly line: WebGLProgram;
-  private readonly point: WebGLProgram;
+  readonly gl: SequenceGl;
+  private readonly lit: ShaderProgram;
+  private readonly line: ShaderProgram;
+  private readonly point: ShaderProgram;
   private readonly proj = createMat4();
   private readonly view = createMat4();
   private readonly normalMat = new Float32Array(9);
@@ -264,8 +290,13 @@ export class SequenceEngine {
   pointColor: Vec3 = [1, 0.7, 0.35];
   pointRange = 0;
 
-  constructor(gl: WebGLRenderingContext) {
+  /**
+   * Compiles every program and probes VAO support. After `webglcontextrestored`, construct a
+   * new engine (and re-init the scene): all GL objects from before the loss are gone.
+   */
+  constructor(gl: SequenceGl) {
     this.gl = gl;
+    createVaoSupport(gl);
     this.lit = compileProgram(gl, LIT_VS, LIT_FS, {
       aPosition: 0,
       aNormal: 1,
@@ -294,28 +325,27 @@ export class SequenceEngine {
   drawLit(mesh: GpuMesh, model: Mat4, options: LitOptions): void {
     const gl = this.gl;
     const program = this.lit;
-    gl.useProgram(program);
-    mesh.bindPosition(0);
-    mesh.bindNormal(1);
-    mesh.bindColor(2, options.color);
+    gl.useProgram(program.handle);
+    mesh.bind(options.color);
     this.bindCommonMatrices(program, model);
-    gl.uniform3fv(uniform(gl, program, 'uColor'), options.color);
-    gl.uniform3fv(uniform(gl, program, 'uEmissive'), options.emissive ?? [0, 0, 0]);
-    gl.uniform3fv(uniform(gl, program, 'uLightDir'), this.lightDir);
-    gl.uniform3fv(uniform(gl, program, 'uLightColor'), this.lightColor);
-    gl.uniform3fv(uniform(gl, program, 'uAmbient'), this.ambient);
-    gl.uniform3fv(uniform(gl, program, 'uEye'), this.eye);
-    gl.uniform1f(uniform(gl, program, 'uShininess'), options.shininess ?? 32);
-    gl.uniform1f(uniform(gl, program, 'uFogDensity'), this.fogDensity);
-    gl.uniform3fv(uniform(gl, program, 'uFogColor'), this.fogColor);
-    gl.uniform1f(uniform(gl, program, 'uCel'), options.cel ? 1 : 0);
-    gl.uniform1f(uniform(gl, program, 'uUseVertexColor'), options.useVertexColor ? 1 : 0);
-    gl.uniform3fv(uniform(gl, program, 'uPointPos'), this.pointPos);
-    gl.uniform3fv(uniform(gl, program, 'uPointColor'), this.pointColor);
-    gl.uniform1f(uniform(gl, program, 'uPointRange'), this.pointRange);
+    gl.uniform3fv(this.loc(program, 'uColor'), options.color);
+    gl.uniform3fv(this.loc(program, 'uEmissive'), options.emissive ?? [0, 0, 0]);
+    gl.uniform3fv(this.loc(program, 'uLightDir'), this.lightDir);
+    gl.uniform3fv(this.loc(program, 'uLightColor'), this.lightColor);
+    gl.uniform3fv(this.loc(program, 'uAmbient'), this.ambient);
+    gl.uniform3fv(this.loc(program, 'uEye'), this.eye);
+    gl.uniform1f(this.loc(program, 'uShininess'), options.shininess ?? 32);
+    gl.uniform1f(this.loc(program, 'uFogDensity'), this.fogDensity);
+    gl.uniform3fv(this.loc(program, 'uFogColor'), this.fogColor);
+    gl.uniform1f(this.loc(program, 'uCel'), options.cel ? 1 : 0);
+    gl.uniform1f(this.loc(program, 'uUseVertexColor'), options.useVertexColor ? 1 : 0);
+    gl.uniform3fv(this.loc(program, 'uPointPos'), this.pointPos);
+    gl.uniform3fv(this.loc(program, 'uPointColor'), this.pointColor);
+    gl.uniform1f(this.loc(program, 'uPointRange'), this.pointRange);
     gl.disable(gl.BLEND);
     gl.depthMask(true);
     mesh.draw();
+    mesh.unbind();
   }
 
   drawOutline(mesh: GpuMesh, model: Mat4, scale = 1.07): void {
@@ -334,49 +364,51 @@ export class SequenceEngine {
 
   drawLines(mesh: GpuMesh, model: Mat4, color: Vec3): void {
     const gl = this.gl;
-    gl.useProgram(this.line);
-    gl.disableVertexAttribArray(1);
-    gl.disableVertexAttribArray(2);
-    mesh.bindPosition(0);
+    gl.useProgram(this.line.handle);
+    mesh.bind(color);
     this.bindCommonMatrices(this.line, model);
-    gl.uniform3fv(uniform(gl, this.line, 'uColor'), color);
+    gl.uniform3fv(this.loc(this.line, 'uColor'), color);
     gl.disable(gl.BLEND);
     gl.depthMask(true);
     mesh.draw();
+    mesh.unbind();
   }
 
   drawPoints(mesh: GpuMesh, model: Mat4, color: Vec3, size: number, alpha: number): void {
     const gl = this.gl;
-    gl.useProgram(this.point);
-    gl.disableVertexAttribArray(1);
-    gl.disableVertexAttribArray(2);
-    mesh.bindPosition(0);
+    gl.useProgram(this.point.handle);
+    mesh.bind(color);
     this.bindCommonMatrices(this.point, model);
-    gl.uniform3fv(uniform(gl, this.point, 'uColor'), color);
-    gl.uniform1f(uniform(gl, this.point, 'uSize'), size);
-    gl.uniform1f(uniform(gl, this.point, 'uAlpha'), alpha);
+    gl.uniform3fv(this.loc(this.point, 'uColor'), color);
+    gl.uniform1f(this.loc(this.point, 'uSize'), size);
+    gl.uniform1f(this.loc(this.point, 'uAlpha'), alpha);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
     gl.depthMask(false);
     mesh.draw();
+    mesh.unbind();
     gl.depthMask(true);
     gl.disable(gl.BLEND);
   }
 
   dispose(): void {
-    this.gl.deleteProgram(this.lit);
-    this.gl.deleteProgram(this.line);
-    this.gl.deleteProgram(this.point);
+    this.gl.deleteProgram(this.lit.handle);
+    this.gl.deleteProgram(this.line.handle);
+    this.gl.deleteProgram(this.point.handle);
   }
 
-  private bindCommonMatrices(program: WebGLProgram, model: Mat4): void {
+  private loc(program: ShaderProgram, name: string): WebGLUniformLocation | null {
+    return program.uniforms.get(name) ?? null;
+  }
+
+  private bindCommonMatrices(program: ShaderProgram, model: Mat4): void {
     const gl = this.gl;
-    gl.uniformMatrix4fv(uniform(gl, program, 'uProj'), false, this.proj);
-    gl.uniformMatrix4fv(uniform(gl, program, 'uView'), false, this.view);
-    gl.uniformMatrix4fv(uniform(gl, program, 'uModel'), false, model);
+    gl.uniformMatrix4fv(this.loc(program, 'uProj'), false, this.proj);
+    gl.uniformMatrix4fv(this.loc(program, 'uView'), false, this.view);
+    gl.uniformMatrix4fv(this.loc(program, 'uModel'), false, model);
     if (program === this.lit) {
       normalFromMat4(this.normalMat, model);
-      gl.uniformMatrix3fv(uniform(gl, program, 'uNormalMat'), false, this.normalMat);
+      gl.uniformMatrix3fv(this.loc(program, 'uNormalMat'), false, this.normalMat);
     }
   }
 }

@@ -1,3 +1,4 @@
+import type { SequenceGraph } from '../sequences/graph/types';
 export interface Song {
   id: string;
   title: string;
@@ -246,6 +247,9 @@ export type SequenceMedium = 'unreal' | 'photoreal' | 'cartoon' | 'mixed';
 
 export type SequenceAspect = '16:9' | '4:3';
 
+/** `graph` plays from JSON; `custom` has a hand-written factory in `src/sequences/registry.ts`. */
+export type SequenceRenderer = 'graph' | 'custom';
+
 export interface SequenceRecord {
   id: string;
   title: string;
@@ -263,6 +267,9 @@ export interface SequenceRecord {
   notes?: string;
   agent?: string;
   stillUrl?: string;
+  renderer: SequenceRenderer;
+  /** Present when `renderer` is `graph`. */
+  graph?: SequenceGraph;
 }
 
 export const sequenceMediumMeta: Record<

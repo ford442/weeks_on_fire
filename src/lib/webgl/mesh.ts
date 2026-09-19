@@ -510,3 +510,43 @@ export function writePoints(
     });
   }
 }
+
+/** Surface of revolution around Y from `[radius, y]` profile pairs, ordered bottom to top. */
+export function createLathe(profile: readonly [number, number][], segments = 24): MeshData {
+  const positions: number[] = [];
+  const normals: number[] = [];
+  const indices: number[] = [];
+  const ring = segments + 1;
+
+  profile.forEach(([radius, y], j) => {
+    const prev = profile[Math.max(j - 1, 0)] ?? [radius, y];
+    const next = profile[Math.min(j + 1, profile.length - 1)] ?? [radius, y];
+    const dr = next[0] - prev[0];
+    const dy = next[1] - prev[1];
+    const len = Math.hypot(dr, dy) || 1;
+    const nr = dy / len;
+    const ny = -dr / len;
+    for (let i = 0; i <= segments; i++) {
+      const a = (i / segments) * Math.PI * 2;
+      const x = Math.cos(a);
+      const z = Math.sin(a);
+      positions.push(x * radius, y, z * radius);
+      normals.push(x * nr, ny, z * nr);
+    }
+  });
+
+  for (let j = 0; j < profile.length - 1; j++) {
+    for (let i = 0; i < segments; i++) {
+      const bottom = j * ring + i;
+      const top = (j + 1) * ring + i;
+      indices.push(bottom, top, bottom + 1, top, top + 1, bottom + 1);
+    }
+  }
+
+  return {
+    positions: new Float32Array(positions),
+    normals: new Float32Array(normals),
+    indices: new Uint16Array(indices),
+    mode: 'triangles',
+  };
+}

@@ -15,12 +15,34 @@ export function compileShader(
   return shader;
 }
 
+export interface ShaderProgram {
+  readonly handle: WebGLProgram;
+  /** Uniform locations resolved once at link time; array uniforms are keyed without `[0]`. */
+  readonly uniforms: ReadonlyMap<string, WebGLUniformLocation>;
+}
+
+export function collectUniforms(
+  gl: WebGLRenderingContext,
+  program: WebGLProgram,
+): Map<string, WebGLUniformLocation> {
+  const uniforms = new Map<string, WebGLUniformLocation>();
+  const count = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS) as number;
+  for (let i = 0; i < count; i++) {
+    const info = gl.getActiveUniform(program, i);
+    if (!info) continue;
+    const name = info.name.replace(/\[0\]$/, '');
+    const location = gl.getUniformLocation(program, info.name);
+    if (location) uniforms.set(name, location);
+  }
+  return uniforms;
+}
+
 export function compileProgram(
   gl: WebGLRenderingContext,
   vertexSource: string,
   fragmentSource: string,
   attribs?: Record<string, number>,
-): WebGLProgram {
+): ShaderProgram {
   const vs = compileShader(gl, gl.VERTEX_SHADER, vertexSource);
   const fs = compileShader(gl, gl.FRAGMENT_SHADER, fragmentSource);
   const program = gl.createProgram();
@@ -40,13 +62,5 @@ export function compileProgram(
     gl.deleteProgram(program);
     throw new Error(log);
   }
-  return program;
-}
-
-export function uniform(
-  gl: WebGLRenderingContext,
-  program: WebGLProgram,
-  name: string,
-): WebGLUniformLocation | null {
-  return gl.getUniformLocation(program, name);
+  return { handle: program, uniforms: collectUniforms(gl, program) };
 }

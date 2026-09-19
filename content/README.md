@@ -154,8 +154,8 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
 
 The **3D Sequences** hub view (`/sequences`, `/sequences/:id`) plays procedural WebGL
 video sequences — 10 seconds to 2 minutes, no song id. One JSON file per sequence
-under [`sequences/`](sequences/). Filename must match `id`. Each id also needs a
-renderer in `src/sequences/registry.ts`.
+under [`sequences/`](sequences/). Filename must match `id`. Each id is played by one of
+two renderers (see [Graph vs custom](#graph-vs-custom-renderer)).
 
 ```json
 {
@@ -178,6 +178,53 @@ renderer in `src/sequences/registry.ts`.
 - The hub player is the sequence. Imagine prompts are copy-ready still / I2V
   packets, not a substitute for the in-app animation.
 - Run `npm run codegen` and commit the JSON + `src/data/generated/sequences.ts`.
+
+### Graph vs custom renderer
+
+- **Graph (default, no TypeScript):** add `content/sequences/<id>.graph.json` next to the
+  record (or a `graph` key on the record — not both). Codegen validates it with Zod
+  (`scripts/content-index/graph-schema.ts`) and the hub plays it through
+  `src/sequences/graph/`. Invalid tracks, unknown node ids, or times past `durationSec` fail
+  `npm run codegen`. Reference: [`sequences/lattice-hymn.graph.json`](sequences/lattice-hymn.graph.json).
+- **Custom (`"renderer": "custom"`):** a hand-written factory in `src/sequences/scenes/*.ts`
+  registered in `src/sequences/registry.ts`. Use it only for unique deformers (e.g. the
+  rubber-hose walk cycle). Codegen fails if a record has neither a graph nor
+  `"renderer": "custom"` with a registered factory.
+
+Graph shape (angles in degrees, times in seconds; unknown keys are rejected):
+
+```jsonc
+{
+  "camera": { "type": "orbit", "radius": 5, "height": [{ "t": 0, "v": 1 }, { "t": 8, "v": 2 }], "angle": [{ "t": 0, "v": 0 }, { "t": 16, "v": 360 }], "fov": 48 },
+  "environment": { "background": [0.02, 0.02, 0.02], "lightDir": [0.4, 0.75, 0.5], "fogDensity": 0.04 },
+  "nodes": [
+    { "id": "core", "geometry": { "type": "sphere", "radius": 0.3 },
+      "material": { "kind": "lit", "color": [0.5, 0.2, 0.05], "emissive": [0.5, 0.15, 0.04] },
+      "translation": [0, 0, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1], "spin": [0, 30, 0] }
+  ],
+  "clips": [
+    { "target": "core", "property": "scale", "ease": "inOut",
+      "keys": [{ "t": 0, "v": [0, 0, 0] }, { "t": 3.5, "v": [1, 1, 1] }] }
+  ],
+  "loop": { "inSec": 0, "outSec": 16 }
+}
+```
+
+- `camera.type`: `locked` (`eye`, `target`), `perspective` (keyframable `eye`, `target`, `fov`),
+  or `orbit` (keyframable `radius`, `height`, `angle`, optional `target`, `fov`). Any animated
+  value is a constant or `[{ "t", "v", "ease?" }]` (held flat outside the first / last key).
+- `geometry.type`: `box`, `sphere`, `cylinder`, `torus`, `plane`, `icosahedron`, `lathe`
+  (`profile` of `[radius, y]`), `lineCube`, `icosahedronLines`, `line` (`points`, `closed`),
+  `points` (seeded cloud: `count`, `radius: [min, max]`, `flatten`, `seed`).
+- `material.kind`: `lit` / `cel` (`color`, `emissive`, `shininess`, `outline` on cel), `unlit`
+  (flat; `size` / `alpha` for points), `line`. Triangle geometry takes `lit` / `cel` / `unlit`,
+  line geometry takes `line`, `points` take `unlit`.
+- `clips` animate `translation`, `rotation`, `scale`, `emissive` (lit / cel), `alpha` (points)
+  on a node id, or `fogDensity` on target `scene`. `ease` is `linear`, `in`, `out`, `inOut`
+  or `hold`; a key's own `ease` shapes the segment after it. A clip replaces the node's static
+  value; `spin` (deg/s) is added on top so continuous rotation loops without a seam.
+- `loop`: after `outSec`, scene time wraps back to `inSec`.
+- No song id, no glTF, no three.js in v1.
 
 ## Dialog versions (intentional TS exception)
 

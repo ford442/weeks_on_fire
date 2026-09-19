@@ -13,5 +13,6 @@
   "grokImaginePrompt": "Photoreal object still, 16:9, four nested brass wireframe cubes and one brass icosahedron sharing a single origin in a black void, caught mid-kick with a one-frame black punch tearing a missing edge, a matte coal-orange sphere at the center with no rays, lattices at disagreeing snap angles, no floor, no HUD, no stars, no faces, three supporting figures: a torn brass edge, a spark off one vertex, a second lattice one kick behind, locked camera at chest height, 50mm, T2.8, fine grain, satin brass against matte ember against true black, Grok Imagine style",
   "geminiOmniPrompt": "16-second locked loop. Nested brass wireframe cubes hop on every 150 BPM kick — forty punches. One black frame on each kick, then the next snap already present. Core pulses, never blooms. No camera orbit, no slow assemble, no faces. Ends on kick zero.",
   "notes": "Fast sibling of Lattice Hymn. Do not steal the slow orbit. Keep the core matte. In-hub sequence is procedural WebGL.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

@@ -13,5 +13,6 @@
   "grokImaginePrompt": "3D cel-shaded cartoon still, 4:3, early-1990s Saturday-morning TV paint, NOT photoreal, a round errand-runner with cream sphere head and orange sphere body sprinting left to right, black rubber-hose legs drawn as a four-spoke speed wheel, a TV-paint flat cube worn as a hat, three afterimage ghosts trailing, cream cyclorama, two orange curtain legs, muted checkerboard floor with speed lines, locked side-on camera, thick ink implied by hard cel shadow, no film grain, no lens, no HUD, Grok Imagine style",
   "geminiOmniPrompt": "16-second 4:3 loop. Locked camera. Character squash-drops in already wearing the cube, sprints on a repeating treadmill stage with wheel-blur legs and afterimage ghosts, then skids with a dust cloud and two grooves. Hat stays on. Limbs are rubber-hose. No photoreal lighting. Ends on empty stage.",
   "notes": "Fast sibling of Rubber-Hose Errand. Do not lecture on the loop. Do not borrow the Pizza Guy, the fence cat, or Delivery Loop props. In-hub sequence is procedural WebGL.",
-  "agent": "cursor-grok-4.6"
+  "agent": "cursor-grok-4.6",
+  "renderer": "custom"
 }

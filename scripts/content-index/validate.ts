@@ -144,7 +144,28 @@ export function validateCartoons(repoRoot: string, cartoons: CartoonRecord[]): v
   }
 }
 
-export function validateSequences(repoRoot: string, sequences: SequenceRecord[]): void {
+function graphTimes(graph: NonNullable<SequenceRecord['graph']>): number[] {
+  const times: number[] = [];
+  const camera: Record<string, unknown> = graph.camera;
+  for (const value of Object.values(camera)) {
+    if (Array.isArray(value) && typeof value[0] === 'object' && value[0] !== null) {
+      for (const key of value as { t: number }[]) times.push(key.t);
+    }
+  }
+  for (const clip of graph.clips ?? []) for (const key of clip.keys) times.push(key.t);
+  if (graph.loop) times.push(graph.loop.inSec, graph.loop.outSec);
+  return times;
+}
+
+/**
+ * `customRendererIds` are the ids registered in `src/sequences/registry.ts`; when omitted, the
+ * factory check is skipped (unit tests without a checkout).
+ */
+export function validateSequences(
+  repoRoot: string,
+  sequences: SequenceRecord[],
+  customRendererIds?: ReadonlySet<string>,
+): void {
   const errors: string[] = [];
   const idCounts = new Map<string, number>();
 
@@ -157,6 +178,29 @@ export function validateSequences(repoRoot: string, sequences: SequenceRecord[])
     }
     if (sequence.stillImagePath && !existsSync(join(repoRoot, sequence.stillImagePath))) {
       errors.push(`Sequence ${sequence.id} stillImagePath not found: ${sequence.stillImagePath}`);
+    }
+
+    if (sequence.graph) {
+      if (sequence.renderer === 'custom') {
+        errors.push(`Sequence ${sequence.id} has a graph but declares renderer "custom"`);
+      }
+      const late = graphTimes(sequence.graph).filter((t) => t > sequence.durationSec);
+      if (late.length > 0) {
+        errors.push(
+          `Sequence ${sequence.id} graph has times past durationSec ${sequence.durationSec}: ${[...new Set(late)].join(', ')}`,
+        );
+      }
+      if (customRendererIds?.has(sequence.id)) {
+        errors.push(`Sequence ${sequence.id} has a graph and a custom factory; remove one`);
+      }
+    } else if (sequence.renderer !== 'custom') {
+      errors.push(
+        `Sequence ${sequence.id} has no graph (${sequence.id}.graph.json) — add one or set renderer "custom" with a factory`,
+      );
+    } else if (customRendererIds && !customRendererIds.has(sequence.id)) {
+      errors.push(
+        `Sequence ${sequence.id} is renderer "custom" but has no factory in src/sequences/registry.ts`,
+      );
     }
   }
 

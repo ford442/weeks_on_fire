@@ -171,6 +171,122 @@ pose). Two clips of 7.6s cut on the snare will carry most of these.
   silhouette, just very slightly wrong at the top.
 - A gray tray of nine bobby pins going through a scanner belt, nobody in frame.
 
+## Second pass — food, errands, bodies, home
+
+Same lock. Nothing here is bigger than a person.
+
+### Food and drink
+
+- **Birthday candles.** She gathers the whole crown in one fist, holds it at
+  the back of her neck like a woman handling a live animal, leans in, blows,
+  lets go. Everyone claps for the candles.
+- **Soup.** Steam rises straight into the crown for the length of the bowl.
+  She eats it anyway. The volume drops perceptibly by the last spoonful.
+- **Drive-thru window.** The car is too close and the window is too high. She
+  takes the bag at a 40-degree lean with the crown against the door frame. The
+  worker holds the drinks out an extra beat, patient, having seen this.
+- **Sharing a small table with a tall drink.** Every time she leans to sip, the
+  straw disappears into hair. Third attempt she just picks the glass up.
+- **Taco / anything two-handed.** No free hand to hold hair back. She uses her
+  forearm. It works. It is not elegant. She keeps eating.
+- **Restaurant booth.** She slides in and the crown catches on the coat hook
+  on the divider. One inch of reverse, a small lift, she's in. Her friend
+  pretends to read the menu.
+- **Bar with a low shelf for glasses.** The bartender reaches over her head for
+  a coupe and his sleeve parts the hair. Neither acknowledges it.
+
+### Errands, retail, machines
+
+- **Fitting room.** The sweater goes on. The sweater comes off. The hair is now
+  a different shape and she leaves the store without buying the sweater.
+- **Self-checkout camera.** The screen shows her from the chest up and she is
+  mostly hair. The machine says *unexpected item*. She is already looking for
+  an attendant.
+- **Freezer aisle.** She opens the low door, the cold fog comes out, and the
+  hair moves in it like something underwater. She takes the peas.
+- **Pharmacy mirror, sunglasses rack.** Every pair she tries pushes the front
+  of the hair forward into her eyebrows. She buys the first pair.
+- **ATM canopy.** She has to stand back from the machine to see the screen
+  because of her own reflection and her own volume. She squints. She counts
+  the bills in the open.
+- **Photo booth ID / passport photo.** "Ears visible." Long, dead pause. The
+  clerk takes it anyway and neither of them says another word about ears.
+- **Hardware store.** A low-hanging price sign parts the hair as she walks the
+  aisle. It swings for four seconds behind her. She does not turn around.
+
+### Bodies, sport, appointments
+
+- **Dentist chair.** She lies back and the headrest is directly under the
+  crown, so she's not lying back — she's at 25 degrees with her chin up. The
+  hygienist adjusts the chair twice and then works around it.
+- **Eye exam.** Chin on the rest, forehead to the bar, hair fully pinned back
+  with one hand by *her*, for the duration, like a job.
+- **Hard hat at a site visit.** It sits on top, an inch above her actual head,
+  and stays perfectly level. She does the whole tour that way. It is fine.
+  It is technically compliant.
+- **Hairnet.** Same energy. The net makes a shape nobody has a word for.
+- **Treadmill.** The ponytail is fine. The front is not. Twenty minutes of the
+  same two strands returning to the same eye. She never stops to fix it.
+- **Swim cap.** She looks at the pool. She looks at the cap. She sits at the
+  edge and puts her feet in.
+- **Yoga, floor pose.** Face down, the hair has its own footprint on the mat,
+  larger than her head. The instructor steps over it without a word.
+- **Getting a shirt over the head.** Two arms up, a pause in the dark inside
+  the shirt while she decides how to do this, and it comes out on the other
+  side almost right.
+
+### Home, alone, no audience
+
+- **Her own doorframe.** It fits. It only ever *just* fits, and she ducks half
+  an inch every single time without being conscious of it.
+- **Car sun visor.** She flips it down; it rests on the hair, not the
+  windshield. She drives with it up and squints west.
+- **Small bathroom.** In the mirror she is a perfect composition. She turns
+  sideways and the crown is against the tile. She turns back. Composition.
+- **Ceiling light pull-chain.** It's in there somewhere. She finds it by
+  swinging one arm through the volume, twice.
+- **Sharing a bed.** Two heads, one pillow's worth of room, a small
+  renegotiation at 1 a.m. that ends with one person sleeping diagonally.
+- **The cat.** Asleep in it on the couch. She is awake, on her phone, not
+  moving her head. This is now a forty-minute situation.
+- **Vacuum.** She bends to plug it in and the crown touches the floor before
+  her hand reaches the outlet. She stops. She considers this. She plugs it in.
+- **Washing it out.** Ten seconds of the whole architecture going flat under
+  the tap, in total silence. The most honest shot in the bank.
+
+### Other people's hands
+
+- **Toddler.** A fistful, no malice, complete commitment. She keeps her head at
+  the angle the toddler has chosen and continues the adult conversation.
+- **Friend fixing it.** Someone reaches in to fix one thing without asking,
+  three seconds of quiet work, a pat. She says thank you. It looks identical.
+- **The photographer at the party.** He gestures twice for her to move left,
+  which she does, and the hair is still in the shot. Third gesture is a small
+  surrender. He takes it.
+- **Dance floor.** A stranger's ring is briefly in her hair, unnoticed by both
+  of them, and comes out on its own. The song continues.
+- **Handing someone a phone over the shoulder.** The phone is passed *around*
+  the hair, hand to hand, by two people who don't discuss it.
+
+### More endings / hold frames
+
+- Hair down, flat, wet, on the bathroom floor tile at 3 a.m., in one frame. No
+  person above frame. Hold.
+- The cat, still asleep in it, as the light in the room changes.
+- Her own doorframe from behind, the duck, the door closing. End.
+
+---
+
+## Generate-first (second pass)
+
+1. **Birthday candles** — the fist, the handling, the release, the clapping.
+2. **Washing it out** — ten silent seconds of the whole city going flat.
+3. **The cat** — a forty-minute situation, held.
+4. **Hard hat** — an inch above her actual head, perfectly level, compliant.
+
+These sit well in the **G** overlap and as a quiet drop in the back half of
+**J**, before the last Kenji tag.
+
 ---
 
 ## Camera grammar (paste into stills)

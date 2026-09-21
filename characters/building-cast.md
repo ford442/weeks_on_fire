@@ -4,6 +4,18 @@ Core residents of the questionable multi-unit building / arcology sector that ke
 
 They live in the same decaying, rule-obsessed structure where the HOA memos arrive before the apocalypse does, the elevators have opinions, and the laundry room is a neutral zone only until the music starts.
 
+> **Bible cross-references.** Two entries on this page collide with the on-screen cast bible in
+> [`bible/`](bible/README.md). Both are annotated in place below:
+>
+> - **Qing Rao** — superseded. She is **she/her**, the Episode 3 crystal-skull keeper, and the
+>   lobby-with-noodles cameo is the same woman. Committed sheet: [`bible/qing-rao.md`](bible/qing-rao.md).
+> - **Madelyn** — **not** Episode 3's **Madelin**. Two different characters, one letter apart.
+>   See [`bible/madelin.md`](bible/madelin.md) and the
+>   [rename proposal](bible/README.md#3-madelin-and-madelyn-are-two-different-people).
+>
+> **Rubella and Lillith Vale are not Vivienne and Liliane Vale** ([`the-two.md`](the-two.md)).
+> Four Vales, no stated relation, never remarked on.
+
 ---
 
 ## Rubella
@@ -80,6 +92,15 @@ Key dynamic force alongside Rubella. Already present in dialogue cuts, scene dra
 
 ## Madelyn
 
+> ⚠️ **Name collision — do not merge with [Madelin](bible/madelin.md)** (Episode 3, the skull
+> tote, the lawn). Different character, different location, one letter apart. Madelyn is
+> **never seen** — an intercom voice and a piece of laminate
+> (`notes/scenes/README.md`: "Madelyn is never seen in this set. Do not cast a face.").
+> Note also that her three sample lines below are **Karen's**
+> ([`bible/hoa-cast.md#karen`](bible/hoa-cast.md#karen)); if a line appears in both files it
+> belongs to Karen and this copy is the bug. A rename for this character is proposed in the
+> [bible README](bible/README.md#open-questions-do-not-resolve-casually).
+
 **Role / Vibe**  
 The passive-aggressive HOA / Building Committee Enforcer. She is the human embodiment of laminated rules and the quiet terror of a well-organized clipboard. Authority figure energy with the soul of someone who peaked in middle management and never recovered.
 
@@ -111,6 +132,13 @@ Strong antagonist / authority energy. Already appears as Madelin in Episode 3 co
 
 ## Qing Rao
 
+> ⚠️ **Superseded by [`bible/qing-rao.md`](bible/qing-rao.md).** Qing Rao is **she/her** — the
+> Episode 3 crystal-skull keeper, a materials lecturer, and the same woman as the
+> lobby-with-noodles cameo in *Car Twelve, This Is Twelve*. The systems knowledge and the
+> noodles below are now hers and remain canon; **the male reading is retired.** Decision
+> recorded in the [bible README](bible/README.md#2-qing-rao-is-one-person-and-she-is-the-one-with-the-skull).
+> Read the paragraphs below with she/her pronouns until this section is rewritten.
+
 **Role / Vibe**  
 The cool, calculating neighbor who knows too much about how the building's backend systems actually work. Hyper-competent wild card. Speaks calmly even when the floor is literally on fire. Treats absolute chaos like a mild scheduling conflict.
 
@@ -136,7 +164,7 @@ Calm, measured, almost soothing — the perfect counterpoint to everyone else's 
 Any scene that needs a character who already understands the rules of the current absurdity and is simply waiting for everyone else to catch up. Natural foil to Madelyn's rule-obsession and perfect deadpan partner for Rubella.
 
 **Status**  
-Enigmatic wild card. Already listed in suggested-characters as crystal-skull keeper / elegant observer. Expanded here into full building resident with systems knowledge.
+Enigmatic wild card. Already listed in suggested-characters as crystal-skull keeper / elegant observer. Expanded here into full building resident with systems knowledge — **now unified into one character in [`bible/qing-rao.md`](bible/qing-rao.md)**, which is the committed sheet.
 
 ---
 
@@ -144,7 +172,7 @@ Enigmatic wild card. Already listed in suggested-characters as crystal-skull kee
 
 - **Rubella + Lillith**: The core duo. Exhausted cynicism meets chaotic creativity. Their musical cutaways are the emotional and comedic heart of many sequences.  
 - **Madelyn vs. Everyone**: She is the external pressure that forces the others into alliance (or temporary truce).  
-- **Qing Rao**: The quiet stabilizer. He rarely starts the trouble, but he is almost always the one who understands how to survive it.  
+- **Qing Rao**: The quiet stabilizer. She rarely starts the trouble, but she is almost always the one who understands how to survive it. (Pronouns corrected per [`bible/qing-rao.md`](bible/qing-rao.md).)  
 - **Shared Setting**: The building itself is a character — elevators with mood disorders, laundry rooms that double as temporary neutral zones, hallways that rearrange themselves when no one is looking.
 - **Outside the building**: Rubella and Lillith moonlight as the dual frontwomen of the Glam-Sham-Poo *Ultra Screech* commercial alongside Kenji "Shred" Sato — the same laundry room, rented by a shampoo company. Kenji is not a resident; his card lives in `suggested-characters.md`. Cutaway: [`ideas/glam-sham-poo-commercial.md`](../ideas/glam-sham-poo-commercial.md).
 

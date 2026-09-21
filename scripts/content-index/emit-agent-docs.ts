@@ -287,7 +287,8 @@ weeks_on_fire/
 ├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
-├── characters/          # Reference stills
+├── characters/          # Reference stills + cast notes
+│   └── bible/           # Committed cast sheets: voice, backstory, tone rules
 ├── prompts/             # Grok Imagine prompt archive
 ├── notes/               # Scratchpad, scene/song suggestion templates
 ├── ai-contributions/    # Guest scene ideas from various models

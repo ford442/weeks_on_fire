@@ -61,6 +61,7 @@ weeks_of_fire/
 ├── songs/               # Minimax markdown + some mp3
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, scenes.json
 ├── characters/          # Reference stills + character notes
+│   └── bible/           # Committed on-screen cast sheets (voice, backstory, tone rules)
 ├── prompts/             # Grok Imagine / segment prompt archive
 ├── notes/               # Scratchpad, scene/song suggestions, dialog versions
 ├── ideas/               # Raw brainstorming

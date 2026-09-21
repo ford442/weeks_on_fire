@@ -7,8 +7,8 @@
   "episode": "Musical Cutaway / Visual Experiment",
   "songId": "well-fall",
   "songTitle": "Well Fall",
-  "summary": "POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Click a sight into open slots B\u2013G, or an ending into H \u2014 previews fill [SIGHT] in the prompts.",
-  "visualArc": "Stone well mouth \u2192 drop (riff in) \u2192 open sight B \u2192 open sight C \u2192 open sight D \u2192 open sight E \u2192 open sight F \u2192 open sight G \u2192 bottom or none.",
+  "summary": "POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Click a sight into open slots B–G, or an ending into H — previews fill [SIGHT] in the prompts.",
+  "visualArc": "Stone well mouth → drop (riff in) → open sight B → open sight C → open sight D → open sight E → open sight F → open sight G → bottom or none.",
   "tags": [
     "well",
     "fall",
@@ -28,7 +28,7 @@
       "title": "Ring of fire",
       "category": "The well forgets what it is",
       "lane": "fall",
-      "prompt": "a ring of fire around the full circumference \u2014 no source, no heat haze on the brick, we pass through the middle of it and come out the other side unlit",
+      "prompt": "a ring of fire around the full circumference — no source, no heat haze on the brick, we pass through the middle of it and come out the other side unlit",
       "description": "A hoop of flame with no source. We go through the middle and come out unlit."
     },
     {
@@ -172,7 +172,7 @@
       "title": "Bats at poker",
       "category": "Occupied",
       "lane": "fall",
-      "prompt": "bats playing poker on a ledge \u2014 full table, chips, a hanging bulb, none of them look up as we pass",
+      "prompt": "bats playing poker on a ledge — full table, chips, a hanging bulb, none of them look up as we pass",
       "description": "A complete game. We are not in it."
     },
     {
@@ -244,7 +244,7 @@
       "title": "Table for one",
       "category": "Domestic, falling",
       "lane": "fall",
-      "prompt": "a dining table set for one, falling slower than we are \u2014 we pass it",
+      "prompt": "a dining table set for one, falling slower than we are — we pass it",
       "description": "Place setting in free fall. We overtake it."
     },
     {
@@ -260,7 +260,7 @@
       "title": "Level window",
       "category": "Domestic, falling",
       "lane": "fall",
-      "prompt": "a window \u2014 framed, curtained, lit from inside \u2014 set into the brick, the room behind it level",
+      "prompt": "a window — framed, curtained, lit from inside — set into the brick, the room behind it level",
       "description": "A real room, level, behind glass in a vertical shaft."
     },
     {
@@ -348,7 +348,7 @@
       "title": "Frost line",
       "category": "Water and weather",
       "lane": "fall",
-      "prompt": "a frost line \u2014 one horizontal band where everything is white, then gone",
+      "prompt": "a frost line — one horizontal band where everything is white, then gone",
       "description": "One cold ring. Then the shaft is wet brick again."
     },
     {
@@ -396,7 +396,7 @@
       "title": "Second well mouth",
       "category": "Scale breaks",
       "lane": "fall",
-      "prompt": "a second well mouth opening in the wall \u2014 daylight the wrong hour",
+      "prompt": "a second well mouth opening in the wall — daylight the wrong hour",
       "description": "Another sky in the brick. The hour does not match ours."
     },
     {
@@ -412,7 +412,7 @@
       "title": "A throat",
       "category": "Scale breaks",
       "lane": "fall",
-      "prompt": "the shaft becoming a throat \u2014 not a metaphor \u2014 then brick again",
+      "prompt": "the shaft becoming a throat — not a metaphor — then brick again",
       "description": "Flesh for a moment. Then masonry resumes."
     },
     {
@@ -508,7 +508,7 @@
       "title": "EyeWash on a radio",
       "category": "Wrong-channel",
       "lane": "fall",
-      "prompt": "a radio still playing EyeWash, getting louder as we drop \u2014 diegetic, not the metal",
+      "prompt": "a radio still playing EyeWash, getting louder as we drop — diegetic, not the metal",
       "description": "Station bleed in the shaft. The metal stays non-diegetic."
     },
     {
@@ -572,7 +572,7 @@
       "title": "The rope ends",
       "category": "Absence",
       "lane": "fall",
-      "prompt": "a rope that ends \u2014 we pass the fray \u2014 nothing below it",
+      "prompt": "a rope that ends — we pass the fray — nothing below it",
       "description": "Someone climbed until there was no rope. We keep going."
     },
     {
@@ -644,7 +644,7 @@
       "title": "Outer space lining",
       "category": "Scale breaks",
       "lane": "fall",
-      "prompt": "the brick giving way to a lining of real outer space \u2014 stars, a little dust, no planet, no ship, no HUD \u2014 the shaft is still a shaft, then brick again",
+      "prompt": "the brick giving way to a lining of real outer space — stars, a little dust, no planet, no ship, no HUD — the shaft is still a shaft, then brick again",
       "description": "Space is the masonry for a moment. Not Annex. Not a cutaway."
     },
     {
@@ -700,7 +700,7 @@
       "title": "Hollow tree",
       "category": "The well forgets what it is",
       "lane": "fall",
-      "prompt": "the brick becoming the inside of a hollow tree \u2014 concentric growth rings, bark-dark, a beetle commuting up a ring, then wet brick again",
+      "prompt": "the brick becoming the inside of a hollow tree — concentric growth rings, bark-dark, a beetle commuting up a ring, then wet brick again",
       "description": "The shaft is a trunk for a moment. The beetle goes the other way."
     },
     {
@@ -724,7 +724,7 @@
       "title": "Chimney for thirty feet",
       "category": "The well forgets what it is",
       "lane": "fall",
-      "prompt": "the shaft becoming a chimney for thirty feet \u2014 soot, a square of kitchen light far above through the flue, then round wet brick",
+      "prompt": "the shaft becoming a chimney for thirty feet — soot, a square of kitchen light far above through the flue, then round wet brick",
       "description": "Someone's stove, far above. The well remembers being a flue."
     },
     {
@@ -748,7 +748,7 @@
       "title": "Ship's hold",
       "category": "The well forgets what it is",
       "lane": "fall",
-      "prompt": "the brick becoming the inside of a ship's hold \u2014 ribs, tar, one lantern swaying, then the well again",
+      "prompt": "the brick becoming the inside of a ship's hold — ribs, tar, one lantern swaying, then the well again",
       "description": "A hull that thinks it is a shaft. The lantern does not care which."
     },
     {
@@ -812,7 +812,7 @@
       "title": "Inside the water tank",
       "category": "Infrastructure",
       "lane": "fall",
-      "prompt": "the inside of a municipal water tank \u2014 rust bloom, a ladder we do not use \u2014 then the well again",
+      "prompt": "the inside of a municipal water tank — rust bloom, a ladder we do not use — then the well again",
       "description": "A cistern with no water. The ladder is not for us."
     },
     {
@@ -981,7 +981,7 @@
       "category": "Water and weather",
       "lane": "fall",
       "prompt": "three stacked bands: steam, then clear cold air, then steam again",
-      "description": "Weather in layers. No frost-line freeze \u2014 just stacked rooms of air."
+      "description": "Weather in layers. No frost-line freeze — just stacked rooms of air."
     },
     {
       "id": "model-train",
@@ -1020,7 +1020,7 @@
       "title": "Inside a glass",
       "category": "Scale breaks",
       "lane": "fall",
-      "prompt": "the shaft becoming the inside of a drinking glass for a moment \u2014 condensation, a fingerprint the size of a door \u2014 then brick",
+      "prompt": "the shaft becoming the inside of a drinking glass for a moment — condensation, a fingerprint the size of a door — then brick",
       "description": "We are briefly a sip. Then masonry resumes."
     },
     {
@@ -1288,6 +1288,54 @@
       "description": "They commute the other way. The well stays quiet."
     },
     {
+      "id": "the-conference",
+      "title": "The conference",
+      "category": "Occupied",
+      "lane": "fall",
+      "prompt": "two adults at a child-sized desk built into the curve, a folder open between them, one crayon drawing of a house taped at knee height, an empty small chair facing the shaft, neither of them looks up",
+      "description": "A meeting about someone who is not here. The empty chair is the only thing facing us."
+    },
+    {
+      "id": "you-are-here",
+      "title": "YOU ARE HERE",
+      "category": "Wrong-channel",
+      "lane": "fall",
+      "prompt": "a laminated wayfinding map of the shaft in a scratched steel frame, cutaway diagram, a red YOU ARE HERE dot descending in sync with the fall, a legend of amenities too small to read at this speed",
+      "description": "The map is accurate and the dot keeps pace. The legend is for someone standing."
+    },
+    {
+      "id": "held-door",
+      "title": "Held door",
+      "category": "Absence",
+      "lane": "fall",
+      "prompt": "a free-standing doorframe spanning the shaft with no wall around it, the door propped courteously open by a flattened rubber wedge, nothing on either side of it, wet brick resuming",
+      "description": "Held open for someone who did not come. The wedge is worn flat."
+    },
+    {
+      "id": "mid-apology",
+      "title": "Mid-apology",
+      "category": "Time / records",
+      "lane": "fall",
+      "prompt": "a beige answering machine on a brick ledge, cassette reels turning behind a scratched window, message counter reading 1, level needle twitching continuously, no speaker visible, the well stays silent",
+      "description": "The shape of an apology and none of its content. The tape has more left than the well does."
+    },
+    {
+      "id": "still-crouched",
+      "title": "Still crouched",
+      "category": "Occupied",
+      "lane": "fall",
+      "prompt": "a party room built sideways into the shaft wall, eleven adults in paper hats crouched behind furniture holding position, an unlit cake, one man sitting on the floor rubbing his knee, nobody reacts to the fall",
+      "description": "The surprise is still being held. Nobody stands up for us."
+    },
+    {
+      "id": "good-handwriting",
+      "title": "The good handwriting",
+      "category": "Time / records",
+      "lane": "fall",
+      "prompt": "one handwritten sentence repeated in chalk on every course of brick, penmanship improving over fifty feet then deteriorating, finally only the first two words repeating at widening intervals, never legible in full at this speed",
+      "description": "The practice gets worse in the direction we are going. We never read the whole line."
+    },
+    {
       "id": "bottom-is-sky",
       "title": "The bottom is a sky",
       "category": "Endings",
@@ -1316,7 +1364,7 @@
       "title": "Still falling, cut",
       "category": "Endings",
       "lane": "ending",
-      "prompt": "nothing changing \u2014 the brick keeps coming \u2014 a still-falling frame",
+      "prompt": "nothing changing — the brick keeps coming — a still-falling frame",
       "description": "No bottom event. Cut on a frame that is still dropping."
     },
     {
@@ -1324,7 +1372,7 @@
       "title": "Water as a ceiling",
       "category": "Endings",
       "lane": "ending",
-      "prompt": "water that is a ceiling \u2014 we look up from under ice",
+      "prompt": "water that is a ceiling — we look up from under ice",
       "description": "We hit a surface and it is over our heads."
     },
     {
@@ -1356,7 +1404,7 @@
       "title": "The fall inverts",
       "category": "Endings",
       "lane": "ending",
-      "prompt": "the riff inverting and we fall up \u2014 the lip from below, approaching",
+      "prompt": "the riff inverting and we fall up — the lip from below, approaching",
       "description": "Cadence misses by reversing. H is the mouth again."
     },
     {
@@ -1390,6 +1438,14 @@
       "lane": "ending",
       "prompt": "a camera lens looking up, we fill the frame",
       "description": "The bottom is an optic. Cut when we occupy the whole glass."
+    },
+    {
+      "id": "waiting-room-bottom",
+      "title": "The bottom is a waiting room",
+      "category": "Endings",
+      "lane": "ending",
+      "prompt": "the shaft opening into a carpeted waiting room seen from directly above, eight empty chairs against the walls, a wall clock, a receptionist sliding a clipboard onto the counter without looking up, cut while still descending",
+      "description": "A bottom with no impact. Our name is on the clipboard, spelled slightly wrong."
     }
   ]
 }

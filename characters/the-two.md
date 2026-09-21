@@ -7,6 +7,18 @@ These two women are the **visual and emotional core** of the more glamorous, poe
 
 *Vivienne & Liliane Vale*
 
+> **This file is the canonical overview.** The committed, production-ready sheets — appearance
+> anchors, micro-gestures, personality matrices, voice fingerprints, backstory, arc hooks and
+> enforceable tone rules — now live in the character bible:
+> [`bible/vivienne-vale.md`](bible/vivienne-vale.md) · [`bible/liliane-vale.md`](bible/liliane-vale.md) ·
+> index at [`bible/README.md`](bible/README.md) · pairings at
+> [`bible/relationship-map.md`](bible/relationship-map.md).
+>
+> **Naming note:** Vivienne and Liliane Vale are **not** Rubella and Lillith Vale
+> ([`building-cast.md`](building-cast.md)). Four women, one surname, no stated relation, and
+> **nobody on screen ever remarks on it.** See
+> [the bible README](bible/README.md#1-there-are-two-vale-pairs-and-the-show-never-explains-it).
+
 ---
 
 ## Overview
@@ -117,17 +129,30 @@ They are equals. Neither wins. That is the point.
 
 ---
 
-## Backstory Hooks (pick one or blend)
+## Backstory Hooks (pick one or blend) — ⚠️ RETIRED
 
-- They are **identical twins** who discovered as teenagers that swapping identities gave them power, pleasure, and plausible deniability. It started as a game. It never stopped.
-- They are **not related** — they met at a gala years ago and recognized something feral in each other. They have been swapping lives (apartments, wardrobes, lovers, enemies) ever since.
-- One is the "real" woman and the other is a long-term performance/art project that escaped its cage. Neither is sure which is which anymore.
-- They were once lovers who "broke up" by deciding to become each other instead.
-- They were once fierce social rivals (same city, same circles, same taste in everything). After a legendary public humiliation at a gala, they made a drunken pact to destroy each other by *becoming* each other. Every six months they trade entire lives (including the destruction the other has caused). What began as revenge has become the only way either of them feels alive. They have started to forget whose original sins belong to whom.
+> **Resolved.** The committed backstory is the last hook below: the **gala-revenge pact**, six
+> years ago, trading whole lives every six months. It is written up in full on
+> [`bible/vivienne-vale.md`](bible/vivienne-vale.md#backstory-committed) and
+> [`bible/liliane-vale.md`](bible/liliane-vale.md#backstory-committed).
+> The other four hooks are **dead** and are kept below only as a record of what was
+> considered. Do not write to them.
+
+- ~~They are **identical twins** who discovered as teenagers that swapping identities gave them power, pleasure, and plausible deniability. It started as a game. It never stopped.~~ *(makes the pact childhood-innocent; loses the invoice)*
+- ~~They are **not related** — they met at a gala years ago and recognized something feral in each other. They have been swapping lives (apartments, wardrobes, lovers, enemies) ever since.~~ *(superseded: they were rivals long before the gala; the gala is the break, not the meeting)*
+- ~~One is the "real" woman and the other is a long-term performance/art project that escaped its cage. Neither is sure which is which anymore.~~
+- ~~They were once lovers who "broke up" by deciding to become each other instead.~~ *(folded in as subtext, never text)*
+- ✅ **COMMITTED.** They were once fierce social rivals (same city, same circles, same taste in everything). After a legendary public humiliation at a gala, they made a drunken pact to destroy each other by *becoming* each other. Every six months they trade entire lives (including the destruction the other has caused). What began as revenge has become the only way either of them feels alive. They have started to forget whose original sins belong to whom.
 
 ---
 
-## Variant Concepts
+## Variant Concepts — ⚠️ RETIRED
+
+> **Both variants are retired.** Variant 1 survives only as a *visual* register for stage-set
+> cutaways; the performance is not the premise. Variant 2 is explicitly rejected — two bodies,
+> permanently. The identity unease it was reaching for now lives in the unexplained Vale
+> surname instead, and lives there better, because it is never mentioned. Recorded on both
+> bible sheets under *Rejected / alternate*.
 
 ### Variant 1: "The Performers" (The House of Mirrors Act)
 They are not sisters or lovers in the conventional sense — they are **two halves of a long-running avant-garde performance piece** called "The House of Mirrors."
@@ -224,7 +249,9 @@ There is only **one** woman.
 
 - The pizza guy (recurring concept) should eventually interact with one or both of them. He should treat them exactly the same as everyone else.
 
-**Status:** These are strong, flexible suggestions ready to be adopted, hybridized, or rejected. The visual reference images already do a lot of the heavy lifting — lean into them.
+**Status:** **Adopted.** The backstory is committed, the variants are retired, and the
+enforceable versions live in [`bible/`](bible/README.md). This file remains the overview and the
+visual foundation — the three reference images still do a lot of the heavy lifting; lean into them.
 
 ---
 

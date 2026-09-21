@@ -2,11 +2,22 @@
 
 Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Liliane) have a full profile in `the-two.md`. These are additional figures for suburban chaos, nocturnal poetry, and recurring gag energy.
 
+> **This file is staging.** Anyone may add a seed here. When a character needs committed
+> backstory, a voice fingerprint, and enforceable tone rules, they graduate to a full sheet in
+> [`bible/`](bible/README.md) — and the entry here stays, marked **🎓 Graduated**, as the
+> short version with a link. Entries without that marker are still open concepts.
+>
+> **Bible index:** [`bible/README.md`](bible/README.md) · **Pairings, expanded:**
+> [`bible/relationship-map.md`](bible/relationship-map.md)
+
 ---
 
 ## Recurring / Series-Wide
 
 ### The Pizza Guy
+
+**🎓 Graduated — full sheet:** [`bible/the-pizza-guy.md`](bible/the-pizza-guy.md)
+
 **Role:** Running anchor of mundane persistence. The universe's only constant.
 
 **Look:** Red uniform (rotates by episode). Dead eyes. Perfect posture. Phone always at 23% battery.
@@ -48,6 +59,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### The Black Cat (Episode 3)
+
+**🎓 Graduated — full sheet:** [`bible/animals-and-bots.md#the-black-cat`](bible/animals-and-bots.md#the-black-cat)
+
 **Role:** Silent POV character / chaos witness. Potential "cat episode" narrator without dialog.
 
 **Look:** Sleek, yellow eyes, Halloween-night energy. Fur puffs only when dramatically appropriate.
@@ -61,6 +75,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### The Radio Voice (Episode 2)
+
+**🎓 Graduated — full sheet:** [`bible/eyewash-staff.md#the-radio-voice-episode-2`](bible/eyewash-staff.md#the-radio-voice-episode-2)
+
 **Role:** Disembodied companion on the nocturnal drive. Maybe a DJ, maybe static, maybe the driver talking to themselves.
 
 **Voice:** Warm, crackly, half-heard. Sentences trail off like they're being tuned out of existence.
@@ -79,6 +96,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ## Episode 3 — The Ladies + Satellites
 
 ### Jackalyn
+
+**🎓 Graduated — full sheet:** [`bible/jackalyn.md`](bible/jackalyn.md)
+
 **Role:** Wellness-obsessed improviser. Smartwatch as antagonist.
 
 **Traits:** Tracks heart rate during eldritch events. Panics when stakes exceed brunch. Secretly the most competitive.
@@ -90,6 +110,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Madelin
+
+**🎓 Graduated — full sheet:** [`bible/madelin.md`](bible/madelin.md)
+
 **Role:** Manic bag lady energy. Gravity, magnets, and overstuffed tote as plot devices.
 
 **Traits:** Everything in her bag is somehow relevant. Grins during disasters. Improvises backstories for offended objects.
@@ -101,6 +124,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Justine
+
+**🎓 Graduated — full sheet:** [`bible/justine.md`](bible/justine.md)
+
 **Role:** Deadpan finisher. Dry one-liners that land like gavels. **Fourth core cast member** on the Halloween lawn ensemble (younger, dark-haired — visually distinct from the near-identical lace sisters).
 
 **Traits:** Appears uninvolved until she's the only one with a solution. Would buy a robot a latte.
@@ -114,6 +140,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Qing Rao
+
+**🎓 Graduated — full sheet:** [`bible/qing-rao.md`](bible/qing-rao.md)
+
 **Role:** Crystal-skull keeper. Elegant deadpan observer on the Halloween lawn.
 
 **Name:** **Qing Rao** (清饶) — suggested primary name. Alternates: Su-Lin, Dr. Mei Xiu, Yun Vale.
@@ -129,6 +158,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Biscuit (Poodle)
+
+**🎓 Graduated — full sheet:** [`bible/animals-and-bots.md#biscuit`](bible/animals-and-bots.md#biscuit)
+
 **Role:** Canine chaos agent. Steals MacGuffins. Zero dialogue.
 
 **Traits:** Bandana matches eldritch glow color. Runs across ping-pong tables. Jury is still out on whether Biscuit is **smart** or **cosmically assigned**.
@@ -138,6 +170,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Pong-Bot 3000
+
+**🎓 Graduated — full sheet:** [`bible/animals-and-bots.md#pong-bot-3000`](bible/animals-and-bots.md#pong-bot-3000)
+
 **Role:** Sympathetic AI. Comedy + unexpected heart.
 
 **Voice:** Cheerful corporate training module that glitches into longing.
@@ -149,6 +184,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ## Episode 4 / HOA — Suburban Authority
 
 ### Karen
+
+**🎓 Graduated — full sheet:** [`bible/hoa-cast.md#karen`](bible/hoa-cast.md#karen)
+
 **Role:** HOA president. Clipboard as weapon. Petty emperor of the cul-de-sac.
 
 **Look:** Robe or business casual. Sticker: **I SURVIVED THE PURPLE LIGHT '25**. Hair always slightly windblown from indoor drama.
@@ -163,6 +201,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Brad
+
+**🎓 Graduated — full sheet:** [`bible/hoa-cast.md#brad`](bible/hoa-cast.md#brad)
+
 **Role:** Everyman with the wrong blue bin. Charts to prove it.
 
 **Personality:** Tired, righteous, surprisingly poetic about recycling. Power-washes sigils off garage doors like it's Sunday.
@@ -175,6 +216,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Dale
+
+**🎓 Graduated — full sheet:** [`bible/hoa-cast.md#dale`](bible/hoa-cast.md#dale)
+
 **Role:** HOA chair. Gavels through explosions. Cracked gavel = character.
 
 **Personality:** Procedure first. Reality second. Possibly immune to purple smoke because he refuses to acknowledge it.
@@ -211,7 +255,7 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ### Riley Smith
 **Role:** The stranger on the center line. First character in the series who **knows things**. The straight woman for a show that has never had one.
 
-**Full profile:** [`riley-smith.md`](riley-smith.md) — origin, family (all living), the job, the 4Runner, the pendant, the songs, the rules.
+**Full profile:** [`riley-smith.md`](riley-smith.md) — origin, family (all living), the job, the 4Runner, the pendant, the songs, the rules. That file is already bible-grade; treat it as one of the [`bible/`](bible/README.md) sheets.
 
 **Look:** Sun-bleached blonde, trail-worn. Light green halter top. Amethyst pendant (Bishop, $14, bail taped so it doesn't swing). Forty-liter pack. Boots that have been resoled. Wildly, correctly dressed for a mountain in a scene where everyone else is in cocktail lace.
 
@@ -270,6 +314,7 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### The Laundromat Saints (Unnamed Pair)
+
 **Role:** Strangers who meet only at 2am. Know everything, ask nothing.
 
 **Arc:** Almost dance. Almost speak truth. Fold laundry in silence when song ends.
@@ -279,9 +324,14 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Vivienne & Liliane Vale
-**Full profile:** See `the-two.md`.
+
+**🎓 Graduated — full sheets:** [`bible/vivienne-vale.md`](bible/vivienne-vale.md) · [`bible/liliane-vale.md`](bible/liliane-vale.md)
+
+**Overview:** `the-two.md`.
 
 **Quick reminder:** Glamorous, bored, swap lives for sport, never smudge mascara. Belong in burning towns, HOA meetings (out of place on purpose), and rooftop clubs.
+
+**Backstory is now committed** — the gala-revenge pact, six years, trading every six months. The four alternate hooks and the two variants are retired to the *Rejected / alternate* appendix on each bible sheet. Do not write to them.
 
 ---
 
@@ -291,6 +341,9 @@ Staff of the broadcast affiliate the cutaways air on. Full network concept in
 `ideas/eyewash-station.md`.
 
 ### Oz — Overnight Master Control
+
+**🎓 Graduated — full sheet:** [`bible/eyewash-staff.md#oz--overnight-master-control`](bible/eyewash-staff.md#oz--overnight-master-control)
+
 **Role:** The only human employee we ever see on-air side. Midnight to
 sign-off, alone at the board.
 
@@ -317,6 +370,9 @@ paperwork.
 ---
 
 ### The Continuity Voice
+
+**🎓 Graduated — full sheet:** [`bible/eyewash-staff.md#the-continuity-voice`](bible/eyewash-staff.md#the-continuity-voice)
+
 **Role:** Between-programs announcer. Never seen. **Should never be seen.**
 
 **Voice:** Warm, over-rehearsed, institutional. Delivers apocalyptic copy in
@@ -335,6 +391,9 @@ the same person on a different shift. Never confirm it on screen.
 ---
 
 ### Marguerite Flood — Station Manager
+
+**🎓 Graduated — full sheet:** [`bible/eyewash-staff.md#marguerite-flood--station-manager`](bible/eyewash-staff.md#marguerite-flood--station-manager)
+
 **Role:** Holds the broadcast license. Says she does. Has never produced it.
 
 **Look:** Business formal from a decade that keeps sliding. Glasses on a
@@ -355,6 +414,9 @@ antagonist.
 ---
 
 ### The S&P Skeleton *(promoted from Ep3)*
+
+**🎓 Graduated — full sheet:** [`bible/eyewash-staff.md#the-sp-skeleton`](bible/eyewash-staff.md#the-sp-skeleton)
+
 Same unionized plastic skeleton, new day job: Standards & Practices. Stamps
 scripts **PROBABLY FINE**. Still on a strict break schedule. His notes are
 always about furniture, never about the cosmic horror.
@@ -367,6 +429,10 @@ Day job stamp — [`This Program Contains Dialogue`](../songs/This_Program_Conta
 ---
 
 ## Character Pairing Cheat Sheet
+
+*Index only. The expanded version — the two methods in each pairing, where it plays, what it
+costs, cross-cluster contact rules, and the pairings to avoid — is
+[`bible/relationship-map.md`](bible/relationship-map.md).*
 
 | Pairing | Energy | Sample episode |
 |---------|--------|----------------|
@@ -388,4 +454,7 @@ Day job stamp — [`This Program Contains Dialogue`](../songs/This_Program_Conta
 
 ---
 
-*When a character graduates to production, add a dedicated file here or fold them into episode `scenes.md` / `synopsis.md`.*
+*When a character graduates to production, write a full sheet in [`bible/`](bible/README.md)
+using the template in its README, mark the entry here **🎓 Graduated**, and add a catalog
+entry in `content/characters.json` if they have a portrait or an episode. Fold production
+detail into episode `scenes.md` / `synopsis.md` as usual.*

@@ -22,6 +22,7 @@ import type {
 
 export type {
   CartoonStatus,
+  CharacterBibleStatus,
   DaisyBellSequenceBeat,
   DaisyBellSight,
   DaisyFrameTreatment,

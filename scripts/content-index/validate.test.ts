@@ -7,8 +7,8 @@ import { loadCartoons, loadSequences } from './load';
 import type { ParsedSong } from './load';
 import { SequenceGraphSchema } from './graph-schema';
 import { SequenceSchema } from './schemas';
-import type { CartoonRecord, CutawayRecord, SequenceRecord } from './schemas';
-import { validateContent, validateCartoons, validateSequences } from './validate';
+import type { CartoonRecord, CutawayRecord, SequenceRecord, SeriesCharacterRecord } from './schemas';
+import { validateContent, validateCartoons, validateCharacters, validateSequences } from './validate';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {
@@ -138,6 +138,46 @@ describe('validateCartoons', () => {
     expect(() => validateCartoons('/tmp', [makeCartoon(), makeCartoon()])).toThrow(
       /Duplicate cartoon id: cartoon-1/,
     );
+  });
+});
+
+function makeCharacter(overrides: Partial<SeriesCharacterRecord> = {}): SeriesCharacterRecord {
+  return {
+    id: 'character-1',
+    name: 'Character One',
+    role: 'A role',
+    episodes: [],
+    traits: [],
+    bio: 'A bio.',
+    props: [],
+    tags: [],
+    ...overrides,
+  };
+}
+
+describe('validateCharacters', () => {
+  it('passes for unique character ids with no imagePath or bibleSheet', () => {
+    expect(() =>
+      validateCharacters('/tmp', [makeCharacter(), makeCharacter({ id: 'character-2' })]),
+    ).not.toThrow();
+  });
+
+  it('flags duplicate character ids', () => {
+    expect(() => validateCharacters('/tmp', [makeCharacter(), makeCharacter()])).toThrow(
+      /Duplicate character id: character-1/,
+    );
+  });
+
+  it('flags a missing bibleSheet', () => {
+    expect(() =>
+      validateCharacters('/tmp', [makeCharacter({ bibleSheet: 'characters/bible/nope.md' })]),
+    ).toThrow(/bibleSheet not found: characters\/bible\/nope\.md/);
+  });
+
+  it('flags a missing imagePath', () => {
+    expect(() =>
+      validateCharacters('/tmp', [makeCharacter({ imagePath: 'characters/nope.webp' })]),
+    ).toThrow(/imagePath not found: characters\/nope\.webp/);
   });
 });
 

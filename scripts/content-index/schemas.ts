@@ -83,6 +83,8 @@ export const FilmSceneSchema = z.object({
   tags: z.array(z.string()),
 });
 
+export const CharacterBibleStatusSchema = z.enum(['concept', 'active', 'recurring', 'retired']);
+
 export const SeriesCharacterSchema = z.object({
   id: z.string().min(1),
   name: z.string(),
@@ -94,6 +96,12 @@ export const SeriesCharacterSchema = z.object({
   props: z.array(z.string()),
   tags: z.array(z.string()),
   imagePath: z.string().optional(),
+  /** Relationship-map cluster name (see characters/bible/relationship-map.md), e.g. "The Two". */
+  cluster: z.string().min(1).optional(),
+  /** Character bible status legend (characters/bible/README.md#status-legend). */
+  bibleStatus: CharacterBibleStatusSchema.optional(),
+  /** Repo-relative path to a committed character bible sheet, for a deep link. */
+  bibleSheet: z.string().min(1).optional(),
 });
 
 export const DaisyFrameTreatmentSchema = z.enum(['color', 'period']);
@@ -246,6 +254,7 @@ export type SightCandidateRecord = z.infer<typeof SightCandidateSchema>;
 export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
+export type CharacterBibleStatus = z.infer<typeof CharacterBibleStatusSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
 export type StaffRole = z.infer<typeof StaffRoleSchema>;
 export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;

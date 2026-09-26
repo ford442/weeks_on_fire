@@ -13,7 +13,13 @@ import {
   loadSequences,
   loadCustomRendererIds,
 } from './load';
-import { validateContent, validateEpisodes, validateCartoons, validateSequences } from './validate';
+import {
+  validateContent,
+  validateEpisodes,
+  validateCartoons,
+  validateCharacters,
+  validateSequences,
+} from './validate';
 import {
   emitSongsModule,
   emitCutawaysModule,
@@ -49,6 +55,7 @@ function main() {
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
   validateCartoons(repoRoot, cartoons);
+  validateCharacters(repoRoot, characters);
   validateSequences(repoRoot, sequences, loadCustomRendererIds(repoRoot));
 
   writeGenerated('songs.ts', emitSongsModule(songs));

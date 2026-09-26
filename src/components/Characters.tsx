@@ -1,7 +1,92 @@
 import { useMemo, useState } from 'react';
-import { Search, UserCircle } from 'lucide-react';
+import { ExternalLink, Search, UserCircle } from 'lucide-react';
 import { seriesCharacters, type SeriesCharacter } from '../data/characters';
 import { firstCatalogItem } from '../lib/catalog';
+
+const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
+
+/** Order follows the cluster table in characters/bible/relationship-map.md. */
+const CLUSTER_ORDER = [
+  'The Two',
+  'The building pair',
+  'The Ep3 ensemble',
+  'The HOA',
+  'EyeWash Station',
+  'Animals & bots',
+  'The mountain',
+  'Free radicals',
+] as const;
+
+const UNCLUSTERED = 'Other cast';
+
+/** characters/bible/README.md#status-legend */
+const BIBLE_STATUS_META: Record<string, { label: string; className: string }> = {
+  concept: {
+    label: 'Concept',
+    className: 'border-zinc-700 bg-zinc-900 text-zinc-400',
+  },
+  active: {
+    label: 'Active',
+    className: 'border-sky-500/40 bg-sky-500/10 text-sky-300',
+  },
+  recurring: {
+    label: 'Recurring',
+    className: 'border-orange-500/40 bg-orange-500/10 text-orange-300',
+  },
+  retired: {
+    label: 'Retired',
+    className: 'border-rose-500/30 bg-rose-500/10 text-rose-300',
+  },
+};
+
+function BibleStatusBadge({ status }: { status?: string }) {
+  if (!status) return null;
+  const meta = BIBLE_STATUS_META[status];
+  if (!meta) return null;
+
+  return (
+    <span
+      className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${meta.className}`}
+    >
+      {meta.label}
+    </span>
+  );
+}
+
+function BibleSheetLink({ path }: { path?: string }) {
+  if (!path) return null;
+
+  return (
+    <a
+      href={`${REPO_BASE}/blob/main/${path}`}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-1.5 text-sm text-zinc-300 transition hover:text-orange-300"
+    >
+      <ExternalLink size={13} aria-hidden="true" />
+      View character bible sheet
+    </a>
+  );
+}
+
+function groupByCluster(characters: SeriesCharacter[]): Array<[string, SeriesCharacter[]]> {
+  const groups = new Map<string, SeriesCharacter[]>();
+  for (const character of characters) {
+    const key = character.cluster ?? UNCLUSTERED;
+    const group = groups.get(key);
+    if (group) group.push(character);
+    else groups.set(key, [character]);
+  }
+
+  const ordered: Array<[string, SeriesCharacter[]]> = [];
+  for (const cluster of CLUSTER_ORDER) {
+    const group = groups.get(cluster);
+    if (group) ordered.push([cluster, group]);
+  }
+  const uncategorized = groups.get(UNCLUSTERED);
+  if (uncategorized) ordered.push([UNCLUSTERED, uncategorized]);
+  return ordered;
+}
 
 export default function Characters() {
   const [selected, setSelected] = useState<SeriesCharacter>(
@@ -62,59 +147,71 @@ export default function Characters() {
           />
         </label>
 
-        <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((character) => {
-            const isActive = selected.id === character.id;
+        <div className="space-y-8">
+          {groupByCluster(filtered).map(([cluster, members]) => (
+            <div key={cluster}>
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                {cluster}
+              </h2>
+              <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+                {members.map((character) => {
+                  const isActive = selected.id === character.id;
 
-            return (
-              <article
-                key={character.id}
-                className={`overflow-hidden rounded-lg border bg-zinc-950 transition hover:-translate-y-0.5 ${
-                  isActive
-                    ? 'border-orange-500/70 ring-1 ring-orange-500/40'
-                    : 'border-zinc-800 hover:border-orange-500/70'
-                }`}
-              >
-                <button
-                  type="button"
-                  onClick={() => setSelected(character)}
-                  className="block w-full text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
-                >
-                  {character.imageUrl ? (
-                    <div className="aspect-[4/5] w-full overflow-hidden bg-zinc-900">
-                      <img
-                        src={character.imageUrl}
-                        alt={`${character.name} — ${character.role}`}
-                        className="h-full w-full object-cover object-top"
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex aspect-[4/5] w-full items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-950">
-                      <UserCircle className="text-zinc-700" size={48} aria-hidden="true" />
-                    </div>
-                  )}
-                  <div className="p-5">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                      {character.episodes[0] ?? character.role}
-                    </p>
-                    <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">
-                      {character.name}
-                      {character.nameNote ? (
-                        <span className="mt-1 block text-base font-normal text-zinc-400">
-                          {character.nameNote}
-                        </span>
-                      ) : null}
-                    </h2>
-                    <p className="mt-2 text-sm text-zinc-400">{character.role}</p>
-                    <p className="mt-4 line-clamp-3 text-sm leading-6 text-zinc-300">
-                      {character.bio}
-                    </p>
-                  </div>
-                </button>
-              </article>
-            );
-          })}
+                  return (
+                    <article
+                      key={character.id}
+                      className={`overflow-hidden rounded-lg border bg-zinc-950 transition hover:-translate-y-0.5 ${
+                        isActive
+                          ? 'border-orange-500/70 ring-1 ring-orange-500/40'
+                          : 'border-zinc-800 hover:border-orange-500/70'
+                      }`}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setSelected(character)}
+                        className="block w-full text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
+                      >
+                        {character.imageUrl ? (
+                          <div className="aspect-[4/5] w-full overflow-hidden bg-zinc-900">
+                            <img
+                              src={character.imageUrl}
+                              alt={`${character.name} — ${character.role}`}
+                              className="h-full w-full object-cover object-top"
+                              loading="lazy"
+                            />
+                          </div>
+                        ) : (
+                          <div className="flex aspect-[4/5] w-full items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-950">
+                            <UserCircle className="text-zinc-700" size={48} aria-hidden="true" />
+                          </div>
+                        )}
+                        <div className="p-5">
+                          <div className="flex items-center justify-between gap-2">
+                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                              {character.episodes[0] ?? character.role}
+                            </p>
+                            <BibleStatusBadge status={character.bibleStatus} />
+                          </div>
+                          <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">
+                            {character.name}
+                            {character.nameNote ? (
+                              <span className="mt-1 block text-base font-normal text-zinc-400">
+                                {character.nameNote}
+                              </span>
+                            ) : null}
+                          </h2>
+                          <p className="mt-2 text-sm text-zinc-400">{character.role}</p>
+                          <p className="mt-4 line-clamp-3 text-sm leading-6 text-zinc-300">
+                            {character.bio}
+                          </p>
+                        </div>
+                      </button>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
 
         {filtered.length === 0 ? (
@@ -149,12 +246,24 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
       ) : null}
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-          {character.role}
-        </p>
+        <div className="flex items-start justify-between gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+            {character.role}
+          </p>
+          {character.bibleStatus ? (
+            <span className="shrink-0 whitespace-nowrap">
+              <BibleStatusBadge status={character.bibleStatus} />
+            </span>
+          ) : null}
+        </div>
         <h2 className="mt-2 text-3xl font-semibold leading-tight text-white">{character.name}</h2>
         {character.nameNote ? (
           <p className="mt-2 text-sm text-zinc-400">{character.nameNote}</p>
+        ) : null}
+        {character.bibleSheet ? (
+          <p className="mt-2">
+            <BibleSheetLink path={character.bibleSheet} />
+          </p>
         ) : null}
       </div>
 

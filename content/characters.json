@@ -27,7 +27,9 @@
       "duet",
       "spy"
     ],
-    "imagePath": "characters/image_001.webp"
+    "imagePath": "characters/image_001.webp",
+    "cluster": "The building pair",
+    "bibleSheet": "characters/building-cast.md"
   },
   {
     "id": "rubella",
@@ -58,7 +60,71 @@
       "monster-mash",
       "spy"
     ],
-    "imagePath": "characters/image_002.jpg"
+    "imagePath": "characters/image_002.jpg",
+    "cluster": "The building pair",
+    "bibleSheet": "characters/building-cast.md"
+  },
+  {
+    "id": "vivienne-vale",
+    "name": "Vivienne Vale",
+    "role": "The Instigator — she proposes the swap, sets the rules, and is the only one of the two who believes the score doesn't exist",
+    "episodes": [
+      "Episode 01",
+      "Episode 04 — back wall, non-voting",
+      "House of Mirrors Rally"
+    ],
+    "traits": [
+      "Deadpan glamour",
+      "Requires chaos like oxygen",
+      "Never sits down",
+      "Withholds rather than lies"
+    ],
+    "bio": "Vivienne Vale got so good at her own life that it stopped surprising her, and has spent six years trying to trade it for one she can't predict. She proposes; her opposite number Liliane executes. She is charming the way a draft is charming — you notice it as a pleasure and then you notice the door is open.",
+    "props": [
+      "Ping-pong paddle",
+      "Champagne flute (never set down)",
+      "Silver pendant"
+    ],
+    "tags": [
+      "the-two",
+      "glamour-apocalypse",
+      "lace"
+    ],
+    "imagePath": "characters/image_001.webp",
+    "cluster": "The Two",
+    "bibleStatus": "recurring",
+    "bibleSheet": "characters/bible/vivienne-vale.md"
+  },
+  {
+    "id": "liliane-vale",
+    "name": "Liliane Vale",
+    "role": "The Finisher — she arrives after the match is lit, accepts on terms nobody offered, and keeps the only accurate score",
+    "episodes": [
+      "Episode 01",
+      "Episode 04 — back wall, non-voting",
+      "House of Mirrors Rally"
+    ],
+    "traits": [
+      "Ornate deadpan",
+      "Reads people and invoices them",
+      "Keeps the real score",
+      "Never opens the notebook on camera"
+    ],
+    "bio": "Liliane Vale remembers the exits, packs the bags, and lets Vivienne believe the swap was her idea. She has been Vivienne four times and knows the contents of her hall table better than Vivienne does. She is not the calmer of the two — she is the one whose fury has a filing system.",
+    "props": [
+      "Leather-bound notebook (never opened on screen)",
+      "Wine glass she sets down",
+      "Silver at wrist and ear"
+    ],
+    "tags": [
+      "the-two",
+      "glamour-apocalypse",
+      "lace"
+    ],
+    "imagePath": "characters/image_003.png",
+    "cluster": "The Two",
+    "bibleStatus": "recurring",
+    "bibleSheet": "characters/bible/liliane-vale.md"
   },
   {
     "id": "qing-rao",
@@ -84,7 +150,10 @@
       "lawn-ensemble",
       "crystal-skull"
     ],
-    "imagePath": "episodes/episode-03/image_004.jpg"
+    "imagePath": "episodes/episode-03/image_004.jpg",
+    "cluster": "The Ep3 ensemble",
+    "bibleStatus": "active",
+    "bibleSheet": "characters/bible/qing-rao.md"
   },
   {
     "id": "justine",
@@ -108,7 +177,10 @@
       "ep3",
       "monster-mash",
       "lawn-ensemble"
-    ]
+    ],
+    "cluster": "The Ep3 ensemble",
+    "bibleStatus": "active",
+    "bibleSheet": "characters/bible/justine.md"
   },
   {
     "id": "madelin",
@@ -133,7 +205,10 @@
       "ep3",
       "monster-mash",
       "skull"
-    ]
+    ],
+    "cluster": "The Ep3 ensemble",
+    "bibleStatus": "active",
+    "bibleSheet": "characters/bible/madelin.md"
   },
   {
     "id": "scarlet",
@@ -183,7 +258,10 @@
       "recurring-gag",
       "deadpan",
       "ep3"
-    ]
+    ],
+    "cluster": "Free radicals",
+    "bibleStatus": "recurring",
+    "bibleSheet": "characters/bible/the-pizza-guy.md"
   },
   {
     "id": "riley-smith",
@@ -212,7 +290,9 @@
       "ridge",
       "kestrel",
       "straight-woman"
-    ]
+    ],
+    "cluster": "The mountain",
+    "bibleSheet": "characters/riley-smith.md"
   },
   {
     "id": "kenji-shred-sato",
@@ -238,6 +318,7 @@
       "commercial",
       "eyewash-station",
       "cutaway"
-    ]
+    ],
+    "cluster": "Free radicals"
   }
 ]

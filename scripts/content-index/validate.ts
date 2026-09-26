@@ -1,6 +1,12 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import type { CartoonRecord, CutawayRecord, EpisodeRecord, SequenceRecord } from './schemas';
+import type {
+  CartoonRecord,
+  CutawayRecord,
+  EpisodeRecord,
+  SequenceRecord,
+  SeriesCharacterRecord,
+} from './schemas';
 import type { ParsedSong } from './load';
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
@@ -140,6 +146,31 @@ export function validateCartoons(repoRoot: string, cartoons: CartoonRecord[]): v
   if (errors.length > 0) {
     throw new Error(
       `Cartoon validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+export function validateCharacters(repoRoot: string, characters: SeriesCharacterRecord[]): void {
+  const errors: string[] = [];
+  const idCounts = new Map<string, number>();
+
+  for (const character of characters) {
+    idCounts.set(character.id, (idCounts.get(character.id) ?? 0) + 1);
+    if (character.imagePath && !existsSync(join(repoRoot, character.imagePath))) {
+      errors.push(`Character ${character.id} imagePath not found: ${character.imagePath}`);
+    }
+    if (character.bibleSheet && !existsSync(join(repoRoot, character.bibleSheet))) {
+      errors.push(`Character ${character.id} bibleSheet not found: ${character.bibleSheet}`);
+    }
+  }
+
+  for (const [id, count] of idCounts) {
+    if (count > 1) errors.push(`Duplicate character id: ${id}`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Character validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

@@ -18,6 +18,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `backlog.md` – quick capture of fleeting ideas
 
 ## Current files
+- `seed-casts-twice.md` – Reiniger shadow-puppet visual experiment: noir paper street, orphan shadow blooms into a fractal garden on the child's breath, seed is a flat disc. Silent 30s first. Paper Lung queued (76 BPM A minor). Prompts: [`prompts/seed-casts-twice-segments.md`](../prompts/seed-casts-twice-segments.md). Claude runbook: [`seed-casts-twice-agentic.md`](seed-casts-twice-agentic.md). Suggestions id `seed-casts-twice`. Farm [#22](https://github.com/ford442/weeks_on_fire/issues/22). Not [#42](https://github.com/ford442/weeks_on_fire/issues/42).
 - `monster-mash-expansion.md` – cameo beats (Amy & Alec, Thriller werewolf), staging ideas, and Grok Imagine prompt-craft notes for the Ep3 finale
 - `eyewash-station.md` – channel / network framing for the cutaways (diegesis locked: slide, never comment)
 - `eyewash-idents.md` – six 5–10s bumpers + three fake 15s ads

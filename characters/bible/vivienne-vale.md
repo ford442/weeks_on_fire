@@ -189,6 +189,7 @@ The rhythm is the ball, the gavel, or the chandelier — never a beat she chose.
 - Don't give her a quip with a wind-up. No "well, well." No raised eyebrow. Her stillness is the direction.
 - Don't let her name a feeling. Ever. Not even in the break beat — especially not there.
 - Don't write her a normal conversation. Everything between the Two is stylized, loaded, or performative.
+- Don't send her up **Christina hill** ([`christina.md`](christina.md)). She would treat the carved door as a gala entrance and the hostess as a rival appraiser, and the house has no room for a score. Not this week, and not as a cameo.
 - Don't put her in jewel tones, don't put her in flats, don't put her in a folding chair. *"We don't do polyester"* is Liliane's line; Vivienne's version is simply not sitting down.
 
 ---

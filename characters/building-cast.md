@@ -49,6 +49,17 @@ Any late-night building sequence, laundry-room musical numbers, HOA confrontatio
 [`notes/scenes/ambient-lighting-with-ambition.md`](../notes/scenes/ambient-lighting-with-ambition.md) — she holds the ladder and brings an extinguisher nobody asked for ·
 [`notes/scenes/natural-ventilation.md`](../notes/scenes/natural-ventilation.md) — she says no, once, and it holds.
 
+**What she carries between scenes**  
+Rubella keeps a mental list of every door in the building and how long it is safe to stand at each one. The laundry room is ten minutes. The elevator lobby is four. The roof is as long as the wind holds. She has never been wrong about a door, and she has never told Lillith the list exists. It is the closest thing she has to a hobby.
+
+She is not unkind. She is rationed. She gives people exactly the attention the situation can afford and she is honest about the price. The dryness is budgeting.
+
+**What would break her on screen**  
+Someone doing something for her without being asked, and it working. She would not know where to put it. (Use never, or once, very late.)
+
+**At Christina's door** *(see [`bible/christina.md`](bible/christina.md))*  
+Rubella is the reason the thirty seconds hold. She sees the gilt, hears the harpsichord, clocks the hostess face, and knows the number before anyone says it. "We're not staying" is her whole line and it is a courtesy, not a complaint. **How she would fail the door:** by staying one beat too long to work out whether the harpsichord is on a timer. She doesn't. She takes Lillith's elbow and goes. She does not look back at the white.
+
 **Status**  
 Core protagonist. Already heavy in Episode 3 scripts, audio cuts, and multiple musical cutaways (Choose Your Basalt, Monster Mash, etc.). Expand freely.
 
@@ -84,6 +95,17 @@ Musical cutaways that start in the living room and explode outward, spy-heist su
 [`notes/scenes/negotiating-with-the-elevator.md`](../notes/scenes/negotiating-with-the-elevator.md) — she negotiates with car two by the book, and the book works ·
 [`notes/scenes/ambient-lighting-with-ambition.md`](../notes/scenes/ambient-lighting-with-ambition.md) — the 6BQ5 out of the weather-predicting ping-pong table; forty seconds of neon ·
 [`notes/scenes/natural-ventilation.md`](../notes/scenes/natural-ventilation.md) — **the one time she is told no and sits down.** The change is never marked.
+
+**What she carries between scenes**  
+Lillith keeps a pocket of salvaged parts — a vacuum tube, two brass wing nuts, a length of cloth-covered wire — and replaces them one at a time as they go into things. She knows what every one of them came out of. She is sentimental only about components.
+
+Underneath the provocation is a very good ear. She hears a building the way a mechanic hears an engine, and most of her "improvements" start with a noise nobody else noticed. She is not reckless. She is early.
+
+**What would break her on screen**  
+Being handed something beautiful that already works, with nothing to fix. (This is the Christina house. It is why the visit is thirty seconds.)
+
+**At Christina's door** *(see [`bible/christina.md`](bible/christina.md))*  
+Lillith says the house is nice, asks if that is a harpsichord, and gets *ja*. She wants to find where the gilt stops and the marble starts and put her hand on the seam. **How she would fail the door:** by going looking for the fuse box behind the gold. Rubella has her elbow before she gets there. Thirty seconds, Swedish bed, out. She is not sulking on the way down the hill. She is humming the continuo in the wrong key, on purpose.
 
 **Status**  
 Key dynamic force alongside Rubella. Already present in dialogue cuts, scene drafts, and multiple Minimax tracks.
@@ -125,6 +147,9 @@ Crisp, slightly nasal, perfect for spoken-word interludes and bureaucratic cabar
 **Episode / Cutaway Fit**  
 HOA meeting episodes, any scene requiring an authority figure who is both ridiculous and terrifying, musical numbers about compliance and the slow death of the human spirit under fluorescent lights.
 
+**At Christina's door**  
+Madelyn is never seen, so she cannot knock. If she could, she would leave a laminated card on the carved wood about unapproved snow load, and the card would sit in the gilt throat all night with no one to enforce it. There is no HOA on Christina hill. **Not on the hill this week, or any week.** Do not cast a face to find out.
+
 **Status**  
 Strong antagonist / authority energy. Already appears as Madelin in Episode 3 concepts and HOA sketches. Name standardized here as Madelyn.
 
@@ -137,28 +162,33 @@ Strong antagonist / authority energy. Already appears as Madelin in Episode 3 co
 > lobby-with-noodles cameo in *Car Twelve, This Is Twelve*. The systems knowledge and the
 > noodles below are now hers and remain canon; **the male reading is retired.** Decision
 > recorded in the [bible README](bible/README.md#2-qing-rao-is-one-person-and-she-is-the-one-with-the-skull).
-> Read the paragraphs below with she/her pronouns until this section is rewritten.
+> The paragraphs below were rewritten in she/her on 2026-09-28.
 
 **Role / Vibe**  
-The cool, calculating neighbor who knows too much about how the building's backend systems actually work. Hyper-competent wild card. Speaks calmly even when the floor is literally on fire. Treats absolute chaos like a mild scheduling conflict.
+The cool, calculating neighbor who knows too much about how the building's backend systems actually work. Hyper-competent wild card. Speaks calmly even when the floor is literally on fire. Treats absolute chaos like a mild scheduling conflict — because she has already worked out what it is made of.
 
 **Backstory**  
-Ex-systems engineer or black-market logistics specialist who retired to the lower levels specifically to keep a low profile. He still has access keys that no longer officially exist. The building's infrastructure occasionally listens when he talks to it. He never confirms or denies this.
+A materials lecturer with real systems knowledge, retired to the lower levels of her own attention to keep a low profile. She still has access keys that no longer officially exist. The building's infrastructure occasionally listens when she talks to it. She never confirms or denies this, because she has no hypothesis and will not pretend to one. Full committed history on [her sheet](bible/qing-rao.md#backstory-committed).
 
 **Quirk / Flaw**  
-Always seems to be eating a bowl of noodles or tinkering with a small gadget during life-or-death situations. Treats absolute chaos like a mild inconvenience. Will pause mid-crisis to adjust the seasoning.
+Always seems to be eating a bowl of noodles or turning a small object in her hands during life-or-death situations. Will pause mid-crisis to adjust the seasoning. Keeps two mysteries on purpose — the skull and an unlogged sample — and would call this unscientific if anyone found out.
 
 **Voice / Minimax Notes**  
-Calm, measured, almost soothing — the perfect counterpoint to everyone else's rising panic. Excellent for spoken asides under high-tension musical beds or deadpan explanations of impossible systems.
+Calm, measured, almost soothing — the perfect counterpoint to everyone else's rising panic. Excellent for spoken asides under high-tension musical beds or deadpan explanations of impossible systems. Never a sting on her behalf.
 
 **Sample Lines**  
 - *(noodles in hand, hallway on fire)* "The primary loop is overloaded. Secondary should hold for another four minutes."  
 - "I wouldn't stand there. The floor remembers."  
-- "Chaos is just a system that hasn't been named yet."
+- "Chaos is just a system that hasn't been named yet."  
+- *(at the ocean glass in Christina's atrium)* "It's soda-lime. The sea did the rest."
 
 **Grok Imagine Seeds**  
-- Qing Rao sitting cross-legged on the floor of a smoke-filled corridor, calmly eating noodles while emergency lights strobe around him.  
-- Close-up of his hands assembling a small, glowing gadget while the background warps with impossible architecture.
+- Qing Rao sitting cross-legged on the floor of a smoke-filled corridor, calmly eating noodles while emergency lights strobe around her.  
+- Close-up of her hands turning a small glowing object while the background warps with impossible architecture.  
+- *(Christina hill, her own night)* Qing Rao standing alone at a wall of sea-green ocean glass in a white marble atrium, hands empty at her sides, studying the glass, a still woman in an ivory gown out of focus far behind her.
+
+**At Christina's door**  
+She would not fail it. She would identify it — the gilt, the marble, the glass, the two hundred years between them — and nearly ask about the seam, and not ask. She gets **her own night** at the sea glass: Christina plus Qing, nobody else, and the skull stays home. See [`ideas/christina-house-company.md`](../ideas/christina-house-company.md).
 
 **Episode / Cutaway Fit**  
 Any scene that needs a character who already understands the rules of the current absurdity and is simply waiting for everyone else to catch up. Natural foil to Madelyn's rule-obsession and perfect deadpan partner for Rubella.
@@ -174,6 +204,9 @@ Enigmatic wild card. Already listed in suggested-characters as crystal-skull kee
 - **Madelyn vs. Everyone**: She is the external pressure that forces the others into alliance (or temporary truce).  
 - **Qing Rao**: The quiet stabilizer. She rarely starts the trouble, but she is almost always the one who understands how to survive it. (Pronouns corrected per [`bible/qing-rao.md`](bible/qing-rao.md).)  
 - **Shared Setting**: The building itself is a character — elevators with mood disorders, laundry rooms that double as temporary neutral zones, hallways that rearrange themselves when no one is looking.
+- **The door rule**: Rubella and Lillith are the only building residents who visit Christina hill, and only for thirty seconds at the door. Rubella holds the clock; Lillith holds the curiosity; they leave together. They never stay the night. See [`bible/christina.md`](bible/christina.md).
+- **Who does not go up the hill this week**: Madelyn (never seen, no HOA there), the Pizza Guy (his bag would be a second leak), Kenji (Ultra Screech stays the interrupt), Riley (above five thousand feet, not this hill). Qing goes on a separate night, alone. Full table: [`bible/relationship-map.md`](bible/relationship-map.md#christina-hill--who-does-not-visit-this-week).
+- **Four Vales, still unexplained**: Rubella and Lillith are not Vivienne and Liliane, nobody says so, and the Christina door does not change that. Do not mint another Vale to bridge them.
 - **Outside the building**: Rubella and Lillith moonlight as the dual frontwomen of the Glam-Sham-Poo *Ultra Screech* commercial alongside Kenji "Shred" Sato — the same laundry room, rented by a shampoo company. Kenji is not a resident; his card lives in `suggested-characters.md`. Cutaway: [`ideas/glam-sham-poo-commercial.md`](../ideas/glam-sham-poo-commercial.md).
 
 ---

@@ -8,7 +8,9 @@ do with them.
 
 > **This folder is for cast.** The fictional *crew* (Mara Vell, Julian Rook, Soren Kade,
 > Nova Chen, Elio Marsh) lives in `content/staff.json` and `../staff-portraits.md` and is
-> rendered in the site's Crew view. Do not mix them.
+> rendered in the site's Crew view. Long-form crew pages — plus **Roley Voss**, who has no
+> portrait and is not in `staff.json` — live in [`../../docs/crew/`](../../docs/crew/README.md).
+> Do not mix them.
 
 ---
 
@@ -53,6 +55,7 @@ Every sheet's header carries one:
 | [HOA Cast](hoa-cast.md) — Karen · Brad · Dale | recurring | Ep4 |
 | [EyeWash Staff](eyewash-staff.md) — Oz · Continuity Voice · Marguerite Flood · S&P Skeleton | concept → active | Master Control, 4 AM · idents |
 | [Animals & Bots](animals-and-bots.md) — Black Cat · Biscuit · Pong-Bot 3000 | active | Ep3 · Ep4 · Cat POV |
+| [Christina](christina.md) — alias *Christine* · the house | recurring | Sweden heart cutaway (Christina hill) — pages only |
 | [Relationship Map](relationship-map.md) | — | all |
 
 Also cast, documented elsewhere and **not duplicated here**:

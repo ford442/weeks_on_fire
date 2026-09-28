@@ -21,11 +21,15 @@ name the two methods, the scene is two characters talking.
 | **EyeWash Station** | Oz · Continuity Voice · Marguerite Flood · S&P Skeleton | Institutional liminal. Master control, idents, sign-off. | [`eyewash-staff.md`](eyewash-staff.md) |
 | **Animals & bots** | The Black Cat · Biscuit · Pong-Bot 3000 | Silent / literal. Everywhere. | [`animals-and-bots.md`](animals-and-bots.md) |
 | **The mountain** | Riley Smith | Honest height. **Above five thousand feet only.** | [`../riley-smith.md`](../riley-smith.md) |
+| **Christina hill** | Christina · *the house* *(+ one extra per plate)* | Still, formal, winter. A threshold, not a hangout. Nobody travels **in**; guests pass through. | [`christina.md`](christina.md) · [`../../ideas/christina-house-company.md`](../../ideas/christina-house-company.md) |
 | **Free radicals** | The Pizza Guy · Kenji "Shred" Sato · the Laundromat Saints · the Velvet Rope Bouncer · the Radio Voice | No cluster. Travel anywhere. | this folder · [`../suggested-characters.md`](../suggested-characters.md) |
 
 **The Pizza Guy is the only character who belongs to every cluster and none.** He is the
 series' connective tissue and should be the default answer to "how do we get these two
 groups in one frame."
+
+**One exception: Christina hill.** The house's one leak is the tower in the atrium glass; his
+bag would be a second. He does not deliver up that hill. See [`christina.md`](christina.md).
 
 ---
 
@@ -116,7 +120,32 @@ The clusters are tonal. Crossing them is a deliberate move, not a default.
 | **Black Cat → the ridge** | ❌ | Keep her in town. |
 | **Madelyn (building) → HOA clubhouse** | ❌ | **Never seen.** Intercom voice and a piece of laminate only. Do not cast a face, and do not let her dialog merge with Karen's. |
 | **Continuity Voice → any two-hander** | ❌ | *Natural Ventilation* and *Regulation Powder* have no third voice. If a draft adds one, the draft is wrong. |
-| **Pizza Guy → anywhere** | ✅ Always | New uniform each time, same shoes, same pace. Nobody remarks on the change. |
+| **Pizza Guy → anywhere** | ✅ Almost always | New uniform each time, same shoes, same pace. Nobody remarks on the change. **Exception: Christina hill** — his bag would be the house's second leak. |
+| **Rubella + Lillith → Christina hill** | ✅ 30 seconds | The door, Swedish hospitality, then they leave. They never stay the night and never go past the threshold into a second plate. |
+| **Qing Rao → Christina hill** | ✅ Her own night | Sea-glass night only. Christina plus Qing, nobody else. The skull stays home. |
+| **Crew → Christina hill** | ⚠️ Nova only | Nova Chen in the gilt hall with cue sheets and **no mic**, on her own night. No other crew in frame. No floor directors. |
+| **Anyone → Christina hill, as a crowd** | ❌ | One extra body per plate. Five faces is a party. |
+
+---
+
+## Christina hill — who does not visit this week
+
+The house is new on the map and has the strictest door. Written here so nobody has to
+re-decide it at the snow.
+
+| Who | Why they fail the door | This week |
+|---|---|---|
+| **Rubella** | She can hold a threshold for thirty seconds better than anyone — she has done it at every door in the building. The failure would be staying to check whether the harpsichord is on a timer. | ✅ 30s, then out |
+| **Lillith** | She would go looking for the fuse box behind the gilt. The thirty seconds are the leash; Rubella holds it. | ✅ 30s, then out |
+| **Vivienne & Liliane** | They would treat the door as the start of a gala and the hostess as competition. The house has no room for a score. | ❌ Not on the hill |
+| **Riley Smith** | Wrong altitude, and she would ask what the tower in the glass is. No retrieval plot, and she does not start the song. | ❌ Not on the hill |
+| **The Pizza Guy** | He would deliver, correctly, and never ask — but the bag is a second leak. | ❌ Not on the hill |
+| **Kenji** | He would pitch the gown. Ultra Screech stays the interrupt. | ❌ Thrown |
+| **Qing Rao** | She would not fail it. She would identify it. | ✅ Her own night only |
+| **Madelin / Jackalyn / Justine** | Madelin would invent the house a backstory out loud; Jackalyn would check her watch; Justine would be fine, and that is not a reason to go. | ❌ Not on the hill |
+| **The HOA** | Karen would classify the snow roof as an unapproved hardscape feature. | ❌ Not on the hill |
+| **Madelyn (building)** | Never seen. A laminate on a door with no HOA is just a card. | ❌ Not on the hill |
+| **EyeWash** | The station is not on in this house. No TV, no Continuity Voice, no Radio Voice. | ❌ Not on the hill |
 
 ---
 

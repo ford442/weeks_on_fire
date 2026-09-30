@@ -161,6 +161,7 @@ She is in front of a class. The class is not shown. It may not exist.
 3. **"Office Hours"** — Somebody from the lawn ensemble turns up at the university with a genuine technical question about something cosmic. She answers it completely and usefully, in eleven words, in a fluorescent corridor. The cosmic thing is not solved; it is just *specified*.
 4. **"The Sample"** *(late season)* — See break beat. She sends the jar. Use once.
 5. **"Lobby, Noodles, No Line"** *(already canon — `notes/scenes/README.md`, Car Twelve)* — Expand into a 40-second insert: she eats noodles in the lobby while the elevator negotiates two floors away. She does not look up. She knows what the elevator is made of.
+6. **"Sea Glass"** *(Christina hill, her own night)* — Qing Rao at the ocean-glass wall in Christina's white marble atrium. Christina plus Qing, **nobody else in the plate.** She identifies the glass ("It's soda-lime. The sea did the rest."), notes that the gilt in the other room is two hundred years older, and nearly asks about the seam where the house changes century. She doesn't. The skull stays home — this is a visit, not a case. Separate from the night-home and from every other visitor. See [`christina.md`](christina.md) and [`../../ideas/christina-house-company.md`](../../ideas/christina-house-company.md).
 
 ---
 

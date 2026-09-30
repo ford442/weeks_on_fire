@@ -428,6 +428,27 @@ Day job stamp — [`This Program Contains Dialogue`](../songs/This_Program_Conta
 
 ---
 
+## Christina's Door — How Each Would Fail It
+
+*Christina hill is the strictest door in the series: a snow mound that is a roof, a carved
+door with a gilt throat, a still hostess in an ivory shag gown, one extra body per plate.
+Sheet: [`bible/christina.md`](bible/christina.md). Full "who does not visit" table:
+[`bible/relationship-map.md`](bible/relationship-map.md#christina-hill--who-does-not-visit-this-week).*
+
+| Character | How they would fail the door | This week |
+|---|---|---|
+| **The Pizza Guy** | He would not fail it. He would deliver to the right name, never ask what the house is, and leave. The failure is the **bag** — the tower in the glass is the house's one leak, and a pizza bag in the snow is a second. | ❌ Not on the hill |
+| **Kenji "Shred" Sato** | He would pitch the ivory shag as a before-and-after. Ultra Screech is the interrupt and it does not interrupt this house. | ❌ Thrown |
+| **The Radio Voice** | There is no radio in the house. If a draft puts the Radio Voice under the aria, the draft is wrong. | ❌ Not on the hill |
+| **The Continuity Voice** | Same: no station on the hill. And **Continuity Voice vs. Radio Voice stays unresolved** — the Christina house is not the place it gets settled. | ❌ Not on the hill |
+| **Madelin** *(Ep3, the tote)* | She would give the house a shipwreck. Out loud. In the atrium. **Not Madelyn** — different person, one letter apart. | ❌ Not on the hill |
+| **Madelyn** *(building, never seen)* | A laminated card on the carved wood, nobody to enforce it. **Not Madelin.** | ❌ Not on the hill |
+| **Peggy Babcock** | She would second the motion to leave before anyone made it. Wrong register, right instinct. | ❌ Not on the hill |
+| **Black Cat** | She would sit in the gilt throat and refuse to choose a century. Cute; not this house. | ❌ Not on the hill |
+| **Kestrel Ridge / Riley** | See [`riley-smith.md`](riley-smith.md#at-christinas-door-she-is-not-there). | ❌ Not on the hill |
+
+---
+
 ## Character Pairing Cheat Sheet
 
 *Index only. The expanded version — the two methods in each pairing, where it plays, what it

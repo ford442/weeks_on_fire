@@ -202,6 +202,16 @@ There is only **one** woman.
 
 ---
 
+## Where They Do Not Go
+
+The Two belong anywhere the world is ending beautifully. That is not everywhere.
+
+- **Christina hill** ([`bible/christina.md`](bible/christina.md)) — **not on the hill.** They would read the carved door as the entrance to a gala and the hostess as an opponent. Vivienne would appraise the gilt out loud; Liliane would note the three sleeping cars and which one is hers this swap. The house is a threshold with a hostess face, and it has no room for a score. The building pair (Rubella and Lillith) get the thirty seconds at that door. The Two do not, and nobody explains the difference.
+- **The Lamborghini is theirs, not the house's.** The sleeping hypercars on Christina hill are livestock, not the Two's car parked outside. Do not cut from one to the other.
+- **No gala on the hill.** The royal-gala reading of the Sweden house is rejected; so is any version where the Two bring it.
+
+---
+
 ## Quick-Start Grok Imagine Prompt Seeds
 
 **Core duo shot (use as base):**

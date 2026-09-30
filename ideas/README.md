@@ -44,6 +44,8 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `riley-space-cop-cutaway.md` – Riley years montage. Table door (“you caught me / space cop”) then Annex: two lines, one cube, nights, canyon yard, Appendix C, bestowal of an odd sword. Rubella cuts before the second verse. Suggestions id `riley-space-cop`. Issue [#57](https://github.com/ford442/weeks_on_fire/issues/57).
 - `riley-space-cop-agentic.md` – Claude runbook for scene expansion (year cards, scenery twins, bestowal harden, codegen).
 - `well-fall.md` – POV down a real well, instrumental heavy metal, no vocal. Lip locked. Sight bank lives on Suggestions (`/suggestions/well-fall`) — click a candidate into open slots B–H. Suggestions id `well-fall`.
+- `christina-frozen-house.md` – Mara page for the Sweden heart cutaway (alias Christine): snow-mound roof, wrong door with a gilt throat, gilt foyer → white marble atrium in one cut, three sleeping hypercars. Rubella and Lillith get 30s at the door and leave. Pages only, no cutaway id. Hostess sheet: [`characters/bible/christina.md`](../characters/bible/christina.md).
+- `christina-house-company.md` – one extra body per plate. Night-home seats (gilt-hall accompanist + one atrium listener) and the separate legal nights: clerk, Qing at sea glass, Nova with no mic, tuner, wrap-student.
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

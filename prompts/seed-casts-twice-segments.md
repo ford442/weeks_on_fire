@@ -45,6 +45,7 @@ Generate-first: **S1** (start child matched → last shadow forked). Then **S3 �
 
 ## S0 — Waiting Shadow (0:00–0:04)
 
+**Job:** leftover shadow — the crime is already over; there is no caster.  
 **On screen:** Empty street. A human shadow with no caster. Heel already sprouting G0.  
 **Start / last:** same street, same camera. Shadow gains one fern pinna. No body enters.  
 **Tint:** P0 blue optional (orphan shadow only), else amber. Splice, not fade.
@@ -68,6 +69,7 @@ Same street and camera, same blue field. The orphan shadow has grown one more fe
 
 ## S1 — Split (0:04–0:10)
 
+**Job:** two matched steps, then the third step forks — the lie. Do not show a thief.  
 **On screen:** Child enters. Body and shadow agree. On the third step the shadow stays and forks.  
 **Start / last:** start = matched; last = child one step on, shadow planted and forked to G1.  
 **Motion:** one step. Shadow does not follow. One plate swap G0 → G1.  
@@ -100,6 +102,7 @@ Lotte Reiniger silhouette animation still, the same solid black card child about
 
 ## S2 — Canopy (0:10–0:18)
 
+**Job:** the reach adds a generation and hides the disc. Reaching fails.  
 **On screen:** Child reaches up. Canopy G2 fills the alley. The disc is lost in the lace.  
 **Start / last:** start = G2 canopy, disc unseen; last = G3 lace-of-shadow, disc lost.  
 **Tint:** amber. If this is the one green insert, the whole last plate goes G3 green as a splice, then back to amber.
@@ -123,6 +126,7 @@ Same pose. One more generation swapped in (G3 lace-of-shadow), the canopy now a 
 
 ## S3 — Hold (0:18–0:24)
 
+**Job:** the hold withdraws generations. The disc appears because the lace got smaller.  
 **On screen:** Child holds the breath. Branches withdraw a generation. In a gap, the disc.  
 **Start / last:** start = G2 mid-withdraw, disc isolated chest-high; last = G1, disc lower, child unmoved.  
 **Motion:** child does not move. Two plate swaps back. Disc drifts down one stem.  
@@ -154,6 +158,7 @@ Lotte Reiniger silhouette animation still, the same solid black card child about
 
 ## S4 — Palm Return (0:24–0:30)
 
+**Job:** disc in the palm, shadow locks under the shoes, cut on the lock. Replacement puppet, not a crop.  
 **On screen:** Close on a larger hand puppet. Disc on the palm. Last stems go. Shadow locks. Cut.  
 **Start / last:** start = disc on palm, two stems at frame edge; last = stems gone, shadow locked, frame emptier.  
 **Motion:** stems withdraw; nothing else. The frame ends smaller than S2.  

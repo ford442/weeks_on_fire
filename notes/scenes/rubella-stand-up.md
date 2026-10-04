@@ -2,6 +2,15 @@
 
 *Spoken gag packet — laundry-room open mic. Farm #22. Not a musical. Not Ultra Screech. Not Lace Waterfall. Not Big City club.*
 
+> **Room note (2026-09-28):** The laundry intercom is **v1 picture**. The current room is the
+> **stage lock (2026-09-12):** small dark stage, one warm spotlight, brass stand mic, audience at
+> tables and chairs in low light, sparse; they sit, they do not clap. Lillith at one back table.
+> Madelyn's clipboard on a dark table, no gavel. Not Lace Waterfall warehouse, not Big City /
+> Glamora club, and not the laundry intercom as the only room. **Take B** (stage room,
+> yank timing, ~85–90s) is promotion-ready on
+> [`versions/rubella-stand-up-versions.md`](versions/rubella-stand-up-versions.md#take-b--stage--yank-timing-2026-09-28).
+> V0 below stays the parent until a human promotes B.
+
 **Slugline:** INT. LAUNDRY ROOM — OPEN MIC — NIGHT  
 **Runtime target:** 60–75s A-roll + three 6–8s interrupt tags  
 **Voice bed:** [`songs/Rubella_Stand_Up.md`](../../songs/Rubella_Stand_Up.md) — dry raspy, hallway slap, no music  
@@ -133,3 +142,7 @@ Shoot **A** (podium lock) and **D** (land) first. Mouths on. Stack silent pictur
 4. Land — two identical sheets, mug empty, chairs crept one inch back  
 
 Qing optional on 3 only: noodles, one wrong-time laugh, no line.
+
+**Stage twin:** shoot each of 1–4 again in the stage room (spotlight, brass stand mic, sparse
+tables in the falloff, Lillith at the back table under the pink tube, Madelyn's clipboard on a
+dark table). Same order, same beats, mouths on; the laundry stills stay as the v1 set.

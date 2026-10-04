@@ -52,7 +52,9 @@ material, not airline food, not "what's the deal with," not mystical register.
 | ID | Label | Beats | Status | One-line pitch |
 |----|-------|-------|--------|----------------|
 | V0 | Parent baseline | all | preferred | Shootable Voice bed; heckle-setup pass |
+| B | Stage take B — yank timing | all | active · promotion-ready | Dark room with tables; play both sides until the other voice overstays; "Stop. Go back. You were doing well." |
 | — | Overflow bits | A, D, tags | fragments | Steal one later; do not dump into v1 |
+| — | Stage / yank-timing fragments | A–D | fragments | 2026-09-28 orphans for the stage room |
 
 ---
 
@@ -146,6 +148,246 @@ I filed a ticket. The ticket hummed back.
 Do **not** draft here: dating, airline food, "what's the deal with," second
 Lillith heckle, Qing dialogue, directory-board letter gag, lint-inventory
 night, elevator car interior.
+
+---
+
+## Take B — Stage / yank timing (2026-09-28)
+
+`active` · `promotion-ready` · all beats · **not promoted.** V0 stays the parent
+until a human pastes this in and logs it below.
+
+**Room (picture lock 2026-09-12):** small dark stage, one warm spotlight, brass
+stand mic. Audience at tables and chairs, low light, sparse. They sit. They do
+not clap. Lillith at one back table. Madelyn at a dark table with the
+clipboard, no gavel. Not Lace Waterfall warehouse. Not Big City / Glamora club.
+Laundry intercom is v1 picture, not the only room. Mouths on; silent picture on
+a Voice bed.
+
+**Delivery:** Rubella plays both sides of a talk (ticket, elevator, Madelyn
+memo) until the other voice overstays, then yanks it. Descending lists do the
+escalation. Names are texture, not premises: Madelyn, Item Four, Agent 47,
+`final_final_2`. Dry, not rapid-fire. No sitcom laugh-from-tape.
+
+**Length:** ~240 words, est. **85–90s** at parent pace (V0 is ~190 words for
+60–75s). If it runs long, cut "Mostly the file name." first, then the Agent 47
+exchange. Do not cut the elevator yank or the memo payoff.
+
+**The elevator in her mouth says floor numbers only**, same rule as
+[`../negotiating-with-the-elevator.md`](../negotiating-with-the-elevator.md).
+She quotes it. We do not cut inside the car.
+
+```
+INT. SMALL DARK ROOM — RESIDENT COMMENTS — NIGHT
+
+One warm spotlight. Brass stand mic. Low tables in the falloff, sparse,
+low light. They sit. They do not clap. A pink tube over the back door.
+Lillith at the one back table under it. Madelyn at a dark table,
+clipboard, no gavel.
+
+Rubella steps into the cone like it was assigned.
+```
+
+```
+[A — list / ticket / eulogy]  ~0:00–0:32
+
+RUBELLA
+Good evening. I'm Rubella. Item Seven. Resident comments.          // KEEP
+I didn't put my name on the list. The list put my name on me.      // KEEP
+Item Four was the fire. They tabled it. Item Six was Madelyn,
+telling me I'm Item Seven.                                         // NEW  (descending list)
+
+I filed a ticket. The ticket hummed back.                          // KEEP
+"Agent 47?" Hmm. "The floor is warm again." Hmm.
+"Is that a yes?" Hmmmmmm.                                          // NEW  (both sides; the hum overstays)
+That's a long hmm for a no.                                        // NEW
+Second ticket. They merged. Confident hum.                         // KEEP (merge / confident hum)
+
+My pension was in a QA folder called final_final_2.               // KEEP
+I gave the eulogy. Mostly the file name.                           // KEEP (eulogy) + NEW tail
+
+[B — elevator / detergent]  ~0:32–0:52
+
+The elevator just tried to negotiate. I told it I already pay rent.  // KEEP
+It said, "Four." I said, "I live on six." "Four." "Six."
+"Four." ... "Three."                                               // NEW  (both sides; the car overstays and descends)
+Stop. Go back. You were doing well. You were at four.              // NEW  (yank)
+
+I don't need a hero. I need the detergent that still works.        // KEEP
+Contraband. It still finishes a cycle.                             // KEEP
+
+[C — plant / heckle]  ~0:52–1:05
+
+                      (does not turn; the pink tube stays behind her)
+
+That tube over the door is pinker than the other one.
+I logged it as a fire hazard.                                      // KEEP (plant, relocated to the stage room)
+
+LILLITH
+(back table, off-mic, one line only)
+It's not a fire hazard. It's ambient lighting with ambition.       // KEEP
+
+RUBELLA
+That's my roommate. She fixed the ping-pong table. Tonight: sparks.  // KEEP
+
+[D — land]  ~1:05–1:28
+
+If the floor is on fire again, I'm charging it for emotional
+damages.                                                           // KEEP
+I already have the form. They duplicated it. Nobody filed anything.  // KEEP
+Madelyn sent a memo. "Item Four remains tabled."
+The table is on fire.                                              // NEW  (memo, read by Rubella; pays off Item Four + sparks)
+
+That's my time.                                                    // KEEP
+Stay seated. You were doing well.                                  // NEW  (yank callback on a room that already sits)
+Home to a dryer that does not summon anything.                     // KEEP (adapted: no dryer in this room)
+
+                      (Madelyn's clipboard ticks a box. No line.)
+```
+
+**Picture (stage twins of stills A–D — do not replace the laundry order):**
+
+1. **A** — spotlight lock: brass stand mic, mug set down like evidence, first
+   tables empty in the falloff, resignation face. Mouths on.
+2. **B** — detergent relic in the cone, bottle unlabeled, tables soft behind.
+3. **C** — heckle wide from behind the back table: Lillith under the pink tube,
+   mouth open one frame; Rubella small in the spotlight, not turning; Madelyn's
+   clipboard on a dark table.
+4. **D** — two identical forms, mug empty. Nobody has stood. One chair has been
+   pushed back from one table, one inch.
+
+Audio: this spoken packet only. Building SFX if any (spotlight hum, one chair
+scrape). No MiniMax under the set. No live band. No whoops.
+
+### Take B tags (cut-downs, same mic — three only)
+
+**Elevator — 8s (yank)**
+```
+RUBELLA
+The elevator just tried to negotiate. I told it I already pay rent.
+"Four." ... "Three."
+Stop. Go back. You were doing well.
+```
+
+**Detergent — 6–7s (descending list)**
+```
+RUBELLA
+I don't need a hero. I need the detergent that still works.
+Not the new one. Not the merged one. The contraband.
+```
+
+**Emotional damages — 8s (descending list)**
+```
+RUBELLA
+If the floor is on fire again, I'm charging it for emotional damages.
+Form. Duplicate. Merged. Policy. Nobody filed anything.
+```
+
+No fourth tag.
+
+### Refused for take B (and why)
+
+| Refused line | Why |
+|--------------|-----|
+| "My last date also tried to negotiate. At least the elevator dinged." | Dating material. The engine is building bureaucracy, and the delivery lock bans dating. |
+| "What's the deal with elevator music? It's airline food for your ears." | Airline food and "what's the deal with" in one line. Wrong register. |
+| LILLITH: "The table's fine. It just has a personality." | A second Lillith heckle. She gets one line, off-mic, and Rubella does not look. |
+| MADELYN: "Item Seven, you have thirty seconds." | Madelyn dialogue. She is a clipboard with no line. Rubella may read a Madelyn memo; Madelyn does not speak. |
+| `INT. FREIGHT ELEVATOR` insert, the car saying "Counteroffer accepted." | Elevator interior plus an elevator with words. We do not cut inside the car, and the car says floor numbers only (Car Twelve rule). |
+
+Also refused on sight, not drafted: a lint-inventory night bit (different
+night, no Rubella, no bottle), a magenta Glam bottle as the detergent, Lace
+Waterfall's unused-mic kit dressing this stage, any host intro or "give it up
+for."
+
+---
+
+## Stage / yank-timing fragments (2026-09-28)
+
+`fragments` · orphans for the stage room. None are in take B. Steal one only by
+cutting an equal line.
+
+**Tables** (`alt` · beat A)
+```
+RUBELLA
+You're all at tables. That's where this building puts things
+it doesn't want to decide.
+```
+
+**Policy, laminated** (`alt` · beat A · finishes the ticket descending list)
+```
+RUBELLA
+Then the ticket became a policy. Policy doesn't hum.
+Policy is the hum, laminated.
+```
+
+**Agent 47 on hold** (`alt` · beat A)
+```
+RUBELLA
+Agent 47 put me on hold. The hold music was also Agent 47.
+Humming.
+```
+
+**The sibling folder** (`alt` · beat A · eulogy tail)
+```
+RUBELLA
+final_final_2 had a sibling. final_final_2_USE_THIS.
+We don't mention it at the eulogy.
+```
+
+**One light** (`alt` · beat A · stage room)
+```
+RUBELLA
+They gave me one light. Madelyn says the second light is Item Nine.
+```
+
+**Mediation** (`alt` · beat B · she reports it, we stay on the stage)
+```
+RUBELLA
+It opened the doors on three and waited. I waited.
+It closed them. That's mediation.
+```
+
+**Now with more** (`alt` · beat B · both sides, the bottle overstays)
+```
+RUBELLA
+The new bottle says "Now with more." I said, "More what?"
+"Now with more." Stop. Go back. You were doing well as a bottle.
+```
+
+**Ping-pong** (`alt` · beat C · before the plant; not a heckle, she does not look)
+```
+RUBELLA
+The ping-pong table and I talk. Tick. Tock. Tick. Tick. Tick.
+Stop. Go back. You were doing well.
+```
+
+**Pinker by Thursday** (`alt` · beat C · plant escalation, still one heckle)
+```
+RUBELLA
+I logged the pink tube on Tuesday. Wednesday it was pinker.
+Thursday it had a sign-up sheet.
+```
+
+**Per the minutes** (`alt` · beat D · memo read by Rubella, no Madelyn line)
+```
+RUBELLA
+Madelyn's memo says "per the minutes." I asked for the minutes.
+The minutes say "per the memo."
+```
+
+**Seniority** (`alt` · beat D · descending list)
+```
+RUBELLA
+The fire got a ticket. Then a second ticket. They merged.
+Now the fire has seniority.
+```
+
+**No dryer in here** (`alt` · beat D · stage-room land)
+```
+RUBELLA
+There's no dryer in this room. I checked.
+That's the only reason I stayed for Item Seven.
+```
 
 ---
 

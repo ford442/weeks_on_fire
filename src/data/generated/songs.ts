@@ -274,6 +274,19 @@ export const songs: Song[] = [
     sourceFile: "First_Light_Salt_Flats.md"
   },
   {
+    id: "from-the-west",
+    title: "From the West",
+    genre: "Plainchant",
+    description: "Riley sings one field entry, syllabic, in the hut. The only rise is on still, and the sentence ends where it ends.",
+    episode: "Episode 5 candidate / ridge",
+    stylePrompt: "Plainchant, one voice, no instrument, no second singer, no drone, no pulse, no chord. Dorian mode on D. Riley, close and calm, straight tone, no vibrato, no ornament, no belting, reading a field entry as chant. One note per syllable except the single word \"still,\" which rises one step and returns. Nothing else is allowed a neume. The metal hut is the room. Wind may be faintly outside. No kit, no bell, no piano, no choir. She does not explain the sky, the antenna, or herself. Do not sing her name. Structural flaw: when the sentence is over she stops on the pitch the last syllable already has. She does not move to the final D. There is no Amen and no second verse. Sung once, very slowly, about 80 to 100 seconds. Dark, small, a log with the acoustics of an empty hut.",
+    lyrics: "[One voice]\n\nAugust.\nThis week, not next week.\nWind from the west.\nKestrel Ridge.\nThe rack is in the hut.\nLast grade is on the card.\nIt is still there.\nThe finding is the same.\nLeaving it up costs nothing.\n\n[End]\n(stop on the last syllable)\n(do not move to the final)\n(no amen)",
+    notes: "Riley alone, above five thousand feet, one field entry. Plainchant: the syllables are the time. The only melodic rise is on \"still.\" The chant does not cadence. She does not say whether the rack is a weather repeater or a transmitter.\n\nRuntime about 80–100 seconds. No pulse.",
+    instrumental: false,
+    tags: ["plainchant", "riley", "ridge", "solo"],
+    sourceFile: "From_the_West.md"
+  },
+  {
     id: "g-train-fluorescent",
     title: "G Train Fluorescent",
     genre: "Commute techno",
@@ -325,6 +338,19 @@ export const songs: Song[] = [
     instrumental: true,
     tags: ["instrumental", "melodic-techno", "nova-chen", "night-side", "124bpm", "work-bed"],
     sourceFile: "Groove_Break_Earned.md"
+  },
+  {
+    id: "ground-rent",
+    title: "Ground Rent",
+    genre: "Passacaglia duet",
+    description: "A four-bar ground in A minor. Rubella repeats the floor. Lillith adds one repair each cycle, then runs out.",
+    episode: "Building cast",
+    stylePrompt: "Passacaglia duet, 72 BPM, 3/4, A minor, about 100 seconds. The ground is a cello alone, four bars, one note per bar: A, C, D, E, then back to A. No drum kit, no guitar, no choir, no harpsichord, no piano chords. Rubella, dry and slightly raspy, close-miked, no vibrato, no belting, sings the same line on A every cycle: \"The floor is still the floor.\" Lillith, brighter, conspiratorial, still close, no belting, sings one new line each cycle over bars 3 and 4, then is finished with that line forever. Do not sing their names. From cycle 4 on, the cello enters one beat early and stays early. The singers do not move to meet it. They keep the old bar. Cycle 6 is Lillith running out of the repair mid-word. The last cycle is three bars, not four: cello and Rubella only, Lillith gone, one bar shorter than the ground, and no one puts the bar back. Dark top end. Small dry room. Mood: the floor holding still while the repairs spend themselves.",
+    lyrics: "[Ground — cello, four bars, no voice]\n\n[Cycle 1]\nRUBELLA: The floor is still the floor.\nLILLITH: I put a new tube in the sign.\n\n[Cycle 2]\nRUBELLA: The floor is still the floor.\nLILLITH: It worked until morning.\n\n[Cycle 3]\nRUBELLA: The floor is still the floor.\nLILLITH: The table is giving a forecast.\n\n[Cycle 4 — cello one beat early from here on]\nRUBELLA: The floor is still the floor.\nLILLITH: I said what the neon needed.\n\n[Cycle 5]\nRUBELLA: The floor is still the floor.\nLILLITH: The hum kept its job.\n\n[Cycle 6]\nRUBELLA: The floor is still the floor.\nLILLITH: I fixed the —\n\n[Last cycle — three bars, Rubella and cello]\nRUBELLA: The floor is still the floor.",
+    notes: "Rubella is the ground. Lillith is the variation, one repair per cycle, then gone. From cycle 4 the cello is a beat early and stays early. The last cycle drops a bar. Neither singer corrects it.\n\nBuilding cast. Runtime about 100 seconds.",
+    instrumental: false,
+    tags: ["passacaglia", "rubella", "lillith", "building", "duet"],
+    sourceFile: "Ground_Rent.md"
   },
   {
     id: "halloween-snake-battle",
@@ -393,6 +419,19 @@ export const songs: Song[] = [
     sourceFile: "Heart_Rate_Optimal.md"
   },
   {
+    id: "heavy-water",
+    title: "Heavy Water",
+    genre: "1970s organ-metal",
+    description: "A bright heavy riff and a Hammond that will not leave. The chant is heavy water, warm as the sun.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s heavy metal with a Hammond organ, 108 BPM, E major, about two minutes fifteen. Bright, not grim. Uriah Heep around July Morning, Deep Purple riff weight, Lace Waterfall: Lillith and Rubella only. A major-key riff on one distorted guitar, warm 1970s amp, no modern djent, no double-kick, no scream, no growl, no blast beat, no dropped tuning. Hammond plays the riff with the guitar, Leslie on, golden. Bass and a dry kit. Vocals are a chant, unison, sung hard but not shouted: \"Heavy water.\" Lillith brighter, Rubella raspy underneath, no belting contest. Four short verse lines between chants. Middle: Hammond solo for about sixteen seconds, melodic, no shred. Structural flaw: at the end of every chorus the organ holds its last chord one bar longer than the guitars. The riff restarts underneath that chord. The organ never lets go early. No Kenji, no male voice, no death metal, no doom. Mood: water with weight, still in the sun.",
+    lyrics: "[Riff and Hammond]\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Verse]\nNot a flood\nA weight that shines\nLILLITH: We carry it\nRUBELLA: It carries the time\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Middle — Hammond]\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Outro]\nBOTH: Heavy water\n(organ still holding)",
+    notes: "Lace Waterfall, the heavy one that stays in a major key. The organ holds one bar too long at the end of every chorus and the riff comes back under it.\n\nNot Well Fall, not thrash, not a scream. Runtime about 2:15.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "hammond"],
+    sourceFile: "Heavy_Water.md"
+  },
+  {
     id: "heels-or-no-entry",
     title: "Heels or No Entry",
     genre: "Slow-disco dress-code liturgy",
@@ -432,6 +471,19 @@ export const songs: Song[] = [
     sourceFile: "Hold_for_Eight.md"
   },
   {
+    id: "hold-the-note",
+    title: "Hold the Note",
+    genre: "Slow heavy rock",
+    description: "One riff, one long bend, a chant of hold. Rubella keeps the last hold two beats after the band has moved on.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Slow 1970s heavy rock, 64 BPM, D mixolydian, about two minutes. Open and heavy, not bleak. Rainbow around Catch the Rainbow, a Pink Floyd bend on a thick guitar, Lace Waterfall: Lillith and Rubella only. One distorted riff, slow, major-color, no tremolo-picking, no scream, no blast, no coffin reverb. Bass and a soft heavy kit, lots of air. The lead guitar plays one long note and bends it, then waits. That note is the subject. Chant is the word \"Hold,\" sung, not growled. Lillith sings it on the grid. Rubella sings it with her, raspy, and on every chorus her last \"Hold\" lasts two extra beats. The band starts the next riff under that hold. She does not cut the word. No male voice, no Kenji, no death metal, no doom lyric. A short verse of four words a line, then the chant. Middle: the bent note alone, about twelve seconds, organ far behind it like a lamp. Mood: a heavy song that refuses to go dark. The note stays up.",
+    lyrics: "[Riff]\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Verse]\nOne note\nUp high\nLeave it\nThere\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Middle — one bent note]\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Outro]\nRUBELLA: Hold\n(two beats after the riff has started)",
+    notes: "Lace Waterfall, slow and heavy, mixolydian so it stays open. Rubella's last \"Hold\" is always two beats too long. The band does not wait.\n\nNot a lament and not Well Fall. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "slow"],
+    sourceFile: "Hold_the_Note.md"
+  },
+  {
     id: "home-sweet-void-dialog",
     title: "Home Sweet Void (Dialog)",
     genre: "Hull-hum table dialog",
@@ -456,6 +508,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["hoa", "patter", "comedy", "peggy-babcock", "ep4"],
     sourceFile: "I_Second_Peggy_Babcock.md"
+  },
+  {
+    id: "lace-waterfall",
+    title: "Lace Waterfall",
+    genre: "1971 space-rock anthem",
+    description: "The band's name, chanted. Lillith starts, Rubella joins, and the last syllable of waterfall always spills the bar.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1971 space-rock anthem, 78 BPM, D major, about two minutes ten. Lace Waterfall, the band: Lillith and Rubella only. Warm daylight, Pink Floyd around Meddle and Obscured by Clouds. Hammond organ held warm, clean electric guitar through a tape echo, one bass, a soft 1970s kit, no gated snare, no double-kick, no synth lead. No male voice, no Kenji, no scream, no growl, no choir bigger than these two. Lillith is brighter and starts the chant. Rubella is drier, slightly raspy, and joins on the second call. The third call is unison, close, no belting, no vibrato show. The lyric is almost only the name. A short verse, then back to the chant. The middle is instrumental: organ and one long delayed guitar note, about twenty seconds, no solo fireworks. Structural flaw: the bar has room for two syllables and \"waterfall\" has three, so the last syllable always lands on the next downbeat. Do not shorten the word. Do not add a bar to fit it. Dark top end stays soft. Mood: a bright slow pour, two voices, the name as the whole chorus.",
+    lyrics: "[Intro — organ, delayed guitar]\n\n[Chant]\nLILLITH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Verse]\nLight on the water\nWater on the light\nNothing else to call it\nLeave it this bright\n\n[Chant]\nLILLITH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Middle — organ and one long note]\n\n[Chant]\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Outro]\nBOTH: Again\n(the last syllable still late)",
+    notes: "Lace Waterfall, the band. Rubella and Lillith. Kenji is not in this band. Not the Ultra Screech ad, not the Big City club, not Well Fall.\n\nThe chant is the song. \"Waterfall\" always spills one syllable onto the next downbeat. Runtime about 2:10.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "space-rock"],
+    sourceFile: "Lace_Waterfall.md"
   },
   {
     id: "les-ondes-courtes",
@@ -587,6 +652,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["vocal", "soul", "nova-chen", "cue-sheets", "68bpm", "catalog"],
     sourceFile: "No_Music_Here.md"
+  },
+  {
+    id: "open-gate",
+    title: "Open Gate",
+    genre: "Bright twin-guitar metal",
+    description: "A daylight heavy anthem. The chant is open. The second guitar answers a fifth up, every time, and the gate stays open.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Bright 1970s twin-guitar heavy metal, 116 BPM, A major, about two minutes. Daylight, not a battle. Early Scorpions weight with a Pink Floyd sense of space: two guitars, a warm Marshall room, bass, a swinging kit, no double-kick, no scream, no gallop that turns into thrash. Lace Waterfall: Lillith and Rubella only, no Kenji, no male gang vocal. The chant is \"Open,\" sung in unison, clear, a little tough, no growl. Lillith calls it, Rubella answers it, then they sing it together. Verse is four short lines about a latch and the day already being in. Chorus is the chant plus one line: \"The day is already in.\" Middle: twin lead, melodic, about sixteen seconds, no shred contest. Structural flaw: the second guitar always answers a fifth above the first, where a third was the harmony. It stays bright and a little too open. Do not tune it back to the third. No death metal, no occult lyric, no darkness for its own sake. Mood: the gate is a gate. Beyond it is afternoon.",
+    lyrics: "[Twin riff]\n\n[Verse]\nThe latch is only a latch\nThe day was already here\nLILLITH: We lifted it\nRUBELLA: The light came near\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Verse]\nNo lock on the weather\nNo key on the sun\nLILLITH: Leave the gate\nRUBELLA: The pouring's begun\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Middle — twin lead, the answer a fifth up]\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Outro]\nBOTH: Open",
+    notes: "Lace Waterfall, the bright heavy one. Second guitar answers a fifth up instead of a third, on the riff and on the lead, and never corrects.\n\nThe day is already in. Not a fight song. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "twin-guitar"],
+    sourceFile: "Open_Gate.md"
   },
   {
     id: "out-on-the-cut",
@@ -758,6 +836,45 @@ export const songs: Song[] = [
     sourceFile: "Rubella_Stand_Up.md"
   },
   {
+    id: "said-and-left",
+    title: "Said and Left",
+    genre: "Sprechstimme",
+    description: "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later.",
+    episode: "Building cast / hallway",
+    stylePrompt: "Sprechstimme, one voice, about 66 BPM as a grid under the speech, not as a tune. Rubella only. Dry, slightly raspy, close-miked, exhausted, no belting, no vibrato, no pretty tone. She does not sing. Each phrase aims at one pitch, touches it, and drops back into speech before the pitch can sound like a note. Rhythm stays on the grid. Do not sing her name. Ensemble: one B-flat clarinet in the chalumeau, one upright piano with the soft pedal down, no kit, no bass guitar, no choir, no second voice. Dark top end. Small hallway, almost no reverb. Central idea: the sentence is said, the pitch is left. Structural flaw: one beat after every phrase, the piano plays the exact pitch she abandoned, single notes, no chord, and neither of them adjusts. The clarinet only plays a pitch she has already left. Do not turn the last line into a melody. Do not add a chorus. Runtime about 90 to 110 seconds. Mood: 3 a.m., the hall inventory, professionally neutral.",
+    lyrics: "[Intro — clarinet touches one pitch and leaves it]\n(piano answers, one beat late)\n\n[The light]\nThe hall is lit.\nThat is the light on the bill.\nThe third shelf still has the old bottle.\nIt smells like cloth, not like a number.\n\n[The hum]\nThe dryer is on.\nI did not start it.\nThe hum is in the wall.\nThe wall can keep it.\n\n[The rent]\nRent went out on the first.\nThe floor stayed.\nI put my hand on the note.\nThe note did not stay in the hand.\n\n[Morning]\nSomeone smiled before ten.\nI do not keep that.\nSaid.\nAnd left.\n\n[Outro]\n(piano plays the last abandoned pitch, one beat late, and stops)",
+    notes: "Rubella alone in the hallway. Sprechstimme: the rhythm is exact and the pitch is only touched. The piano is the flaw, always one beat behind the note she refused to hold.\n\nNot a duet. Not a tune. Runtime about 90–110 seconds.",
+    instrumental: false,
+    tags: ["sprechstimme", "rubella", "hallway", "building"],
+    sourceFile: "Said_and_Left.md"
+  },
+  {
+    id: "same-sentence",
+    title: "Same Sentence",
+    genre: "Phase-music duet",
+    description: "Lillith holds six syllables. After one unison pass, Rubella shifts one syllable later and never returns.",
+    episode: "Building cast / laundry",
+    stylePrompt: "Phase-music duet, 90 BPM, about 100 seconds. The only lyric is six syllables, each syllable a quarter note: It / is / still / run / ning / now. Two voices and two clarinets, dry, close, no vibrato, no belting, no kit, no bass, no piano, no choir. A laundry-room hum may sit under the cell. It is not a beat and it does not change. Lillith is bright and steady and keeps the cell where it started. Rubella is lower, drier, raspy. Do not sing their names. Each voice is doubled by one clarinet, same rhythm, no extra notes. First, one unison pass. Then Rubella and her clarinet move one syllable to the right and stay there for the rest of the piece. Lillith does not follow. Do not drift back to unison. Do not add words. Structural flaw: the phase never completes. The last cell is still offset. Then the voices stop and the two clarinets play the offset once more. Rubella's clarinet drops out. Lillith's clarinet plays the cell once alone and stops. Ends smaller than the stack, still wrong, uncorrected. Dark top end. Small dry room.",
+    lyrics: "[Unison — one pass]\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\n[Offset — Rubella one syllable later, and she stays later]\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\n[Clarinets — still offset, no voices]\n(two clarinets, one syllable apart)\n(Rubella's clarinet stops)\n(Lillith's clarinet, one cell, then stop)",
+    notes: "Laundry room. One sentence, six syllables. Lillith holds the grid. Rubella moves one syllable late after the unison pass and never comes back. The phase is the flaw. It does not resolve.\n\nRuntime about 100 seconds.",
+    instrumental: false,
+    tags: ["phase", "rubella", "lillith", "laundry", "duet"],
+    sourceFile: "Same_Sentence.md"
+  },
+  {
+    id: "second-sun",
+    title: "Second Sun",
+    genre: "Warm rock anthem",
+    description: "Piano, organ, and a chant that always enters one beat after the band. A second sun, kept. Not an eclipse.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Warm 1970s rock anthem, 88 BPM, A major, about two minutes twenty. Lace Waterfall: Lillith and Rubella only. Piano and Hammond in the same register, bass, a dry 1970s kit, one electric guitar that answers with long bends and then gets out of the way. Big for a small room: anthem chorus, no arena reverb, no modern pop sheen, no scream. Think a bright side of Dark Side of the Moon without the clocks and without the ending of the world. Two female voices, close unison on the chant \"Second sun,\" Lillith a little ahead in tone, Rubella rasp under her, no belting. Verse is four short lines, sung more than spoken, then the chant. An instrumental lift in the middle, organ and piano, about twenty seconds, no guitar solo that shows off. Structural flaw: the band hits beat 1 of every chorus and the voices enter on beat 2. Every chorus. They do not catch up. The last chorus is the same lateness, then one extra \"Second sun\" after the band has stopped, still one beat late, into a quiet room. No death metal, no Kenji, no male gang shout. Mood: extra daylight, kept on purpose.",
+    lyrics: "[Piano and organ]\n\n[Verse]\nOne was enough\nThis one can stay\nIt warms the wall\nIt warms the day\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Verse]\nWe saw it coming\nWe left it there\nIt doesn't set\nIt doesn't glare\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Middle — organ and piano]\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Outro — band has stopped]\nBOTH: Second sun",
+    notes: "Lace Waterfall anthem. The second sun stays. The chant is late by one beat on every chorus, including the last word after the band stops.\n\nNo eclipse, no collapse. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith"],
+    sourceFile: "Second_Sun.md"
+  },
+  {
     id: "slide-between-stations",
     title: "Slide Between Stations",
     genre: "Broadcast dream-pop / test-pattern shoegaze",
@@ -901,6 +1018,19 @@ export const songs: Song[] = [
     sourceFile: "Terms_and_Conditions.md"
   },
   {
+    id: "the-clause",
+    title: "The Clause",
+    genre: "Secco recitative",
+    description: "Christine Nilsson sings a rent petition in dry recitative. Every clause gets the same cadence, and the aria never starts.",
+    episode: "Voice credit / petition",
+    stylePrompt: "Secco recitative for lyric soprano and continuo. No drum, no pulse, no aria, no chorus, no orchestra. Christine Nilsson: clear lyric soprano, English diction, sung pitches on the rhythm of formal speech, one note per syllable, no melisma, no cadenza, no high C, no vibrato swell, no belting. She is reading a petition she was handed. She is not a resident and she does not act a feeling. Do not sing her name. Continuo: harpsichord and one cello, dry, close, a small room. They play a chord only at the points marked, then silence under the next clause. Structural flaw: every marked chord is the same V–I cadence, whether the clause has finished or not. Finished and unfinished clauses are treated alike, and this is never corrected. After the last spoken clause, the harpsichord plays the first chord of an aria and stops. The cello does not take up a melody. The aria is not sung. No second verse. Runtime about 90 to 120 seconds. Dark top end. This is not a tango, not a pop ballad, and not sprechstimme: the pitches are truly sung, and they do not make a tune.",
+    lyrics: "[Continuo — one chord, then speech]\n\nThe tenant states that the rent was posted before the month began,\n(cadence)\nand that a month is a measured thing,\n(cadence)\nand that the posting arrived on the twentieth of the month before,\n(cadence)\nand that the book calls this ordinary,\n(cadence)\nand that ordinary has been initialed.\n(cadence)\n\nThe tenant further states that the initial is not a date,\n(cadence)\nand that the date is still the twentieth,\n(cadence)\nand that the landing has no other record,\n(cadence)\nand that the tenant asks the book to show the date it already knows.\n(cadence)\n\n[Aria — not sung]\n(harpsichord plays the first chord of an aria, and stops)\n(cello does not enter)\n(no voice)",
+    notes: "Voice credit only. Christine Nilsson is the historical lyric soprano, not a resident of the building, and not the Christina wooden-house lane. She was handed the petition. She sings the clauses. The aria does not start.\n\nStructural flaw: the same V–I cadence closes every clause, finished or not. Runtime about 90–120 seconds. No pulse.",
+    instrumental: false,
+    tags: ["recitative", "nilsson", "petition", "voice-credit"],
+    sourceFile: "The_Clause.md"
+  },
+  {
     id: "the-laundromat-saints",
     title: "The Laundromat Saints",
     genre: "Slow liminal waltz",
@@ -912,6 +1042,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["waltz", "laundromat", "duet", "liminal", "eyewash-station", "ep2"],
     sourceFile: "The_Laundromat_Saints.md"
+  },
+  {
+    id: "the-light-in-the-stair",
+    title: "The Light in the Stair",
+    genre: "Motet",
+    description: "Three voices, one sentence, no instruments. Nilsson enters first, Lillith a fifth up, Rubella a step below the note she was given.",
+    episode: "Building stair / voice credit",
+    stylePrompt: "Motet, a cappella, 60 BPM, about 90 seconds. One sentence only: \"The light in the stair is the light we get.\" Syllabic, one note per syllable, straight tone, no vibrato, no melisma, no belting, no instruments, no beat beyond the tactus, no cathedral. Reverb is a concrete stairwell, short, not a church. Do not sing their names. Christine Nilsson enters first, lyric soprano on D, singing the sentence once as a single line. Lillith enters second, a fifth above, on A, with the same sentence, while Nilsson repeats it. Rubella enters third. The imitation asks her for D, an octave below Nilsson. She enters on C instead, a whole step low, and she stays there. Nilsson and Lillith do not move down to meet her. They sing the sentence as written. Three statements are enough. On the last word, \"get,\" they stop together on three different pitches — D, A, and C — and there is no cadence after it. Structural flaw: Rubella's entry pitch is wrong by a whole step and is never corrected, so the piece cannot resolve. Nilsson is a voice on the track, not a person in the stair. Dark, small, stone and plaster.",
+    lyrics: "[Nilsson — on D]\nThe light in the stair is the light we get.\n\n[Lillith enters — on A, a fifth above]\nNILSSON: The light in the stair is the light we get.\nLILLITH: The light in the stair is the light we get.\n\n[Rubella enters — on C, not the D she was given]\nNILSSON: The light in the stair is the light we get.\nLILLITH: The light in the stair is the light we get.\nRUBELLA: The light in the stair is the light we get.\n\n[Last word — stop, no cadence]\nNILSSON: get.\nLILLITH: get.\nRUBELLA: get.",
+    notes: "One sentence in imitation. Nilsson leads on D. Lillith answers a fifth up. Rubella was given D and sings C. The other two do not retune. They stop on \"get\" on three pitches, with no cadence.\n\nNilsson is a voice credit, the historical lyric soprano, not a resident and not the Christina wooden-house lane. The room is the stair. Runtime about 90 seconds.",
+    instrumental: false,
+    tags: ["motet", "nilsson", "lillith", "rubella", "stair"],
+    sourceFile: "The_Light_in_the_Stair.md"
   },
   {
     id: "the-long-goodbye",
@@ -1019,6 +1162,19 @@ export const songs: Song[] = [
     sourceFile: "This_Program_Contains_Dialogue.md"
   },
   {
+    id: "through-the-lace",
+    title: "Through the Lace",
+    genre: "Pastoral rock anthem",
+    description: "A 12-string anthem about light in the holes. The chant is one word, and the third Through always lands on the chord that already left.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Pastoral 1970s rock anthem, 96 BPM, G major, about two minutes. Lace Waterfall: Lillith and Rubella only, no male voice, no Kenji. Opens on a 12-string acoustic, warm and close, then a small band: organ, bass, soft kit, one clean electric with a little tape echo. Pink Floyd around Obscured by Clouds and Fearless: daylight, major, a walking feel, not a lament. Vocals are a chant of one word, \"Through,\" sung on a single pitch, unison, no belting, no harmony stack, no scream. Lillith leads the verse in a brighter tone. Rubella answers the second half, drier. The chorus is only the chant, three times. Middle: the 12-string alone for about sixteen seconds, then the band returns. Structural flaw: on every chorus the guitars change chord before the third \"Through,\" and the voices stay on the old pitch. Do not move the voices. Do not hold the old chord. No doom, no minor-key collapse, no thrash. Mood: sun through cloth. The holes are the point.",
+    lyrics: "[12-string]\n\n[Verse]\nHoles in the cloth\nSun in the holes\nLILLITH: That's the whole picture\nRUBELLA: That's what it holds\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Verse]\nCloth on the window\nDay on the floor\nLILLITH: We don't pull it shut\nRUBELLA: The light knows the door\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Middle — 12-string alone]\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Outro]\nBOTH: Through",
+    notes: "Lace Waterfall. One-word chorus. The third \"Through\" is always late to the chord change. The voices do not follow the guitars.\n\nNot a cabaret ballad. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "pastoral"],
+    sourceFile: "Through_the_Lace.md"
+  },
+  {
     id: "triphthong-table",
     title: "Triphthong Table",
     genre: "Educational cabaret duet",
@@ -1085,6 +1241,19 @@ export const songs: Song[] = [
     sourceFile: "Two_dB_and_Dont_Tell_Me.md"
   },
   {
+    id: "two-of-three",
+    title: "Two of Three",
+    genre: "Tintinnabuli duet",
+    description: "Riley walks a stepwise line in the repeater hut. Rubella may sing only A, C, and E, and the bell has no C.",
+    episode: "Episode 5 candidate / ridge",
+    stylePrompt: "Tintinnabuli duet, 56 BPM, A minor, about 100 seconds, dead equipment hut above five thousand feet. No kit, no guitar, no choir, no pad, no reverb longer than the metal room. One small bell that can sound only A and E. There is no C in the bell. Riley sings the melodic line: calm, close, unbothered, no vibrato, no folk ornament, stepwise motion only, no leaps, site facts in a speaking volume. She does not explain the sky. She does not say what the antenna is for. Rubella sings the tintinnabuli line and nothing else: the single word \"Still,\" on A, C, or E only, whichever triad tone is nearest Riley's note, straight tone, no other words, no harmony she invents. Do not sing their names. Structural flaw: whenever the rule asks Rubella for C, she skips, because the bell has no C, and she does not borrow a pitch. Riley does not fill the skip. The second pass uses the same words. The piece ends on the skip: bell on A, no C, no cadence added. Dark top end. Mood: a report, two tones present, one tone absent.",
+    lyrics: "[Bell — A, then E]\n\n[Pass 1 — Riley, stepwise]\nThe hut is shut.\nThe gear is racked.\nWind from the west.\nLast grade is on the card.\nThe bell sounds A.\nThe bell sounds E.\nIt is still there.\n\n[Rubella — triad word only, skip every C]\nStill.\nStill.\n(skip)\nStill.\n\n[Pass 2 — same words, same rule]\nThe hut is shut.\nThe gear is racked.\nWind from the west.\nLast grade is on the card.\nThe bell sounds A.\nThe bell sounds E.\nIt is still there.\n\n[Rubella]\nStill.\nStill.\n(skip)\nStill.\n\n[End — the skip]\n(bell on A)\n(no C)",
+    notes: "Ridge hut. Riley sings the facts, by step. Rubella has only the word \"Still\" and only the tones A, C, and E. The alarm bell is short the C. That skip is never written back in. Riley does not adjudicate the antenna, name a brother, or explain a pendant.\n\nRuntime about 100 seconds.",
+    instrumental: false,
+    tags: ["tintinnabuli", "riley", "rubella", "ridge", "duet"],
+    sourceFile: "Two_of_Three.md"
+  },
+  {
     id: "under-dialogue",
     title: "Under Dialogue",
     genre: "Ducked soul / room-tone ballad",
@@ -1096,6 +1265,19 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["vocal", "downtempo", "nova-chen", "cue-sheets", "76bpm", "catalog"],
     sourceFile: "Under_Dialogue.md"
+  },
+  {
+    id: "unspent",
+    title: "Unspent",
+    genre: "Lied",
+    description: "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung.",
+    episode: "Voice credit / small room",
+    stylePrompt: "Lied for lyric soprano and piano, 63 BPM, 4/4, D minor, strophic, about two minutes. One small room, one lamp, soft pedal, no kit, no strings, no choir, no reverb beyond the room. Christine Nilsson: lyric soprano, English, intimate, one note to a syllable, no cadenza, no high note actually sung, no belting, no crowd. The poem is the whole lyric. Stanzas 1 and 2 use the same melody. Stanza 3 uses it again and stops before the last line. Do not sing her name. The piano is a second character, not an accompaniment pad: it speaks in short phrases and then cadences. Structural flaw: in every stanza the piano finishes its cadence one bar before the voice arrives at the last line. She does not hurry. On stanza 3 she does not sing the last line at all. The piano has already cadenced, early, into silence, and the bar stays empty. Do not fill it. Do not add a fourth stanza. Dark top end. Mood: the note is in the room and is not spent.",
+    lyrics: "[Piano — cadence ends a bar early]\n\n[Stanza 1]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\nI am not spending it.\n\n[Stanza 2 — same melody, piano early again]\nThe glass is full enough.\nThe chair can wait.\nSomeone may ask for the note tonight.\nI am not spending it.\n\n[Stanza 3 — same melody, last line withheld]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\n(she does not sing)\n(the piano has already finished, one bar early)",
+    notes: "Voice credit only. Christine Nilsson is the historical lyric soprano, not a resident, and not the Christina wooden-house lane. One English poem, piano as the other voice. The high note is never spent. The piano's early cadence is never corrected, and the third stanza leaves the last line unsung.\n\nNot a cabaret ballad and not a roof song. Runtime about two minutes.",
+    instrumental: false,
+    tags: ["lied", "nilsson", "piano", "voice-credit"],
+    sourceFile: "Unspent.md"
   },
   {
     id: "well-fall",

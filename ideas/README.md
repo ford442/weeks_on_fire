@@ -18,6 +18,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `backlog.md` – quick capture of fleeting ideas
 
 ## Current files
+- `seed-casts-twice.md` – Reiniger shadow-puppet visual experiment: noir paper street, orphan shadow blooms into a fractal garden on the child's breath, seed is a flat disc. Silent 30s first. Paper Lung queued (76 BPM A minor). Prompts: [`prompts/seed-casts-twice-segments.md`](../prompts/seed-casts-twice-segments.md). Claude runbook: [`seed-casts-twice-agentic.md`](seed-casts-twice-agentic.md). Suggestions id `seed-casts-twice`. Farm [#22](https://github.com/ford442/weeks_on_fire/issues/22). Not [#42](https://github.com/ford442/weeks_on_fire/issues/42).
 - `monster-mash-expansion.md` – cameo beats (Amy & Alec, Thriller werewolf), staging ideas, and Grok Imagine prompt-craft notes for the Ep3 finale
 - `eyewash-station.md` – channel / network framing for the cutaways (diegesis locked: slide, never comment)
 - `eyewash-idents.md` – six 5–10s bumpers + three fake 15s ads
@@ -47,6 +48,8 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `possible-content-drawer.md` – Mara's drawer (2026-09-28): 22 text-only cards, `promote?: no` on every one. Four song sketches (`songs/_drawer/`, not codegen'd), four short animations, four jokes, plus links to the two files below. No stills, no cutaway ids, nothing on Suggestions. Songs farm #18 / #33; picture note `notes/issue-22-possible-drawer.md`; never #42.
 - `possible-ladies-house.md` – six 20–40s beats at Rubella and Lillith's building unit (laundry, elevator, mailbox, door). Max three bodies; Qing identifies and leaves; Pizza Guy does not ask; Christina is a fridge postcard. Drawer, not the #19 season.
 - `possible-joke-commercials.md` – four 15–25s fake local-access spots (Chest-Height Delivery Academy, Neutral-Zone Laundry Minutes, Elevator Inspection Notice, Decorative Accent Removal). Not Ultra Screech, not Big City, not the EyeWash telethon. Drawer.
+- `christina-frozen-house.md` – Mara page for the Sweden heart cutaway (alias Christine): snow-mound roof, wrong door with a gilt throat, gilt foyer → white marble atrium in one cut, three sleeping hypercars. Rubella and Lillith get 30s at the door and leave. Pages only, no cutaway id. Hostess sheet: [`characters/bible/christina.md`](../characters/bible/christina.md).
+- `christina-house-company.md` – one extra body per plate. Night-home seats (gilt-hall accompanist + one atrium listener) and the separate legal nights: clerk, Qing at sea glass, Nova with no mic, tuner, wrap-student.
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

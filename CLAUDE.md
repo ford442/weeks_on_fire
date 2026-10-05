@@ -15,6 +15,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 - Respect the artistic vision (`grok.md`)
 - Keep the clone lightweight: prefer external media links; do not add large binaries without approval
 - Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/`
+- Before any writing or joke pass, read `notes/callback-bank.md` and pull at least three callbacks.
 
 ## Hub views
 

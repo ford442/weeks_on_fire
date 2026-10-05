@@ -176,6 +176,12 @@ Liliane, to Vivienne, across a table nobody is eating at.
 
 ---
 
+### Not on the hill
+
+Liliane is the Vale most likely to be *invited* to Christina's house and the least likely to go. She would recognise the hostess face as a professional courtesy — a finish-the-sentence-correctly kind of face — and she would not want to owe it anything. **She does not visit Christina hill.** If a draft puts her at that door, the draft has confused her with Lillith; the building pair gets the thirty seconds. See [`christina.md`](christina.md).
+
+---
+
 ## Music / song affinity
 
 | Track | Fit |

@@ -109,8 +109,18 @@ She likes rooms with the door shut. A closed canopy and no wind is a room.
 - **No tragic backstory on camera. No crying scene.** The backstory above is inventory. Thanksgiving happened. The comedy is that she is correct in a show where nothing is, and that her last name is Smith.
 - **Keep her above five thousand feet.** She does not belong in the HOA material, the studio huddle, or any room with a gavel in it.
 - **Never wrong about a fact and never smug about it.**
+- **She does not start the song.** Rubella or the bed starts it. Riley may sing into a dead site on her own, quietly; she never cues a musical cutaway.
+- **No retrieval plot.** Nobody sends her to fetch anyone, and she does not go looking for anyone. She is walking to a repeater. That is the plot.
 - **Do not explain "Around."**
 - **Do not adjudicate the antenna.** Dead weather repeater or EyeWash Station transmitter — she has a theory, nobody rules on it.
+
+---
+
+## At Christina's door (she is not there)
+
+Christina hill ([`bible/christina.md`](bible/christina.md)) is not her altitude and not her kind of room. **Riley does not visit the hill this week.** If she did, she would fail the door the most honest way available: she would ask what the tower in the atrium glass is, what it transmits, and when it was last graded — and the house has no answer it is willing to give. She would also be the only guest who noticed that the three sleeping cars have been parked long enough to need a battery tender, and she would say so. Both are correct. Both break the house.
+
+Keep her on the ridge. Throw any draft that brings her up the snow hill to retrieve the ladies.
 
 ---
 

@@ -21,3 +21,5 @@ She still does not perform. The voice on *Cue Sheets* is a session contralto and
 Farm songs on **#18 / #33**. Not **#42**.
 
 Boards: `ideas/night-side.md` · `ideas/cue-sheets.md`.
+
+Long-form crew page (desk, refusals, Christina house rule): [`../docs/crew/nova-chen.md`](../docs/crew/nova-chen.md). She will not mash Christina's twins, and Night Side stays headphones until a track is assigned.

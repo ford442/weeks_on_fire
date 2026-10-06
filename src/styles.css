@@ -244,7 +244,8 @@ button:disabled {
 }
 
 .color-whip-field--phosphor .color-whip-field__layer {
-  background: radial-gradient(circle at 38% 42%, #ffd000 0 18%, transparent 42%),
+  background:
+    radial-gradient(circle at 38% 42%, #ffd000 0 18%, transparent 42%),
     radial-gradient(circle at 62% 58%, #7a00ff 0 28%, transparent 55%);
   mix-blend-mode: screen;
 }
@@ -281,11 +282,7 @@ button:disabled {
 }
 
 .color-whip-field--smash {
-  background: repeating-radial-gradient(
-    circle at 38% 55%,
-    #ff4fa3 0 4%,
-    #00c9a7 4% 8%
-  );
+  background: repeating-radial-gradient(circle at 38% 55%, #ff4fa3 0 4%, #00c9a7 4% 8%);
   animation: color-whip-smash 0.4s cubic-bezier(0.15, 0.9, 0.3, 1) infinite;
 }
 

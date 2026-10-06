@@ -1,6 +1,7 @@
 ---
 id: the-laundromat-saints
 title: The Laundromat Saints
+added: 2026-08-16
 genre: Slow liminal waltz
 description: Two breathy voices alternate like strangers who accidentally agree. Dryer thumps on bar 5, not bar 1. Diegetic EyeWash TV, then full score for the 2 AM slow dance.
 episode: 2AM Laundromat Slow Dance

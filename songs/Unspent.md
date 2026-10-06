@@ -1,6 +1,7 @@
 ---
 id: unspent
 title: Unspent
+added: 2026-10-06
 genre: Lied
 description: "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung."
 episode: Voice credit / small room

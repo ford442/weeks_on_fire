@@ -1,6 +1,7 @@
 ---
 id: zero-g-click
 title: Zero-G Click
+added: 2026-09-08
 genre: Trance-adjacent techno
 description: "Night Side track 7. 132 BPM E minor. Rolling sixteenth arp, one clean snare rush, lift without a dump."
 episode: Catalog / Night Side

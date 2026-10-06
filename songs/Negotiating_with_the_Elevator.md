@@ -1,6 +1,7 @@
 ---
 id: negotiating-with-the-elevator
 title: Negotiating with the Elevator
+added: 2026-08-19
 genre: Argentine tango duet
 description: Lillith bargains with a freight elevator that sings only floor numbers. Each verse loses a beat as the car descends; the lobby arrives in 2/4.
 episode: Building cast / corridor transit

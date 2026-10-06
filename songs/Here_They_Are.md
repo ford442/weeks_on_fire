@@ -1,6 +1,7 @@
 ---
 id: here-they-are
 title: Here They Are
+added: 2026-09-05
 genre: Luminous ambient electronic
 description: "Arrival bed for the mountain-lion wildflower cutaway. Same 110 BPM as Come Further. Brilliant light, other cats, big field."
 episode: Musical Cutaway

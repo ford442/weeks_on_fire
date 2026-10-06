@@ -1,6 +1,7 @@
 ---
 id: condition-report
 title: Condition Report
+added: 2026-08-16
 genre: Museum-hushed chamber noir
 description: Rubella recites inventory like a vow. Clause four never arrives. Solo cello, una corda piano, no drums until the last line. Pairing for The Overnight Conservator.
 episode: One-panel gag / gallery after hours

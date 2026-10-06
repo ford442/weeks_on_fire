@@ -1,6 +1,7 @@
 ---
 id: end-card-holds
 title: End Card Holds
+added: 2026-09-08
 genre: Deep progressive
 description: "Night Side track 10. 122 BPM F minor. Warm pad from the opener. Kick leaves before the pad. The pad holds one second too long."
 episode: Catalog / Night Side

@@ -1,6 +1,7 @@
 ---
 id: second-sun
 title: Second Sun
+added: 2026-10-06
 genre: Warm rock anthem
 description: "Piano, organ, and a chant that always enters one beat after the band. A second sun, kept. Not an eclipse."
 episode: Lace Waterfall

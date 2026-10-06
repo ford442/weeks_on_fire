@@ -1,6 +1,7 @@
 ---
 id: after-is-a-floor
 title: After Is a Floor
+added: 2026-08-13
 genre: Art Deco noir pop
 description: Destinations as manners. The unmarked button. Lillith whispered in a small elevator; one extra ding after the last line.
 episode: EyeWash station-break

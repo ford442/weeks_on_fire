@@ -1,6 +1,7 @@
 ---
 id: lace-waterfall
 title: Lace Waterfall
+added: 2026-10-06
 genre: 1971 space-rock anthem
 description: "The band's name, chanted. Lillith starts, Rubella joins, and the last syllable of waterfall always spills the bar."
 episode: Lace Waterfall

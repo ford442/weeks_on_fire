@@ -1,6 +1,7 @@
 ---
 id: both-coats
 title: Both Coats
+added: 2026-10-06
 genre: 1970s spy-riff heavy rock
 description: "A swaggering organ riff, one black coat and one white. The last chorus cuts to silence mid-syllable and nobody wins."
 episode: Lace Waterfall

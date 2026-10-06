@@ -1,6 +1,7 @@
 ---
 id: heavy-water
 title: Heavy Water
+added: 2026-10-06
 genre: 1970s organ-metal
 description: "A bright heavy riff and a Hammond that will not leave. The chant is heavy water, warm as the sun."
 episode: Lace Waterfall

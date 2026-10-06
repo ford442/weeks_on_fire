@@ -5,6 +5,7 @@ import { SequenceGraphSchema } from './graph-schema';
 export const SongFrontmatterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
+  added: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added must be YYYY-MM-DD'),
   genre: z.string().min(1),
   description: z.string().min(1),
   episode: z.string().min(1),

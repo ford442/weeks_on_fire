@@ -15,6 +15,7 @@ export const songs: Song[] = [
   {
     id: "after-is-a-floor",
     title: "After Is a Floor",
+    added: "2026-08-13",
     genre: "Art Deco noir pop",
     description: "Destinations as manners. The unmarked button. Lillith whispered in a small elevator; one extra ding after the last line.",
     episode: "EyeWash station-break",
@@ -28,6 +29,7 @@ export const songs: Song[] = [
   {
     id: "aria-thirty-night",
     title: "Aria Thirty (Night)",
+    added: "2026-09-08",
     genre: "Melodic techno",
     description: "Night Side track 4. 126 BPM D minor. Five-note glassy motif treated as a sequenced tone, never a voice.",
     episode: "Catalog / Night Side",
@@ -41,6 +43,7 @@ export const songs: Song[] = [
   {
     id: "article-seven",
     title: "Article Seven",
+    added: "2026-08-19",
     genre: "Dusty union lounge / paused funk",
     description: "Mandatory funk interval. Plastic steward, laminated card, clock stuck at fourteen minutes. The lawn is on break; the lasers can wait.",
     episode: "Episode 03 / Skeleton Union Break",
@@ -54,6 +57,7 @@ export const songs: Song[] = [
   {
     id: "big-city",
     title: "Big City",
+    added: "2026-09-11",
     genre: "Late-80s glam strut",
     description: "Lillith starts, Rubella answers, Kenji spoken tag. Glamora as a city made of hair. Catalog single, not the Ultra Screech ad.",
     episode: "Musical Cutaway / Glam catalog",
@@ -67,6 +71,7 @@ export const songs: Song[] = [
   {
     id: "both-coats",
     title: "Both Coats",
+    added: "2026-10-06",
     genre: "1970s spy-riff heavy rock",
     description: "A swaggering organ riff, one black coat and one white. The last chorus cuts to silence mid-syllable and nobody wins.",
     episode: "Lace Waterfall",
@@ -80,6 +85,7 @@ export const songs: Song[] = [
   {
     id: "caffeinated-melon",
     title: "Caffeinated Melon",
+    added: "2026-08-13",
     genre: "Absurdist chamber pop",
     description: "Gallery fog as truth serum. Spoken verses over a polite quartet that goes a quarter-tone flat, then one clap.",
     episode: "Gallery Fog cutaway",
@@ -93,6 +99,7 @@ export const songs: Song[] = [
   {
     id: "call-forty-seven",
     title: "Call Forty-Seven",
+    added: "2026-09-06",
     genre: "Hold-music accretion / civic dispatch ballad",
     description: "Karen reports existential zoning. Each transfer adds a bar of hold music. Democracy is bleeding, Steven. The call never drops.",
     episode: "Episode 04 / 911 Wrong Shade",
@@ -106,6 +113,7 @@ export const songs: Song[] = [
   {
     id: "choose-your-basalt",
     title: "Choose Your Basalt",
+    added: "2026-07-27",
     genre: "Educational cabaret duet",
     description: "Dead-pan Lillith & Rubella lava-classification jingle (~55s) that starts in their house and cracks open to magma — button line: “That’s nature for us.”",
     episode: "Musical Cutaway",
@@ -119,6 +127,7 @@ export const songs: Song[] = [
   {
     id: "closed-since-ninety-eight",
     title: "Closed Since Ninety-Eight",
+    added: "2026-09-06",
     genre: "Nocturnal electro-chanson / dead-station duet",
     description: "Two reflections leave a house of mirrors in the wrong car. The radio is a station that signed off in 1998. Harmony is always one bar late.",
     episode: "Musical cutaway / night-drive",
@@ -132,6 +141,7 @@ export const songs: Song[] = [
   {
     id: "closed-for-cosmic-reasons",
     title: "Closed for Cosmic Reasons",
+    added: "2026-08-13",
     genre: "Hotel-lobby downtempo",
     description: "A posted notice that becomes a lullaby. Rubella under a hovering pool; Continuity Voice on the title, always a half-step flat.",
     episode: "One-panel gag / any closed facility",
@@ -145,6 +155,7 @@ export const songs: Song[] = [
   {
     id: "come-further",
     title: "Come Further",
+    added: "2026-09-05",
     genre: "Minimal rising FM electronic",
     description: "Drag bed for the mountain-lion wildflower cutaway. Careful digital FM chirps, sparse kick, whispered “further…” Same 110 BPM as Here They Are.",
     episode: "Musical Cutaway",
@@ -158,6 +169,7 @@ export const songs: Song[] = [
   {
     id: "condition-report",
     title: "Condition Report",
+    added: "2026-08-16",
     genre: "Museum-hushed chamber noir",
     description: "Rubella recites inventory like a vow. Clause four never arrives. Solo cello, una corda piano, no drums until the last line. Pairing for The Overnight Conservator.",
     episode: "One-panel gag / gallery after hours",
@@ -171,6 +183,7 @@ export const songs: Song[] = [
   {
     id: "cue-out-scene-continues",
     title: "Cue Out, Scene Continues",
+    added: "2026-09-09",
     genre: "Ambient soul",
     description: "Cue Sheets track 7. 72 BPM C minor. The music leaves and the scene does not. Twenty-two seconds of room at the end with her still breathing in it.",
     episode: "Catalog / Cue Sheets",
@@ -184,6 +197,7 @@ export const songs: Song[] = [
   {
     id: "cue-sheets",
     title: "Cue Sheets",
+    added: "2026-09-09",
     genre: "Ledger soul",
     description: "Cue Sheets title track and closer. 84 BPM D minor, back to the opener's key and chord. She sings the usage column as BACKGROUND, INSTRUMENTAL over an obviously foreground vocal.",
     episode: "Catalog / Cue Sheets",
@@ -197,6 +211,7 @@ export const songs: Song[] = [
   {
     id: "daisy-bell",
     title: "Daisy Bell",
+    added: "2026-08-17",
     genre: "Barbershop waltz duet",
     description: "Rubella & Lillith on a living flower bicycle into period London — color HD flipping with scratchy film grain. Board: Daisy Bell page.",
     episode: "Musical Cutaway",
@@ -211,6 +226,7 @@ export const songs: Song[] = [
   {
     id: "deep-space-drift",
     title: "Deep Space Drift",
+    added: "2026-07-22",
     genre: "Weightless ambient pedal-steel",
     description: "Lanois-processed pedal steel as an orbiting universe — the most weightless entry in the series.",
     episode: "Series cutaway",
@@ -224,6 +240,7 @@ export const songs: Song[] = [
   {
     id: "desert-rose-horizon",
     title: "Desert Rose Horizon",
+    added: "2026-07-22",
     genre: "Atmospheric pedal-steel",
     description: "Anchor track of the Lanois-style ambient pedal-steel series — dusk horizon, steel as a human voice.",
     episode: "Series cutaway",
@@ -237,6 +254,7 @@ export const songs: Song[] = [
   {
     id: "e-x-i",
     title: "E X I",
+    added: "2026-10-06",
     genre: "1970s twin-guitar boogie metal",
     description: "A bright red corridor and three letters. The lead guitar's amp dies before the last chorus, and the third letter never gets sung.",
     episode: "Lace Waterfall",
@@ -250,6 +268,7 @@ export const songs: Song[] = [
   {
     id: "early-not-broken",
     title: "Early, Not Broken",
+    added: "2026-10-06",
     genre: "1973 pulse-rock anthem",
     description: "A steady pulse, a Wurlitzer, and a chorus that always arrives one bar before the verse is done. It's early. Not broken.",
     episode: "Lace Waterfall",
@@ -263,6 +282,7 @@ export const songs: Song[] = [
   {
     id: "eight-seconds",
     title: "Eight Seconds",
+    added: "2026-10-06",
     genre: "Slow organ-and-slide anthem",
     description: "Long organ, a slide guitar, and eight seconds of real silence in the middle. The band comes back a half-beat off and stays off.",
     episode: "Lace Waterfall",
@@ -276,6 +296,7 @@ export const songs: Song[] = [
   {
     id: "empty-parking-lot-waltz",
     title: "Empty Parking Lot Waltz",
+    added: "2026-08-13",
     genre: "Slow cinematic waltz / dark cabaret",
     description: "Last two people in a vast wet lot. 3/4, detuned piano, unresolved last chord. They do not decide.",
     episode: "Post-party cutaway",
@@ -289,6 +310,7 @@ export const songs: Song[] = [
   {
     id: "end-card-holds",
     title: "End Card Holds",
+    added: "2026-09-08",
     genre: "Deep progressive",
     description: "Night Side track 10. 122 BPM F minor. Warm pad from the opener. Kick leaves before the pad. The pad holds one second too long.",
     episode: "Catalog / Night Side",
@@ -302,6 +324,7 @@ export const songs: Song[] = [
   {
     id: "exhibit-a",
     title: "Exhibit A",
+    added: "2026-09-15",
     genre: "Courtroom doo-wop / vanished choir",
     description: "A dog prosecutor presents a red laser dot. The cat choir never finishes a vowel. The downbeat is the click they follow instead of the conductor.",
     episode: "Musical cutaway / Laser Dot Jury",
@@ -315,6 +338,7 @@ export const songs: Song[] = [
   {
     id: "first-light-salt-flats",
     title: "First Light Salt Flats",
+    added: "2026-07-22",
     genre: "Luminous dawn pedal-steel",
     description: "Dawn counterpart to the dusk Lanois tracks — first light across empty salt flats.",
     episode: "Series cutaway",
@@ -328,6 +352,7 @@ export const songs: Song[] = [
   {
     id: "from-the-west",
     title: "From the West",
+    added: "2026-10-06",
     genre: "Plainchant",
     description: "Riley sings one field entry, syllabic, in the hut. The only rise is on still, and the sentence ends where it ends.",
     episode: "Episode 5 candidate / ridge",
@@ -341,6 +366,7 @@ export const songs: Song[] = [
   {
     id: "g-train-fluorescent",
     title: "G Train Fluorescent",
+    added: "2026-09-08",
     genre: "Commute techno",
     description: "Night Side track 2. 122 BPM F-sharp minor. Tight dry kick, sixteenth hats as ballast, fluorescent hum under the bass. Brooklyn commute grid. Generate first.",
     episode: "Catalog / Night Side",
@@ -354,6 +380,7 @@ export const songs: Song[] = [
   {
     id: "ghost-in-the-reverb",
     title: "Ghost in the Reverb",
+    added: "2026-07-22",
     genre: "Spectral slide-steel nocturne",
     description: "The darkest Lanois entry — a ghost story told entirely in reverb. No vocals.",
     episode: "Series cutaway",
@@ -367,6 +394,7 @@ export const songs: Song[] = [
   {
     id: "ultra-screech",
     title: "Ultra Screech (Glam-Sham-Poo)",
+    added: "2026-08-15",
     genre: "Glam metal joke commercial",
     description: "Screeching glam-metal shampoo anthem from Glamora. Rubella exhausted, Lillith committed, Kenji still selling. Gang vocals on GLAM-SHAM-POO.",
     episode: "Musical Cutaway / EyeWash",
@@ -381,6 +409,7 @@ export const songs: Song[] = [
   {
     id: "groove-break-earned",
     title: "Groove Break (Earned)",
+    added: "2026-09-08",
     genre: "Progressive / melodic techno",
     description: "Night Side track 3. 124 BPM A minor. Full groove from bar one. The break is not a drop — drums thin, bass keeps walking, groove returns without getting bigger.",
     episode: "Catalog / Night Side",
@@ -394,6 +423,7 @@ export const songs: Song[] = [
   {
     id: "ground-rent",
     title: "Ground Rent",
+    added: "2026-10-06",
     genre: "Passacaglia duet",
     description: "A four-bar ground in A minor. Rubella repeats the floor. Lillith adds one repair each cycle, then runs out.",
     episode: "Building cast",
@@ -407,6 +437,7 @@ export const songs: Song[] = [
   {
     id: "halloween-snake-battle",
     title: "Halloween Snake Battle",
+    added: "2026-05-13",
     genre: "Comedic thrash metal",
     description: "Short instrumental battle cue for the laser-snake Halloween showdown.",
     episode: "Episode 03",
@@ -421,6 +452,7 @@ export const songs: Song[] = [
   {
     id: "hallway-hum",
     title: "Hallway Hum",
+    added: "2026-09-08",
     genre: "Four-on-the-floor techno",
     description: "Night Side track 8. 124 BPM G minor. The kick is the hallway. Fluorescent hum tuned to the key. Almost no melody.",
     episode: "Catalog / Night Side",
@@ -434,6 +466,7 @@ export const songs: Song[] = [
   {
     id: "hanshaw-underscore",
     title: "Hanshaw Underscore (12-inch)",
+    added: "2026-09-08",
     genre: "Deep house",
     description: "Night Side track 5. 120 BPM C minor. Warm Rhodes stab as the hook. 1926 charm as harmony, not costume.",
     episode: "Catalog / Night Side",
@@ -447,6 +480,7 @@ export const songs: Song[] = [
   {
     id: "haunted-or-unscheduled",
     title: "Haunted or Unscheduled",
+    added: "2026-08-16",
     genre: "Sparse institutional electro-lounge",
     description: "Master Control 4 AM bed — Rhodes four-note loop that never develops, 3:44 clock motif twice identically, optional Continuity Voice. Not a second sign-off.",
     episode: "EyeWash Station / Master Control",
@@ -460,6 +494,7 @@ export const songs: Song[] = [
   {
     id: "heart-rate-optimal",
     title: "Heart Rate Optimal",
+    added: "2026-08-19",
     genre: "Spa-pop / wellness-notification ballad",
     description: "HR 78. Dread 78. Same number, different app. The chorus would like to go to ninety; the watch does not approve.",
     episode: "Episode 03 / wellness ladies",
@@ -473,6 +508,7 @@ export const songs: Song[] = [
   {
     id: "heavy-water",
     title: "Heavy Water",
+    added: "2026-10-06",
     genre: "1970s organ-metal",
     description: "A bright heavy riff and a Hammond that will not leave. The chant is heavy water, warm as the sun.",
     episode: "Lace Waterfall",
@@ -486,6 +522,7 @@ export const songs: Song[] = [
   {
     id: "heels-or-no-entry",
     title: "Heels or No Entry",
+    added: "2026-09-06",
     genre: "Slow-disco dress-code liturgy",
     description: "A rooftop bouncer recites the door policy while the skyline burns. She produces emergency stilettos. The kick arrives after Approved.",
     episode: "Velvet Rope / Episode 05 opener",
@@ -499,6 +536,7 @@ export const songs: Song[] = [
   {
     id: "here-they-are",
     title: "Here They Are",
+    added: "2026-09-05",
     genre: "Luminous ambient electronic",
     description: "Arrival bed for the mountain-lion wildflower cutaway. Same 110 BPM as Come Further. Brilliant light, other cats, big field.",
     episode: "Musical Cutaway",
@@ -512,6 +550,7 @@ export const songs: Song[] = [
   {
     id: "hold-for-eight",
     title: "Hold for Eight",
+    added: "2026-09-09",
     genre: "Dry downtempo / counted soul",
     description: "Cue Sheets track 1. 84 BPM D minor. The instruction to wait, sung as a lullaby. The count reaches six and starts again — it never gets to eight.",
     episode: "Catalog / Cue Sheets",
@@ -525,6 +564,7 @@ export const songs: Song[] = [
   {
     id: "hold-the-note",
     title: "Hold the Note",
+    added: "2026-10-06",
     genre: "Slow heavy rock",
     description: "One riff, one long bend, a chant of hold. Rubella keeps the last hold two beats after the band has moved on.",
     episode: "Lace Waterfall",
@@ -538,6 +578,7 @@ export const songs: Song[] = [
   {
     id: "home-sweet-void-dialog",
     title: "Home Sweet Void (Dialog)",
+    added: "2026-09-06",
     genre: "Hull-hum table dialog",
     description: "Non-musical space-lounge table scene. No dedicated Minimax track — hull hum, cup, bag plastic, deadpan delivery.",
     episode: "Space visual experiment",
@@ -551,6 +592,7 @@ export const songs: Song[] = [
   {
     id: "i-second-peggy-babcock",
     title: "I Second Peggy Babcock",
+    added: "2026-08-17",
     genre: "Parliamentary patter / clubhouse organ",
     description: "HOA recording secretary has the floor. The motion is thistle and shrub. Nobody can second Peggy Babcock. She re-reads the whole thing anyway.",
     episode: "Episode 04 / HOA",
@@ -564,6 +606,7 @@ export const songs: Song[] = [
   {
     id: "lace-waterfall",
     title: "Lace Waterfall",
+    added: "2026-10-06",
     genre: "1971 space-rock anthem",
     description: "The band's name, chanted. Lillith starts, Rubella joins, and the last syllable of waterfall always spills the bar.",
     episode: "Lace Waterfall",
@@ -577,6 +620,7 @@ export const songs: Song[] = [
   {
     id: "les-ondes-courtes",
     title: "Les Ondes Courtes",
+    added: "2026-05-07",
     genre: "French electro-chanson",
     description: "Hypnagogic night-drive lullaby for the static altar sequence.",
     episode: "Episode 03",
@@ -591,6 +635,7 @@ export const songs: Song[] = [
   {
     id: "marble-tick-tack",
     title: "Marble Tick Tack",
+    added: "2026-09-01",
     genre: "Experimental tick-tock instrumental",
     description: "Pure animation bridge (~2:03). No vocal. Cabinet marble chorus walks a night lot — alley fences, impossible lawn, electromagnet tower, ferrofluid rain — and snaps home. Roley Voss lane.",
     episode: "Musical Cutaway / Visual Experiment",
@@ -604,6 +649,7 @@ export const songs: Song[] = [
   {
     id: "moth-hour",
     title: "Moth Hour",
+    added: "2026-10-06",
     genre: "1970s galloping space-metal",
     description: "A galloping riff in 7/8 over a drummer who never leaves 4/4. The bar lines meet once, in the last bar. Come to the lamp.",
     episode: "Lace Waterfall",
@@ -617,6 +663,7 @@ export const songs: Song[] = [
   {
     id: "motif-refuses-the-peak",
     title: "Motif Refuses the Peak",
+    added: "2026-09-08",
     genre: "Melodic techno",
     description: "Night Side track 9. 126 BPM G minor. Layers every thirty-two bars, fullest at four-thirty, then the top arp leaves and the kick plus motif ride out. The refusal is the event.",
     episode: "Catalog / Night Side",
@@ -630,6 +677,7 @@ export const songs: Song[] = [
   {
     id: "mysterium",
     title: "Mysterium",
+    added: "2026-07-11",
     genre: "Bubblegum Italo-pop",
     description: "Festive Italian bubblegum pop with Latin chorus hooks.",
     episode: "Series cutaway",
@@ -643,6 +691,7 @@ export const songs: Song[] = [
   {
     id: "mysterium-a-cappella",
     title: "Mysterium (A Cappella)",
+    added: "2026-07-12",
     genre: "A cappella bubblegum pop",
     description: "Vocal-only variant of Mysterium for Minimax generation without instruments.",
     episode: "Series cutaway",
@@ -656,6 +705,7 @@ export const songs: Song[] = [
   {
     id: "needle-drop-source",
     title: "Needle Drop, Source",
+    added: "2026-09-09",
     genre: "Diegetic soul",
     description: "Cue Sheets track 5. 96 BPM E minor. Starts as music playing inside a scene and becomes score halfway through. Nobody in the frame notices, and neither does the lyric.",
     episode: "Catalog / Cue Sheets",
@@ -669,6 +719,7 @@ export const songs: Song[] = [
   {
     id: "negotiating-with-the-elevator",
     title: "Negotiating with the Elevator",
+    added: "2026-08-19",
     genre: "Argentine tango duet",
     description: "Lillith bargains with a freight elevator that sings only floor numbers. Each verse loses a beat as the car descends; the lobby arrives in 2/4.",
     episode: "Building cast / corridor transit",
@@ -682,6 +733,7 @@ export const songs: Song[] = [
   {
     id: "neon-exit-sign",
     title: "Neon Exit Sign",
+    added: "2026-08-05",
     genre: "80s dark synth-pop / neon noir",
     description: "Series signature cutaway — “don’t smudge the mascara” as a glamour-apocalypse anthem, sung by a woman who has tried every exit twice.",
     episode: "Episode 01 reprise",
@@ -695,6 +747,7 @@ export const songs: Song[] = [
   {
     id: "nine-percent-battery",
     title: "Nine Percent Battery",
+    added: "2026-08-19",
     genre: "Sincere indie-folk ballad",
     description: "A 4 AM love song to a dying smoke detector. Rubella can’t reach it; the chirp lands every 47 seconds and is the only in-tune pitch on the record.",
     episode: "Building cast / hallway 4 AM",
@@ -708,6 +761,7 @@ export const songs: Song[] = [
   {
     id: "no-music-here",
     title: "No Music Here",
+    added: "2026-09-09",
     genre: "Sparse soul",
     description: "Cue Sheets track 9. 68 BPM E-flat minor. About the eighty seconds she left alone. The band drops out on the word here, every time, leaving it naked.",
     episode: "Catalog / Cue Sheets",
@@ -721,6 +775,7 @@ export const songs: Song[] = [
   {
     id: "open-gate",
     title: "Open Gate",
+    added: "2026-10-06",
     genre: "Bright twin-guitar metal",
     description: "A daylight heavy anthem. The chant is open. The second guitar answers a fifth up, every time, and the gate stays open.",
     episode: "Lace Waterfall",
@@ -734,6 +789,7 @@ export const songs: Song[] = [
   {
     id: "out-on-the-cut",
     title: "Out on the Cut",
+    added: "2026-09-09",
     genre: "Clipped downtempo",
     description: "Cue Sheets track 3. 92 BPM A minor. Every phrase is clipped before its last word. The shortest thing on the record and it is still too long for the edit.",
     episode: "Catalog / Cue Sheets",
@@ -747,6 +803,7 @@ export const songs: Song[] = [
   {
     id: "pad-kid-poured-curd",
     title: "Pad Kid Poured Curd (Pulled Cold)",
+    added: "2026-08-17",
     genre: "Cold patter electro / recall bulletin",
     description: "EyeWash late correction at 3:44. A pad kid poured curd that should have been pulled cold; Continuity Voice reads the form while the health department adds clauses and the tempo does not slow.",
     episode: "EyeWash Station / late correction",
@@ -760,6 +817,7 @@ export const songs: Song[] = [
   {
     id: "paper-lung",
     title: "Paper Lung",
+    added: "2026-09-28",
     genre: "Instrumental chamber / bellows miniature",
     description: "Queued bed for The Seed Casts Twice. Breath-scale instrumental. Picture stays silent until this exists.",
     episode: "Visual Experiment / Animation Bridge",
@@ -773,6 +831,7 @@ export const songs: Song[] = [
   {
     id: "passing-lane",
     title: "Passing Lane",
+    added: "2026-09-15",
     genre: "Outlaw country chase song at walking speed",
     description: "A proud baritone sells a high-speed pass. The click is 140. The band is 48. A skeleton horn is the only thing on time, and it has been honking since last autumn.",
     episode: "Musical cutaway / Snail Passing Lane",
@@ -786,6 +845,7 @@ export const songs: Song[] = [
   {
     id: "pearls-in-the-ashtray",
     title: "Pearls in the Ashtray",
+    added: "2026-08-13",
     genre: "Smoked midnight jazz",
     description: "Residue as jewelry. Rubella inventories what burned. Trumpet answers a beat late and a half-step low.",
     episode: "After-gala cutaway",
@@ -799,6 +859,7 @@ export const songs: Song[] = [
   {
     id: "pepperoni-or-margherita",
     title: "Pepperoni or Margherita",
+    added: "2026-08-05",
     genre: "Commercial jingle → minor-key piano ballad",
     description: "The Pizza Guy theme: fifteen seconds of cheerful ad music, a hard cut, then ninety seconds about always arriving when chaos peaks.",
     episode: "Episode 03 / any crossover",
@@ -812,6 +873,7 @@ export const songs: Song[] = [
   {
     id: "permit-for-the-purple-light",
     title: "Permit for the Purple Light",
+    added: "2026-09-14",
     genre: "Bureaucratic bossa nova / clipboard lounge",
     description: "Episode 04 afterglow — the HOA issues a parking permit to the cosmic horror. Sung by the minutes, in order. Made by Fable.",
     episode: "Episode 04 / HOA",
@@ -825,6 +887,7 @@ export const songs: Song[] = [
   {
     id: "porch-light-meridian",
     title: "Porch Light Meridian",
+    added: "2026-08-13",
     genre: "Progressive downtempo",
     description: "Episode 3 crane reveal as music — porch bulb in the foreground, meridian logic overhead. Rubella, spare, unresolved.",
     episode: "Episode 03",
@@ -838,6 +901,7 @@ export const songs: Song[] = [
   {
     id: "quarter-to-seventy-five",
     title: "Quarter to Seventy-Five",
+    added: "2026-08-05",
     genre: "Ambient lullaby / detuned soft rock",
     description: "Episode 2 nocturnal drive as a song — no chorus, just the title phrase, a clock stuck at 3:44, and an FM needle drifting left.",
     episode: "Episode 02",
@@ -851,6 +915,7 @@ export const songs: Song[] = [
   {
     id: "receipt-dated-thursday",
     title: "Receipt Dated Thursday",
+    added: "2026-09-06",
     genre: "Institutional receipt recitation",
     description: "Continuity Voice reads a poodle’s return receipt from a store that will not exist until Thursday. The barcode is always one digit short.",
     episode: "Musical cutaway / Biscuit",
@@ -864,6 +929,7 @@ export const songs: Song[] = [
   {
     id: "recycling-bin-rebellion",
     title: "Recycling Bin Rebellion",
+    added: "2026-08-13",
     genre: "Absurd punk-ska",
     description: "HOA protest anthem about the wrong shade of democratic blue. Cheap horns, gavel snare, one flat trumpet, no wink.",
     episode: "Episode 04 / HOA",
@@ -877,6 +943,7 @@ export const songs: Song[] = [
   {
     id: "rinse-cycle",
     title: "Rinse Cycle (Fifteen Minutes, Do Not Blink)",
+    added: "2026-08-05",
     genre: "Institutional soft rock / sign-off theme",
     description: "EyeWash Station sign-off — warm, over-rehearsed, and structurally wrong: nine-bar phrases, late resolutions, and a “please stand by” outro that loops.",
     episode: "Series framing device",
@@ -890,6 +957,7 @@ export const songs: Song[] = [
   {
     id: "rubella-stand-up",
     title: "Rubella Stand-Up (Voice Bed)",
+    added: "2026-09-12",
     genre: "Spoken gag / Voice bed",
     description: "Rubella files Item Seven at a laundry-room open mic. Dry raspy Voice bed, chair-creak laugh track, no music. Not a Minimax song.",
     episode: "Short packet farm / spoken cutaway",
@@ -903,6 +971,7 @@ export const songs: Song[] = [
   {
     id: "said-and-left",
     title: "Said and Left",
+    added: "2026-10-06",
     genre: "Sprechstimme",
     description: "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later.",
     episode: "Building cast / hallway",
@@ -916,6 +985,7 @@ export const songs: Song[] = [
   {
     id: "same-sentence",
     title: "Same Sentence",
+    added: "2026-10-06",
     genre: "Phase-music duet",
     description: "Lillith holds six syllables. After one unison pass, Rubella shifts one syllable later and never returns.",
     episode: "Building cast / laundry",
@@ -929,6 +999,7 @@ export const songs: Song[] = [
   {
     id: "second-sun",
     title: "Second Sun",
+    added: "2026-10-06",
     genre: "Warm rock anthem",
     description: "Piano, organ, and a chant that always enters one beat after the band. A second sun, kept. Not an eclipse.",
     episode: "Lace Waterfall",
@@ -942,6 +1013,7 @@ export const songs: Song[] = [
   {
     id: "slide-between-stations",
     title: "Slide Between Stations",
+    added: "2026-09-14",
     genre: "Broadcast dream-pop / test-pattern shoegaze",
     description: "The EyeWash transmitter never explains itself. A song for the half-second where the channel slides and the room changes. Made by Fable.",
     episode: "EyeWash station-break / channel slide",
@@ -955,6 +1027,7 @@ export const songs: Song[] = [
   {
     id: "snow-on-glass",
     title: "Snow on Glass",
+    added: "2026-09-08",
     genre: "Driving techno",
     description: "Night Side track 6. 128 BPM C-sharp minor. Cold, clean, awake. Thin ice-like high synth that never becomes a lead.",
     episode: "Catalog / Night Side",
@@ -968,6 +1041,7 @@ export const songs: Song[] = [
   {
     id: "soft-pull-forward",
     title: "Soft Pull-Forward",
+    added: "2026-09-08",
     genre: "Progressive house",
     description: "Night Side track 1. 120 BPM F minor. Filtered loft pad, kick enters late and rounded. Warm-up, not a drop.",
     episode: "Catalog / Night Side",
@@ -981,6 +1055,7 @@ export const songs: Song[] = [
   {
     id: "spooky-telephone-poles-dialog",
     title: "Spooky Telephone Poles (Dialog)",
+    added: "2026-08-29",
     genre: "Halloween sidewalk pseudoscience",
     description: "Non-musical dialog cutaway on the Halloween sidewalk. No dedicated Minimax track — street ambience and deadpan delivery.",
     episode: "Episode 03",
@@ -994,6 +1069,7 @@ export const songs: Song[] = [
   {
     id: "standing-room",
     title: "Standing Room",
+    added: "2026-10-06",
     genre: "1975 acoustic-and-slide stadium anthem",
     description: "Twelve-string, slide guitar, and a chorus built for a crowd. Where the applause would go there is one wooden creak.",
     episode: "Lace Waterfall",
@@ -1007,6 +1083,7 @@ export const songs: Song[] = [
   {
     id: "static-between-stations",
     title: "Static Between Stations",
+    added: "2026-08-13",
     genre: "Nocturnal electro-indie",
     description: "Leave the dial between two songs on purpose. Lillith close; Rubella as a distant station ghost. Sister to Les Ondes Courtes.",
     episode: "Episode 02 / Laundromat",
@@ -1020,6 +1097,7 @@ export const songs: Song[] = [
   {
     id: "sting-four-frames-late",
     title: "Sting, Four Frames Late",
+    added: "2026-09-09",
     genre: "Deadpan lounge funk",
     description: "Cue Sheets track 8. 100 BPM B minor. Every stab lands four frames late. Notes came back saying keep it wrong.",
     episode: "Catalog / Cue Sheets",
@@ -1033,6 +1111,7 @@ export const songs: Song[] = [
   {
     id: "strange-light",
     title: "Strange Light",
+    added: "2026-08-13",
     genre: "Celestial downtempo electro",
     description: "Sun and moon sharing one sky. One witness. Quiet cosmic lawbreaking. Sine bass as an orbit, not a bounce.",
     episode: "Episode 03 sky",
@@ -1046,6 +1125,7 @@ export const songs: Song[] = [
   {
     id: "studio-huddle-dialog",
     title: "Studio Huddle (Dialog)",
+    added: "2026-08-29",
     genre: "Production meta-dialog",
     description: "Non-musical writer-meeting dialog for the 480p studio huddle cutaway. No Minimax track — ambient warehouse tone only.",
     episode: "Episode 02",
@@ -1059,6 +1139,7 @@ export const songs: Song[] = [
   {
     id: "tattarrattat",
     title: "Tattarrattat",
+    added: "2026-08-17",
     genre: "Smoked midnight jazz / locked-door",
     description: "After-gala hallway. The knock is the same from both sides of the wood. Rubella does not open. She counts the seals.",
     episode: "After-gala / hallway liminal",
@@ -1072,6 +1153,7 @@ export const songs: Song[] = [
   {
     id: "temp-love",
     title: "Temp Love",
+    added: "2026-09-09",
     genre: "Cassette soul",
     description: "Cue Sheets track 6. 80 BPM F-sharp minor. She wrote the real cue and the cut fell in love with the temp track. The bridge is in the wrong key and stays there.",
     episode: "Catalog / Cue Sheets",
@@ -1085,6 +1167,7 @@ export const songs: Song[] = [
   {
     id: "terms-and-conditions",
     title: "Terms and Conditions (Complete Recording)",
+    added: "2026-08-19",
     genre: "Vegas big-band showstopper",
     description: "A tuxedoed crooner sings a licensing agreement in full. The tempo climbs 2 BPM per section because the trial is expiring; it stops mid-word on a chime.",
     episode: "EyeWash station-break / end of block",
@@ -1098,6 +1181,7 @@ export const songs: Song[] = [
   {
     id: "the-clause",
     title: "The Clause",
+    added: "2026-10-06",
     genre: "Secco recitative",
     description: "Christine Nilsson sings a rent petition in dry recitative. Every clause gets the same cadence, and the aria never starts.",
     episode: "Voice credit / petition",
@@ -1111,6 +1195,7 @@ export const songs: Song[] = [
   {
     id: "the-laundromat-saints",
     title: "The Laundromat Saints",
+    added: "2026-08-16",
     genre: "Slow liminal waltz",
     description: "Two breathy voices alternate like strangers who accidentally agree. Dryer thumps on bar 5, not bar 1. Diegetic EyeWash TV, then full score for the 2 AM slow dance.",
     episode: "2AM Laundromat Slow Dance",
@@ -1124,6 +1209,7 @@ export const songs: Song[] = [
   {
     id: "the-light-in-the-stair",
     title: "The Light in the Stair",
+    added: "2026-10-06",
     genre: "Motet",
     description: "Three voices, one sentence, no instruments. Nilsson enters first, Lillith a fifth up, Rubella a step below the note she was given.",
     episode: "Building stair / voice credit",
@@ -1137,6 +1223,7 @@ export const songs: Song[] = [
   {
     id: "the-long-goodbye",
     title: "The Long Goodbye",
+    added: "2026-07-22",
     genre: "Sentimental pedal-steel ballad",
     description: "Wordless farewell — the emotional peak of the Lanois pedal-steel series.",
     episode: "Series cutaway",
@@ -1150,6 +1237,7 @@ export const songs: Song[] = [
   {
     id: "monster-mash-finale",
     title: "The Monster Mash (Finale)",
+    added: "2026-07-31",
     genre: "Halloween novelty-rock cover",
     description: "Rubella covers Bobby Pickett's \\\"Monster Mash\\\" on the post-snake-battle lawn — cursed guest list, hologram reveal, Spy vs. Spy outro.",
     episode: "Episode 03",
@@ -1164,6 +1252,7 @@ export const songs: Song[] = [
   {
     id: "the-moon-is-collect",
     title: "The Moon Is Collect",
+    added: "2026-08-13",
     genre: "Nocturnal torch song",
     description: "A red phone whose cord is tied to the moon. Last lines missing their final word. Quietest of the gag songs.",
     episode: "One-panel gag / penthouse",
@@ -1177,6 +1266,7 @@ export const songs: Song[] = [
   {
     id: "the-most-refreshing-drink",
     title: "The Most Refreshing Drink",
+    added: "2026-09-06",
     genre: "Industrial ASMR lounge / fake sponsor bed",
     description: "EyeWash sponsor for an over-engineered glass of ice water. Apparatus clicks in the dark lab; the gulp lands a beat before the ice. No sung lead.",
     episode: "Ultra-Refreshed Water Lab / EyeWash sponsor",
@@ -1190,6 +1280,7 @@ export const songs: Song[] = [
   {
     id: "the-pour",
     title: "The Pour",
+    added: "2026-08-13",
     genre: "Industrial cabaret",
     description: "They hired a climate. Cello in 5 against the song in 4. Lillith deadpan; Rubella only on “dress warm.”",
     episode: "One-panel gag / foundry gala",
@@ -1203,6 +1294,7 @@ export const songs: Song[] = [
   {
     id: "the-roof-knows-how-to-wait",
     title: "The Roof Knows How to Wait",
+    added: "2026-09-06",
     genre: "Dark cabaret ruin ballad",
     description: "Rubella inventories a ceiling that has not fallen yet. Natural ventilation. The extra bar is the plaster still deciding.",
     episode: "Musical cutaway / The Two",
@@ -1216,6 +1308,7 @@ export const songs: Song[] = [
   {
     id: "third-shift-porcelain",
     title: "Third Shift Porcelain",
+    added: "2026-08-13",
     genre: "Heel-click electro / cold disco",
     description: "Beauty as hourly work. Unison deadpan, marble-stamp kick, bar-5 downbeat always late. The Two do not clock out.",
     episode: "One-panel gag / after hours",
@@ -1229,6 +1322,7 @@ export const songs: Song[] = [
   {
     id: "this-program-contains-dialogue",
     title: "This Program Contains Dialogue",
+    added: "2026-08-19",
     genre: "Institutional torch / legal-bumper hymn",
     description: "EyeWash pre-program warning. Continuity Voice sings the disclosure; S&P will not stamp until someone talks.",
     episode: "EyeWash Station / The Long Way Up",
@@ -1242,6 +1336,7 @@ export const songs: Song[] = [
   {
     id: "through-the-lace",
     title: "Through the Lace",
+    added: "2026-10-06",
     genre: "Pastoral rock anthem",
     description: "A 12-string anthem about light in the holes. The chant is one word, and the third Through always lands on the chord that already left.",
     episode: "Lace Waterfall",
@@ -1255,6 +1350,7 @@ export const songs: Song[] = [
   {
     id: "triphthong-table",
     title: "Triphthong Table",
+    added: "2026-08-17",
     genre: "Educational cabaret duet",
     description: "Flour-hire-coir and hvirvle-spurv-færge in one deadpan phonetics lesson. Lillith & Rubella; pronunciation guide always one vowel glide behind the melody.",
     episode: "Musical cutaway",
@@ -1268,6 +1364,7 @@ export const songs: Song[] = [
   {
     id: "twilight-time",
     title: "Twilight Time",
+    added: "2026-05-07",
     genre: "90s rave / eurodance",
     description: "Euphoric warehouse-party anthem used as a recurring character motif.",
     episode: "Character Archive",
@@ -1282,6 +1379,7 @@ export const songs: Song[] = [
   {
     id: "two-chairs-one-mirror",
     title: "Two Chairs, One Mirror",
+    added: "2026-09-14",
     genre: "Torch-song waltz / dressing-room chamber pop",
     description: "Lillith and Rubella at one mirror, trading lives one lipstick at a time. A waltz that never lets either sister take the downbeat. Made by Fable.",
     episode: "Musical cutaway / The Two",
@@ -1295,6 +1393,7 @@ export const songs: Song[] = [
   {
     id: "two-left",
     title: "Two Left",
+    added: "2026-09-15",
     genre: "Vending-machine Motown / girl-group soul",
     description: "Lillith buys another life at 2 AM. The coil is honest. Each chorus has one fewer ding; the last chorus has none and she still holds out her hand.",
     episode: "Musical cutaway / Life Vending",
@@ -1308,6 +1407,7 @@ export const songs: Song[] = [
   {
     id: "two-db-and-dont-tell-me",
     title: "Two dB and Don't Tell Me",
+    added: "2026-09-09",
     genre: "Fader blues",
     description: "Cue Sheets track 4. 88 BPM G minor. Somebody keeps lowering it. Each chorus is genuinely quieter than the last and the vocal never compensates.",
     episode: "Catalog / Cue Sheets",
@@ -1321,6 +1421,7 @@ export const songs: Song[] = [
   {
     id: "two-of-three",
     title: "Two of Three",
+    added: "2026-10-06",
     genre: "Tintinnabuli duet",
     description: "Riley walks a stepwise line in the repeater hut. Rubella may sing only A, C, and E, and the bell has no C.",
     episode: "Episode 5 candidate / ridge",
@@ -1334,6 +1435,7 @@ export const songs: Song[] = [
   {
     id: "under-dialogue",
     title: "Under Dialogue",
+    added: "2026-09-09",
     genre: "Ducked soul / room-tone ballad",
     description: "Cue Sheets track 2. 76 BPM B-flat minor. A song that ducks itself for a conversation we never hear. The duck arrives a beat before a line that never comes.",
     episode: "Catalog / Cue Sheets",
@@ -1347,6 +1449,7 @@ export const songs: Song[] = [
   {
     id: "unspent",
     title: "Unspent",
+    added: "2026-10-06",
     genre: "Lied",
     description: "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung.",
     episode: "Voice credit / small room",
@@ -1360,6 +1463,7 @@ export const songs: Song[] = [
   {
     id: "well-fall",
     title: "Well Fall",
+    added: "2026-09-11",
     genre: "Instrumental heavy metal",
     description: "Well-mouth drip into a descending metal riff that never cadences. No vocal. The fall is the arrangement.",
     episode: "Musical Cutaway / Visual Experiment",
@@ -1373,6 +1477,7 @@ export const songs: Song[] = [
   {
     id: "whatever-lets-us-be",
     title: "Whatever Lets Us Be",
+    added: "2026-05-09",
     genre: "Dark cabaret piano ballad",
     description: "Haunting Rubella-voice refrain for the fireline exit and open-hearted beats.",
     episode: "Episode 01 / 03",
@@ -1387,6 +1492,7 @@ export const songs: Song[] = [
   {
     id: "zero-g-click",
     title: "Zero-G Click",
+    added: "2026-09-08",
     genre: "Trance-adjacent techno",
     description: "Night Side track 7. 132 BPM E minor. Rolling sixteenth arp, one clean snare rush, lift without a dump.",
     episode: "Catalog / Night Side",

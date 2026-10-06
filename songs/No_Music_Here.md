@@ -1,6 +1,7 @@
 ---
 id: no-music-here
 title: No Music Here
+added: 2026-09-09
 genre: Sparse soul
 description: "Cue Sheets track 9. 68 BPM E-flat minor. About the eighty seconds she left alone. The band drops out on the word here, every time, leaving it naked."
 episode: Catalog / Cue Sheets

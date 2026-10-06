@@ -1,6 +1,7 @@
 ---
 id: ground-rent
 title: Ground Rent
+added: 2026-10-06
 genre: Passacaglia duet
 description: "A four-bar ground in A minor. Rubella repeats the floor. Lillith adds one repair each cycle, then runs out."
 episode: Building cast

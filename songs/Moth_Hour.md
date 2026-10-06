@@ -1,6 +1,7 @@
 ---
 id: moth-hour
 title: Moth Hour
+added: 2026-10-06
 genre: 1970s galloping space-metal
 description: "A galloping riff in 7/8 over a drummer who never leaves 4/4. The bar lines meet once, in the last bar. Come to the lamp."
 episode: Lace Waterfall

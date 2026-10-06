@@ -1,6 +1,7 @@
 ---
 id: snow-on-glass
 title: Snow on Glass
+added: 2026-09-08
 genre: Driving techno
 description: "Night Side track 6. 128 BPM C-sharp minor. Cold, clean, awake. Thin ice-like high synth that never becomes a lead."
 episode: Catalog / Night Side

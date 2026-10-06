@@ -1,6 +1,7 @@
 ---
 id: sting-four-frames-late
 title: Sting, Four Frames Late
+added: 2026-09-09
 genre: Deadpan lounge funk
 description: "Cue Sheets track 8. 100 BPM B minor. Every stab lands four frames late. Notes came back saying keep it wrong."
 episode: Catalog / Cue Sheets

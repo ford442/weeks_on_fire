@@ -30,6 +30,7 @@ import type {
 export interface ParsedSong {
   id: string;
   title: string;
+  added: string;
   genre: string;
   description: string;
   episode: string;
@@ -57,6 +58,7 @@ export function loadSongs(repoRoot: string): ParsedSong[] {
     return {
       id: meta.id,
       title: meta.title,
+      added: meta.added,
       genre: meta.genre,
       description: meta.description,
       episode: meta.episode,

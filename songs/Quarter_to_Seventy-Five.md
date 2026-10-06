@@ -1,6 +1,7 @@
 ---
 id: quarter-to-seventy-five
 title: Quarter to Seventy-Five
+added: 2026-08-05
 genre: Ambient lullaby / detuned soft rock
 description: "Episode 2 nocturnal drive as a song — no chorus, just the title phrase, a clock stuck at 3:44, and an FM needle drifting left."
 episode: Episode 02

@@ -7,13 +7,24 @@ import { loadCartoons, loadSequences } from './load';
 import type { ParsedSong } from './load';
 import { SequenceGraphSchema } from './graph-schema';
 import { SequenceSchema } from './schemas';
-import type { CartoonRecord, CutawayRecord, SequenceRecord, SeriesCharacterRecord } from './schemas';
-import { validateContent, validateCartoons, validateCharacters, validateSequences } from './validate';
+import type {
+  CartoonRecord,
+  CutawayRecord,
+  SequenceRecord,
+  SeriesCharacterRecord,
+} from './schemas';
+import {
+  validateContent,
+  validateCartoons,
+  validateCharacters,
+  validateSequences,
+} from './validate';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {
     id: 'song-1',
     title: 'Song One',
+    added: '2026-01-01',
     genre: 'Pop',
     description: 'A song.',
     episode: '01',

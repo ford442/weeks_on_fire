@@ -22,6 +22,7 @@ export function emitSongsModule(
   songs: Array<{
     id: string;
     title: string;
+    added: string;
     genre: string;
     description: string;
     episode: string;
@@ -45,6 +46,7 @@ export function emitSongsModule(
       return `  {
     id: ${toTsString(song.id)},
     title: ${toTsString(song.title)},
+    added: ${toTsString(song.added)},
     genre: ${toTsString(song.genre)},
     description: ${toTsString(song.description)},
     episode: ${toTsString(song.episode)},

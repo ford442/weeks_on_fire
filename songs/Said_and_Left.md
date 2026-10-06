@@ -1,6 +1,7 @@
 ---
 id: said-and-left
 title: Said and Left
+added: 2026-10-06
 genre: Sprechstimme
 description: "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later."
 episode: Building cast / hallway

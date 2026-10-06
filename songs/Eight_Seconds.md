@@ -1,6 +1,7 @@
 ---
 id: eight-seconds
 title: Eight Seconds
+added: 2026-10-06
 genre: Slow organ-and-slide anthem
 description: "Long organ, a slide guitar, and eight seconds of real silence in the middle. The band comes back a half-beat off and stays off."
 episode: Lace Waterfall

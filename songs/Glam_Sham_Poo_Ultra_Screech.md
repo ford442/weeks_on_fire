@@ -1,6 +1,7 @@
 ---
 id: ultra-screech
 title: Ultra Screech (Glam-Sham-Poo)
+added: 2026-08-15
 genre: Glam metal joke commercial
 description: Screeching glam-metal shampoo anthem from Glamora. Rubella exhausted, Lillith committed, Kenji still selling. Gang vocals on GLAM-SHAM-POO.
 episode: Musical Cutaway / EyeWash

@@ -1,6 +1,7 @@
 ---
 id: closed-since-ninety-eight
 title: Closed Since Ninety-Eight
+added: 2026-09-06
 genre: Nocturnal electro-chanson / dead-station duet
 description: Two reflections leave a house of mirrors in the wrong car. The radio is a station that signed off in 1998. Harmony is always one bar late.
 episode: Musical cutaway / night-drive

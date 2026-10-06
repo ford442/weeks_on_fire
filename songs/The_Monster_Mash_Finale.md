@@ -1,6 +1,7 @@
 ---
 id: monster-mash-finale
 title: The Monster Mash (Finale)
+added: 2026-07-31
 genre: Halloween novelty-rock cover
 description: "Rubella covers Bobby Pickett's \"Monster Mash\" on the post-snake-battle lawn — cursed guest list, hologram reveal, Spy vs. Spy outro."
 episode: Episode 03

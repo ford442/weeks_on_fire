@@ -1,21 +1,35 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Copy, Headphones, Music2, Search, SlidersHorizontal } from 'lucide-react';
+import { Headphones, Search, SlidersHorizontal } from 'lucide-react';
 import { linkedAudioFilenames, songs, type Song } from '../data/songs';
 import { firstCatalogItem } from '../lib/catalog';
 import { getUnlistedTracks } from '../lib/songAudio';
+import { formatSongDate } from '../lib/songDate';
 import SongAudioPlayer from './SongAudioPlayer';
 import SongDetail from './SongDetail';
 
 const allValue = 'All';
 
+type SongSort = 'added-desc' | 'added-asc' | 'title';
+
+const hasAddedDates = songs.some((song) => Boolean(song.added));
+
+const sortOptions: Array<{ value: SongSort; label: string; needsDate: boolean }> = [
+  { value: 'added-desc', label: 'Date added, newest', needsDate: true },
+  { value: 'added-asc', label: 'Date added, oldest', needsDate: true },
+  { value: 'title', label: 'Title A–Z', needsDate: false },
+];
+
 export default function Songs() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const workspaceRef = useRef<HTMLDivElement>(null);
   const [selected, setSelected] = useState<Song>(firstCatalogItem(songs, 'songs'));
   const [query, setQuery] = useState('');
   const [episode, setEpisode] = useState(allValue);
-  const [genre, setGenre] = useState(allValue);
+  const [hasAudio, setHasAudio] = useState(false);
+  const [instrumentalOnly, setInstrumentalOnly] = useState(false);
+  const [sort, setSort] = useState<SongSort>(hasAddedDates ? 'added-desc' : 'title');
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const unlistedTracks = useMemo(() => getUnlistedTracks(linkedAudioFilenames), []);
@@ -36,18 +50,12 @@ export default function Songs() {
     }
   }, [id, navigate]);
 
-  const filters = useMemo(
-    () => ({
-      episodes: uniqueValues(songs.map((song) => song.episode)),
-      genres: uniqueValues(songs.map((song) => song.genre)),
-    }),
-    [],
-  );
+  const episodes = useMemo(() => uniqueValues(songs.map((song) => song.episode)), []);
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
-    return songs.filter((song) => {
+    const matches = songs.filter((song) => {
       const matchesSearch =
         normalizedQuery.length === 0 ||
         [
@@ -66,14 +74,20 @@ export default function Songs() {
       return (
         matchesSearch &&
         (episode === allValue || song.episode === episode) &&
-        (genre === allValue || song.genre === genre)
+        (!hasAudio || Boolean(song.audioFile)) &&
+        (!instrumentalOnly || song.instrumental)
       );
     });
-  }, [episode, genre, query]);
+
+    return matches.sort((a, b) => compareSongs(a, b, sort));
+  }, [episode, hasAudio, instrumentalOnly, query, sort]);
 
   const selectSong = (song: Song) => {
     setSelected(song);
     navigate(`/songs/${song.id}`);
+    if (!window.matchMedia('(min-width: 1024px)').matches) {
+      workspaceRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   const copyToClipboard = async (text: string, label: string, key: string) => {
@@ -87,148 +101,113 @@ export default function Songs() {
   };
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-8">
-      <div className="space-y-5">
-        <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
-          <div className="grid gap-3 lg:grid-cols-[minmax(220px,1fr)_180px_220px]">
-            <label className="relative block">
-              <span className="sr-only">Search songs, lyrics, and tags</span>
-              <Search
-                aria-hidden="true"
-                size={18}
-                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
-              />
-              <input
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search songs, lyrics, genres..."
-                className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
-              />
-            </label>
+    <section className="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_420px] lg:px-8">
+      <div className="min-w-0 space-y-5">
+        <div className="max-h-[60vh] overflow-y-auto rounded-lg border border-zinc-800 bg-zinc-950 lg:max-h-[calc(100vh-7rem)]">
+          <div className="sticky top-0 z-10 space-y-3 border-b border-zinc-800 bg-zinc-950 p-4">
+            <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_180px]">
+              <label className="relative block">
+                <span className="sr-only">Search songs, lyrics, and tags</span>
+                <Search
+                  aria-hidden="true"
+                  size={18}
+                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+                />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Search songs, lyrics, genres..."
+                  className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
+                />
+              </label>
+              <label className="block">
+                <span className="sr-only">Sort</span>
+                <select
+                  value={sort}
+                  onChange={(event) => setSort(event.target.value as SongSort)}
+                  className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 px-3 text-sm text-white outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
+                >
+                  {sortOptions
+                    .filter((option) => hasAddedDates || !option.needsDate)
+                    .map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                </select>
+              </label>
+            </div>
             <FilterSelect
               label="Episode"
               value={episode}
-              options={filters.episodes}
+              options={episodes}
               onChange={setEpisode}
             />
-            <FilterSelect
-              label="Genre"
-              value={genre}
-              options={filters.genres}
-              onChange={setGenre}
-            />
-          </div>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          {filtered.map((song) => (
-            <article
-              key={song.id}
-              className={`overflow-hidden rounded-lg border bg-zinc-950 transition hover:-translate-y-0.5 ${
-                selected.id === song.id
-                  ? 'border-orange-500/70 ring-1 ring-orange-500/30'
-                  : 'border-zinc-800 hover:border-orange-500/50'
-              }`}
-            >
-              <button
-                type="button"
-                onClick={() => selectSong(song)}
-                className="block w-full p-5 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
+            <div className="flex flex-wrap items-center gap-2">
+              <FilterToggle pressed={hasAudio} onToggle={() => setHasAudio((value) => !value)}>
+                <Headphones size={14} aria-hidden="true" />
+                Has audio
+              </FilterToggle>
+              <FilterToggle
+                pressed={instrumentalOnly}
+                onToggle={() => setInstrumentalOnly((value) => !value)}
               >
-                <div className="flex items-start gap-4">
-                  <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-orange-500/20 bg-orange-500/10 text-orange-200">
-                    <Music2 size={22} />
-                    {song.audioFile && (
+                Instrumental
+              </FilterToggle>
+              <p className="ml-auto text-sm tabular-nums text-zinc-400" aria-live="polite">
+                {filtered.length} of {songs.length}
+              </p>
+            </div>
+          </div>
+
+          {filtered.length > 0 ? (
+            <ul className="divide-y divide-zinc-900">
+              {filtered.map((song) => {
+                const isSelected = selected.id === song.id;
+                return (
+                  <li key={song.id}>
+                    <button
+                      type="button"
+                      onClick={() => selectSong(song)}
+                      aria-current={isSelected ? 'true' : undefined}
+                      className={`flex w-full items-center gap-3 border-l-2 px-4 py-2.5 text-left text-sm transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300 ${
+                        isSelected
+                          ? 'border-orange-400 bg-orange-500/10'
+                          : 'border-transparent hover:bg-zinc-900'
+                      }`}
+                    >
                       <span
-                        className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full border border-orange-400/40 bg-orange-500 text-orange-950"
-                        title="Audio available"
+                        className={`min-w-0 flex-1 truncate font-medium ${
+                          isSelected ? 'text-orange-100' : 'text-white'
+                        }`}
                       >
-                        <Headphones size={11} aria-hidden="true" />
+                        {song.title}
                       </span>
-                    )}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                      {song.episode}
-                    </p>
-                    <h2 className="mt-1 text-xl font-semibold leading-tight text-white">
-                      {song.title}
-                    </h2>
-                    <p className="mt-2 text-sm text-zinc-400">{song.genre}</p>
-                    <p className="mt-2 text-sm leading-6 text-zinc-500">{song.description}</p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {song.tags.slice(0, 4).map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-md border border-zinc-800 bg-zinc-900 px-2 py-1 text-xs text-zinc-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {song.instrumental && (
-                        <span className="rounded-md border border-zinc-700 bg-zinc-900 px-2 py-1 text-xs text-zinc-400">
-                          instrumental
-                        </span>
-                      )}
-                      {song.audioFile && (
-                        <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2 py-1 text-xs text-orange-200">
-                          has audio
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </button>
-              <div
-                className={`grid border-t border-zinc-800 ${song.audioFile ? 'grid-cols-3' : 'grid-cols-2'}`}
-              >
-                {song.audioFile && (
-                  <div className="flex items-center justify-center px-3 py-3">
-                    <SongAudioPlayer audioFile={song.audioFile} title={song.title} compact />
-                  </div>
-                )}
-                <button
-                  type="button"
-                  onClick={() =>
-                    copyToClipboard(song.stylePrompt, 'Style prompt', `${song.id}:card-style`)
-                  }
-                  className={`flex items-center justify-center gap-2 px-3 py-3 text-sm font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-orange-200 ${
-                    song.audioFile ? 'border-l border-zinc-800' : ''
-                  }`}
-                >
-                  <Copy size={16} />
-                  {copiedKey === `${song.id}:card-style` ? 'Copied' : 'Style'}
-                </button>
-                <button
-                  type="button"
-                  onClick={() =>
-                    song.lyrics
-                      ? copyToClipboard(song.lyrics, 'Lyrics', `${song.id}:card-lyrics`)
-                      : copyToClipboard(
-                          song.stylePrompt,
-                          'Style prompt',
-                          `${song.id}:card-style-fallback`,
-                        )
-                  }
-                  className="border-l border-zinc-800 px-3 py-3 text-sm font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-orange-200"
-                  disabled={!song.lyrics}
-                >
-                  {copiedKey === `${song.id}:card-lyrics`
-                    ? 'Copied'
-                    : song.lyrics
-                      ? 'Lyrics'
-                      : 'No lyrics'}
-                </button>
-              </div>
-            </article>
-          ))}
+                      <span className="hidden min-w-0 flex-1 truncate text-zinc-500 sm:block">
+                        {song.genre}
+                      </span>
+                      <time
+                        dateTime={song.added}
+                        className="w-24 shrink-0 text-right text-xs tabular-nums text-zinc-500"
+                      >
+                        {formatSongDate(song.added)}
+                      </time>
+                      <span className="flex w-4 shrink-0 justify-center text-orange-300">
+                        {song.audioFile && (
+                          <Headphones size={14} aria-label="Has audio" role="img" />
+                        )}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          ) : (
+            <div className="p-10 text-center text-zinc-400">
+              No songs match the current filters.
+            </div>
+          )}
         </div>
-
-        {filtered.length === 0 && (
-          <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-10 text-center text-zinc-400">
-            No songs match the current filters.
-          </div>
-        )}
 
         {unlistedTracks.length > 0 && (
           <section className="space-y-4">
@@ -256,7 +235,7 @@ export default function Songs() {
         )}
       </div>
 
-      <div className="lg:sticky lg:top-20 lg:self-start">
+      <div ref={workspaceRef} className="scroll-mt-20 lg:sticky lg:top-20 lg:self-start">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
           <SlidersHorizontal size={17} />
           Song Workspace
@@ -292,6 +271,37 @@ function FilterSelect({ label, value, options, onChange }: FilterSelectProps) {
       </select>
     </label>
   );
+}
+
+interface FilterToggleProps {
+  pressed: boolean;
+  onToggle: () => void;
+  children: ReactNode;
+}
+
+function FilterToggle({ pressed, onToggle, children }: FilterToggleProps) {
+  return (
+    <button
+      type="button"
+      aria-pressed={pressed}
+      onClick={onToggle}
+      className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+        pressed
+          ? 'border-orange-400 bg-orange-500/15 text-orange-100'
+          : 'border-zinc-800 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function compareSongs(a: Song, b: Song, sort: SongSort) {
+  if (sort !== 'title') {
+    const byDate = a.added.localeCompare(b.added);
+    if (byDate !== 0) return sort === 'added-desc' ? -byDate : byDate;
+  }
+  return a.title.localeCompare(b.title);
 }
 
 function uniqueValues(values: string[]) {

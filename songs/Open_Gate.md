@@ -1,6 +1,7 @@
 ---
 id: open-gate
 title: Open Gate
+added: 2026-10-06
 genre: Bright twin-guitar metal
 description: "A daylight heavy anthem. The chant is open. The second guitar answers a fifth up, every time, and the gate stays open."
 episode: Lace Waterfall

@@ -1,6 +1,7 @@
 ---
 id: the-light-in-the-stair
 title: The Light in the Stair
+added: 2026-10-06
 genre: Motet
 description: "Three voices, one sentence, no instruments. Nilsson enters first, Lillith a fifth up, Rubella a step below the note she was given."
 episode: Building stair / voice credit

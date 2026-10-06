@@ -1,6 +1,7 @@
 ---
 id: g-train-fluorescent
 title: G Train Fluorescent
+added: 2026-09-08
 genre: Commute techno
 description: "Night Side track 2. 122 BPM F-sharp minor. Tight dry kick, sixteenth hats as ballast, fluorescent hum under the bass. Brooklyn commute grid. Generate first."
 episode: Catalog / Night Side

@@ -1,6 +1,7 @@
 ---
 id: strange-light
 title: Strange Light
+added: 2026-08-13
 genre: Celestial downtempo electro
 description: Sun and moon sharing one sky. One witness. Quiet cosmic lawbreaking. Sine bass as an orbit, not a bounce.
 episode: Episode 03 sky

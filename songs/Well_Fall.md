@@ -1,6 +1,7 @@
 ---
 id: well-fall
 title: Well Fall
+added: 2026-09-11
 genre: Instrumental heavy metal
 description: "Well-mouth drip into a descending metal riff that never cadences. No vocal. The fall is the arrangement."
 episode: Musical Cutaway / Visual Experiment

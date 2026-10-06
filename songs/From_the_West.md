@@ -1,6 +1,7 @@
 ---
 id: from-the-west
 title: From the West
+added: 2026-10-06
 genre: Plainchant
 description: "Riley sings one field entry, syllabic, in the hut. The only rise is on still, and the sentence ends where it ends."
 episode: Episode 5 candidate / ridge

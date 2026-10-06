@@ -1,6 +1,7 @@
 ---
 id: slide-between-stations
 title: Slide Between Stations
+added: 2026-09-14
 genre: Broadcast dream-pop / test-pattern shoegaze
 description: The EyeWash transmitter never explains itself. A song for the half-second where the channel slides and the room changes. Made by Fable.
 episode: EyeWash station-break / channel slide

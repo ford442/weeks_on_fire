@@ -1,6 +1,7 @@
 ---
 id: rinse-cycle
 title: Rinse Cycle (Fifteen Minutes, Do Not Blink)
+added: 2026-08-05
 genre: Institutional soft rock / sign-off theme
 description: "EyeWash Station sign-off — warm, over-rehearsed, and structurally wrong: nine-bar phrases, late resolutions, and a “please stand by” outro that loops."
 episode: Series framing device

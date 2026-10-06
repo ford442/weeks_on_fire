@@ -1,6 +1,7 @@
 ---
 id: whatever-lets-us-be
 title: Whatever Lets Us Be
+added: 2026-05-09
 genre: Dark cabaret piano ballad
 description: Haunting Rubella-voice refrain for the fireline exit and open-hearted beats.
 episode: Episode 01 / 03

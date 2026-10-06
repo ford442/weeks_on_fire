@@ -1,6 +1,7 @@
 ---
 id: permit-for-the-purple-light
 title: Permit for the Purple Light
+added: 2026-09-14
 genre: Bureaucratic bossa nova / clipboard lounge
 description: Episode 04 afterglow — the HOA issues a parking permit to the cosmic horror. Sung by the minutes, in order. Made by Fable.
 episode: Episode 04 / HOA

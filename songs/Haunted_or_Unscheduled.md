@@ -1,6 +1,7 @@
 ---
 id: haunted-or-unscheduled
 title: Haunted or Unscheduled
+added: 2026-08-16
 genre: Sparse institutional electro-lounge
 description: "Master Control 4 AM bed — Rhodes four-note loop that never develops, 3:44 clock motif twice identically, optional Continuity Voice. Not a second sign-off."
 episode: EyeWash Station / Master Control

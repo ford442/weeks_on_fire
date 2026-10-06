@@ -1,6 +1,7 @@
 ---
 id: rubella-stand-up
 title: Rubella Stand-Up (Voice Bed)
+added: 2026-09-12
 genre: Spoken gag / Voice bed
 description: Rubella files Item Seven at a laundry-room open mic. Dry raspy Voice bed, chair-creak laugh track, no music. Not a Minimax song.
 episode: Short packet farm / spoken cutaway

@@ -1,6 +1,7 @@
 ---
 id: heart-rate-optimal
 title: Heart Rate Optimal
+added: 2026-08-19
 genre: Spa-pop / wellness-notification ballad
 description: HR 78. Dread 78. Same number, different app. The chorus would like to go to ninety; the watch does not approve.
 episode: Episode 03 / wellness ladies

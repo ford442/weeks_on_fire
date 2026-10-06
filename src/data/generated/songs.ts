@@ -15,6 +15,7 @@ export const songs: Song[] = [
   {
     id: "after-is-a-floor",
     title: "After Is a Floor",
+    added: "2026-08-13",
     genre: "Art Deco noir pop",
     description: "Destinations as manners. The unmarked button. Lillith whispered in a small elevator; one extra ding after the last line.",
     episode: "EyeWash station-break",
@@ -28,6 +29,7 @@ export const songs: Song[] = [
   {
     id: "aria-thirty-night",
     title: "Aria Thirty (Night)",
+    added: "2026-09-08",
     genre: "Melodic techno",
     description: "Night Side track 4. 126 BPM D minor. Five-note glassy motif treated as a sequenced tone, never a voice.",
     episode: "Catalog / Night Side",
@@ -41,6 +43,7 @@ export const songs: Song[] = [
   {
     id: "article-seven",
     title: "Article Seven",
+    added: "2026-08-19",
     genre: "Dusty union lounge / paused funk",
     description: "Mandatory funk interval. Plastic steward, laminated card, clock stuck at fourteen minutes. The lawn is on break; the lasers can wait.",
     episode: "Episode 03 / Skeleton Union Break",
@@ -54,6 +57,7 @@ export const songs: Song[] = [
   {
     id: "big-city",
     title: "Big City",
+    added: "2026-09-11",
     genre: "Late-80s glam strut",
     description: "Lillith starts, Rubella answers, Kenji spoken tag. Glamora as a city made of hair. Catalog single, not the Ultra Screech ad.",
     episode: "Musical Cutaway / Glam catalog",
@@ -65,8 +69,23 @@ export const songs: Song[] = [
     sourceFile: "Big_City.md"
   },
   {
+    id: "both-coats",
+    title: "Both Coats",
+    added: "2026-10-06",
+    genre: "1970s spy-riff heavy rock",
+    description: "A swaggering organ riff, one black coat and one white. The last chorus cuts to silence mid-syllable and nobody wins.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s spy-riff heavy rock, 126 BPM, A minor pentatonic with a major lift, about two minutes. Deep Purple Mk II swing, Hammond and guitar playing the riff in unison, Lace Waterfall: Lillith and Rubella only. Warm overdriven guitar, Leslie organ, bass, a dry 1970s kit, a tambourine on the off-beat. No double-kick, no blast beat, no dropped tuning, no scream, no growl. Chant in unison, sung hard but not shouted: \"Black coat.\" then \"White coat.\" then \"Same walk.\" Lillith takes \"Black coat\" and brighter. Rubella takes \"White coat\" and drier. They sing \"Same walk\" together. Verse is four short lines. Middle: Hammond solo, then guitar, about sixteen seconds, melodic, no shred. Structural flaw: the last chorus hard-cuts to total silence in the middle of the word \"walk\". No fade, no final chord, no tail. Neither coat is ahead at the cut. No Kenji, no male voice, no doom, no death metal. Mood: two figures, one street, a swagger, and no winner.",
+    lyrics: "[Riff — Hammond and guitar]\n\n[Chant]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same walk\nBOTH: Same walk\n\n[Verse]\nDown the long hall\nOne step behind\nNobody looks\nNobody minds\n\n[Chant]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same walk\nBOTH: Same walk\n\n[Middle — Hammond, then guitar]\n\n[Last chorus — cuts mid-word]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same wa-",
+    notes: "Lace Waterfall, the swaggering one. The last chorus cuts to silence in the middle of \"walk\". Nobody wins, nobody finishes.\n\nNot a spy parody, not a scream. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "hammond", "spy"],
+    sourceFile: "Both_Coats.md"
+  },
+  {
     id: "caffeinated-melon",
     title: "Caffeinated Melon",
+    added: "2026-08-13",
     genre: "Absurdist chamber pop",
     description: "Gallery fog as truth serum. Spoken verses over a polite quartet that goes a quarter-tone flat, then one clap.",
     episode: "Gallery Fog cutaway",
@@ -80,6 +99,7 @@ export const songs: Song[] = [
   {
     id: "call-forty-seven",
     title: "Call Forty-Seven",
+    added: "2026-09-06",
     genre: "Hold-music accretion / civic dispatch ballad",
     description: "Karen reports existential zoning. Each transfer adds a bar of hold music. Democracy is bleeding, Steven. The call never drops.",
     episode: "Episode 04 / 911 Wrong Shade",
@@ -93,6 +113,7 @@ export const songs: Song[] = [
   {
     id: "choose-your-basalt",
     title: "Choose Your Basalt",
+    added: "2026-07-27",
     genre: "Educational cabaret duet",
     description: "Dead-pan Lillith & Rubella lava-classification jingle (~55s) that starts in their house and cracks open to magma — button line: “That’s nature for us.”",
     episode: "Musical Cutaway",
@@ -106,6 +127,7 @@ export const songs: Song[] = [
   {
     id: "closed-since-ninety-eight",
     title: "Closed Since Ninety-Eight",
+    added: "2026-09-06",
     genre: "Nocturnal electro-chanson / dead-station duet",
     description: "Two reflections leave a house of mirrors in the wrong car. The radio is a station that signed off in 1998. Harmony is always one bar late.",
     episode: "Musical cutaway / night-drive",
@@ -119,6 +141,7 @@ export const songs: Song[] = [
   {
     id: "closed-for-cosmic-reasons",
     title: "Closed for Cosmic Reasons",
+    added: "2026-08-13",
     genre: "Hotel-lobby downtempo",
     description: "A posted notice that becomes a lullaby. Rubella under a hovering pool; Continuity Voice on the title, always a half-step flat.",
     episode: "One-panel gag / any closed facility",
@@ -132,6 +155,7 @@ export const songs: Song[] = [
   {
     id: "come-further",
     title: "Come Further",
+    added: "2026-09-05",
     genre: "Minimal rising FM electronic",
     description: "Drag bed for the mountain-lion wildflower cutaway. Careful digital FM chirps, sparse kick, whispered “further…” Same 110 BPM as Here They Are.",
     episode: "Musical Cutaway",
@@ -145,6 +169,7 @@ export const songs: Song[] = [
   {
     id: "condition-report",
     title: "Condition Report",
+    added: "2026-08-16",
     genre: "Museum-hushed chamber noir",
     description: "Rubella recites inventory like a vow. Clause four never arrives. Solo cello, una corda piano, no drums until the last line. Pairing for The Overnight Conservator.",
     episode: "One-panel gag / gallery after hours",
@@ -158,6 +183,7 @@ export const songs: Song[] = [
   {
     id: "cue-out-scene-continues",
     title: "Cue Out, Scene Continues",
+    added: "2026-09-09",
     genre: "Ambient soul",
     description: "Cue Sheets track 7. 72 BPM C minor. The music leaves and the scene does not. Twenty-two seconds of room at the end with her still breathing in it.",
     episode: "Catalog / Cue Sheets",
@@ -171,6 +197,7 @@ export const songs: Song[] = [
   {
     id: "cue-sheets",
     title: "Cue Sheets",
+    added: "2026-09-09",
     genre: "Ledger soul",
     description: "Cue Sheets title track and closer. 84 BPM D minor, back to the opener's key and chord. She sings the usage column as BACKGROUND, INSTRUMENTAL over an obviously foreground vocal.",
     episode: "Catalog / Cue Sheets",
@@ -184,6 +211,7 @@ export const songs: Song[] = [
   {
     id: "daisy-bell",
     title: "Daisy Bell",
+    added: "2026-08-17",
     genre: "Barbershop waltz duet",
     description: "Rubella & Lillith on a living flower bicycle into period London — color HD flipping with scratchy film grain. Board: Daisy Bell page.",
     episode: "Musical Cutaway",
@@ -198,6 +226,7 @@ export const songs: Song[] = [
   {
     id: "deep-space-drift",
     title: "Deep Space Drift",
+    added: "2026-07-22",
     genre: "Weightless ambient pedal-steel",
     description: "Lanois-processed pedal steel as an orbiting universe — the most weightless entry in the series.",
     episode: "Series cutaway",
@@ -211,6 +240,7 @@ export const songs: Song[] = [
   {
     id: "desert-rose-horizon",
     title: "Desert Rose Horizon",
+    added: "2026-07-22",
     genre: "Atmospheric pedal-steel",
     description: "Anchor track of the Lanois-style ambient pedal-steel series — dusk horizon, steel as a human voice.",
     episode: "Series cutaway",
@@ -222,8 +252,51 @@ export const songs: Song[] = [
     sourceFile: "Desert_Rose_Horizon.md"
   },
   {
+    id: "e-x-i",
+    title: "E X I",
+    added: "2026-10-06",
+    genre: "1970s twin-guitar boogie metal",
+    description: "A bright red corridor and three letters. The lead guitar's amp dies before the last chorus, and the third letter never gets sung.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s twin-guitar boogie metal, 118 BPM, E mixolydian, about two minutes twenty. Blue Oyster Cult swing, early Scorpions, Rainbow riff weight, Lace Waterfall: Lillith and Rubella only. Two overdriven guitars in a warm vintage tube sound, one riff in E, harmonised on the turnaround. Bass and a dry 1970s kit, no double-kick, no blast beat, no dropped tuning, no djent. Vocals are spelled-out letters chanted in unison, hard but not shouted: \"E. X. I.\" One letter per beat, then a rest where the third should be. Lillith brighter, Rubella raspy under her. Verse is four short lines. Middle: both guitars harmonise in thirds for about twenty seconds, red and warm, no shred. Structural flaw: before the last chorus the lead guitar's amp dies. The tone drops to a single steady hum, and the voices finish alone over it. The third letter is never sung, in any chorus. Nobody fixes the amp. No scream, no growl, no Kenji, no male voice, no doom, no death metal. Mood: a red corridor, a hum, and a good riff while it lasts.",
+    lyrics: "[Riff — twin guitars]\n\n[Chant]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Verse]\nThree weeks of two letters\nThe glow holds on\nInsult it kindly\nIt runs till dawn\n\n[Chant]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Middle — twin guitars in thirds]\n\n[Last chorus — lead amp has died, one hum]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Outro]\n(the hum, then nothing)",
+    notes: "Lace Waterfall, the heavy one with letters. The lead guitar's amp dies before the last chorus and the voices finish over one hum. The third letter is never sung.\n\nNot Neon Exit Sign, not Well Fall, not a scream. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "twin-guitar", "boogie"],
+    sourceFile: "E_X_I.md"
+  },
+  {
+    id: "early-not-broken",
+    title: "Early, Not Broken",
+    added: "2026-10-06",
+    genre: "1973 pulse-rock anthem",
+    description: "A steady pulse, a Wurlitzer, and a chorus that always arrives one bar before the verse is done. It's early. Not broken.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1973 pulse-rock anthem, 76 BPM, G major, about two minutes thirty. Lace Waterfall: Lillith and Rubella only. The bright side of Dark Side of the Moon, without the clocks and without the ending of the world. A steady eighth-note pulse on bass and Wurlitzer, a dry 1970s kit, clean electric guitar with long singing bends, a soft Hammond swell under the chorus. Big for a small room: anthem chorus, no arena reverb, no gated snare, no modern sheen, no scream, no growl. Two female voices. Lillith brighter, starts each chant. Rubella raspy, joins on the second call and finishes it. Verse is four short lines, sung, not spoken. Chant: \"It's early.\" then \"Not broken.\" Middle: guitar and Wurlitzer trade slow phrases for about twenty seconds, no shredding. Structural flaw: every chorus arrives one bar before the verse has finished, so the verse's last line is cut off mid-phrase. The verse is never completed, in any pass. The band does not notice and does not apologise. No Kenji, no male voice, no doom, no death metal. Mood: warm patience, a machine that is simply ahead of the day.",
+    lyrics: "[Intro — pulse, Wurlitzer]\n\n[Verse]\nParts from another year\nNothing here fits right\nIt hums a little ahead\nOf what we call night\n\n[Chant]\nLILLITH: It's early\nRUBELLA: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Verse — last line cut off]\nThursday's rain on Tuesday\nWe keep the cup\nIt knows the weather\nBefore it's\n\n[Chant]\nLILLITH: It's early\nRUBELLA: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Middle — guitar and Wurlitzer]\n\n[Chant]\nBOTH: It's early\nBOTH: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Outro]\nRUBELLA: Not broken",
+    notes: "Lace Waterfall anthem. The chorus lands one bar ahead of the verse every time. The cut-off verse line is the flaw and is never fixed.\n\nNot a breakdown, not a malfunction song. Runtime about 2:30.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "wurlitzer"],
+    sourceFile: "Early_Not_Broken.md"
+  },
+  {
+    id: "eight-seconds",
+    title: "Eight Seconds",
+    added: "2026-10-06",
+    genre: "Slow organ-and-slide anthem",
+    description: "Long organ, a slide guitar, and eight seconds of real silence in the middle. The band comes back a half-beat off and stays off.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Slow 1971 space-rock anthem, 66 BPM in a lilting 6/8, D major, about two minutes forty. Lace Waterfall: Lillith and Rubella only. Meddle and Echoes in daylight: long Hammond pads, a bottleneck slide guitar with tape echo, a round bass, soft brushed kit, a high clean piano note now and then. Warm and wide, no gated snare, no modern pop sheen, no scream, no growl, no synth lead. Two female voices. Lillith brighter, starts the chant. Rubella raspy, joins on the repeat. Chant: \"Stay.\" then \"Stay in the room.\" Verse is four short lines, sung slowly. Middle: slide guitar over organ for about twenty seconds, then exactly eight seconds of true silence. No reverb tail, no room tone, no riser, nothing fills it. Structural flaw: the silence lasts eight seconds, not eight beats, so the band returns half a beat off the grid and stays half a beat off to the end of the song. Nobody corrects it. No Kenji, no male voice, no doom. Mood: a quiet held room, patient, bright, and entirely fine.",
+    lyrics: "[Intro — organ, slide]\n\n[Verse]\nThe light is on\nThe door is shut\nNothing needs doing\nNot much, not much\n\n[Chant]\nLILLITH: Stay\nRUBELLA: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Verse]\nThe hour goes by\nAt its own speed\nWe sit and count it\nIt's all we need\n\n[Chant]\nLILLITH: Stay\nRUBELLA: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Middle — slide guitar, then eight seconds of silence]\n\n[Chant — band half a beat off]\nBOTH: Stay\nBOTH: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Outro]\nRUBELLA: Stay",
+    notes: "Lace Waterfall anthem. Eight seconds of true silence in the middle, unscored and unfilled. It is eight seconds on a clock, not eight beats, so everything after it is half a beat off.\n\nNot a fade-out, not a pause for effect. Runtime about 2:40.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "space-rock", "silence"],
+    sourceFile: "Eight_Seconds.md"
+  },
+  {
     id: "empty-parking-lot-waltz",
     title: "Empty Parking Lot Waltz",
+    added: "2026-08-13",
     genre: "Slow cinematic waltz / dark cabaret",
     description: "Last two people in a vast wet lot. 3/4, detuned piano, unresolved last chord. They do not decide.",
     episode: "Post-party cutaway",
@@ -237,6 +310,7 @@ export const songs: Song[] = [
   {
     id: "end-card-holds",
     title: "End Card Holds",
+    added: "2026-09-08",
     genre: "Deep progressive",
     description: "Night Side track 10. 122 BPM F minor. Warm pad from the opener. Kick leaves before the pad. The pad holds one second too long.",
     episode: "Catalog / Night Side",
@@ -250,6 +324,7 @@ export const songs: Song[] = [
   {
     id: "exhibit-a",
     title: "Exhibit A",
+    added: "2026-09-15",
     genre: "Courtroom doo-wop / vanished choir",
     description: "A dog prosecutor presents a red laser dot. The cat choir never finishes a vowel. The downbeat is the click they follow instead of the conductor.",
     episode: "Musical cutaway / Laser Dot Jury",
@@ -263,6 +338,7 @@ export const songs: Song[] = [
   {
     id: "first-light-salt-flats",
     title: "First Light Salt Flats",
+    added: "2026-07-22",
     genre: "Luminous dawn pedal-steel",
     description: "Dawn counterpart to the dusk Lanois tracks — first light across empty salt flats.",
     episode: "Series cutaway",
@@ -274,8 +350,23 @@ export const songs: Song[] = [
     sourceFile: "First_Light_Salt_Flats.md"
   },
   {
+    id: "from-the-west",
+    title: "From the West",
+    added: "2026-10-06",
+    genre: "Plainchant",
+    description: "Riley sings one field entry, syllabic, in the hut. The only rise is on still, and the sentence ends where it ends.",
+    episode: "Episode 5 candidate / ridge",
+    stylePrompt: "Plainchant, one voice, no instrument, no second singer, no drone, no pulse, no chord. Dorian mode on D. Riley, close and calm, straight tone, no vibrato, no ornament, no belting, reading a field entry as chant. One note per syllable except the single word \"still,\" which rises one step and returns. Nothing else is allowed a neume. The metal hut is the room. Wind may be faintly outside. No kit, no bell, no piano, no choir. She does not explain the sky, the antenna, or herself. Do not sing her name. Structural flaw: when the sentence is over she stops on the pitch the last syllable already has. She does not move to the final D. There is no Amen and no second verse. Sung once, very slowly, about 80 to 100 seconds. Dark, small, a log with the acoustics of an empty hut.",
+    lyrics: "[One voice]\n\nAugust.\nThis week, not next week.\nWind from the west.\nKestrel Ridge.\nThe rack is in the hut.\nLast grade is on the card.\nIt is still there.\nThe finding is the same.\nLeaving it up costs nothing.\n\n[End]\n(stop on the last syllable)\n(do not move to the final)\n(no amen)",
+    notes: "Riley alone, above five thousand feet, one field entry. Plainchant: the syllables are the time. The only melodic rise is on \"still.\" The chant does not cadence. She does not say whether the rack is a weather repeater or a transmitter.\n\nRuntime about 80–100 seconds. No pulse.",
+    instrumental: false,
+    tags: ["plainchant", "riley", "ridge", "solo"],
+    sourceFile: "From_the_West.md"
+  },
+  {
     id: "g-train-fluorescent",
     title: "G Train Fluorescent",
+    added: "2026-09-08",
     genre: "Commute techno",
     description: "Night Side track 2. 122 BPM F-sharp minor. Tight dry kick, sixteenth hats as ballast, fluorescent hum under the bass. Brooklyn commute grid. Generate first.",
     episode: "Catalog / Night Side",
@@ -289,6 +380,7 @@ export const songs: Song[] = [
   {
     id: "ghost-in-the-reverb",
     title: "Ghost in the Reverb",
+    added: "2026-07-22",
     genre: "Spectral slide-steel nocturne",
     description: "The darkest Lanois entry — a ghost story told entirely in reverb. No vocals.",
     episode: "Series cutaway",
@@ -302,6 +394,7 @@ export const songs: Song[] = [
   {
     id: "ultra-screech",
     title: "Ultra Screech (Glam-Sham-Poo)",
+    added: "2026-08-15",
     genre: "Glam metal joke commercial",
     description: "Screeching glam-metal shampoo anthem from Glamora. Rubella exhausted, Lillith committed, Kenji still selling. Gang vocals on GLAM-SHAM-POO.",
     episode: "Musical Cutaway / EyeWash",
@@ -316,6 +409,7 @@ export const songs: Song[] = [
   {
     id: "groove-break-earned",
     title: "Groove Break (Earned)",
+    added: "2026-09-08",
     genre: "Progressive / melodic techno",
     description: "Night Side track 3. 124 BPM A minor. Full groove from bar one. The break is not a drop — drums thin, bass keeps walking, groove returns without getting bigger.",
     episode: "Catalog / Night Side",
@@ -327,8 +421,23 @@ export const songs: Song[] = [
     sourceFile: "Groove_Break_Earned.md"
   },
   {
+    id: "ground-rent",
+    title: "Ground Rent",
+    added: "2026-10-06",
+    genre: "Passacaglia duet",
+    description: "A four-bar ground in A minor. Rubella repeats the floor. Lillith adds one repair each cycle, then runs out.",
+    episode: "Building cast",
+    stylePrompt: "Passacaglia duet, 72 BPM, 3/4, A minor, about 100 seconds. The ground is a cello alone, four bars, one note per bar: A, C, D, E, then back to A. No drum kit, no guitar, no choir, no harpsichord, no piano chords. Rubella, dry and slightly raspy, close-miked, no vibrato, no belting, sings the same line on A every cycle: \"The floor is still the floor.\" Lillith, brighter, conspiratorial, still close, no belting, sings one new line each cycle over bars 3 and 4, then is finished with that line forever. Do not sing their names. From cycle 4 on, the cello enters one beat early and stays early. The singers do not move to meet it. They keep the old bar. Cycle 6 is Lillith running out of the repair mid-word. The last cycle is three bars, not four: cello and Rubella only, Lillith gone, one bar shorter than the ground, and no one puts the bar back. Dark top end. Small dry room. Mood: the floor holding still while the repairs spend themselves.",
+    lyrics: "[Ground — cello, four bars, no voice]\n\n[Cycle 1]\nRUBELLA: The floor is still the floor.\nLILLITH: I put a new tube in the sign.\n\n[Cycle 2]\nRUBELLA: The floor is still the floor.\nLILLITH: It worked until morning.\n\n[Cycle 3]\nRUBELLA: The floor is still the floor.\nLILLITH: The table is giving a forecast.\n\n[Cycle 4 — cello one beat early from here on]\nRUBELLA: The floor is still the floor.\nLILLITH: I said what the neon needed.\n\n[Cycle 5]\nRUBELLA: The floor is still the floor.\nLILLITH: The hum kept its job.\n\n[Cycle 6]\nRUBELLA: The floor is still the floor.\nLILLITH: I fixed the —\n\n[Last cycle — three bars, Rubella and cello]\nRUBELLA: The floor is still the floor.",
+    notes: "Rubella is the ground. Lillith is the variation, one repair per cycle, then gone. From cycle 4 the cello is a beat early and stays early. The last cycle drops a bar. Neither singer corrects it.\n\nBuilding cast. Runtime about 100 seconds.",
+    instrumental: false,
+    tags: ["passacaglia", "rubella", "lillith", "building", "duet"],
+    sourceFile: "Ground_Rent.md"
+  },
+  {
     id: "halloween-snake-battle",
     title: "Halloween Snake Battle",
+    added: "2026-05-13",
     genre: "Comedic thrash metal",
     description: "Short instrumental battle cue for the laser-snake Halloween showdown.",
     episode: "Episode 03",
@@ -343,6 +452,7 @@ export const songs: Song[] = [
   {
     id: "hallway-hum",
     title: "Hallway Hum",
+    added: "2026-09-08",
     genre: "Four-on-the-floor techno",
     description: "Night Side track 8. 124 BPM G minor. The kick is the hallway. Fluorescent hum tuned to the key. Almost no melody.",
     episode: "Catalog / Night Side",
@@ -356,6 +466,7 @@ export const songs: Song[] = [
   {
     id: "hanshaw-underscore",
     title: "Hanshaw Underscore (12-inch)",
+    added: "2026-09-08",
     genre: "Deep house",
     description: "Night Side track 5. 120 BPM C minor. Warm Rhodes stab as the hook. 1926 charm as harmony, not costume.",
     episode: "Catalog / Night Side",
@@ -369,6 +480,7 @@ export const songs: Song[] = [
   {
     id: "haunted-or-unscheduled",
     title: "Haunted or Unscheduled",
+    added: "2026-08-16",
     genre: "Sparse institutional electro-lounge",
     description: "Master Control 4 AM bed — Rhodes four-note loop that never develops, 3:44 clock motif twice identically, optional Continuity Voice. Not a second sign-off.",
     episode: "EyeWash Station / Master Control",
@@ -382,6 +494,7 @@ export const songs: Song[] = [
   {
     id: "heart-rate-optimal",
     title: "Heart Rate Optimal",
+    added: "2026-08-19",
     genre: "Spa-pop / wellness-notification ballad",
     description: "HR 78. Dread 78. Same number, different app. The chorus would like to go to ninety; the watch does not approve.",
     episode: "Episode 03 / wellness ladies",
@@ -393,8 +506,23 @@ export const songs: Song[] = [
     sourceFile: "Heart_Rate_Optimal.md"
   },
   {
+    id: "heavy-water",
+    title: "Heavy Water",
+    added: "2026-10-06",
+    genre: "1970s organ-metal",
+    description: "A bright heavy riff and a Hammond that will not leave. The chant is heavy water, warm as the sun.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s heavy metal with a Hammond organ, 108 BPM, E major, about two minutes fifteen. Bright, not grim. Uriah Heep around July Morning, Deep Purple riff weight, Lace Waterfall: Lillith and Rubella only. A major-key riff on one distorted guitar, warm 1970s amp, no modern djent, no double-kick, no scream, no growl, no blast beat, no dropped tuning. Hammond plays the riff with the guitar, Leslie on, golden. Bass and a dry kit. Vocals are a chant, unison, sung hard but not shouted: \"Heavy water.\" Lillith brighter, Rubella raspy underneath, no belting contest. Four short verse lines between chants. Middle: Hammond solo for about sixteen seconds, melodic, no shred. Structural flaw: at the end of every chorus the organ holds its last chord one bar longer than the guitars. The riff restarts underneath that chord. The organ never lets go early. No Kenji, no male voice, no death metal, no doom. Mood: water with weight, still in the sun.",
+    lyrics: "[Riff and Hammond]\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Verse]\nNot a flood\nA weight that shines\nLILLITH: We carry it\nRUBELLA: It carries the time\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Middle — Hammond]\n\n[Chant]\nBOTH: Heavy water\nBOTH: Let it run\nBOTH: Heavy water\nBOTH: Warm as the sun\n\n[Outro]\nBOTH: Heavy water\n(organ still holding)",
+    notes: "Lace Waterfall, the heavy one that stays in a major key. The organ holds one bar too long at the end of every chorus and the riff comes back under it.\n\nNot Well Fall, not thrash, not a scream. Runtime about 2:15.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "hammond"],
+    sourceFile: "Heavy_Water.md"
+  },
+  {
     id: "heels-or-no-entry",
     title: "Heels or No Entry",
+    added: "2026-09-06",
     genre: "Slow-disco dress-code liturgy",
     description: "A rooftop bouncer recites the door policy while the skyline burns. She produces emergency stilettos. The kick arrives after Approved.",
     episode: "Velvet Rope / Episode 05 opener",
@@ -408,6 +536,7 @@ export const songs: Song[] = [
   {
     id: "here-they-are",
     title: "Here They Are",
+    added: "2026-09-05",
     genre: "Luminous ambient electronic",
     description: "Arrival bed for the mountain-lion wildflower cutaway. Same 110 BPM as Come Further. Brilliant light, other cats, big field.",
     episode: "Musical Cutaway",
@@ -421,6 +550,7 @@ export const songs: Song[] = [
   {
     id: "hold-for-eight",
     title: "Hold for Eight",
+    added: "2026-09-09",
     genre: "Dry downtempo / counted soul",
     description: "Cue Sheets track 1. 84 BPM D minor. The instruction to wait, sung as a lullaby. The count reaches six and starts again — it never gets to eight.",
     episode: "Catalog / Cue Sheets",
@@ -432,8 +562,23 @@ export const songs: Song[] = [
     sourceFile: "Hold_for_Eight.md"
   },
   {
+    id: "hold-the-note",
+    title: "Hold the Note",
+    added: "2026-10-06",
+    genre: "Slow heavy rock",
+    description: "One riff, one long bend, a chant of hold. Rubella keeps the last hold two beats after the band has moved on.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Slow 1970s heavy rock, 64 BPM, D mixolydian, about two minutes. Open and heavy, not bleak. Rainbow around Catch the Rainbow, a Pink Floyd bend on a thick guitar, Lace Waterfall: Lillith and Rubella only. One distorted riff, slow, major-color, no tremolo-picking, no scream, no blast, no coffin reverb. Bass and a soft heavy kit, lots of air. The lead guitar plays one long note and bends it, then waits. That note is the subject. Chant is the word \"Hold,\" sung, not growled. Lillith sings it on the grid. Rubella sings it with her, raspy, and on every chorus her last \"Hold\" lasts two extra beats. The band starts the next riff under that hold. She does not cut the word. No male voice, no Kenji, no death metal, no doom lyric. A short verse of four words a line, then the chant. Middle: the bent note alone, about twelve seconds, organ far behind it like a lamp. Mood: a heavy song that refuses to go dark. The note stays up.",
+    lyrics: "[Riff]\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Verse]\nOne note\nUp high\nLeave it\nThere\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Middle — one bent note]\n\n[Chant]\nLILLITH: Hold\nRUBELLA: Hold\nBOTH: Hold the note\n\n[Outro]\nRUBELLA: Hold\n(two beats after the riff has started)",
+    notes: "Lace Waterfall, slow and heavy, mixolydian so it stays open. Rubella's last \"Hold\" is always two beats too long. The band does not wait.\n\nNot a lament and not Well Fall. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "slow"],
+    sourceFile: "Hold_the_Note.md"
+  },
+  {
     id: "home-sweet-void-dialog",
     title: "Home Sweet Void (Dialog)",
+    added: "2026-09-06",
     genre: "Hull-hum table dialog",
     description: "Non-musical space-lounge table scene. No dedicated Minimax track — hull hum, cup, bag plastic, deadpan delivery.",
     episode: "Space visual experiment",
@@ -447,6 +592,7 @@ export const songs: Song[] = [
   {
     id: "i-second-peggy-babcock",
     title: "I Second Peggy Babcock",
+    added: "2026-08-17",
     genre: "Parliamentary patter / clubhouse organ",
     description: "HOA recording secretary has the floor. The motion is thistle and shrub. Nobody can second Peggy Babcock. She re-reads the whole thing anyway.",
     episode: "Episode 04 / HOA",
@@ -458,8 +604,23 @@ export const songs: Song[] = [
     sourceFile: "I_Second_Peggy_Babcock.md"
   },
   {
+    id: "lace-waterfall",
+    title: "Lace Waterfall",
+    added: "2026-10-06",
+    genre: "1971 space-rock anthem",
+    description: "The band's name, chanted. Lillith starts, Rubella joins, and the last syllable of waterfall always spills the bar.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1971 space-rock anthem, 78 BPM, D major, about two minutes ten. Lace Waterfall, the band: Lillith and Rubella only. Warm daylight, Pink Floyd around Meddle and Obscured by Clouds. Hammond organ held warm, clean electric guitar through a tape echo, one bass, a soft 1970s kit, no gated snare, no double-kick, no synth lead. No male voice, no Kenji, no scream, no growl, no choir bigger than these two. Lillith is brighter and starts the chant. Rubella is drier, slightly raspy, and joins on the second call. The third call is unison, close, no belting, no vibrato show. The lyric is almost only the name. A short verse, then back to the chant. The middle is instrumental: organ and one long delayed guitar note, about twenty seconds, no solo fireworks. Structural flaw: the bar has room for two syllables and \"waterfall\" has three, so the last syllable always lands on the next downbeat. Do not shorten the word. Do not add a bar to fit it. Dark top end stays soft. Mood: a bright slow pour, two voices, the name as the whole chorus.",
+    lyrics: "[Intro — organ, delayed guitar]\n\n[Chant]\nLILLITH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Verse]\nLight on the water\nWater on the light\nNothing else to call it\nLeave it this bright\n\n[Chant]\nLILLITH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Middle — organ and one long note]\n\n[Chant]\nBOTH: Lace Waterfall\nBOTH: Lace Waterfall\nBOTH: Again\n\n[Outro]\nBOTH: Again\n(the last syllable still late)",
+    notes: "Lace Waterfall, the band. Rubella and Lillith. Kenji is not in this band. Not the Ultra Screech ad, not the Big City club, not Well Fall.\n\nThe chant is the song. \"Waterfall\" always spills one syllable onto the next downbeat. Runtime about 2:10.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "space-rock"],
+    sourceFile: "Lace_Waterfall.md"
+  },
+  {
     id: "les-ondes-courtes",
     title: "Les Ondes Courtes",
+    added: "2026-05-07",
     genre: "French electro-chanson",
     description: "Hypnagogic night-drive lullaby for the static altar sequence.",
     episode: "Episode 03",
@@ -474,6 +635,7 @@ export const songs: Song[] = [
   {
     id: "marble-tick-tack",
     title: "Marble Tick Tack",
+    added: "2026-09-01",
     genre: "Experimental tick-tock instrumental",
     description: "Pure animation bridge (~2:03). No vocal. Cabinet marble chorus walks a night lot — alley fences, impossible lawn, electromagnet tower, ferrofluid rain — and snaps home. Roley Voss lane.",
     episode: "Musical Cutaway / Visual Experiment",
@@ -485,8 +647,23 @@ export const songs: Song[] = [
     sourceFile: "Marble_Tick_Tack.md"
   },
   {
+    id: "moth-hour",
+    title: "Moth Hour",
+    added: "2026-10-06",
+    genre: "1970s galloping space-metal",
+    description: "A galloping riff in 7/8 over a drummer who never leaves 4/4. The bar lines meet once, in the last bar. Come to the lamp.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s galloping space-metal, 132 BPM, D minor but bright, about two minutes thirty. Hawkwind drive, Rainbow gallop, early Scorpions lead lines, Lace Waterfall: Lillith and Rubella only. One overdriven guitar riff in 7/8, a warm vintage amp, a Moog-style synth drone high above, bass, a dry 1970s kit. No double-kick, no blast beat, no dropped tuning, no djent, no scream, no growl. Chant in unison: \"Come to the lamp.\" Lillith brighter, Rubella raspy, no belting contest. Verse is four short lines. Middle: the synth drone swells and the guitar plays a slow melodic line over it for about eighteen seconds. Structural flaw: the riff is in 7/8 and the drummer plays in 4/4 the whole song and never adjusts. The bar lines meet exactly once, in the very last bar, and the song ends on that one clean downbeat. No Kenji, no male voice, no doom, no death metal. Mood: a night full of small wings, all heading toward the same warm light.",
+    lyrics: "[Riff — 7/8 against 4/4]\n\n[Chant]\nLILLITH: Come to the lamp\nRUBELLA: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Verse]\nSmall wings in the dark\nNothing to fear\nOne bulb on the porch\nAnd the whole sky near\n\n[Chant]\nLILLITH: Come to the lamp\nRUBELLA: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Middle — synth drone and guitar]\n\n[Chant]\nBOTH: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Outro — one clean downbeat]\nBOTH: Lamp",
+    notes: "Lace Waterfall, the galloping one. The riff is in seven and the drums stay in four. They line up once, on the last downbeat, and the song stops there.\n\nNot Heavy Water, not Open Gate, not a scream. Runtime about 2:30.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "space-rock", "odd-meter"],
+    sourceFile: "Moth_Hour.md"
+  },
+  {
     id: "motif-refuses-the-peak",
     title: "Motif Refuses the Peak",
+    added: "2026-09-08",
     genre: "Melodic techno",
     description: "Night Side track 9. 126 BPM G minor. Layers every thirty-two bars, fullest at four-thirty, then the top arp leaves and the kick plus motif ride out. The refusal is the event.",
     episode: "Catalog / Night Side",
@@ -500,6 +677,7 @@ export const songs: Song[] = [
   {
     id: "mysterium",
     title: "Mysterium",
+    added: "2026-07-11",
     genre: "Bubblegum Italo-pop",
     description: "Festive Italian bubblegum pop with Latin chorus hooks.",
     episode: "Series cutaway",
@@ -513,6 +691,7 @@ export const songs: Song[] = [
   {
     id: "mysterium-a-cappella",
     title: "Mysterium (A Cappella)",
+    added: "2026-07-12",
     genre: "A cappella bubblegum pop",
     description: "Vocal-only variant of Mysterium for Minimax generation without instruments.",
     episode: "Series cutaway",
@@ -526,6 +705,7 @@ export const songs: Song[] = [
   {
     id: "needle-drop-source",
     title: "Needle Drop, Source",
+    added: "2026-09-09",
     genre: "Diegetic soul",
     description: "Cue Sheets track 5. 96 BPM E minor. Starts as music playing inside a scene and becomes score halfway through. Nobody in the frame notices, and neither does the lyric.",
     episode: "Catalog / Cue Sheets",
@@ -539,6 +719,7 @@ export const songs: Song[] = [
   {
     id: "negotiating-with-the-elevator",
     title: "Negotiating with the Elevator",
+    added: "2026-08-19",
     genre: "Argentine tango duet",
     description: "Lillith bargains with a freight elevator that sings only floor numbers. Each verse loses a beat as the car descends; the lobby arrives in 2/4.",
     episode: "Building cast / corridor transit",
@@ -552,6 +733,7 @@ export const songs: Song[] = [
   {
     id: "neon-exit-sign",
     title: "Neon Exit Sign",
+    added: "2026-08-05",
     genre: "80s dark synth-pop / neon noir",
     description: "Series signature cutaway — “don’t smudge the mascara” as a glamour-apocalypse anthem, sung by a woman who has tried every exit twice.",
     episode: "Episode 01 reprise",
@@ -565,6 +747,7 @@ export const songs: Song[] = [
   {
     id: "nine-percent-battery",
     title: "Nine Percent Battery",
+    added: "2026-08-19",
     genre: "Sincere indie-folk ballad",
     description: "A 4 AM love song to a dying smoke detector. Rubella can’t reach it; the chirp lands every 47 seconds and is the only in-tune pitch on the record.",
     episode: "Building cast / hallway 4 AM",
@@ -578,6 +761,7 @@ export const songs: Song[] = [
   {
     id: "no-music-here",
     title: "No Music Here",
+    added: "2026-09-09",
     genre: "Sparse soul",
     description: "Cue Sheets track 9. 68 BPM E-flat minor. About the eighty seconds she left alone. The band drops out on the word here, every time, leaving it naked.",
     episode: "Catalog / Cue Sheets",
@@ -589,8 +773,23 @@ export const songs: Song[] = [
     sourceFile: "No_Music_Here.md"
   },
   {
+    id: "open-gate",
+    title: "Open Gate",
+    added: "2026-10-06",
+    genre: "Bright twin-guitar metal",
+    description: "A daylight heavy anthem. The chant is open. The second guitar answers a fifth up, every time, and the gate stays open.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Bright 1970s twin-guitar heavy metal, 116 BPM, A major, about two minutes. Daylight, not a battle. Early Scorpions weight with a Pink Floyd sense of space: two guitars, a warm Marshall room, bass, a swinging kit, no double-kick, no scream, no gallop that turns into thrash. Lace Waterfall: Lillith and Rubella only, no Kenji, no male gang vocal. The chant is \"Open,\" sung in unison, clear, a little tough, no growl. Lillith calls it, Rubella answers it, then they sing it together. Verse is four short lines about a latch and the day already being in. Chorus is the chant plus one line: \"The day is already in.\" Middle: twin lead, melodic, about sixteen seconds, no shred contest. Structural flaw: the second guitar always answers a fifth above the first, where a third was the harmony. It stays bright and a little too open. Do not tune it back to the third. No death metal, no occult lyric, no darkness for its own sake. Mood: the gate is a gate. Beyond it is afternoon.",
+    lyrics: "[Twin riff]\n\n[Verse]\nThe latch is only a latch\nThe day was already here\nLILLITH: We lifted it\nRUBELLA: The light came near\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Verse]\nNo lock on the weather\nNo key on the sun\nLILLITH: Leave the gate\nRUBELLA: The pouring's begun\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Middle — twin lead, the answer a fifth up]\n\n[Chant]\nLILLITH: Open\nRUBELLA: Open\nBOTH: Open\nBOTH: The day is already in\n\n[Outro]\nBOTH: Open",
+    notes: "Lace Waterfall, the bright heavy one. Second guitar answers a fifth up instead of a third, on the riff and on the lead, and never corrects.\n\nThe day is already in. Not a fight song. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "twin-guitar"],
+    sourceFile: "Open_Gate.md"
+  },
+  {
     id: "out-on-the-cut",
     title: "Out on the Cut",
+    added: "2026-09-09",
     genre: "Clipped downtempo",
     description: "Cue Sheets track 3. 92 BPM A minor. Every phrase is clipped before its last word. The shortest thing on the record and it is still too long for the edit.",
     episode: "Catalog / Cue Sheets",
@@ -604,6 +803,7 @@ export const songs: Song[] = [
   {
     id: "pad-kid-poured-curd",
     title: "Pad Kid Poured Curd (Pulled Cold)",
+    added: "2026-08-17",
     genre: "Cold patter electro / recall bulletin",
     description: "EyeWash late correction at 3:44. A pad kid poured curd that should have been pulled cold; Continuity Voice reads the form while the health department adds clauses and the tempo does not slow.",
     episode: "EyeWash Station / late correction",
@@ -617,6 +817,7 @@ export const songs: Song[] = [
   {
     id: "paper-lung",
     title: "Paper Lung",
+    added: "2026-09-28",
     genre: "Instrumental chamber / bellows miniature",
     description: "Queued bed for The Seed Casts Twice. Breath-scale instrumental. Picture stays silent until this exists.",
     episode: "Visual Experiment / Animation Bridge",
@@ -630,6 +831,7 @@ export const songs: Song[] = [
   {
     id: "passing-lane",
     title: "Passing Lane",
+    added: "2026-09-15",
     genre: "Outlaw country chase song at walking speed",
     description: "A proud baritone sells a high-speed pass. The click is 140. The band is 48. A skeleton horn is the only thing on time, and it has been honking since last autumn.",
     episode: "Musical cutaway / Snail Passing Lane",
@@ -643,6 +845,7 @@ export const songs: Song[] = [
   {
     id: "pearls-in-the-ashtray",
     title: "Pearls in the Ashtray",
+    added: "2026-08-13",
     genre: "Smoked midnight jazz",
     description: "Residue as jewelry. Rubella inventories what burned. Trumpet answers a beat late and a half-step low.",
     episode: "After-gala cutaway",
@@ -656,6 +859,7 @@ export const songs: Song[] = [
   {
     id: "pepperoni-or-margherita",
     title: "Pepperoni or Margherita",
+    added: "2026-08-05",
     genre: "Commercial jingle → minor-key piano ballad",
     description: "The Pizza Guy theme: fifteen seconds of cheerful ad music, a hard cut, then ninety seconds about always arriving when chaos peaks.",
     episode: "Episode 03 / any crossover",
@@ -669,6 +873,7 @@ export const songs: Song[] = [
   {
     id: "permit-for-the-purple-light",
     title: "Permit for the Purple Light",
+    added: "2026-09-14",
     genre: "Bureaucratic bossa nova / clipboard lounge",
     description: "Episode 04 afterglow — the HOA issues a parking permit to the cosmic horror. Sung by the minutes, in order. Made by Fable.",
     episode: "Episode 04 / HOA",
@@ -682,6 +887,7 @@ export const songs: Song[] = [
   {
     id: "porch-light-meridian",
     title: "Porch Light Meridian",
+    added: "2026-08-13",
     genre: "Progressive downtempo",
     description: "Episode 3 crane reveal as music — porch bulb in the foreground, meridian logic overhead. Rubella, spare, unresolved.",
     episode: "Episode 03",
@@ -695,6 +901,7 @@ export const songs: Song[] = [
   {
     id: "quarter-to-seventy-five",
     title: "Quarter to Seventy-Five",
+    added: "2026-08-05",
     genre: "Ambient lullaby / detuned soft rock",
     description: "Episode 2 nocturnal drive as a song — no chorus, just the title phrase, a clock stuck at 3:44, and an FM needle drifting left.",
     episode: "Episode 02",
@@ -708,6 +915,7 @@ export const songs: Song[] = [
   {
     id: "receipt-dated-thursday",
     title: "Receipt Dated Thursday",
+    added: "2026-09-06",
     genre: "Institutional receipt recitation",
     description: "Continuity Voice reads a poodle’s return receipt from a store that will not exist until Thursday. The barcode is always one digit short.",
     episode: "Musical cutaway / Biscuit",
@@ -721,6 +929,7 @@ export const songs: Song[] = [
   {
     id: "recycling-bin-rebellion",
     title: "Recycling Bin Rebellion",
+    added: "2026-08-13",
     genre: "Absurd punk-ska",
     description: "HOA protest anthem about the wrong shade of democratic blue. Cheap horns, gavel snare, one flat trumpet, no wink.",
     episode: "Episode 04 / HOA",
@@ -734,6 +943,7 @@ export const songs: Song[] = [
   {
     id: "rinse-cycle",
     title: "Rinse Cycle (Fifteen Minutes, Do Not Blink)",
+    added: "2026-08-05",
     genre: "Institutional soft rock / sign-off theme",
     description: "EyeWash Station sign-off — warm, over-rehearsed, and structurally wrong: nine-bar phrases, late resolutions, and a “please stand by” outro that loops.",
     episode: "Series framing device",
@@ -747,6 +957,7 @@ export const songs: Song[] = [
   {
     id: "rubella-stand-up",
     title: "Rubella Stand-Up (Voice Bed)",
+    added: "2026-09-12",
     genre: "Spoken gag / Voice bed",
     description: "Rubella files Item Seven at a laundry-room open mic. Dry raspy Voice bed, chair-creak laugh track, no music. Not a Minimax song.",
     episode: "Short packet farm / spoken cutaway",
@@ -758,8 +969,51 @@ export const songs: Song[] = [
     sourceFile: "Rubella_Stand_Up.md"
   },
   {
+    id: "said-and-left",
+    title: "Said and Left",
+    added: "2026-10-06",
+    genre: "Sprechstimme",
+    description: "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later.",
+    episode: "Building cast / hallway",
+    stylePrompt: "Sprechstimme, one voice, about 66 BPM as a grid under the speech, not as a tune. Rubella only. Dry, slightly raspy, close-miked, exhausted, no belting, no vibrato, no pretty tone. She does not sing. Each phrase aims at one pitch, touches it, and drops back into speech before the pitch can sound like a note. Rhythm stays on the grid. Do not sing her name. Ensemble: one B-flat clarinet in the chalumeau, one upright piano with the soft pedal down, no kit, no bass guitar, no choir, no second voice. Dark top end. Small hallway, almost no reverb. Central idea: the sentence is said, the pitch is left. Structural flaw: one beat after every phrase, the piano plays the exact pitch she abandoned, single notes, no chord, and neither of them adjusts. The clarinet only plays a pitch she has already left. Do not turn the last line into a melody. Do not add a chorus. Runtime about 90 to 110 seconds. Mood: 3 a.m., the hall inventory, professionally neutral.",
+    lyrics: "[Intro — clarinet touches one pitch and leaves it]\n(piano answers, one beat late)\n\n[The light]\nThe hall is lit.\nThat is the light on the bill.\nThe third shelf still has the old bottle.\nIt smells like cloth, not like a number.\n\n[The hum]\nThe dryer is on.\nI did not start it.\nThe hum is in the wall.\nThe wall can keep it.\n\n[The rent]\nRent went out on the first.\nThe floor stayed.\nI put my hand on the note.\nThe note did not stay in the hand.\n\n[Morning]\nSomeone smiled before ten.\nI do not keep that.\nSaid.\nAnd left.\n\n[Outro]\n(piano plays the last abandoned pitch, one beat late, and stops)",
+    notes: "Rubella alone in the hallway. Sprechstimme: the rhythm is exact and the pitch is only touched. The piano is the flaw, always one beat behind the note she refused to hold.\n\nNot a duet. Not a tune. Runtime about 90–110 seconds.",
+    instrumental: false,
+    tags: ["sprechstimme", "rubella", "hallway", "building"],
+    sourceFile: "Said_and_Left.md"
+  },
+  {
+    id: "same-sentence",
+    title: "Same Sentence",
+    added: "2026-10-06",
+    genre: "Phase-music duet",
+    description: "Lillith holds six syllables. After one unison pass, Rubella shifts one syllable later and never returns.",
+    episode: "Building cast / laundry",
+    stylePrompt: "Phase-music duet, 90 BPM, about 100 seconds. The only lyric is six syllables, each syllable a quarter note: It / is / still / run / ning / now. Two voices and two clarinets, dry, close, no vibrato, no belting, no kit, no bass, no piano, no choir. A laundry-room hum may sit under the cell. It is not a beat and it does not change. Lillith is bright and steady and keeps the cell where it started. Rubella is lower, drier, raspy. Do not sing their names. Each voice is doubled by one clarinet, same rhythm, no extra notes. First, one unison pass. Then Rubella and her clarinet move one syllable to the right and stay there for the rest of the piece. Lillith does not follow. Do not drift back to unison. Do not add words. Structural flaw: the phase never completes. The last cell is still offset. Then the voices stop and the two clarinets play the offset once more. Rubella's clarinet drops out. Lillith's clarinet plays the cell once alone and stops. Ends smaller than the stack, still wrong, uncorrected. Dark top end. Small dry room.",
+    lyrics: "[Unison — one pass]\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\n[Offset — Rubella one syllable later, and she stays later]\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\nLILLITH: It is still running now.\nRUBELLA: It is still running now.\n\n[Clarinets — still offset, no voices]\n(two clarinets, one syllable apart)\n(Rubella's clarinet stops)\n(Lillith's clarinet, one cell, then stop)",
+    notes: "Laundry room. One sentence, six syllables. Lillith holds the grid. Rubella moves one syllable late after the unison pass and never comes back. The phase is the flaw. It does not resolve.\n\nRuntime about 100 seconds.",
+    instrumental: false,
+    tags: ["phase", "rubella", "lillith", "laundry", "duet"],
+    sourceFile: "Same_Sentence.md"
+  },
+  {
+    id: "second-sun",
+    title: "Second Sun",
+    added: "2026-10-06",
+    genre: "Warm rock anthem",
+    description: "Piano, organ, and a chant that always enters one beat after the band. A second sun, kept. Not an eclipse.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Warm 1970s rock anthem, 88 BPM, A major, about two minutes twenty. Lace Waterfall: Lillith and Rubella only. Piano and Hammond in the same register, bass, a dry 1970s kit, one electric guitar that answers with long bends and then gets out of the way. Big for a small room: anthem chorus, no arena reverb, no modern pop sheen, no scream. Think a bright side of Dark Side of the Moon without the clocks and without the ending of the world. Two female voices, close unison on the chant \"Second sun,\" Lillith a little ahead in tone, Rubella rasp under her, no belting. Verse is four short lines, sung more than spoken, then the chant. An instrumental lift in the middle, organ and piano, about twenty seconds, no guitar solo that shows off. Structural flaw: the band hits beat 1 of every chorus and the voices enter on beat 2. Every chorus. They do not catch up. The last chorus is the same lateness, then one extra \"Second sun\" after the band has stopped, still one beat late, into a quiet room. No death metal, no Kenji, no male gang shout. Mood: extra daylight, kept on purpose.",
+    lyrics: "[Piano and organ]\n\n[Verse]\nOne was enough\nThis one can stay\nIt warms the wall\nIt warms the day\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Verse]\nWe saw it coming\nWe left it there\nIt doesn't set\nIt doesn't glare\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Middle — organ and piano]\n\n[Chant — voices one beat late]\nBOTH: Second sun\nBOTH: Second sun\nBOTH: Leave it up\nBOTH: Second sun\n\n[Outro — band has stopped]\nBOTH: Second sun",
+    notes: "Lace Waterfall anthem. The second sun stays. The chant is late by one beat on every chorus, including the last word after the band stops.\n\nNo eclipse, no collapse. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith"],
+    sourceFile: "Second_Sun.md"
+  },
+  {
     id: "slide-between-stations",
     title: "Slide Between Stations",
+    added: "2026-09-14",
     genre: "Broadcast dream-pop / test-pattern shoegaze",
     description: "The EyeWash transmitter never explains itself. A song for the half-second where the channel slides and the room changes. Made by Fable.",
     episode: "EyeWash station-break / channel slide",
@@ -773,6 +1027,7 @@ export const songs: Song[] = [
   {
     id: "snow-on-glass",
     title: "Snow on Glass",
+    added: "2026-09-08",
     genre: "Driving techno",
     description: "Night Side track 6. 128 BPM C-sharp minor. Cold, clean, awake. Thin ice-like high synth that never becomes a lead.",
     episode: "Catalog / Night Side",
@@ -786,6 +1041,7 @@ export const songs: Song[] = [
   {
     id: "soft-pull-forward",
     title: "Soft Pull-Forward",
+    added: "2026-09-08",
     genre: "Progressive house",
     description: "Night Side track 1. 120 BPM F minor. Filtered loft pad, kick enters late and rounded. Warm-up, not a drop.",
     episode: "Catalog / Night Side",
@@ -799,6 +1055,7 @@ export const songs: Song[] = [
   {
     id: "spooky-telephone-poles-dialog",
     title: "Spooky Telephone Poles (Dialog)",
+    added: "2026-08-29",
     genre: "Halloween sidewalk pseudoscience",
     description: "Non-musical dialog cutaway on the Halloween sidewalk. No dedicated Minimax track — street ambience and deadpan delivery.",
     episode: "Episode 03",
@@ -810,8 +1067,23 @@ export const songs: Song[] = [
     sourceFile: "Spooky_Telephone_Poles_Dialog.md"
   },
   {
+    id: "standing-room",
+    title: "Standing Room",
+    added: "2026-10-06",
+    genre: "1975 acoustic-and-slide stadium anthem",
+    description: "Twelve-string, slide guitar, and a chorus built for a crowd. Where the applause would go there is one wooden creak.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1975 acoustic-and-slide anthem, 92 BPM, C major, about two minutes twenty. Lace Waterfall: Lillith and Rubella only. Wish You Were Here in the afternoon: a twelve-string strummed wide, a slide guitar answering with long bends, bass, a dry kit, a Hammond held low. Chorus built for a stadium and mixed for a small room: no arena reverb, no gated snare, no modern sheen, no scream. Two female voices in close unison. Lillith brighter, starts the chant. Rubella raspy, finishes it. Chant: \"We'll stand.\" Verse is four short lines. Middle: slide guitar over twelve-string, about eighteen seconds, melodic. Structural flaw: at the end of every chorus there is a gap exactly where applause would go, and a single dry wooden creak, a folding chair, lands on the off-beat to fill it. No clap, no cheer, no crowd sound, ever. The creak is never answered. No Kenji, no male voice, no doom. Mood: an anthem sung to a hall of empty chairs, warm and level, and not sad about it.",
+    lyrics: "[Intro — twelve-string, slide]\n\n[Verse]\nForty chairs along the wall\nNobody asked us to sit\nWe came in early, we'll go late\nWe stay with it\n\n[Chant]\nLILLITH: We'll stand\nRUBELLA: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Verse]\nThe floor is level, the lights are low\nThe room has room to spare\nSay the line and say it plain\nThen leave it there\n\n[Chant]\nLILLITH: We'll stand\nRUBELLA: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Middle — slide and twelve-string]\n\n[Chant]\nBOTH: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Outro]\nRUBELLA: We'll stand",
+    notes: "Lace Waterfall anthem. The chorus ends and a single folding-chair creak sits where the applause would be, on the off-beat, every time. Nobody claps and the song does not wait for them.\n\nNot a joke song, not a protest song. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "twelve-string"],
+    sourceFile: "Standing_Room.md"
+  },
+  {
     id: "static-between-stations",
     title: "Static Between Stations",
+    added: "2026-08-13",
     genre: "Nocturnal electro-indie",
     description: "Leave the dial between two songs on purpose. Lillith close; Rubella as a distant station ghost. Sister to Les Ondes Courtes.",
     episode: "Episode 02 / Laundromat",
@@ -825,6 +1097,7 @@ export const songs: Song[] = [
   {
     id: "sting-four-frames-late",
     title: "Sting, Four Frames Late",
+    added: "2026-09-09",
     genre: "Deadpan lounge funk",
     description: "Cue Sheets track 8. 100 BPM B minor. Every stab lands four frames late. Notes came back saying keep it wrong.",
     episode: "Catalog / Cue Sheets",
@@ -838,6 +1111,7 @@ export const songs: Song[] = [
   {
     id: "strange-light",
     title: "Strange Light",
+    added: "2026-08-13",
     genre: "Celestial downtempo electro",
     description: "Sun and moon sharing one sky. One witness. Quiet cosmic lawbreaking. Sine bass as an orbit, not a bounce.",
     episode: "Episode 03 sky",
@@ -851,6 +1125,7 @@ export const songs: Song[] = [
   {
     id: "studio-huddle-dialog",
     title: "Studio Huddle (Dialog)",
+    added: "2026-08-29",
     genre: "Production meta-dialog",
     description: "Non-musical writer-meeting dialog for the 480p studio huddle cutaway. No Minimax track — ambient warehouse tone only.",
     episode: "Episode 02",
@@ -864,6 +1139,7 @@ export const songs: Song[] = [
   {
     id: "tattarrattat",
     title: "Tattarrattat",
+    added: "2026-08-17",
     genre: "Smoked midnight jazz / locked-door",
     description: "After-gala hallway. The knock is the same from both sides of the wood. Rubella does not open. She counts the seals.",
     episode: "After-gala / hallway liminal",
@@ -877,6 +1153,7 @@ export const songs: Song[] = [
   {
     id: "temp-love",
     title: "Temp Love",
+    added: "2026-09-09",
     genre: "Cassette soul",
     description: "Cue Sheets track 6. 80 BPM F-sharp minor. She wrote the real cue and the cut fell in love with the temp track. The bridge is in the wrong key and stays there.",
     episode: "Catalog / Cue Sheets",
@@ -890,6 +1167,7 @@ export const songs: Song[] = [
   {
     id: "terms-and-conditions",
     title: "Terms and Conditions (Complete Recording)",
+    added: "2026-08-19",
     genre: "Vegas big-band showstopper",
     description: "A tuxedoed crooner sings a licensing agreement in full. The tempo climbs 2 BPM per section because the trial is expiring; it stops mid-word on a chime.",
     episode: "EyeWash station-break / end of block",
@@ -901,8 +1179,23 @@ export const songs: Song[] = [
     sourceFile: "Terms_and_Conditions.md"
   },
   {
+    id: "the-clause",
+    title: "The Clause",
+    added: "2026-10-06",
+    genre: "Secco recitative",
+    description: "Christine Nilsson sings a rent petition in dry recitative. Every clause gets the same cadence, and the aria never starts.",
+    episode: "Voice credit / petition",
+    stylePrompt: "Secco recitative for lyric soprano and continuo. No drum, no pulse, no aria, no chorus, no orchestra. Christine Nilsson: clear lyric soprano, English diction, sung pitches on the rhythm of formal speech, one note per syllable, no melisma, no cadenza, no high C, no vibrato swell, no belting. She is reading a petition she was handed. She is not a resident and she does not act a feeling. Do not sing her name. Continuo: harpsichord and one cello, dry, close, a small room. They play a chord only at the points marked, then silence under the next clause. Structural flaw: every marked chord is the same V–I cadence, whether the clause has finished or not. Finished and unfinished clauses are treated alike, and this is never corrected. After the last spoken clause, the harpsichord plays the first chord of an aria and stops. The cello does not take up a melody. The aria is not sung. No second verse. Runtime about 90 to 120 seconds. Dark top end. This is not a tango, not a pop ballad, and not sprechstimme: the pitches are truly sung, and they do not make a tune.",
+    lyrics: "[Continuo — one chord, then speech]\n\nThe tenant states that the rent was posted before the month began,\n(cadence)\nand that a month is a measured thing,\n(cadence)\nand that the posting arrived on the twentieth of the month before,\n(cadence)\nand that the book calls this ordinary,\n(cadence)\nand that ordinary has been initialed.\n(cadence)\n\nThe tenant further states that the initial is not a date,\n(cadence)\nand that the date is still the twentieth,\n(cadence)\nand that the landing has no other record,\n(cadence)\nand that the tenant asks the book to show the date it already knows.\n(cadence)\n\n[Aria — not sung]\n(harpsichord plays the first chord of an aria, and stops)\n(cello does not enter)\n(no voice)",
+    notes: "Voice credit only. Christine Nilsson is the historical lyric soprano, not a resident of the building, and not the Christina wooden-house lane. She was handed the petition. She sings the clauses. The aria does not start.\n\nStructural flaw: the same V–I cadence closes every clause, finished or not. Runtime about 90–120 seconds. No pulse.",
+    instrumental: false,
+    tags: ["recitative", "nilsson", "petition", "voice-credit"],
+    sourceFile: "The_Clause.md"
+  },
+  {
     id: "the-laundromat-saints",
     title: "The Laundromat Saints",
+    added: "2026-08-16",
     genre: "Slow liminal waltz",
     description: "Two breathy voices alternate like strangers who accidentally agree. Dryer thumps on bar 5, not bar 1. Diegetic EyeWash TV, then full score for the 2 AM slow dance.",
     episode: "2AM Laundromat Slow Dance",
@@ -914,8 +1207,23 @@ export const songs: Song[] = [
     sourceFile: "The_Laundromat_Saints.md"
   },
   {
+    id: "the-light-in-the-stair",
+    title: "The Light in the Stair",
+    added: "2026-10-06",
+    genre: "Motet",
+    description: "Three voices, one sentence, no instruments. Nilsson enters first, Lillith a fifth up, Rubella a step below the note she was given.",
+    episode: "Building stair / voice credit",
+    stylePrompt: "Motet, a cappella, 60 BPM, about 90 seconds. One sentence only: \"The light in the stair is the light we get.\" Syllabic, one note per syllable, straight tone, no vibrato, no melisma, no belting, no instruments, no beat beyond the tactus, no cathedral. Reverb is a concrete stairwell, short, not a church. Do not sing their names. Christine Nilsson enters first, lyric soprano on D, singing the sentence once as a single line. Lillith enters second, a fifth above, on A, with the same sentence, while Nilsson repeats it. Rubella enters third. The imitation asks her for D, an octave below Nilsson. She enters on C instead, a whole step low, and she stays there. Nilsson and Lillith do not move down to meet her. They sing the sentence as written. Three statements are enough. On the last word, \"get,\" they stop together on three different pitches — D, A, and C — and there is no cadence after it. Structural flaw: Rubella's entry pitch is wrong by a whole step and is never corrected, so the piece cannot resolve. Nilsson is a voice on the track, not a person in the stair. Dark, small, stone and plaster.",
+    lyrics: "[Nilsson — on D]\nThe light in the stair is the light we get.\n\n[Lillith enters — on A, a fifth above]\nNILSSON: The light in the stair is the light we get.\nLILLITH: The light in the stair is the light we get.\n\n[Rubella enters — on C, not the D she was given]\nNILSSON: The light in the stair is the light we get.\nLILLITH: The light in the stair is the light we get.\nRUBELLA: The light in the stair is the light we get.\n\n[Last word — stop, no cadence]\nNILSSON: get.\nLILLITH: get.\nRUBELLA: get.",
+    notes: "One sentence in imitation. Nilsson leads on D. Lillith answers a fifth up. Rubella was given D and sings C. The other two do not retune. They stop on \"get\" on three pitches, with no cadence.\n\nNilsson is a voice credit, the historical lyric soprano, not a resident and not the Christina wooden-house lane. The room is the stair. Runtime about 90 seconds.",
+    instrumental: false,
+    tags: ["motet", "nilsson", "lillith", "rubella", "stair"],
+    sourceFile: "The_Light_in_the_Stair.md"
+  },
+  {
     id: "the-long-goodbye",
     title: "The Long Goodbye",
+    added: "2026-07-22",
     genre: "Sentimental pedal-steel ballad",
     description: "Wordless farewell — the emotional peak of the Lanois pedal-steel series.",
     episode: "Series cutaway",
@@ -929,6 +1237,7 @@ export const songs: Song[] = [
   {
     id: "monster-mash-finale",
     title: "The Monster Mash (Finale)",
+    added: "2026-07-31",
     genre: "Halloween novelty-rock cover",
     description: "Rubella covers Bobby Pickett's \\\"Monster Mash\\\" on the post-snake-battle lawn — cursed guest list, hologram reveal, Spy vs. Spy outro.",
     episode: "Episode 03",
@@ -943,6 +1252,7 @@ export const songs: Song[] = [
   {
     id: "the-moon-is-collect",
     title: "The Moon Is Collect",
+    added: "2026-08-13",
     genre: "Nocturnal torch song",
     description: "A red phone whose cord is tied to the moon. Last lines missing their final word. Quietest of the gag songs.",
     episode: "One-panel gag / penthouse",
@@ -956,6 +1266,7 @@ export const songs: Song[] = [
   {
     id: "the-most-refreshing-drink",
     title: "The Most Refreshing Drink",
+    added: "2026-09-06",
     genre: "Industrial ASMR lounge / fake sponsor bed",
     description: "EyeWash sponsor for an over-engineered glass of ice water. Apparatus clicks in the dark lab; the gulp lands a beat before the ice. No sung lead.",
     episode: "Ultra-Refreshed Water Lab / EyeWash sponsor",
@@ -969,6 +1280,7 @@ export const songs: Song[] = [
   {
     id: "the-pour",
     title: "The Pour",
+    added: "2026-08-13",
     genre: "Industrial cabaret",
     description: "They hired a climate. Cello in 5 against the song in 4. Lillith deadpan; Rubella only on “dress warm.”",
     episode: "One-panel gag / foundry gala",
@@ -982,6 +1294,7 @@ export const songs: Song[] = [
   {
     id: "the-roof-knows-how-to-wait",
     title: "The Roof Knows How to Wait",
+    added: "2026-09-06",
     genre: "Dark cabaret ruin ballad",
     description: "Rubella inventories a ceiling that has not fallen yet. Natural ventilation. The extra bar is the plaster still deciding.",
     episode: "Musical cutaway / The Two",
@@ -995,6 +1308,7 @@ export const songs: Song[] = [
   {
     id: "third-shift-porcelain",
     title: "Third Shift Porcelain",
+    added: "2026-08-13",
     genre: "Heel-click electro / cold disco",
     description: "Beauty as hourly work. Unison deadpan, marble-stamp kick, bar-5 downbeat always late. The Two do not clock out.",
     episode: "One-panel gag / after hours",
@@ -1008,6 +1322,7 @@ export const songs: Song[] = [
   {
     id: "this-program-contains-dialogue",
     title: "This Program Contains Dialogue",
+    added: "2026-08-19",
     genre: "Institutional torch / legal-bumper hymn",
     description: "EyeWash pre-program warning. Continuity Voice sings the disclosure; S&P will not stamp until someone talks.",
     episode: "EyeWash Station / The Long Way Up",
@@ -1019,8 +1334,23 @@ export const songs: Song[] = [
     sourceFile: "This_Program_Contains_Dialogue.md"
   },
   {
+    id: "through-the-lace",
+    title: "Through the Lace",
+    added: "2026-10-06",
+    genre: "Pastoral rock anthem",
+    description: "A 12-string anthem about light in the holes. The chant is one word, and the third Through always lands on the chord that already left.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Pastoral 1970s rock anthem, 96 BPM, G major, about two minutes. Lace Waterfall: Lillith and Rubella only, no male voice, no Kenji. Opens on a 12-string acoustic, warm and close, then a small band: organ, bass, soft kit, one clean electric with a little tape echo. Pink Floyd around Obscured by Clouds and Fearless: daylight, major, a walking feel, not a lament. Vocals are a chant of one word, \"Through,\" sung on a single pitch, unison, no belting, no harmony stack, no scream. Lillith leads the verse in a brighter tone. Rubella answers the second half, drier. The chorus is only the chant, three times. Middle: the 12-string alone for about sixteen seconds, then the band returns. Structural flaw: on every chorus the guitars change chord before the third \"Through,\" and the voices stay on the old pitch. Do not move the voices. Do not hold the old chord. No doom, no minor-key collapse, no thrash. Mood: sun through cloth. The holes are the point.",
+    lyrics: "[12-string]\n\n[Verse]\nHoles in the cloth\nSun in the holes\nLILLITH: That's the whole picture\nRUBELLA: That's what it holds\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Verse]\nCloth on the window\nDay on the floor\nLILLITH: We don't pull it shut\nRUBELLA: The light knows the door\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Middle — 12-string alone]\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Outro]\nBOTH: Through",
+    notes: "Lace Waterfall. One-word chorus. The third \"Through\" is always late to the chord change. The voices do not follow the guitars.\n\nNot a cabaret ballad. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "pastoral"],
+    sourceFile: "Through_the_Lace.md"
+  },
+  {
     id: "triphthong-table",
     title: "Triphthong Table",
+    added: "2026-08-17",
     genre: "Educational cabaret duet",
     description: "Flour-hire-coir and hvirvle-spurv-færge in one deadpan phonetics lesson. Lillith & Rubella; pronunciation guide always one vowel glide behind the melody.",
     episode: "Musical cutaway",
@@ -1034,6 +1364,7 @@ export const songs: Song[] = [
   {
     id: "twilight-time",
     title: "Twilight Time",
+    added: "2026-05-07",
     genre: "90s rave / eurodance",
     description: "Euphoric warehouse-party anthem used as a recurring character motif.",
     episode: "Character Archive",
@@ -1048,6 +1379,7 @@ export const songs: Song[] = [
   {
     id: "two-chairs-one-mirror",
     title: "Two Chairs, One Mirror",
+    added: "2026-09-14",
     genre: "Torch-song waltz / dressing-room chamber pop",
     description: "Lillith and Rubella at one mirror, trading lives one lipstick at a time. A waltz that never lets either sister take the downbeat. Made by Fable.",
     episode: "Musical cutaway / The Two",
@@ -1061,6 +1393,7 @@ export const songs: Song[] = [
   {
     id: "two-left",
     title: "Two Left",
+    added: "2026-09-15",
     genre: "Vending-machine Motown / girl-group soul",
     description: "Lillith buys another life at 2 AM. The coil is honest. Each chorus has one fewer ding; the last chorus has none and she still holds out her hand.",
     episode: "Musical cutaway / Life Vending",
@@ -1074,6 +1407,7 @@ export const songs: Song[] = [
   {
     id: "two-db-and-dont-tell-me",
     title: "Two dB and Don't Tell Me",
+    added: "2026-09-09",
     genre: "Fader blues",
     description: "Cue Sheets track 4. 88 BPM G minor. Somebody keeps lowering it. Each chorus is genuinely quieter than the last and the vocal never compensates.",
     episode: "Catalog / Cue Sheets",
@@ -1085,8 +1419,23 @@ export const songs: Song[] = [
     sourceFile: "Two_dB_and_Dont_Tell_Me.md"
   },
   {
+    id: "two-of-three",
+    title: "Two of Three",
+    added: "2026-10-06",
+    genre: "Tintinnabuli duet",
+    description: "Riley walks a stepwise line in the repeater hut. Rubella may sing only A, C, and E, and the bell has no C.",
+    episode: "Episode 5 candidate / ridge",
+    stylePrompt: "Tintinnabuli duet, 56 BPM, A minor, about 100 seconds, dead equipment hut above five thousand feet. No kit, no guitar, no choir, no pad, no reverb longer than the metal room. One small bell that can sound only A and E. There is no C in the bell. Riley sings the melodic line: calm, close, unbothered, no vibrato, no folk ornament, stepwise motion only, no leaps, site facts in a speaking volume. She does not explain the sky. She does not say what the antenna is for. Rubella sings the tintinnabuli line and nothing else: the single word \"Still,\" on A, C, or E only, whichever triad tone is nearest Riley's note, straight tone, no other words, no harmony she invents. Do not sing their names. Structural flaw: whenever the rule asks Rubella for C, she skips, because the bell has no C, and she does not borrow a pitch. Riley does not fill the skip. The second pass uses the same words. The piece ends on the skip: bell on A, no C, no cadence added. Dark top end. Mood: a report, two tones present, one tone absent.",
+    lyrics: "[Bell — A, then E]\n\n[Pass 1 — Riley, stepwise]\nThe hut is shut.\nThe gear is racked.\nWind from the west.\nLast grade is on the card.\nThe bell sounds A.\nThe bell sounds E.\nIt is still there.\n\n[Rubella — triad word only, skip every C]\nStill.\nStill.\n(skip)\nStill.\n\n[Pass 2 — same words, same rule]\nThe hut is shut.\nThe gear is racked.\nWind from the west.\nLast grade is on the card.\nThe bell sounds A.\nThe bell sounds E.\nIt is still there.\n\n[Rubella]\nStill.\nStill.\n(skip)\nStill.\n\n[End — the skip]\n(bell on A)\n(no C)",
+    notes: "Ridge hut. Riley sings the facts, by step. Rubella has only the word \"Still\" and only the tones A, C, and E. The alarm bell is short the C. That skip is never written back in. Riley does not adjudicate the antenna, name a brother, or explain a pendant.\n\nRuntime about 100 seconds.",
+    instrumental: false,
+    tags: ["tintinnabuli", "riley", "rubella", "ridge", "duet"],
+    sourceFile: "Two_of_Three.md"
+  },
+  {
     id: "under-dialogue",
     title: "Under Dialogue",
+    added: "2026-09-09",
     genre: "Ducked soul / room-tone ballad",
     description: "Cue Sheets track 2. 76 BPM B-flat minor. A song that ducks itself for a conversation we never hear. The duck arrives a beat before a line that never comes.",
     episode: "Catalog / Cue Sheets",
@@ -1098,8 +1447,23 @@ export const songs: Song[] = [
     sourceFile: "Under_Dialogue.md"
   },
   {
+    id: "unspent",
+    title: "Unspent",
+    added: "2026-10-06",
+    genre: "Lied",
+    description: "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung.",
+    episode: "Voice credit / small room",
+    stylePrompt: "Lied for lyric soprano and piano, 63 BPM, 4/4, D minor, strophic, about two minutes. One small room, one lamp, soft pedal, no kit, no strings, no choir, no reverb beyond the room. Christine Nilsson: lyric soprano, English, intimate, one note to a syllable, no cadenza, no high note actually sung, no belting, no crowd. The poem is the whole lyric. Stanzas 1 and 2 use the same melody. Stanza 3 uses it again and stops before the last line. Do not sing her name. The piano is a second character, not an accompaniment pad: it speaks in short phrases and then cadences. Structural flaw: in every stanza the piano finishes its cadence one bar before the voice arrives at the last line. She does not hurry. On stanza 3 she does not sing the last line at all. The piano has already cadenced, early, into silence, and the bar stays empty. Do not fill it. Do not add a fourth stanza. Dark top end. Mood: the note is in the room and is not spent.",
+    lyrics: "[Piano — cadence ends a bar early]\n\n[Stanza 1]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\nI am not spending it.\n\n[Stanza 2 — same melody, piano early again]\nThe glass is full enough.\nThe chair can wait.\nSomeone may ask for the note tonight.\nI am not spending it.\n\n[Stanza 3 — same melody, last line withheld]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\n(she does not sing)\n(the piano has already finished, one bar early)",
+    notes: "Voice credit only. Christine Nilsson is the historical lyric soprano, not a resident, and not the Christina wooden-house lane. One English poem, piano as the other voice. The high note is never spent. The piano's early cadence is never corrected, and the third stanza leaves the last line unsung.\n\nNot a cabaret ballad and not a roof song. Runtime about two minutes.",
+    instrumental: false,
+    tags: ["lied", "nilsson", "piano", "voice-credit"],
+    sourceFile: "Unspent.md"
+  },
+  {
     id: "well-fall",
     title: "Well Fall",
+    added: "2026-09-11",
     genre: "Instrumental heavy metal",
     description: "Well-mouth drip into a descending metal riff that never cadences. No vocal. The fall is the arrangement.",
     episode: "Musical Cutaway / Visual Experiment",
@@ -1113,6 +1477,7 @@ export const songs: Song[] = [
   {
     id: "whatever-lets-us-be",
     title: "Whatever Lets Us Be",
+    added: "2026-05-09",
     genre: "Dark cabaret piano ballad",
     description: "Haunting Rubella-voice refrain for the fireline exit and open-hearted beats.",
     episode: "Episode 01 / 03",
@@ -1127,6 +1492,7 @@ export const songs: Song[] = [
   {
     id: "zero-g-click",
     title: "Zero-G Click",
+    added: "2026-09-08",
     genre: "Trance-adjacent techno",
     description: "Night Side track 7. 132 BPM E minor. Rolling sixteenth arp, one clean snare rush, lift without a dump.",
     episode: "Catalog / Night Side",

@@ -1,6 +1,7 @@
 ---
 id: desert-rose-horizon
 title: Desert Rose Horizon
+added: 2026-07-22
 genre: Atmospheric pedal-steel
 description: Anchor track of the Lanois-style ambient pedal-steel series — dusk horizon, steel as a human voice.
 episode: Series cutaway

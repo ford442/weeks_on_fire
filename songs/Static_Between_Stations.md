@@ -1,6 +1,7 @@
 ---
 id: static-between-stations
 title: Static Between Stations
+added: 2026-08-13
 genre: Nocturnal electro-indie
 description: Leave the dial between two songs on purpose. Lillith close; Rubella as a distant station ghost. Sister to Les Ondes Courtes.
 episode: Episode 02 / Laundromat

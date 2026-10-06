@@ -1,6 +1,7 @@
 ---
 id: this-program-contains-dialogue
 title: This Program Contains Dialogue
+added: 2026-08-19
 genre: Institutional torch / legal-bumper hymn
 description: EyeWash pre-program warning. Continuity Voice sings the disclosure; S&P will not stamp until someone talks.
 episode: EyeWash Station / The Long Way Up

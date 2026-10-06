@@ -1,6 +1,7 @@
 ---
 id: aria-thirty-night
 title: Aria Thirty (Night)
+added: 2026-09-08
 genre: Melodic techno
 description: "Night Side track 4. 126 BPM D minor. Five-note glassy motif treated as a sequenced tone, never a voice."
 episode: Catalog / Night Side

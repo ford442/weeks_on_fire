@@ -1,6 +1,7 @@
 ---
 id: exhibit-a
 title: Exhibit A
+added: 2026-09-15
 genre: Courtroom doo-wop / vanished choir
 description: A dog prosecutor presents a red laser dot. The cat choir never finishes a vowel. The downbeat is the click they follow instead of the conductor.
 episode: Musical cutaway / Laser Dot Jury

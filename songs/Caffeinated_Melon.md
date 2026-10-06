@@ -1,6 +1,7 @@
 ---
 id: caffeinated-melon
 title: Caffeinated Melon
+added: 2026-08-13
 genre: Absurdist chamber pop
 description: Gallery fog as truth serum. Spoken verses over a polite quartet that goes a quarter-tone flat, then one clap.
 episode: Gallery Fog cutaway

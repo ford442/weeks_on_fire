@@ -1,6 +1,7 @@
 ---
 id: soft-pull-forward
 title: Soft Pull-Forward
+added: 2026-09-08
 genre: Progressive house
 description: "Night Side track 1. 120 BPM F minor. Filtered loft pad, kick enters late and rounded. Warm-up, not a drop."
 episode: Catalog / Night Side

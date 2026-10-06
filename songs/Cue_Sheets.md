@@ -1,6 +1,7 @@
 ---
 id: cue-sheets
 title: Cue Sheets
+added: 2026-09-09
 genre: Ledger soul
 description: "Cue Sheets title track and closer. 84 BPM D minor, back to the opener's key and chord. She sings the usage column as BACKGROUND, INSTRUMENTAL over an obviously foreground vocal."
 episode: Catalog / Cue Sheets

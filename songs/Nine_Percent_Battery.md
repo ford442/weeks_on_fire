@@ -1,6 +1,7 @@
 ---
 id: nine-percent-battery
 title: Nine Percent Battery
+added: 2026-08-19
 genre: Sincere indie-folk ballad
 description: A 4 AM love song to a dying smoke detector. Rubella can’t reach it; the chirp lands every 47 seconds and is the only in-tune pitch on the record.
 episode: Building cast / hallway 4 AM

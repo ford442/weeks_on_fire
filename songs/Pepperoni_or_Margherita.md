@@ -1,6 +1,7 @@
 ---
 id: pepperoni-or-margherita
 title: Pepperoni or Margherita
+added: 2026-08-05
 genre: Commercial jingle → minor-key piano ballad
 description: "The Pizza Guy theme: fifteen seconds of cheerful ad music, a hard cut, then ninety seconds about always arriving when chaos peaks."
 episode: Episode 03 / any crossover

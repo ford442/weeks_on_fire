@@ -1,6 +1,7 @@
 ---
 id: marble-tick-tack
 title: Marble Tick Tack
+added: 2026-09-01
 genre: Experimental tick-tock instrumental
 description: "Pure animation bridge (~2:03). No vocal. Cabinet marble chorus walks a night lot — alley fences, impossible lawn, electromagnet tower, ferrofluid rain — and snaps home. Roley Voss lane."
 episode: Musical Cutaway / Visual Experiment

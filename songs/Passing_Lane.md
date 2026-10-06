@@ -1,6 +1,7 @@
 ---
 id: passing-lane
 title: Passing Lane
+added: 2026-09-15
 genre: Outlaw country chase song at walking speed
 description: A proud baritone sells a high-speed pass. The click is 140. The band is 48. A skeleton horn is the only thing on time, and it has been honking since last autumn.
 episode: Musical cutaway / Snail Passing Lane

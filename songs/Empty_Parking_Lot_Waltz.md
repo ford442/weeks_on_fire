@@ -1,6 +1,7 @@
 ---
 id: empty-parking-lot-waltz
 title: Empty Parking Lot Waltz
+added: 2026-08-13
 genre: Slow cinematic waltz / dark cabaret
 description: Last two people in a vast wet lot. 3/4, detuned piano, unresolved last chord. They do not decide.
 episode: Post-party cutaway

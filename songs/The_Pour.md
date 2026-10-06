@@ -1,6 +1,7 @@
 ---
 id: the-pour
 title: The Pour
+added: 2026-08-13
 genre: Industrial cabaret
 description: They hired a climate. Cello in 5 against the song in 4. Lillith deadpan; Rubella only on “dress warm.”
 episode: One-panel gag / foundry gala

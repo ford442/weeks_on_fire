@@ -1,6 +1,7 @@
 ---
 id: recycling-bin-rebellion
 title: Recycling Bin Rebellion
+added: 2026-08-13
 genre: Absurd punk-ska
 description: HOA protest anthem about the wrong shade of democratic blue. Cheap horns, gavel snare, one flat trumpet, no wink.
 episode: Episode 04 / HOA

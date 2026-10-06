@@ -1,6 +1,7 @@
 ---
 id: triphthong-table
 title: Triphthong Table
+added: 2026-08-17
 genre: Educational cabaret duet
 description: Flour-hire-coir and hvirvle-spurv-færge in one deadpan phonetics lesson. Lillith & Rubella; pronunciation guide always one vowel glide behind the melody.
 episode: Musical cutaway

@@ -1,6 +1,7 @@
 ---
 id: hallway-hum
 title: Hallway Hum
+added: 2026-09-08
 genre: Four-on-the-floor techno
 description: "Night Side track 8. 124 BPM G minor. The kick is the hallway. Fluorescent hum tuned to the key. Almost no melody."
 episode: Catalog / Night Side

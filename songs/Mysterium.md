@@ -1,6 +1,7 @@
 ---
 id: mysterium
 title: Mysterium
+added: 2026-07-11
 genre: Bubblegum Italo-pop
 description: Festive Italian bubblegum pop with Latin chorus hooks.
 episode: Series cutaway

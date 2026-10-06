@@ -10,6 +10,7 @@ Authoring sources for the React production hub. **`npm run codegen`** reads thes
 ---
 id: your-track-id
 title: Your Track
+added: 2026-10-06   # day the file is written (YYYY-MM-DD), required
 genre: Genre label
 description: One-line catalog blurb
 episode: Episode 02 / cutaway tag

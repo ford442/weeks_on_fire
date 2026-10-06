@@ -1,6 +1,7 @@
 ---
 id: heels-or-no-entry
 title: Heels or No Entry
+added: 2026-09-06
 genre: Slow-disco dress-code liturgy
 description: A rooftop bouncer recites the door policy while the skyline burns. She produces emergency stilettos. The kick arrives after Approved.
 episode: Velvet Rope / Episode 05 opener

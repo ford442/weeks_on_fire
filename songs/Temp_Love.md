@@ -1,6 +1,7 @@
 ---
 id: temp-love
 title: Temp Love
+added: 2026-09-09
 genre: Cassette soul
 description: "Cue Sheets track 6. 80 BPM F-sharp minor. She wrote the real cue and the cut fell in love with the temp track. The bridge is in the wrong key and stays there."
 episode: Catalog / Cue Sheets

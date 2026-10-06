@@ -1,6 +1,7 @@
 ---
 id: pad-kid-poured-curd
 title: Pad Kid Poured Curd (Pulled Cold)
+added: 2026-08-17
 genre: Cold patter electro / recall bulletin
 description: "EyeWash late correction at 3:44. A pad kid poured curd that should have been pulled cold; Continuity Voice reads the form while the health department adds clauses and the tempo does not slow."
 episode: EyeWash Station / late correction

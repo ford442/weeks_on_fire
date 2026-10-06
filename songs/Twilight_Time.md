@@ -1,6 +1,7 @@
 ---
 id: twilight-time
 title: Twilight Time
+added: 2026-05-07
 genre: 90s rave / eurodance
 description: Euphoric warehouse-party anthem used as a recurring character motif.
 episode: Character Archive

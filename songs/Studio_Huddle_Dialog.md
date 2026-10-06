@@ -1,6 +1,7 @@
 ---
 id: studio-huddle-dialog
 title: Studio Huddle (Dialog)
+added: 2026-08-29
 genre: Production meta-dialog
 description: Non-musical writer-meeting dialog for the 480p studio huddle cutaway. No Minimax track — ambient warehouse tone only.
 episode: Episode 02

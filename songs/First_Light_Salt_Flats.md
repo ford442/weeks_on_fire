@@ -1,6 +1,7 @@
 ---
 id: first-light-salt-flats
 title: First Light Salt Flats
+added: 2026-07-22
 genre: Luminous dawn pedal-steel
 description: Dawn counterpart to the dusk Lanois tracks — first light across empty salt flats.
 episode: Series cutaway

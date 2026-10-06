@@ -1,6 +1,7 @@
 ---
 id: paper-lung
 title: Paper Lung
+added: 2026-09-28
 genre: Instrumental chamber / bellows miniature
 description: "Queued bed for The Seed Casts Twice. Breath-scale instrumental. Picture stays silent until this exists."
 episode: Visual Experiment / Animation Bridge

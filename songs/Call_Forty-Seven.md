@@ -1,6 +1,7 @@
 ---
 id: call-forty-seven
 title: Call Forty-Seven
+added: 2026-09-06
 genre: Hold-music accretion / civic dispatch ballad
 description: Karen reports existential zoning. Each transfer adds a bar of hold music. Democracy is bleeding, Steven. The call never drops.
 episode: Episode 04 / 911 Wrong Shade

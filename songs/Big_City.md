@@ -1,6 +1,7 @@
 ---
 id: big-city
 title: Big City
+added: 2026-09-11
 genre: Late-80s glam strut
 description: "Lillith starts, Rubella answers, Kenji spoken tag. Glamora as a city made of hair. Catalog single, not the Ultra Screech ad."
 episode: Musical Cutaway / Glam catalog

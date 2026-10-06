@@ -1,6 +1,7 @@
 ---
 id: halloween-snake-battle
 title: Halloween Snake Battle
+added: 2026-05-13
 genre: Comedic thrash metal
 description: Short instrumental battle cue for the laser-snake Halloween showdown.
 episode: Episode 03

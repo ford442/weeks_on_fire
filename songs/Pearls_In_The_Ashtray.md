@@ -1,6 +1,7 @@
 ---
 id: pearls-in-the-ashtray
 title: Pearls in the Ashtray
+added: 2026-08-13
 genre: Smoked midnight jazz
 description: Residue as jewelry. Rubella inventories what burned. Trumpet answers a beat late and a half-step low.
 episode: After-gala cutaway

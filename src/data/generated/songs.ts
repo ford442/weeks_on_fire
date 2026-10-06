@@ -65,6 +65,19 @@ export const songs: Song[] = [
     sourceFile: "Big_City.md"
   },
   {
+    id: "both-coats",
+    title: "Both Coats",
+    genre: "1970s spy-riff heavy rock",
+    description: "A swaggering organ riff, one black coat and one white. The last chorus cuts to silence mid-syllable and nobody wins.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s spy-riff heavy rock, 126 BPM, A minor pentatonic with a major lift, about two minutes. Deep Purple Mk II swing, Hammond and guitar playing the riff in unison, Lace Waterfall: Lillith and Rubella only. Warm overdriven guitar, Leslie organ, bass, a dry 1970s kit, a tambourine on the off-beat. No double-kick, no blast beat, no dropped tuning, no scream, no growl. Chant in unison, sung hard but not shouted: \"Black coat.\" then \"White coat.\" then \"Same walk.\" Lillith takes \"Black coat\" and brighter. Rubella takes \"White coat\" and drier. They sing \"Same walk\" together. Verse is four short lines. Middle: Hammond solo, then guitar, about sixteen seconds, melodic, no shred. Structural flaw: the last chorus hard-cuts to total silence in the middle of the word \"walk\". No fade, no final chord, no tail. Neither coat is ahead at the cut. No Kenji, no male voice, no doom, no death metal. Mood: two figures, one street, a swagger, and no winner.",
+    lyrics: "[Riff — Hammond and guitar]\n\n[Chant]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same walk\nBOTH: Same walk\n\n[Verse]\nDown the long hall\nOne step behind\nNobody looks\nNobody minds\n\n[Chant]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same walk\nBOTH: Same walk\n\n[Middle — Hammond, then guitar]\n\n[Last chorus — cuts mid-word]\nLILLITH: Black coat\nRUBELLA: White coat\nBOTH: Same wa-",
+    notes: "Lace Waterfall, the swaggering one. The last chorus cuts to silence in the middle of \"walk\". Nobody wins, nobody finishes.\n\nNot a spy parody, not a scream. Runtime about 2:00.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "hammond", "spy"],
+    sourceFile: "Both_Coats.md"
+  },
+  {
     id: "caffeinated-melon",
     title: "Caffeinated Melon",
     genre: "Absurdist chamber pop",
@@ -220,6 +233,45 @@ export const songs: Song[] = [
     instrumental: true,
     tags: ["ambient", "pedal-steel", "lanois", "instrumental", "dusk"],
     sourceFile: "Desert_Rose_Horizon.md"
+  },
+  {
+    id: "e-x-i",
+    title: "E X I",
+    genre: "1970s twin-guitar boogie metal",
+    description: "A bright red corridor and three letters. The lead guitar's amp dies before the last chorus, and the third letter never gets sung.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s twin-guitar boogie metal, 118 BPM, E mixolydian, about two minutes twenty. Blue Oyster Cult swing, early Scorpions, Rainbow riff weight, Lace Waterfall: Lillith and Rubella only. Two overdriven guitars in a warm vintage tube sound, one riff in E, harmonised on the turnaround. Bass and a dry 1970s kit, no double-kick, no blast beat, no dropped tuning, no djent. Vocals are spelled-out letters chanted in unison, hard but not shouted: \"E. X. I.\" One letter per beat, then a rest where the third should be. Lillith brighter, Rubella raspy under her. Verse is four short lines. Middle: both guitars harmonise in thirds for about twenty seconds, red and warm, no shred. Structural flaw: before the last chorus the lead guitar's amp dies. The tone drops to a single steady hum, and the voices finish alone over it. The third letter is never sung, in any chorus. Nobody fixes the amp. No scream, no growl, no Kenji, no male voice, no doom, no death metal. Mood: a red corridor, a hum, and a good riff while it lasts.",
+    lyrics: "[Riff — twin guitars]\n\n[Chant]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Verse]\nThree weeks of two letters\nThe glow holds on\nInsult it kindly\nIt runs till dawn\n\n[Chant]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Middle — twin guitars in thirds]\n\n[Last chorus — lead amp has died, one hum]\nLILLITH: E\nRUBELLA: X\nBOTH: (rest)\nBOTH: E, X\n\n[Outro]\n(the hum, then nothing)",
+    notes: "Lace Waterfall, the heavy one with letters. The lead guitar's amp dies before the last chorus and the voices finish over one hum. The third letter is never sung.\n\nNot Neon Exit Sign, not Well Fall, not a scream. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "twin-guitar", "boogie"],
+    sourceFile: "E_X_I.md"
+  },
+  {
+    id: "early-not-broken",
+    title: "Early, Not Broken",
+    genre: "1973 pulse-rock anthem",
+    description: "A steady pulse, a Wurlitzer, and a chorus that always arrives one bar before the verse is done. It's early. Not broken.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1973 pulse-rock anthem, 76 BPM, G major, about two minutes thirty. Lace Waterfall: Lillith and Rubella only. The bright side of Dark Side of the Moon, without the clocks and without the ending of the world. A steady eighth-note pulse on bass and Wurlitzer, a dry 1970s kit, clean electric guitar with long singing bends, a soft Hammond swell under the chorus. Big for a small room: anthem chorus, no arena reverb, no gated snare, no modern sheen, no scream, no growl. Two female voices. Lillith brighter, starts each chant. Rubella raspy, joins on the second call and finishes it. Verse is four short lines, sung, not spoken. Chant: \"It's early.\" then \"Not broken.\" Middle: guitar and Wurlitzer trade slow phrases for about twenty seconds, no shredding. Structural flaw: every chorus arrives one bar before the verse has finished, so the verse's last line is cut off mid-phrase. The verse is never completed, in any pass. The band does not notice and does not apologise. No Kenji, no male voice, no doom, no death metal. Mood: warm patience, a machine that is simply ahead of the day.",
+    lyrics: "[Intro — pulse, Wurlitzer]\n\n[Verse]\nParts from another year\nNothing here fits right\nIt hums a little ahead\nOf what we call night\n\n[Chant]\nLILLITH: It's early\nRUBELLA: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Verse — last line cut off]\nThursday's rain on Tuesday\nWe keep the cup\nIt knows the weather\nBefore it's\n\n[Chant]\nLILLITH: It's early\nRUBELLA: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Middle — guitar and Wurlitzer]\n\n[Chant]\nBOTH: It's early\nBOTH: Not broken\nBOTH: It's early\nBOTH: Not broken\n\n[Outro]\nRUBELLA: Not broken",
+    notes: "Lace Waterfall anthem. The chorus lands one bar ahead of the verse every time. The cut-off verse line is the flaw and is never fixed.\n\nNot a breakdown, not a malfunction song. Runtime about 2:30.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "wurlitzer"],
+    sourceFile: "Early_Not_Broken.md"
+  },
+  {
+    id: "eight-seconds",
+    title: "Eight Seconds",
+    genre: "Slow organ-and-slide anthem",
+    description: "Long organ, a slide guitar, and eight seconds of real silence in the middle. The band comes back a half-beat off and stays off.",
+    episode: "Lace Waterfall",
+    stylePrompt: "Slow 1971 space-rock anthem, 66 BPM in a lilting 6/8, D major, about two minutes forty. Lace Waterfall: Lillith and Rubella only. Meddle and Echoes in daylight: long Hammond pads, a bottleneck slide guitar with tape echo, a round bass, soft brushed kit, a high clean piano note now and then. Warm and wide, no gated snare, no modern pop sheen, no scream, no growl, no synth lead. Two female voices. Lillith brighter, starts the chant. Rubella raspy, joins on the repeat. Chant: \"Stay.\" then \"Stay in the room.\" Verse is four short lines, sung slowly. Middle: slide guitar over organ for about twenty seconds, then exactly eight seconds of true silence. No reverb tail, no room tone, no riser, nothing fills it. Structural flaw: the silence lasts eight seconds, not eight beats, so the band returns half a beat off the grid and stays half a beat off to the end of the song. Nobody corrects it. No Kenji, no male voice, no doom. Mood: a quiet held room, patient, bright, and entirely fine.",
+    lyrics: "[Intro — organ, slide]\n\n[Verse]\nThe light is on\nThe door is shut\nNothing needs doing\nNot much, not much\n\n[Chant]\nLILLITH: Stay\nRUBELLA: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Verse]\nThe hour goes by\nAt its own speed\nWe sit and count it\nIt's all we need\n\n[Chant]\nLILLITH: Stay\nRUBELLA: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Middle — slide guitar, then eight seconds of silence]\n\n[Chant — band half a beat off]\nBOTH: Stay\nBOTH: Stay in the room\nBOTH: Stay\nBOTH: Stay in the room\n\n[Outro]\nRUBELLA: Stay",
+    notes: "Lace Waterfall anthem. Eight seconds of true silence in the middle, unscored and unfilled. It is eight seconds on a clock, not eight beats, so everything after it is half a beat off.\n\nNot a fade-out, not a pause for effect. Runtime about 2:40.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "space-rock", "silence"],
+    sourceFile: "Eight_Seconds.md"
   },
   {
     id: "empty-parking-lot-waltz",
@@ -548,6 +600,19 @@ export const songs: Song[] = [
     instrumental: true,
     tags: ["instrumental", "tick-tock", "magnets", "animation-bridge", "roley-voss", "ferrofluid", "rodin"],
     sourceFile: "Marble_Tick_Tack.md"
+  },
+  {
+    id: "moth-hour",
+    title: "Moth Hour",
+    genre: "1970s galloping space-metal",
+    description: "A galloping riff in 7/8 over a drummer who never leaves 4/4. The bar lines meet once, in the last bar. Come to the lamp.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1970s galloping space-metal, 132 BPM, D minor but bright, about two minutes thirty. Hawkwind drive, Rainbow gallop, early Scorpions lead lines, Lace Waterfall: Lillith and Rubella only. One overdriven guitar riff in 7/8, a warm vintage amp, a Moog-style synth drone high above, bass, a dry 1970s kit. No double-kick, no blast beat, no dropped tuning, no djent, no scream, no growl. Chant in unison: \"Come to the lamp.\" Lillith brighter, Rubella raspy, no belting contest. Verse is four short lines. Middle: the synth drone swells and the guitar plays a slow melodic line over it for about eighteen seconds. Structural flaw: the riff is in 7/8 and the drummer plays in 4/4 the whole song and never adjusts. The bar lines meet exactly once, in the very last bar, and the song ends on that one clean downbeat. No Kenji, no male voice, no doom, no death metal. Mood: a night full of small wings, all heading toward the same warm light.",
+    lyrics: "[Riff — 7/8 against 4/4]\n\n[Chant]\nLILLITH: Come to the lamp\nRUBELLA: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Verse]\nSmall wings in the dark\nNothing to fear\nOne bulb on the porch\nAnd the whole sky near\n\n[Chant]\nLILLITH: Come to the lamp\nRUBELLA: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Middle — synth drone and guitar]\n\n[Chant]\nBOTH: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come to the lamp\nBOTH: Come\n\n[Outro — one clean downbeat]\nBOTH: Lamp",
+    notes: "Lace Waterfall, the galloping one. The riff is in seven and the drums stay in four. They line up once, on the last downbeat, and the song stops there.\n\nNot Heavy Water, not Open Gate, not a scream. Runtime about 2:30.",
+    instrumental: false,
+    tags: ["lace-waterfall", "metal", "rubella", "lillith", "space-rock", "odd-meter"],
+    sourceFile: "Moth_Hour.md"
   },
   {
     id: "motif-refuses-the-peak",
@@ -925,6 +990,19 @@ export const songs: Song[] = [
     instrumental: true,
     tags: ["dialog", "halloween", "utility-poles", "ep3"],
     sourceFile: "Spooky_Telephone_Poles_Dialog.md"
+  },
+  {
+    id: "standing-room",
+    title: "Standing Room",
+    genre: "1975 acoustic-and-slide stadium anthem",
+    description: "Twelve-string, slide guitar, and a chorus built for a crowd. Where the applause would go there is one wooden creak.",
+    episode: "Lace Waterfall",
+    stylePrompt: "1975 acoustic-and-slide anthem, 92 BPM, C major, about two minutes twenty. Lace Waterfall: Lillith and Rubella only. Wish You Were Here in the afternoon: a twelve-string strummed wide, a slide guitar answering with long bends, bass, a dry kit, a Hammond held low. Chorus built for a stadium and mixed for a small room: no arena reverb, no gated snare, no modern sheen, no scream. Two female voices in close unison. Lillith brighter, starts the chant. Rubella raspy, finishes it. Chant: \"We'll stand.\" Verse is four short lines. Middle: slide guitar over twelve-string, about eighteen seconds, melodic. Structural flaw: at the end of every chorus there is a gap exactly where applause would go, and a single dry wooden creak, a folding chair, lands on the off-beat to fill it. No clap, no cheer, no crowd sound, ever. The creak is never answered. No Kenji, no male voice, no doom. Mood: an anthem sung to a hall of empty chairs, warm and level, and not sad about it.",
+    lyrics: "[Intro — twelve-string, slide]\n\n[Verse]\nForty chairs along the wall\nNobody asked us to sit\nWe came in early, we'll go late\nWe stay with it\n\n[Chant]\nLILLITH: We'll stand\nRUBELLA: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Verse]\nThe floor is level, the lights are low\nThe room has room to spare\nSay the line and say it plain\nThen leave it there\n\n[Chant]\nLILLITH: We'll stand\nRUBELLA: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Middle — slide and twelve-string]\n\n[Chant]\nBOTH: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\nBOTH: We'll stand\n(one wooden creak, no clap)\n\n[Outro]\nRUBELLA: We'll stand",
+    notes: "Lace Waterfall anthem. The chorus ends and a single folding-chair creak sits where the applause would be, on the off-beat, every time. Nobody claps and the song does not wait for them.\n\nNot a joke song, not a protest song. Runtime about 2:20.",
+    instrumental: false,
+    tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith", "twelve-string"],
+    sourceFile: "Standing_Room.md"
   },
   {
     id: "static-between-stations",

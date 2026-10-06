@@ -107,6 +107,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | aria-thirty-night | Aria Thirty (Night) | Melodic techno | Catalog / Night Side |
 | article-seven | Article Seven | Dusty union lounge / paused funk | Episode 03 / Skeleton Union Break |
 | big-city | Big City | Late-80s glam strut | Musical Cutaway / Glam catalog |
+| both-coats | Both Coats | 1970s spy-riff heavy rock | Lace Waterfall |
 | caffeinated-melon | Caffeinated Melon | Absurdist chamber pop | Gallery Fog cutaway |
 | call-forty-seven | Call Forty-Seven | Hold-music accretion / civic dispatch ballad | Episode 04 / 911 Wrong Shade |
 | choose-your-basalt | Choose Your Basalt | Educational cabaret duet | Musical Cutaway |
@@ -119,6 +120,9 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | daisy-bell | Daisy Bell | Barbershop waltz duet | Musical Cutaway |
 | deep-space-drift | Deep Space Drift | Weightless ambient pedal-steel | Series cutaway |
 | desert-rose-horizon | Desert Rose Horizon | Atmospheric pedal-steel | Series cutaway |
+| e-x-i | E X I | 1970s twin-guitar boogie metal | Lace Waterfall |
+| early-not-broken | Early, Not Broken | 1973 pulse-rock anthem | Lace Waterfall |
+| eight-seconds | Eight Seconds | Slow organ-and-slide anthem | Lace Waterfall |
 | empty-parking-lot-waltz | Empty Parking Lot Waltz | Slow cinematic waltz / dark cabaret | Post-party cutaway |
 | end-card-holds | End Card Holds | Deep progressive | Catalog / Night Side |
 | exhibit-a | Exhibit A | Courtroom doo-wop / vanished choir | Musical cutaway / Laser Dot Jury |
@@ -144,6 +148,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | lace-waterfall | Lace Waterfall | 1971 space-rock anthem | Lace Waterfall |
 | les-ondes-courtes | Les Ondes Courtes | French electro-chanson | Episode 03 |
 | marble-tick-tack | Marble Tick Tack | Experimental tick-tock instrumental | Musical Cutaway / Visual Experiment |
+| moth-hour | Moth Hour | 1970s galloping space-metal | Lace Waterfall |
 | motif-refuses-the-peak | Motif Refuses the Peak | Melodic techno | Catalog / Night Side |
 | mysterium | Mysterium | Bubblegum Italo-pop | Series cutaway |
 | mysterium-a-cappella | Mysterium (A Cappella) | A cappella bubblegum pop | Series cutaway |
@@ -173,6 +178,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 | snow-on-glass | Snow on Glass | Driving techno | Catalog / Night Side |
 | soft-pull-forward | Soft Pull-Forward | Progressive house | Catalog / Night Side |
 | spooky-telephone-poles-dialog | Spooky Telephone Poles (Dialog) | Halloween sidewalk pseudoscience | Episode 03 |
+| standing-room | Standing Room | 1975 acoustic-and-slide stadium anthem | Lace Waterfall |
 | static-between-stations | Static Between Stations | Nocturnal electro-indie | Episode 02 / Laundromat |
 | sting-four-frames-late | Sting, Four Frames Late | Deadpan lounge funk | Catalog / Cue Sheets |
 | strange-light | Strange Light | Celestial downtempo electro | Episode 03 sky |

@@ -19,38 +19,47 @@ LYRICS:
 [A — podium / Item Seven]
 Good evening. I'm Rubella. Item Seven. Resident comments.
 I didn't put my name on the list. The list put my name on me.
-This is the laundry intercom. If your dryer starts, that's not applause.
+Item Five was the ping-pong table. They tabled it.
+Item Four was the fire. They tabled that too.
 I filed a ticket. The ticket hummed back.
-I used to do quality assurance. The company erased Human Resources. And the backups.
-My pension went with final_final_2. I moved here for cheap rent. I found a building that negotiates.
+My pension was in a folder called final_final_2.
+I gave the eulogy. Mostly the file name.
 
 [B — elevator + detergent]
-The elevator just tried to negotiate. I told it I already pay rent. That's a counteroffer with a ding.
-I don't need a hero. I need the detergent that still works. I keep a bottle. Contraband. It still finishes a cycle.
+The elevator just tried to negotiate. I told it I already pay rent.
+It said, "Four." I said, "Six." "Four." "Three."
+Stop. Go back. You were doing well.
+I don't need a hero. I need the detergent that still works.
+Number forty-seven hums. Mine finishes a cycle.
+They wrote me up for the quiet.
 
 [C — heckle]
 That tube is pinker than the other one. I logged it as a fire hazard.
 LILLITH (from the back, off-mic, one line only)
 It's not a fire hazard. It's ambient lighting with ambition.
 RUBELLA
-That's my roommate. She fixed the ping-pong table. Tonight: sparks.
+That's my roommate. I'll file that under lighting.
 
 [D — land]
 If the floor is on fire again, I'm charging it for emotional damages.
-I already have the form. They duplicated it. Nobody filed anything.
-That's my time. The chairs can creak. I'm waiting for a dryer that does not summon anything.
+I already have the form. The duplicate is dated next Thursday.
+Madelyn sent a memo. "Item Four remains tabled."
+The table is on fire.
+That's my time. The chairs can creak.
+I'm waiting for a dryer that does not summon anything.
 
-[Tag: elevator — 7s]
+[Tag: elevator — 8s]
 The elevator just tried to negotiate. I told it I already pay rent.
-That's a counteroffer with a ding.
+"Four." ... "Three."
+Stop. Go back. You were doing well.
 
-[Tag: detergent — 6s]
+[Tag: detergent — 7s]
 I don't need a hero. I need the detergent that still works.
-Contraband. It still finishes a cycle.
+Number forty-seven hums. Mine finishes a cycle.
 
 [Tag: emotional damages — 8s]
 If the floor is on fire again, I'm charging it for emotional damages.
-I already have the form. They duplicated it. Nobody filed anything.
+The duplicate is dated next Thursday. Nobody filed this Thursday.
 
 
 NOTES:

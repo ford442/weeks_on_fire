@@ -31,9 +31,9 @@ Podium lock → detergent relic → heckle wide (Rubella does not turn) → land
 | B    | 0:20–0:38   | 18s | Detergent relic. Bottle in the off-hand. |
 | C    | 0:38–0:52   | 14s | Tube plant, then heckle. She does not turn. |
 | D    | 0:52–1:12   | 20s | Land. Duplicate forms. Shoot first.      |
-| E    | 1:12–1:19   |  7s | Tag: elevator. Echo + chair creak.       |
-| F    | 1:19–1:25   |  6s | Tag: detergent.                          |
-| G    | 1:25–1:33   |  8s | Tag: emotional damages. Forms in hand.   |
+| E    | 1:12–1:20   |  8s | Tag: elevator. Yank + chair creak.       |
+| F    | 1:20–1:27   |  7s | Tag: detergent.                          |
+| G    | 1:27–1:35   |  8s | Tag: emotional damages. Next Thursday.   |
 ```
 
 ---
@@ -44,7 +44,13 @@ Podium lock → detergent relic → heckle wide (Rubella does not turn) → land
 
 **Spoken**
 ```
-Good evening. I'm Rubella. Item Seven. Resident comments. I didn't put my name on the list. The list put my name on me. This is the laundry intercom. If your dryer starts, that's not applause. I filed a ticket. The ticket hummed back. I used to do quality assurance. The company erased Human Resources. And the backups. My pension went with final_final_2. I moved here for cheap rent. I found a building that negotiates.
+Good evening. I'm Rubella. Item Seven. Resident comments.
+I didn't put my name on the list. The list put my name on me.
+Item Five was the ping-pong table. They tabled it.
+Item Four was the fire. They tabled that too.
+I filed a ticket. The ticket hummed back.
+My pension was in a folder called final_final_2.
+I gave the eulogy. Mostly the file name.
 ```
 
 **Sound**
@@ -74,12 +80,17 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Spoken**
 ```
-The elevator just tried to negotiate. I told it I already pay rent. That's a counteroffer with a ding. I don't need a hero. I need the detergent that still works. I keep a bottle. Contraband. It still finishes a cycle.
+The elevator just tried to negotiate. I told it I already pay rent.
+It said, "Four." I said, "Six." "Four." "Three."
+Stop. Go back. You were doing well.
+I don't need a hero. I need the detergent that still works.
+Number forty-seven hums. Mine finishes a cycle.
+They wrote me up for the quiet.
 ```
 
 **Sound**
 ```
-Voice bed continues. One chair creak on "ding," peggy-babcock-second sibling. No chirp flock.
+Voice bed continues. One chair creak on "well," peggy-babcock-second sibling. No chirp flock.
 ```
 
 **Grok Imagine**
@@ -89,7 +100,7 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Gemini Omni**
 ```
-18-second silent picture on a Voice bed. Bottle rises into the off-hand for one beat and stays unlabeled. Unused brass-stem microphone on a short stand does not get closer. Chairs creak once in unison on the ding, then stop. Photoreal, camera almost locked, 2.39:1. Grok Imagine building-cast, no real actor names.
+18-second silent picture on a Voice bed. Bottle rises into the off-hand for one beat and stays unlabeled. Unused brass-stem microphone on a short stand does not get closer. Chairs creak once in unison on "well," then stop. Photoreal, camera almost locked, 2.39:1. Grok Imagine building-cast, no real actor names.
 ```
 
 **Prompt variations**
@@ -106,7 +117,7 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 ```
 RUBELLA: That tube is pinker than the other one. I logged it as a fire hazard.
 LILLITH (off-mic): It's not a fire hazard. It's ambient lighting with ambition.
-RUBELLA: That's my roommate. She fixed the ping-pong table. Tonight: sparks.
+RUBELLA: That's my roommate. I'll file that under lighting.
 ```
 
 **Sound**
@@ -136,7 +147,12 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Spoken**
 ```
-If the floor is on fire again, I'm charging it for emotional damages. I already have the form. They duplicated it. Nobody filed anything. That's my time. The chairs can creak. I'm waiting for a dryer that does not summon anything.
+If the floor is on fire again, I'm charging it for emotional damages.
+I already have the form. The duplicate is dated next Thursday.
+Madelyn sent a memo. "Item Four remains tabled."
+The table is on fire.
+That's my time. The chairs can creak.
+I'm waiting for a dryer that does not summon anything.
 ```
 
 **Sound**
@@ -160,18 +176,20 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 ---
 
-## E — Tag Elevator (1:12–1:19)
+## E — Tag Elevator (1:12–1:20)
 
 **On screen:** Same podium lock. Interrupt sibling. Echo plus chair creak.
 
 **Spoken**
 ```
-The elevator just tried to negotiate. I told it I already pay rent. That's a counteroffer with a ding.
+The elevator just tried to negotiate. I told it I already pay rent.
+"Four." ... "Three."
+Stop. Go back. You were doing well.
 ```
 
 **Sound**
 ```
-Same mic. Hallway slap. Chair creak on ding. 7s. Cut-down, not a second packet.
+Same mic. Hallway slap. Chair creak on "well." 8s. Cut-down, not a second packet.
 ```
 
 **Grok Imagine**
@@ -181,7 +199,7 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Gemini Omni**
 ```
-7-second interrupt. Same mic, same room. Echo the elevator line. One chair creak. Cut. Photoreal, 2.39:1. We do not cut inside the freight car.
+8-second interrupt. Same mic, same room. Echo the elevator line. One chair creak. Cut. Photoreal, 2.39:1. We do not cut inside the freight car.
 ```
 
 **Prompt variations**
@@ -189,18 +207,19 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 ---
 
-## F — Tag Detergent (1:19–1:25)
+## F — Tag Detergent (1:20–1:27)
 
 **On screen:** Bottle in the off-hand for one beat. Interrupt sibling.
 
 **Spoken**
 ```
-I don't need a hero. I need the detergent that still works. Contraband. It still finishes a cycle.
+I don't need a hero. I need the detergent that still works.
+Number forty-seven hums. Mine finishes a cycle.
 ```
 
 **Sound**
 ```
-Same mic. 6s. No brand sting. No Ultra Screech.
+Same mic. 7s. No brand sting. No Ultra Screech.
 ```
 
 **Grok Imagine**
@@ -210,7 +229,7 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 **Gemini Omni**
 ```
-6-second interrupt. Bottle up, line, bottle not the hero after the cut. Photoreal, 2.39:1.
+7-second interrupt. Bottle up, line, bottle not the hero after the cut. Photoreal, 2.39:1.
 ```
 
 **Prompt variations**
@@ -218,13 +237,14 @@ Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor nam
 
 ---
 
-## G — Tag Emotional Damages (1:25–1:33)
+## G — Tag Emotional Damages (1:27–1:35)
 
 **On screen:** Form duplicates in her hand. Interrupt sibling.
 
 **Spoken**
 ```
-If the floor is on fire again, I'm charging it for emotional damages. I already have the form. They duplicated it. Nobody filed anything.
+If the floor is on fire again, I'm charging it for emotional damages.
+The duplicate is dated next Thursday. Nobody filed this Thursday.
 ```
 
 **Sound**

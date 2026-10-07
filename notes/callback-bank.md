@@ -135,7 +135,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Source:** `animals-and-bots.md` rule 4 · `characters/bible/madelin.md` bag rule 7 · `characters/bible/justine.md` arc 2 (latte budget) · `songs/Receipt_Dated_Thursday.md`
 - **Rules:** At least one receipt per bag is future-dated. Pong-Bot's latte budget ends with a receipt from the same store (arc endpoint, `animals-and-bots.md`).
 - **Portable forms:** a receipt dated next Thursday in any prop pile · Justine reads one and says nothing · Madelin recognizes the store on Biscuit's receipt, one shot, no line.
-- **Locks:** Never explain the store. Never show it.
+- **Locks:** Never explain the store. Never show it. Rubella Stand-Up spends the date on the duplicate damages form: next Thursday, and "Nobody filed this Thursday." No store name. No explanation.
 
 ### Madelin's bag has extra gravity
 - **Bit:** Enormous beige tote with a moulded 3D skull. Elbow-deep, no rummaging. Produces a clock, a stool, twine, a second bag. "Not in this one."
@@ -233,7 +233,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 ### "The elevator just tried to negotiate. I told it I already pay rent."
 - **Bit:** Rubella's counteroffer line. **Filed** in Car Twelve (she types it into the notes app, unseen), **told** at the mic in Rubella Stand-Up.
 - **Source:** `notes/scenes/negotiating-with-the-elevator.md` (hard rules, Beat F) · `notes/scenes/rubella-stand-up.md` · `notes/scenes/README.md`
-- **Rules:** Never spoken inside the elevator scene. The gag is spent once. The Elevator says floor numbers only, vocoded, in tune.
+- **Rules:** Never spoken inside the elevator scene. The gag is spent once. The Elevator says floor numbers only, vocoded, in tune. At the mic (2026-10-07) she also spends one floor-number descent — "Four." / "Six." / "Four." / "Three." — and one yank: "Stop. Go back. You were doing well." That yank is not a new running bit. Do not put it on another object or on the audience.
 - **Portable forms:** someone else quotes it badly · a maintenance ticket in frame: "Car two is holding a position." · "The ticket hummed back." (the hum is the laundromat dryer's note).
 - **Locks:** Malfunction vs. negotiation never adjudicated. Nobody presses the alarm button. The thirteenth floor on the service diagram: two seconds, never mentioned again.
 

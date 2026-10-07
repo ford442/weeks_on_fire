@@ -39,11 +39,11 @@ material, not airline food, not "what's the deal with," not mystical register.
 
 | Beat | Parent (default) | Versions on this page |
 |------|------------------|------------------------|
-| A | Podium / Item Seven / QA / list | fragments: clipboard minutes, agenda, technically safe, backups |
-| B | Elevator + detergent (locked sample lines) | — do not rewrite |
-| C | Pink-tube plant → Lillith heckle → ping-pong sparks | promoted 2026-09-12; mug spoken is a fragment only |
-| D | Emotional damages / forms / dryer that does not summon | fragments: cockroach appeal |
-| Tags | Elevator 7s · detergent 6s · damages 8s | orphans only; not a fourth tag |
+| A | Podium / Item Seven / tabled list / eulogy | fragments: clipboard minutes, agenda, technically safe, backups |
+| B | Elevator yank once + number forty-seven | Take B yanks more than once; do not add a second yank to the parent |
+| C | Pink-tube plant → Lillith heckle → file under lighting | promoted 2026-10-07; "Tonight: sparks." broken; mug spoken is a fragment only |
+| D | Emotional damages / next Thursday / the table is on fire | fragments: cockroach appeal |
+| Tags | Elevator ~8s · detergent ~7s · damages ~8s | buttons, not reprints; orphans only; not a fourth tag |
 
 ---
 
@@ -51,16 +51,17 @@ material, not airline food, not "what's the deal with," not mystical register.
 
 | ID | Label | Beats | Status | One-line pitch |
 |----|-------|-------|--------|----------------|
-| V0 | Parent baseline | all | preferred | Shootable Voice bed; heckle-setup pass |
-| B | Stage take B — yank timing | all | active · promotion-ready | Dark room with tables; play both sides until the other voice overstays; "Stop. Go back. You were doing well." |
+| C | Humor pass — laundry room | all | preferred | Promoted 2026-10-07. One yank, on the elevator. The tabled list pays off on the table. |
+| V0 | Pre-punch baseline | all | shelved | Parent through 2026-10-07. Text is git history; the parent link is now Take C. |
+| B | Stage take B — yank timing | all | active | Unpromoted stage-room picture alt. Not the spoken parent. |
 | — | Overflow bits | A, D, tags | fragments | Steal one later; do not dump into v1 |
 | — | Stage / yank-timing fragments | A–D | fragments | 2026-09-28 orphans for the stage room |
 
 ---
 
-## V0 — Parent baseline
+## V0 — Pre-punch baseline
 
-Do not duplicate the full parent script here. Link only:
+`shelved` · parent through 2026-10-07. Do not duplicate it here. The link below is the current parent (Take C), not V0. The pre-punch A-roll is that file before the humor pass.
 
 → [`../rubella-stand-up.md`](../rubella-stand-up.md)
 
@@ -70,13 +71,74 @@ Do not duplicate the full parent script here. Link only:
 - "I don't need a hero. I need the detergent that still works."
 - "If the floor is on fire again, I'm charging it for emotional damages."
 - "I didn't put my name on the list. The list put my name on me."
-- QA / `final_final_2`
+- QA / `final_final_2` — **QA job-title résumé broken by Take C** (2026-10-07). `final_final_2` stays, with the eulogy.
 - "I filed a ticket. The ticket hummed back."
 - Pink-tube plant: "That tube is pinker than the other one. I logged it as a fire hazard."
 - Lillith, one line only, off-mic: "It's not a fire hazard. It's ambient lighting with ambition."
-- "That's my roommate. She fixed the ping-pong table. Tonight: sparks."
+- "That's my roommate. She fixed the ping-pong table. Tonight: sparks." — **broken by Take C.** Parent now: "That's my roommate. I'll file that under lighting."
 - "That's my time" / dryer that does not summon
 - Rubella does not look at Lillith. Chairs creak; they do not clap.
+
+---
+
+## Take C — Humor pass (2026-10-07)
+
+`preferred` · all beats · **promoted** into the parent, the Voice bed, and the segment Spoken blocks. Laundry-room picture. Not the stage room. If this block and the parent disagree, the parent wins.
+
+**Keeper breaks:**
+
+- QA job-title résumé cut. `final_final_2` stays. The turn is the eulogy.
+- "Tonight: sparks." replaced. Lillith's heckle is filed, not topped.
+
+**One yank,** on the elevator only. Not on the bottle. Not on the audience. Take B's "Stay seated. You were doing well." stays a stage-room fragment. Do not also say "Agent 47." Number forty-seven is the approved detergent.
+
+**Length:** ~200 words. If a read runs past 75s, cut "Mostly the file name." first, then "They tabled that too."
+
+**Callbacks:** Item Five tabled (the ping-pong table) and Item Four tabled (the fire), paid by Madelyn's memo, which Rubella reads. Number forty-seven hums. The duplicate form is dated next Thursday. No store. No explanation.
+
+```
+RUBELLA
+Good evening. I'm Rubella. Item Seven. Resident comments.
+I didn't put my name on the list. The list put my name on me.
+
+Item Five was the ping-pong table. They tabled it.
+Item Four was the fire. They tabled that too.
+
+I filed a ticket. The ticket hummed back.
+My pension was in a folder called final_final_2.
+I gave the eulogy. Mostly the file name.
+
+The elevator just tried to negotiate. I told it I already pay rent.
+It said, "Four." I said, "Six." "Four." "Three."
+Stop. Go back. You were doing well.
+
+I don't need a hero. I need the detergent that still works.
+Number forty-seven hums. Mine finishes a cycle.
+They wrote me up for the quiet.
+
+That tube is pinker than the other one. I logged it as a fire hazard.
+
+LILLITH
+(from the back, off-mic, one line only)
+It's not a fire hazard. It's ambient lighting with ambition.
+
+RUBELLA
+That's my roommate. I'll file that under lighting.
+
+If the floor is on fire again, I'm charging it for emotional damages.
+I already have the form. The duplicate is dated next Thursday.
+Madelyn sent a memo. "Item Four remains tabled."
+The table is on fire.
+
+That's my time. The chairs can creak.
+I'm waiting for a dryer that does not summon anything.
+```
+
+**Tags** (buttons, same mic):
+
+- Elevator, ~8s: the rent line, then "Four." … "Three." / "Stop. Go back. You were doing well."
+- Detergent, ~7s: the hero line, then "Number forty-seven hums. Mine finishes a cycle."
+- Damages, ~8s: the damages line, then "The duplicate is dated next Thursday. Nobody filed this Thursday."
 
 ---
 
@@ -93,7 +155,9 @@ The clipboard in the last row already has the minutes.
 I haven't said anything.
 ```
 
-**Agenda joke** (`alt` · beat A)
+**Agenda joke** (`promoted` in part · beat A · 2026-10-07)
+
+The first sentence is in Take C. "That's the minutes." stays an orphan.
 
 ```
 RUBELLA
@@ -153,8 +217,8 @@ night, elevator car interior.
 
 ## Take B — Stage / yank timing (2026-09-28)
 
-`active` · `promotion-ready` · all beats · **not promoted.** V0 stays the parent
-until a human pastes this in and logs it below.
+`active` · stage-room picture alt · all beats · **not promoted.** Spoken parent is
+Take C (2026-10-07). Do not paste this over it.
 
 **Room (picture lock 2026-09-12):** small dark stage, one warm spotlight, brass
 stand mic. Audience at tables and chairs, low light, sparse. They sit. They do
@@ -396,6 +460,7 @@ That's the only reason I stayed for Item Seven.
 | Date | From | Into parent beat | Note |
 |------|------|------------------|------|
 | 2026-09-12 | heckle-setup pass | C | Pink-tube fire-hazard log planted before Lillith. Ping-pong sparks and no-look rule kept. |
+| 2026-10-07 | Take C humor pass | all | Promoted. Broke the QA résumé and "Tonight: sparks." One elevator yank. Laundry picture unchanged. |
 
 ---
 

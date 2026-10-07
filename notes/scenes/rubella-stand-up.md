@@ -7,9 +7,9 @@
 > tables and chairs in low light, sparse; they sit, they do not clap. Lillith at one back table.
 > Madelyn's clipboard on a dark table, no gavel. Not Lace Waterfall warehouse, not Big City /
 > Glamora club, and not the laundry intercom as the only room. **Take B** (stage room,
-> yank timing, ~85–90s) is promotion-ready on
+> yank timing, ~85–90s) stays an unpromoted picture alt on
 > [`versions/rubella-stand-up-versions.md`](versions/rubella-stand-up-versions.md#take-b--stage--yank-timing-2026-09-28).
-> V0 below stays the parent until a human promotes B.
+> Spoken parent is the 2026-10-07 humor pass (Take C).
 
 **Slugline:** INT. LAUNDRY ROOM — OPEN MIC — NIGHT  
 **Runtime target:** 60–75s A-roll + three 6–8s interrupt tags  
@@ -17,7 +17,7 @@
 **Boards:** [`prompts/rubella-stand-up-segments.md`](../../prompts/rubella-stand-up-segments.md)  
 **Dialog versions (alts):** [`versions/rubella-stand-up-versions.md`](versions/rubella-stand-up-versions.md)  
 **Suggestions:** `rubella-stand-up`  
-**Status:** punched v1 · heckle-setup pass 2026-09-12  
+**Status:** punched v1 · heckle-setup 2026-09-12 · humor pass 2026-10-07  
 **Cast lock:** Grok Imagine building-cast. No real actor names.
 
 **Cast:** RUBELLA (Item Seven, did not sign up), LILLITH (one heckle, off-mic, back row), MADELYN (clipboard silhouette, last chair, no gavel), QING (optional: noodles, wrong-time laugh, no line)
@@ -58,20 +58,22 @@ RUBELLA
 Good evening. I'm Rubella. Item Seven. Resident comments.
 I didn't put my name on the list. The list put my name on me.
 
-This is the laundry intercom. If your dryer starts, that's not
-applause. I filed a ticket. The ticket hummed back.
+Item Five was the ping-pong table. They tabled it.
+Item Four was the fire. They tabled that too.
 
-I used to do quality assurance. The company erased Human Resources.
-And the backups. My pension went with final_final_2. I moved here
-for cheap rent. I found a building that negotiates.
+I filed a ticket. The ticket hummed back.
+My pension was in a folder called final_final_2.
+I gave the eulogy. Mostly the file name.
 
 The elevator just tried to negotiate. I told it I already pay rent.
-That's a counteroffer with a ding.
+It said, "Four." I said, "Six." "Four." "Three."
+Stop. Go back. You were doing well.
 
                       (chair creak, one row back)
 
-I don't need a hero. I need the detergent that still works. I keep
-a bottle. Contraband. It still finishes a cycle.
+I don't need a hero. I need the detergent that still works.
+Number forty-seven hums. Mine finishes a cycle.
+They wrote me up for the quiet.
 
                       (does not turn; the pinker tube stays behind her)
 
@@ -83,11 +85,12 @@ LILLITH
 It's not a fire hazard. It's ambient lighting with ambition.
 
 RUBELLA
-That's my roommate. She fixed the ping-pong table. Tonight: sparks.
+That's my roommate. I'll file that under lighting.
 
 If the floor is on fire again, I'm charging it for emotional
-damages. I already have the form. They duplicated it. Nobody filed
-anything.
+damages. I already have the form. The duplicate is dated next
+Thursday. Madelyn sent a memo. "Item Four remains tabled."
+The table is on fire.
 
                       (sets the mug down; it is empty)
 
@@ -106,27 +109,28 @@ FADE OUT.
 
 ## Interrupt tags (same mic, not a second packet)
 
-**Elevator — 7s**
+**Elevator — 8s**
 ```
 RUBELLA
 The elevator just tried to negotiate. I told it I already pay rent.
-That's a counteroffer with a ding.
+"Four." ... "Three."
+Stop. Go back. You were doing well.
 ```
 Echo + chair creak. We do not cut inside the freight car.
 
-**Detergent — 6s**
+**Detergent — 7s**
 ```
 RUBELLA
 I don't need a hero. I need the detergent that still works.
-Contraband. It still finishes a cycle.
+Number forty-seven hums. Mine finishes a cycle.
 ```
 
 **Emotional damages — 8s**
 ```
 RUBELLA
 If the floor is on fire again, I'm charging it for emotional
-damages. I already have the form. They duplicated it. Nobody
-filed anything.
+damages. The duplicate is dated next Thursday. Nobody filed this
+Thursday.
 ```
 Form duplicates already in her hand.
 

@@ -54,6 +54,7 @@ material, not airline food, not "what's the deal with," not mystical register.
 | C | Humor pass — laundry room | all | preferred | Promoted 2026-10-07. One yank, on the elevator. The tabled list pays off on the table. |
 | V0 | Pre-punch baseline | all | shelved | Parent through 2026-10-07. Text is git history; the parent link is now Take C. |
 | B | Stage take B — yank timing | all | active | Unpromoted stage-room picture alt. Not the spoken parent. |
+| D | Stage picture alt | all | alt | Take D is a stage picture alt. Take C stays the parent. |
 | — | Overflow bits | A, D, tags | fragments | Steal one later; do not dump into v1 |
 | — | Stage / yank-timing fragments | A–D | fragments | 2026-09-28 orphans for the stage room |
 
@@ -362,6 +363,141 @@ Also refused on sight, not drafted: a lint-inventory night bit (different
 night, no Rubella, no bottle), a magenta Glam bottle as the detergent, Lace
 Waterfall's unused-mic kit dressing this stage, any host intro or "give it up
 for."
+
+---
+
+## Take D — Stage picture alt (2026-10-09)
+
+`alt` · stage-room picture · Take C spoken spine · **not promoted.** Take D is a
+stage picture alt. Take C stays the parent. If this block and the parent
+disagree, the parent wins.
+
+**Picture:** Take B's room. Small dark stage, one warm spotlight, brass stand
+mic. Sparse tables and chairs, low light. They sit. They do not clap. Lillith
+at one back table, under the pink tube. Madelyn is a clipboard on a dark table.
+No gavel. No line. Laundry intercom stays the v1 picture. Stills A–D only
+(spotlight lock, bottle in the cone, heckle wide from the back table, two forms
+and the empty mug). No fifth plate.
+
+**One yank,** on the elevator. The stage room does not earn a second: they
+already sit, and the yank stays on the car.
+
+**Two stolen turns, marked `// FROM B`:** the ticket's hum overstay (both sides;
+the name Agent 47 is refused) and "You were at four." Everything else is `// C`.
+
+**Forty-seven** is the approved detergent. The ticket hums, overstays, and is
+filed as a no. It is not named.
+
+**Length:** ~230 words. At parent pace, inside ~90s. If a read runs long, cut
+"Mostly the file name." first, then "That's a long hmm for a no." Keep the yank
+and the memo.
+
+**Callbacks:** Item Five tabled (the ping-pong table) and Item Four tabled (the
+fire), paid when she reads the memo. The car says floor numbers only. The
+duplicate form is dated next Thursday — no store. Number forty-seven is the
+detergent spec; the write-up is for the quiet bottle. Chairs creak. One heckle,
+filed under lighting.
+
+```
+INT. SMALL DARK ROOM — RESIDENT COMMENTS — NIGHT
+
+One warm spotlight. Brass stand mic. Sparse tables and chairs in the
+falloff. They sit. They do not clap. A pink tube over the back door.
+Lillith at the one back table under it. Madelyn at a dark table,
+clipboard, no gavel.
+
+Rubella steps into the cone like it was assigned.
+```
+
+```
+RUBELLA
+Good evening. I'm Rubella. Item Seven. Resident comments.          // C
+I didn't put my name on the list. The list put my name on me.      // C
+
+Item Five was the ping-pong table. They tabled it.                 // C
+Item Four was the fire. They tabled that too.                      // C
+
+I filed a ticket. The ticket hummed back.                          // C
+                      (reads the ticket; the hum answers)
+"The floor is warm again." Hmm.                                    // FROM B
+"Is that a yes?" Hmmmmmm.                                          // FROM B
+That's a long hmm for a no.                                        // FROM B
+
+My pension was in a folder called final_final_2.                   // C
+I gave the eulogy. Mostly the file name.                           // C
+
+The elevator just tried to negotiate. I told it I already pay rent. // C
+It said, "Four." I said, "Six." "Four." "Three."                   // C
+Stop. Go back. You were doing well. You were at four.              // C + FROM B
+
+I don't need a hero. I need the detergent that still works.        // C
+Number forty-seven hums. Mine finishes a cycle.                    // C
+They wrote me up for the quiet.                                    // C
+
+                      (does not turn; the pink tube stays over the door)
+
+That tube over the door is pinker than the other one.              // C
+I logged it as a fire hazard.                                      // C
+
+LILLITH
+(back table, off-mic, one line only)
+It's not a fire hazard. It's ambient lighting with ambition.       // C
+
+RUBELLA
+That's my roommate. I'll file that under lighting.                 // C
+
+If the floor is on fire again, I'm charging it for emotional
+damages.                                                           // C
+I already have the form. The duplicate is dated next Thursday.     // C
+Madelyn sent a memo. "Item Four remains tabled."                   // C
+The table is on fire.                                              // C
+
+That's my time. The chairs can creak.                              // C
+I'm waiting for a dryer that does not summon anything.             // C
+
+                      (Madelyn's clipboard ticks a box. No line.)
+```
+
+The dryer is offstage. This room has no machine. The line does not tour it.
+`// C + FROM B` on the yank is one yank: the C sentence, then B's "You were at
+four." The three `// FROM B` hum lines are one turn.
+
+**Tags** (buttons, same mic, 6–8s — three only):
+
+**Elevator — ~8s**
+```
+RUBELLA
+I told it I already pay rent.
+"Four." ... "Three."
+Stop. Go back. You were doing well. You were at four.
+```
+
+**Detergent — ~7s**
+```
+RUBELLA
+I don't need a hero.
+Number forty-seven hums. Mine finishes a cycle.
+They wrote me up for the quiet.
+```
+
+**Emotional damages — ~7s**
+```
+RUBELLA
+I'm charging it for emotional damages.
+The duplicate is dated next Thursday. The table is on fire.
+```
+
+No fourth tag.
+
+### Refused for Take D (and why)
+
+| Refused line | Why |
+|--------------|-----|
+| `"Agent 47?"` | Names the humming ticket. This draft's forty-seven is the detergent. The overstay stays in the A-roll; the name does not. |
+| `Stay seated. You were doing well.` | A second yank, on the house. They already sit. The yank stays on the car. |
+| `That's my roommate. She fixed the ping-pong table. Tonight: sparks.` | Tops the heckle. Take C files it under lighting. The topper stays broken. |
+| `My pension was in a QA folder called final_final_2.` | Puts the job title back on the folder. `final_final_2` is the eulogy. |
+| `Stop. Go back. You were doing well as a bottle.` | Moves the yank onto the detergent. One yank, on the elevator. |
 
 ---
 

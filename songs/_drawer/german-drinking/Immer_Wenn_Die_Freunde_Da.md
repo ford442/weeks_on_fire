@@ -54,6 +54,10 @@ Fang ich an von vorn
 Prost! Prost! Prost!
 Lachen, tanzen, einfach hier!
 
+COVER:
+
+German party Schlager cover, same male lead and Prost shouts, heavier punchy kick, tight snare, driving bass, more low-end weight, accordion and brass stay, same 108 energy, festive traditional not electronic
+
 NOTES:
 
 Simple German. Non-speakers catch Immer / Freunde / Bier / Prost / Trinken. Catalog only until selected. Standalone. Not #42. Worlds do not mix.

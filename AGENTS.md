@@ -91,6 +91,8 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 | Cartoons   | `content/cartoons/*.json`  | `src/data/generated/cartoons.ts`   |
 | Sequences  | `content/sequences/*.json` | `src/data/generated/sequences.ts`  |
 
+**Cast voice, look, backstory, and tone rules** live in the character bible, [`characters/bible/README.md`](characters/bible/README.md) (index, template, open questions), with pairings in [`characters/bible/relationship-map.md`](characters/bible/relationship-map.md). `content/characters.json` is the short catalog card; its `bibleSheet` field links each entry to its sheet. New seeds go in `characters/suggested-characters.md`.
+
 `src/data/*.ts` files are thin shims (types + re-exports). **Exception:** `src/data/sceneDialogVersions.ts` is hand-authored TypeScript. Dialog audition pages in `notes/scenes/versions/` are prose, not a codegen schema. See `content/README.md`.
 
 ---

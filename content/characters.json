@@ -319,6 +319,8 @@
       "eyewash-station",
       "cutaway"
     ],
-    "cluster": "Free radicals"
+    "cluster": "Free radicals",
+    "bibleStatus": "active",
+    "bibleSheet": "characters/bible/kenji-sato.md"
   }
 ]

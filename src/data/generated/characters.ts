@@ -148,5 +148,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Leather fringe", "Noise meter (in the red)", "Product bottle", "Campus tour lanyard"],
     tags: ["glam-sham-poo", "commercial", "eyewash-station", "cutaway"],
     cluster: "Free radicals",
+    bibleStatus: "active",
+    bibleSheet: "characters/bible/kenji-sato.md",
   },
 ];

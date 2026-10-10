@@ -52,19 +52,27 @@ Every sheet's header carries one:
 | [Qing Rao](qing-rao.md) | active | Ep3 (Monster Mash) · building lobby cameo |
 | [Jackalyn](jackalyn.md) | active | Ep3 (ping-pong, wellness) |
 | [Madelin](madelin.md) | active | Ep3 (Monster Mash, ping-pong) |
-| [HOA Cast](hoa-cast.md) — Karen · Brad · Dale | recurring | Ep4 |
+| [HOA Cast](hoa-cast.md) — Karen · Brad · Dale · [Peggy Babcock](hoa-cast.md#peggy-babcock) | recurring (Peggy: concept) | Ep4 |
 | [EyeWash Staff](eyewash-staff.md) — Oz · Continuity Voice · Marguerite Flood · S&P Skeleton | concept → active | Master Control, 4 AM · idents |
 | [Animals & Bots](animals-and-bots.md) — Black Cat · Biscuit · Pong-Bot 3000 | active | Ep3 · Ep4 · Cat POV |
 | [Christina](christina.md) — alias *Christine* · the house | recurring | Sweden heart cutaway (Christina hill) — pages only |
+| [Kenji "Shred" Sato](kenji-sato.md) | active | Ultra Screech commercial · Big City cutaway · the 4-second sting |
+| [Liminal Cutaways](liminal-cutaways.md) — Night Laundromat Attendant · Velvet Rope Bouncer · Laundromat Saints | active (Bouncer: concept) | 2AM Laundromat Slow Dance · Velvet Rope (Ep5 opener candidate) |
+| [Strand](strand.md) — the Home Sweet Void coffee-house snake | active | Home Sweet Void table packet |
 | [Relationship Map](relationship-map.md) | — | all |
 
 Also cast, documented elsewhere and **not duplicated here**:
 
 - **Rubella Vale & Lillith Vale** — [`../building-cast.md`](../building-cast.md) (plus Madelyn, Qing).
 - **Riley Smith** — [`../riley-smith.md`](../riley-smith.md). That file is already bible-grade; treat it as one of these.
-- **Peggy Babcock, Kenji "Shred" Sato, the Laundromat Saints, the Velvet Rope Bouncer, the
-  Night Laundromat Attendant, the Radio Voice** — staging, in
-  [`../suggested-characters.md`](../suggested-characters.md).
+- **The Radio Voice (Episode 2)** — documented at the bottom of
+  [`eyewash-staff.md`](eyewash-staff.md#the-radio-voice-episode-2), because the only thing
+  anyone needs to know about him is his relationship to the Continuity Voice.
+- **Scarlet** (silent third in black lace, Ep3 *Spooky Telephone Poles*) — catalog entry only,
+  `content/characters.json`; cameo rules in `notes/callback-bank.md`. No sheet yet.
+- **Staging:** as of 2026-10-10 every seed in
+  [`../suggested-characters.md`](../suggested-characters.md) carries a 🎓 marker. New seeds
+  start there.
 
 ---
 
@@ -101,9 +109,8 @@ Four women, one surname, no stated relation. **Nobody on screen ever remarks on 
 Do not write a scene that asks. Do not write a scene that answers. If the four are ever in
 one frame, the joke is that the framing treats it as unremarkable.
 
-*(Note for catalog maintainers: `content/characters.json` currently carries Lillith and
-Rubella and not Vivienne and Liliane. That is a gap, not a contradiction — see
-[Open questions](#open-questions-do-not-resolve-casually).)*
+*(Catalog: `content/characters.json` carries all four Vales, each with its own entry —
+Vivienne and Liliane with `bibleSheet` links to this folder.)*
 
 ### 2. Qing Rao is one person, and she is the one with the skull
 
@@ -136,10 +143,14 @@ nothing is lost, but they are no longer live options.
 | Question | Status | Who decides |
 |---|---|---|
 | Rename building-cast **Madelyn** (proposal: **Marilyn Ocasek**, or fold her into Karen, whom she already shares three lines with) | Open — recommended | Series owner |
-| Add Vivienne and Liliane to `content/characters.json` so the hub's Characters view carries all four Vales | Open — recommended | Catalog maintainer |
+| Add Vivienne and Liliane to `content/characters.json` so the hub's Characters view carries all four Vales | **Done** — both entries exist with `bibleStatus` + `bibleSheet` | — |
 | Whether the Continuity Voice and the Radio Voice are the same person | **Locked as unresolved.** `docs/season-arc.md`. Never confirm on screen. | Nobody. It stays open. |
 | Whether the Pizza Guy knows | **Locked as unresolved on screen.** The sheet commits an answer for the writers' room only; it is never spoken. | Nobody. |
-| Cast UI (`src/data/cast.ts` + a Cast view beside Staff) | Out of scope here — file a follow-up issue | — |
+| Cast UI (`src/data/cast.ts` + a Cast view beside Staff) | **Mostly covered** — the Characters view (`src/components/Characters.tsx`) already renders `bibleStatus` badges and links each `bibleSheet`. A separate Cast view is only needed if ensemble sheets (HOA, EyeWash, liminal) need their own cards. | Catalog maintainer |
+| Rubella and Lillith called **"Vale sisters"** in `episodes/episode-02/studio-huddle.md:292` (a production note). Canon is *no stated relation*; Rubella says "roommate" in *Rubella Stand-Up*. Scarlet's catalog role also says "third sister." | Open — recommend rewording both notes to "Vale pair" / "silent third" | Series owner |
+| The **third woman in black lace** on the Ep3 finale couch (`episodes/episode-03/monster-mash-finale.md`, "three women in black lace + Justine") is never named. Scarlet is the obvious candidate. | Open | Series owner |
+| **Karen holds swatches** in the Ep4 911 beat (`episodes/episode-04/scenes.md`, *Call Forty-Seven*). Swatches are Brad's prop everywhere else ("He always has swatches"). | Open — recommend Karen's clipboard instead; bible sheets unchanged | Series owner |
+| Pizza Guy's Ep4 doorway uniform: "slightly wrong uniform" (`episodes/episode-04/scenes.md`) vs. "red uniform" (`notes/scenes/item-three-decorative-accent.md`). | Open — either reading fits the rotation rules; pick one before the shoot | Series owner |
 
 ---
 

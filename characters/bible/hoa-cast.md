@@ -1,10 +1,10 @@
-# HOA Cast — Karen · Brad · Dale
+# HOA Cast — Karen · Brad · Dale · Peggy Babcock
 
 **Status:** recurring
 **Primary episodes:** Episode 4 (*Morning After the Portal*; *Item Three: Decorative Accent*) · *Call Forty-Seven* (911 cutaway) · EyeWash Station — Community Notice Board, Telethon phone bank
-**Role in one sentence (the unit):** Three people who processed a cosmic event as a zoning matter, correctly, according to their own bylaws, and were changed by it in ways none of them will ever mention.
+**Role in one sentence (the unit):** Three people *(and the woman taking the minutes)* who processed a cosmic event as a zoning matter, correctly, according to their own bylaws, and were changed by it in ways none of them will ever mention.
 
-> Also in the room, documented elsewhere: **Peggy Babcock** (recording secretary — staging, [`../suggested-characters.md`](../suggested-characters.md), song [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md)) · **Patricia** (raises her hand about height) · **Gary Johnson** (has not looked up since 2019; seconds everything) · **Biscuit** ([animals-and-bots.md](animals-and-bots.md)) · **The Two**, at the back wall, non-voting ([vivienne-vale.md](vivienne-vale.md), [liliane-vale.md](liliane-vale.md)).
+> **Peggy Babcock**, recording secretary, has her own sheet [after Dale's](#peggy-babcock) (graduated 2026-10-10). Also in the room, documented elsewhere: **Patricia** (raises her hand about height) · **Gary Johnson** (has not looked up since 2019; seconds everything) · **Biscuit** ([animals-and-bots.md](animals-and-bots.md)) · **The Two**, at the back wall, non-voting ([vivienne-vale.md](vivienne-vale.md), [liliane-vale.md](liliane-vale.md)).
 > **Not this file:** **Madelyn**, the *building's* laminated enforcer, is a different character in a different location — [`../building-cast.md`](../building-cast.md). She shares three lines with Karen, which is the [standing rename problem](README.md#3-madelin-and-madelyn-are-two-different-people).
 
 ---
@@ -23,8 +23,9 @@ worn off.
 | **Karen** | That she was, finally and visibly, correct — and that everyone could see it | She has not required anyone's agreement since. She used to argue. Now she **renames**, which is faster and does not need a second. |
 | **Brad** | That it was beautiful | This is unbearable to him and he has told nobody. He fought the light with a power-washer at dawn *because* he liked it. Every bin argument since is a man litigating a much larger loss with the only vocabulary he's got. |
 | **Dale** | Nothing | **Dale felt nothing, and he is the only one.** Procedure held. He has privately concluded that this means the procedure works, and it is why he now gavels through literal explosions. He is not brave. He is **vindicated.** |
+| **Peggy** | That she would have to write it down | She did, accurately: *"Light (purple), Hendersons' driveway. Approx. nine hours. No motion. No second."* She is the only person with a correct record of that night, and nobody has ever asked for those minutes. She has not required anyone to ask. |
 
-Play all three as weather. The comedy dies the second anyone in the room is frightened.
+Play all four as weather. The comedy dies the second anyone in the room is frightened.
 
 ---
 
@@ -264,6 +265,117 @@ Episode 4, and not the portal.
 
 ---
 
+# Peggy Babcock
+
+**Status:** concept · **Primary episodes:** Episode 4 clubhouse (song insert inside or after *Item Three: Decorative Accent*) · short-packet gag `peggy-babcock-second` · **Role in one sentence:** HOA recording secretary; the minutes are correct, the meeting is not, and she is the only person in the room who can out-procedure Dale.
+
+## Logline bio
+
+Peggy Babcock has the floor. She sits at the skirted card table to Dale's left with the
+ledger open, and she does not look up. Nobody in the HOA can say her name at speed, so
+nobody can second her motions. She re-reads the whole motion, her name included, after
+every failed second, at the same tempo, for as long as it takes. It has never yet taken
+less than the whole meeting.
+
+## Appearance (consistent prompt anchors)
+
+- Card-table posture: upright, seated, both forearms on the table. **She never stands.** Dale is always seated too; Peggy is seated *better*
+- Cardigan over a plain blouse; reading glasses she never takes off, because she never looks up from the page
+- Hair that has survived the last three administrations, set the same way since the first
+- **The ledger.** Bound, ruled, written in by hand. **Never a clipboard; the clipboard is Karen's.** It is the only document in the HOA material that is accurate
+- A fountain pen, capped between motions with an audible click. The click is her gavel
+- **Signature props:** the ledger · the pen · a nameplate on the card table reading RECORDING SECRETARY. It does not carry her name, and nobody has ever asked for one
+- **Never change without a story reason:** the ledger · she does not look up · she says her full name every time · she is never cute about it and never smiles
+
+**Portrait prompt (text only, generate later):**
+
+> "Cinematic medium shot of a precise older woman in a cardigan and reading glasses seated at a skirted folding card table in a fluorescent HOA clubhouse, writing in a bound ruled ledger with a fountain pen, eyes on the page, not looking up, a nameplate reading RECORDING SECRETARY, a cracked wooden gavel just out of focus beside her, faint violet light through venetian blinds, deadpan procedural comedy, filmic, Grok Imagine style"
+
+## Personality matrix
+
+| Axis | Pole A | Pole B | Where they sit |
+|------|--------|--------|----------------|
+| Control | Personal | Procedural | **Procedural, and deeper than Dale's.** He owns the gavel. She owns the record of what the gavel did. |
+| Empathy | Present | Absent | **Present, and filed.** She knows everything about everyone in the room and has never once used it. |
+| Chaos tolerance | High | Low | **High.** A failed second is weather. So is a portal. She notes both. |
+| Verbal style | short | ornate | **Parliamentary-exact.** Full sentences, every clause, no adjectives the bylaws didn't put there. |
+| Patience | Finite | Infinite | **Infinite.** She will re-read the motion until the room gets it right or the building ends. |
+
+## Voice guide
+
+- **Sentence length:** complete motions. She speaks in the form the minutes will need, so she never has to rephrase.
+- **Overuses:** *the recording secretary has the floor* · *is there a second* · *so moved* · *the minutes reflect* · *as read* · her own full name, always both words
+- **Refuses:** abbreviations · "Peg" · "Mrs. B" · any adjective for the light · *um* · looking up. She will not shorten her name to make the second easier. **That would be a different motion.**
+- **Humor type:** **procedural deadpan by endurance.** Dale's comedy is escalation, once. Peggy's comedy is that nothing escalates at all, ever: same tempo, same bars, the whole motion again.
+- **Delivery note:** deadpan female, precise, unhurried, zero vibrato. Not Rubella, not the Continuity Voice, not Madelyn's intercom. *(Voice direction from [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md).)*
+- **Established lines (do not rewrite):** "The recording secretary has the floor." · "The thistle strip shall stay short." · "Is there a second?" · *(after Dale breaks on the name)* "Peggy Babcock has the floor."
+
+**Sample monologue: "As Read"** *(the motion, after the third failed second)*
+
+> The recording secretary has the floor.
+> Moved by Peggy Babcock: that the thistle strip shall stay short,
+> and that the special shrub shall sit six inches off the walk.
+> (Dale begins her name and stops on the first syllable; she waits)
+> The minutes reflect that the chair began a second and did not complete it.
+> The minutes reflect that Patricia's hand is up and has not landed.
+> (pen cap: click)
+> As read. Moved by Peggy Babcock.
+> Is there a second?
+
+**Sample exchange: with Dale** *(the minutes vs. the gavel)*
+
+> **DALE:** Is there a second for Pegg— for Peg— for the motion.
+> **PEGGY:** The motion has a mover.
+> **DALE:** For the motion of Peggy Bab— (gavel; a puff of violet) —the motion.
+> **PEGGY:** The minutes will reflect that the gavel was struck before the name.
+> **DALE:** So noted.
+> **PEGGY:** It is not noted until it is read. *(she reads it)*
+> **DALE:** (three seconds; he does not move) …Item one.
+> **PEGGY:** Item one is tabled pending a second on the motion of Peggy Babcock.
+> **DALE:** (beat) The chair is aware.
+
+**Sample exchange: with Karen** *(the ledger vs. the clipboard)*
+
+> **KAREN:** I'm logging it as "second pending."
+> **PEGGY:** You're logging it.
+> **KAREN:** On the clipboard.
+> **PEGGY:** The clipboard is not the record.
+> **KAREN:** It's a record.
+> **PEGGY:** (not looking up) It is a decorative accent.
+> *(Karen, for the first time this season, has nothing to rename. She writes SECOND PENDING a second time.)*
+
+**Sample exchange: with Gary Johnson** *(the one second he has never given)*
+
+> **PEGGY:** Is there a second?
+> **GARY:** *(not looking up)* …
+> **PEGGY:** The minutes reflect that Gary Johnson has seconded every motion before this body since 2019.
+> **GARY:** *(not looking up)* It was nine-oh-three.
+> **PEGGY:** It is now.
+> *(Every folding chair in the room creaks one inch backwards, in unison. Nobody says the name.)*
+
+## Backstory (committed)
+
+- **Origin.** Forty years as a court reporter in the county building one floor above Dale's office. They never met there. She typed every word anyone said in a room where what was said mattered, and retired with a wrist brace and a perfect record. She took the HOA minutes because nobody else would, and because **she cannot be in a room where things are said and not write them down.**
+- **Her name.** It has been her name for seventy-one years and nobody has ever been able to say it fast. She stopped helping them at about nine. Insisting on the full name is not vanity and not a game. It is the only rule she has ever made for herself, and she keeps it the way she keeps the minutes.
+- **Formative incident (series-relevant).** Nine years ago Dale missed four consecutive meetings during his wife's illness. **The minutes for those four meetings record him as present.** Peggy wrote them that way, deliberately, the only inaccurate entries in forty years of record-keeping. Nobody has ever asked for those minutes. This is what she knows about Dale "and has never said a word."
+- **Secret she protects.** Those four entries, and the fact that Dale told her, and only her, that he felt nothing under the purple light. She wrote that down as well, in her own notebook rather than the ledger. It is the only thing she has ever written down for one person.
+- **What would break her on screen.** A motion to **read the minutes from nine years ago into the record.** She would have to read them aloud, accurately, and they are not accurate. She would do it, and that would also break Dale (see his sheet: *"what would break him: discovering that the minutes are wrong"*). **Their two breaks are the same document.** Never use it. Write it in so nobody stumbles into it.
+
+## Arc hooks
+
+1. **"I Second Peggy Babcock"** *(Ep4, the song insert)*: the hearing that cannot take a second. A 1:15–1:40 music-video insert inside or after the Item Three meeting. Dale breaks on the first syllable, Patricia's hand never lands, Karen logs *second pending*, the Two do not vote and Biscuit watches the gavel. The motion carries "if you can say it." It never carries.
+2. **"Functional Substitute"** *(Ep4 Biscuit crisis, one line)*: when Biscuit takes the gavel, Peggy uncaps the pen, *click*, and the room treats the click as a gavel strike. Nobody comments. Dale's "The chair is in possession of a functional substitute" is his line; the click under it is hers.
+3. **"The Chairs"** *(short packet, `ideas/short-packet-farm.md` `peggy-babcock-second`)*: eight seconds. A hand goes up and every folding chair creaks an inch backwards, in unison. Nobody says the name on camera. No gavel.
+4. **"Minutes of the Light"** *(EyeWash Community Notice Board, late-season)*: the Continuity Voice reads Peggy's minute of the night of the purple light as a community notice, word for word: *Light (purple), Hendersons' driveway. Approx. nine hours. No motion. No second.* It is the only accurate account of the event anyone ever broadcasts. Peggy is not shown. Marguerite never asks where it came from.
+5. **"The Motion to Adjourn"** *(never)*: a running bit in the writers' room. The HOA has adjourned four times in nine years (Dale's sheet). Peggy was the mover each time. She will be the mover the fifth time too, and the series ends before that.
+
+## Do / Don't
+
+**Do** — let her read the whole motion again at the same tempo; let her out-procedure Dale without ever raising the volume; let the pen click do a gavel's job; let her be kind only inside the record.
+**Don't** — don't let her look up, don't let anyone call her "Peg," don't let anyone say "tongue twister," don't let her help Dale finish the name, don't give her the clipboard, don't use her voice for Rubella, the Continuity Voice, or Madelyn, don't import Peter Piper or woodchucks *(the song's craft notes)*, and don't ever read the old minutes.
+
+---
+
 ## Music / song affinity (the unit)
 
 | Track | Fit |
@@ -271,7 +383,7 @@ Episode 4, and not the portal.
 | [`Permit for the Purple Light`](../../songs/Permit_for_the_Purple_Light.md) | Episode 4 afterglow — sung by the minutes, in order. The unit's anthem. |
 | [`Recycling Bin Rebellion`](../../songs/Recycling_Bin_Rebellion.md) | Brad's protest anthem. Cheap horns, gavel snare, one flat trumpet, **no wink.** |
 | [`Call Forty-Seven`](../../songs/Call_Forty-Seven.md) | Karen's 911 loop. Each transfer adds a bar of hold music. The call never drops. |
-| [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md) | The recording secretary has the floor. Dale's structural opposite and the only person who can out-procedure him. |
+| [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md) | **[Peggy](#peggy-babcock)'s song.** The recording secretary has the floor. Dale's structural opposite and the only person who can out-procedure him. |
 | [`Article Seven`](../../songs/Article_Seven.md) | Mandatory funk interval; the lawn is on break and the lasers can wait. Dale would ratify it. |
 | [`Empty Parking Lot Waltz`](../../songs/Empty_Parking_Lot_Waltz.md) | For Brad, alone, after. Unresolved last chord. |
 

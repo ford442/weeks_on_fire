@@ -94,8 +94,8 @@
 
 ## Later Review / To Flesh Out
 
-- The Two (Vivienne & Liliane / The Vale Sisters) — detailed character suggestions now live in `characters/the-two.md`. Three variants: The Swappers (recommended), The Performers, and One Woman Two Names (psychological).
-- More character concepts (HOA, ladies, Pizza Guy, etc.) — see `characters/suggested-characters.md`.
+- The Two (Vivienne & Liliane) — overview in `characters/the-two.md`; committed sheets in `characters/bible/vivienne-vale.md` and `characters/bible/liliane-vale.md`. **The Swappers (gala-revenge pact) is canon**; The Performers and One Woman Two Names are retired to each sheet's *Rejected / alternate* appendix.
+- More character concepts — staging in `characters/suggested-characters.md`; graduated sheets indexed in `characters/bible/README.md`.
 - Dialog, jokes, and incident table — see `dialog-jokes-incidents.md`.
 - Strong recurring visual: two wine glasses + scattered berries on abandoned tables while elegant chaos happens just out of frame.
 - Pizza Guy should eventually deliver to one (or both) of The Two and treat them exactly like everyone else.

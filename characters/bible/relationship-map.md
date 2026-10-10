@@ -17,12 +17,12 @@ name the two methods, the scene is two characters talking.
 | **The Two** | Vivienne Vale · Liliane Vale | Glamour-apocalypse. Ballrooms, galas, burning towns, back walls. | [`vivienne-vale.md`](vivienne-vale.md) · [`liliane-vale.md`](liliane-vale.md) |
 | **The building pair** | Rubella Vale · Lillith Vale *(+ Madelyn, unseen)* | Exhausted domestic. Elevators, corridors, laundry rooms. | [`../building-cast.md`](../building-cast.md) |
 | **The Ep3 ensemble** | Justine · Jackalyn · Madelin · Qing Rao | Suburban Halloween. Lawns, cafés, ping-pong. | this folder |
-| **The HOA** | Karen · Brad · Dale *(+ Peggy, Patricia, Gary)* | Bureaucracy afterglow. Clubhouse, cul-de-sac. | [`hoa-cast.md`](hoa-cast.md) |
+| **The HOA** | Karen · Brad · Dale · Peggy Babcock *(+ Patricia, Gary)* | Bureaucracy afterglow. Clubhouse, cul-de-sac. | [`hoa-cast.md`](hoa-cast.md) |
 | **EyeWash Station** | Oz · Continuity Voice · Marguerite Flood · S&P Skeleton | Institutional liminal. Master control, idents, sign-off. | [`eyewash-staff.md`](eyewash-staff.md) |
 | **Animals & bots** | The Black Cat · Biscuit · Pong-Bot 3000 | Silent / literal. Everywhere. | [`animals-and-bots.md`](animals-and-bots.md) |
 | **The mountain** | Riley Smith | Honest height. **Above five thousand feet only.** | [`../riley-smith.md`](../riley-smith.md) |
 | **Christina hill** | Christina · *the house* *(+ one extra per plate)* | Still, formal, winter. A threshold, not a hangout. Nobody travels **in**; guests pass through. | [`christina.md`](christina.md) · [`../../ideas/christina-house-company.md`](../../ideas/christina-house-company.md) |
-| **Free radicals** | The Pizza Guy · Kenji "Shred" Sato · the Laundromat Saints · the Velvet Rope Bouncer · the Radio Voice | No cluster. Travel anywhere. | this folder · [`../suggested-characters.md`](../suggested-characters.md) |
+| **Free radicals** | The Pizza Guy · Kenji "Shred" Sato · the Night Laundromat Attendant · the Laundromat Saints · the Velvet Rope Bouncer · the Radio Voice | No cluster. Travel anywhere, mostly as a *reference* (a sting, a mop, a rope), not a body. | [`the-pizza-guy.md`](the-pizza-guy.md) · [`kenji-sato.md`](kenji-sato.md) · [`liminal-cutaways.md`](liminal-cutaways.md) · [`eyewash-staff.md`](eyewash-staff.md#the-radio-voice-episode-2) |
 
 **The Pizza Guy is the only character who belongs to every cluster and none.** He is the
 series' connective tissue and should be the default answer to "how do we get these two
@@ -88,15 +88,22 @@ the thing you can't get back if you use it badly.
 | **Marguerite + Karen** | Bureaucracy vs. bureaucracy | Telethon / HOA crossover | **Save it.** `docs/season-arc.md` parks this deliberately. They should never share a scene until it counts. |
 | **Continuity Voice + Radio Voice** | Same shift, different station | Ep2 / sign-off | **Never in the same scene. Never confirmed. Never denied.** The one pairing that exists only as an absence. |
 | **Radio Voice + the Driver** | Liminal loneliness, one-way | Ep2 / *Empty Highway Confession* | He may be warm. He is never *knowing*. |
-| **Laundromat Saints (unnamed pair)** | Anonymous intimacy | 2AM slow dance | **No names** — not spoken, not slated, not in the SRT. |
+| **Laundromat Saints (unnamed pair)** | Anonymous intimacy | 2AM slow dance | **No names** — not spoken, not slated, not in the SRT. Sheet: [`liminal-cutaways.md`](liminal-cutaways.md#the-laundromat-saints). |
+| **Night Attendant + the Saints** | Not asking vs. not telling | 2AM slow dance, Beat C | The mop goes between them and they lift their feet without breaking the fold. **One speech per scene, to the floor; nobody thanks him.** |
+| **Night Attendant + Oz** | Two night shifts, zero questions, one TV neither of them watches | Phone line, 4 AM, once | Same family as Oz + Pizza Guy, quieter. "Is it level?" / "…No." / "Unscheduled." / "Usually." Never in the same room. |
+| **Velvet Rope Bouncer + the woman in the soot-stained gown** | Policy vs. glamour that came prepared | Velvet Rope rooftop | **Do not name the Two at this door.** The gown may be theirs. A second woman may finish his sentence wrong, once, unslated (sentence-finishing, portable form). |
+| **Velvet Rope Bouncer + Pizza Guy** | Bound vs. unbothered | Any door with a line | The bag is approved; the man is not. Neither looks at the fire. Two lines each. |
 | **Riley + Rubella** | Real science vs. pseudoscience | *The Long Way Up* · *No Other Human Sounds* | Rubella's pseudoscience is corrected **exactly once**, ever. She stops giving the lecture and the change is never marked. |
 | **Riley + Lillith** | Witness vs. prosecutor | *The Long Way Up* | Keep it above five thousand feet. |
 | **Rubella + Lillith** | Endurance vs. provocation | Building-cast set | Lillith is told **no** exactly once (*Natural Ventilation*). She sits down. Never marked. |
 | **Kenji + Rubella / Lillith** | Maximum pitch vs. exhausted / chaotic endorsement | Glam-Sham-Poo commercial | The laundry room, rented by a shampoo company. |
-| **Kenji + Pizza Guy** | Maximum pitch vs. zero reaction | Laundry-room TV | Pure structure. Ninety seconds, no plot. |
+| **Kenji + Pizza Guy** | Maximum pitch vs. zero reaction | Laundry-room TV | Pure structure. Ninety seconds, no plot. Kenji is only ever on the screen. |
+| **Kenji + Karen** | Alumni immunity vs. a citation | **A card, not a scene** | A noise citation on Karen's clipboard marked RETURNED — IMMUNITY CLAIMED. Never read aloud. Kenji never enters the clubhouse. |
 | **Dale + Biscuit** | Authority borrowed from an object vs. an animal that takes objects | Ep4 | **The crisis of Episode 4.** Three full seconds of Dale not moving before any reaction. |
 | **Dale + S&P Skeleton** | Two procedures, neither yielding | Any crossover | "Same note." Four lines maximum; it's a sketch, not a scene. |
-| **Peggy Babcock + Dale** | The minutes vs. the gavel | Ep4 clubhouse | She is the only person who can out-procedure him. Song: [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md). |
+| **Peggy Babcock + Dale** | The minutes vs. the gavel | Ep4 clubhouse | She is the only person who can out-procedure him. Song: [`I Second Peggy Babcock`](../../songs/I_Second_Peggy_Babcock.md). **Their two breaks are the same document** (the minutes from nine years ago) — [her sheet](hoa-cast.md#peggy-babcock). Never read them. |
+| **Peggy Babcock + Karen** | The record vs. the clipboard | Ep4 clubhouse | Karen renames everything except the ledger. Peggy's one turn of Karen's own vocabulary ("It is a decorative accent.") is a spend-once. |
+| **Peggy Babcock + Gary Johnson** | The motion vs. the one second he has never given | Ep4 clubhouse | Gary seconds everything, without looking up, except Peggy. Nobody says why. |
 | **Biscuit + Madelin** | Impossible receipts, same impossible store | Ep3 / Ep4 | They are shopping at the same place. **The series will never find out.** One shot, no line. |
 | **Brad + Pizza Guy** | Genuine gratitude vs. no procedure for being thanked | Ep4 morning | **This is where the Pizza Guy's one permitted crack lives.** Spend it once, late, or never. |
 | **Justine + Pizza Guy** | The two flattest people in the series | Any doorway | Either the best cutaway in the show or unusable. Ninety seconds. Nothing escalates. |
@@ -120,6 +127,8 @@ The clusters are tonal. Crossing them is a deliberate move, not a default.
 | **Black Cat → the ridge** | ❌ | Keep her in town. |
 | **Madelyn (building) → HOA clubhouse** | ❌ | **Never seen.** Intercom voice and a piece of laminate only. Do not cast a face, and do not let her dialog merge with Karen's. |
 | **Continuity Voice → any two-hander** | ❌ | *Natural Ventilation* and *Regulation Powder* have no third voice. If a draft adds one, the draft is wrong. |
+| **Kenji → anywhere** | ⚠️ As a screen, sting, or card only | The 4-second "GLAM-SHAM-POO!" sting may interrupt anything. **He is never a resident** and never enters the building, the HOA, the ridge, or the lawn in person. One commercial, forever. |
+| **Liminal cutaways → anywhere** | ⚠️ Portable forms only | A hi-vis vest mopping past in a 2 AM background · a velvet rope at any line (two lines max) · "Thursdays." / "Usually." once a season · a glittered cheekbone never in close-up. Not a second laundromat episode. |
 | **Pizza Guy → anywhere** | ✅ Almost always | New uniform each time, same shoes, same pace. Nobody remarks on the change. **Exception: Christina hill** — his bag would be the house's second leak. |
 | **Rubella + Lillith → Christina hill** | ✅ 30 seconds | The door, Swedish hospitality, then they leave. They never stay the night and never go past the threshold into a second plate. |
 | **Qing Rao → Christina hill** | ✅ Her own night | Sea-glass night only. Christina plus Qing, nobody else. The skull stays home. |
@@ -146,6 +155,8 @@ re-decide it at the snow.
 | **The HOA** | Karen would classify the snow roof as an unapproved hardscape feature. | ❌ Not on the hill |
 | **Madelyn (building)** | Never seen. A laminate on a door with no HOA is just a card. | ❌ Not on the hill |
 | **EyeWash** | The station is not on in this house. No TV, no Continuity Voice, no Radio Voice. | ❌ Not on the hill |
+| **Peggy Babcock** | She would take minutes of the song. The house does not keep a record. | ❌ Not on the hill |
+| **The Attendant · the Bouncer · the Saints** | The Attendant would mop the threshold, the Bouncer would check Christina's shoes, and the Saints would need the house to be a room that doesn't want anything. It wants something. | ❌ Not on the hill |
 
 ---
 
@@ -159,7 +170,7 @@ re-decide it at the snow.
 | **Marguerite + Karen**, casually | It is a season-level asset. Spending it early gets you one good scene and costs a finale. |
 | **The Two + Rubella and Lillith**, with anyone remarking on the surname | Four Vales, no stated relation, **nobody ever remarks on it.** If they share a frame, the framing treats it as unremarkable. |
 | **Pizza Guy + any rescue** | He is not a rescue. No paramedic, no firefighter, no police, no clergy beyond the laminated card. |
-| **Black Cat + Pizza Guy exiting together** | Two identical exits cancel each other out. One stays. |
+| **Black Cat, Night Attendant, or Bouncer + Pizza Guy exiting together** | Two identical exits cancel each other out. One stays. |
 | **Anyone + a sincere question to the Pizza Guy about what's happening** | The moment somebody asks, he has to answer or refuse, and either one ends the gag. |
 
 ---

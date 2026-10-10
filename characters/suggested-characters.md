@@ -38,6 +38,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Kenji “Shred” Sato
+
+**🎓 Graduated — full sheet:** [`bible/kenji-sato.md`](bible/kenji-sato.md)
+
 **Role:** Official Glam-Sham-Poo brand ambassador / alumnus of Glam-Sham-Poo College.
 
 **Look:** Big hair, leather fringe, neon-temple hype. Always mid-pitch. Noise meter optional, usually already in the red.
@@ -230,6 +233,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### Peggy Babcock
+
+**🎓 Graduated — full sheet:** [`bible/hoa-cast.md#peggy-babcock`](bible/hoa-cast.md#peggy-babcock)
+
 **Role:** HOA recording secretary. The minutes are correct. The meeting is not.
 
 **Look:** Card-table posture. Ledger, not a clipboard (the clipboard is Karen's). Does not look up. Hair that survived the last three administrations.
@@ -253,6 +259,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ## Episode 4 / Kestrel Ridge — The Mountain
 
 ### Riley Smith
+
+**🎓 Graduated — bible-grade in place:** [`riley-smith.md`](riley-smith.md) (indexed from [`bible/README.md`](bible/README.md); not moved)
+
 **Role:** The stranger on the center line. First character in the series who **knows things**. The straight woman for a show that has never had one.
 
 **Full profile:** [`riley-smith.md`](riley-smith.md) — origin, family (all living), the job, the 4Runner, the pendant, the songs, the rules. That file is already bible-grade; treat it as one of the [`bible/`](bible/README.md) sheets.
@@ -292,6 +301,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ## Liminal / Cutaway Characters
 
 ### The Night Laundromat Attendant
+
+**🎓 Graduated — full sheet:** [`bible/liminal-cutaways.md#the-night-laundromat-attendant`](bible/liminal-cutaways.md#the-night-laundromat-attendant)
+
 **Role:** Mops around slow-dancing strangers. Greek chorus of indifference.
 
 **Look:** Fluorescent vest, headphones, one ear off. Has seen everything; reacts to nothing.
@@ -303,6 +315,9 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### The Velvet Rope Bouncer
+
+**🎓 Graduated — full sheet:** [`bible/liminal-cutaways.md#the-velvet-rope-bouncer`](bible/liminal-cutaways.md#the-velvet-rope-bouncer)
+
 **Role:** Dress code enforcer at the end of the world.
 
 **Rule:** Heels or no entry. Sky on fire is not an excuse.
@@ -314,6 +329,8 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 ---
 
 ### The Laundromat Saints (Unnamed Pair)
+
+**🎓 Graduated — full sheet:** [`bible/liminal-cutaways.md#the-laundromat-saints`](bible/liminal-cutaways.md#the-laundromat-saints)
 
 **Role:** Strangers who meet only at 2am. Know everything, ask nothing.
 

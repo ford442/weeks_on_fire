@@ -52,6 +52,10 @@ Alles gut, wir sind dabei!
 
 Eins, zwei, drei — schunkeln!
 
+COVER:
+
+German Schunkelsong cover, same male lead and group chorus, heavier stomp drums and punchy kick, solid driving bass, more low-end weight, accordion and brass stay, same 100 sway energy, traditional festival band not electronic
+
 NOTES:
 
 Simple German. Non-speakers catch Schunkel / Prost / Bier / Freunde. Catalog only. Picture if any: linking arms at a long table. Not building-cast. Not #42.

@@ -15,6 +15,15 @@ Songs:
 - [`Ein_Glas_fuer_dich.md`](Ein_Glas_fuer_dich.md) — one glass for you, one for me
 - [`Heute_trinken_wir.md`](Heute_trinken_wir.md) — today we drink
 
-Generate with MiniMax using the STYLE in each file. Mouths on if used as stage cutaway; mouths off if floor interrupt.
+## MiniMax Cover (heavier drums / bass / more energy)
 
-*Boarded 2026-10-09. Promote no.*
+Upload an existing generated take as the reference. Use the COVER line in each file (or the template below). Cover preserves the melodic skeleton and form; it regenerates instrumentation and vocal timbre around that anchor. Describe the destination. Leave lyrics blank for ASR, or paste the original to lock words.
+
+**Template:**
+```
+German party Schlager cover, same clear male lead and festive delivery, heavier punchy kick, tight snare, driving bass, more low-end weight, accordion and brass stay, same energy, traditional not electronic
+```
+
+Generate first-pass STYLE tracks, then Cover for the heavier version. Mouths on if stage; mouths off if floor interrupt.
+
+*Boarded 2026-10-09. Cover notes 2026-10-10. Promote no.*

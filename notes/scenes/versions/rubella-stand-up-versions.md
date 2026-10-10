@@ -55,6 +55,7 @@ material, not airline food, not "what's the deal with," not mystical register.
 | V0 | Pre-punch baseline | all | shelved | Parent through 2026-10-07. Text is git history; the parent link is now Take C. |
 | B | Stage take B — yank timing | all | active | Unpromoted stage-room picture alt. Not the spoken parent. |
 | D | Stage picture alt | all | alt | Take D is a stage picture alt. Take C stays the parent. |
+| E | Stage picture alt — buttons | all | alt | Take E is a stage picture alt. Take C stays the parent. |
 | — | Overflow bits | A, D, tags | fragments | Steal one later; do not dump into v1 |
 | — | Stage / yank-timing fragments | A–D | fragments | 2026-09-28 orphans for the stage room |
 
@@ -498,6 +499,150 @@ No fourth tag.
 | `That's my roommate. She fixed the ping-pong table. Tonight: sparks.` | Tops the heckle. Take C files it under lighting. The topper stays broken. |
 | `My pension was in a QA folder called final_final_2.` | Puts the job title back on the folder. `final_final_2` is the eulogy. |
 | `Stop. Go back. You were doing well as a bottle.` | Moves the yank onto the detergent. One yank, on the elevator. |
+
+---
+
+## Take E — Stage picture alt, buttons (2026-10-09)
+
+`alt` · stage-room picture · Take C spoken spine · **not promoted.** Take E is a
+stage picture alt. Take C stays the parent. If this block and the parent
+disagree, the parent wins. Take D stays as written.
+
+**Against Take D (why E exists):**
+
+1. D steals the ticket's hum overstay and keeps "Number forty-seven hums." The
+   hum lands on the ticket and the detergent both. That is the Agent 47 / #47
+   mash with the name filed off.
+2. D's tags reprint the A-roll. Tags are buttons.
+3. Restack collision to watch: in a room full of tables, "The table is on fire"
+   can read as the audience's table. Picture does not answer it. No flame.
+   Nobody looks down.
+
+**Picture:** Take B's room. Stills A–D as stage twins; no fifth plate. Lillith
+at one back table under the pink tube. Madelyn is a clipboard on a dark table.
+No gavel. No line. On "Item Six" we do not cut to Madelyn. On "The table is on
+fire" nobody looks at their table. Still D: one chair pushed back from one
+table, one inch. SFX: spotlight hum, one chair scrape. No laugh-from-tape.
+
+**One yank,** on the elevator. The stage room does not earn a second: they
+already sit, and the yank does not go on the audience.
+
+**Two stolen turns, marked `// FROM B`:** "Item Six was Madelyn, telling me I'm
+Item Seven." (finishes the spine — Madelyn put her on the list — without a
+Madelyn line) and "You were at four." on the yank. Everything else is `// C`.
+
+**Forty-seven** is the approved detergent. Agent 47 is not said. The ticket
+hums once and does not overstay.
+
+**Length:** ~220 words, est. ~80s. If a read runs long, cut "Mostly the file
+name." first, then "They tabled that too." Keep the yank, Item Six, and the
+memo.
+
+**Callbacks:** Item [N] grammar (Item Six), the car says floor numbers only,
+chairs creak and creep one inch, Madelyn as clipboard and memo, the ping-pong
+table as Item Five, next Thursday spent on the duplicate form (no store).
+
+```
+INT. SMALL DARK ROOM — RESIDENT COMMENTS — NIGHT
+
+One warm spotlight. Brass stand mic. Sparse tables and chairs in the
+falloff. They sit. They do not clap. A pink tube over the back door.
+Lillith at the one back table under it. Madelyn at a dark table,
+clipboard, no gavel.
+
+Rubella steps into the cone like it was assigned.
+```
+
+```
+RUBELLA
+Good evening. I'm Rubella. Item Seven. Resident comments.          // C
+I didn't put my name on the list. The list put my name on me.      // C
+
+Item Five was the ping-pong table. They tabled it.                 // C
+Item Four was the fire. They tabled that too.                      // C
+Item Six was Madelyn, telling me I'm Item Seven.                   // FROM B
+
+                      (does not look toward the dark table)
+
+I filed a ticket. The ticket hummed back.                          // C
+My pension was in a folder called final_final_2.                   // C
+I gave the eulogy. Mostly the file name.                           // C
+
+The elevator just tried to negotiate. I told it I already pay rent. // C
+It said, "Four." I said, "Six." "Four." "Three."                   // C
+Stop. Go back. You were doing well. You were at four.              // C + FROM B
+
+                      (one chair scrape, one table back)
+
+I don't need a hero. I need the detergent that still works.        // C
+Number forty-seven hums. Mine finishes a cycle.                    // C
+They wrote me up for the quiet.                                    // C
+
+                      (does not turn; the pink tube stays over the door)
+
+That tube over the door is pinker than the other one.              // C
+I logged it as a fire hazard.                                      // C
+
+LILLITH
+(back table, off-mic, one line only)
+It's not a fire hazard. It's ambient lighting with ambition.       // C
+
+RUBELLA
+That's my roommate. I'll file that under lighting.                 // C
+
+If the floor is on fire again, I'm charging it for emotional
+damages.                                                           // C
+I already have the form. The duplicate is dated next Thursday.     // C
+Madelyn sent a memo. "Item Four remains tabled."                   // C
+The table is on fire.                                              // C
+
+                      (nobody looks at their table)
+
+That's my time. The chairs can creak.                              // C
+I'm waiting for a dryer that does not summon anything.             // C
+
+                      (Madelyn's clipboard ticks a box. No line.)
+```
+
+"Over the door" adapts the line to the room. It is not a B turn. The dryer is
+offstage, as in D.
+
+**Tags** (buttons, same mic, 6–8s — three only, not reprints):
+
+**Elevator — ~7s**
+```
+RUBELLA
+I told it I already pay rent. It said, "Four."
+I took the stairs. It was waiting on four.
+```
+Floor numbers only. We do not cut inside the car. Malfunction vs. negotiation
+stays unadjudicated. No second yank.
+
+**Detergent — ~6s**
+```
+RUBELLA
+I don't need a hero.
+Forty-seven came with a pamphlet. The pamphlet hums.
+```
+
+**Emotional damages — ~7s**
+```
+RUBELLA
+I'm charging the floor for emotional damages.
+The floor appealed. Madelyn tabled it.
+```
+
+No fourth tag.
+
+### Refused for Take E (and why)
+
+| Refused line | Why |
+|--------------|-----|
+| `"Agent 47?" Hmm. "Is that a yes?" Hmmmmmm.` (the whole overstay, not just the name) | Next to "Number forty-seven hums," the ticket and the detergent share one hum. The forty-sevens mash even unnamed. The ticket hums once and stops. |
+| `It said, "Thirteen." We don't have a thirteen.` | The thirteenth floor is an open file: two seconds on a service diagram, never mentioned again. A floor number, but it spends a lock. |
+| `My smoke detector chirps every forty-seven seconds.` | A third forty-seven (*Nine Percent Battery*). One forty-seven per draft; this draft's is the detergent. |
+| `You're all at tables. That's where this building puts things it doesn't want to decide.` | Turns the set toward the house — a host move. It also points "The table is on fire" at their tables, and the picture would have to answer. |
+| `That's my time. Give it up for Item Eight.` | Host handoff and "give it up for." It asks for the clap the room does not do. |
 
 ---
 

@@ -22,3 +22,5 @@
 | `lint‑inventory‑2` | 12s | A lint screen emerges as a clean grey sheet, then another, already stacked perfectly. | Laundry room, folding table | Silent + dryer drum tick | No detergent bottle, no Rubella, no fibers on floor. | no |
 
 **Note:** These packets are new additions and do not replace any existing content. They are siblings of existing joke‑10 packets such as `we-will-stand`, `extra-napkins`, `break-card`, `chest-height-ordinance`, `peggy-babcock-second`, `storage-cage-one`, `inspection-tag`, `stall-forty-seven`, `chute-return`, `lint-inventory`, and `bulk-item-pickup`. No new worlds were introduced beyond the HOA clubhouse, lobby, corridor, mailroom, boiler room, and laundry room settings already present.
+
+Sung cousins, each in a new room and a different picture language, live in [`possible-musical-sequences.md`](possible-musical-sequences.md). Those six are beds plus generated picture. They do not replace the packets above.

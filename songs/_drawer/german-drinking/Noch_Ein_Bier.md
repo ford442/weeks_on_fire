@@ -52,6 +52,10 @@ Bis die Flasche leer!
 
 Prost! Prost! Prost!
 
+COVER:
+
+German party Schlager cover, same clear male lead and crowd shouts, heavier punchy kick, tight snare, driving bass, more low-end weight, accordion and brass stay, same 112 energy, festive not electronic
+
 NOTES:
 
 Simple German on purpose. Non-speakers catch the Prost / Bier / Trinken / Freund hooks. Catalog only until selected. Standalone player shelf. Picture if any: beer garden long table. Not night-lot, not Glamora, not Daisy field. Worlds do not mix.

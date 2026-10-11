@@ -14,6 +14,7 @@ the drawer working.
 and only as *not a second ad* (no card below touches Glam, so #32 is not invoked).
 **Siblings:** [`possible-ladies-house.md`](possible-ladies-house.md) ·
 [`possible-joke-commercials.md`](possible-joke-commercials.md) ·
+[`possible-musical-sequences.md`](possible-musical-sequences.md) ·
 song sketches [`../songs/_drawer/`](../songs/_drawer/)
 **Parents:** [`short-packet-farm.md`](short-packet-farm.md) · [`loop-grammar.md`](loop-grammar.md) ·
 [`../characters/building-cast.md`](../characters/building-cast.md)

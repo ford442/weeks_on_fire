@@ -14,13 +14,11 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
       <div>
         <div className="flex flex-wrap items-center gap-2">
           <span
-            className={`rounded border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] ${imageKindMeta[scene.imageKind].accent}`}
+            className={`rounded border px-2 py-0.5 text-xs font-semibold ${imageKindMeta[scene.imageKind].accent}`}
           >
             {imageKindMeta[scene.imageKind].label}
           </span>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
-            {scene.episode}
-          </p>
+          <p className="text-sm font-semibold text-orange-300">{scene.episode}</p>
         </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{scene.title}</h2>
         <p className="mt-3 text-sm leading-6 text-zinc-300">{scene.description}</p>
@@ -30,10 +28,10 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
         <div className="rounded-md border border-zinc-800 bg-zinc-900/80 p-3">
           <div className="flex items-center gap-2 text-zinc-400">
             <Music2 size={16} />
-            <span>Music Cue</span>
+            <span>Music cue</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{scene.musicCue}</p>
-          <p className="mt-1 text-xs text-zinc-500">{scene.musicStyle}</p>
+          <p className="mt-1 text-xs text-zinc-400">{scene.musicStyle}</p>
         </div>
         <div className="rounded-md border border-zinc-800 bg-zinc-900/80 p-3">
           <div className="flex items-center gap-2 text-zinc-400">
@@ -41,18 +39,16 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
             <span>Theme</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{scene.theme}</p>
-          <p className="mt-1 text-xs text-zinc-500">{scene.tags.join(', ')}</p>
+          <p className="mt-1 text-xs text-zinc-400">{scene.tags.join(', ')}</p>
         </div>
       </div>
 
       <section className="min-h-0">
         <div className="mb-2 flex items-center justify-between gap-3">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            Exact Prompt
-          </h3>
+          <h3 className="text-sm font-semibold text-zinc-400">Exact prompt</h3>
           <CopyButton
             copied={copiedKey === `${scene.id}:prompt`}
-            label="Copy Prompt"
+            label="Copy prompt"
             onClick={() => onCopy(scene.prompt, 'Prompt', `${scene.id}:prompt`)}
           />
         </div>
@@ -62,14 +58,12 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
       </section>
 
       <section>
-        <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-          Variations
-        </h3>
+        <h3 className="mb-2 text-sm font-semibold text-zinc-400">Variations</h3>
         <div className="space-y-3">
           {scene.promptVariations.map((variation, index) => (
             <div key={variation} className="rounded-md border border-zinc-800 bg-zinc-900/70 p-3">
               <div className="mb-2 flex items-center justify-between gap-3">
-                <span className="text-xs font-semibold text-zinc-500">Variation {index + 1}</span>
+                <span className="text-xs font-semibold text-zinc-400">Variation {index + 1}</span>
                 <CopyButton
                   copied={copiedKey === `${scene.id}:variation:${index}`}
                   label="Copy"
@@ -103,7 +97,7 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
             ? 'Image URL Copied'
             : 'Copy Image URL'
           : copiedKey === `${scene.id}:prompt`
-            ? 'Prompt Copied'
+            ? 'Prompt copied'
             : 'Copy Main Prompt'}
       </button>
     </aside>

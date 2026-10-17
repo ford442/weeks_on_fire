@@ -46,11 +46,11 @@ export default function Episodes() {
               }`}
             >
               <div className="flex items-center justify-between gap-2">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                <p className="text-sm font-semibold text-orange-300">
                   {episode.isCandidate ? 'Episode 5 candidate' : `Episode ${episode.number}`}
                 </p>
                 <span
-                  className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${status.accent}`}
+                  className={`rounded-md border px-2 py-1 text-xs font-semibold ${status.accent}`}
                 >
                   {status.label}
                 </span>
@@ -66,14 +66,14 @@ export default function Episodes() {
               <p className="mt-3 line-clamp-3 text-sm leading-6 text-zinc-300">{episode.logline}</p>
 
               {episode.runtime ? (
-                <p className="mt-4 inline-flex items-center gap-1.5 text-xs text-zinc-500">
+                <p className="mt-4 inline-flex items-center gap-1.5 text-xs text-zinc-400">
                   <Clock size={13} aria-hidden="true" />
                   {episode.runtime}
                 </p>
               ) : null}
 
               {episode.isCandidate ? (
-                <p className="mt-3 border-t border-zinc-800 pt-3 text-xs leading-5 text-violet-300">
+                <p className="mt-3 border-t border-zinc-800 pt-3 text-sm leading-6 text-violet-300">
                   Episode 4 is HOA / Morning After. This is a parked Episode 5 candidate — not a
                   replacement for it.
                 </p>

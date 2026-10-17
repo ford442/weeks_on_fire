@@ -3,6 +3,7 @@ import { ExternalLink, Search, UserCircle } from 'lucide-react';
 
 import { seriesCharacters, type SeriesCharacter } from '../data/characters';
 import { firstCatalogItem } from '../lib/catalog';
+import { useUrlParam } from '../hooks/useUrlState';
 
 const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
 
@@ -47,7 +48,7 @@ function BibleStatusBadge({ status }: { status?: string }) {
 
   return (
     <span
-      className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide ${meta.className}`}
+      className={`inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold ${meta.className}`}
     >
       {meta.label}
     </span>
@@ -93,7 +94,7 @@ export default function Characters() {
   const [selected, setSelected] = useState<SeriesCharacter>(
     firstCatalogItem(seriesCharacters, 'characters'),
   );
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useUrlParam('q', '');
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -135,7 +136,7 @@ export default function Characters() {
 
         <label className="relative block">
           <Search
-            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
             size={16}
             aria-hidden="true"
           />
@@ -144,16 +145,14 @@ export default function Characters() {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search characters…"
-            className="w-full rounded-lg border border-zinc-800 bg-zinc-950 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-zinc-500 focus:border-orange-500/50 focus:outline-none focus:ring-2 focus:ring-orange-300/30"
+            className="w-full rounded-lg border border-zinc-800 bg-zinc-950 py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-zinc-400 focus:border-orange-500/50 focus:outline-none focus:ring-2 focus:ring-orange-300/30"
           />
         </label>
 
         <div className="space-y-8">
           {groupByCluster(filtered).map(([cluster, members]) => (
             <div key={cluster}>
-              <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-                {cluster}
-              </h2>
+              <h2 className="mb-3 text-sm font-semibold text-zinc-400">{cluster}</h2>
               <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
                 {members.map((character) => {
                   const isActive = selected.id === character.id;
@@ -188,7 +187,7 @@ export default function Characters() {
                         )}
                         <div className="p-5">
                           <div className="flex items-center justify-between gap-2">
-                            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                            <p className="text-sm font-semibold text-orange-300">
                               {character.episodes[0] ?? character.role}
                             </p>
                             <BibleStatusBadge status={character.bibleStatus} />
@@ -225,7 +224,7 @@ export default function Characters() {
       <aside className="lg:sticky lg:top-6 lg:self-start">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
           <UserCircle size={17} aria-hidden="true" />
-          Character Profile
+          Character profile
         </div>
         <CharacterDetail character={selected} />
       </aside>
@@ -248,9 +247,7 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
 
       <div>
         <div className="flex items-start justify-between gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-            {character.role}
-          </p>
+          <p className="text-sm font-semibold text-orange-300">{character.role}</p>
           {character.bibleStatus ? (
             <span className="shrink-0 whitespace-nowrap">
               <BibleStatusBadge status={character.bibleStatus} />
@@ -269,12 +266,12 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Bio</p>
+        <p className="text-sm font-semibold text-zinc-400">Bio</p>
         <p className="mt-2 text-sm leading-7 text-zinc-300">{character.bio}</p>
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Episodes</p>
+        <p className="text-sm font-semibold text-zinc-400">Episodes</p>
         <ul className="mt-2 space-y-2">
           {character.episodes.map((episode) => (
             <li
@@ -288,7 +285,7 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Traits</p>
+        <p className="text-sm font-semibold text-zinc-400">Traits</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {character.traits.map((trait) => (
             <span
@@ -302,7 +299,7 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Props</p>
+        <p className="text-sm font-semibold text-zinc-400">Props</p>
         <ul className="mt-2 space-y-2">
           {character.props.map((prop) => (
             <li

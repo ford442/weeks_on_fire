@@ -138,11 +138,11 @@ export default function CutawayPreview({
           <ColorWhipField key={activeSegment.id} dialect={whipDialect} />
         ) : (
           <div className="flex h-full flex-col items-center justify-center gap-2 p-4 text-center">
-            <Sparkles size={22} className="text-zinc-600" />
-            <p className="text-xs text-zinc-500">Prompt ready · still not linked</p>
+            <Sparkles size={22} className="text-zinc-400" />
+            <p className="text-xs text-zinc-400">Prompt ready · still not linked</p>
           </div>
         )}
-        <span className="absolute left-2 top-2 rounded bg-black/70 px-2 py-0.5 text-[10px] font-medium text-zinc-300">
+        <span className="absolute left-2 top-2 rounded bg-black/70 px-2 py-0.5 text-xs font-medium text-zinc-300">
           {activeSegment.label}
         </span>
       </div>
@@ -173,7 +173,7 @@ export default function CutawayPreview({
         >
           <SkipForward size={14} />
         </button>
-        <p className="ml-auto font-mono text-[11px] text-zinc-500">
+        <p className="ml-auto font-mono text-xs text-zinc-400">
           {activeIndex + 1} / {segments.length}
         </p>
       </div>

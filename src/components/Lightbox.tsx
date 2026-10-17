@@ -39,9 +39,7 @@ export default function Lightbox({ scene, copiedKey, onClose, onCopy }: Lightbox
             />
           ) : (
             <div className="flex min-h-[280px] flex-col justify-center gap-4 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-300">
-                Prompt-only suggestion
-              </p>
+              <p className="text-sm font-semibold text-violet-300">Prompt-only suggestion</p>
               <p className="max-w-prose text-sm leading-7 text-zinc-300">{scene.prompt}</p>
             </div>
           )}

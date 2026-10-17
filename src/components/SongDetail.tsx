@@ -18,9 +18,9 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
   return (
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
+        <p className="text-sm font-semibold text-orange-300">
           {song.episode}
-          <span className="text-zinc-500">
+          <span className="text-zinc-400">
             {' · '}
             <time dateTime={song.added}>{formatSongDate(song.added)}</time>
           </span>
@@ -38,7 +38,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
             <span>Genre</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{song.genre}</p>
-          <p className="mt-1 text-xs text-zinc-500">
+          <p className="mt-1 text-xs text-zinc-400">
             {song.instrumental ? 'Instrumental' : 'Vocals'}
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
             <span>Tags</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{song.tags.join(', ')}</p>
-          <p className="mt-1 text-xs text-zinc-500">{song.sourceFile}</p>
+          <p className="mt-1 text-xs text-zinc-400">{song.sourceFile}</p>
         </div>
       </div>
 
@@ -66,12 +66,10 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
 
       <section className="min-h-0">
         <div className="mb-2 flex items-center justify-between gap-3">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            Minimax Style Prompt
-          </h3>
+          <h3 className="text-sm font-semibold text-zinc-400">Minimax style prompt</h3>
           <CopyButton
             copied={copiedKey === `${song.id}:style`}
-            label="Copy Style"
+            label="Copy style"
             onClick={() => onCopy(song.stylePrompt, 'Style prompt', `${song.id}:style`)}
           />
         </div>
@@ -83,12 +81,10 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
       {song.lyrics && (
         <section className="min-h-0">
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Lyrics
-            </h3>
+            <h3 className="text-sm font-semibold text-zinc-400">Lyrics</h3>
             <CopyButton
               copied={copiedKey === `${song.id}:lyrics`}
-              label="Copy Lyrics"
+              label="Copy lyrics"
               onClick={() => onCopy(song.lyrics!, 'Lyrics', `${song.id}:lyrics`)}
             />
           </div>
@@ -100,7 +96,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
 
       {song.notes && (
         <section>
-          <div className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
+          <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-zinc-400">
             <FileText size={14} />
             Notes
           </div>

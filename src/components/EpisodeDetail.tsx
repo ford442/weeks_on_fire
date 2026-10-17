@@ -19,7 +19,7 @@ const markdownTabMeta: Record<MarkdownTabKey, string> = {
   scenes: 'Scenes',
   screenplay: 'Screenplay',
   notes: 'Notes',
-  seasonArc: 'Season Arc',
+  seasonArc: 'Season arc',
 };
 
 const markdownTabKeys: MarkdownTabKey[] = [
@@ -126,12 +126,10 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
 
       <header className="rounded-lg border border-zinc-800 bg-zinc-950 p-6">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+          <p className="text-sm font-semibold text-orange-300">
             {episode.isCandidate ? 'Episode 5 candidate' : `Episode ${episode.number}`}
           </p>
-          <span
-            className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${status.accent}`}
-          >
+          <span className={`rounded-md border px-2 py-1 text-xs font-semibold ${status.accent}`}>
             {status.label}
           </span>
         </div>
@@ -142,7 +140,7 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
         <p className="mt-4 text-base leading-7 text-zinc-300">{episode.logline}</p>
 
         {episode.runtime ? (
-          <p className="mt-4 inline-flex items-center gap-1.5 text-xs text-zinc-500">
+          <p className="mt-4 inline-flex items-center gap-1.5 text-xs text-zinc-400">
             <Clock size={13} aria-hidden="true" />
             {episode.runtime}
           </p>
@@ -193,22 +191,20 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
 
           <div className="markdown-body p-6">
             {isLoading ? (
-              <p className="text-sm text-zinc-500">Loading…</p>
+              <p className="text-sm text-zinc-400">Loading…</p>
             ) : markdown ? (
               <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
                 {markdown}
               </ReactMarkdown>
             ) : (
-              <p className="text-sm text-zinc-500">This document could not be loaded.</p>
+              <p className="text-sm text-zinc-400">This document could not be loaded.</p>
             )}
           </div>
         </div>
       ) : null}
 
       <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">
-          Source files
-        </p>
+        <p className="text-sm font-semibold text-zinc-400">Source files</p>
         <ul className="mt-3 space-y-2">
           {fileEntries.map(([key, path]) => (
             <li key={key}>
@@ -219,7 +215,7 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
                 className="inline-flex items-center gap-1.5 text-sm text-zinc-300 transition hover:text-orange-300"
               >
                 <ExternalLink size={13} aria-hidden="true" />
-                {fileLabels[key]} — <span className="text-zinc-500">{path}</span>
+                {fileLabels[key]} — <span className="text-zinc-400">{path}</span>
               </a>
             </li>
           ))}

@@ -29,6 +29,7 @@ import {
 import { firstCatalogItem } from '../lib/catalog';
 import { useEscapeKey } from '../hooks/useEscapeKey';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+import { useUrlParam } from '../hooks/useUrlState';
 
 import SongAudioPlayer from './SongAudioPlayer';
 
@@ -36,7 +37,11 @@ const allValue = 'all' as const;
 type TreatmentFilter = typeof allValue | DaisyFrameTreatment;
 
 export default function DaisyBell() {
-  const [treatment, setTreatment] = useState<TreatmentFilter>(allValue);
+  const [treatment, setTreatment] = useUrlParam<TreatmentFilter>('treatment', allValue, [
+    allValue,
+    'color',
+    'period',
+  ]);
   const [selected, setSelected] = useState<DaisyBellFrame>(
     firstCatalogItem(daisyBellFrames, 'daisy-bell'),
   );
@@ -63,7 +68,7 @@ export default function DaisyBell() {
       <header className="overflow-hidden rounded-xl border border-zinc-800 bg-gradient-to-br from-zinc-950 via-black to-emerald-950/30">
         <div className="grid gap-6 p-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(280px,0.8fr)] lg:p-8">
           <div>
-            <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300/90">
+            <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-300/90">
               <Flower2 size={14} />
               Musical cutaway · {daisyBellMeta.duo}
             </p>
@@ -75,27 +80,21 @@ export default function DaisyBell() {
             <p className="mt-3 max-w-2xl border-l-2 border-emerald-500/40 pl-3 text-sm leading-6 text-zinc-400">
               {daisyBellMeta.constant}
             </p>
-            <details className="mt-4 max-w-2xl rounded-md border border-zinc-800 bg-black/40 p-3 text-xs text-zinc-500">
+            <details className="mt-4 max-w-2xl rounded-md border border-zinc-800 bg-black/40 p-3 text-xs text-zinc-400">
               <summary className="cursor-pointer font-semibold text-zinc-300">
                 Prompt lock blocks (copy for re-rolls)
               </summary>
               <div className="mt-3 space-y-3">
                 <div>
-                  <p className="mb-1 font-semibold uppercase tracking-wider text-zinc-600">
-                    Subject
-                  </p>
+                  <p className="mb-1 font-semibold text-zinc-400">Subject</p>
                   <p className="leading-5 text-zinc-400">{daisyBellSubjectLock}</p>
                 </div>
                 <div>
-                  <p className="mb-1 font-semibold uppercase tracking-wider text-zinc-600">
-                    Stylish 1890–96
-                  </p>
+                  <p className="mb-1 font-semibold text-zinc-400">Stylish 1890–96</p>
                   <p className="leading-5 text-zinc-400">{daisyBellStylish1890s}</p>
                 </div>
                 <div>
-                  <p className="mb-1 font-semibold uppercase tracking-wider text-zinc-600">
-                    Working class
-                  </p>
+                  <p className="mb-1 font-semibold text-zinc-400">Working class</p>
                   <p className="leading-5 text-zinc-400">{daisyBellWorking1890s}</p>
                 </div>
               </div>
@@ -118,20 +117,18 @@ export default function DaisyBell() {
           </div>
 
           <div className="flex flex-col justify-center gap-3 rounded-lg border border-zinc-800 bg-black/50 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">Track</p>
+            <p className="text-sm font-semibold text-zinc-400">Track</p>
             {daisyBellAudioFile ? (
               <SongAudioPlayer audioFile={daisyBellAudioFile} title={daisyBellMeta.title} />
             ) : (
-              <p className="text-sm text-zinc-500">
+              <p className="text-sm text-zinc-400">
                 Audio file not found (expected Daisy+Bell.mp3).
               </p>
             )}
 
             <div className="rounded-md border border-emerald-500/25 bg-emerald-500/5 p-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300/90">
-                Timed slideshow
-              </p>
-              <p className="mt-1.5 text-xs leading-5 text-zinc-400">
+              <p className="text-sm font-semibold text-emerald-300/90">Timed slideshow</p>
+              <p className="mt-1.5 text-sm leading-6 text-zinc-400">
                 Stills cut to the full song (~4:20) from the energy cue map. Hosted on test.1ink.us
                 — not in the git repo.
               </p>
@@ -147,13 +144,13 @@ export default function DaisyBell() {
               </a>
               <a
                 href={daisyBellMeta.slideshowUrl}
-                className="mt-2 block truncate text-center text-[11px] text-zinc-500 underline-offset-2 hover:text-zinc-300 hover:underline"
+                className="mt-2 block truncate text-center text-xs text-zinc-400 underline-offset-2 hover:text-zinc-300 hover:underline"
               >
                 {daisyBellMeta.slideshowUrl}
               </a>
             </div>
 
-            <p className="text-xs leading-5 text-zinc-500">
+            <p className="text-sm leading-6 text-zinc-400">
               Concept notes: <code className="text-zinc-400">{daisyBellMeta.conceptFile}</code>
             </p>
           </div>
@@ -162,7 +159,7 @@ export default function DaisyBell() {
 
       {/* Sequence */}
       <section>
-        <h3 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+        <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
           <Film size={14} />
           Core sequence
         </h3>
@@ -183,15 +180,13 @@ export default function DaisyBell() {
             return (
               <li key={beat.id} className="rounded-lg border border-zinc-800 bg-zinc-950/90 p-4">
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-semibold text-zinc-500">Step {beat.step}</span>
-                  <span
-                    className={`rounded-md border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${accent}`}
-                  >
+                  <span className="text-xs font-semibold text-zinc-400">Step {beat.step}</span>
+                  <span className={`rounded-md border px-2 py-0.5 text-xs font-semibold ${accent}`}>
                     {label}
                   </span>
                 </div>
                 <p className="mt-2 font-medium text-zinc-100">{beat.title}</p>
-                <p className="mt-1.5 text-sm leading-6 text-zinc-500">{beat.summary}</p>
+                <p className="mt-1.5 text-sm leading-6 text-zinc-400">{beat.summary}</p>
               </li>
             );
           })}
@@ -202,7 +197,7 @@ export default function DaisyBell() {
       <section className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
         <div className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h3 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
+            <h3 className="flex items-center gap-2 text-sm font-semibold text-zinc-400">
               <ImageIcon size={14} />
               Keyframe board
             </h3>
@@ -279,24 +274,22 @@ export default function DaisyBell() {
                                 : 'text-emerald-700/80'
                             }
                           />
-                          <p className="text-xs text-zinc-500">Prompt ready · still not linked</p>
+                          <p className="text-xs text-zinc-400">Prompt ready · still not linked</p>
                         </div>
                       )}
                       <span
-                        className={`absolute left-2 top-2 rounded border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${meta.accent}`}
+                        className={`absolute left-2 top-2 rounded border px-2 py-0.5 text-xs font-semibold ${meta.accent}`}
                       >
                         {meta.short}
                       </span>
-                      <span className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-[10px] font-medium text-zinc-300">
+                      <span className="absolute bottom-2 right-2 rounded bg-black/70 px-2 py-0.5 text-xs font-medium text-zinc-300">
                         #{frame.order}
                       </span>
                     </div>
                     <div className="p-3">
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                        {frame.beat}
-                      </p>
+                      <p className="text-xs font-semibold text-zinc-400">{frame.beat}</p>
                       <h4 className="mt-1 text-sm font-semibold text-white">{frame.title}</h4>
-                      <p className="mt-1 line-clamp-2 text-xs leading-5 text-zinc-500">
+                      <p className="mt-1 line-clamp-2 text-sm leading-6 text-zinc-400">
                         {frame.description}
                       </p>
                     </div>
@@ -307,7 +300,7 @@ export default function DaisyBell() {
           </div>
 
           {frames.length === 0 && (
-            <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-8 text-center text-zinc-500">
+            <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-8 text-center text-zinc-400">
               No keyframes for this filter.
             </div>
           )}
@@ -316,9 +309,7 @@ export default function DaisyBell() {
         {/* Workspace */}
         <aside className="lg:sticky lg:top-6 lg:self-start">
           <div className="rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-orange-300">
-              {selected.beat}
-            </p>
+            <p className="text-sm font-semibold text-orange-300">{selected.beat}</p>
             <h3 className="mt-2 text-xl font-semibold text-white">{selected.title}</h3>
             <span
               className={`mt-3 inline-flex rounded-md border px-2.5 py-1 text-xs font-semibold ${
@@ -328,7 +319,7 @@ export default function DaisyBell() {
               {daisyTreatmentMeta[selected.treatment].label}
             </span>
             <p className="mt-3 text-sm leading-6 text-zinc-400">{selected.description}</p>
-            <p className="mt-2 text-xs leading-5 text-zinc-600">
+            <p className="mt-2 text-sm leading-6 text-zinc-400">
               {daisyTreatmentMeta[selected.treatment].description}
             </p>
 
@@ -345,9 +336,7 @@ export default function DaisyBell() {
 
             <div className="mt-5">
               <div className="mb-2 flex items-center justify-between gap-2">
-                <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-                  Generate prompt
-                </h4>
+                <h4 className="text-sm font-semibold text-zinc-400">Generate prompt</h4>
                 <button
                   type="button"
                   onClick={() =>
@@ -359,7 +348,7 @@ export default function DaisyBell() {
                   {copiedKey === `${selected.id}:prompt` ? 'Copied' : 'Copy'}
                 </button>
               </div>
-              <pre className="max-h-56 overflow-auto rounded-md border border-zinc-800 bg-black/80 p-3 text-xs leading-5 text-zinc-300 whitespace-pre-wrap">
+              <pre className="max-h-56 overflow-auto rounded-md border border-zinc-800 bg-black/80 p-3 text-sm leading-6 text-zinc-300 whitespace-pre-wrap">
                 {selected.prompt}
               </pre>
             </div>
@@ -374,7 +363,7 @@ export default function DaisyBell() {
                 Open still
               </button>
             ) : (
-              <p className="mt-4 rounded-md border border-dashed border-zinc-800 bg-black/40 p-3 text-xs leading-5 text-zinc-500">
+              <p className="mt-4 rounded-md border border-dashed border-zinc-800 bg-black/40 p-3 text-sm leading-6 text-zinc-400">
                 After generating, save under{' '}
                 <code className="text-zinc-400">images/daisy-bell/</code> and set{' '}
                 <code className="text-zinc-400">imageUrl</code> on this frame in{' '}
@@ -387,9 +376,7 @@ export default function DaisyBell() {
 
       {/* Street sights */}
       <section>
-        <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-zinc-500">
-          Strange sights on the ride
-        </h3>
+        <h3 className="mb-3 text-sm font-semibold text-zinc-400">Strange sights on the ride</h3>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {daisyBellSights.map((sight) => (
             <article
@@ -397,12 +384,10 @@ export default function DaisyBell() {
               className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4"
             >
               {sight.lyricCue && (
-                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-400/80">
-                  “{sight.lyricCue}”
-                </p>
+                <p className="text-xs font-semibold text-emerald-400/80">“{sight.lyricCue}”</p>
               )}
               <h4 className="mt-1.5 text-sm font-semibold text-zinc-100">{sight.title}</h4>
-              <p className="mt-1.5 text-sm leading-6 text-zinc-500">{sight.description}</p>
+              <p className="mt-1.5 text-sm leading-6 text-zinc-400">{sight.description}</p>
             </article>
           ))}
         </div>
@@ -456,9 +441,7 @@ function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps
             />
           ) : (
             <div className="flex min-h-[240px] flex-col justify-center gap-3 p-8">
-              <p
-                className={`text-xs font-semibold uppercase tracking-[0.2em] ${meta.accent.split(' ').pop() ?? ''}`}
-              >
+              <p className={`text-sm font-semibold ${meta.accent.split(' ').pop() ?? ''}`}>
                 {meta.label}
               </p>
               <p className="text-sm leading-7 text-zinc-400">{frame.prompt}</p>
@@ -466,9 +449,7 @@ function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps
           )}
         </div>
         <div className="overflow-auto rounded-lg border border-zinc-800 bg-zinc-950 p-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            {frame.beat}
-          </p>
+          <p className="text-sm font-semibold text-zinc-400">{frame.beat}</p>
           <h3 className="mt-2 text-xl font-semibold text-white">{frame.title}</h3>
           <p className="mt-3 text-sm leading-6 text-zinc-400">{frame.description}</p>
           <button
@@ -479,7 +460,7 @@ function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps
             {copiedKey === `${frame.id}:lb` ? <Check size={14} /> : <Copy size={14} />}
             {copiedKey === `${frame.id}:lb` ? 'Copied' : 'Copy prompt'}
           </button>
-          <pre className="mt-3 max-h-64 overflow-auto rounded-md border border-zinc-800 bg-black/80 p-3 text-xs leading-5 text-zinc-400 whitespace-pre-wrap">
+          <pre className="mt-3 max-h-64 overflow-auto rounded-md border border-zinc-800 bg-black/80 p-3 text-sm leading-6 text-zinc-400 whitespace-pre-wrap">
             {frame.prompt}
           </pre>
         </div>

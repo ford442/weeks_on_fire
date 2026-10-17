@@ -1,0 +1,23 @@
+{
+  "id": "napkin-geyser",
+  "title": "Extra Napkins",
+  "premise": "The pizza guy says, 'Extra napkins are in the bag.' He unzips it. Napkins blast out like a confetti cannon and fill the hallway to the ceiling. He walks off. Lillith and Rubella are two heads above a napkin sea.",
+  "visual": "Apartment doorway. The pizza guy in his red uniform and cap holds an insulated bag erupting a white fountain of napkins. The hall is chin-deep in napkins. Lillith and Rubella are just two heads and one pizza box above the white drift, perfectly flat. He is checking his phone.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Callback: 'Extra napkins are in the bag.' (always said, always true). Pizza Guy never flinches and never looks at it. The Two never react. The world is the silly part.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "callback",
+    "pizza-guy",
+    "the-two",
+    "napkins",
+    "escalation"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: an apartment hallway doorway at night, a delivery man in a plain red pizza uniform and red cap with an illegible name tag holding an insulated pizza bag that is erupting a huge fountain of white paper napkins like a confetti cannon, napkins raining down everywhere, the hallway filled chin-deep with a white drift of napkins, two calm women with long jet-black hair, black lace dresses and red lips, faces completely flat and unbothered, only their heads and one pizza box poking up above the napkin sea, the delivery man calmly looking down at his phone at chest height, not looking at the eruption, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Knock knock knock. He says the line, unzips. FOOMP. Napkins fill the frame. He tips his cap and wades out. The Two blink once. One napkin lands on top of the pizza box.",
+  "notes": "Locks: he never reacts, never runs, name tag stays illegible, phone reads 23% if it is visible. The line is said plain. It is not a punchline read, the napkins are.",
+  "agent": "claude"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cat-fence-chain",
+  "title": "One Little Push",
+  "premise": "The black cat on the fence pushes one flowerpot off. It hits a rake, which fires a hose, which sprays the dog through the laundry line. The dog comes out wearing a frilly dress. The cat never moves.",
+  "visual": "Backyard aftermath. A shaggy dog tangled in the laundry line wearing a pink frilly dress, a sock on its tail and underpants on its head. A spraying hose, a flipped rake, a broken flowerpot. On the fence, the black cat sits with one paw still out.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Black cat callback: the cat is the silent witness and never changes expression. This is the one time it causes something.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "callback",
+    "black-cat",
+    "chain-reaction",
+    "dog",
+    "slapstick"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a suburban backyard in chaos, a broken clay flowerpot on the grass, a garden rake flipped up into the air, a green garden hose whipping and spraying water in an arc, a big shaggy brown dog soaking wet and tangled in a sagging laundry line, wearing a pink frilly dress, a striped sock on its tail and white underpants on its head, tongue out and delighted, on top of the wooden fence a sleek black cat sitting perfectly still with one front paw still raised in the air, half-lidded unimpressed yellow eyes, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Paw tap. Pot falls. Rake flips. Hose fires. Dog sprints through the laundry. Dog sits, proudly dressed. Cat slowly lowers the paw.",
+  "notes": "Chain should take under 4 seconds so it fits the loop. The dog loves the dress. The cat's face is the same in every frame.",
+  "agent": "claude"
+}

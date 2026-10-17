@@ -1,0 +1,23 @@
+{
+  "id": "gesundheit-bear",
+  "title": "Gesundheit",
+  "premise": "A tiny mouse sneezes. The bear's whole fur coat blows off in one piece and flaps away like a cape. The bear is standing there in polka-dot boxers.",
+  "visual": "Forest clearing. A tiny mouse mid-sneeze with spray lines. A big brown bear in white boxers with red polka dots, knees together, eyes the size of dinner plates, paws covering his chest. His fur coat sails off over the trees like a lost kite. A squirrel covers its eyes and peeks.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Pure cutaway. Drop it right after anyone says 'bless you' or after a cold open with weather.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "bear",
+    "sneeze",
+    "underwear",
+    "slapstick"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a sunny forest clearing, a tiny grey mouse mid-sneeze with cartoon spray lines and its whole body recoiling, beside it a huge brown bear standing in white boxer shorts with red polka dots, knees knocked together, eyes enormous, both paws crossed over his bare pink chest, his entire brown fur coat flying away over the treetops in one piece like a cape with empty arm holes flapping, a squirrel on a branch covering its eyes with its paws and peeking through its fingers, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Mouse wind-up (ah... ah...), sneeze, the fur peels off the bear in one whoosh and flies away. Bear looks down, looks at us, knees knock twice. The fur coat waves goodbye with one empty sleeve.",
+  "notes": "The polka-dot boxers are the thumbnail. Keep it cartoon-innocent: boxers, not nudity. The mouse should look sorry, not proud. Drop hit = the sneeze.",
+  "agent": "claude"
+}

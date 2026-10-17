@@ -1,0 +1,23 @@
+{
+  "id": "perfect-ten",
+  "title": "Perfect Ten",
+  "premise": "A whale in a swim cap belly-flops off the high dive. The splash empties the pool onto the judges. All three hold up 10.",
+  "visual": "Diving competition. A dripping judges' table. A pelican, a turtle and a goldfish in a bowl, completely soaked, holding up scorecards: 10, 10, 10. In the empty pool behind them, a whale in a flowered swim cap waves.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Pairs with the walrus slide if you want a water-park episode cluster.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "whale",
+    "diving",
+    "splash",
+    "sports"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: an indoor diving competition, a judges' table dripping with water, three completely soaked judges, a pelican, a turtle in glasses and a goldfish in a bowl with a bow tie, each holding up a white scorecard with a big number 10, seaweed hanging from the pelican's beak, behind them an empty swimming pool with a big blue whale lying on the bottom in a flowered swim cap waving happily, water still pouring down from the ceiling, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Whale on the high board. Bounce, bounce. Belly flop. Wall of water. Cut to the soaked judges. Beat. Cards up: 10, 10, 10.",
+  "notes": "If the numbers render badly, use three gold stars instead of 10s.",
+  "agent": "claude"
+}

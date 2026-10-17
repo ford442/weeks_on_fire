@@ -36,7 +36,8 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
 **`content/`** — Cutaways, gallery, characters, staff, episodes, cartoons, sequences, Daisy Bell JSON.  
-**`songs/`** — YAML-frontmatter markdown + optional mp3.  
+**`songs/`** — YAML-frontmatter markdown + optional mp3. Frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches (not codegen'd).  
+**`characters/bible/`** — Canon cast sheets (voice, backstory, tone rules); `content/characters.json` links via `bibleSheet`.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  
 **`prompts/`** — Segment / Grok Imagine prompt docs (`segmentsSource`).  
 **`notes/`** — Scratchpad and suggestion templates. `notes/scenes/versions/` is prose dialog audition (not codegen).  
@@ -70,7 +71,7 @@ See `content/README.md`. Typical path:
 2. `npm run codegen`
 3. Commit sources and generated TS
 
-Staff bios: `content/staff.json`.  
+Staff bios: `content/staff.json` (longer crew sheets in `docs/crew/`).  
 **Do not** invent `srt-tools.py` or `update-index.py` — they do not exist.
 
 ## Python helpers (real)

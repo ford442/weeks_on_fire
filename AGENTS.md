@@ -142,7 +142,7 @@ There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 2. `npm run codegen` (and `npm run agent-docs` if views/catalog summaries should change).
 3. Commit sources **and** regenerated `src/data/generated/*` / `public/llms*.txt` as needed.
 
-Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
+Song frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches and is not codegen'd. Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 
 Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote.
 
@@ -175,6 +175,7 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 - **Media**: prefer external hosting for large video; some stills and mp3s are already in-repo. Do not add large binaries without approval.
 - **No secrets** in the repo. `xai-generate.py` and `deploy_storage.py` read env vars.
 - **Python** stays stdlib-only (`scripts/deploy_storage.py` is the one legacy exception: it needs `requests`).
+- `git.sh` commits with the hard-coded message `"push fix"` — prefer a descriptive `git commit`.
 
 ---
 

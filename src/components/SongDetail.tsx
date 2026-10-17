@@ -1,7 +1,10 @@
 import { Check, Copy, FileText, Music2, Tags } from 'lucide-react';
-import type { Song } from '../data/songs';
+
 import { formatSongDate } from '../lib/songDate';
+
 import SongAudioPlayer from './SongAudioPlayer';
+
+import type { Song } from '../data/songs';
 
 interface SongDetailProps {
   song: Song;

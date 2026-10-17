@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { ExternalLink, Search, UserCircle } from 'lucide-react';
+
 import { seriesCharacters, type SeriesCharacter } from '../data/characters';
 import { firstCatalogItem } from '../lib/catalog';
 

@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Clock, Edit2, Film, Loader2, Plus, Download } from 'lucide-react';
+
+import { flattenTimeline, statusColors } from '../data/production';
+
 import type {
   EpisodeId,
   EpisodeProduction,
   ProductionScene,
   SceneStatus,
 } from '../data/production';
-import { flattenTimeline, statusColors } from '../data/production';
 import type { SyncStatus } from '../hooks/useEpisodeProduction';
 
 interface SceneTimelineProps {

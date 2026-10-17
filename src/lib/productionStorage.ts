@@ -1,5 +1,6 @@
-import type { EpisodeProduction } from '../data/production';
 import { PRODUCTION_STORAGE_SCHEMA_VERSION, parseStoredProduction } from '../schemas/production';
+
+import type { EpisodeProduction } from '../data/production';
 
 function storageKey(episode: string): string {
   return `wof:production:episode-${episode}`;

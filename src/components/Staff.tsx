@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Quote, Users } from 'lucide-react';
+
 import { staffMembers, type StaffMember } from '../data/staff';
 import { firstCatalogItem } from '../lib/catalog';
 

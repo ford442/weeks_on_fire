@@ -1,4 +1,4 @@
-import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
+import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
 import {
   createBox,
   createCylinder,
@@ -8,6 +8,7 @@ import {
   writePoints,
 } from '../../lib/webgl/mesh';
 import { createMat4, DEG, identity, lookAt, perspective, type Vec3 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 interface StillLife {
@@ -110,7 +111,7 @@ export function createKitchenCounterOrbit(): SequenceScene {
     },
     dispose() {
       if (!meshes) return;
-      for (const mesh of Object.values(meshes)) mesh.dispose();
+      disposeMeshes(meshes);
       meshes = null;
     },
   };

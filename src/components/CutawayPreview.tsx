@@ -1,7 +1,9 @@
 import { Pause, Play, SkipBack, SkipForward, Sparkles } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import type { CutawaySegment } from '../data/suggestions';
+
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+
+import type { CutawaySegment } from '../data/suggestions';
 
 const MIN_DWELL_SEC = 2.5;
 const COLOR_WHIP_DIALECTS = [

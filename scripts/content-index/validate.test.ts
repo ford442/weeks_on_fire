@@ -1,24 +1,26 @@
 import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { loadCartoons, loadSequences } from './load';
-import type { ParsedSong } from './load';
 import { SequenceGraphSchema } from './graph-schema';
 import { SequenceSchema } from './schemas';
-import type {
-  CartoonRecord,
-  CutawayRecord,
-  SequenceRecord,
-  SeriesCharacterRecord,
-} from './schemas';
 import {
   validateContent,
   validateCartoons,
   validateCharacters,
   validateSequences,
 } from './validate';
+
+import type {
+  CartoonRecord,
+  CutawayRecord,
+  SequenceRecord,
+  SeriesCharacterRecord,
+} from './schemas';
+import type { ParsedSong } from './load';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {

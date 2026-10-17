@@ -1,10 +1,13 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Headphones, Search, SlidersHorizontal } from 'lucide-react';
+
 import { linkedAudioFilenames, songs, type Song } from '../data/songs';
 import { firstCatalogItem } from '../lib/catalog';
 import { getUnlistedTracks } from '../lib/songAudio';
 import { formatSongDate } from '../lib/songDate';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+
 import SongAudioPlayer from './SongAudioPlayer';
 import SongDetail from './SongDetail';
 
@@ -30,7 +33,7 @@ export default function Songs() {
   const [hasAudio, setHasAudio] = useState(false);
   const [instrumentalOnly, setInstrumentalOnly] = useState(false);
   const [sort, setSort] = useState<SongSort>(hasAddedDates ? 'added-desc' : 'title');
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
 
   const unlistedTracks = useMemo(() => getUnlistedTracks(linkedAudioFilenames), []);
 
@@ -41,7 +44,7 @@ export default function Songs() {
         setSelected(song);
         return;
       }
-      navigate('/songs', { replace: true });
+      void navigate('/songs', { replace: true });
       return;
     }
 
@@ -84,19 +87,9 @@ export default function Songs() {
 
   const selectSong = (song: Song) => {
     setSelected(song);
-    navigate(`/songs/${song.id}`);
+    void navigate(`/songs/${song.id}`);
     if (!window.matchMedia('(min-width: 1024px)').matches) {
       workspaceRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
     }
   };
 

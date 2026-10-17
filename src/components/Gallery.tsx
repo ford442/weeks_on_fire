@@ -1,7 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Copy, ImageIcon, PanelRightClose, PanelRightOpen, Search } from 'lucide-react';
+
 import { filmScenes, imageKindMeta, type FilmScene, type ImageKind } from '../data/films';
 import { firstCatalogItem } from '../lib/catalog';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
 
@@ -15,7 +18,7 @@ export default function Gallery() {
   const [theme, setTheme] = useState(allValue);
   const [imageKind, setImageKind] = useState<typeof allValue | ImageKind>(allValue);
   const [showWorkspace, setShowWorkspace] = useState(false);
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
 
   const kindCounts = useMemo(() => {
     const counts: Record<ImageKind, number> = { scene: 0, suggestion: 0, test: 0, character: 0 };
@@ -62,16 +65,6 @@ export default function Gallery() {
       );
     });
   }, [episode, imageKind, query, theme]);
-
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
-    }
-  };
 
   const openItem = (scene: FilmScene) => {
     setSelected(scene);

@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+
 import type { CutawaySegmentRecord } from '../schemas';
 
 function parseTimeToSeconds(value: string): number {

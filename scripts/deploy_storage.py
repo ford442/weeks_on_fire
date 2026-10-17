@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-project_deploy_template.py
+deploy_storage.py
 
-Copy this file into your project as `deploy.py` (or deploy_contabo.py).
-Customize the constants at the top for your project.
+Optional manual deploy of `dist/` to the maintainer's storage VPS (not used by CI, which
+deploys to GitHub Pages). Needs `DEPLOY_TOKEN`.
 
 Usage:
-  1. Build your project:  npm run build   (or python build, etc.)
-  2. python deploy.py
+  1. Build the hub:  npm run build
+  2. python3 scripts/deploy_storage.py
 
 This script contacts https://storage.noahcohn.com (your Contabo storage manager)
 to upload your entire build as a single zip archive.  The server extracts it and
@@ -16,7 +16,7 @@ files individually.
 
 Actual FTP/SFTP credentials never leave the VPS.
 
-Requirements:
+Requirements (the one exception to the stdlib-only rule in scripts/README.md):
   pip install requests
 """
 

@@ -50,10 +50,15 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 npm run dev
 npm run codegen          # content/ + songs/ → src/data/generated/
 npm run agent-docs       # public/llms*.txt + sitemap.xml
-npm run lint             # ESLint: src/ and scripts/
+npm run codegen:check    # read-only drift check (also: agent-docs:check)
+npm run lint             # type-aware ESLint: src/ and scripts/
 npm run format
-npm run build            # codegen + agent-docs + tsc -b + vite
+npm run test             # Vitest (node for libs, jsdom for src/components/**)
+npm run test:coverage    # v8 coverage, no threshold yet
+npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
 ```
+
+Use Node 22 (`.nvmrc`).
 
 `tsc -b` includes `tsconfig.scripts.json` so codegen is typechecked. App `tsconfig` enables `noUncheckedIndexedAccess` and `verbatimModuleSyntax`.
 

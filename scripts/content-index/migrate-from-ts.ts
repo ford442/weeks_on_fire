@@ -1,5 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
 import { formatFrontmatter } from './parsers/frontmatter';
 
@@ -201,7 +202,7 @@ function migrateCutaways() {
   for (const cutaway of all) {
     writeFileSync(
       join(cutawaysDir, `${String(cutaway.id)}.json`),
-      `${JSON.stringify(serializeCutaway(cutaway as Record<string, unknown>), null, 2)}\n`,
+      `${JSON.stringify(serializeCutaway(cutaway), null, 2)}\n`,
     );
   }
 }

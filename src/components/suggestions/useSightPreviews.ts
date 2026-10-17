@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { CutawaySuggestion, SightCandidate } from '../../data/suggestions';
+
 import {
   allValue,
   endingSlot,
@@ -10,6 +10,8 @@ import {
   segmentLetter,
   slotLane,
 } from './sightSlots';
+
+import type { CutawaySuggestion, SightCandidate } from '../../data/suggestions';
 
 /** Sight-bank preview state for the selected cutaway: slot → sight assignments, persisted per cutaway. */
 export function useSightPreviews(

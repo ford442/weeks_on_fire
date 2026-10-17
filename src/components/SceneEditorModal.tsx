@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { X, Save } from 'lucide-react';
-import type { ProductionScene, SceneStatus } from '../data/production';
+
+import { useEscapeKey } from '../hooks/useEscapeKey';
 import { appendSceneHistory, updateSceneStatus } from '../data/production';
+
+import type { ProductionScene, SceneStatus } from '../data/production';
 
 interface SceneEditorModalProps {
   scene: ProductionScene | null;
@@ -29,6 +32,7 @@ function SceneEditorModalContent({
   onClose,
   onSave,
 }: SceneEditorModalProps & { scene: ProductionScene }) {
+  useEscapeKey(onClose);
   const [title, setTitle] = useState(scene.title);
   const [timestamp, setTimestamp] = useState(scene.timestamp);
   const [description, setDescription] = useState(scene.description);
@@ -72,11 +76,16 @@ function SceneEditorModalContent({
   return (
     <div
       className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4"
-      onClick={onClose}
+      role="presentation"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
     >
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={isNew ? 'New scene' : 'Edit scene'}
         className="w-full max-w-2xl rounded-xl border border-zinc-700 bg-zinc-950 shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between border-b border-zinc-800 px-5 py-3">
           <div>
@@ -86,6 +95,8 @@ function SceneEditorModalContent({
             <div className="text-lg font-semibold text-white">{title || 'Untitled Scene'}</div>
           </div>
           <button
+            type="button"
+            aria-label="Close editor"
             onClick={onClose}
             className="rounded p-1 text-zinc-400 hover:bg-zinc-900 hover:text-white"
           >

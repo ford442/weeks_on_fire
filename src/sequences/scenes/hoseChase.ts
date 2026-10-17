@@ -1,4 +1,4 @@
-import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
+import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
 import {
   createBox,
   createCylinder,
@@ -16,6 +16,7 @@ import {
   smoothstep,
   type Vec3,
 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 interface Puppet {
@@ -231,7 +232,7 @@ export function createHoseChase(): SequenceScene {
     },
     dispose() {
       if (!puppet) return;
-      for (const mesh of Object.values(puppet)) mesh.dispose();
+      disposeMeshes(puppet);
       puppet = null;
     },
   };

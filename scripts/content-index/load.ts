@@ -1,5 +1,6 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+
 import {
   SongFrontmatterSchema,
   CutawaySchema,
@@ -15,6 +16,7 @@ import { SequenceGraphSchema } from './graph-schema';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
+
 import type {
   CutawayRecord,
   CutawaySegmentRecord,
@@ -41,6 +43,20 @@ export interface ParsedSong {
   stylePrompt: string;
   lyrics: string | null;
   notes: string | null;
+}
+
+function readJson(path: string): unknown {
+  return JSON.parse(readFileSync(path, 'utf8')) as unknown;
+}
+
+/** Reads a catalog file that is either a bare array or `{ [key]: [...] }`. */
+function readList(path: string, key: string): unknown[] {
+  const raw = readJson(path);
+  const list = Array.isArray(raw) ? (raw as unknown[]) : (raw as Record<string, unknown>)[key];
+  if (!Array.isArray(list)) {
+    throw new Error(`${path}: expected an array or an object with a "${key}" array`);
+  }
+  return list as unknown[];
 }
 
 export function loadSongs(repoRoot: string): ParsedSong[] {
@@ -80,7 +96,7 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
     .sort();
 
   return files.map((file) => {
-    const raw = JSON.parse(readFileSync(join(cutawaysDir, file), 'utf8'));
+    const raw = readJson(join(cutawaysDir, file));
     const record = CutawaySchema.parse(raw);
 
     let segments: CutawaySegmentRecord[] = record.segments ?? [];
@@ -117,34 +133,29 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
 }
 
 export function loadGallery(repoRoot: string): FilmSceneRecord[] {
-  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/gallery.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.scenes).map((item: unknown) =>
+  return readList(join(repoRoot, 'content/gallery.json'), 'scenes').map((item) =>
     FilmSceneSchema.parse(item),
   );
 }
 
 export function loadCharacters(repoRoot: string): SeriesCharacterRecord[] {
-  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/characters.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.characters).map((item: unknown) =>
+  return readList(join(repoRoot, 'content/characters.json'), 'characters').map((item) =>
     SeriesCharacterSchema.parse(item),
   );
 }
 
 export function loadDaisyBell(repoRoot: string): DaisyBellRecord {
-  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/daisy-bell.json'), 'utf8'));
-  return DaisyBellSchema.parse(raw);
+  return DaisyBellSchema.parse(readJson(join(repoRoot, 'content/daisy-bell.json')));
 }
 
 export function loadStaff(repoRoot: string): StaffMemberRecord[] {
-  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/staff.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.staff).map((item: unknown) =>
+  return readList(join(repoRoot, 'content/staff.json'), 'staff').map((item) =>
     StaffMemberSchema.parse(item),
   );
 }
 
 export function loadEpisodes(repoRoot: string): EpisodeRecord[] {
-  const raw = JSON.parse(readFileSync(join(repoRoot, 'content/episodes.json'), 'utf8'));
-  return (Array.isArray(raw) ? raw : raw.episodes).map((item: unknown) =>
+  return readList(join(repoRoot, 'content/episodes.json'), 'episodes').map((item) =>
     EpisodeSchema.parse(item),
   );
 }
@@ -160,7 +171,7 @@ export function loadCartoons(repoRoot: string): CartoonRecord[] {
     .sort();
 
   return files.map((file) => {
-    const raw = JSON.parse(readFileSync(join(cartoonsDir, file), 'utf8'));
+    const raw = readJson(join(cartoonsDir, file));
     const record = CartoonSchema.parse(raw);
     const expectedId = file.replace(/\.json$/, '');
     if (record.id !== expectedId) {
@@ -189,7 +200,7 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
 
   return recordFiles
     .map((file) => {
-      const raw = JSON.parse(readFileSync(join(sequencesDir, file), 'utf8'));
+      const raw = readJson(join(sequencesDir, file));
       const record = SequenceSchema.parse(raw);
       const expectedId = file.replace(/\.json$/, '');
       if (record.id !== expectedId) {
@@ -201,12 +212,10 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
           throw new Error(`Sequence ${record.id} has both a graph key and ${graphFile}`);
         }
         try {
-          record.graph = SequenceGraphSchema.parse(
-            JSON.parse(readFileSync(join(sequencesDir, graphFile), 'utf8')),
-          );
+          record.graph = SequenceGraphSchema.parse(readJson(join(sequencesDir, graphFile)));
         } catch (error) {
           throw new Error(
-            `Invalid ${graphFile}: ${error instanceof Error ? error.message : error}`,
+            `Invalid ${graphFile}: ${error instanceof Error ? error.message : String(error)}`,
             { cause: error },
           );
         }

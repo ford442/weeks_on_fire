@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Box, Check, Copy, Search, Sparkles } from 'lucide-react';
 
-import SequencePlayer from './SequencePlayer';
 import {
   sequences,
   sequenceMediumMeta,
@@ -10,6 +9,9 @@ import {
   type SequenceRecord,
 } from '../data/sequences';
 import { formatTimecode } from '../lib/timecode';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+
+import SequencePlayer from './SequencePlayer';
 
 const allValue = 'All';
 
@@ -20,7 +22,7 @@ export default function Sequences() {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [medium, setMedium] = useState<typeof allValue | SequenceMedium>(allValue);
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && sequences.some((sequence) => sequence.id === id) ? id : (sequences[0]?.id ?? ''),
   );
@@ -32,7 +34,7 @@ export default function Sequences() {
       setSelectedId(match.id);
       return;
     }
-    navigate('/sequences', { replace: true });
+    void navigate('/sequences', { replace: true });
   }, [id, navigate]);
 
   const filtered = useMemo(() => {
@@ -63,17 +65,7 @@ export default function Sequences() {
 
   const selectSequence = (sequence: SequenceRecord) => {
     setSelectedId(sequence.id);
-    navigate(`/sequences/${sequence.id}`);
-  };
-
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
-    }
+    void navigate(`/sequences/${sequence.id}`);
   };
 
   return (

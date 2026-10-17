@@ -91,7 +91,7 @@ Do **not** open root `index.html` with a plain static server — it is the Vite 
 
 ```bash
 export DEPLOY_TOKEN="your_token_from_vps_env"
-npm run build && python deploy.py
+npm run build && python3 scripts/deploy_storage.py   # needs `pip install requests`
 ```
 
 Uploads `dist/` as project `weeks-on-fire`. The deploy token must be set via environment variable — it is never stored in the repo. **Rotate the token on the VPS** if it was ever committed to a public repository.

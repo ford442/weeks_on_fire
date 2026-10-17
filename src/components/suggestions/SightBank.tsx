@@ -1,5 +1,6 @@
-import type { SightCandidate } from '../../data/suggestions';
 import { allValue } from './sightSlots';
+
+import type { SightCandidate } from '../../data/suggestions';
 
 export default function SightBank({
   sights,

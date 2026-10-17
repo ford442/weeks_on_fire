@@ -1,8 +1,10 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import type { EpisodeProduction } from '../data/production';
 import { PRODUCTION_STORAGE_SCHEMA_VERSION } from '../schemas/production';
+
 import { clearStored, loadStored, productionsEqual, saveStored } from './productionStorage';
+
+import type { EpisodeProduction } from '../data/production';
 
 function createMemoryStorage(): Storage {
   const store = new Map<string, string>();
@@ -19,7 +21,7 @@ function createMemoryStorage(): Storage {
     setItem: (key: string, value: string) => {
       store.set(key, value);
     },
-  } as Storage;
+  };
 }
 
 function fixtureProduction(): EpisodeProduction {

@@ -1,0 +1,23 @@
+{
+  "id": "hiccup-frog",
+  "title": "Hiccup Frog",
+  "premise": "Every hiccup bounces a frog higher off his lily pad. The last one bonks a goose right out of its flying V.",
+  "visual": "Pond at golden hour. A green frog shot straight up far above his lily pad, cheeks puffed, hands on belly, one round hiccup bubble popping at his mouth. Above him a V of geese with one goose knocked sideways, stars circling its head, feathers in the air.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Great as a rhythm gag on a track with three build hits and a drop. Hic, hic, HIC, bonk.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "frog",
+    "hiccups",
+    "escalation",
+    "bonk"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a lily pond at golden hour, a round green cartoon frog launched straight up high above his empty lily pad, cheeks puffed out, both hands holding his belly, a single round hiccup bubble popping at his mouth, motion lines below him back down to the pad, up in the sky a V-formation of grey geese with one goose knocked sideways out of line, stars and birdies circling its dazed head, three loose feathers drifting, the other geese looking back in shock, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Hic (small hop), hic (bigger), HIC (rockets out of frame). Beat of empty pond. Distant honk-bonk. Frog falls back and lands perfectly on the pad. Tiny final hic.",
+  "notes": "Sync the three hiccups to build hits and the bonk to the drop. The goose is fine, just dizzy.",
+  "agent": "claude"
+}

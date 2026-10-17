@@ -1,0 +1,23 @@
+{
+  "id": "flag-walk",
+  "title": "Walking the Owner",
+  "premise": "A Great Dane spots a squirrel. Its tiny owner flies straight out behind it on the leash, flapping like a flag.",
+  "visual": "Park path. A Great Dane mid-gallop after a squirrel. Behind it a small man in a suit and bow tie stretched perfectly straight in the air, holding the leash, flapping like a flag, cheeks rippling, hat flying away.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Pure cutaway. Use after anyone says they're in control of the situation.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "dog",
+    "park",
+    "wind",
+    "scale"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a park path with trees and a duck pond, a huge happy Great Dane galloping full speed after a squirrel running up a tree, behind it a small man in a brown suit and bow tie holding the leash with both hands, his whole body stretched perfectly straight out horizontally in the air flapping like a flag in the wind, cheeks rippling, his hat flying off behind him, pigeons scattering, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Calm walk. Squirrel. ZOOM. The man flaps behind like a flag on a pole. The dog stops at the tree. The man keeps going, wraps once around the tree, and hangs there.",
+  "notes": "Flag ripples should travel down his body like real fabric.",
+  "agent": "claude"
+}

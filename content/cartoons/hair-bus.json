@@ -1,0 +1,23 @@
+{
+  "id": "hair-bus",
+  "title": "The Hair Bus",
+  "premise": "A woman with a skyline-tall Big City hairdo stops at a bus stop. A little door opens in the hair. A line of pigeons boards. One late pigeon chases it down the street.",
+  "visual": "City bus stop. A woman from behind and to the side, blonde hair piled into a skyline with lit windows. A tiny door is open at the base. Pigeons in tiny hats with tiny briefcases hop in single file. The last pigeon sprints after her, feathers flying.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Big City callback: Glamora is a city made of hair. Use as B-roll for Big City or as a cutaway after 'that hair is in Big City, man.'",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "callback",
+    "big-city",
+    "hair",
+    "pigeons",
+    "city"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a city sidewalk bus stop with a bus-stop sign, a glamorous woman seen from behind and slightly to the side with long blonde hair piled up into an enormous skyline of tiny skyscrapers with lit windows, a tiny rounded door open at the base of the hair with a little step, a neat line of grey city pigeons wearing tiny hats and carrying tiny briefcases hopping up the step one by one, the last pigeon running late down the sidewalk with wings flapping and feathers flying, a commuter on the bench lowering his newspaper with his jaw dropped, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. She pulls up to the stop. Door hisses open. Pigeons board. Door shuts. She struts off. One pigeon chases, flapping, and catches it by leaping into a window.",
+  "notes": "Do not reuse an existing Big City hair-incident beat. No product, no Glam-Sham-Poo. She never notices the pigeons.",
+  "agent": "claude"
+}

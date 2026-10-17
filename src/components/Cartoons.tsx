@@ -9,6 +9,7 @@ import {
   type CartoonRecord,
   type CartoonStatus,
 } from '../data/cartoons';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 
 const allValue = 'All';
 
@@ -19,7 +20,7 @@ export default function Cartoons() {
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [status, setStatus] = useState<typeof allValue | CartoonStatus>(allValue);
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && cartoons.some((cartoon) => cartoon.id === id) ? id : (cartoons[0]?.id ?? ''),
   );
@@ -31,7 +32,7 @@ export default function Cartoons() {
       setSelectedId(match.id);
       return;
     }
-    navigate('/cartoons', { replace: true });
+    void navigate('/cartoons', { replace: true });
   }, [id, navigate]);
 
   const filtered = useMemo(() => {
@@ -62,17 +63,7 @@ export default function Cartoons() {
 
   const selectCartoon = (cartoon: CartoonRecord) => {
     setSelectedId(cartoon.id);
-    navigate(`/cartoons/${cartoon.id}`);
-  };
-
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
-    }
+    void navigate(`/cartoons/${cartoon.id}`);
   };
 
   return (

@@ -1,6 +1,5 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { execSync } from 'node:child_process';
+
 import {
   loadSongs,
   loadCutaways,
@@ -31,15 +30,11 @@ import {
   emitCartoonsModule,
   emitSequencesModule,
 } from './emit';
+import { syncOutputs } from './output';
 
 const repoRoot = join(import.meta.dirname, '../..');
 const generatedDir = join(repoRoot, 'src/data/generated');
 const checkMode = process.argv.includes('--check');
-
-function writeGenerated(name: string, contents: string) {
-  mkdirSync(generatedDir, { recursive: true });
-  writeFileSync(join(generatedDir, name), contents);
-}
 
 function main() {
   const songs = loadSongs(repoRoot);
@@ -58,39 +53,31 @@ function main() {
   validateCharacters(repoRoot, characters);
   validateSequences(repoRoot, sequences, loadCustomRendererIds(repoRoot));
 
-  writeGenerated('songs.ts', emitSongsModule(songs));
-  writeGenerated(
-    'cutaways.ts',
-    emitCutawaysModule(
+  const outputs = {
+    'songs.ts': emitSongsModule(songs),
+    'cutaways.ts': emitCutawaysModule(
       cutaways.map((cutaway) => ({
         ...cutaway,
         segments: cutaway.segments ?? [],
       })),
     ).code,
-  );
-  writeGenerated('gallery.ts', emitGalleryModule(gallery));
-  writeGenerated('characters.ts', emitCharactersModule(characters));
-  writeGenerated('daisy-bell.ts', emitDaisyBellModule(daisyBell));
-  writeGenerated('staff.ts', emitStaffModule(staff));
-  writeGenerated('episodes.ts', emitEpisodesModule(episodes));
-  writeGenerated('cartoons.ts', emitCartoonsModule(cartoons));
-  writeGenerated('sequences.ts', emitSequencesModule(sequences));
+    'gallery.ts': emitGalleryModule(gallery),
+    'characters.ts': emitCharactersModule(characters),
+    'daisy-bell.ts': emitDaisyBellModule(daisyBell),
+    'staff.ts': emitStaffModule(staff),
+    'episodes.ts': emitEpisodesModule(episodes),
+    'cartoons.ts': emitCartoonsModule(cartoons),
+    'sequences.ts': emitSequencesModule(sequences),
+  };
+  syncOutputs(generatedDir, outputs, {
+    check: checkMode,
+    label: 'Generated files',
+    fixHint: 'Run npm run codegen and commit the changes.',
+  });
 
   console.log(
     `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${staff.length} staff, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
-
-  if (checkMode) {
-    const status = execSync('git status --porcelain src/data/generated', {
-      cwd: repoRoot,
-      encoding: 'utf8',
-    }).trim();
-    if (status) {
-      throw new Error(
-        'Generated files are out of date. Run npm run codegen and commit the changes.',
-      );
-    }
-  }
 }
 
 main();

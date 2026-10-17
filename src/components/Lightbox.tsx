@@ -1,6 +1,10 @@
 import { Maximize2, X } from 'lucide-react';
-import type { FilmScene } from '../data/films';
+
+import { useEscapeKey } from '../hooks/useEscapeKey';
+
 import PromptCard from './PromptCard';
+
+import type { FilmScene } from '../data/films';
 
 interface LightboxProps {
   scene: FilmScene;
@@ -10,17 +14,21 @@ interface LightboxProps {
 }
 
 export default function Lightbox({ scene, copiedKey, onClose, onCopy }: LightboxProps) {
+  useEscapeKey(onClose);
+
   return (
     <div
       className="fixed inset-0 z-50 flex bg-black/92 p-3 backdrop-blur-sm sm:p-6"
-      role="dialog"
-      aria-modal="true"
-      aria-label={`${scene.title} prompt details`}
-      onClick={onClose}
+      role="presentation"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
     >
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={`${scene.title} prompt details`}
         className="relative m-auto grid max-h-[calc(100vh-1.5rem)] w-full max-w-7xl grid-rows-[minmax(0,1fr)_auto] gap-4 overflow-hidden lg:grid-cols-[minmax(0,1.25fr)_minmax(360px,0.75fr)] lg:grid-rows-1"
-        onClick={(event) => event.stopPropagation()}
       >
         <div className="relative min-h-[280px] overflow-hidden rounded-lg border border-zinc-800 bg-black shadow-2xl shadow-black">
           {scene.imageUrl ? (

@@ -22,16 +22,16 @@ export function createVaoSupport(gl: SequenceGl): VaoSupport | null {
   if (isWebGL2(gl)) {
     support = {
       create: () => gl.createVertexArray(),
-      bind: (vao) => gl.bindVertexArray(vao as WebGLVertexArrayObject | null),
-      delete: (vao) => gl.deleteVertexArray(vao as WebGLVertexArrayObject),
+      bind: (vao) => gl.bindVertexArray(vao),
+      delete: (vao) => gl.deleteVertexArray(vao),
     };
   } else {
     const ext = gl.getExtension('OES_vertex_array_object');
     if (ext) {
       support = {
         create: () => ext.createVertexArrayOES(),
-        bind: (vao) => ext.bindVertexArrayOES(vao as WebGLVertexArrayObjectOES | null),
-        delete: (vao) => ext.deleteVertexArrayOES(vao as WebGLVertexArrayObjectOES),
+        bind: (vao) => ext.bindVertexArrayOES(vao),
+        delete: (vao) => ext.deleteVertexArrayOES(vao),
       };
     }
   }

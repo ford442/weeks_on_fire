@@ -1,9 +1,12 @@
 import { X } from 'lucide-react';
-import type { CutawaySegment, CutawaySuggestion, SightCandidate } from '../../data/suggestions';
+
 import CutawayPreview from '../CutawayPreview';
+
 import CopyButton from './CopyButton';
 import SightBank from './SightBank';
 import { applySightToPrompt } from './sightSlots';
+
+import type { CutawaySegment, CutawaySuggestion, SightCandidate } from '../../data/suggestions';
 
 interface CutawayBoardProps {
   cutaway: CutawaySuggestion;

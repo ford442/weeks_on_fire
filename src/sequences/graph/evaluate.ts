@@ -1,5 +1,7 @@
 import { DEG, type Vec3 } from '../../lib/webgl/math';
+
 import { loopTime, resolve, sampleKeys } from './animate';
+
 import type { GraphClip, SequenceGraph } from './types';
 
 export interface NodeFrame {

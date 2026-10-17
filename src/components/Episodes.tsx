@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BookOpen, Clock } from 'lucide-react';
 
 import { episodes, episodeStatusMeta } from '../data/episodes';
+
 import EpisodeDetail from './EpisodeDetail';
 
 export default function Episodes() {

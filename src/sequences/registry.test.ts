@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { sequences } from '../data/sequences';
+
 import { customRendererIds, createSequenceScene } from './registry';
 
 describe('sequence renderers', () => {

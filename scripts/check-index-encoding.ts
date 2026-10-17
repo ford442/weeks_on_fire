@@ -1,7 +1,6 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 const INDEX_PATH = 'dist/index.html';
-const LINK_INDEX_PATH = 'dist/1ink.1ink';
 const header = readFileSync(INDEX_PATH);
 
 function fail(message: string): never {
@@ -30,11 +29,4 @@ if (/<base\b/i.test(html)) {
   fail(`${INDEX_PATH} contains a <base> tag; Vite relative assets must not use document base`);
 }
 
-// test.1ink.us DirectoryIndex prefers 1ink.1ink (UTF-16 LE) over index.html.
-writeFileSync(
-  LINK_INDEX_PATH,
-  Buffer.concat([Buffer.from([0xff, 0xfe]), Buffer.from(html, 'utf16le')]),
-);
-
 console.log('check-index-encoding: dist/index.html is UTF-8 with no BOM and no <base> tag');
-console.log(`check-index-encoding: wrote UTF-16 LE ${LINK_INDEX_PATH}`);

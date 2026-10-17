@@ -9,6 +9,7 @@ import {
   smoothstep,
   type Vec3,
 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 const KICK = 0.4;

@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
-import type { RefObject } from 'react';
+
 import { useMediaCoordinator } from '../contexts/MediaSessionContext';
+
+import type { RefObject } from 'react';
 
 export function useCoordinatedAudio(
   id: string,

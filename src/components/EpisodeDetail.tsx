@@ -5,9 +5,10 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Clock, ExternalLink } from 'lucide-react';
 
 import { episodes, episodeStatusMeta } from '../data/episodes';
-import type { EpisodeFiles } from '../data/episodes';
 import { loadMarkdownFile } from '../lib/episodeMarkdown';
 import { AVAILABLE_EPISODES } from '../data/production';
+
+import type { EpisodeFiles } from '../data/episodes';
 
 const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
 
@@ -84,11 +85,17 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
 
     let cancelled = false;
     setIsLoading(true);
-    loadMarkdownFile(path).then((content) => {
-      if (cancelled) return;
-      setMarkdown(content);
-      setIsLoading(false);
-    });
+    loadMarkdownFile(path)
+      .then((content) => {
+        if (cancelled) return;
+        setMarkdown(content);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setMarkdown(null);
+        setIsLoading(false);
+      });
 
     return () => {
       cancelled = true;
@@ -97,7 +104,7 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
 
   useEffect(() => {
     if (episode === undefined) {
-      navigate('/episodes', { replace: true });
+      void navigate('/episodes', { replace: true });
     }
   }, [episode, navigate]);
 

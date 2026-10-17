@@ -44,6 +44,10 @@ export function parseFrontmatter(raw: string): {
   return { frontmatter, body };
 }
 
+function formatScalar(value: unknown): string {
+  return typeof value === 'string' ? value : JSON.stringify(value);
+}
+
 export function formatFrontmatter(data: Record<string, unknown>): string {
   const lines = ['---'];
 
@@ -51,13 +55,13 @@ export function formatFrontmatter(data: Record<string, unknown>): string {
     if (value === null || value === undefined) {
       lines.push(`${key}: null`);
     } else if (Array.isArray(value)) {
-      lines.push(`${key}: [${value.map((item) => item).join(', ')}]`);
+      lines.push(`${key}: [${(value as unknown[]).map(formatScalar).join(', ')}]`);
     } else if (typeof value === 'boolean') {
-      lines.push(`${key}: ${value}`);
+      lines.push(`${key}: ${String(value)}`);
     } else if (typeof value === 'string' && (value.includes(':') || value.includes('"'))) {
       lines.push(`${key}: "${value.replace(/"/g, '\\"')}"`);
     } else {
-      lines.push(`${key}: ${value}`);
+      lines.push(`${key}: ${formatScalar(value)}`);
     }
   }
 

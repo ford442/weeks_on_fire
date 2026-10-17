@@ -1,4 +1,5 @@
 import { Lightbulb, Music2, Search, Sparkles, Timer, MessageSquare } from 'lucide-react';
+
 import {
   type CutawaySegment,
   type CutawaySuggestion,
@@ -6,6 +7,7 @@ import {
   type SuggestionKind,
 } from '../../data/suggestions';
 import { getDialogVersionsForScene } from '../../data/sceneDialogVersions';
+
 import { allValue, isOpenSlot } from './sightSlots';
 
 const kindLabel: Record<SuggestionKind, string> = {

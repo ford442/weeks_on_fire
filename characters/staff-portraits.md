@@ -2,7 +2,7 @@
 
 Grok Imagine portraits for the series crew (added 2026-07-22).
 
-Hosted on the Contabo FTP deploy (`test.1ink.us`) under `public/cast/`, so they ship with every `npm run build` + `python deploy.py`. Google Drive hotlinks were unreliable in browsers.
+Hosted on the Contabo FTP deploy (`test.1ink.us`) under `public/cast/`, so they ship with every `npm run build` + `python3 scripts/deploy_storage.py`. Google Drive hotlinks were unreliable in browsers.
 
 | Staff | Role | Image (relative) | Live FTP URL |
 |-------|------|------------------|--------------|

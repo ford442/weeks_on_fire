@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {
   BookOpen,
@@ -14,6 +13,8 @@ import {
 } from 'lucide-react';
 
 import { pathnameToView, viewPaths } from '../routes/paths';
+
+import type { ReactNode } from 'react';
 
 export type SiteView =
   | 'gallery'

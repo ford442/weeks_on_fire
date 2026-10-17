@@ -103,15 +103,21 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 npm install
 npm run dev              # http://localhost:5173  (pass -- --host to bind 0.0.0.0)
 npm run codegen          # content/ + songs/ → src/data/generated/
-npm run codegen:check    # fail if generated files drifted
+npm run codegen:check    # fail if generated files drifted (read-only, never writes)
 npm run agent-docs       # regenerate public/llms.txt, llms-full.txt, sitemap.xml
-npm run agent-docs:check
-npm run lint             # ESLint on src/ and scripts/ (ignores generated)
+npm run agent-docs:check # read-only drift check
+npm run lint             # type-aware ESLint (typescript-eslint, jsx-a11y, import-x) on src/ and scripts/
 npm run format           # Prettier check on src/ and scripts/
 npm run format:write
-npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
+npm run test             # Vitest: libs in node, src/components/** in jsdom
+npm run test:coverage    # same, with v8 coverage (no threshold yet)
+npm run build            # codegen + agent-docs + tsc -b + vite + encoding check + dist/1ink.1ink
 npm run preview
 ```
+
+Use Node 22 (`.nvmrc`), the version CI and Pages build with.
+
+Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` keeps `data/`, `sequences/` and `lib/webgl` acyclic and `import-x/order` sorts imports. Do not add `eslint-disable` in `src/lib/webgl` or `src/sequences`. `npm install` needs the `overrides` entry in `package.json` because `eslint-plugin-jsx-a11y` has not declared ESLint 10 support yet.
 
 `tsc -b` typechecks **three** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the TS bundle checks). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
 
@@ -167,9 +173,8 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 
 - **Do not hand-edit** `src/data/generated/` or `public/llms.txt` / `llms-full.txt` / `sitemap.xml`.
 - **Media**: prefer external hosting for large video; some stills and mp3s are already in-repo. Do not add large binaries without approval.
-- **No secrets** in the repo. `xai-generate.py` and `deploy.py` read env vars.
-- **Python** stays stdlib-only.
-- `git.sh` commits with the hard-coded message `"push fix"` — prefer a descriptive `git commit`.
+- **No secrets** in the repo. `xai-generate.py` and `deploy_storage.py` read env vars.
+- **Python** stays stdlib-only (`scripts/deploy_storage.py` is the one legacy exception: it needs `requests`).
 
 ---
 

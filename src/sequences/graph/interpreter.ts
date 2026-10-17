@@ -1,8 +1,10 @@
 import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
 import { createMat4, DEG, lookAt, perspective, type Vec3 } from '../../lib/webgl/math';
-import type { SequenceDrawContext, SequenceScene } from '../types';
+
 import { buildGeometry } from './geometry';
 import { createGraphEvaluator } from './evaluate';
+
+import type { SequenceDrawContext, SequenceScene } from '../types';
 import type { GraphNode, SequenceGraph } from './types';
 
 const BLACK: Vec3 = [0, 0, 0];

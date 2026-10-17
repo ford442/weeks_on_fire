@@ -6,8 +6,10 @@ import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { createSequenceGl } from '../lib/webgl/context';
 import { SequenceEngine } from '../lib/webgl/engine';
 import { shouldAnimate } from '../lib/webgl/loop';
+import { PlaybackClock } from '../lib/playbackClock';
 import { formatTimecode } from '../lib/timecode';
 import { createSequenceScene } from '../sequences/registry';
+
 import type { SequenceRecord } from '../data/sequences';
 
 interface SequencePlayerProps {
@@ -16,10 +18,6 @@ interface SequencePlayerProps {
 
 export default function SequencePlayer({ sequence }: SequencePlayerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const playingRef = useRef(true);
-  const loopRef = useRef(true);
-  const offsetRef = useRef(0);
-  const originRef = useRef(0);
   const lastUiRef = useRef(0);
   const engineRef = useRef<SequenceEngine | null>(null);
   const sceneRef = useRef<ReturnType<typeof createSequenceScene>>(undefined);
@@ -27,6 +25,9 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
   const reducedMotion = usePrefersReducedMotion();
   const reducedMotionRef = useRef(reducedMotion);
 
+  const [clock] = useState(
+    () => new PlaybackClock({ durationSec: sequence.durationSec, playing: !reducedMotion }),
+  );
   const [playing, setPlaying] = useState(!reducedMotion);
   const [loop, setLoop] = useState(true);
   const [uiTime, setUiTime] = useState(0);
@@ -38,32 +39,28 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
   const mediaId = `sequence:${sequence.id}`;
 
   useEffect(() => {
-    playingRef.current = playing;
     wakeRef.current?.();
   }, [playing]);
 
   useEffect(() => {
     reducedMotionRef.current = reducedMotion;
-    if (reducedMotion && playingRef.current) {
-      offsetRef.current += (performance.now() - originRef.current) / 1000;
-      playingRef.current = false;
+    if (reducedMotion && clock.playing) {
+      clock.pause(performance.now());
       setPlaying(false);
     }
-  }, [reducedMotion]);
+  }, [clock, reducedMotion]);
 
   useEffect(() => {
-    loopRef.current = loop;
-  }, [loop]);
+    clock.setLoop(loop);
+  }, [clock, loop]);
 
   useEffect(() => {
-    offsetRef.current = 0;
-    originRef.current = performance.now();
+    const start = !reducedMotionRef.current;
+    clock.reset(duration, start, performance.now());
     lastUiRef.current = 0;
     setUiTime(0);
-    const start = !reducedMotionRef.current;
     setPlaying(start);
-    playingRef.current = start;
-  }, [sequence.id]);
+  }, [clock, duration, sequence.id]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -120,31 +117,20 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       }
     };
 
-    const readTime = (now: number) => {
-      let time = playingRef.current
-        ? offsetRef.current + (now - originRef.current) / 1000
-        : offsetRef.current;
-      if (time >= duration) {
-        if (loopRef.current) {
-          time = time % duration;
-          offsetRef.current = time;
-          originRef.current = now;
-        } else {
-          time = duration;
-          offsetRef.current = duration;
-          if (playingRef.current) {
-            playingRef.current = false;
-            setPlaying(false);
-            coordinator.deactivate(mediaId);
-          }
-        }
-      }
-      return time;
+    // The film clock is held while nothing can be drawn (hidden tab, lost context) so it does
+    // not jump ahead when drawing resumes.
+    const syncClockHold = (now: number) => {
+      if (hidden || lost) clock.freeze(now);
+      else clock.thaw(now);
     };
 
     const draw = (now: number) => {
       resize();
-      const timeSec = readTime(now);
+      const { timeSec, ended } = clock.tick(now);
+      if (ended) {
+        setPlaying(false);
+        coordinator.deactivate(mediaId);
+      }
       const sceneNow = sceneRef.current;
       const engineNow = engineRef.current;
       if (sceneNow && engineNow && canvas.width > 0 && canvas.height > 0) {
@@ -168,9 +154,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     const frame = (now: number) => {
       raf = 0;
       draw(now);
-      if (
-        shouldAnimate({ playing: playingRef.current, documentHidden: hidden, contextLost: lost })
-      ) {
+      if (shouldAnimate({ playing: clock.playing, documentHidden: hidden, contextLost: lost })) {
         raf = requestAnimationFrame(frame);
       }
     };
@@ -178,23 +162,17 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       if (raf === 0 && !lost && !hidden) raf = requestAnimationFrame(frame);
     };
     wakeRef.current = wake;
-    originRef.current = performance.now();
+    syncClockHold(performance.now());
     wake();
 
     const onVisibility = () => {
-      const now = performance.now();
-      if (document.hidden) {
-        hidden = true;
+      hidden = document.hidden;
+      if (hidden) {
         cancelAnimationFrame(raf);
         raf = 0;
-        // Freeze the film clock so it does not jump ahead while the tab is in the background.
-        if (playingRef.current) offsetRef.current += (now - originRef.current) / 1000;
-        originRef.current = now;
-      } else {
-        hidden = false;
-        originRef.current = now;
-        wake();
       }
+      syncClockHold(performance.now());
+      wake();
     };
 
     const onLost = (event: Event) => {
@@ -202,8 +180,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       lost = true;
       cancelAnimationFrame(raf);
       raf = 0;
-      if (playingRef.current) offsetRef.current += (performance.now() - originRef.current) / 1000;
-      originRef.current = performance.now();
+      syncClockHold(performance.now());
       teardown();
       setContextLost(true);
     };
@@ -215,7 +192,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
         return;
       }
       lost = false;
-      originRef.current = performance.now();
+      syncClockHold(performance.now());
       setContextLost(false);
       wake();
     };
@@ -235,7 +212,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       canvas.removeEventListener('webglcontextrestored', onRestored);
       teardown();
     };
-  }, [coordinator, duration, mediaId, sequence.id]);
+  }, [clock, coordinator, duration, mediaId, sequence.id]);
 
   useEffect(() => {
     if (!playing) {
@@ -246,48 +223,36 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       mediaId,
       {
         play: () => {
-          originRef.current = performance.now();
-          playingRef.current = true;
+          clock.play(performance.now());
           setPlaying(true);
         },
         pause: () => {
-          offsetRef.current += (performance.now() - originRef.current) / 1000;
-          playingRef.current = false;
+          clock.pause(performance.now());
           setPlaying(false);
         },
       },
       { title: sequence.title, artist: 'Weeks on Fire', album: '3D Sequences' },
     );
     return () => coordinator.deactivate(mediaId);
-  }, [coordinator, mediaId, playing, sequence.title]);
+  }, [clock, coordinator, mediaId, playing, sequence.title]);
 
   const togglePlay = () => {
-    if (playing) {
-      offsetRef.current += (performance.now() - originRef.current) / 1000;
-      playingRef.current = false;
-      setPlaying(false);
-      return;
-    }
-    if (offsetRef.current >= duration) offsetRef.current = 0;
-    originRef.current = performance.now();
-    playingRef.current = true;
-    setPlaying(true);
+    const now = performance.now();
+    if (clock.playing) clock.pause(now);
+    else clock.play(now);
+    setPlaying(clock.playing);
   };
 
   const restart = () => {
-    offsetRef.current = 0;
-    originRef.current = performance.now();
+    clock.restart(performance.now());
     setUiTime(0);
-    playingRef.current = true;
     setPlaying(true);
     wakeRef.current?.();
   };
 
   const seek = (next: number) => {
-    const clamped = Math.min(duration, Math.max(0, next));
-    offsetRef.current = clamped;
-    originRef.current = performance.now();
-    setUiTime(clamped);
+    clock.seek(next, performance.now());
+    setUiTime(clock.peek(performance.now()));
     wakeRef.current?.();
   };
 

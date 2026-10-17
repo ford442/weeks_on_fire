@@ -1,5 +1,6 @@
-import type { DaisyFrameTreatment } from './types';
 import { daisyBellFrames } from './generated/daisy-bell';
+
+import type { DaisyFrameTreatment } from './types';
 
 export type {
   DaisyBellFrame,

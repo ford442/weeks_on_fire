@@ -1,5 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
+
+import { countEditTimelineRows } from './parsers/segment-prompts';
+
 import type {
   CartoonRecord,
   CutawayRecord,
@@ -8,7 +11,6 @@ import type {
   SeriesCharacterRecord,
 } from './schemas';
 import type { ParsedSong } from './load';
-import { countEditTimelineRows } from './parsers/segment-prompts';
 
 export function validateContent(
   repoRoot: string,

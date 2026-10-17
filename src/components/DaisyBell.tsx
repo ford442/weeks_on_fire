@@ -11,6 +11,7 @@ import {
   Sparkles,
   X,
 } from 'lucide-react';
+
 import {
   daisyBellAudioFile,
   daisyBellFrames,
@@ -26,6 +27,9 @@ import {
   type DaisyFrameTreatment,
 } from '../data/daisyBell';
 import { firstCatalogItem } from '../lib/catalog';
+import { useEscapeKey } from '../hooks/useEscapeKey';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+
 import SongAudioPlayer from './SongAudioPlayer';
 
 const allValue = 'all' as const;
@@ -37,7 +41,7 @@ export default function DaisyBell() {
     firstCatalogItem(daisyBellFrames, 'daisy-bell'),
   );
   const [lightbox, setLightbox] = useState<DaisyBellFrame | null>(null);
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
 
   const frames = useMemo(() => daisyFramesByTreatment(treatment), [treatment]);
 
@@ -52,16 +56,6 @@ export default function DaisyBell() {
     }
     return { color, period, withImage, total: daisyBellFrames.length };
   }, []);
-
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
-    }
-  };
 
   return (
     <section className="mx-auto max-w-7xl space-y-8 px-4 py-6 sm:px-6 lg:px-8">
@@ -435,17 +429,20 @@ interface DaisyLightboxProps {
 
 function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps) {
   const meta = daisyTreatmentMeta[frame.treatment];
+  useEscapeKey(onClose);
   return (
     <div
       className="fixed inset-0 z-50 flex bg-black/92 p-3 backdrop-blur-sm sm:p-6"
-      role="dialog"
-      aria-modal="true"
-      aria-label={frame.title}
-      onClick={onClose}
+      role="presentation"
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
     >
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={frame.title}
         className="relative m-auto grid max-h-[calc(100vh-1.5rem)] w-full max-w-6xl gap-4 overflow-hidden lg:grid-cols-[minmax(0,1.2fr)_minmax(300px,0.8fr)]"
-        onClick={(event) => event.stopPropagation()}
       >
         <div className="relative min-h-[240px] overflow-hidden rounded-lg border border-zinc-800 bg-black">
           {frame.imageUrl ? (

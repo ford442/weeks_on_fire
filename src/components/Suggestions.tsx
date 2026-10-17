@@ -1,12 +1,15 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Lightbulb, MessageSquare, Sparkles } from 'lucide-react';
+
 import {
   cutawaySuggestions,
   type CutawaySuggestion,
   type SuggestionKind,
 } from '../data/suggestions';
 import { getDialogVersionsForScene } from '../data/sceneDialogVersions';
+import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+
 import CutawayBoard from './suggestions/CutawayBoard';
 import DialogAudition from './suggestions/DialogAudition';
 import SuggestionsList from './suggestions/SuggestionsList';
@@ -37,7 +40,7 @@ export default function Suggestions() {
       cutawaySuggestions[0]?.segments[0]?.id ??
       '',
   );
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+  const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [workspaceTab, setWorkspaceTab] = useState<'prompts' | 'dialog'>('prompts');
   const [expandedExchangeId, setExpandedExchangeId] = useState<string | null>(null);
 
@@ -84,7 +87,7 @@ export default function Suggestions() {
         setSelectedId(match.id);
         return;
       }
-      navigate('/suggestions', { replace: true });
+      void navigate('/suggestions', { replace: true });
       return;
     }
 
@@ -106,23 +109,13 @@ export default function Suggestions() {
     }
   }, [activeSegmentId, selected, selectedId]);
 
-  const copyToClipboard = async (text: string, label: string, key: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedKey(key);
-      window.setTimeout(() => setCopiedKey(null), 1600);
-    } catch {
-      window.prompt(`Copy ${label}`, text);
-    }
-  };
-
   const selectCutaway = (cutaway: CutawaySuggestion) => {
     setSelectedId(cutaway.id);
     setActiveSegmentId(cutaway.segments[0]?.id ?? '');
     setWorkspaceTab('prompts');
     setExpandedExchangeId(null);
     if (id !== cutaway.id) {
-      navigate(`/suggestions/${cutaway.id}`);
+      void navigate(`/suggestions/${cutaway.id}`);
     }
   };
 

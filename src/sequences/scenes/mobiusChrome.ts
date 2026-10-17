@@ -1,6 +1,7 @@
 import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
 import { createRibbon } from '../../lib/webgl/mesh';
 import { createMat4, DEG, lookAt, perspective, smoothstep, type Vec3 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 export function createMobiusChrome(): SequenceScene {

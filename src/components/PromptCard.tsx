@@ -1,4 +1,5 @@
 import { Check, Copy, ExternalLink, Music2, Tags } from 'lucide-react';
+
 import { imageKindMeta, type FilmScene } from '../data/films';
 
 interface PromptCardProps {

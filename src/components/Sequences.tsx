@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Box, Check, Copy, Search, Sparkles } from 'lucide-react';
 
 import {
@@ -10,6 +10,7 @@ import {
 } from '../data/sequences';
 import { formatTimecode } from '../lib/timecode';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+import { useUrlParam } from '../hooks/useUrlState';
 
 import SequencePlayer from './SequencePlayer';
 
@@ -20,8 +21,12 @@ const mediumOrder: SequenceMedium[] = ['unreal', 'photoreal', 'cartoon', 'mixed'
 export default function Sequences() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [query, setQuery] = useState('');
-  const [medium, setMedium] = useState<typeof allValue | SequenceMedium>(allValue);
+  const { search } = useLocation();
+  const [query, setQuery] = useUrlParam('q', '');
+  const [medium, setMedium] = useUrlParam<typeof allValue | SequenceMedium>('medium', allValue, [
+    allValue,
+    ...mediumOrder,
+  ]);
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && sequences.some((sequence) => sequence.id === id) ? id : (sequences[0]?.id ?? ''),
@@ -65,7 +70,7 @@ export default function Sequences() {
 
   const selectSequence = (sequence: SequenceRecord) => {
     setSelectedId(sequence.id);
-    void navigate(`/sequences/${sequence.id}`);
+    void navigate({ pathname: `/sequences/${sequence.id}`, search });
   };
 
   return (
@@ -95,13 +100,13 @@ export default function Sequences() {
               <Search
                 aria-hidden="true"
                 size={18}
-                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
               />
               <input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Search premise, tags, medium…"
-                className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
+                className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
               />
             </label>
             <label className="block">
@@ -145,11 +150,11 @@ export default function Sequences() {
                   >
                     <div className="flex items-center justify-between gap-2">
                       <span
-                        className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
+                        className={`rounded-md border px-2 py-1 text-xs font-semibold ${meta.accent}`}
                       >
                         {meta.label}
                       </span>
-                      <span className="font-mono text-xs text-zinc-500">
+                      <span className="font-mono text-xs text-zinc-400">
                         {formatTimecode(sequence.durationSec)}
                       </span>
                     </div>
@@ -217,17 +222,15 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
         <div className="flex items-center justify-between gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
+          <p className="text-sm font-semibold text-orange-300">
             {sequence.register ?? '3D sequence'}
           </p>
-          <span
-            className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
-          >
+          <span className={`rounded-md border px-2 py-1 text-xs font-semibold ${meta.accent}`}>
             {meta.label}
           </span>
         </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{sequence.title}</h2>
-        <p className="mt-2 text-xs text-zinc-500">
+        <p className="mt-2 text-xs text-zinc-400">
           {[sequence.runtime, sequence.agent ? `via ${sequence.agent}` : null]
             .filter(Boolean)
             .join(' · ')}
@@ -237,20 +240,18 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
       <SequencePlayer sequence={sequence} />
 
       <section>
-        <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Premise</h3>
+        <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{sequence.premise}</p>
       </section>
 
       <section>
-        <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Visual</h3>
+        <h3 className="text-sm font-semibold text-zinc-400">Visual</h3>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{sequence.visual}</p>
       </section>
 
       <section>
         <div className="mb-2 flex items-center justify-between gap-3">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-            Motion
-          </h3>
+          <h3 className="text-sm font-semibold text-zinc-400">Motion</h3>
           <CopyButton
             copied={copiedKey === `${sequence.id}:motion`}
             label="Copy"
@@ -265,9 +266,7 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
       {sequence.grokImaginePrompt ? (
         <section>
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Grok Imagine prompt
-            </h3>
+            <h3 className="text-sm font-semibold text-zinc-400">Grok Imagine prompt</h3>
             <CopyButton
               copied={copiedKey === `${sequence.id}:prompt`}
               label="Copy"
@@ -285,9 +284,7 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
       {sequence.geminiOmniPrompt ? (
         <section>
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Motion prompt
-            </h3>
+            <h3 className="text-sm font-semibold text-zinc-400">Motion prompt</h3>
             <CopyButton
               copied={copiedKey === `${sequence.id}:omni`}
               label="Copy"
@@ -304,7 +301,7 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
 
       {sequence.notes ? (
         <section>
-          <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Notes</h3>
+          <h3 className="text-sm font-semibold text-zinc-400">Notes</h3>
           <p className="mt-2 rounded-md border border-zinc-800 bg-zinc-900/70 p-3 text-sm leading-6 text-zinc-400">
             {sequence.notes}
           </p>

@@ -89,10 +89,10 @@ function SceneEditorModalContent({
       >
         <div className="flex items-center justify-between border-b border-zinc-800 px-5 py-3">
           <div>
-            <div className="text-xs uppercase tracking-[0.2em] text-orange-400">
+            <div className="text-sm text-orange-400">
               {isNew ? 'NEW SCENE' : 'EDIT SCENE'} — {scene.id}
             </div>
-            <div className="text-lg font-semibold text-white">{title || 'Untitled Scene'}</div>
+            <div className="text-lg font-semibold text-white">{title || 'Untitled scene'}</div>
           </div>
           <button
             type="button"
@@ -141,7 +141,7 @@ function SceneEditorModalContent({
 
           <label className="block">
             <span className="mb-1 block text-xs font-medium text-zinc-400">
-              Grok Imagine Prompt
+              Grok Imagine prompt
             </span>
             <textarea
               value={prompt}
@@ -205,7 +205,7 @@ function SceneEditorModalContent({
             onClick={handleSave}
             className="flex items-center gap-2 rounded-md bg-orange-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-orange-500"
           >
-            <Save size={16} /> {isNew ? 'Create Scene' : 'Save & Append History'}
+            <Save size={16} /> {isNew ? 'Create scene' : 'Save & append history'}
           </button>
         </div>
 
@@ -214,7 +214,7 @@ function SceneEditorModalContent({
           <div className="mb-1 font-semibold text-zinc-400">
             Current history ({scene.history.length})
           </div>
-          <div className="max-h-24 space-y-1 overflow-auto text-zinc-500">
+          <div className="max-h-24 space-y-1 overflow-auto text-zinc-400">
             {scene.history
               .slice()
               .reverse()

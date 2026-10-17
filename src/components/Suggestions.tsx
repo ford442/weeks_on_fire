@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Lightbulb, MessageSquare, Sparkles } from 'lucide-react';
 
 import {
@@ -9,8 +9,10 @@ import {
 } from '../data/suggestions';
 import { getDialogVersionsForScene } from '../data/sceneDialogVersions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+import { useUrlParam } from '../hooks/useUrlState';
 
 import CutawayBoard from './suggestions/CutawayBoard';
+import WorkspaceLayout from './WorkspaceLayout';
 import DialogAudition from './suggestions/DialogAudition';
 import SuggestionsList from './suggestions/SuggestionsList';
 import { allValue } from './suggestions/sightSlots';
@@ -28,8 +30,15 @@ const kindCounts = cutawaySuggestions.reduce<Record<SuggestionKind, number>>(
 export default function Suggestions() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [kind, setKind] = useState<typeof allValue | SuggestionKind>(allValue);
-  const [query, setQuery] = useState('');
+  const { search } = useLocation();
+  const [kind, setKind] = useUrlParam<typeof allValue | SuggestionKind>('kind', allValue, [
+    allValue,
+    'musical',
+    'gag',
+    'scene',
+  ]);
+  const [query, setQuery] = useUrlParam('q', '');
+  const [sheetOpen, setSheetOpen] = useState(false);
   const [selectedId, setSelectedId] = useState(
     id && cutawaySuggestions.some((cutaway) => cutaway.id === id)
       ? id
@@ -114,8 +123,9 @@ export default function Suggestions() {
     setActiveSegmentId(cutaway.segments[0]?.id ?? '');
     setWorkspaceTab('prompts');
     setExpandedExchangeId(null);
+    setSheetOpen(true);
     if (id !== cutaway.id) {
-      void navigate(`/suggestions/${cutaway.id}`);
+      void navigate({ pathname: `/suggestions/${cutaway.id}`, search });
     }
   };
 
@@ -131,81 +141,89 @@ export default function Suggestions() {
   }, [dialogVersions, workspaceTab]);
 
   return (
-    <section className="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_420px] lg:px-8">
-      <SuggestionsList
-        suggestions={filtered}
-        totalCount={cutawaySuggestions.length}
-        kindCounts={kindCounts}
-        kind={kind}
-        query={query}
-        selectedId={selected?.id}
-        activeSegmentId={activeSegment?.id}
-        previewSightBySegment={sights.previewSightBySegment}
-        onKind={setKind}
-        onQuery={setQuery}
-        onSelectCutaway={selectCutaway}
-        onSelectSegment={(cutaway, segmentId) => {
-          selectCutaway(cutaway);
-          setActiveSegmentId(segmentId);
-        }}
-      />
-
-      <div className="lg:sticky lg:top-20 lg:self-start">
-        {dialogVersions && (
-          <div className="mb-3 flex gap-2">
-            <WorkspaceTabButton
-              active={workspaceTab === 'prompts'}
-              label="Prompts"
-              icon={<Sparkles size={15} />}
-              onClick={() => setWorkspaceTab('prompts')}
-            />
-            <WorkspaceTabButton
-              active={workspaceTab === 'dialog'}
-              label={`Dialog (${dialogVersions.exchanges.length})`}
-              icon={<MessageSquare size={15} />}
-              onClick={() => setWorkspaceTab('dialog')}
-            />
-          </div>
-        )}
-        <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
+    <WorkspaceLayout
+      storageKey="wof:suggestions-panel-width"
+      sheetOpen={sheetOpen}
+      onSheetClose={() => setSheetOpen(false)}
+      label={
+        <>
           {workspaceTab === 'dialog' ? <MessageSquare size={17} /> : <Lightbulb size={17} />}
-          {workspaceTab === 'dialog' ? 'Dialog Versions' : 'Prompt Workspace'}
+          {workspaceTab === 'dialog' ? 'Dialog versions' : 'Prompt workspace'}
+        </>
+      }
+      list={
+        <SuggestionsList
+          suggestions={filtered}
+          totalCount={cutawaySuggestions.length}
+          kindCounts={kindCounts}
+          kind={kind}
+          query={query}
+          selectedId={selected?.id}
+          activeSegmentId={activeSegment?.id}
+          previewSightBySegment={sights.previewSightBySegment}
+          onKind={setKind}
+          onQuery={setQuery}
+          onSelectCutaway={selectCutaway}
+          onSelectSegment={(cutaway, segmentId) => {
+            selectCutaway(cutaway);
+            setActiveSegmentId(segmentId);
+          }}
+        />
+      }
+      panel={
+        <div>
+          {dialogVersions && (
+            <div className="mb-3 flex gap-2">
+              <WorkspaceTabButton
+                active={workspaceTab === 'prompts'}
+                label="Prompts"
+                icon={<Sparkles size={15} />}
+                onClick={() => setWorkspaceTab('prompts')}
+              />
+              <WorkspaceTabButton
+                active={workspaceTab === 'dialog'}
+                label={`Dialog (${dialogVersions.exchanges.length})`}
+                icon={<MessageSquare size={15} />}
+                onClick={() => setWorkspaceTab('dialog')}
+              />
+            </div>
+          )}
+          {selected && workspaceTab === 'dialog' && dialogVersions ? (
+            <DialogAudition
+              dialogSet={dialogVersions}
+              expandedExchangeId={expandedExchangeId}
+              copiedKey={copiedKey}
+              onToggleExchange={(exchangeId) =>
+                setExpandedExchangeId((prev) => (prev === exchangeId ? null : exchangeId))
+              }
+              onCopy={copyToClipboard}
+            />
+          ) : selected && activeSegment ? (
+            <CutawayBoard
+              cutaway={selected}
+              segment={activeSegment}
+              previewSight={sights.previewSightBySegment.get(activeSegment.id)}
+              copiedKey={copiedKey}
+              sights={sights.filteredSights}
+              hasSightBank={sights.sightBank.length > 0}
+              sightCategories={sights.sightCategories}
+              sightCategory={sights.sightCategory}
+              activeSightId={sights.previewBySegment[activeSegment.id]}
+              slotLettersBySight={sights.slotLettersBySight}
+              onActiveSegmentChange={setActiveSegmentId}
+              onCopy={copyToClipboard}
+              onClearPreview={() => sights.clearPreview(activeSegment.id)}
+              onSightCategory={sights.setSightCategory}
+              onSelectSight={sights.assignSight}
+            />
+          ) : (
+            <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5 text-sm text-zinc-400">
+              Select a suggestion to copy prompts.
+            </div>
+          )}
         </div>
-        {selected && workspaceTab === 'dialog' && dialogVersions ? (
-          <DialogAudition
-            dialogSet={dialogVersions}
-            expandedExchangeId={expandedExchangeId}
-            copiedKey={copiedKey}
-            onToggleExchange={(exchangeId) =>
-              setExpandedExchangeId((prev) => (prev === exchangeId ? null : exchangeId))
-            }
-            onCopy={copyToClipboard}
-          />
-        ) : selected && activeSegment ? (
-          <CutawayBoard
-            cutaway={selected}
-            segment={activeSegment}
-            previewSight={sights.previewSightBySegment.get(activeSegment.id)}
-            copiedKey={copiedKey}
-            sights={sights.filteredSights}
-            hasSightBank={sights.sightBank.length > 0}
-            sightCategories={sights.sightCategories}
-            sightCategory={sights.sightCategory}
-            activeSightId={sights.previewBySegment[activeSegment.id]}
-            slotLettersBySight={sights.slotLettersBySight}
-            onActiveSegmentChange={setActiveSegmentId}
-            onCopy={copyToClipboard}
-            onClearPreview={() => sights.clearPreview(activeSegment.id)}
-            onSightCategory={sights.setSightCategory}
-            onSelectSight={sights.assignSight}
-          />
-        ) : (
-          <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5 text-sm text-zinc-400">
-            Select a suggestion to copy prompts.
-          </div>
-        )}
-      </div>
-    </section>
+      }
+    />
   );
 }
 
@@ -224,7 +242,7 @@ function WorkspaceTabButton({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex flex-1 items-center justify-center gap-2 rounded-md border px-3 py-2 text-xs font-semibold uppercase tracking-[0.12em] transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+      className={`inline-flex flex-1 items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
         active
           ? 'border-orange-500/60 bg-orange-500/15 text-orange-100'
           : 'border-zinc-800 bg-zinc-950 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'

@@ -80,13 +80,13 @@ export default function SuggestionsList({
           <Search
             aria-hidden="true"
             size={18}
-            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
           />
           <input
             value={query}
             onChange={(event) => onQuery(event.target.value)}
             placeholder="Search titles, songs, tags..."
-            className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
+            className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
           />
         </label>
       </div>
@@ -110,7 +110,7 @@ export default function SuggestionsList({
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                  <p className="text-sm font-semibold text-orange-300">
                     {kindLabel[cutaway.kind]} · {cutaway.episode}
                   </p>
                   <h2 className="mt-1 text-2xl font-semibold leading-tight text-white">
@@ -144,7 +144,7 @@ export default function SuggestionsList({
               </div>
               {isSelected && (
                 <>
-                  <p className="mt-3 text-sm leading-6 text-zinc-500">
+                  <p className="mt-3 text-sm leading-6 text-zinc-400">
                     <span className="font-medium text-zinc-400">Visual arc: </span>
                     {cutaway.visualArc}
                   </p>
@@ -164,9 +164,7 @@ export default function SuggestionsList({
 
             {isSelected && (
               <div className="border-t border-zinc-800 p-4">
-                <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-                  Timed Segments
-                </h3>
+                <h3 className="mb-3 text-sm font-semibold text-zinc-400">Timed segments</h3>
                 <div className="space-y-2">
                   {cutaway.segments.map((segment) => (
                     <SegmentRow
@@ -207,7 +205,7 @@ function KindChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-md border px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.14em] transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
+      className={`rounded-md border px-2.5 py-1 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
         active
           ? 'border-orange-500/60 bg-orange-500/15 text-orange-100'
           : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
@@ -227,7 +225,7 @@ function StatusBadge({ status }: { status: CutawaySuggestion['status'] }) {
         : 'Suggested';
 
   return (
-    <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-orange-200">
+    <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 text-xs font-semibold text-orange-200">
       {label}
     </span>
   );
@@ -259,7 +257,7 @@ function SegmentRow({ segment, active, previewTitle, locked, onSelect }: Segment
     >
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="font-mono text-[11px] text-zinc-500">{timing}</p>
+          <p className="font-mono text-xs text-zinc-400">{timing}</p>
           <p className="mt-1 text-sm font-semibold text-white">
             {previewTitle ? `${segment.label} · ${previewTitle}` : segment.label}
           </p>
@@ -272,7 +270,7 @@ function SegmentRow({ segment, active, previewTitle, locked, onSelect }: Segment
           />
         )}
       </div>
-      <p className="mt-2 line-clamp-2 text-xs leading-5 text-zinc-400">
+      <p className="mt-2 line-clamp-2 text-sm leading-6 text-zinc-400">
         {previewTitle
           ? 'Preview in this slot — not locked'
           : locked

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Check, Copy, PenLine, Search, Sparkles } from 'lucide-react';
 
 import {
@@ -10,6 +10,7 @@ import {
   type CartoonStatus,
 } from '../data/cartoons';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
+import { useUrlParam } from '../hooks/useUrlState';
 
 const allValue = 'All';
 
@@ -18,8 +19,12 @@ const statusOrder: CartoonStatus[] = ['seed', 'sketched', 'ready-to-generate', '
 export default function Cartoons() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [query, setQuery] = useState('');
-  const [status, setStatus] = useState<typeof allValue | CartoonStatus>(allValue);
+  const { search } = useLocation();
+  const [query, setQuery] = useUrlParam('q', '');
+  const [status, setStatus] = useUrlParam<typeof allValue | CartoonStatus>('status', allValue, [
+    allValue,
+    ...statusOrder,
+  ]);
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && cartoons.some((cartoon) => cartoon.id === id) ? id : (cartoons[0]?.id ?? ''),
@@ -63,7 +68,7 @@ export default function Cartoons() {
 
   const selectCartoon = (cartoon: CartoonRecord) => {
     setSelectedId(cartoon.id);
-    void navigate(`/cartoons/${cartoon.id}`);
+    void navigate({ pathname: `/cartoons/${cartoon.id}`, search });
   };
 
   return (
@@ -101,13 +106,13 @@ export default function Cartoons() {
               <Search
                 aria-hidden="true"
                 size={18}
-                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"
+                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
               />
               <input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Search premise, tags, agent…"
-                className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
+                className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
               />
             </label>
             <label className="block">
@@ -161,11 +166,11 @@ export default function Cartoons() {
                     ) : null}
                     <div className="p-5">
                       <div className="flex items-center justify-between gap-2">
-                        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
+                        <p className="text-sm font-semibold text-orange-300">
                           {cartoon.register ?? 'Short cartoon'}
                         </p>
                         <span
-                          className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
+                          className={`rounded-md border px-2 py-1 text-xs font-semibold ${meta.accent}`}
                         >
                           {meta.label}
                         </span>
@@ -313,12 +318,10 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
         <div className="flex items-center justify-between gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
+          <p className="text-sm font-semibold text-orange-300">
             {cartoon.register ?? 'Short cartoon'}
           </p>
-          <span
-            className={`rounded-md border px-2 py-1 text-[11px] font-semibold uppercase tracking-wide ${meta.accent}`}
-          >
+          <span className={`rounded-md border px-2 py-1 text-xs font-semibold ${meta.accent}`}>
             {meta.label}
           </span>
         </div>
@@ -328,7 +331,7 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
           <p className="mt-2 text-sm text-zinc-400">{cartoon.characterLean}</p>
         ) : null}
         {cartoon.runtime || cartoon.agent ? (
-          <p className="mt-2 text-xs text-zinc-500">
+          <p className="mt-2 text-xs text-zinc-400">
             {[cartoon.runtime, cartoon.agent ? `via ${cartoon.agent}` : null]
               .filter(Boolean)
               .join(' · ')}
@@ -337,21 +340,19 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
       </div>
 
       <section>
-        <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Premise</h3>
+        <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{cartoon.premise}</p>
       </section>
 
       <section>
-        <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Visual</h3>
+        <h3 className="text-sm font-semibold text-zinc-400">Visual</h3>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{cartoon.visual}</p>
       </section>
 
       {cartoon.grokImaginePrompt ? (
         <section className="min-h-0">
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Grok Imagine prompt
-            </h3>
+            <h3 className="text-sm font-semibold text-zinc-400">Grok Imagine prompt</h3>
             <CopyButton
               copied={copiedKey === `${cartoon.id}:prompt`}
               label="Copy"
@@ -365,7 +366,7 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
           </pre>
         </section>
       ) : (
-        <p className="rounded-md border border-dashed border-zinc-800 bg-black/40 p-3 text-sm leading-6 text-zinc-500">
+        <p className="rounded-md border border-dashed border-zinc-800 bg-black/40 p-3 text-sm leading-6 text-zinc-400">
           No still prompt yet. Add <code className="text-zinc-400">grokImaginePrompt</code> when the
           newspaper-comic test passes.
         </p>
@@ -374,9 +375,7 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
       {cartoon.motion ? (
         <section className="min-h-0">
           <div className="mb-2 flex items-center justify-between gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
-              Motion
-            </h3>
+            <h3 className="text-sm font-semibold text-zinc-400">Motion</h3>
             <CopyButton
               copied={copiedKey === `${cartoon.id}:motion`}
               label="Copy"
@@ -391,7 +390,7 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
 
       {cartoon.notes ? (
         <section>
-          <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">Notes</h3>
+          <h3 className="text-sm font-semibold text-zinc-400">Notes</h3>
           <p className="mt-2 rounded-md border border-zinc-800 bg-zinc-900/70 p-3 text-sm leading-6 text-zinc-400">
             {cartoon.notes}
           </p>

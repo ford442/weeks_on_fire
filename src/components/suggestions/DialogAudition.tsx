@@ -24,11 +24,9 @@ export default function DialogAudition({
   return (
     <aside className="flex max-h-[calc(100vh-10rem)] min-h-0 flex-col gap-4 overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-orange-300">
-          Rosencrantz register
-        </p>
+        <p className="text-sm font-semibold text-orange-300">Rosencrantz register</p>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{dialogSet.description}</p>
-        <p className="mt-2 font-mono text-[11px] text-zinc-500">{dialogSet.sourceFile}</p>
+        <p className="mt-2 font-mono text-xs text-zinc-400">{dialogSet.sourceFile}</p>
       </div>
 
       <div className="-mx-1 flex-1 space-y-2 overflow-y-auto px-1">
@@ -74,15 +72,13 @@ function DialogExchangeCard({
       >
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-mono text-[10px] uppercase tracking-widest text-orange-300">
-              {exchange.id}
-            </span>
+            <span className="font-mono text-xs tracking-widest text-orange-300">{exchange.id}</span>
             <DialogStatusBadge status={exchange.status} />
           </div>
           <p className="mt-1 text-sm font-semibold text-white">{exchange.title}</p>
-          <p className="mt-1 text-xs text-zinc-500">{exchange.beat}</p>
+          <p className="mt-1 text-xs text-zinc-400">{exchange.beat}</p>
           <p className="mt-1 text-xs text-zinc-400">{exchange.register}</p>
-          <p className="mt-2 text-[11px] text-zinc-500">
+          <p className="mt-2 text-xs text-zinc-400">
             {exchange.characters.join(' · ')} · {exchange.lines.length} lines
           </p>
         </div>
@@ -124,9 +120,7 @@ function DialogStatusBadge({ status }: { status: DialogExchange['status'] }) {
   };
 
   return (
-    <span
-      className={`rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest ${styles[status]}`}
-    >
+    <span className={`rounded px-1.5 py-0.5 text-xs font-semibold ${styles[status]}`}>
       {status}
     </span>
   );

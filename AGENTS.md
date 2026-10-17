@@ -175,7 +175,6 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 - **Media**: prefer external hosting for large video; some stills and mp3s are already in-repo. Do not add large binaries without approval.
 - **No secrets** in the repo. `xai-generate.py` and `deploy_storage.py` read env vars.
 - **Python** stays stdlib-only (`scripts/deploy_storage.py` is the one legacy exception: it needs `requests`).
-- `git.sh` commits with the hard-coded message `"push fix"` — prefer a descriptive `git commit`.
 
 ---
 

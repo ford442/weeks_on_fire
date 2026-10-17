@@ -109,6 +109,7 @@ npm run agent-docs:check
 npm run lint             # ESLint on src/ and scripts/ (ignores generated)
 npm run format           # Prettier check on src/ and scripts/
 npm run format:write
+npm test                 # vitest: src/**/*.test.ts + scripts/**/*.test.ts
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
 npm run preview
 ```
@@ -136,7 +137,7 @@ There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 2. `npm run codegen` (and `npm run agent-docs` if views/catalog summaries should change).
 3. Commit sources **and** regenerated `src/data/generated/*` / `public/llms*.txt` as needed.
 
-Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
+Song frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches and is not codegen'd. Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 
 Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote.
 

@@ -177,6 +177,22 @@ figure is one bar short of a resolution and stays one bar short.
 orchestra, no telephone on a velvet seat, no person waiting. Do not decide
 whether the room is haunted or unscheduled.
 
+#### `the-program-returns` — **PUNCHED** — 30s
+
+Same set, same line, same three identical takes, same nesting. Each return the chair is
+further away, and on the third it is gone. Then, on the drop, the chair **comes back**: it
+skids into the innermost screen, out through the next screen, into the real room, and
+slides into its exact spot. It rocks twice and stops, a little out of breath for a chair.
+The lamp is still on.
+**Laugh:** *every time the TV comes back the chair has run further away, and then it runs
+home.*
+**Drop:** reverses (the chair races back through every screen).
+**End reaction:** none. The chair settling is the button.
+**Bed:** same nylon guitar, still one bar short. The chair's last rock lands where the
+missing bar would be.
+**Do-not:** Same as the original card. Still no person in the room, and nobody sits in
+the chair. It never leaves the frame of a screen on the way back. `promote?: no`
+
 ### `item-four-sampler` — 18s · cross-stitch
 
 **Medium:** stop-motion of real thread in a wooden hoop, or a 2D pass that

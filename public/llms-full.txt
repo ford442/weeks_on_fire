@@ -307,23 +307,40 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>.json`. Promote winners to Suggestions.
 
 - **Bull in China** (bull-in-china, sketched) — The china shop's most fragile piece is a tiny porcelain elephant. The bull is the one tiptoeing. He is sweating through a bow tie.
+- **Windows Down** (car-wash-windows-down, sketched) — Lillith and Rubella drive through a car wash with the windows down. The giant brushes come in and scrub them. They roll out with foam beards and foam wigs, perfectly calm.
+- **One Little Push** (cat-fence-chain, sketched) — The black cat on the fence pushes one flowerpot off. It hits a rake, which fires a hose, which sprays the dog through the laundry line. The dog comes out wearing a frilly dress. The cat never moves.
 - **Cereal Wolf** (cereal-wolf, sketched) — A wolf in a bathrobe pours cereal. The wolf on the box is also in a bathrobe, also pouring cereal, also looking at a smaller box. He notices. He shrugs. He keeps eating.
 - **Consensus** (consensus, sketched) — Every model on the runway, every guest in the seats, and the designer taking her bow have arrived at the same beautiful face. One bored woman in the front row is the last remaining variation, and nobody has told her she won.
 - **Courtesy Shuttle** (courtesy-shuttle, sketched) — The afterlife boards like a regional airport. The gate is polite. The weather system in first class is a carry-on dispute.
 - **Cow Moon Claim** (cow-moon-claim, sketched) — The cow jumped over the moon. The moon has a cow-shaped dent. The cow is filing it. A sheep is taking photos for the claim.
 - **Crow Channel** (crow-channel, sketched) — A crow has the remote. Every channel is the same crow, in the same chair, with the same remote. He thinks this is excellent television.
+- **Egg Xylophone** (egg-xylophone, sketched) — A hen lays eggs onto a xylophone, plinking out a little tune. The last egg is an ostrich egg. It lands in a tuba: BWAAAMP.
+- **Elevator Toot** (elevator-toot, sketched) — A hippo, a giraffe, a flamingo and one mouse share an elevator. A little green cloud appears. Everyone points at the mouse. The hippo is whistling.
+- **Everyone Else Bounces** (everyone-else-bounces, sketched) — An elephant lands on a backyard trampoline. The trampoline doesn't move. Everyone else in the neighborhood does.
 - **Fence Cat Opera** (fence-cat-opera, sketched) — The black cat on the repeating fence opens its mouth. An entire opera chorus of tiny tuxedoed frogs marches out. The cat does not change expression.
 - **Fig. 4** (fig-four, sketched) — The diagram is exquisite: labeled, cross-sectioned, arrowed, dimensioned in units that are not units. It describes a device that does not exist and is not mentioned anywhere else. It is captioned Fig. 4. There is no Fig. 1, 2, or 3. Everyone is taking notes.
+- **Walking the Owner** (flag-walk, sketched) — A Great Dane spots a squirrel. Its tiny owner flies straight out behind it on the leash, flapping like a flag.
 - **Fluent** (fluent, sketched) — Every sign in the arcade is beautifully set, expensively lit, and not quite a word. She is the only person in the building who knows where she is going.
 - **Fly of the Day** (fly-of-the-day, sketched) — The waiter is a fly. The diner is a frog. The fly is presenting the menu. The frog is looking at the waiter.
+- **Gesundheit** (gesundheit-bear, sketched) — A tiny mouse sneezes. The bear's whole fur coat blows off in one piece and flaps away like a cape. The bear is standing there in polka-dot boxers.
 - **Giraffe Window** (giraffe-window, sketched) — The giraffe uses the drive-thru. The neck goes in one window, around the building, and out the other window so it can talk to the cashier from behind. The cashier is a mouse. The giraffe is still in the car.
+- **Hole in Everyone** (gopher-golf, sketched) — A golfer putts. A gopher pops up and spits the ball back. Third try: gophers pop out of every hole on the course and spit balls at him like a fountain show.
+- **The Hair Bus** (hair-bus, sketched) — A woman with a skyline-tall Big City hairdo stops at a bus stop. A little door opens in the hair. A line of pigeons boards. One late pigeon chases it down the street.
+- **Hiccup Frog** (hiccup-frog, sketched) — Every hiccup bounces a frog higher off his lily pad. The last one bonks a goose right out of its flying V.
 - **Hold Music** (hold-music, sketched) — A full symphony orchestra in a gilded hall, playing beautifully, to one telephone on a velvet chair. Somebody is on hold. The conductor will not stop until they pick up.
 - **Kiddie Pool Shark** (kiddie-pool-shark, sketched) — A great white is doing laps in a two-foot plastic pool. It is wearing floaties. The rubber duck is the one having the crisis.
 - **Laser Dot Jury** (laser-dot-jury, sketched) — The prosecutor points to Exhibit A: a red laser dot on the wall. The entire jury of cats is already gone. They are the exhibit.
 - **Life Vending** (life-vending, sketched) — A cat buys another life from a vending machine. The coil drops a heart. The display says two left. The cat pays with a fish and does not say thank you.
 - **Mailbox Mallard** (mailbox-mallard, sketched) — A mallard in a too-small red convertible knocks down every mailbox on the cul-de-sac, then tips his cap at us like this was always the plan.
 - **Moose Hygienist** (moose-hygienist, sketched) — The patient is a moose. The dentist is a woodpecker. The antlers are already through the ceiling tiles. Both of them are acting like this is a cleaning.
+- **Extra Napkins** (napkin-geyser, sketched) — The pizza guy says, 'Extra napkins are in the bag.' He unzips it. Napkins blast out like a confetti cannon and fill the hallway to the ceiling. He walks off. Lillith and Rubella are two heads above a napkin sea.
+- **Octopus Mittens** (octopus-mittens, sketched) — Mom hands the little octopus two mittens. He has eight arms. He finds his own solutions.
+- **One More Scoop** (one-more-scoop, sketched) — A kid at the ice cream truck keeps saying 'one more scoop.' The tower goes past the clouds. A plane swerves. A seagull licks the top.
+- **One More Twirl** (one-more-twirl, sketched) — A little kid twirls spaghetti and the fork won't stop. The tablecloth, the candle, the breadsticks and the waiter all wind onto it.
+- **Pancake Hat** (pancake-hat, sketched) — A bear chef flips a pancake. It sticks to the ceiling. He waits. It drops onto the cat as a perfect beret, syrup and all.
+- **Perfect Ten** (perfect-ten, sketched) — A whale in a swim cap belly-flops off the high dive. The splash empties the pool onto the judges. All three hold up 10.
 - **Pin Cat** (pin-cat, sketched) — Cats bowling. One of them is standing in the pin triangle holding a tiny white flag. The ball is already halfway down the lane.
+- **Poodle Puff** (poodle-puff, sketched) — A leaf blower hits a fluffy poodle. She becomes a perfect sphere and rolls happily down the street.
 - **Possum Poker** (possum-poker, sketched) — Five possums are mid-hand inside a pizza delivery bag. A human hand reaches in. They all play dead without putting the cards down.
 - **Previously On** (previously-on, sketched) — The goldfish has watched every episode. It is briefing the empty couch. Nobody is home. It mouths the entire recap anyway.
 - **Rooster Snooze** (rooster-snooze, sketched) — The rooster hits snooze. The sun is already in the window tapping a watch. The farmers are on the lawn with pitchforks. The rooster puts in earplugs.
@@ -331,14 +348,18 @@ Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>
 - **Shade Hearing** (shade-hearing, sketched) — Three raccoons in tiny robes are hearing a squirrel for the wrong blue. The evidence is the bin. The swatch is taped to the gavel. This is going on the record.
 - **Sheep Who Count People** (sheep-who-count-people, sketched) — A sheep is trying to sleep by counting humans jumping a fence. The humans are the pizza guy, two women in black lace, and a plastic skeleton, on a loop. It is not working. The sheep is furious.
 - **Snail Passing Lane** (snail-passing-lane, sketched) — A snail with a spoiler is using the passing lane. The cars behind it have cobwebs. One driver is a skeleton still honking.
+- **Nose Thief** (snowman-nose-chase, sketched) — A snowman sneezes his carrot nose off. A rabbit catches it and bolts. The snowman chases it, hopping, with no legs.
+- **Squeaky Boots** (squeaky-knight, sketched) — A knight sneaks past a sleeping dragon. Every step squeaks like a rubber duck. One giant eye opens.
 - **Stork Wrong Address** (stork-wrong-address, sketched) — The stork has the right nest and the wrong baby. The flamingos check the clipboard. The baby alligator waves. Nobody is sending it back.
 - **The Far End of the Table** (the-far-end-of-the-table, sketched) — The near end of the dinner party is photoreal. The far end has not finished. Those guests are smooth, beautiful, and blank, their silverware has the wrong number of tines, and the service continues down the length of the table without comment.
 - **The Long Weekend** (the-long-weekend, seed) — The calendar on the kitchen wall has run out of days and kept going. Saturday appears nine times in a row, in the same confident handwriting, and somebody has been dutifully crossing each one off.
 - **The Loupe** (the-loupe, sketched) — She magnifies the photograph and finds a street that was never in it. She magnifies the street and finds a window. She magnifies the window and someone is looking back. She has not stopped.
 - **The Mirror Disagrees** (the-mirror-disagrees, seed) — She is wearing the green dress. The mirror has her in the black one. Every movement matches perfectly. Neither of them considers this a problem worth raising.
 - **The Understudy** (the-understudy, sketched) — She is still putting on her lipstick. Her shadow finished ten minutes ago and is waiting with its arms crossed.
+- **Umbrella** (umbrella-dump, sketched) — It's raining. Lillith opens her umbrella. It was full. A bucket of water and one goldfish land on Rubella. Rubella does not blink. The goldfish does.
 - **Unscheduled Rain** (unscheduled-rain, seed) — Rain falls in a perfect rectangle over the coffee table. Nobody moves the magazines. The cat walks around the wet zone as if this is the house rule.
 - **Valet** (valet-of-the-tide, seed) — The valet stand is at the edge of the sea. The ticket is number 12. There are no cars, there have never been cars, and a valet in a red jacket is already jogging into the surf with the fob held over his head.
+- **Last Down the Slide** (walrus-cork, sketched) — Six penguins zip down a waterslide. Then the walrus goes. He gets stuck, pops out like a cork, and the whole pool leaves in one splash.
 - **Witness Chicken** (witness-chicken, sketched) — A chicken in witness protection sits on a park bench in a trenchcoat and a mustache that is also obviously a chicken. The pigeons are not fooled. One of them is taking notes.
 - **Worm Forecast** (worm-forecast, sketched) — An earthworm does the weather. Behind him the map says rain. It is raining worms. He does not mention this.
 

@@ -1,0 +1,22 @@
+{
+  "id": "one-more-scoop",
+  "title": "One More Scoop",
+  "premise": "A kid at the ice cream truck keeps saying 'one more scoop.' The tower goes past the clouds. A plane swerves. A seagull licks the top.",
+  "visual": "Ice cream truck. A little kid holding a cone with a tower of colorful scoops rising past the clouds. A propeller plane swerving. A seagull at the top licking. The ice cream man on a tall ladder, sweating.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Escalation gag. The show's 'something small gets huge on the drop' shape.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "food",
+    "ice-cream",
+    "escalation",
+    "sky"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a sunny street beside a pastel ice cream truck, a little kid in a ball cap holding up a small cone with an impossibly tall wobbling tower of colorful ice cream scoops rising straight up past fluffy white clouds, a tiny red propeller plane swerving around the tower, a seagull perched on the very top scoop licking it, the ice cream man in a white paper hat on a very tall wobbling ladder with a scoop in his hand and sweat flying off his face, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Scoop. Scoop. Scoop. Camera tilts up and up past birds and clouds. The plane swerves. The seagull licks. Tilt back down: the kid takes a tiny lick of the bottom scoop. Tower wobbles.",
+  "notes": "The tower never falls. The tension is that it should.",
+  "agent": "claude"
+}

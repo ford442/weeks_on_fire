@@ -142,9 +142,16 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
 
 - `status` is one of `seed`, `sketched`, `ready-to-generate`, `promoted`.
 - Required: `id`, `title`, `premise`, `visual`, `status`, `tags`.
-- Two lanes:
+- Three lanes:
   - Dry elegant stills, matching [`notes/one-panel-gags.md`](../notes/one-panel-gags.md).
   - Mid-90s animal / Family Guy cutaways: talking animals, unmotivated gags, 4:3 cel. Lead with the Episode 4 style block (`2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D`). Do not use photoreal lens language on those prompts.
+  - **Silly slapstick** (`register: "silly slapstick"`, tag `silly`): loud, physical, kid-readable. Same Episode 4 cel style block. The pool leans dry, so new batches should add to this lane. Rules:
+    - A five-year-old gets it with the sound off. No concept, no irony needed.
+    - One small cause, a way-too-big effect (sneeze, hiccup, one push, one more scoop).
+    - Side characters do **big takes**: eyes pop, jaws hit the floor, feathers blow off. Only Lillith, Rubella, Pizza Guy and the black cat stay flat. The silly world happens around them.
+    - Bonk, boing, splat, squeak, pop. Nobody gets hurt; the victim usually enjoyed it.
+    - Kid-level gross only: a green cloud, a burp, polka-dot underwear.
+    - Put the payoff on the music drop (third hiccup, the POP, the BWAAAMP).
 - Do not reuse the locked gags listed in `notes/one-panel-gags.md`.
 - Optional `stillImagePath` is shown on the Cartoons view. Local 6–8s I2V loops may live at `public/cartoons/<id>.mp4` (gitignored).
 - When a seed is ready, promote it to `content/cutaways/` (Suggestions). Leave `status: "promoted"`

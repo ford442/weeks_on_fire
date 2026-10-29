@@ -1,0 +1,23 @@
+{
+  "id": "elevator-toot",
+  "title": "Elevator Toot",
+  "premise": "A hippo, a giraffe, a flamingo and one mouse share an elevator. A little green cloud appears. Everyone points at the mouse. The hippo is whistling.",
+  "visual": "Cramped elevator with a floor-number dial. The giraffe's neck is folded flat along the ceiling. A pale green cartoon stink cloud with wavy lines hangs in the middle. The giraffe and flamingo are green-faced, pinching their noses and pointing at a tiny mouse holding up its paws. The hippo looks at the ceiling, whistling, innocent.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Pairs with the building's elevator bits (the elevator that negotiates). The elevator could ding a floor nobody pressed.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "elevator",
+    "toot",
+    "blame",
+    "gross-lite"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cramped vintage elevator with brass walls and a floor-dial arrow above the doors, a tall giraffe with its long neck bent flat along the ceiling, a pink flamingo, a big grey hippo and one tiny brown mouse, a pale green cartoon stink cloud with wavy odor lines floating in the middle, the giraffe and flamingo turning green in the face, pinching their noses with one hand and pointing accusingly at the tiny mouse, the mouse holding both paws up shaking its head, the hippo looking up at the ceiling with puckered lips whistling innocently with a tiny smug smile, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Ding. Small 'pfft' squeak. Cloud blooms. Heads turn one at a time to the mouse. Hippo whistles. Doors open; everyone else bursts out gasping; the hippo strolls out last.",
+  "notes": "Kid-level gross: a cloud and green faces only. One squeaky sound, not a big one. The joke is the blame, not the toot.",
+  "agent": "claude"
+}

@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter, useLocation } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -139,5 +139,39 @@ describe('App detail routes keep their id', () => {
   it('unknown paths redirect to the gallery', async () => {
     renderRoute('/no/such/page');
     await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/'));
+  });
+});
+
+describe('filters live in the URL', () => {
+  it('restores the Songs search from ?q=', async () => {
+    renderRoute('/songs?q=zz-no-such-song-zz');
+    await settled();
+    expect(await screen.findByText('No songs match the current filters.')).toBeTruthy();
+    expect(screen.getByPlaceholderText<HTMLInputElement>(/Search songs/).value).toBe(
+      'zz-no-such-song-zz',
+    );
+  });
+
+  it('tabs return to the filters a visitor left behind', async () => {
+    renderRoute('/songs?q=waltz');
+    await settled();
+    fireEvent.click(screen.getByRole('link', { name: 'Suggestions' }));
+    await settled();
+    expect(screen.getByRole('link', { name: 'Songs' }).getAttribute('href')).toBe('/songs?q=waltz');
+  });
+});
+
+describe('site search', () => {
+  it('opens with / and jumps to a result', async () => {
+    renderRoute('/');
+    await settled();
+    fireEvent.keyDown(document.body, { key: '/' });
+    const input = await screen.findByRole('combobox', { name: /Search songs, suggestions/ });
+    const song = first(songs);
+    fireEvent.change(input, { target: { value: song.title } });
+    fireEvent.keyDown(input, { key: 'Enter' });
+    await waitFor(() =>
+      expect(screen.getByTestId('location').textContent).toBe(`/songs/${song.id}`),
+    );
   });
 });

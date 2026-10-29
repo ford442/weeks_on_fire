@@ -107,24 +107,24 @@ export default function SceneTimeline({
                 </option>
               ))}
             </select>
-            <span className="text-zinc-500">—</span>
+            <span className="text-zinc-400">—</span>
             <span>{production.title}</span>
           </div>
-          <div className="text-xs text-zinc-500">
+          <div className="text-xs text-zinc-400">
             Last updated: {formatDate(production.lastUpdated)} • {production.scenes.length} scenes
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <select
             value={filterStatus}
             onChange={(event) => setFilterStatus(event.target.value as 'all' | SceneStatus)}
-            className="h-9 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-xs text-white outline-none focus:border-orange-400"
+            className="h-9 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-white outline-none focus:border-orange-400"
           >
             <option value="all">All statuses</option>
             <option value="draft">Draft</option>
             <option value="generated">Generated</option>
-            <option value="in-edit">In Edit</option>
+            <option value="in-edit">In edit</option>
             <option value="approved">Approved</option>
             <option value="final">Final</option>
           </select>
@@ -132,7 +132,7 @@ export default function SceneTimeline({
           <select
             value={sortMode}
             onChange={(event) => setSortMode(event.target.value as 'chronological' | 'recent')}
-            className="h-9 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-xs text-white outline-none focus:border-orange-400"
+            className="h-9 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-white outline-none focus:border-orange-400"
           >
             <option value="recent">Most recent first</option>
             <option value="chronological">Chronological</option>
@@ -143,7 +143,7 @@ export default function SceneTimeline({
             onClick={onAddScene}
             className="flex items-center gap-1.5 rounded-md bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-orange-500"
           >
-            <Plus size={14} /> Add Scene
+            <Plus size={14} /> Add scene
           </button>
 
           <button
@@ -157,7 +157,7 @@ export default function SceneTimeline({
       </div>
 
       <div>
-        <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+        <h3 className="mb-3 text-sm font-semibold text-zinc-400">
           SCENES ({filteredScenes.length})
         </h3>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -168,7 +168,7 @@ export default function SceneTimeline({
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <div className="font-mono text-[10px] text-zinc-500">
+                  <div className="font-mono text-xs text-zinc-400">
                     {scene.timestamp} • #{scene.order}
                   </div>
                   <div className="mt-1 text-lg font-semibold leading-tight text-white">
@@ -176,7 +176,7 @@ export default function SceneTimeline({
                   </div>
                 </div>
                 <span
-                  className={`shrink-0 rounded px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest ${statusColors[scene.status]}`}
+                  className={`shrink-0 rounded px-2 py-0.5 text-xs font-medium ${statusColors[scene.status]}`}
                 >
                   {scene.status}
                 </span>
@@ -187,13 +187,13 @@ export default function SceneTimeline({
               </p>
 
               {scene.prompt && (
-                <div className="mt-3 rounded bg-black/60 p-2 text-[10px] leading-snug text-zinc-400 line-clamp-2">
+                <div className="mt-3 rounded bg-black/60 p-2 text-xs leading-snug text-zinc-400 line-clamp-2">
                   {scene.prompt}
                 </div>
               )}
 
               <div className="mt-3 flex items-center justify-between text-xs">
-                <div className="text-zinc-500">
+                <div className="text-zinc-400">
                   {scene.history.length} edits • last {formatDate(scene.lastEditedAt)}
                 </div>
                 <button
@@ -210,13 +210,13 @@ export default function SceneTimeline({
       </div>
 
       <div>
-        <h3 className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+        <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
           <Clock size={14} /> PRODUCTION TIMELINE
         </h3>
 
         <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
           {displayedEvents.length === 0 && (
-            <div className="py-8 text-center text-sm text-zinc-500">No history yet.</div>
+            <div className="py-8 text-center text-sm text-zinc-400">No history yet.</div>
           )}
 
           <ol className="space-y-4">
@@ -232,12 +232,12 @@ export default function SceneTimeline({
                 <div className="min-w-0 flex-1 pb-2">
                   <div className="flex flex-wrap items-baseline gap-x-2 text-xs">
                     <span className="font-mono text-orange-300">{formatDate(event.date)}</span>
-                    <span className="text-zinc-500">{getActionIcon(event.action)}</span>
+                    <span className="text-zinc-400">{getActionIcon(event.action)}</span>
                     <span className="font-semibold text-white">
                       {event.type === 'episode' ? 'Episode-level' : event.sceneTitle}
                     </span>
                     {event.action && (
-                      <span className="rounded bg-zinc-900 px-1.5 py-px text-[10px] text-zinc-400">
+                      <span className="rounded bg-zinc-900 px-1.5 py-px text-xs text-zinc-400">
                         {event.action}
                       </span>
                     )}
@@ -250,7 +250,7 @@ export default function SceneTimeline({
                         const scene = production.scenes.find((item) => item.id === event.sceneId);
                         if (scene) onEditScene(scene);
                       }}
-                      className="mt-1 text-[11px] text-orange-400 underline-offset-2 hover:underline"
+                      className="mt-1 text-xs text-orange-400 underline-offset-2 hover:underline"
                     >
                       View / edit scene →
                     </button>
@@ -262,7 +262,7 @@ export default function SceneTimeline({
         </div>
       </div>
 
-      <div className="pt-2 text-[10px] text-zinc-500">
+      <div className="pt-2 text-xs text-zinc-400">
         Timeline is derived from <code>scenes.json</code> history arrays. Edit in the modal to
         append entries. Export JSON and commit to persist across machines.
       </div>

@@ -23,15 +23,13 @@ export default function SightBank({
     <div className="rounded-lg border border-zinc-800 bg-zinc-950/95 p-4">
       <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
-            Sight bank
-          </h3>
-          <p className="mt-1 text-xs leading-5 text-zinc-500">
+          <h3 className="text-sm font-semibold text-zinc-400">Sight bank</h3>
+          <p className="mt-1 text-sm leading-6 text-zinc-400">
             Click a fall sight into B–G, or an ending into H. Lip stays locked. Preview is not a
             lock.
           </p>
         </div>
-        <p className="text-xs text-zinc-500">{sights.length} shown</p>
+        <p className="text-xs text-zinc-400">{sights.length} shown</p>
       </div>
       <div className="mb-3 flex flex-wrap gap-2">
         <button
@@ -80,24 +78,22 @@ export default function SightBank({
                 <p className="text-sm font-semibold text-white">{sight.title}</p>
                 <div className="flex flex-wrap gap-1">
                   {sight.lane === 'ending' && (
-                    <span className="rounded border border-amber-500/30 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-200">
+                    <span className="rounded border border-amber-500/30 bg-amber-500/10 px-1.5 py-0.5 text-xs font-semibold text-amber-200">
                       H only
                     </span>
                   )}
                   {assigned.map((letter) => (
                     <span
                       key={`${sight.id}:${letter}`}
-                      className="rounded border border-violet-500/30 bg-violet-500/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-violet-200"
+                      className="rounded border border-violet-500/30 bg-violet-500/10 px-1.5 py-0.5 text-xs font-semibold text-violet-200"
                     >
                       {letter}
                     </span>
                   ))}
                 </div>
               </div>
-              <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-zinc-500">
-                {sight.category}
-              </p>
-              <p className="mt-1.5 text-xs leading-5 text-zinc-400">{sight.description}</p>
+              <p className="mt-1 text-xs text-zinc-400">{sight.category}</p>
+              <p className="mt-1.5 text-sm leading-6 text-zinc-400">{sight.description}</p>
             </button>
           );
         })}

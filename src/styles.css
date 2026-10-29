@@ -51,7 +51,7 @@ button:disabled {
 .markdown-body {
   color: #d4d4d8;
   line-height: 1.7;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .markdown-body > :first-child {

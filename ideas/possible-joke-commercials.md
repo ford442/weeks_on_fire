@@ -55,6 +55,20 @@ of three different heights. The bag line never moves. The doorways do.
 Not Ultra Screech: no bottle, no song, no laundry-room shoot, no Kenji. Not Big City: no
 hair, no club. Not the telethon: no phone bank, no total, nobody asks for anything.
 
+#### `chest-height-delivery-academy` — **PUNCHED** — 20s
+
+Same product, presenter, spoken claim and one continuous shot. The doorways **escalate**:
+the first is a cathedral arch, the second is so low he walks through bent at the knees,
+and the third is a mail slot. The bag line never moves. On the drop he feeds the pizza box
+through the mail slot flat as a letter. On the far side it **pops back** into a full box and
+floats there, level, at exactly chest height, with nobody holding it.
+**Laugh:** *he keeps the pizza perfectly level even when the door is a mail slot.*
+**Drop:** transforms (flat box → full box, still at chest height).
+**End reaction:** none. He checks the phone (23%) and walks off at the same pace.
+**Start JOB:** first doorway. **Last JOB:** box floating behind the mail slot, card: *FLOOR 4.*
+**Do-not:** He never hurries, never looks at the box after it goes through. No second
+presenter on the far side. `promote?: no`
+
 ### `neutral-zone-laundry-minutes` — 18s
 
 **Product:** Neutral-Zone Laundry Minutes. Sold by the minute. The minute is the dryer
@@ -97,6 +111,21 @@ Not Ultra Screech: no product hero, no glam, no song. Not Big City: no hair. Not
 telethon. Not the HOA season: no slip, no meeting, no Karen, no gavel, no Madelyn — the
 strip comes off because Lillith decided it does. Not the purple-light permit (that song
 stays where it is).
+
+#### `decorative-accent-removal` — **PUNCHED** — 20s
+
+Same presenter, same one pull, same spoken claim. The pull **does not stop**. The strip
+comes off the doorframe, then zips off every doorframe down the hallway like a zipper, then
+out the window. Exterior wide: the strip is unwinding off the whole building like ribbon off
+a present, and on the drop the building **spins** on its foundation like a top to let it go.
+Lillith stands on the sidewalk, calm, reeling it in hand over hand, watching it go to plan.
+The building stops. Beige. She is holding a coil the size of a tire.
+**Laugh:** *she pulls one sticker strip and the whole building spins like a top.*
+**Drop:** transforms (purple building → beige building, one spin).
+**End reaction:** none. *"Accent removed. Ambition retained."*
+**Start JOB:** thumb under the corner. **Last JOB:** the coil in her arms, the building still.
+**Do-not:** Nothing breaks, nobody inside is shown, no Madelyn, no permit. One presenter.
+`promote?: no`
 
 ---
 

@@ -50,9 +50,7 @@ export default function Staff() {
                     />
                   </div>
                   <div className="p-5">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-                      {member.role}
-                    </p>
+                    <p className="text-sm font-semibold text-orange-300">{member.role}</p>
                     <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">
                       {member.name}
                     </h2>
@@ -71,7 +69,7 @@ export default function Staff() {
       <aside className="lg:sticky lg:top-6 lg:self-start">
         <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-400">
           <Quote size={17} aria-hidden="true" />
-          Crew Profile
+          Crew profile
         </div>
         <StaffDetail member={selected} />
       </aside>
@@ -91,9 +89,7 @@ function StaffDetail({ member }: { member: StaffMember }) {
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-orange-300">
-          {member.role}
-        </p>
+        <p className="text-sm font-semibold text-orange-300">{member.role}</p>
         <h2 className="mt-2 text-3xl font-semibold leading-tight text-white">{member.name}</h2>
         <p className="mt-2 text-sm text-zinc-400">
           {member.location} · {member.yearsOnSeries}
@@ -101,24 +97,22 @@ function StaffDetail({ member }: { member: StaffMember }) {
       </div>
 
       <div className="rounded-md border border-orange-500/20 bg-orange-500/5 p-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-orange-200">Quote</p>
+        <p className="text-sm font-semibold text-orange-200">Quote</p>
         <blockquote className="mt-2 text-base leading-7 text-zinc-100">“{member.quote}”</blockquote>
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Bio</p>
+        <p className="text-sm font-semibold text-zinc-400">Bio</p>
         <p className="mt-2 text-sm leading-7 text-zinc-300">{member.bio}</p>
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">Specialty</p>
+        <p className="text-sm font-semibold text-zinc-400">Specialty</p>
         <p className="mt-2 text-sm text-zinc-300">{member.specialty}</p>
       </div>
 
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-500">
-          Series credits
-        </p>
+        <p className="text-sm font-semibold text-zinc-400">Series credits</p>
         <ul className="mt-2 space-y-2">
           {member.credits.map((credit) => (
             <li

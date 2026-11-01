@@ -355,6 +355,9 @@ Extra napkins are in the bag.
 **Do-not:** the Pizza Guy is never named, never hurries, never looks at the whale, and says
 only the napkin line. The whale is friendly; nobody is in danger.
 
+**Laser layer:** [`laser-routines.md`](laser-routines.md) §3 (soap-dish lighthouse beam,
+the waterline sheet that steps down on each "Deeper!" and falls on the whale).
+
 ---
 
 ## 4. The Moon Is a Disco Ball

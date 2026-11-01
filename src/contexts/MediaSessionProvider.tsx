@@ -1,5 +1,7 @@
 import { useState, type ReactNode } from 'react';
+
 import { createMediaCoordinator } from '../lib/mediaCoordinator';
+
 import { MediaCoordinatorContext } from './MediaSessionContext';
 
 export default function MediaSessionProvider({ children }: { children: ReactNode }) {

@@ -1,0 +1,22 @@
+{
+  "id": "snowman-nose-chase",
+  "title": "Nose Thief",
+  "premise": "A snowman sneezes his carrot nose off. A rabbit catches it and bolts. The snowman chases it, hopping, with no legs.",
+  "visual": "Snowy park. A snowman mid-hop, coal mouth in a furious frown, empty nose hole, scarf flying. Ahead a rabbit sprints with the carrot held like a relay baton. Snow puffs at every hop.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Holiday-ready cutaway. Nobody explains how the snowman can move.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "winter",
+    "snowman",
+    "rabbit",
+    "chase"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a snowy park with bare trees and a lamp post, a three-ball snowman caught mid-hop off the ground with puffs of snow beneath him, stick arms flailing, coal-lump mouth curved into a furious frown, an empty round hole where his nose was, his red scarf flying straight out behind him, ahead of him a brown rabbit sprinting with a big orange carrot held like a relay baton, ears streaming back, grinning, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Ah-choo. Carrot flies. Rabbit catches it mid-air and runs. Snowman hops, hops, hops after it. The loop resets when the rabbit runs past the camera again.",
+  "notes": "Coal-eyebrows sell the anger. The rabbit takes one bite while running.",
+  "agent": "claude"
+}

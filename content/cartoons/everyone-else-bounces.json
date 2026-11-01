@@ -1,0 +1,23 @@
+{
+  "id": "everyone-else-bounces",
+  "title": "Everyone Else Bounces",
+  "premise": "An elephant lands on a backyard trampoline. The trampoline doesn't move. Everyone else in the neighborhood does.",
+  "visual": "Suburban street. An elephant stands calmly on a trampoline. Above the rooftops float a mailman, a dachshund, a man in a bathtub with a rubber duck and a grandma in a lawn chair, all with shocked faces.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Good HOA-adjacent cutaway. The cul-de-sac never files a complaint about it.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "elephant",
+    "trampoline",
+    "scale",
+    "neighborhood"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a sunny suburban cul-de-sac, a big grey elephant standing calmly on a small round backyard trampoline with its trunk raised happily, floating high in the sky above the rooftops a mailman with letters flying out of his bag, a dachshund with its ears straight up, a man in a clawfoot bathtub holding a rubber duck and a grandma still sitting in her lawn chair holding lemonade, all with huge shocked cartoon faces and bouncing motion lines, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Elephant climbs on. BOING sound, but only the neighbors launch. Everyone hangs in the air. Then they all come down at once in their own yards. Elephant bounces once more. Everyone goes up again.",
+  "notes": "The elephant never leaves the trampoline. Loopable: the second launch is the loop point.",
+  "agent": "claude"
+}

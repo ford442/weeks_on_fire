@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import type { EpisodeId, EpisodeProduction } from '../data/production';
 import { AVAILABLE_EPISODES, loadEpisodeProduction } from '../data/production';
 import { clearStored, loadStored, productionsEqual, saveStored } from '../lib/productionStorage';
+
+import type { EpisodeId, EpisodeProduction } from '../data/production';
 
 export type SyncStatus = 'synced' | 'local-edits' | 'loading';
 

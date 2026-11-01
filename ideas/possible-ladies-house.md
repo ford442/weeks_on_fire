@@ -141,6 +141,20 @@ looks at the light for exactly one beat, and closes the door.
 menu question. Phone at 23% if it is seen. He does not run. Not the Ultra Screech laundry
 shoot — no shampoo, no camera crew. Not a second commercial.
 
+#### 4. `pizza-at-the-door` — **PUNCHED** — 25s
+
+Same knocks, same lines, same bag at chest height. The hallway behind him **escalates**
+instead of just flickering: the light flickers; then the fixture swings on its chain; then
+the carpet rolls itself up the hallway like a window shade. On the drop, the whole ceiling
+**falls** in one flat piece behind him, *whump*, and a cloud of dust rolls past his shoes.
+He does not look. *"Extra napkins are in the bag."* Rubella takes the bag, looks past him at
+the ceiling on the floor for exactly one beat, and closes the door.
+**Laugh:** *the ceiling falls down right behind the pizza man and he doesn't even look.*
+**Drop:** falls (the ceiling).
+**End reaction:** Rubella's one beat at the wreckage, then the door.
+**Do-not:** Same as the original card. Nothing lands on him. Nobody is hurt. Nothing
+in the hallway is haunted; it is just falling. `promote?: no`
+
 ### 5. `dryer-eats-one-lace-glove` — laundry, 30s
 
 **Bodies:** Rubella, Lillith. **Object:** one lace glove.
@@ -160,6 +174,22 @@ The dryer is not opened again. Nobody looks behind it.
 
 **Do-not:** 1–1, they leave. No retrieval, no Riley, no second trip. No glove reappears
 later in the season. Not the lint-inventory joke. The dryer does not hum a tone.
+
+#### 5. `dryer-eats-one-lace-glove` — **PUNCHED** — 30s
+
+Same load, same one glove out. Instead of the quiet search, Lillith reaches into the drum
+once more, and on the drop the dryer **pays out** like a slot machine: every sock anybody in
+the building has ever lost pours out of the door in a waterfall, up to their knees, odd socks
+in every color. Lillith wades through it, checks one or two. The lace glove is not in there.
+She puts the one glove on, picks up the basket, and they wade out.
+> **Rubella:** One's a look.
+
+**Laugh:** *the dryer spits out every sock in the building except her glove.*
+**Drop:** multiplies (the sock avalanche).
+**End reaction:** Rubella's line.
+**Do-not:** Same as the original card. Still 1–1, still no retrieval. Socks only: no
+glove, no lint, no money. Not the hamster laundry or the giant sock in `funny-rules.md`
+pair 6 — nothing grows. Nobody looks behind the dryer. `promote?: no`
 
 ### 6. `mailbox-folder-returned-unopened` — mailbox to fridge, 20s
 

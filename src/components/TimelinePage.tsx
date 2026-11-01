@@ -1,16 +1,18 @@
 import { useRef, useState, type ChangeEvent } from 'react';
 import { Download, RefreshCw, Upload } from 'lucide-react';
 
-import SceneTimeline from './SceneTimeline';
-import SceneEditorModal from './SceneEditorModal';
 import { useEpisodeProduction } from '../hooks/useEpisodeProduction';
-import type { ProductionScene } from '../data/production';
 import {
   clipStackerToProduction,
   createEmptyScene,
   exportToClipStacker,
   isClipStackerPayload,
 } from '../data/production';
+
+import SceneTimeline from './SceneTimeline';
+import SceneEditorModal from './SceneEditorModal';
+
+import type { ProductionScene } from '../data/production';
 
 function downloadJson(data: unknown, filename: string) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });

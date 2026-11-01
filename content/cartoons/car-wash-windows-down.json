@@ -1,0 +1,23 @@
+{
+  "id": "car-wash-windows-down",
+  "title": "Windows Down",
+  "premise": "Lillith and Rubella drive through a car wash with the windows down. The giant brushes come in and scrub them. They roll out with foam beards and foam wigs, perfectly calm.",
+  "visual": "Car wash exit. Their low black supercar half out of the tunnel, foam overflowing from every window. Both women with tall foam hairdos and foam beards, red lips, flat faces. A huge blue spinning brush still poking in the driver's window. The attendant's jaw is on the ground.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "The Two stay deadpan; the world is silly. Fits the car / road-trip stretch (they have the car).",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "the-two",
+    "car",
+    "car-wash",
+    "foam",
+    "deadpan"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: the exit of an automatic car wash tunnel with colorful flapping curtains, a low sleek black supercar halfway out, white soap foam overflowing out of every open window, two calm women with long jet-black hair, black lace dresses and red lips, faces completely flat and unbothered, both now wearing tall swirls of white foam on their heads like wigs and big foam beards, a huge spinning blue car-wash brush still poking in through the driver's window scrubbing the driver's cheek, the windshield wipers going on the inside, a car wash attendant in a cap with his jaw dropped to the ground and his towel falling, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. They roll in. Wet sponge slaps. Foam rises. Brushes enter the windows and scrub. They roll out and stop. Lillith turns on the inside wipers. Rubella blows foam off her lip once.",
+  "notes": "They never close the windows and never comment. Generic supercar, no badge or brand.",
+  "agent": "claude"
+}

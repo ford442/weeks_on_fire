@@ -1,4 +1,5 @@
 import { createContext, useContext } from 'react';
+
 import type { MediaCoordinator } from '../lib/mediaCoordinator';
 
 export const MediaCoordinatorContext = createContext<MediaCoordinator | null>(null);

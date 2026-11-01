@@ -54,7 +54,7 @@ export const imageKindMeta: Record<
     accent: 'border-violet-500/40 bg-violet-500/10 text-violet-200',
   },
   test: {
-    label: 'Test Idea',
+    label: 'Test idea',
     description: 'Visual experiments and mood boards from ideas/.',
     accent: 'border-cyan-500/40 bg-cyan-500/10 text-cyan-200',
   },

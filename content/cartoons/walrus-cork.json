@@ -1,0 +1,23 @@
+{
+  "id": "walrus-cork",
+  "title": "Last Down the Slide",
+  "premise": "Six penguins zip down a waterslide. Then the walrus goes. He gets stuck, pops out like a cork, and the whole pool leaves in one splash.",
+  "visual": "Water park. A tube slide bulging around a walrus, his whiskered face squished out at the exit, eyes popping. Below, six penguins in the pool look up. A seagull lifeguard blows a whistle.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Built for a drop: the POP is the hit. Works anywhere you need a big splash cut.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "walrus",
+    "penguins",
+    "water-park",
+    "splash"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a sunny water park, a blue tube waterslide with one section bulging hugely around a stuck walrus, the walrus's whiskered face squished out of the slide exit, cheeks and eyes popping, two tusks pointing out, below in the pool six small penguins in swim rings looking up nervously, a seagull lifeguard on a tall chair in a red visor blowing a whistle so hard its cheeks puff, a beach ball floating, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Penguins zip, zip, zip. Walrus enters. Slide bulges and creaks. Wiggle. POP. Mega-splash. Cut to a dry empty pool with the penguins sitting on the bottom and the walrus lying in the only puddle, happy.",
+  "notes": "Sync POP to the drop. Nobody is hurt. The walrus should look like he had the best time of his life.",
+  "agent": "claude"
+}

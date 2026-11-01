@@ -83,7 +83,7 @@ describe('collectUniforms', () => {
         return { name };
       },
     } as unknown as WebGLRenderingContext;
-    const map = collectUniforms(gl, {} as WebGLProgram);
+    const map = collectUniforms(gl, {});
     expect([...map.keys()]).toEqual(['uColor', 'uPts']);
     expect(calls).toEqual(['uColor', 'uPts[0]']);
   });

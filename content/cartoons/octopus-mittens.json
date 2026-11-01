@@ -1,0 +1,23 @@
+{
+  "id": "octopus-mittens",
+  "title": "Octopus Mittens",
+  "premise": "Mom hands the little octopus two mittens. He has eight arms. He finds his own solutions.",
+  "visual": "Snowy front step. A little purple octopus in a striped scarf. Two arms in mittens. The rest in a sock, a rain boot, an oven mitt, a tea cozy, a traffic cone and a sandwich. He is very pleased. Mom octopus does a three-armed facepalm.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Pure kid cutaway. Use after anyone says 'dress warm' or 'we're all set.'",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "octopus",
+    "winter",
+    "clothes",
+    "parenting"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a snowy front doorstep of a cozy house, a small round purple cartoon octopus kid in a red-and-white striped scarf and a bobble hat, beaming proudly, two arms wearing knitted mittens and the other six arms stuck into a sock, a yellow rain boot, an oven mitt, a knitted tea cozy, an orange traffic cone and a sandwich, behind him in the doorway a bigger purple mother octopus in an apron doing a facepalm with three arms at once, snowflakes falling, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Mom hands over two mittens. Rapid cartoon blur of grabbing. He poses. Mom's arms slap her face one by one. He waddles into the snow; the cone squeaks.",
+  "notes": "Every item must be readable at a glance. The sandwich is the laugh line.",
+  "agent": "claude"
+}

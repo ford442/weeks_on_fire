@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
 import { clipStackerToProduction, exportToClipStacker } from '../data/production';
-import type { EpisodeProduction } from '../data/production';
+
 import { ClipStackerPayloadSchema, parseClipStackerPayload } from './production';
+
+import type { EpisodeProduction } from '../data/production';
 
 function fixtureEpisode(): EpisodeProduction {
   return {

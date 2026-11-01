@@ -1,0 +1,23 @@
+{
+  "id": "gopher-golf",
+  "title": "Hole in Everyone",
+  "premise": "A golfer putts. A gopher pops up and spits the ball back. Third try: gophers pop out of every hole on the course and spit balls at him like a fountain show.",
+  "visual": "Green golf course. A golfer in plaid pants with a big mustache bent over his putter, eyes bulging. Eighteen gophers out of eighteen holes across the course, each spitting a golf ball at him in arcs.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Rule-of-three gag. Third hit lands on the drop.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "gopher",
+    "golf",
+    "escalation",
+    "whack-a-mole"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a bright green golf course on a sunny day, a golfer in loud red plaid pants and a flat cap with a huge walrus mustache bent over his putter, eyes bulging and mustache flipping up, across the whole course eighteen brown gophers popping out of eighteen holes with little flags, every gopher spitting a white golf ball at him in a neat arc like a water fountain show, golf balls raining around him, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Putt, plink, gopher spits it back. Putt, plink, spit. Third putt: every hole fires at once. He opens an umbrella.",
+  "notes": "The gophers are polite. They are returning his balls.",
+  "agent": "claude"
+}

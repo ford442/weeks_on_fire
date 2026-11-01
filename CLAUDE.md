@@ -16,6 +16,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 - Keep the clone lightweight: prefer external media links; do not add large binaries without approval
 - Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/`
 - Before any writing or joke pass, read `notes/callback-bank.md` and pull at least three callbacks.
+- Writing and joke passes go to the **`wof-writer`** subagent (`.claude/agents/wof-writer.md`): reading order, comedy rules, locks, and where each kind of output is filed.
 
 ## Hub views
 
@@ -52,11 +53,15 @@ npm run dev
 npm run codegen          # content/ + songs/ → src/data/generated/
 npm run codegen:check    # fail if generated files drifted
 npm run agent-docs       # public/llms*.txt + sitemap.xml
-npm run lint             # ESLint: src/ and scripts/
-npm run format           # Prettier check (format:write to fix)
-npm test                 # vitest: src/**/*.test.ts + scripts/**/*.test.ts
+npm run codegen:check    # read-only drift check (also: agent-docs:check)
+npm run lint             # type-aware ESLint: src/ and scripts/
+npm run format
+npm run test             # Vitest (node for libs, jsdom for src/components/**)
+npm run test:coverage    # v8 coverage, no threshold yet
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
 ```
+
+Use Node 22 (`.nvmrc`).
 
 `tsc -b` includes `tsconfig.scripts.json` so codegen is typechecked. App `tsconfig` enables `noUncheckedIndexedAccess` and `verbatimModuleSyntax`.
 

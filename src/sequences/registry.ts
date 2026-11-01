@@ -1,6 +1,6 @@
 import { sequences } from '../data/sequences';
+
 import { createGraphScene } from './graph/interpreter';
-import type { SequenceScene } from './types';
 import { createHoseChase } from './scenes/hoseChase';
 import { createKickLattice } from './scenes/kickLattice';
 import { createKitchenCounterOrbit } from './scenes/kitchenCounterOrbit';
@@ -9,6 +9,8 @@ import { createRubberHoseErrand } from './scenes/rubberHoseErrand';
 import { createScreenDoorRecessional } from './scenes/screenDoorRecessional';
 import { createSpoonWhip } from './scenes/spoonWhip';
 import { createTunnelSmash } from './scenes/tunnelSmash';
+
+import type { SequenceScene } from './types';
 
 /** Hand-written scenes for films that need their own deformers. Keys are `renderer: "custom"` ids. */
 const factories: Record<string, () => SequenceScene> = {

@@ -7,6 +7,7 @@ import {
   writePoints,
 } from '../../lib/webgl/mesh';
 import { createMat4, DEG, identity, lookAt, perspective, type Vec3 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 const KICK = 0.4;

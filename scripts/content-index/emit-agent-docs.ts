@@ -1,6 +1,6 @@
-import { execSync } from 'node:child_process';
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+
 import {
   loadCartoons,
   loadSequences,
@@ -11,6 +11,7 @@ import {
   loadSongs,
   loadStaff,
 } from './load';
+import { syncOutputs } from './output';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { REPO_BASE, SITE_BASE, siteUrl, siteViews } from './views';
 
@@ -48,11 +49,15 @@ function loadEpisodes(): EpisodeSummary[] {
       const { frontmatter } = parseFrontmatter(raw);
       return {
         number,
-        title: String(frontmatter.title ?? `Episode ${number}`),
-        status: String(frontmatter.status ?? 'unknown'),
-        runtime: String(frontmatter.runtime_approx ?? ''),
+        title: frontmatterText(frontmatter.title, `Episode ${number}`),
+        status: frontmatterText(frontmatter.status, 'unknown'),
+        runtime: frontmatterText(frontmatter.runtime_approx, ''),
       };
     });
+}
+
+function frontmatterText(value: unknown, fallback: string): string {
+  return typeof value === 'string' || typeof value === 'number' ? String(value) : fallback;
 }
 
 function episodeRepoTree(number: string): string {
@@ -359,15 +364,6 @@ ${body}
 `;
 }
 
-function writeIfChanged(path: string, contents: string) {
-  const normalized = contents.endsWith('\n') ? contents : `${contents}\n`;
-  if (existsSync(path)) {
-    const existing = readFileSync(path, 'utf8');
-    if (existing === normalized) return;
-  }
-  writeFileSync(path, normalized);
-}
-
 function main() {
   const songs = loadSongs(repoRoot);
   const cutaways = loadCutaways(repoRoot);
@@ -395,26 +391,24 @@ function main() {
     'sitemap.xml': emitSitemap(episodes),
   };
 
-  for (const [name, contents] of Object.entries(outputs)) {
-    writeIfChanged(join(publicDir, name), contents);
-  }
+  syncOutputs(
+    publicDir,
+    Object.fromEntries(
+      Object.entries(outputs).map(([name, contents]) => [
+        name,
+        contents.endsWith('\n') ? contents : `${contents}\n`,
+      ]),
+    ),
+    {
+      check: checkMode,
+      label: 'Agent docs',
+      fixHint: 'Run npm run agent-docs and commit the changes.',
+    },
+  );
 
   console.log(
     `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
-
-  if (checkMode) {
-    const status = execSync(
-      'git status --porcelain public/llms.txt public/llms-full.txt public/sitemap.xml',
-      {
-        cwd: repoRoot,
-        encoding: 'utf8',
-      },
-    ).trim();
-    if (status) {
-      throw new Error('Agent docs are out of date. Run npm run agent-docs and commit the changes.');
-    }
-  }
 }
 
 main();

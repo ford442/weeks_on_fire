@@ -1,0 +1,22 @@
+{
+  "id": "squeaky-knight",
+  "title": "Squeaky Boots",
+  "premise": "A knight sneaks past a sleeping dragon. Every step squeaks like a rubber duck. One giant eye opens.",
+  "visual": "Cave of gold coins. A huge sleeping dragon with one enormous eye wide open, looking down. A tiny knight frozen on tiptoe mid-step, cheeks puffed, one sweat drop, squeak lines under his boot.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Tension gag for a quiet bar before a drop. The eye opening is the drop.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "knight",
+    "dragon",
+    "sneaking",
+    "squeak"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a treasure cave piled with gold coins and goblets, a gigantic green dragon curled asleep with one enormous yellow eye wide open looking straight down, a tiny knight in shiny silver armor frozen on tiptoe mid-step on the coins, cheeks puffed out holding his breath, one big sweat drop, small curved squeak lines coming out from under his metal boot, a single coin balanced on his helmet, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Step: squeak. Freeze. Step: squeak. Freeze. Step: SQUEAK. The eye opens. Knight slowly looks up. Smiles. Waves.",
+  "notes": "The squeak should sound exactly like a rubber duck. Cut before anything happens; the wave is the button.",
+  "agent": "claude"
+}

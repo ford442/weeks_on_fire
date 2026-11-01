@@ -1,0 +1,23 @@
+{
+  "id": "one-more-twirl",
+  "title": "One More Twirl",
+  "premise": "A little kid twirls spaghetti and the fork won't stop. The tablecloth, the candle, the breadsticks and the waiter all wind onto it.",
+  "visual": "Checkered-tablecloth Italian restaurant. A small kid in a bib holds up a fork with a giant spinning ball of spaghetti, tablecloth, breadsticks and a mustached waiter wrapped inside, only his legs and his tray sticking out. The parents' jaws are literally on the table.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Use after anyone in the show says 'just a little more.' No Lillith/Rubella needed.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "food",
+    "spaghetti",
+    "escalation",
+    "restaurant",
+    "slapstick"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cozy Italian restaurant with a red-and-white checkered floor, a small kid in a lobster bib sitting on a booster seat holding up a fork with a gigantic spinning ball of spaghetti wound around it, the ball has swallowed the tablecloth, a lit candle, a basket of breadsticks and a mustached waiter, only the waiter's legs in black trousers and his silver tray sticking out of the noodle ball, the bare table beneath, the parents across from the kid with their jaws dropped down onto the table like cartoon drawers, a meatball rolling off the edge, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Kid twirls. Noodles, then cloth, then candle, then the waiter slides across the floor into the ball. Kid takes one big bite of the whole ball. Waiter's legs kick.",
+  "notes": "Escalation should feel like the fork has a motor. The kid is happy, never scared. Avoid any famous-dog-spaghetti staging.",
+  "agent": "claude"
+}

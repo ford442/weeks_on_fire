@@ -1,0 +1,23 @@
+{
+  "id": "pancake-hat",
+  "title": "Pancake Hat",
+  "premise": "A bear chef flips a pancake. It sticks to the ceiling. He waits. It drops onto the cat as a perfect beret, syrup and all.",
+  "visual": "Diner kitchen. A bear chef in a tall white hat grinning with an empty pan. A cat sitting on the counter wearing a pancake as a beret, a pat of butter on top, syrup dripping down one ear, looking unimpressed.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Breakfast cutaway. The cat's flat face is a nod to the show's deadpan, but the bear is all joy.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "cat",
+    "bear",
+    "food",
+    "breakfast"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: a cozy diner kitchen, a big brown bear chef in a tall white chef hat and apron grinning hugely holding an empty frying pan, on the counter an orange tabby cat sitting upright wearing a golden pancake perfectly on its head like a beret, a square pat of butter on top, maple syrup slowly dripping down over one ear, the cat staring flatly at the camera, a flour cloud in the air, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Flip. The pancake sticks to the ceiling. The bear looks up. Waits. Whistles. Flop. Beret. Bear gives a chef's kiss.",
+  "notes": "The pancake must land perfectly, like it was the plan.",
+  "agent": "claude"
+}

@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
 import { DEG } from '../../lib/webgl/math';
+
 import { loopTime, resolve, sampleKeys } from './animate';
 import { createGraphEvaluator } from './evaluate';
 import { buildGeometry } from './geometry';
+
 import type { GraphGeometry, SequenceGraph } from './types';
 
 describe('sampleKeys', () => {

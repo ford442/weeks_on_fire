@@ -10,6 +10,7 @@ import {
   createTorus,
   type MeshData,
 } from '../../lib/webgl/mesh';
+
 import type { GraphGeometry } from './types';
 
 /** Small deterministic PRNG so a `points` cloud looks the same on every load. */

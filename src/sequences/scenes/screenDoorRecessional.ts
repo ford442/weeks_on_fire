@@ -1,4 +1,4 @@
-import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
+import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
 import {
   createBox,
   createIcosahedronLines,
@@ -17,6 +17,7 @@ import {
   smoothstep,
   type Vec3,
 } from '../../lib/webgl/math';
+
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 interface PorchKit {
@@ -154,7 +155,7 @@ export function createScreenDoorRecessional(): SequenceScene {
     },
     dispose() {
       if (!kit) return;
-      for (const mesh of Object.values(kit)) mesh.dispose();
+      disposeMeshes(kit);
       kit = null;
     },
   };

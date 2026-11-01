@@ -1,0 +1,23 @@
+{
+  "id": "poodle-puff",
+  "title": "Poodle Puff",
+  "premise": "A leaf blower hits a fluffy poodle. She becomes a perfect sphere and rolls happily down the street.",
+  "visual": "Autumn sidewalk. A gardener with a leaf blower, jaw dropped. A white poodle puffed into a perfect fluffy ball, tiny legs and a delighted face poking out, rolling away through swirling leaves.",
+  "status": "sketched",
+  "runtime": "~6-8 seconds",
+  "register": "silly slapstick",
+  "characterLean": "Wind-gag cousin to the dry microburst ideas. Pure kid cutaway.",
+  "tags": [
+    "silly",
+    "kid-friendly",
+    "animals",
+    "dog",
+    "poodle",
+    "wind",
+    "autumn"
+  ],
+  "grokImaginePrompt": "2D hand-drawn cel animation frame in early-1990s Warner Bros. television cartoon style, NOT photoreal, NOT 3D, 4:3: an autumn sidewalk full of orange leaves, a gardener in overalls holding a leaf blower with his jaw dropped and hat blown back, a white poodle puffed up into a perfect round fluffy sphere twice her size, only tiny feet, a pink bow and a delighted face poking out, rolling away down the sidewalk, red and orange leaves swirling around her, motion lines, thick confident black ink outlines with slight taper, flat saturated cel color fills with one hard-edged shadow tone and no gradients on the characters, painted gouache background, faint cel dust, exaggerated squash-and-stretch, huge readable cartoon facial expressions, hand-drawn cartoon, Grok Imagine style",
+  "motion": "6-8s. Vroom. Fluff inflates like a balloon. Roll, roll, bounce off a hydrant, roll back past the gardener. She wants to go again.",
+  "notes": "She loves it. If she looks upset the gag fails.",
+  "agent": "claude"
+}

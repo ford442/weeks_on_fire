@@ -7,10 +7,11 @@ import {
   type Mat4,
   type Vec3,
 } from './math';
-import type { MeshData } from './mesh';
-import type { SequenceGl } from './context';
 import { compileProgram, type ShaderProgram } from './program';
 import { createVaoSupport, getVaoSupport, type VaoSupport } from './vao';
+
+import type { MeshData } from './mesh';
+import type { SequenceGl } from './context';
 
 const LIT_VS = `
 attribute vec3 aPosition;
@@ -411,6 +412,11 @@ export class SequenceEngine {
       gl.uniformMatrix3fv(this.loc(program, 'uNormalMat'), false, this.normalMat);
     }
   }
+}
+
+/** Disposes every mesh in a scene's mesh bag (`Object.values` is `any[]` on plain interfaces). */
+export function disposeMeshes(meshes: object): void {
+  for (const mesh of Object.values(meshes) as GpuMesh[]) mesh.dispose();
 }
 
 export function modelTRSX(

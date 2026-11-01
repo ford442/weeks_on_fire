@@ -1,4 +1,5 @@
 import { lerp, type Vec3 } from '../../lib/webgl/math';
+
 import type { Animated, Ease, Keyframe } from './types';
 
 export function applyEase(ease: Ease, u: number): number {
@@ -29,8 +30,12 @@ function mix<T extends number | Vec3>(a: T, b: T, u: number): T {
   return [lerp(va[0], vb[0], u), lerp(va[1], vb[1], u), lerp(va[2], vb[2], u)] as T;
 }
 
+function copyVec3(value: Vec3): Vec3 {
+  return [value[0], value[1], value[2]];
+}
+
 function copy<T extends number | Vec3>(value: T): T {
-  return (typeof value === 'number' ? value : [...(value as Vec3)]) as T;
+  return (typeof value === 'number' ? value : copyVec3(value)) as T;
 }
 
 /** Samples keyframes (ascending `t`) at `timeSec`. Values are clamped to the first / last key. */
@@ -56,7 +61,7 @@ export function sampleKeys<T extends number | Vec3>(
 }
 
 export function resolve<T extends number | Vec3>(value: Animated<T>, timeSec: number): T {
-  return isKeyframes(value) ? sampleKeys(value, timeSec) : copy(value as T);
+  return isKeyframes(value) ? sampleKeys(value, timeSec) : copy(value);
 }
 
 /** Maps film time into loop space: past `outSec`, time wraps back to `inSec`. */

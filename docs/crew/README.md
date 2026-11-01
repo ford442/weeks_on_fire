@@ -17,6 +17,7 @@ the current work.
 | [Nova Chen](nova-chen.md) | Music Supervisor | Brooklyn, NY | ✅ |
 | [Elio Marsh](elio-marsh.md) | Visual Designer | Portland, OR | ✅ |
 | [Roley Voss](roley-voss.md) | Animation (Marble Tick Tack) | — | ❌ portrait pending |
+| [Juno Halverd](juno-halverd.md) | Stage Lighting Orchestrator (lasers) | Las Vegas, NV | ❌ portrait pending |
 
 ---
 
@@ -30,6 +31,7 @@ Mara (page) ──► selected still ──► Soren (directs picture) ──►
                      └──► Julian slates once there is a picture job, or a bed with a door
 Nova (beds) ── runs in parallel the whole way; a bed can land before its still
 Roley ── owns the Marble Tick Tack lane end to end; the cabinet comes home
+Juno ── takes Nova's drop map + Soren's select, writes the beam cue; Elio turns it into prompt text
 ```
 
 - **Ideas enter as Mara text.** Not as a Soren shot and not as a Julian slate.
@@ -38,6 +40,7 @@ Roley ── owns the Marble Tick Tack lane end to end; the cabinet comes home
 - **Nova is parallel, not downstream.** She is not waiting for the cut.
 - **Elio makes the prompt reproducible** and keeps the archive's worlds apart.
 - **Roley owns Marble Tick Tack.** Nobody else's room gets the cabinet.
+- **Juno owns the beams.** No laser fires before the drop, and none crosses a face.
 
 ## The group project
 

@@ -51,6 +51,7 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 ```bash
 npm run dev
 npm run codegen          # content/ + songs/ → src/data/generated/
+npm run codegen:check    # fail if generated files drifted
 npm run agent-docs       # public/llms*.txt + sitemap.xml
 npm run codegen:check    # read-only drift check (also: agent-docs:check)
 npm run lint             # type-aware ESLint: src/ and scripts/

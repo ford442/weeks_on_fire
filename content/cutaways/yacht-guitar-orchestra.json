@@ -1,0 +1,23 @@
+{
+  "id": "yacht-guitar-orchestra",
+  "kind": "musical",
+  "title": "Yacht Guitar Orchestra",
+  "status": "suggested",
+  "runtime": "~3 songs, hard cuts",
+  "episode": "Musical Cutaway / Visual Experiment",
+  "songId": "yacht-guitar-orchestra",
+  "songTitle": "Yacht Guitar Orchestra",
+  "summary": "Rubella and Lillith sunbathing on a yacht while a guitar line plays the rail. Three-song hard-cut journey: daylight vine island with guitar orchestra bed, dark island fire with Wallisian bed, night approach to Busan Gwangan Bridge with Korean K-pop bed. No landing.",
+  "visualArc": "Open ocean lounges + guitar line → vine island horizon → shore cannons + parrots + dolphin leap → hard cut dark: lights in vines + beach fire → hard cut night: Busan Gwangan Bridge RGB + Marine City.",
+  "tags": [
+    "musical",
+    "yacht",
+    "guitar-orchestra",
+    "rubella",
+    "lillith",
+    "island",
+    "busan",
+    "hard-cut"
+  ],
+  "segmentsSource": "prompts/yacht-guitar-orchestra-segments.md"
+}

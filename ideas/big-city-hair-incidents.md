@@ -320,3 +320,68 @@ Grok Imagine seed (swap the bracket):
 These cut into slot **G** (0:54–1:16) and the final-chorus stems in **J**.
 Stage plates still own A / B / D / I. Nothing here replaces the skyline
 chorus lock at **E**.
+
+---
+
+## Third pass — appointment day (phones, salons, errands)
+
+*2026-11-01.* Same lock: real scale, nothing bigger than a person, nobody comments. These
+are 4-bar fillers for the gaps around *The Appointment Day* arc
+([`big-city-cutaway.md`](big-city-cutaway.md) § *Story arc*). Each one also works as a
+stand-alone beat. They're deduped against the first two passes.
+
+### Phones
+
+- **Phone to the ear.** The phone goes in, and so does her hand, up to the wrist. She has
+  the whole conversation like that, elbow out, nodding.
+- **Speakerphone instead.** She gives up on the ear and holds the phone flat under her chin
+  like a walkie-talkie for the whole call, in public, with dignity.
+- **Curly cord.** On a salon desk landline, by the end of the call the cord is wound three
+  times through her hair. She hands the receiver back and stays tethered to the desk for
+  one beat. The receptionist unwinds her without comment.
+- **Phone booth.** An old glass booth on the corner. She can't fit with the door shut, so
+  she makes the call with the door propped open by her own crown.
+- **On hold.** The salon puts her on hold. She stands very still for eight bars so nothing
+  shifts. The hold ends. She moves.
+- **Pocket dial from inside.** A muffled ringtone, and she's not sure where it's coming from.
+  She turns her head slowly; the ringing turns with her.
+
+### Salons
+
+- **Step stool.** The stylist climbs a two-step stool to reach the crown and works up
+  there like someone hanging a picture.
+- **Bonnet dryer.** The hood won't come down. It rests on top of the hair like a pot lid.
+  She sits under it for the full timer anyway.
+- **Backwash.** Her head goes back into the sink, and the hair fills that sink and half of
+  the next one. The next client waits.
+- **The cape.** The cape snaps on at the neck. The hair is entirely outside the cape. The
+  stylist looks at the cape, then the hair, and starts anyway.
+- **Waiting room.** Her hair occupies the chair beside her. The next customer reads the
+  situation and stands.
+- **Hand mirror.** The stylist holds up the hand mirror to show her the back. It shows
+  only more hair. She nods, satisfied.
+
+### Errands in between
+
+- **Glass door print.** She misjudges a very clean shop door, and the crown touches first.
+  A round print the size of a dinner plate stays on the glass. Staff wipe it later,
+  unhurried.
+- **Pigeon.** One pigeon lands on top, looks around for a block, and gets off at the next
+  corner like it was a bus.
+- **Hand dryer.** She leans in to dry her hands and the jet dryer blasts the hair sideways.
+  She finishes drying her hands. She leaves sideways.
+- **Hair tie.** She tries to tie it up. The hair tie snaps off and shoots across the room. It
+  lands in someone's coffee. Nobody follows it.
+- **Window blinds.** She looks out through the blinds, and the hair lifts six slats at once.
+  She sees more than she meant to and lets them down.
+- **The umbrella hold.** A friend holds an umbrella over the hair at full arm's length
+  for a whole block while staying dry herself. Neither mentions the arm.
+
+### Generate-first (third pass)
+
+1. **Curly cord.** It's phone-themed, tethered, and the receptionist unwinds her.
+2. **Bonnet dryer.** The pot-lid shot.
+3. **Pigeon.** Gets off at the next corner like it was a bus.
+4. **Hand dryer.** One sideways blast, and she leaves sideways.
+
+These slot around C2–J5 in the arc, or into G and J on their own.

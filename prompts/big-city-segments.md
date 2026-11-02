@@ -59,6 +59,48 @@ Generate-first: A, E, G (fringe or lunch), then H.
 
 ---
 
+## Story arc inserts
+
+*The Appointment Day*, added 2026-11-01. Lock and beat map:
+[`ideas/big-city-cutaway.md`](../ideas/big-city-cutaway.md) § *Story arc*. These are
+**B-roll alternates** inside the C / E / G / H / J windows. Each one is filed next to
+the slot it belongs to, in time order, so the Suggestions preview plays them in sequence.
+Stage plates A, B, D, F, I and K2 don't change.
+
+| Insert | Time | Window | Replaces / sits beside | Chain |
+|---|---|---|---|---|
+| C2 Call one | 0:08–0:15 | B (stage verse 1) | a cutaway inside B | — |
+| C3 Crown work | 0:15–0:23 | C | alternate to C (fire-escape strand) | — |
+| E2 Out the door | 0:39–0:46 | E, back half | sits after E's skyline lock | — |
+| G5 Six blocks | 0:54–1:01 | G | alternate to G1 (under the fringe) | — |
+| G6 Call two | 1:01–1:08 | G | alternate to G3 (laundry) | → G7 by hard cut (new room) |
+| G7 Blowout | 1:08–1:16 | G | alternate to G2 / G4 | — |
+| H2 Call three | 1:23–1:31 | H, back half | after the headstock → hair-blocks | — |
+| J2 The wash | 1:46–1:54 | J | first city stem | **J2 last frame = J3 start** |
+| J3 It dries (drop) | 2:02–2:10 | J | city stem on a gang "Big City" | → J4 by cut to exterior |
+| J4 Skyline + delivery | 2:18–2:26 | J | variant of J-skyline | — |
+| J5 Call four | 2:31–2:39 | J, last city stem | lands right before K2 | → K2 on stage |
+
+Times are approximate, worked from the timing sheet above. Nudge them after listening to
+the track.
+
+**Arc continuity (paste into every insert, after the continuity lock):**
+Lillith in modern black lace, dark hair, calm and delighted. The hair is her project.
+Rubella in matching black lace, dry, carries things. Glamora city, modern, night or flat
+daylight. Salons: shelves out of focus or empty, no bottles, no labels, no text. Phone calls
+are silent. Lillith listens and does not speak, and answers with one gesture: thumb and
+finger an inch apart. **No lip sync. No one is singing. The hair performs the beat.**
+
+**Clip budget:** generate 10s, trim to 4 bars (7.6s) on the snare. Chain clips where the
+table says so: last frame of one = start frame of the next.
+
+**Arc negatives (add to the standard list):** no shampoo or spray bottle in any salon, no
+product shelf in focus, no screen text except the one-frame 23%, no caller ID, no calendar,
+no one shouting, no one falling, no ceiling damage beyond one lifted tile, not the building,
+not the laundromat.
+
+---
+
 ## A — Kenji tag, stage (0:00–0:08)
 
 **Start / last:** same small-club wide. Kenji in frame. Ladies present, not yet selling.  
@@ -97,6 +139,21 @@ Start from the locked small Glamora club stage: Lillith in modern black lace at 
 
 ---
 
+## C2 — Call one, a little lift (0:08–0:15)
+
+**Start:** morning café window on a Glamora street. Lillith with a phone to her ear, her
+dark hair teased but at human scale.
+**Motion:** she listens, nods once, and holds up thumb and finger an inch apart.
+**Last:** the gesture, held. It's the start still for C3's mirror.
+**Mouths:** none. She listens.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal morning on a modern city street, a woman with dark teased hair at ordinary human size in a modern black lace dress stands at a café takeaway window holding a phone to her ear, calm, delighted, listening and not speaking; she nods once, then holds up her free hand with thumb and forefinger one inch apart, meaning "just a little". Flat daylight, faint magenta and cyan neon in the gaps of her hair only, no text on the window, no logos, no bottle. Locked camera. 10 seconds, Grok Imagine style
+```
+
+---
+
 ## C — Fire-escape strand (0:15–0:23)
 
 **Start / last:** one lock of photoreal hair climbing a brick wall like a fire escape.  
@@ -113,6 +170,29 @@ No lip sync. No one is singing. The hair performs the beat. Night alley, wet bri
 
 - Extras sing → `no faces singing, no mouths, hair only`
 - Beehive cartoon → `photoreal hair, individual strands, not a cartoon wig`
+
+---
+
+## C3 — Crown work (0:15–0:23)
+
+Alternate to C (fire-escape strand). Lyric: *Crown work on a Tuesday*.
+
+**Start:** salon one. Lillith in the chair facing a mirror. A deadpan stylist on a two-step
+stool with a teasing comb. Rubella in a waiting chair behind, holding a "World's Okayest
+Tenant" mug.
+**Motion:** the crown rises about an inch on every snare hit. On the last bar Lillith
+stands, and her head clears the top of the mirror frame.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal small modern hair salon, a woman in a modern black lace dress sits in a salon chair facing a mirror while a deadpan stylist standing on a two-step stool teases her dark hair upward with a comb, the crown rising about an inch on every snare hit; behind them in a waiting chair a second woman in matching black lace with long dark hair and blood-red lipstick holds a mug and watches with a dry expression. Salon shelves blurred and empty, no bottles, no labels, no text. On the last beat the seated woman stands and her hair rises past the top of the mirror frame. Locked camera. 10 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- Bottles appear → `empty shelves, no product, no spray can, no bottle anywhere`
+- Stylist reacts → `stylist deadpan, working, does not look at camera`
 
 ---
 
@@ -146,6 +226,23 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal night city
 
 - Logo on the towers → `no type on the hair, no brand, lights only in the gaps`
 - People perform → `figures only look up, they do not sing, they do not dance a chorus`
+
+---
+
+## E2 — Out the salon door (0:39–0:46)
+
+Back half of the chorus window. E's skyline lock still opens the chorus.
+
+**Start:** inside salon one, Lillith at the glass door, crown now about two feet tall.
+**Motion:** she stops short, turns her shoulders 45 degrees, ducks, and goes out sideways.
+Her crown presses a print the size of a dinner plate onto the glass. The receptionist
+wipes it without looking up. Rubella follows through the door normally.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal salon entrance from inside, a woman in modern black lace with enormous teased dark hair about two feet tall stops short at a glass door, turns her shoulders sideways, ducks, and steps out onto the street; her hair presses a round smudge print the size of a dinner plate onto the glass as she passes; a deadpan receptionist at the desk wipes the print with a cloth without looking up; a second woman in matching black lace follows through the door at a normal height, dry. No text on the door, no bottles, magenta and cyan only in the gaps between strands. Locked camera. 10 seconds, Grok Imagine style
+```
 
 ---
 
@@ -201,134 +298,6 @@ No lip sync. No one is singing. The hair performs the beat. Lunch booth, two eno
 
 - Afros sing → `no mouths, hair is the character, argument is bounce not lyric`
 - Scale collapses → `food stays normal scale, hair stays furniture-scale`
-
----
-
-## H — Solo: headstock → hair-blocks (1:16–1:31)
-
-**Start:** Kenji headstock macro.  
-**Last:** wide hair-blocks / optional ELO booth still in the city.  
-**Audio stem:** 1:16–1:31.  
-**Mouths:** none.
-
-**Grok Imagine**
-```
-No lip sync. Kenji's hands and a guitar headstock fill the first seconds, leather fringe in frame, then the camera finds a wide night street where city blocks are photoreal teased-hair towers. Dive bomb is a vertical slam in the hair, not a whip pan. Magenta and cyan in the gaps only. No bottle, no meter-as-prop, no logo. 15 seconds. Grok Imagine style
-```
-
----
-
-## I — Bridge on stage (1:31–1:46)
-
-**Start / last:** two-shot. Map, not bottle.  
-**Motion:** Rubella dry; Lillith high answer. Blocks hold. Quiet slot stays taped.  
-**Audio stem:** 1:31–1:46.  
-**Mouths:** both.
-
-**Grok Imagine**
-```
-Start from the locked small club two-shot: Rubella dry at the mic, Lillith answering high, Kenji thinned back. They wanted a formula; she gave them a map. No bottle in frame. Magenta and cyan only in gaps. 15 seconds. Photoreal glam, Grok Imagine style
-```
-
----
-
-## J — Final chorus intercut + K2 (1:46–2:47)
-
-Generate as 8-second stems. Intercut stage title-hits with hair-skyline in clip_stacker. Land on stage for Kenji's second tag.
-
-**J-stage**
-```
-Start from the locked small club: both women stacked on the title Big City, Kenji playing, gang off-camera. Micro-push on each title hit. Same hem, same mics. No logo wall, no bottle. 8 seconds. Grok Imagine style
-```
-
-**J-skyline**
-```
-No lip sync. No one is singing. The hair performs the beat. Hair-tower skyline at night, top-floor window lit in the crown after the street has gone to sleep, empty sidewalk. Magenta and cyan only in the gaps. Crown keeps the keys. 8 seconds. Grok Imagine style
-```
-
-**K2 — same sentence**
-```
-Return to the K1 stage wide. Same room, same hem. Kenji looks at someone else's hair and speaks the same dry sentence, mouth barely open, not sold. One strand from the intro still standing. Riff thins. 8 seconds. No bottle, Grok Imagine style
-```
-
----
-
-## Story arc inserts
-
-*The Appointment Day*, added 2026-11-01. Lock and beat map:
-[`ideas/big-city-cutaway.md`](../ideas/big-city-cutaway.md) § *Story arc*. These are
-**B-roll alternates** inside the C / E / G / H / J windows. Stage plates A, B, D, F, I and K2
-don't change.
-
-**Arc continuity (paste into every insert, after the continuity lock):**
-Lillith in modern black lace, dark hair, calm and delighted. The hair is her project.
-Rubella in matching black lace, dry, carries things. Glamora city, modern, night or flat
-daylight. Salons: shelves out of focus or empty, no bottles, no labels, no text. Phone calls
-are silent. Lillith listens and does not speak, and answers with one gesture: thumb and
-finger an inch apart. **No lip sync. No one is singing. The hair performs the beat.**
-
-**Clip budget:** generate 10s, trim to 4 bars (7.6s) on the snare. Chain clips where the
-table says so: last frame of one = start frame of the next.
-
-**Arc negatives (add to the standard list):** no shampoo or spray bottle in any salon, no
-product shelf in focus, no screen text except the one-frame 23%, no caller ID, no calendar,
-no one shouting, no one falling, no ceiling damage beyond one lifted tile, not the building,
-not the laundromat.
-
----
-
-## C2 — Call one, a little lift (0:08–0:15)
-
-**Start:** morning café window on a Glamora street. Lillith with a phone to her ear, her
-dark hair teased but at human scale.
-**Motion:** she listens, nods once, and holds up thumb and finger an inch apart.
-**Last:** the gesture, held. It's the start still for C3's mirror.
-**Mouths:** none. She listens.
-
-**Grok Imagine**
-```
-No lip sync. No one is singing. The hair performs the beat. Photoreal morning on a modern city street, a woman with dark teased hair at ordinary human size in a modern black lace dress stands at a café takeaway window holding a phone to her ear, calm, delighted, listening and not speaking; she nods once, then holds up her free hand with thumb and forefinger one inch apart, meaning "just a little". Flat daylight, faint magenta and cyan neon in the gaps of her hair only, no text on the window, no logos, no bottle. Locked camera. 10 seconds, Grok Imagine style
-```
-
----
-
-## C3 — Crown work (0:15–0:23)
-
-Alternate to C (fire-escape strand). Lyric: *Crown work on a Tuesday*.
-
-**Start:** salon one. Lillith in the chair facing a mirror. A deadpan stylist on a two-step
-stool with a teasing comb. Rubella in a waiting chair behind, holding a "World's Okayest
-Tenant" mug.
-**Motion:** the crown rises about an inch on every snare hit. On the last bar Lillith
-stands, and her head clears the top of the mirror frame.
-**Mouths:** none.
-
-**Grok Imagine**
-```
-No lip sync. No one is singing. The hair performs the beat. Photoreal small modern hair salon, a woman in a modern black lace dress sits in a salon chair facing a mirror while a deadpan stylist standing on a two-step stool teases her dark hair upward with a comb, the crown rising about an inch on every snare hit; behind them in a waiting chair a second woman in matching black lace with long dark hair and blood-red lipstick holds a mug and watches with a dry expression. Salon shelves blurred and empty, no bottles, no labels, no text. On the last beat the seated woman stands and her hair rises past the top of the mirror frame. Locked camera. 10 seconds, Grok Imagine style
-```
-
-**Hardeners**
-
-- Bottles appear → `empty shelves, no product, no spray can, no bottle anywhere`
-- Stylist reacts → `stylist deadpan, working, does not look at camera`
-
----
-
-## E2 — Out the salon door (0:39–0:46)
-
-Back half of the chorus window. E's skyline lock still opens the chorus.
-
-**Start:** inside salon one, Lillith at the glass door, crown now about two feet tall.
-**Motion:** she stops short, turns her shoulders 45 degrees, ducks, and goes out sideways.
-Her crown presses a print the size of a dinner plate onto the glass. The receptionist
-wipes it without looking up. Rubella follows through the door normally.
-**Mouths:** none.
-
-**Grok Imagine**
-```
-No lip sync. No one is singing. The hair performs the beat. Photoreal salon entrance from inside, a woman in modern black lace with enormous teased dark hair about two feet tall stops short at a glass door, turns her shoulders sideways, ducks, and steps out onto the street; her hair presses a round smudge print the size of a dinner plate onto the glass as she passes; a deadpan receptionist at the desk wipes the print with a cloth without looking up; a second woman in matching black lace follows through the door at a normal height, dry. No text on the door, no bottles, magenta and cyan only in the gaps between strands. Locked camera. 10 seconds, Grok Imagine style
-```
 
 ---
 
@@ -395,6 +364,20 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal modern hai
 
 ---
 
+## H — Solo: headstock → hair-blocks (1:16–1:31)
+
+**Start:** Kenji headstock macro.  
+**Last:** wide hair-blocks / optional ELO booth still in the city.  
+**Audio stem:** 1:16–1:31.  
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. Kenji's hands and a guitar headstock fill the first seconds, leather fringe in frame, then the camera finds a wide night street where city blocks are photoreal teased-hair towers. Dive bomb is a vertical slam in the hair, not a whip pan. Magenta and cyan in the gaps only. No bottle, no meter-as-prop, no logo. 15 seconds. Grok Imagine style
+```
+
+---
+
 ## H2 — Call three, it's in there (1:23–1:31)
 
 The wrong third. Second half of the solo window, after Kenji's headstock → hair-blocks.
@@ -416,6 +399,41 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal city sidew
 
 - More than four items → `exactly four objects: sunglasses, earring, pencil, phone`
 - Glow becomes a logo → `light only between strands, no shapes, no text`
+
+---
+
+## I — Bridge on stage (1:31–1:46)
+
+**Start / last:** two-shot. Map, not bottle.  
+**Motion:** Rubella dry; Lillith high answer. Blocks hold. Quiet slot stays taped.  
+**Audio stem:** 1:31–1:46.  
+**Mouths:** both.
+
+**Grok Imagine**
+```
+Start from the locked small club two-shot: Rubella dry at the mic, Lillith answering high, Kenji thinned back. They wanted a formula; she gave them a map. No bottle in frame. Magenta and cyan only in gaps. 15 seconds. Photoreal glam, Grok Imagine style
+```
+
+---
+
+## J — Final chorus intercut + K2 (1:46–2:47)
+
+Generate as 8-second stems. Intercut stage title-hits with hair-skyline in clip_stacker. Land on stage for Kenji's second tag.
+
+**J-stage**
+```
+Start from the locked small club: both women stacked on the title Big City, Kenji playing, gang off-camera. Micro-push on each title hit. Same hem, same mics. No logo wall, no bottle. 8 seconds. Grok Imagine style
+```
+
+**J-skyline**
+```
+No lip sync. No one is singing. The hair performs the beat. Hair-tower skyline at night, top-floor window lit in the crown after the street has gone to sleep, empty sidewalk. Magenta and cyan only in the gaps. Crown keeps the keys. 8 seconds. Grok Imagine style
+```
+
+**K2 — same sentence**
+```
+Return to the K1 stage wide. Same room, same hem. Kenji looks at someone else's hair and speaks the same dry sentence, mouth barely open, not sold. One strand from the intro still standing. Riff thins. 8 seconds. No bottle, Grok Imagine style
+```
 
 ---
 

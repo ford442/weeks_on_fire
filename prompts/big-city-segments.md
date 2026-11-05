@@ -40,7 +40,10 @@ Working stem times are on *this* 2:46 file. Nudge after an ear pass. Do not chan
 
 ---
 
-## Timing sheet (~2:47)
+## Timing sheet, original cut (~2:47)
+
+The main cut (*The Trip*) has its own table under *Main cut continuity* below. This is the
+original stage-from-the-top cut, kept as an alternate.
 
 | Beat | Time | Dur | Plate | Mouths |
 |------|------|-----|-------|--------|
@@ -59,7 +62,326 @@ Generate-first: A, E, G (fringe or lunch), then H.
 
 ---
 
-## Story arc inserts
+## Main cut continuity (paste into every main-cut take)
+
+*The Trip: Lace Waterfall gets to the gig.* Added 2026-11-02. Lock, look and beat map:
+[`ideas/big-city-cutaway.md`](../ideas/big-city-cutaway.md) § *Main cut*. The original
+stage-from-the-top cut and *The Appointment Day* arc are kept under *Alternate plates* at
+the bottom of this file. Their headers are demoted so the Suggestions preview plays only
+the main cut.
+
+**Lillith (Lace Waterfall):** modern black lace dress, silver studded wristband, jet-black
+hair teased and crimped into a tower about three feet tall with one electric-magenta streak
+and two drumsticks pushed through it like hairpins, black angular pointed electric guitar
+with no logo, bright conspiratorial half-smile, flawless mascara.
+**Rubella (Lace Waterfall):** modern black lace evening dress, blood-red lipstick, long dark
+hair teased into a huge sideways mane like spread wings about four feet across with one
+platinum-white streak and guitar picks pinned in it like sequins, white four-string bass
+with no logo, dry and calm.
+**Kenji:** teased glam hair, black leather fringe jacket, guitar, ALUMNI lanyard. The
+club's house guitarist, not in the band. In the wings, half in shadow, except during the solo.
+**Props:** two black road cases stencilled LACE WATERFALL in white. A kick drum head reading
+LACE WATERFALL. One full red fire extinguisher beside Rubella's amp, sealed.
+**Hair:** photoreal sprayed strands, rigid enough to hold shape, soft enough to squash
+through a door and spring back. The world around it stays real-size.
+
+**Travel shots (B1–G9): no lip sync. No one is singing. The record is the soundtrack.**
+Daylight travel gets daylight; neon magenta and cyan only appear in the city at night and on
+stage, in the gaps between strands.
+
+**Main-cut negatives (add to the standard list):** no logos on guitars, cases or vehicles,
+no airline or bus-company branding, no readable signage except the band name stencil and
+kick drum, no shampoo bottle, no drummer's face, no one shouting at them, no one falling.
+
+| Seg | Time | Clip | Mouths |
+|---|---|---|---|
+| A | 0:00–0:08 | 10s → 8s | Kenji spoken |
+| B1 | 0:08–0:15 | 10s → 7.6s | none |
+| B2 | 0:15–0:23 | 10s → 7.6s | none |
+| D2 | 0:23–0:31 | 10s → 7.6s | none |
+| E | 0:31–0:38 | 10s → 7.6s | none |
+| E3 | 0:38–0:46 | 10s → 7.6s | none |
+| F2 | 0:46–1:01 | 15s | none |
+| G8 | 1:01–1:08 | 10s → 7.6s | none |
+| G9 | 1:08–1:16 | 10s → 7.6s | none |
+| H | 1:16–1:31 | 15s | none |
+| I | 1:31–1:46 | 15s | Rubella, Lillith |
+| J | 1:46–2:10 | 3 × 10s → 8s stems | title hits only |
+| J6 | 2:10–2:18 | 10s → 8s | none |
+| J7 | 2:18–2:39 | 10s / 15s stems | stage only |
+| K2 | 2:39–2:47 | 10s → 8s | Kenji spoken |
+
+---
+
+## A — Kenji tag, empty stage (0:00–0:08)
+
+**Start / last:** the small Glamora club before the show. Two empty mic stands, the drum
+riser with LACE WATERFALL on the kick drum, no band. Kenji in the wings stage right.
+**Motion:** he looks at a tour poster taped to the wall beside him, showing two women with
+enormous hair, and says the line, mouth barely open.
+**Mouths:** Kenji spoken only.
+
+**Grok Imagine**
+```
+Start from a small nightclub stage before the show, not an arena: two empty silver microphone stands, a drum kit on a low riser with LACE WATERFALL painted on the kick drum head, amps, a sealed red fire extinguisher beside one amp, magenta and cyan light only in the gaps of the backline. Stage right in the wings, half in shadow, a glam guitarist with teased hair and a black leather fringe jacket, guitar at his side, looks at a tour poster taped to the wall showing two women with gigantic metal hair, and speaks one dry sentence, mouth barely open, not smiling. No band on stage. No logo wall, no bottle. Locked camera. 8 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- The band appears → `the stage is empty, no women on stage, only on the poster`
+- He sells it → `mouth barely open, spoken not sung, not announced`
+
+---
+
+## B1 — Airport security, the cymbal (0:08–0:15)
+
+**Start:** an airport security checkpoint in flat daylight. Lillith and Rubella in black
+lace with their gigantic metal hair, the road cases on the belt. The scanner arch is far
+too short.
+**Motion:** the agent looks at the arch, then the hair, and waves them around it. They
+empty their hair into a grey tray: bobby pins, more bobby pins, then Lillith draws a full
+brass cymbal out of her tower and sets it in the tray.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. Photoreal airport security checkpoint in flat daylight, a walk-through scanner arch of ordinary height, two glamorous women in modern black lace with gigantic 1980s metal hair — one a three-foot jet-black crimped tower with a magenta streak and two drumsticks through it, the other a four-foot-wide dark sideways mane with a platinum-white streak — standing in front of the arch, which reaches only their shoulders; a deadpan security agent waves them around it; two black road cases on the x-ray belt stencilled LACE WATERFALL; the women drop bobby pins into a grey plastic tray, then the woman with the tower pulls a full brass cymbal out of her hair and lays it in the tray. No airline logos, no readable signs. Locked camera. 10 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- The cymbal comes from a bag → `the cymbal comes out of her hair`
+- Agent reacts → `agent deadpan, practical, no surprise`
+
+---
+
+## B2 — Jet bridge and cabin (0:15–0:23)
+
+**Start:** the jet bridge. The two walk toward the plane door with heads tilted 45 degrees
+in unison so the hair clears the ceiling.
+**Motion:** cut inside the cabin: their hair fills four open overhead bins down the aisle. A
+flight attendant gently presses a bin shut on a lock of it. They sit, calm.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. Photoreal airliner cabin in soft daylight, two glamorous women in modern black lace seated side by side, their gigantic 1980s metal hair — a tall jet-black crimped tower with a magenta streak and a four-foot-wide dark sideways mane with a white streak — rising up and filling four open overhead bins along the aisle; a flight attendant in a plain uniform gently presses one bin shut on a lock of hair; passengers in the rows behind can see nothing but hair; the two women sit calmly, seatbelts on. No airline logo, no readable text. Slow push down the aisle. 10 seconds, Grok Imagine style
+```
+
+---
+
+## D2 — Window seat, landing (0:23–0:31)
+
+Pre-chorus: *From the dorms you can see it / Prefecture lights in a stack.*
+
+**Start:** close on the plane window at dusk. Rubella's white-streaked mane is pressed
+against the inside of the glass.
+**Motion:** the Glamora skyline rises into view below, towers made of teased hair lit
+magenta and cyan in the gaps, and the mane in the window is bigger than the whole city.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal airliner window at dusk, inside the cabin a woman's enormous dark teased mane with one platinum-white streak pressed against the glass, and outside below, a night city skyline whose towers are made of photoreal teased glam hair with magenta and cyan light only in the gaps between strands, rising into view as the plane descends; the hair in the window looks bigger than the city. No text, no logos. Locked camera on the window. 10 seconds, Grok Imagine style
+```
+
+---
+
+## E — Hair skyline, chorus open (0:31–0:38)
+
+The original skyline lock, trimmed to 4 bars. Same prompt as the alternate plate, 8 seconds.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal night city street looking up: the skyline is enormous teased glam hair reading as towers and fire escapes, not a cartoon beehive. Magenta and cyan neon sits in the gaps BETWEEN strands, never as a logo on the hair. Two small figures with very large hair on wet asphalt, carrying road cases, looking up. Title hits brighten building-lights in the hair, not signage. No shampoo bottle, no concert stage, no billboard product. 8 seconds. Grok Imagine style
+```
+
+---
+
+## E3 — Bus terminal (0:38–0:46)
+
+**Start:** a city bus terminal at night. A glass revolving door.
+**Motion:** they go into the revolving door, the hair jams against the glass, and they go
+around a second full time and out. Inside, the hair brushes the hanging departure board and
+every flap flips. At the turnstiles: sideways, back half a step, sideways again. In the deep
+background, a delivery man in a red uniform walks through at a steady pace, pizza box at
+chest height, not looking.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. Photoreal city bus terminal at night, fluorescent and tiled, two glamorous women in modern black lace with gigantic 1980s metal hair carrying black road cases stencilled LACE WATERFALL; they squeeze through a glass revolving door, the hair pressing against the glass, and go around a second full time before stepping out; as they pass under a hanging split-flap departure board the hair brushes it and every flap flips; in the far background a delivery man in a red uniform walks across at a steady pace holding a pizza box level at chest height, not looking at them. No readable destinations, no company logos. Locked wide. 10 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- Flaps show words → `split-flap tiles blur as they flip, nothing readable`
+
+---
+
+## F2 — The bus, roof hatch (0:46–1:01)
+
+Verse 2 (Rubella): *I walked under somebody's fringe / for six blocks and a fine.*
+
+**Start:** a city bus at a stop. The hair doesn't fit through the door.
+**Motion:** cut to the bus moving down an avenue in daylight-to-dusk: both women stand
+inside with their heads and hair through the open roof hatch, hair streaming back like two
+flags. A low concrete overpass ahead: they tilt their heads together at the last moment and
+the hair combs along the underside of the bridge, then springs back up.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal city bus driving down a wide avenue at dusk, filmed from a car alongside, two glamorous women in black lace standing inside with their heads and gigantic 1980s metal hair poking up through the open roof hatch — one tall black crimped tower with a magenta streak, one huge sideways dark mane with a white streak — the hair streaming backward in the wind like flags; a low concrete overpass approaches, both women tilt their heads together at the last second and the hair brushes along the underside of the bridge and springs back up; their faces calm. No bus company logo, no ad panels with text. Tracking alongside. 15 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- Women climb on the roof → `they stand inside the bus; only heads and hair come out of the roof hatch`
+- Hair gets torn → `the hair bends, brushes and springs back, undamaged`
+
+---
+
+## G8 — Taxi past the laundromat (1:01–1:08)
+
+Pre-chorus 2: *From the laundry you can see it / through the glass of the machine.*
+
+**Start:** a plain, unbranded city taxi at night, both women in the back, the hair
+out of the open sunroof.
+**Motion:** the taxi passes a bright laundromat window, and the camera catches their hair
+reflected in a row of round dryer portholes, spinning as if inside them.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal night city street, a plain dark taxi with no logo drives past a brightly lit laundromat window, two women's gigantic metal hairstyles rising out of the taxi's open sunroof; in the laundromat window a row of round dryer portholes reflects the passing hair so it looks like it is spinning inside the machines, gold and green in the glass. Magenta and cyan only in the gaps between strands. No signage text. Locked camera on the laundromat window as the taxi passes. 10 seconds, Grok Imagine style
+```
+
+---
+
+## G9 — Stage door, the elevator yields (1:08–1:16)
+
+Chorus 2: *One tease and the elevator yields.*
+
+**Start:** the club's back corridor. A freight elevator opens on a car too short for the
+hair.
+**Motion:** the two step forward. The elevator car politely sinks two feet below the floor
+line so the hair fits, they step down into it, and the doors close.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal club back corridor, concrete and band stickers with nothing readable, a freight elevator with its doors open on a car whose ceiling is far too low for two women in black lace with gigantic 1980s metal hair holding road cases; as they step forward, the elevator car slowly sinks two feet below the floor level so the hair will fit, they step down into it calmly, and the doors slide shut. Magenta and cyan light in the hair gaps only. Locked camera. 10 seconds, Grok Imagine style
+```
+
+---
+
+## H — Solo, Kenji covers, the band walks on (1:16–1:31)
+
+**Start:** the stage, band missing. Kenji has stepped out of the wings to centre stage and
+is playing the solo alone under the lights.
+**Motion:** behind him the curtain bulges, and the hair comes through the gap first, then
+Lace Waterfall. They walk to the mics, plug in (Lillith the black guitar, Rubella the white
+bass), and Kenji backs into the wings on the dive bomb, still playing.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. Small nightclub stage, magenta and cyan light only in the backline gaps: a glam guitarist with teased hair and a black leather fringe jacket plays a solo alone at centre stage; behind him the stage curtain bulges and two gigantic 1980s metal hairstyles push through the gap first, followed by two glamorous women in modern black lace, one carrying a black angular guitar, one a white bass; they walk to two silver microphones and plug in while the guitarist backs away into the shadow of the wings, still playing; a drum kit behind with LACE WATERFALL on the kick drum, the drummer hidden entirely behind the women's hair. No logos, no bottle. Locked wide. 15 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- Drummer appears → `the drummer is completely hidden behind their hair, never visible`
+- Kenji stays centre → `he backs into the wings as they reach the mics`
+
+---
+
+## I — Bridge, Lace Waterfall on stage (1:31–1:46)
+
+**Start / last:** two-shot at the mics. Hair filling the top of frame, lights in the gaps.
+**Motion:** Rubella sings the bridge dry; Lillith answers high. Kenji a shadow in the wings.
+**Mouths:** Rubella, Lillith.
+
+**Grok Imagine**
+```
+Small nightclub stage, two-shot: Rubella in modern black lace at the right silver mic with a white bass, a huge sideways dark metal mane with a platinum-white streak, singing dry, and Lillith in black lace at the left mic with a black angular guitar, a tall jet-black crimped hair tower with a magenta streak and drumsticks through it, answering high; their hair fills the top of the frame and hides the drummer; magenta and cyan light in the gaps between strands; a guitarist is only a shadow in the wings; a sealed red fire extinguisher beside the amp. They sing this record. Micro-push on the snare. No bottle, no logo wall. 15 seconds, Grok Imagine style
+```
+
+---
+
+## J — Final chorus, Lace Waterfall (1:46–2:10)
+
+Generate as 8-second stems. Intercut stage title hits with the crowd. Mouths on stage only.
+
+**Grok Imagine**
+```
+Small nightclub stage: two women in modern black lace with gigantic 1980s metal hair stacked on the title Big City at two silver mics, black guitar and white bass, drummer hidden behind their hair, micro-push on each title hit; intercut: the crowd from behind, ordinary people with ordinary hair, all heads tilted up toward the band's hair. Magenta and cyan in the gaps only. No logo wall, no bottle. 8 seconds, Grok Imagine style
+```
+
+---
+
+## J6 — Through the roof (2:10–2:18)
+
+**THE DROP: transforms.** On the dive bomb.
+
+**Start:** = last stage stem. Both women at the mics, hair touching the ceiling under the
+club's skylight.
+**Motion:** on the dive bomb their hair rises straight up through the open skylight. Cut to
+exterior: the Glamora skyline at night, and two new hair towers rising out of the club's
+roof among the others, stage light pouring out of their gaps.
+**Mouths:** none.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Photoreal night city skyline made of towers of enormous teased glam hair with magenta and cyan light in the gaps; out of the roof of a small nightclub in the middle of it, two new hair towers rise up through an open skylight — one jet-black and crimped with a magenta streak, one wide and dark with a platinum-white streak — climbing until they stand as tall as the other towers, warm stage light pouring out between their strands. Building intact, skylight open. Slow push-in. 10 seconds, Grok Imagine style
+```
+
+**Hardeners**
+
+- Roof breaks → `the hair rises through an open skylight, the roof stays intact`
+- New towers look like buildings → `photoreal hair strands, matching the two women's colours and streaks`
+
+---
+
+## J7 — Skyline and stage, last chorus (2:18–2:39)
+
+Intercut stems: the new towers in the skyline (one window lit high in the crown, *the crown
+still keeps the keys*) and the stage two-shot. Mouths on stage only.
+
+**Grok Imagine**
+```
+No lip sync. No one is singing. The hair performs the beat. Night skyline of teased-hair towers, the two newest towers rising from a small club roof, one warm window lit high in the crown of the black one after the rest of the street has gone dark, magenta and cyan only in the gaps, empty sidewalk below. 8 seconds. Grok Imagine style
+```
+
+---
+
+## K2 — Kenji tag, full stage (2:39–2:47)
+
+**End reaction.** Same framing as A, now with the band on stage and the hair going up out of
+frame.
+
+**Start / last:** Kenji in the wings stage right, half in shadow. Beyond him, Lace Waterfall at
+the mics, their hair rising up out of the top of frame.
+**Motion:** he looks up at their hair and speaks the same sentence as the intro, unchanged,
+mouth barely open. The riff thins.
+**Mouths:** Kenji spoken only.
+
+**Grok Imagine**
+```
+Return to the opening framing: small nightclub stage from the wings, a glam guitarist with teased hair and a black leather fringe jacket half in shadow stage right, guitar at his side, and beyond him two women in modern black lace at the microphones whose gigantic metal hair rises up and out of the top of the frame; he looks up at the hair and speaks one dry sentence, mouth barely open, not sold. Magenta and cyan in the gaps only. No bottle, no logo wall. 8 seconds, Grok Imagine style
+```
+
+---
+
+## Alternate plates (original cut and The Appointment Day)
+
+Kept for reference and alternate edits. Headers are demoted so codegen doesn't list them as
+main-cut segments. The original cut has the band on stage from the top; *The Appointment
+Day* is Lillith's salon-and-phone-calls arc.
+---
+
+### Alternate arc inserts (The Appointment Day)
 
 *The Appointment Day*, added 2026-11-01. Lock and beat map:
 [`ideas/big-city-cutaway.md`](../ideas/big-city-cutaway.md) § *Story arc*. These are
@@ -101,7 +423,7 @@ not the laundromat.
 
 ---
 
-## A — Kenji tag, stage (0:00–0:08)
+### A — Kenji tag, stage (0:00–0:08)
 
 **Start / last:** same small-club wide. Kenji in frame. Ladies present, not yet selling.  
 **Motion:** he speaks the line. Guitar down or just finding the riff.  
@@ -120,7 +442,7 @@ Start from a small nightclub stage, not an arena: two women in modern black lace
 
 ---
 
-## B — Lillith verse 1, stage (0:08–0:23)
+### B — Lillith verse 1, stage (0:08–0:23)
 
 **Start / last:** Lillith at left mic. Rubella one stop down. Kenji working.  
 **Motion:** she sings crown work / fire-escape verse. Looks up.  
@@ -139,7 +461,7 @@ Start from the locked small Glamora club stage: Lillith in modern black lace at 
 
 ---
 
-## C2 — Call one, a little lift (0:08–0:15)
+### C2 — Call one, a little lift (0:08–0:15)
 
 **Start:** morning café window on a Glamora street. Lillith with a phone to her ear, her
 dark hair teased but at human scale.
@@ -154,7 +476,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal morning on
 
 ---
 
-## C — Fire-escape strand (0:15–0:23)
+### C — Fire-escape strand (0:15–0:23)
 
 **Start / last:** one lock of photoreal hair climbing a brick wall like a fire escape.  
 **Motion:** wind combs; neon sits in the gaps; strand climbs on the snare.  
@@ -173,7 +495,7 @@ No lip sync. No one is singing. The hair performs the beat. Night alley, wet bri
 
 ---
 
-## C3 — Crown work (0:15–0:23)
+### C3 — Crown work (0:15–0:23)
 
 Alternate to C (fire-escape strand). Lyric: *Crown work on a Tuesday*.
 
@@ -196,7 +518,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal small mode
 
 ---
 
-## D — Pre-chorus lift, stage (0:23–0:31)
+### D — Pre-chorus lift, stage (0:23–0:31)
 
 **Start / last:** both at mics. Hair volume rises like a comb through a crown.  
 **Motion:** Lillith leaps the pre; Rubella under.  
@@ -210,7 +532,7 @@ Start from the same small club stage, two women in modern black lace at two silv
 
 ---
 
-## E — Hair skyline chorus lock (0:31–0:46)
+### E — Hair skyline chorus lock (0:31–0:46)
 
 **Start / last:** night street, upper third is teased hair reading as towers. Two small figures looking up.  
 **Motion:** towers hold; neon in the gaps pulses on title hits.  
@@ -229,7 +551,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal night city
 
 ---
 
-## E2 — Out the salon door (0:39–0:46)
+### E2 — Out the salon door (0:39–0:46)
 
 Back half of the chorus window. E's skyline lock still opens the chorus.
 
@@ -246,7 +568,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal salon entr
 
 ---
 
-## F — Rubella verse 2, stage (0:46–1:01)
+### F — Rubella verse 2, stage (0:46–1:01)
 
 **Start / last:** Rubella at the mic. Dry.  
 **Motion:** she sings the fringe / HOA / standing-in-line verse.  
@@ -260,34 +582,34 @@ Start from the locked small club stage: Rubella in modern black lace at the righ
 
 ---
 
-## G — Fringe / lunch / laundry (0:54–1:16)
+### G — Fringe / lunch / laundry (0:54–1:16)
 
 Three B-roll options. Shoot fringe first. Lunch-volume and ELO afros sit here and on the solo, not on Kenji tags.
 
 **Mouths:** none on all three.
 
-### G1 — Under the fringe
+#### G1 — Under the fringe
 
 **Grok Imagine**
 ```
 No lip sync. No one is singing. The hair performs the beat. Street-level walk under a colossal photoreal glam hair fringe that forms a canopy over a city block, shopfront fluorescents underneath. A woman in modern black lace walks in line under the fringe, dry expression. Split ends catch window light like open windows. Magenta neon only in far gaps. No product bottle, no stage. 8 seconds. Grok Imagine style
 ```
 
-### G2 — Lunch engagement
+#### G2 — Lunch engagement
 
 **Grok Imagine**
 ```
 No lip sync. No one is singing. The hair performs the beat. Cramped diner lunch. Two people sit across a small table with normal-scale club sandwiches. Their glam-metal hair is inappropriately enormous, the size of furniture, occupying the neighboring chairs until the menus disappear. The hairdos lean into each other like they are the ones having lunch. Magenta and cyan only in the gaps between strands. No shampoo bottle, no cartoon beehive, no concert stage. 8 seconds. Grok Imagine style
 ```
 
-### G3 — Laundry look-through
+#### G3 — Laundry look-through
 
 **Grok Imagine**
 ```
 No lip sync. No one is singing. The hair performs the beat. Close on a laundromat porthole: a gold-to-green skyline made of teased hair warps in the suds behind the glass. The machine is a window, not a gag. Fluorescent green-white tubes over the row. No bottle, no faces singing. 8 seconds. Grok Imagine style
 ```
 
-### G4 — ELO afro argument (slow picture)
+#### G4 — ELO afro argument (slow picture)
 
 **Grok Imagine**
 ```
@@ -301,7 +623,7 @@ No lip sync. No one is singing. The hair performs the beat. Lunch booth, two eno
 
 ---
 
-## G5 — Six blocks under it (0:54–1:01)
+### G5 — Six blocks under it (0:54–1:01)
 
 Lyric: *I walked under somebody's fringe / for six blocks*. G1's anonymous fringe becomes
 Lillith's.
@@ -325,7 +647,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal modern cit
 
 ---
 
-## G6 — Call two, speakerphone (1:01–1:08)
+### G6 — Call two, speakerphone (1:01–1:08)
 
 **Start:** street corner. Lillith lifts her phone toward her ear.
 **Motion:** the phone and her hand sink into the hair up to the wrist. She draws them back
@@ -340,7 +662,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal city stree
 
 ---
 
-## G7 — The blowout (1:08–1:16)
+### G7 — The blowout (1:08–1:16)
 
 Chain: G6 last frame → a hard cut to salon two is fine (new room, same day).
 
@@ -364,7 +686,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal modern hai
 
 ---
 
-## H — Solo: headstock → hair-blocks (1:16–1:31)
+### H — Solo: headstock → hair-blocks (1:16–1:31)
 
 **Start:** Kenji headstock macro.  
 **Last:** wide hair-blocks / optional ELO booth still in the city.  
@@ -378,7 +700,7 @@ No lip sync. Kenji's hands and a guitar headstock fill the first seconds, leathe
 
 ---
 
-## H2 — Call three, it's in there (1:23–1:31)
+### H2 — Call three, it's in there (1:23–1:31)
 
 The wrong third. Second half of the solo window, after Kenji's headstock → hair-blocks.
 
@@ -402,7 +724,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal city sidew
 
 ---
 
-## I — Bridge on stage (1:31–1:46)
+### I — Bridge on stage (1:31–1:46)
 
 **Start / last:** two-shot. Map, not bottle.  
 **Motion:** Rubella dry; Lillith high answer. Blocks hold. Quiet slot stays taped.  
@@ -416,7 +738,7 @@ Start from the locked small club two-shot: Rubella dry at the mic, Lillith answe
 
 ---
 
-## J — Final chorus intercut + K2 (1:46–2:47)
+### J — Final chorus intercut + K2 (1:46–2:47)
 
 Generate as 8-second stems. Intercut stage title-hits with hair-skyline in clip_stacker. Land on stage for Kenji's second tag.
 
@@ -437,7 +759,7 @@ Return to the K1 stage wide. Same room, same hem. Kenji looks at someone else's 
 
 ---
 
-## J2 — The wash (1:46–1:54)
+### J2 — The wash (1:46–1:54)
 
 Back at salon one. The lyric was planted in verse 2: *You can wash it if you want to*.
 
@@ -456,7 +778,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal salon back
 
 ---
 
-## J3 — It dries (2:02–2:10)
+### J3 — It dries (2:02–2:10)
 
 **THE DROP: transforms.** Lyric payoff: *It'll still be a city when it dries*. Land the
 towel coming off on a gang "Big City."
@@ -479,7 +801,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal salon at n
 
 ---
 
-## J4 — Skyline with a delivery (2:18–2:26)
+### J4 — Skyline with a delivery (2:18–2:26)
 
 Variant of J-skyline. The skyline is now Lillith's crown (unstated, just the same lit
 windows as J3).
@@ -497,7 +819,7 @@ No lip sync. No one is singing. The hair performs the beat. Photoreal night city
 
 ---
 
-## J5 — Call four, next Tuesday (2:31–2:39)
+### J5 — Call four, next Tuesday (2:31–2:39)
 
 **End reaction, spent once.** Then K2 on stage.
 
@@ -526,7 +848,7 @@ consume:         targetDuration
 freq:            snapCutsToBeats: yes
 audioPolicy:     silent clips + masterAudio
 masterAudio:     big_city(option_a).mp3 @ 0:00
-land:            forceFinal = stage K2
+land:            forceFinal = K2 (Kenji in the wings, main cut)
 do-not:          Ultra Screech picture, Daisy tandem, night-lot, bottle hero, EyeWash
 ```
 

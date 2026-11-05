@@ -20,7 +20,7 @@ Worlds do not mix: no Daisy tandem, no laundry-waterfall sleeve as the home plat
 
 ## Lock
 
-A-roll is a small Glamora club stage. Lillith starts. Rubella answers. Kenji plays and speaks the tag twice. Ladies stay modern black lace. Glam volume is in the hair, not a costume change.
+A-roll is a small Glamora club stage. Lillith starts. Rubella answers. Kenji plays and speaks the tag twice. Ladies stay modern black lace. Glam volume is in the hair, not a costume change. *(Main cut since 2026-11-02: the ladies reach the stage at the solo. See* Main cut — The Trip *below.)*
 
 B-roll is Big City hairdos in poses and situations: skyline, fire-escape strand, crown work, walk under a fringe, laundry spin-cycle look-through, elevator that yields, lunch-volume dos, two ELO-scale afros arguing in slow motion, crown-keeps-the-keys window.
 
@@ -55,7 +55,137 @@ Codegen after merge so Suggestions sees `big-city` and Songs sees `big-city`.
 
 ---
 
-## Story arc — The Appointment Day (2026-11-01)
+## Main cut — The Trip: Lace Waterfall gets to the gig (2026-11-02)
+
+**This is now the main cut.** *The Appointment Day* (below) is kept as an alternate arc;
+its prompts are filed under *Alternate plates* in `prompts/big-city-segments.md`.
+
+**Story:** Lace Waterfall, Rubella and Lillith's band, have a gig tonight at a small club in
+Glamora. They're travelling there with their stage hair already done: gigantic 1980s metal
+hair. Plane, bus terminal, bus, taxi, stage door. The hair doesn't fit through anything.
+They're late. The house guitarist (Kenji) covers the solo alone on stage until the curtain
+moves, the hair comes through first, and Lace Waterfall walk on, plug in, and play the rest
+of *Big City* as if it was theirs all along.
+
+**laugh:** *Their hair is so big it won't fit on the plane, the bus or the taxi, and when
+they finally get to the show it grows right through the roof.*
+**drop: transforms.** Final chorus, on the dive bomb: their hair rises through the club's
+skylight. Exterior: two new towers have joined the Glamora skyline, with stage lights
+glowing in them.
+**end reaction:** Kenji, last shot (K2): he looks up at their hair from the wings and says
+the same sentence as the intro, unchanged.
+
+### What changes from the original lock
+
+- **The stage arrives halfway.** The ladies are not on stage until the solo (1:16). Before
+  that, the song is the soundtrack to the trip. **No lip-sync while they travel.**
+- **Kenji is the club's house guitarist, not in the band.** His bible and the *Lace
+  Waterfall* song say the band is Lillith and Rubella only. That stays true: he's never on
+  the banner, he stands in the wings, and he only takes centre stage for the solo because
+  the band is late. When they walk on, he steps back into the shadows. *(Owner call: if
+  even that is too close to "in the band," cut him to the wings for the whole solo and let
+  the solo play over an empty stage.)*
+- **The drummer is never seen.** Lace Waterfall is a duo. There's a drum kit on the riser
+  with LACE WATERFALL on the kick drum, and their hair blocks the drummer completely in every
+  shot. Nobody comments.
+- **Sound vs. catalog:** Lace Waterfall's own records are 1970s space rock and heavy rock.
+  Tonight they play the glam strut *Big City*. That's the gig. Nobody explains it.
+- Everything else holds: modern black lace, glam volume in the hair rather than a costume,
+  small club (not an arena), no bottle, no EyeWash bug, Riley off this record, and neon
+  magenta and cyan only in the gaps between strands (on stage and in the city at night;
+  daylight travel gets daylight).
+
+### The look
+
+**Lillith (Lace Waterfall):** modern black lace dress, silver studded wristband. **Hair:**
+jet black, teased and crimped into a tall tower about three feet high, with one
+electric-magenta streak and two drumsticks pushed through it like hairpins. **Guitar:** a
+black angular pointed electric guitar with no brand or logo. Bright, conspiratorial
+half-smile, flawless mascara.
+
+**Rubella (Lace Waterfall):** modern black lace evening dress, blood-red lipstick. **Hair:**
+long dark hair teased into a huge sideways mane like spread wings, about four feet across,
+with one platinum-white streak and a few guitar picks pinned in it like sequins. **Bass:**
+a white four-string bass with no brand or logo. Dry, exhausted, calm.
+
+*(Black for Lillith and white for Rubella echoes the Spy vs. Spy split from the Monster
+Mash finale, as a colour reference only.)*
+
+**Hair physics:** photoreal, sprayed, individual strands, rigid enough to hold its shape and
+soft enough to squash through a door and spring back. It's the largest thing about them and
+the only impossible thing in each shot; doors, seats, bins and turnstiles stay real-size.
+
+**Gear and set dressing:** two black road cases stencilled LACE WATERFALL in white, carried
+everywhere. The kick drum head reads LACE WATERFALL. One full red fire extinguisher stands
+beside Rubella's amp on stage, sealed, never used, never mentioned.
+
+**Kenji:** teased glam hair, black leather fringe jacket, guitar, ALUMNI lanyard. Not the
+bottle. In the wings, half in shadow.
+
+### Beat map (main cut)
+
+| Seg | Time | Song section | Shot | Lip-sync |
+|---|---|---|---|---|
+| A | 0:00–0:08 | intro, K1 | **Empty stage.** Two empty mics, the LACE WATERFALL kick drum, Kenji in the wings looking at a tour poster of the band's hair. He says the line. | Kenji (spoken) |
+| B1 | 0:08–0:15 | verse 1 | **Airport security.** The hair won't fit through the scanner arch. The agent waves them round. The tray: bobby pins, more bobby pins, then a whole cymbal from Lillith's hair. | no |
+| B2 | 0:15–0:23 | verse 1 | **Jet bridge and cabin.** Down the jet bridge with heads tilted 45 degrees in unison. In the cabin, the hair fills four overhead bins and the attendant closes a bin on a lock of it. | no |
+| D2 | 0:23–0:31 | pre-chorus | **Window seat, landing.** The Glamora skyline rises in the window, a city made of hair, and Rubella's mane is pressed against the glass and bigger than it. | no |
+| E | 0:31–0:38 | chorus open | **Skyline lock** (the original E, trimmed to 4 bars). | no |
+| E3 | 0:38–0:46 | chorus | **Bus terminal.** They go round the revolving door twice. The departure board flips as the hair brushes it. Turnstiles: sideways, back a step, sideways again. A delivery man in red walks through the back at the same pace. | no |
+| F2 | 0:46–1:01 | verse 2 | **The bus.** The hair won't go through the bus door, so they ride standing up through the roof hatch, hair streaming back like flags. A low overpass: they tilt their heads together and the hair combs the underside of the bridge. | no |
+| G8 | 1:01–1:08 | pre-chorus 2 ("from the laundry") | **Taxi.** Hair out of the sunroof. They pass a laundromat, and their hair is reflected spinning in a row of dryer portholes. | no |
+| G9 | 1:08–1:16 | chorus 2 ("the elevator yields") | **Stage door and freight elevator.** The doors open on a car that's too short. The elevator yields: the car politely sinks two feet so the hair fits. | no |
+| H | 1:16–1:31 | solo | **Kenji covers.** He steps out of the wings and plays the solo alone at centre stage. The curtain bulges: the hair comes through first, then Lace Waterfall. They plug in, and Kenji steps back into the wings. | no |
+| I | 1:31–1:46 | bridge | **On stage.** Rubella sings, Lillith answers. Drummer hidden behind the hair. | **yes** |
+| J | 1:46–2:10 | final chorus | **Stage title hits** intercut with the crowd (normal-size hair, all looking up). | **yes** (title hits only) |
+| J6 | 2:10–2:18 | dive bomb | **DROP.** Their hair rises up through the skylight. Exterior: two new towers in the Glamora skyline with stage light pouring out of them. | no |
+| J7 | 2:18–2:39 | last chorus | **Skyline and stage intercut.** The crown keeps the keys: a window lit high in the hair. | stage only |
+| K2 | 2:39–2:47 | outro | **Kenji in the wings,** looking up at their hair, says the same sentence. | Kenji (spoken) |
+
+**Lip-sync budget:** Kenji's two spoken tags plus the bridge and the final-chorus title hits.
+Nothing before 1:31 needs a mouth to work.
+
+### Swap bank (extra trip gags)
+
+Same rules: real-size world, the hair is the only variable, nobody comments.
+
+- **Check-in desk:** the agent looks at the hair, then the luggage sizer, then the hair. She
+  prints a second boarding pass for it.
+- **Airport moving walkway:** the hair arrives at the end of the walkway three seconds
+  before they do.
+- **Baggage claim:** the hair goes round the carousel once while they wait beside it, calm.
+- **Seatbelt sign:** the cabin light dings, and every passenger behind them leans into the
+  aisle to see the screen.
+- **Bus shelter:** they wait under it; the shelter roof is resting on the hair.
+- **Taxi meter:** the driver adds a second fare for the hair. Neither woman objects.
+- **Tunnel:** the taxi's sunroof hair brushes every light in a tunnel, and they flicker in a
+  wave behind it.
+- **Pedestrian bridge:** the hair clears it by an inch. A pigeon on the bridge rail steps
+  onto the hair and rides one block.
+- **Club cloakroom:** the attendant takes a guitar case, looks at the hair, and holds out a
+  second ticket. Lillith shakes her head.
+- **Dressing-room mirror:** the lights around the mirror only frame their chins.
+
+### Callbacks spent
+
+- **Spy vs. Spy, Lillith in black and Rubella in white:** the black and white streaks and
+  the black guitar / white bass. Colour only, no trench coats.
+- **Rubella's full extinguisher** stands by her amp on stage, never used.
+- **The Pizza Guy walks through the back of someone else's wide at the same pace** (E3): red
+  uniform, box at chest height, never looks at the hair.
+- **The airport scanner's bobby-pin tray** from `big-city-hair-incidents.md`, escalated with a
+  wrong third: the cymbal.
+
+### Generate-first (main cut)
+
+1. **A + K2** as a pair: same empty-then-full stage, same Kenji framing in the wings.
+2. **B1 security:** the cymbal out of the hair sets the tone.
+3. **F2 bus roof hatch:** the most visual trip shot.
+4. **J6 drop:** the hair through the skylight, and two new towers outside.
+
+---
+
+## Alternate arc — The Appointment Day (2026-11-01)
 
 The B-roll gets a spine. **Lillith books a hair appointment to get "a little lift." Every
 appointment after that, meant to fix it, makes it bigger. Even washing it.** By the final

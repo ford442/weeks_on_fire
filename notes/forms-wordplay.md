@@ -21,6 +21,7 @@ Do not take the other bank. Do not rewrite Littera Manet, Non Cano, Four Clicks,
 - Concert forms on main own their flaws: Unspent, The Light in the Stair, Same Sentence, Ground Rent, Said and Left, The Clause, Two of Three, From the West.
 - Marble Tick Tack owns the instrumental click bed. These songs sing. They do not replace the night lot.
 - Joke-metal drawer owns Stamp the Riff and Double Kick the Dryer. Do not metal these.
+- `songs/_drawer/wordplay/` (2026-11-02) owns five silly songs where the trick is a tactic, not the subject: oronyms (*An Ice Man*), line-palindrome structure (*Top Spot*), spoonerism call and response (*Sad Ballad, Bad Salad*), a word ladder (*Dog, Cog, Cot, Cat*), echo answers (*Level Four Dub*). Don't reuse those pairs or the ladder.
 
 ## Shape
 

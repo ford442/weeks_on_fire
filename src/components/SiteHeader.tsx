@@ -155,6 +155,15 @@ export default function SiteHeader() {
             <Flame size={16} aria-hidden="true" />
             Weeks on Fire
           </Link>
+          <span className="rounded border border-zinc-700 px-1.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-400">
+            Crew hub
+          </span>
+          <Link
+            to="/show"
+            className="text-sm text-zinc-400 underline-offset-2 transition hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-orange-300"
+          >
+            Public site →
+          </Link>
           <button
             type="button"
             onClick={() => setSearchOpen(true)}

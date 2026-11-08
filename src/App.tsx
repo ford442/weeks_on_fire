@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import SiteHeader from './components/SiteHeader';
 import { likelyViews, prefetchView, viewLoaders } from './routes/lazyViews';
@@ -14,6 +14,14 @@ const Sequences = lazy(viewLoaders.sequences);
 const Characters = lazy(viewLoaders.characters);
 const Episodes = lazy(viewLoaders.episodes);
 const Staff = lazy(viewLoaders.staff);
+const PublicLayout = lazy(() => import('./public/PublicLayout'));
+const Listen = lazy(() => import('./public/Listen'));
+const PublicHome = lazy(() =>
+  import('./public/PublicPages').then((m) => ({ default: m.PublicHome })),
+);
+const LaceWaterfall = lazy(() =>
+  import('./public/PublicPages').then((m) => ({ default: m.LaceWaterfall })),
+);
 
 /** Card-shaped placeholders so the layout doesn't jump when a view's chunk arrives. */
 function RouteFallback() {
@@ -59,6 +67,24 @@ function usePrefetchLikelyViews() {
 
 export default function App() {
   usePrefetchLikelyViews();
+  const { pathname } = useLocation();
+
+  // Public-facing site: its own shell, no crew tabs or prompt tooling.
+  if (pathname === '/show' || pathname.startsWith('/show/')) {
+    return (
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/show" element={<PublicLayout />}>
+            <Route index element={<PublicHome />} />
+            <Route path="listen" element={<Listen />} />
+            <Route path="listen/:id" element={<Listen />} />
+            <Route path="lace-waterfall" element={<LaceWaterfall />} />
+            <Route path="*" element={<Navigate to="/show" replace />} />
+          </Route>
+        </Routes>
+      </Suspense>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[#090909] text-white">

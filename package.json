@@ -16,7 +16,7 @@
     "lint": "eslint src scripts --max-warnings 0",
     "format": "prettier --check src scripts",
     "format:write": "prettier --write src scripts",
-    "build": "npm run codegen && npm run agent-docs && tsc -b && vite build && tsx scripts/check-index-encoding.ts && tsx scripts/emit-link-index.ts && cp dist/index.html dist/404.html",
+    "build": "npm run codegen && npm run agent-docs && tsc -b && vite build --base ${VITE_BASE:-./} && tsx scripts/check-index-encoding.ts && tsx scripts/emit-link-index.ts && cp dist/index.html dist/404.html",
     "build:check": "npm run build && tsx scripts/check-bundle-size.ts",
     "preview": "vite preview",
     "test": "vitest run",

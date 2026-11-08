@@ -3,6 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Headphones, Search, SlidersHorizontal } from 'lucide-react';
 
 import { linkedAudioFilenames, songs, type Song } from '../data/songs';
+import { crewPath } from '../routes/paths';
 import { firstCatalogItem } from '../lib/catalog';
 import { getUnlistedTracks } from '../lib/songAudio';
 import { formatSongDate } from '../lib/songDate';
@@ -51,7 +52,7 @@ export default function Songs() {
         setSelected(song);
         return;
       }
-      void navigate('/songs', { replace: true });
+      void navigate(crewPath('/songs'), { replace: true });
       return;
     }
 
@@ -95,7 +96,7 @@ export default function Songs() {
   const selectSong = (song: Song) => {
     setSelected(song);
     setSheetOpen(true);
-    void navigate({ pathname: `/songs/${song.id}`, search });
+    void navigate({ pathname: crewPath(`/songs/${song.id}`), search });
   };
 
   return (

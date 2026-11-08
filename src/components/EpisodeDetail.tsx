@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { ArrowLeft, Clock, ExternalLink } from 'lucide-react';
 
 import { episodes, episodeStatusMeta } from '../data/episodes';
+import { crewPath } from '../routes/paths';
 import { loadMarkdownFile } from '../lib/episodeMarkdown';
 import { AVAILABLE_EPISODES } from '../data/production';
 
@@ -104,7 +105,7 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
 
   useEffect(() => {
     if (episode === undefined) {
-      void navigate('/episodes', { replace: true });
+      void navigate(crewPath('/episodes'), { replace: true });
     }
   }, [episode, navigate]);
 
@@ -117,7 +118,7 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
   return (
     <section className="mx-auto max-w-4xl space-y-6 px-4 py-6 sm:px-6 lg:px-8">
       <Link
-        to="/episodes"
+        to={crewPath('/episodes')}
         className="inline-flex items-center gap-1.5 text-sm text-zinc-400 transition hover:text-orange-300"
       >
         <ArrowLeft size={15} aria-hidden="true" />
@@ -156,7 +157,10 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
         {hasTimelineData ? (
           <p className="mt-4 text-sm text-zinc-400">
             Scene-by-scene production tracking lives in{' '}
-            <Link to="/timeline" className="text-orange-300 underline underline-offset-2">
+            <Link
+              to={crewPath('/timeline')}
+              className="text-orange-300 underline underline-offset-2"
+            >
               Timeline
             </Link>{' '}
             — select this episode there to edit it.

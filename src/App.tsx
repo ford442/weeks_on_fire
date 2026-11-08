@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import SiteHeader from './components/SiteHeader';
 import { likelyViews, prefetchView, viewLoaders } from './routes/lazyViews';
+import { CREW_PREFIX, crewPath, isLegacyCrewPath, viewPaths } from './routes/paths';
 
 const Gallery = lazy(viewLoaders.gallery);
 const TimelinePage = lazy(viewLoaders.timeline);
@@ -67,50 +68,63 @@ function usePrefetchLikelyViews() {
 
 export default function App() {
   usePrefetchLikelyViews();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
-  // Public-facing site: its own shell, no crew tabs or prompt tooling.
-  if (pathname === '/show' || pathname.startsWith('/show/')) {
+  // Public listen and the band page used to live under /show.
+  if (
+    pathname === '/show/listen' ||
+    pathname.startsWith('/show/listen/') ||
+    pathname === '/show/lace-waterfall'
+  ) {
+    return <Navigate to={`${pathname.slice(CREW_PREFIX.length)}${search}`} replace />;
+  }
+
+  // Creator sections used to live at the root.
+  if (isLegacyCrewPath(pathname)) {
+    return <Navigate to={`${crewPath(pathname)}${search}`} replace />;
+  }
+
+  // Creator hub: prompts, timeline, and the rest of the production tools.
+  if (pathname === CREW_PREFIX || pathname.startsWith(`${CREW_PREFIX}/`)) {
     return (
-      <Suspense fallback={null}>
-        <Routes>
-          <Route path="/show" element={<PublicLayout />}>
-            <Route index element={<PublicHome />} />
-            <Route path="listen" element={<Listen />} />
-            <Route path="listen/:id" element={<Listen />} />
-            <Route path="lace-waterfall" element={<LaceWaterfall />} />
-            <Route path="*" element={<Navigate to="/show" replace />} />
-          </Route>
-        </Routes>
-      </Suspense>
+      <main className="min-h-screen bg-[#090909] text-white">
+        <SiteHeader />
+        <Suspense fallback={<RouteFallback />}>
+          <Routes>
+            <Route path={viewPaths.gallery} element={<Gallery />} />
+            <Route path={viewPaths.timeline} element={<TimelinePage />} />
+            <Route path={viewPaths.songs} element={<Songs />} />
+            <Route path={`${viewPaths.songs}/:id`} element={<Songs />} />
+            <Route path={viewPaths['daisy-bell']} element={<DaisyBell />} />
+            <Route path={viewPaths.suggestions} element={<Suggestions />} />
+            <Route path={`${viewPaths.suggestions}/:id`} element={<Suggestions />} />
+            <Route path={viewPaths.cartoons} element={<Cartoons />} />
+            <Route path={`${viewPaths.cartoons}/:id`} element={<Cartoons />} />
+            <Route path={viewPaths.sequences} element={<Sequences />} />
+            <Route path={`${viewPaths.sequences}/:id`} element={<Sequences />} />
+            <Route path={viewPaths.characters} element={<Characters />} />
+            <Route path={viewPaths.episodes} element={<Episodes />} />
+            <Route path={`${viewPaths.episodes}/:id`} element={<Episodes />} />
+            <Route path={viewPaths.staff} element={<Staff />} />
+            <Route path="*" element={<Navigate to={CREW_PREFIX} replace />} />
+          </Routes>
+        </Suspense>
+      </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-[#090909] text-white">
-      <SiteHeader />
-
-      <Suspense fallback={<RouteFallback />}>
-        <Routes>
-          <Route path="/" element={<Gallery />} />
-          <Route path="/index.html" element={<Gallery />} />
-          <Route path="/timeline" element={<TimelinePage />} />
-          <Route path="/songs" element={<Songs />} />
-          <Route path="/songs/:id" element={<Songs />} />
-          <Route path="/daisy-bell" element={<DaisyBell />} />
-          <Route path="/suggestions" element={<Suggestions />} />
-          <Route path="/suggestions/:id" element={<Suggestions />} />
-          <Route path="/cartoons" element={<Cartoons />} />
-          <Route path="/cartoons/:id" element={<Cartoons />} />
-          <Route path="/sequences" element={<Sequences />} />
-          <Route path="/sequences/:id" element={<Sequences />} />
-          <Route path="/characters" element={<Characters />} />
-          <Route path="/episodes" element={<Episodes />} />
-          <Route path="/episodes/:id" element={<Episodes />} />
-          <Route path="/staff" element={<Staff />} />
+    <Suspense fallback={null}>
+      <Routes>
+        <Route path="/" element={<PublicLayout />}>
+          <Route index element={<PublicHome />} />
+          <Route path="index.html" element={<PublicHome />} />
+          <Route path="listen" element={<Listen />} />
+          <Route path="listen/:id" element={<Listen />} />
+          <Route path="lace-waterfall" element={<LaceWaterfall />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Suspense>
-    </main>
+        </Route>
+      </Routes>
+    </Suspense>
   );
 }

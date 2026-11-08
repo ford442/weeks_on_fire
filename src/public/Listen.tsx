@@ -51,7 +51,7 @@ export default function Listen() {
       if (playable.length === 0) return;
       const next = playable[(Math.max(index, 0) + offset + playable.length) % playable.length];
       if (!next) return;
-      void navigate(`/show/listen/${next.id}`);
+      void navigate(`/listen/${next.id}`);
       if (autoplay) void playSong(next);
     },
     [index, navigate, playSong, playable],
@@ -206,7 +206,7 @@ function TrackList({
           return (
             <li key={song.id}>
               <Link
-                to={`/show/listen/${song.id}`}
+                to={`/listen/${song.id}`}
                 aria-current={active ? 'true' : undefined}
                 className={`flex items-center gap-4 px-4 py-3 transition hover:bg-zinc-900/70 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-fuchsia-300 ${
                   active ? 'bg-fuchsia-950/30' : ''

@@ -3,15 +3,15 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 
 /** Public-facing shell: no production tooling, no prompts, no crew tabs. */
 const nav = [
-  { to: '/show', label: 'Home', end: true },
-  { to: '/show/listen', label: 'Listen', end: false },
-  { to: '/show/lace-waterfall', label: 'Lace Waterfall', end: false },
+  { to: '/', label: 'Home', end: true },
+  { to: '/listen', label: 'Listen', end: false },
+  { to: '/lace-waterfall', label: 'Lace Waterfall', end: false },
 ];
 
 const titles: Record<string, string> = {
-  '/show': 'Weeks of Fire',
-  '/show/listen': 'Listen · Weeks of Fire',
-  '/show/lace-waterfall': 'Lace Waterfall · Weeks of Fire',
+  '/': 'Weeks of Fire',
+  '/listen': 'Listen · Weeks of Fire',
+  '/lace-waterfall': 'Lace Waterfall · Weeks of Fire',
 };
 
 export const DISCLOSURE =
@@ -32,7 +32,7 @@ export default function PublicLayout() {
       <header className="border-b border-fuchsia-950/60 bg-[radial-gradient(circle_at_top,_rgba(217,70,239,0.14),_transparent_55%)]">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-4 py-4 sm:px-6">
           <Link
-            to="/show"
+            to="/"
             className="text-lg font-black uppercase tracking-[0.2em] text-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-300"
           >
             Weeks of Fire
@@ -66,8 +66,14 @@ export default function PublicLayout() {
       </div>
 
       <footer className="border-t border-zinc-900 py-6 text-xs text-zinc-500">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>{DISCLOSURE}</p>
+          <Link
+            to="/show"
+            className="shrink-0 underline-offset-2 hover:text-zinc-300 hover:underline"
+          >
+            Crew hub →
+          </Link>
         </div>
       </footer>
     </div>

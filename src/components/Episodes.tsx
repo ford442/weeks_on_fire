@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BookOpen, Clock } from 'lucide-react';
 
 import { episodes, episodeStatusMeta } from '../data/episodes';
+import { crewPath } from '../routes/paths';
 
 import EpisodeDetail from './EpisodeDetail';
 
@@ -22,7 +23,10 @@ export default function Episodes() {
             <p className="mt-1 text-sm leading-6 text-zinc-400">
               Loglines, status, and in-app synopses for every episode. To edit a scene timeline or
               its production history, use the{' '}
-              <Link to="/timeline" className="text-orange-300 underline underline-offset-2">
+              <Link
+                to={crewPath('/timeline')}
+                className="text-orange-300 underline underline-offset-2"
+              >
                 Timeline
               </Link>{' '}
               view instead.
@@ -38,7 +42,7 @@ export default function Episodes() {
           return (
             <Link
               key={episode.id}
-              to={`/episodes/${episode.id}`}
+              to={crewPath(`/episodes/${episode.id}`)}
               className={`block rounded-lg border bg-zinc-950 p-5 transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-300 ${
                 episode.isCandidate
                   ? 'border-violet-500/40 hover:border-violet-500/70'

@@ -2,27 +2,13 @@ import { ChevronLeft, ChevronRight, Loader2, Pause, Play } from 'lucide-react';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
-import { useCoordinatedAudio } from '../hooks/useCoordinatedAudio';
 import { songs } from '../data/songs';
+import { useCoordinatedAudio } from '../hooks/useCoordinatedAudio';
 import { loadSongAudioUrl } from '../lib/songAudio';
 
+import { artistFor, publicTracks } from './catalog';
+
 import type { Song } from '../data/types';
-
-/** Public tracks: anything with committed audio, newest first. Lyric-only songs show as "coming soon". */
-export function publicTracks(filter?: (song: Song) => boolean): {
-  playable: Song[];
-  upcoming: Song[];
-} {
-  const list = filter ? songs.filter(filter) : songs;
-  const byNewest = (a: Song, b: Song) => b.added.localeCompare(a.added);
-  return {
-    playable: list.filter((song) => song.audioFile).sort(byNewest),
-    upcoming: list.filter((song) => !song.audioFile).sort(byNewest),
-  };
-}
-
-export const artistFor = (song: Song) =>
-  song.episode === 'Lace Waterfall' ? 'Lace Waterfall' : 'Weeks of Fire';
 
 export default function Listen() {
   const { id } = useParams();
@@ -65,7 +51,7 @@ export default function Listen() {
       if (playable.length === 0) return;
       const next = playable[(Math.max(index, 0) + offset + playable.length) % playable.length];
       if (!next) return;
-      navigate(`/show/listen/${next.id}`);
+      void navigate(`/show/listen/${next.id}`);
       if (autoplay) void playSong(next);
     },
     [index, navigate, playSong, playable],

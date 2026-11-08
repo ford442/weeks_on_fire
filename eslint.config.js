@@ -64,8 +64,8 @@ export default tseslint.config(
     ...jsxA11y.flatConfigs.recommended,
   },
   {
-    // Song previews are music; the lyrics are rendered as text on the song page.
-    files: ['src/components/SongAudioPlayer.tsx'],
+    // Song previews are music; the lyrics are rendered as text beside the player.
+    files: ['src/components/SongAudioPlayer.tsx', 'src/public/Listen.tsx'],
     rules: { 'jsx-a11y/media-has-caption': 'off' },
   },
   {

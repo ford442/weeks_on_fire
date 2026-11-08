@@ -773,6 +773,20 @@ export const songs: Song[] = [
     sourceFile: "No_Music_Here.md"
   },
   {
+    id: "nofo-i-te-vai",
+    title: "Nofo i te Vai",
+    added: "2026-11-01",
+    genre: "Wallis and Futuna islander",
+    description: "Dark-island bed. Wallisian lyrics. 88 BPM log drums, pate, ukulele. Fire on the black sand. We do not land.",
+    episode: "Musical Cutaway",
+    stylePrompt: "Wallis and Futuna / Polynesian islander, mid-tempo 88 BPM, warm log drums and pate, soft ukulele and slack-key guitar, distant choir pads, night beach fire atmosphere, orange practical light mood, gentle and slightly mysterious, not a tourist cover, light lead vocal in Wallisian (Fakaʻuvea).",
+    lyrics: "[Verse]\nAfi i te oneʻuli\nMālama i te ʻakau\nKohu e toʻo te kulā\nKae tuku te laini\n\n[Chorus]\nNofo i te vai\nMotu e mālama\nʻIkai te tūʻuta\nʻIkai te nofo\n\n[Verse]\nFana e moe\nManulele e ʻalu\nLali e tali\nPō e hoko\n\n[Chorus]\nNofo i te vai\nMotu e mālama\nʻIkai te tūʻuta\nʻIkai te nofo",
+    notes: "Hard cut from the daylight guitar orchestra. Dark island plates only. Wallisian is a working version for MiniMax. Farm #18 / #33. Not #42.",
+    instrumental: false,
+    tags: ["wallisian", "islander", "dark-island", "yacht"],
+    sourceFile: "Nofo_i_te_Vai.md"
+  },
+  {
     id: "open-gate",
     title: "Open Gate",
     added: "2026-10-06",
@@ -1009,6 +1023,20 @@ export const songs: Song[] = [
     instrumental: false,
     tags: ["lace-waterfall", "rock", "anthem", "rubella", "lillith"],
     sourceFile: "Second_Sun.md"
+  },
+  {
+    id: "seoul-at-night",
+    title: "서울의 밤",
+    added: "2026-11-01",
+    genre: "K-pop",
+    description: "Night bed for the Busan approach. Korean lyrics. 128 BPM. Working English title Seoul at Night; visual target is Busan Gwangan Bridge.",
+    episode: "Musical Cutaway",
+    stylePrompt: "Modern K-pop, 128 BPM, bright synth leads, tight electronic drums, glossy bass, laser-night energy, water reflections, light lead vocal in Korean, clean and danceable, short hook-ready sections, not a specific artist cover.",
+    lyrics: "[Verse]\n물 위의 도시\n레이저가 어둠을 가르네\n같은 의자에 앉아\n같은 자리를 지키네\n\n[Pre-chorus]\n초록과 마젠타\n난간 위에, 유리 위에\n아무도 내리지 않아\n아무도 묻지 않아\n\n[Chorus]\n서울의 밤\n우리는 정박하지 않아\n선체에 빛\n시계에 빛\n서울의 밤\n가장자리는 계속 연주해\n레이저를 항해하며\n우리는 머물러\n\n[Chorus]\n서울의 밤\n우리는 정박하지 않아\n선체에 빛\n시계에 빛\n서울의 밤\n가장자리는 계속 연주해\n레이저를 항해하며\n우리는 머물러",
+    notes: "Hard cut from the dark-island bed. Visual target is Busan (Gwangan Bridge + Marine City), not Seoul. Title remains 서울의 밤 as the chorus hook. Farm #18 / #33. Not #42.",
+    instrumental: false,
+    tags: ["k-pop", "korean", "busan", "yacht", "night"],
+    sourceFile: "Seoul_at_Night.md"
   },
   {
     id: "slide-between-stations",
@@ -1488,6 +1516,20 @@ export const songs: Song[] = [
     tags: ["piano", "cabaret", "ballad", "halloween"],
     sourceFile: "Whatever_Lets_Us_Be.md",
     audioFile: "Whatever+Lets+Us+Be.mp3"
+  },
+  {
+    id: "yacht-guitar-orchestra",
+    title: "Yacht Guitar Orchestra",
+    added: "2026-11-01",
+    genre: "Strange guitar orchestra",
+    description: "Instrumental stack for the daylight yacht: Clean Line, Harmonic Choir, Low Orbit. 96 BPM D major. Rubella and Lillith sunbathing; guitar line on the rail.",
+    episode: "Musical Cutaway",
+    stylePrompt: "Instrumental, strange guitar orchestra, clean electric guitars in unison and close harmony, shimmering chorus and light delay, mid-tempo 96 BPM, D major, sparse ocean ambience, elegant and slightly uncanny, layered Stratocasters and Teles playing long sustained chords that open like a horizon. Second layer: harmonic-rich clean and lightly overdriven guitars stacked in fifths and ninths, gentle volume swells. Third layer: low electric guitar drones and palm-muted rhythmic pulses, warm analog delay, subtle sub. No vocals. No drums.",
+    lyrics: "[Instrumental]",
+    notes: "Daylight bed only. Stack the three MiniMax takes. Align to 96 BPM. Mute Imagine audio. Farm #18 / #33. Not #42.",
+    instrumental: true,
+    tags: ["guitar-orchestra", "instrumental", "yacht", "rubella", "lillith"],
+    sourceFile: "Yacht_Guitar_Orchestra.md"
   },
   {
     id: "zero-g-click",

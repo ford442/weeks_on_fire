@@ -175,3 +175,11 @@ describe('site search', () => {
     );
   });
 });
+
+describe('public site', () => {
+  it('/show/listen renders the public player without crew tabs', async () => {
+    renderRoute('/show/listen');
+    expect(await screen.findByRole('navigation', { name: 'Public site' })).toBeTruthy();
+    expect(screen.queryByRole('navigation', { name: 'Site sections' })).toBeNull();
+  });
+});

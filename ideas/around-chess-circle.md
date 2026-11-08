@@ -8,7 +8,7 @@ the board. The circle and the calls are the cutaway.
 **Kind:** musical cutaway (short packet). Board + game + nuances only.  
 **Status:** boarded / ready-to-generate.  
 **Bed:** the user's *Around* MiniMax track. It stays on the player and is not added to `songs/`.  
-**Prompts:** [`prompts/around-chess-circle-segments.md`](../prompts/around-chess-circle-segments.md)  
+**Prompts:** [`prompts/around-chess-circle-motion.md`](../prompts/around-chess-circle-motion.md)  
 **Catalog:** none yet. No cutaway JSON, because *Around* has no `songs/` id and a stub would fail
 codegen validation (`unknown songId`). Add one only once the song is in `songs/`. Not promoted.  
 **Farm:** picture → [#22](https://github.com/ford442/weeks_on_fire/issues/22) · song →

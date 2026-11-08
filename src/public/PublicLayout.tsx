@@ -66,14 +66,8 @@ export default function PublicLayout() {
       </div>
 
       <footer className="border-t border-zinc-900 py-6 text-xs text-zinc-500">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 sm:flex-row sm:justify-between sm:px-6">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <p>{DISCLOSURE}</p>
-          <Link
-            to="/"
-            className="shrink-0 text-zinc-500 underline-offset-2 hover:text-zinc-300 hover:underline"
-          >
-            Crew hub →
-          </Link>
         </div>
       </footer>
     </div>

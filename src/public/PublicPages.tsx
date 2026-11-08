@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { artistFor, publicTracks } from './Listen';
+import { artistFor, publicTracks } from './catalog';
 
 import type { Song } from '../data/types';
 

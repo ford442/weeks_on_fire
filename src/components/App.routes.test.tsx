@@ -181,5 +181,7 @@ describe('public site', () => {
     renderRoute('/show/listen');
     expect(await screen.findByRole('navigation', { name: 'Public site' })).toBeTruthy();
     expect(screen.queryByRole('navigation', { name: 'Site sections' })).toBeNull();
+    expect(screen.queryByRole('link', { name: /Crew hub/ })).toBeNull();
+    expect(screen.queryByRole('link', { name: 'Weeks on Fire' })).toBeNull();
   });
 });

@@ -4,11 +4,11 @@ import { pathnameToView } from './paths';
 
 describe('pathnameToView', () => {
   it('maps sequence routes', () => {
-    expect(pathnameToView('/sequences')).toBe('sequences');
-    expect(pathnameToView('/sequences/lattice-hymn')).toBe('sequences');
+    expect(pathnameToView('/show/sequences')).toBe('sequences');
+    expect(pathnameToView('/show/sequences/lattice-hymn')).toBe('sequences');
   });
 
   it('keeps cartoons distinct from sequences', () => {
-    expect(pathnameToView('/cartoons')).toBe('cartoons');
+    expect(pathnameToView('/show/cartoons')).toBe('cartoons');
   });
 });

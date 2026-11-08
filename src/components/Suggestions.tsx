@@ -7,6 +7,7 @@ import {
   type CutawaySuggestion,
   type SuggestionKind,
 } from '../data/suggestions';
+import { crewPath } from '../routes/paths';
 import { getDialogVersionsForScene } from '../data/sceneDialogVersions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
@@ -96,7 +97,7 @@ export default function Suggestions() {
         setSelectedId(match.id);
         return;
       }
-      void navigate('/suggestions', { replace: true });
+      void navigate(crewPath('/suggestions'), { replace: true });
       return;
     }
 
@@ -125,7 +126,7 @@ export default function Suggestions() {
     setExpandedExchangeId(null);
     setSheetOpen(true);
     if (id !== cutaway.id) {
-      void navigate({ pathname: `/suggestions/${cutaway.id}`, search });
+      void navigate({ pathname: crewPath(`/suggestions/${cutaway.id}`), search });
     }
   };
 

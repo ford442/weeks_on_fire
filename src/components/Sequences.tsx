@@ -8,6 +8,7 @@ import {
   type SequenceMedium,
   type SequenceRecord,
 } from '../data/sequences';
+import { crewPath } from '../routes/paths';
 import { formatTimecode } from '../lib/timecode';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
@@ -39,7 +40,7 @@ export default function Sequences() {
       setSelectedId(match.id);
       return;
     }
-    void navigate('/sequences', { replace: true });
+    void navigate(crewPath('/sequences'), { replace: true });
   }, [id, navigate]);
 
   const filtered = useMemo(() => {
@@ -70,7 +71,7 @@ export default function Sequences() {
 
   const selectSequence = (sequence: SequenceRecord) => {
     setSelectedId(sequence.id);
-    void navigate({ pathname: `/sequences/${sequence.id}`, search });
+    void navigate({ pathname: crewPath(`/sequences/${sequence.id}`), search });
   };
 
   return (

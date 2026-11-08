@@ -37,7 +37,7 @@ For a specific job, also read what it names:
 | Job | Also read |
 |---|---|
 | Loop tiles | `ideas/loop-grammar.md` |
-| Song sketches | `songs/_drawer/wet-enamel.md` (shape), `notes/forms-wordplay.md` (who owns which form) |
+| Song sketches | `docs/song-method.md` (**owner lock: video first, then the song** — name the video and give the video use map before the `STYLE:` block), `songs/_drawer/wet-enamel.md` (shape), `notes/forms-wordplay.md` (who owns which form) |
 | Dialog scene | `notes/scenes/README.md`, one existing scene in the same register |
 | Punch-up | `ideas/punch-up-pass.md` (the pattern: original untouched, PUNCHED version directly under it) |
 | A named world (Daisy Bell, Big City, Christina, Riley, Marble Tick Tack…) | that world's `ideas/` file and any `-agentic.md` runbook |

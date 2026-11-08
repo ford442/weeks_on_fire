@@ -16,6 +16,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 - Keep the clone lightweight: prefer external media links; do not add large binaries without approval
 - Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/`
 - Before any writing or joke pass, read `notes/callback-bank.md` and pull at least three callbacks.
+- Songs start from a video, not from a genre: read `docs/song-method.md` (owner lock) before writing any song, sketch or pitch.
 - Writing and joke passes go to the **`wof-writer`** subagent (`.claude/agents/wof-writer.md`): reading order, comedy rules, locks, and where each kind of output is filed.
 
 ## Hub views

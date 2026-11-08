@@ -2,7 +2,7 @@
 
 *Drawer. Text only. 2026-11-02. `promote?: no` on every song. Not codegen'd.*
 
-Five silly songs where a sound trick does the work **inside the lyric**, and the song
+Five silly songs (plus one hybrid packet, last row) where a sound trick does the work **inside the lyric**, and the song
 itself is about something else entirely: a heat wave, a Ferris wheel, a road trip, bedtime,
 a lost car. Nobody sings about words, spelling or diction. If a lyric starts explaining
 its own trick, it's wrong.
@@ -17,6 +17,7 @@ Shape matches [`../wet-enamel.md`](../wet-enamel.md): frontmatter, field table, 
 | [`Sad_Ballad_Bad_Salad.md`](Sad_Ballad_Bad_Salad.md) | **spoonerisms** as call and response, and both versions are true | rainy road trip and a diner | honky-tonk duet, 104 | Lillith calls, Rubella answers |
 | [`Dog_Cog_Cot_Cat.md`](Dog_Cog_Cot_Cat.md) | **word ladder**: verse endings change one letter at a time | putting a house to sleep | ukulele lullaby, 66 (6/8) | Rubella, Lillith harmony |
 | [`Level_Four_Dub.md`](Level_Four_Dub.md) | **echo answers**: the echo repeats the tail of each question, and the tail is the answer | lost car in a parking garage | roots dub reggae, 72 | Rubella and her echo |
+| [`Finish_It_Rubella.md`](Finish_It_Rubella.md) | **rhyme craft, hybrid packet (2026-11-06)**: mid-line mutating chain (*sock, rock, snack, yak*), homophone-as-rhyme (*bare / bear*, *night / knight*, *of course / of hoarse*), a mosaic on her own name, and *orange*, which the picture cannot resolve | a hallway that delivers whatever Rubella says | clavinet funk rap, 100 | Lillith raps, Rubella finishes each line |
 
 **Production rule for all five:** the trick only works if the ear catches it. Where a
 second voice answers (trio, Rubella, echo), it must reuse the first voice's rhythm and

@@ -60,6 +60,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE: /weeks_on_fire/
 
       - name: Bundle size check
         run: npx tsx scripts/check-bundle-size.ts

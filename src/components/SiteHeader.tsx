@@ -149,11 +149,20 @@ export default function SiteHeader() {
       <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3 pt-3">
           <Link
-            to="/"
+            to="/show"
             className="inline-flex shrink-0 items-center gap-1.5 rounded-md text-sm font-semibold text-orange-200 transition hover:text-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-300"
           >
             <Flame size={16} aria-hidden="true" />
             Weeks on Fire
+          </Link>
+          <span className="rounded border border-zinc-700 px-1.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-400">
+            Crew hub
+          </span>
+          <Link
+            to="/"
+            className="text-sm text-zinc-400 underline-offset-2 transition hover:text-white hover:underline focus:outline-none focus:ring-2 focus:ring-orange-300"
+          >
+            Public site →
           </Link>
           <button
             type="button"

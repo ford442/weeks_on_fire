@@ -162,6 +162,7 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 
 ## Capturing new scenes, songs, visuals
 
+- `docs/song-method.md` — owner lock for songs: the video concept comes first, then the song is built around it
 - `notes/scratchpad.md` — rapid capture
 - `notes/scene-suggestions.md` / `notes/song-suggestions.md` — structured templates
 - `notes/image-prompt-captures.md` — stage Grok ideas, then move to `prompts/`

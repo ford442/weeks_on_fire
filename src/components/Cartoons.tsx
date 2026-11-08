@@ -9,6 +9,7 @@ import {
   type CartoonRecord,
   type CartoonStatus,
 } from '../data/cartoons';
+import { crewPath } from '../routes/paths';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
 
@@ -37,7 +38,7 @@ export default function Cartoons() {
       setSelectedId(match.id);
       return;
     }
-    void navigate('/cartoons', { replace: true });
+    void navigate(crewPath('/cartoons'), { replace: true });
   }, [id, navigate]);
 
   const filtered = useMemo(() => {
@@ -68,7 +69,7 @@ export default function Cartoons() {
 
   const selectCartoon = (cartoon: CartoonRecord) => {
     setSelectedId(cartoon.id);
-    void navigate({ pathname: `/cartoons/${cartoon.id}`, search });
+    void navigate({ pathname: crewPath(`/cartoons/${cartoon.id}`), search });
   };
 
   return (
@@ -90,7 +91,10 @@ export default function Cartoons() {
                 Keep it short: premise, still, optional Grok prompt. No song id, no timed segments.
                 Two lanes: dry elegant stills, or mid-90s animal / Family Guy cutaways (cel, not
                 photoreal). Promote winners to the{' '}
-                <Link to="/suggestions" className="text-orange-300 underline underline-offset-2">
+                <Link
+                  to={crewPath('/suggestions')}
+                  className="text-orange-300 underline underline-offset-2"
+                >
                   Suggestions
                 </Link>{' '}
                 view.

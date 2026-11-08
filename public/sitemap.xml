@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/timeline</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/timeline</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/songs</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/songs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/daisy-bell</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/daisy-bell</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/suggestions</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/suggestions</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/cartoons</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/cartoons</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/sequences</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/sequences</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/characters</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/characters</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/episodes</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/episodes</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/staff</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/staff</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -13,7 +13,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'gallery',
     label: 'Visual Archive',
-    path: '/',
+    path: '/show',
     eyebrow: 'Grok Imagine Archive',
     description:
       'Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.',
@@ -21,7 +21,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'timeline',
     label: 'Timeline',
-    path: '/timeline',
+    path: '/show/timeline',
     eyebrow: 'Production Timeline',
     description:
       'Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.',
@@ -29,7 +29,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'songs',
     label: 'Songs',
-    path: '/songs',
+    path: '/show/songs',
     eyebrow: 'Minimax Music Catalog',
     description:
       'Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.',
@@ -37,7 +37,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'daisy-bell',
     label: 'Daisy Bell',
-    path: '/daisy-bell',
+    path: '/show/daisy-bell',
     eyebrow: 'Daisy Bell Cutaway',
     description:
       'Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.',
@@ -45,7 +45,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'suggestions',
     label: 'Suggestions',
-    path: '/suggestions',
+    path: '/show/suggestions',
     eyebrow: 'Suggested Cutaways',
     description:
       'Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.',
@@ -53,7 +53,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'cartoons',
     label: 'Cartoons',
-    path: '/cartoons',
+    path: '/show/cartoons',
     eyebrow: 'Cartoon Ideas',
     description:
       'Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.',
@@ -61,7 +61,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'sequences',
     label: '3D Sequences',
-    path: '/sequences',
+    path: '/show/sequences',
     eyebrow: '3D Sequences',
     description:
       'Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.',
@@ -69,7 +69,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'characters',
     label: 'Characters',
-    path: '/characters',
+    path: '/show/characters',
     eyebrow: 'Character Bible',
     description:
       'Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.',
@@ -77,7 +77,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'episodes',
     label: 'Episodes',
-    path: '/episodes',
+    path: '/show/episodes',
     eyebrow: 'Episode Bible',
     description:
       'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
@@ -85,7 +85,7 @@ export const siteViews: SiteViewMeta[] = [
   {
     id: 'staff',
     label: 'Crew',
-    path: '/staff',
+    path: '/show/staff',
     eyebrow: 'Series Crew',
     description:
       'Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.',

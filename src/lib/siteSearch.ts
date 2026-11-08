@@ -6,6 +6,7 @@ import { sequences } from '../data/sequences';
 import { songs } from '../data/songs';
 import { staffMembers } from '../data/staff';
 import { cutawaySuggestions } from '../data/suggestions';
+import { crewPath } from '../routes/paths';
 
 export type SearchSection =
   | 'Songs'
@@ -54,7 +55,7 @@ function withQuery(path: string, q: string) {
 export function buildSearchIndex(): SearchEntry[] {
   return [
     ...songs.map((song) =>
-      entry('Songs', song.title, `${song.episode} · ${song.genre}`, `/songs/${song.id}`, [
+      entry('Songs', song.title, `${song.episode} · ${song.genre}`, crewPath(`/songs/${song.id}`), [
         song.description,
         song.stylePrompt,
         song.lyrics ?? '',
@@ -66,12 +67,12 @@ export function buildSearchIndex(): SearchEntry[] {
         'Suggestions',
         cutaway.title,
         `${cutaway.episode} · ${cutaway.songTitle}`,
-        `/suggestions/${cutaway.id}`,
+        crewPath(`/suggestions/${cutaway.id}`),
         [cutaway.summary, cutaway.visualArc, cutaway.tags.join(' ')],
       ),
     ),
     ...filmScenes.map((scene) =>
-      entry('Visual archive', scene.title, scene.episode, withQuery('/', scene.title), [
+      entry('Visual archive', scene.title, scene.episode, withQuery(crewPath('/'), scene.title), [
         scene.description,
         scene.prompt,
         scene.theme,
@@ -79,33 +80,40 @@ export function buildSearchIndex(): SearchEntry[] {
       ]),
     ),
     ...episodes.map((episode) =>
-      entry('Episodes', episode.title, `Episode ${episode.number}`, `/episodes/${episode.id}`, [
-        episode.logline,
-      ]),
+      entry(
+        'Episodes',
+        episode.title,
+        `Episode ${episode.number}`,
+        crewPath(`/episodes/${episode.id}`),
+        [episode.logline],
+      ),
     ),
     ...seriesCharacters.map((character) =>
       entry(
         'Characters',
         character.name,
         character.role,
-        withQuery('/characters', character.name),
+        withQuery(crewPath('/characters'), character.name),
         [character.bio, character.tags.join(' ')],
       ),
     ),
     ...cartoons.map((cartoon) =>
-      entry('Cartoons', cartoon.title, cartoon.status, `/cartoons/${cartoon.id}`, [
+      entry('Cartoons', cartoon.title, cartoon.status, crewPath(`/cartoons/${cartoon.id}`), [
         cartoon.premise,
         cartoon.tags.join(' '),
       ]),
     ),
     ...sequences.map((sequence) =>
-      entry('3D sequences', sequence.title, sequence.medium, `/sequences/${sequence.id}`, [
-        sequence.premise,
-        sequence.tags.join(' '),
-      ]),
+      entry(
+        '3D sequences',
+        sequence.title,
+        sequence.medium,
+        crewPath(`/sequences/${sequence.id}`),
+        [sequence.premise, sequence.tags.join(' ')],
+      ),
     ),
     ...staffMembers.map((member) =>
-      entry('Crew', member.name, member.role, '/staff', [member.bio, member.specialty]),
+      entry('Crew', member.name, member.role, crewPath('/staff'), [member.bio, member.specialty]),
     ),
   ];
 }

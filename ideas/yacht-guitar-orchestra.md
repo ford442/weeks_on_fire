@@ -27,11 +27,17 @@ No landing. No docking. Cannons stay inert. Hard cuts between songs. Mute Imagin
 
 ---
 
+## Scene set
+
+`prompts/yacht-guitar-orchestra-segments.md` carries the picture: twenty timed Imagine scenes, A through T, about 3:24 as a working cut (nudge after an ear pass; none of the three songs states a length). Daylight A–I (90s), dark island J–O (54s), Busan night P–T (60s). Hard cuts at 1:30 and 2:24. Four chains: E → F, G → H, J → K, S → T. Every scene is a mouths-closed hold: no lip-sync anywhere, the sung beds are off-picture. The doc also holds the continuity lock, the negatives and the picture-sound rule; working choices it adds beyond the Lock (ivory deck dresses for the guitar line, black volcanic sand, three tiny continuity props) live there and can be changed there.
+
 ## Generate-first
 
-1. Open ocean → horizon island.
-2. Horizon → shore with vines and cannons.
-3. Dark island lights-in-vines + beach fire.
-4. Busan Gwangan approach from the deck.
+1. A — open ocean → horizon island (15s). The establishing frame; if the line and the two lounges read, the rest follows.
+2. D — chord ripple (10s). Hands and necks only, no faces. Proves the living orchestra without a lip to sync.
+3. E → F — lenses → shore (10s + 10s, chained). The island, the vines, the cannons, and the one hold that lands the yacht off the sand.
+4. J → K — lights in the vines → fire on the black beach (15s + 15s, chained). The dark island.
+5. P, then S → T — Busan night, ring from above, the gap (15s each, S → T chained). The approach that never arrives.
+6. The rest (B, C, G → H, I, L–O, Q, R) after those land.
 
 Codegen after merge so Suggestions sees `yacht-guitar-orchestra`.

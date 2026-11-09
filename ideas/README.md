@@ -63,6 +63,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `swan-lane.md` – (2026-11-02) pure-animation bridge: traffic cones perform a sincere ballet in a closed highway lane at 4 a.m. and freeze into a regulation taper whenever headlights appear. Kid register. ~61s. `promote?: no`.
 - `bass-wont-pop.md` – (2026-11-02) pure 3D materials bridge: a wall of speakers pounds techno at soap bubbles (nested, square, frozen) and can't pop one, until one tiny pop in the silence pops them all. Kid register. ~52s. `promote?: no`.
 - `crab-ground-crew.md` – (2026-11-02) crabs with glowing claws marshal seagulls in to land like airport ground crew so they can steal Rubella and Lillith's fries; gull, gull, pelican, then two hundred. Kid register, no dialogue. ~48s. `promote?: no`.
+- `good-king-wenceslas.md` – (2026-11-08) Christmas music video: the public-domain carol as a Bohemian brass polka. Lillith is the King in a paper cracker crown, Rubella her page hauling a ham, wine in her mug and a whole lit Christmas tree through a blizzard. Lillith's boots are rigged with vacuum tubes, so on "heat was in the very sod" the footprints bloom into a path of spring flowers. Seventeen clips, no lip-sync. Bed: `songs/_drawer/Good_King_Wenceslas_Polka.md`. `promote?: no`.
 - `backlog.md` – quick capture of fleeting ideas
 
 Season tone map (promoted out of this folder): [`docs/season-arc.md`](../docs/season-arc.md).

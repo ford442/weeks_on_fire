@@ -23,7 +23,7 @@
 - **The Pizza Guy's order name is almost right and is never corrected.** Series rule. He does not comment on the sign.
 - **No explanation of why it works.** Lillith has a theory. The theory is not adjudicated, same as haunted vs. unscheduled.
 
-**Refs:** `characters/building-cast.md` (Lillith's retro-tech obsession, the weather-predicting ping-pong table) · `songs/Neon_Exit_Sign.md` (lyrics + STYLE) · `notes/dialog-jokes-incidents.md` · [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) (same corridor, three days later) · [`natural-ventilation.md`](natural-ventilation.md)
+**Refs:** `characters/building-cast.md` (Lillith's retro-tech obsession, the weather-predicting ping-pong table) · `songs/Neon_Exit_Sign.md` (lyrics + STYLE) · `notes/dialog-jokes-incidents.md` · [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) (plays before this one; same building, same week) · [`continuity.md`](continuity.md) · [`natural-ventilation.md`](natural-ventilation.md)
 
 ---
 
@@ -284,8 +284,7 @@ look up at the sign. Not once.
 
                          PIZZA GUY
                     (handing it up)
-          It's got the peppers on the side because they
-          said you'd want that.
+          Peppers are on the side.
 
                          LILLITH
           Who said.
@@ -293,6 +292,8 @@ look up at the sign. Not once.
                          PIZZA GUY
                     (already leaving)
           It's in the profile.
+          (not turning)
+          Extra napkins are in the bag.
 
 (He goes. The stairwell door closes. The corridor is still red.)
 
@@ -425,7 +426,7 @@ At 6-C, Lillith stops.)
 
 **Cast rules:**
 - **Madelyn — Appears:** No. One laminated memo, taped at a height that required intent. No voice, no silhouette.
-- **Pizza Guy — Appears:** Beat D, one pass. Order name almost right. **Never corrected.** Does not look at the sign.
+- **Pizza Guy — Appears:** Beat D, one pass. Says "Lilith" — a spelling-only miss: read it exactly as *Lillith*; the slate and subtitle carry the miss. **Never corrected.** Lines four to nine words; exits on the napkin line. Does not look at the sign.
 - **The extinguisher never discharges.** Carried in full, carried out full.
 - **No dancing in the red.** They stand still. The reveal is for the audience, not for them.
 
@@ -435,7 +436,7 @@ At 6-C, Lillith stops.)
 
 **Never adjudicated:** whether the insult does anything · what the profile is · where the annex guy got four transformers
 
-**Promotion path:** Building-cast cutaway, 4–5 min. Pairs directly with [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) (same corridor, same week; that scene's car serves this floor) and contrasts with [`natural-ventilation.md`](natural-ventilation.md), where Lillith is told no and takes it.
+**Promotion path:** Building-cast cutaway, 4–5 min. Pairs directly with [`negotiating-with-the-elevator.md`](negotiating-with-the-elevator.md) (plays first; same building, same week; that scene's car serves this floor) and contrasts with [`natural-ventilation.md`](natural-ventilation.md), where Lillith is told no and takes it.
 
 **Status:** Draft — ready for asset gen. Uses the existing **Neon Exit Sign** render; needs a hard edit at the end of Verse 1 and a mid-phrase cut in the pre-chorus.
 

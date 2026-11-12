@@ -28,7 +28,7 @@ vocabulary is floor numbers. The technique is correct and it works.
   the mic in [`../rubella-stand-up.md`](../rubella-stand-up.md). Any version that
   says it out loud here is disqualified.
 - "The ticket hummed back."
-- The alarm button is discussed and never pressed.
+- The alarm button is in frame, never mentioned, never pressed. *(Was "discussed"; the parent never discusses it — corrected in the continuity pass.)*
 - Malfunction vs. negotiation is never adjudicated.
 
 ---

@@ -14,15 +14,15 @@
 
 **Juxtaposition (wrong channel):** The show changes into a **crisis-negotiation procedural** — the kind with a phone, a whiteboard, and a man saying *we have all night*. Lillith plays it completely straight: rapport, small concessions, never say no, mirror the subject's language. The subject's entire vocabulary is integers. Same family as Monster Mash on a laser-snake lawn. The joke is never "ha ha, an elevator." The joke is that the negotiation technique is **correct** and it **works**.
 
-**Emotional notes:** Nobody is frightened. This is Tuesday. Lillith is having the best night of her week; Rubella is having her Thursday. Warmth arrives through procedure, not confession — same anti-daytime-drama rule as the Long Way Up family. Neither of them says anything true on purpose.
+**Emotional notes:** Nobody is frightened. This is a weeknight. Lillith is having the best night of her week; Rubella is having her Thursday. Warmth arrives through procedure, not confession — same anti-daytime-drama rule as the Long Way Up family. Neither of them says anything true on purpose.
 
 **Hard rules for this scene:**
 - **The Elevator says floor numbers and nothing else.** Not a word, not a chime-with-intent, not a syllable. If a draft gives it language, the draft is wrong.
 - **Never adjudicated.** Malfunction or negotiation — Lillith says one, Rubella says the other, the scene ends. Same as haunted vs. unscheduled.
 - **Rubella does not say the counteroffer line in this scene.** She writes it down. "The elevator just tried to negotiate. I told it I already pay rent." is a **stand-up line** ([`rubella-stand-up.md`](rubella-stand-up.md)) and this scene is where it was *filed*, not where it was *told*. If the line is spoken here, the gag is spent twice.
-- **No one presses the alarm button.** It is discussed. It is never pressed.
+- **No one presses the alarm button.** Nobody reaches for it and nobody mentions it. It is in frame on the panel and it stays unpressed.
 
-**Refs:** `characters/building-cast.md` (Rubella, Lillith, Madelyn) · `songs/Negotiating_with_the_Elevator.md` (lyrics + STYLE) · `notes/dialog-jokes-incidents.md` (elevator-counteroffer) · [`rubella-stand-up.md`](rubella-stand-up.md) (Item Seven, the mic) · [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (the same hallway, three days earlier)
+**Refs:** `characters/building-cast.md` (Rubella, Lillith, Madelyn) · `songs/Negotiating_with_the_Elevator.md` (lyrics + STYLE) · `notes/dialog-jokes-incidents.md` (elevator-counteroffer) · [`rubella-stand-up.md`](rubella-stand-up.md) (Item Seven, the mic) · [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (next in the set — the sixth-floor corridor this car serves) · [`continuity.md`](continuity.md) (set order, prop owners)
 
 ---
 
@@ -454,13 +454,13 @@ The doors close behind her.)
 - **Qing — Appears:** Beat F, lobby, noodles, no line, wrong-time look-up.
 - **Riley does not appear.** Wrong county, wrong register.
 
-**Key props:** contraband detergent (standing in the basket, never used) · World's Okayest Tenant mug · speaker wire (dance partner) · safety glasses that have never been used · the alarm button (discussed, never pressed) · the service diagram with thirteen floors
+**Key props:** contraband detergent (standing in the basket, never used) · World's Okayest Tenant mug · speaker wire (dance partner) · safety glasses that have never been used · the alarm button (in frame, never mentioned, never pressed) · **no extinguisher** — they are riding, not repairing · the service diagram with thirteen floors
 
 **Running gags used:** elevator-counteroffer (**filed here, told at the mic**) · "The ticket hummed back" · Item Seven, resident comments · the dryer-hum frequency (same note as the Laundromat's off-balance machine)
 
 **Never adjudicated:** malfunction vs. negotiation · the thirteenth floor on the diagram · whether Madelyn was watching
 
-**Promotion path:** Building-cast connective tissue — works between any two Rubella/Lillith cutaways, same job Master Control does for EyeWash. Natural neighbor to [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (same corridor) and a clean set-up for [`rubella-stand-up.md`](rubella-stand-up.md), which spends the line this scene banks.
+**Promotion path:** Building-cast connective tissue — works between any two Rubella/Lillith cutaways, same job Master Control does for EyeWash. **Plays first in the building set**, ahead of [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (the sixth floor this car serves) and a clean set-up for [`rubella-stand-up.md`](rubella-stand-up.md), which spends the line this scene banks.
 
 **Status:** Draft — ready for asset gen once Minimax renders **Negotiating with the Elevator**. Lyric + STYLE live in `songs/Negotiating_with_the_Elevator.md`.
 

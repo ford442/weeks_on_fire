@@ -24,7 +24,7 @@
 - **Do not import the ballroom.** *The Roof Knows How to Wait* is a cousin to the House of Mirrors ruin, but this is a **vacant apartment**, not the ballroom: no chandelier, no paddles, no ping-pong metronome, no mascara beat, no champagne flute. Berries and two glasses only — the song's props, not Episode 1's.
 - **The building is never established as unsafe or safe.** Nobody rules on it.
 
-**Refs:** `songs/The_Roof_Knows_How_to_Wait.md` (lyrics, STYLE, the extra bar, "optional Lillith room-echo on the last *wait*") · `characters/building-cast.md` · [`house-of-mirrors-rally.md`](house-of-mirrors-rally.md) (the ruin cousin — **do not duplicate its bed**) · [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (Lillith fixing things, two days earlier)
+**Refs:** `songs/The_Roof_Knows_How_to_Wait.md` (lyrics, STYLE, the extra bar, "optional Lillith room-echo on the last *wait*") · `characters/building-cast.md` · [`house-of-mirrors-rally.md`](house-of-mirrors-rally.md) (the ruin cousin — **do not duplicate its bed**) · [`ambient-lighting-with-ambition.md`](ambient-lighting-with-ambition.md) (Lillith fixing things, earlier the same week) · [`continuity.md`](continuity.md)
 
 ---
 
@@ -175,8 +175,10 @@ performer fill it. The entire scene is paid for by how fast she sits.)
 ```
 
 ```
-(She does not bring it up again. Not in this scene, not in the next
-one, not in the season. The change is never marked.)
+(She does not argue it again. In Beat E she gets two words into the
+offer and stops on her own — that is the scene's echo, not a second
+ask, and it gets no second no. Not in the next scene, not in the
+season. The change is never marked.)
 ```
 
 > <!-- GROK: "Two women sitting in mismatched kitchen chairs in an empty apartment, looking up at a large hole in the ceiling with night sky beyond, coats on, plaster dust on the floor around them, no lamps, only skyglow, quiet and companionable, cinematic, Grok Imagine style" -->
@@ -285,7 +287,8 @@ music up; this dialogue rides on top of it and does not get a duck.
 ```
 (Deliver that line flat. It is load-bearing and it is not a punchline.
 No smile, no look across, no pause for it to land. If it lands, it
-lands behind them.)
+lands behind them. It is the one lyric line that crosses into
+dialogue; nothing else from the song does.)
 ```
 
 > <!-- GROK: "Close two-shot of two women in an empty apartment at night, an old radiator under the window behind them glowing faintly with heat, plaster dust in the air, a hole in the ceiling above out of frame letting in cold, both looking straight ahead, warm and unbothered, cinematic, Grok Imagine style" -->

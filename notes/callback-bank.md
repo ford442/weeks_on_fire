@@ -1,6 +1,6 @@
 # Callback Bank
 
-Last refreshed: 2026-10-05 (commit dbefb15)
+Last refreshed: 2026-11-11 (continuity pass on `notes/scenes/`; base commit 0384204). Scene-level locks for Item Three, Master Control and the building set: `notes/scenes/continuity.md`.
 
 A reusable index of running bits, props, places, cameo rules, name-droppable songs, and recurring
 numbers across *Weeks on Fire*. **Index, not retelling.** Each block says what the bit is, where it
@@ -28,13 +28,13 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Bit:** "Order for… Viviane?" One vowel, one letter, one syllable off. Never a joke name.
 - **Source:** `characters/bible/the-pizza-guy.md` (The almost-right name) · `notes/scenes/house-of-mirrors-rally.md` Beat G · `notes/scenes/item-three-decorative-accent.md` Beat F ("Vivien") · `notes/scenes/ambient-lighting-with-ambition.md` Beat D ("Lilith" for Lillith)
 - **Who/where:** Free radical. Any doorway, any cluster.
-- **Rules:** Never corrected by anyone (`notes/scenes/README.md`). Never explained or lampshaded. One *new* miss per appearance; extend the list, don't repeat. Established misses: Viviane · Vivien · Vivian · Lilith · Justin · Karyn · Ozzie · Bradley (bible samples). **Discrepancy to know:** the scene files say "Viviane" (HoM) and "Vivien" (Item Three); the cutaway JSON summaries say "Vivian" (`content/cutaways/house-of-mirrors-rally.json`) and "Karyn" (`content/cutaways/item-three-decorative-accent.json`). Pick one per shoot; don't spend two on the same scene.
+- **Rules:** Never corrected by anyone (`notes/scenes/README.md`). Never explained or lampshaded. One *new* miss per appearance; extend the list, don't repeat. **Locked, one per scene (2026-11-11):** HoM Rally = **Viviane** · Item Three = **Vivien** (Vivienne answers "Yes.") · Ambient Lighting = **Lilith** (spelling-only; read as Lillith, slate/subtitle carry it). Cutaway JSON now matches. Bible-sample misses (unshot): Justin · Karyn · Ozzie · Rebella. **Vivian** is an unspent spare. One try per appearance — no "Lil? Lil-ith." self-correction. Exit is always the napkin line (Ambient Lighting fixed to match).
 - **Portable forms:** a stranger reads a name off a receipt and gets it almost right, nobody corrects it · a laundromat ticket / HOA roster / log sheet with the near-miss spelling in frame · a reaction shot of the named character being quietly pleased.
 - **Locks:** He never gets a name on screen. Name tag always illegible. Don't let the camera find it.
 
 ### "Extra napkins are in the bag."
 - **Bit:** His exit line. The only two-sentence beat he's allowed is this plus the order.
-- **Source:** `characters/bible/the-pizza-guy.md` (Voice guide, Ten rules) · Ep4 `episodes/episode-04/scenes.md` 5:40 · HoM Rally Beat G · Item Three Beat F
+- **Source:** `characters/bible/the-pizza-guy.md` (Voice guide, Ten rules) · Ep4 `episodes/episode-04/scenes.md` 5:40 · HoM Rally Beat G · Item Three Beat F · Ambient Lighting Beat D
 - **Who/where:** Free radical.
 - **Rules:** Always said, always true. If thanked for saving the day: "I didn't. I brought extra napkins." (`notes/dialog-jokes-incidents.md`).
 - **Portable forms:** a bag of unexplained extra napkins on a table in a scene he isn't in · someone else says it flatly after a disaster and it lands wrong · Oz logs "Delivery. Unscheduled." and a napkin is on the console.
@@ -53,7 +53,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Source:** `the-pizza-guy.md` (Uniform rotation table) · Ep4 synopsis · `ideas/eyewash-station.md`
 - **Rules:** Never two consecutive appearances in the same uniform. Never a costume, never a uniform implying rescue/authority/knowledge. Match-cut on the stride. Nobody remarks on the change.
 - **Portable forms:** background cameo in a new uniform nobody has seen yet (name it in the slate, never in dialog) · a stack of his past uniforms' props (clipboard, ladder, pad) left at a location · the crossing-guard beat reused as a thirty-second interrupt.
-- **Locks:** Halloween = red uniform. That's the costume joke.
+- **Locks:** Halloween = red uniform. That's the costume joke. Ep4 doorway (Item Three F) is **red**, after the breakfast-polo drive-past earlier in the same episode — not "slightly wrong" (fixed in Ep4 `scenes.md`/`scenes.json`).
 
 ### Twenty-three percent
 - **Bit:** Phone at chest height, 23%, checked like a watch. Morning or 4 AM. Never charges.
@@ -207,7 +207,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Who/where:** Both Vale pairs own a version; the ballroom and 12-A are cousins with separate beds.
 - **Rules:** Deliver flat. Name the aesthetic of a disaster before anyone names the disaster (Vivienne rule 9).
 - **Portable forms:** plaster falls in any interior and someone relocates a glass / a clamshell of berries six inches · a character calls structural failure "early" or "an amenity" · Madelyn's packet: extended dwell is an amenity.
-- **Locks:** Don't import ballroom dressing into the building (no chandelier, paddles, flute in 12-A). Nobody sweeps the plaster. Nobody rules the building safe or unsafe.
+- **Locks:** Don't import ballroom dressing into the building (no chandelier, paddles, flute in 12-A). Nobody sweeps the plaster. Nobody rules the building safe or unsafe. In 12-A it is the one lyric line spoken as dialogue — the song sings it in the pre-chorus, Rubella says it once in Beat D; nothing else from the lyric crosses over.
 
 ### "Don't smudge the mascara."
 - **Bit:** Ep1 lyric motif, spent in HoM Rally Beat F as the only tenderness Liliane can fit through the door. Regulation Powder: snow melts on throat and collarbone, never on the eye makeup. "That's not a product. That's a policy."
@@ -235,7 +235,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Source:** `notes/scenes/negotiating-with-the-elevator.md` (hard rules, Beat F) · `notes/scenes/rubella-stand-up.md` · `notes/scenes/README.md`
 - **Rules:** Never spoken inside the elevator scene. The gag is spent once. The Elevator says floor numbers only, vocoded, in tune. At the mic (2026-10-07) she also spends one floor-number descent — "Four." / "Six." / "Four." / "Three." — and one yank: "Stop. Go back. You were doing well." That yank is not a new running bit. Do not put it on another object or on the audience.
 - **Portable forms:** someone else quotes it badly · a maintenance ticket in frame: "Car two is holding a position." · "The ticket hummed back." (the hum is the laundromat dryer's note).
-- **Locks:** Malfunction vs. negotiation never adjudicated. Nobody presses the alarm button. The thirteenth floor on the service diagram: two seconds, never mentioned again.
+- **Locks:** Malfunction vs. negotiation never adjudicated. Nobody presses the alarm button, and nobody mentions it (the "discussed" note was wrong; parent and keeper line corrected). The thirteenth floor on the service diagram: two seconds, never mentioned again.
 
 ### "It's not a fire hazard. It's ambient lighting with ambition."
 - **Bit:** Lillith's repair creed. Neon EXIT sign reads **E X I** for three weeks; she fixes it with a 6BQ5 from the weather-predicting ping-pong table; forty-one seconds of red corridor; the tube dies before the chorus.
@@ -254,7 +254,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 ### Lillith is told no exactly once
 - **Bit:** 12-A, open roof. "Sit down." She sits. "I could have it closed by Sunday." "It's a no." "Okay." Never raised again, never marked.
 - **Source:** `notes/scenes/natural-ventilation.md` Beat B · `notes/scenes/README.md` · `building-cast.md`
-- **Rules:** Must play *after* Car Twelve and Ambient Lighting. Two-hander: no third voice, no memo, no intercom.
+- **Rules:** Must play *after* Car Twelve and Ambient Lighting. Two-hander: no third voice, no memo, no intercom. The only echo is Beat E's unfinished "I could —" / "I know." / "Okay." — she stops herself; it gets no second no. Versions V1 (she argues first) is shelved.
 - **Portable forms:** in later building scenes Lillith looks up at something fixable and doesn't price it; nobody notices · a blackberry clamshell moved six inches out of the rain · the mismatched kitchen chairs.
 - **Locks:** Don't revisit. Don't let anyone ask "you're not fixing it?" twice. Same mechanism as Rubella's pseudoscience correction.
 
@@ -432,7 +432,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 
 ### Brad's swatches and the photograph of a gray card
 - **Source:** `hoa-cast.md` (Brad) · Item Three Beat C
-- **Rules:** Laminated, fanned, envelope with no return address. A *photograph* of a gray card, not a gray card — this distinction is the man.
+- **Rules:** Laminated, fanned, envelope with no return address. A *photograph* of a gray card, not a gray card — this distinction is the man. **Brad's only.** Ep4's 911 beat now gives Karen her clipboard; the *Call Forty-Seven* lyric "I have the swatches" is still Karen's and is an open owner call.
 - **Portable forms:** the envelope on a passenger seat · a swatch taped to a bin at a curb.
 - **Locks:** The forty-page folder marked BIN is never shown.
 
@@ -490,7 +490,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 
 ### Oz's laminated log, grease pencil on a shoelace, thermos (tea)
 - **Source:** Master Control Beats A–B · `eyewash-staff.md`
-- **Rules:** He caps the pencil between entries. Tea, not coffee. He never looks at the monitor showing the room a few seconds ahead.
+- **Rules:** He caps the pencil between entries. Tea, not coffee — Beat G is titled "He Goes For Coffee" and he still carries tea; the cutaway summary now says he tops off his tea. He never looks at the monitor showing the room a few seconds ahead.
 - **Portable forms:** a timecode read aloud as four digits · "Was it on the log?" · the thermos on a console in an ident.
 - **Locks:** The log is the log. That is the entire answer.
 
@@ -509,7 +509,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 
 ### World's Okayest Tenant mug / contraband detergent / the full extinguisher
 - **Source:** `building-cast.md` (Rubella) · Car Twelve · Ambient Lighting · Rubella Stand-Up
-- **Rules:** Detergent stands in the basket like a trophy, never used ("regulated cleansing agent #47" is the state alternative). Extinguisher in full, out full, never mentioned. Mug three-quarters full → empty as the scene's clock (cousin of Justine's cup).
+- **Rules:** Detergent stands in the basket like a trophy, never used ("regulated cleansing agent #47" is the state alternative). Extinguisher in full, out full, never mentioned — it comes to repairs Lillith *sets out* to do (Ambient Lighting). Not in Car Twelve (riding, not repairing), not in Natural Ventilation (nothing repaired). Mug three-quarters full → empty as the scene's clock (cousin of Justine's cup).
 - **Portable forms:** the mug on a windowsill in a scene Rubella isn't in · a detergent bottle held like a relic.
 - **Locks:** Madelyn's "World's Best Supervisor" mug (small crack, unacknowledged) is a different mug.
 
@@ -584,7 +584,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Source:** `building-cast.md` · the four building-cast scenes · Rubella Stand-Up
 - **Rules:** Elevators have opinions (floor numbers only); hallways rearrange; the laundry room is a neutral zone until the music starts; a service diagram shows thirteen floors (two seconds, never mentioned); 6-C is Lillith's; the laundry room is rented out to a shampoo company (Ultra Screech). "The annex guy" has four transformers and a roll of EPDM.
 - **Portable forms:** E X I at the end of any corridor · Qing eating noodles on the lobby bench · the resident portal loading in under a second (alarming) · "Category: other."
-- **Locks:** Madelyn never seen. Natural Ventilation plays last. Never establish the building as safe or unsafe.
+- **Locks:** Madelyn never seen. Set order is story order: Car Twelve → Ambient Lighting → Natural Ventilation, same week (the old "three days earlier / two days earlier" refs were removed — they contradicted the order). Regulation Powder is outside the block. Never establish the building as safe or unsafe.
 
 ### The abandoned ballroom / house of mirrors
 - **Source:** Ep1 screenplay · HoM Rally
@@ -870,7 +870,7 @@ Name-drop = a title on a card, a corner-TV cue, a line of chatter, or a station 
 - **Darren / Denise / Cal / June** — Riley's family, all living, all offscreen.
 - **The Hendersons** — whose driveway has the light.
 - **Patricia / Gary Johnson / Peggy Babcock** — the back rows.
-- **Ozzie / Karyn / Vivien / Lilith / Justin / Bradley** — the near-miss list; add one per appearance.
+- **Viviane / Vivien / Lilith** (shot, one per scene) · **Ozzie / Karyn / Justin / Rebella** (bible samples) · **Vivian** (spare) — the near-miss list; add one per appearance. *Bradley* is Dale's roster, not the Pizza Guy.
 - **"Around"** — Riley's one unexplained word. Leave it.
 
 ---

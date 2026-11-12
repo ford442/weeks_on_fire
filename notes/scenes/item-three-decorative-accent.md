@@ -693,7 +693,7 @@ Hold. Let it go long. Let the muzak win.
 6. Final wide — meeting persisting in a roofless room
 
 **The Two — Appears:** Yes, non-voting, back wall, four lines total. They never sit.
-**Pizza Guy — Appears:** Yes, Beat F. Says "Viviane." Not corrected.
+**Pizza Guy — Appears:** Yes, Beat F. Red uniform. Says "Vivien." Vivienne answers "Yes." Not corrected. Exits on the napkin line. *(Lock: `continuity.md`.)*
 **Biscuit — Appears:** Yes, Beat E. Takes the gavel. No explanation. No apology.
 **Key Props:** cracked gavel · clipboard w/ I SURVIVED THE PURPLE LIGHT '25 · manila folder of swatches · photograph of a gray card · two pizza boxes · one bag of extra napkins
 **Running gags used:** Gavel Crack · Recycling Rebellion · Biscuit's Heist · Pizza Guy name-adjacent order · "We'll stand, we don't do polyester" · "It's a cul-de-sac feature"

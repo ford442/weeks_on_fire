@@ -1,0 +1,12 @@
+{
+  "id": "neon-nightfall",
+  "kind": "musical",
+  "title": "Neon Nightfall",
+  "status": "ready-to-generate",
+  "runtime": "~0:30 (short cutaway)",
+  "episode": "Visual Cutaway",
+  "songId": "neon-nightfall",
+  "songTitle": "Neon Nightfall",
+  "summary": "A neon‑lit alley chase with a hovering drone, rain‑slick walls, and a flashing billboard. The video drives a synth‑wave Minimax bed with drops for drone swoop and billboard flash.",
+  "visualArc": "Drone darts past runner → rain‑slick chase → billboard flash freezes action → siren rise → chase resumes into high‑energy chorus.",
+  "tags": ["cyberpunk","chase","neon","rain","drone"]}

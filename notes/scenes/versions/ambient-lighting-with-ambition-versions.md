@@ -14,7 +14,7 @@ and no camera. Lillith hosts it without knowing she is hosting it.
 | ID | Label | Beats | Status | Pitch |
 |----|-------|-------|--------|-------|
 | V0 | Parent baseline | all | preferred | → parent file |
-| V1 | Full host commitment | B | alt | Lillith addresses the audience outright |
+| V1 | Full host commitment | B | **shelved** | Lillith addresses the audience outright |
 | V2 | Rubella counts | E | alt | She admits to counting |
 | V3 | Chorus plays | D–E | **shelved** | Breaks the Ep1 ownership rule |
 
@@ -39,7 +39,8 @@ and no camera. Lillith hosts it without knowing she is hosting it.
 
 ## V1 — Full Host Commitment
 
-**Status:** alt
+**Status:** shelved
+**Why shelved (continuity pass, 2026-11-11):** she talks to a camera that isn't there — the lock is *host it, never acknowledge hosting it* (`../README.md`, `../continuity.md`).
 **Beats covered:** B
 **Register:** the wrong channel, all the way up
 **What it adds:** Lillith talks past Rubella to a camera that is not there, with
@@ -111,9 +112,9 @@ delivery, the signature is spent. Kept here only so nobody re-proposes it.
 - LILLITH: "It's rated for a quieter life."
 - RUBELLA: "You laminated is not a verb I can get past."  *(Madelyn, Beat A)*
 - LILLITH, on the annex guy: "He thinks they're speakers."
-- PIZZA GUY variants — all acceptable, none corrected: "Lilith" · "Lilyth" ·
-  "Lil? Lil-ith." · "Six-C, order for... the sign lady?" *(last one is too aware;
-  shelve it)*
+- PIZZA GUY variants — none corrected: "Lilith" *(in the parent)* · "Lilyth" ·
+  "Six-C, order for... the sign lady?" *(too aware; shelved)*
+- ~~"Lil? Lil-ith."~~ — **shelved:** two tries is a self-correction; one miss per appearance (`../continuity.md`).
 - RUBELLA: "Put both. Category: other." *(used in the elevator scene — do not
   double)*
 

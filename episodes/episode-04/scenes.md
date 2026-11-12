@@ -68,7 +68,7 @@ Security-cam grade, HOA parking lot, timestamp burned in. Portal opens at night.
 
 ## Optional cutaway — 911 for the Wrong Shade of Blue (~90s)
 
-Karen at the kitchen table with swatches; purple blinds. Operator asks if anyone is bleeding. “Democracy is bleeding, Steven.” Transfer loop until the Pizza Guy doorbell. Full beats: `content/cutaways/911-wrong-shade.json`. Skip if the meeting is running long.
+Karen at the kitchen table with her clipboard (the swatches are Brad's); purple blinds. Operator asks if anyone is bleeding. “Democracy is bleeding, Steven.” Transfer loop until the Pizza Guy doorbell. Full beats: `content/cutaways/911-wrong-shade.json`. Skip if the meeting is running long.
 
 ---
 
@@ -104,7 +104,7 @@ KAREN: He always has swatches.
 ### 2:40 – 3:40  “Item Three Is the Light”
 
 **Description**  
-Dale says item three. Karen says it is a decorative accent, requires no permit, and is seasonal. Patricia asks about height. Dale asks if it is over six feet. It is waving. Motion carries. Nobody looks at the window except Liliane, who notes that the dog is coordinated.
+Karen says item three. She says it is a decorative accent, requires no permit, and is seasonal. Patricia asks about height. Dale asks if it is over six feet. It is waving. Motion carries. Nobody looks at the window except Liliane, who notes that the dog is coordinated.
 
 **Grok Imagine Prompt**  
 "HOA meeting room at night, chairman not looking at a window where purple light has deepened to a bruise color, two women in black lace whispering at the back, poodle bandana matching the light, fluorescent ugly, cosmic bureaucracy comedy, cinematic, Grok Imagine style"
@@ -134,13 +134,13 @@ Motion to adjourn denied. Pool heater is still open. The Two do not sit. They we
 ### 5:40 – 6:00  “Extra Napkins”
 
 **Description**  
-Door. Pizza Guy. Order nobody placed. He does not enter the debate.
+Door. Pizza Guy, red uniform. "Order for… Vivien?" Vivienne answers from the back wall. He does not enter the debate. Full beat: `notes/scenes/item-three-decorative-accent.md` F.
 
 **Dialog**  
 PIZZA GUY: Extra napkins are in the bag.
 
 **Grok Imagine Prompt**  
-"Pizza delivery man in a slightly wrong uniform standing in the doorway of a fluorescent HOA meeting room at night, pizza bag in one hand, residents in folding chairs, violet parking lot behind him, completely unfazed, deadpan cinematic comedy, Grok Imagine style"
+"Pizza delivery man in a clean red uniform standing in the doorway of a fluorescent HOA meeting room at night, pizza bag in one hand, residents in folding chairs, violet parking lot behind him, completely unfazed, deadpan cinematic comedy, Grok Imagine style"
 
 ---
 

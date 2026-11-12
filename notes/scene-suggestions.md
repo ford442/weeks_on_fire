@@ -889,7 +889,7 @@ See per-segment prompts in `prompts/studio-huddle-segments.md` and the site **Su
 
 **Scene / Beat Title:** Ambient Lighting with Ambition — Lillith fixes the corridor sign, Rubella holds the ladder
 
-**Fits Episode / New Episode Concept:** Building-cast cutaway. Second of the three-scene set; same corridor as Car Twelve, three days earlier.
+**Fits Episode / New Episode Concept:** Building-cast cutaway. Second of the three-scene set; plays after Car Twelve, same building, same week (`notes/scenes/continuity.md`).
 
 **Juxtaposition / Wrong channel:** Building comedy → **daytime home-improvement makeover program**. Segment structure, sourcing patter, a reveal held for a music sting. No crew, no camera, no b-roll of a truck arriving. Lillith hosts it without acknowledging she is hosting it.
 

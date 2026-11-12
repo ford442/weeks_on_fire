@@ -14,7 +14,7 @@ failure is treated as a furniture question. The wrongness is the calm.
 | ID | Label | Beats | Status | Pitch |
 |----|-------|-------|--------|-------|
 | V0 | Parent baseline | all | preferred | → parent file |
-| V1 | The no is longer | B | alt | Lillith argues for three lines before sitting |
+| V1 | The no is longer | B | **shelved** | Lillith argues for three lines before sitting |
 | V2 | No rain | E | alt | The weather never arrives; they just stay |
 | V3 | Lillith's unit | A | **shelved** | Puts the hole in an occupied apartment |
 
@@ -39,7 +39,8 @@ failure is treated as a furniture question. The wrongness is the calm.
 
 ## V1 — The No Is Longer
 
-**Status:** alt
+**Status:** shelved
+**Why shelved (continuity pass, 2026-11-11):** she argues before she sits, so the no gets marked — the lock is that she takes it fast and once (`../continuity.md`).
 **Beats covered:** B
 **What it adds:** Lillith pushes three more lines before she sits. Makes the no
 land harder; costs the scene its best quality, which is how *fast* she takes it.

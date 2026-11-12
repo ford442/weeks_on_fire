@@ -470,7 +470,7 @@ CONTINUITY VOICE (V.O.)
 **Continuity Voice — Appears:** V.O. only. Never seen. **Do not cast a face for this.**
 **Marguerite — Appears:** Beat D. One step into the room. Never fully enters.
 **Time motif:** 3:44 appears twice, in identical inserts of the same clock.
-**Key Props:** laminated log sheet · grease pencil on a shoelace · dented thermos (tea) · closed folder · master fader that never gets pulled
+**Key Props:** laminated log sheet · grease pencil on a shoelace · dented thermos (**tea** — Beat G's title "He Goes For Coffee" is the expectation, not the contents) · closed folder · master fader that never gets pulled
 **Running gags used:** "It's not haunted, it's unscheduled" · "That was a rerun. So is this." · "Indoor weather" · aspect-ratio liability · the rinse duration · the 3:44 loop
 **Unresolved on purpose:** haunted vs. unscheduled. Never adjudicate. Never confirm the Continuity Voice is the Ep2 Radio Voice.
 **Status:** Draft — ready for asset gen. Cheapest scene in the series: one room, one actor, one V.O.

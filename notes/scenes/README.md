@@ -55,6 +55,8 @@ not a second wordy episode; it is that episode's quiet mile — Rubella and Rile
 on the unmaintained cut-through, a short-line rally, then they rejoin Lillith
 and drive to Pulpit Overlook. The tower stays offscreen. The car does not go up.
 
+**Continuity lock** for Item Three → Master Control → the building set: [`continuity.md`](continuity.md) — keeper lines, prop owners, the name-miss list, set order. Read it before editing any of those parents.
+
 New scene version page: copy [`versions/_template.md`](versions/_template.md).
 
 **Subtitles:** [`master-control-4am.srt`](master-control-4am.srt) — timed SRT draft (4:44) for the Master Control scene.
@@ -133,7 +135,7 @@ Radio Voice. Do not cast a face for either.
 - **No Other Human Sounds has no other human sounds** between Lillith's fork line and the sedan at the reunion. No Continuity Voice, no radio, no score in the woods. The tower stays offscreen. The pendant is fourteen dollars. They drive to Pulpit Overlook. The car does not attempt the tower.
 - **The elevator speaks only floor numbers.** Vocoded, in tune, PA bandwidth, never a word. Malfunction vs. negotiation is never adjudicated — Lillith says one, Rubella says the other, the doors open.
 - **"The elevator just tried to negotiate. I told it I already pay rent." is filed in Car Twelve and told at the mic in Rubella Stand-Up.** It is never spoken inside the elevator scene. The gag is spent once.
-- **The extinguisher never discharges.** Rubella carries it into every Lillith repair, full, and carries it out full. Neither of them has ever mentioned it and neither of them ever will.
+- **The extinguisher never discharges.** Rubella carries it into every repair Lillith sets out to do, full, and carries it out full (on screen: Ambient Lighting). Car Twelve has none — they are riding, not repairing — and Natural Ventilation has none because nothing is repaired. Neither of them has ever mentioned it and neither of them ever will.
 - **Neon Exit Sign's chorus belongs to Episode 1.** The sixth-floor corridor gets the hum and one verse; the tube fails in the pre-chorus.
 - **Lillith is told no exactly once** (Natural Ventilation, Beat B). She sits down. She never raises it again, and the change is never marked — same mechanism as Rubella's pseudoscience.
 - **The plaster in 12-A is never swept**, nobody fixes the roof, and no one rules on whether the building is safe.

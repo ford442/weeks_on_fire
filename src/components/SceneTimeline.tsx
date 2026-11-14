@@ -22,6 +22,7 @@ interface SceneTimelineProps {
   onEditScene: (scene: ProductionScene) => void;
   onAddScene: () => void;
   onExport: () => void;
+  editMode: boolean;
 }
 
 export default function SceneTimeline({
@@ -34,6 +35,7 @@ export default function SceneTimeline({
   onEditScene,
   onAddScene,
   onExport,
+  editMode,
 }: SceneTimelineProps) {
   const [filterStatus, setFilterStatus] = useState<'all' | SceneStatus>('all');
   const [sortMode, setSortMode] = useState<'chronological' | 'recent'>('recent');
@@ -81,17 +83,19 @@ export default function SceneTimeline({
 
   return (
     <div className="space-y-6">
-      <div
-        className={`rounded-md border px-3 py-2 text-sm ${
-          syncStatus === 'local-edits'
-            ? 'border-amber-800/60 bg-amber-950/30 text-amber-200'
-            : 'border-emerald-900/50 bg-emerald-950/20 text-emerald-200'
-        }`}
-      >
-        {syncStatus === 'local-edits'
-          ? 'Unsaved local edits — stored in browser. Export JSON to commit, or Reset to restore the committed file.'
-          : 'Matches committed file'}
-      </div>
+      {editMode && (
+        <div
+          className={`rounded-md border px-3 py-2 text-sm ${
+            syncStatus === 'local-edits'
+              ? 'border-amber-800/60 bg-amber-950/30 text-amber-200'
+              : 'border-emerald-900/50 bg-emerald-950/20 text-emerald-200'
+          }`}
+        >
+          {syncStatus === 'local-edits'
+            ? 'Unsaved local edits — stored in browser. Export JSON to commit, or Reset to restore the committed file.'
+            : 'Matches committed file'}
+        </div>
+      )}
 
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
@@ -140,21 +144,25 @@ export default function SceneTimeline({
             <option value="chronological">Chronological</option>
           </select>
 
-          <button
-            type="button"
-            onClick={onAddScene}
-            className="flex items-center gap-1.5 rounded-md bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-orange-500"
-          >
-            <Plus size={14} /> Add scene
-          </button>
+          {editMode && (
+            <>
+              <button
+                type="button"
+                onClick={onAddScene}
+                className="flex items-center gap-1.5 rounded-md bg-orange-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-orange-500"
+              >
+                <Plus size={14} /> Add scene
+              </button>
 
-          <button
-            type="button"
-            onClick={onExport}
-            className="flex items-center gap-1.5 rounded-md border border-zinc-700 px-3 py-1.5 text-xs font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-orange-200"
-          >
-            <Download size={14} /> Export JSON
-          </button>
+              <button
+                type="button"
+                onClick={onExport}
+                className="flex items-center gap-1.5 rounded-md border border-zinc-700 px-3 py-1.5 text-xs font-semibold text-zinc-200 transition hover:bg-zinc-900 hover:text-orange-200"
+              >
+                <Download size={14} /> Export JSON
+              </button>
+            </>
+          )}
         </div>
       </div>
 
@@ -196,15 +204,19 @@ export default function SceneTimeline({
 
               <div className="mt-3 flex items-center justify-between text-xs">
                 <div className="text-zinc-400">
-                  {scene.history.length} edits • last {formatDate(scene.lastEditedAt)}
+                  {editMode
+                    ? `${scene.history.length} edits • last ${formatDate(scene.lastEditedAt)}`
+                    : `Updated ${formatDate(scene.lastEditedAt)}`}
                 </div>
-                <button
-                  type="button"
-                  onClick={() => onEditScene(scene)}
-                  className="flex items-center gap-1 rounded border border-zinc-700 px-2 py-1 text-zinc-300 transition hover:border-orange-400 hover:text-orange-200"
-                >
-                  <Edit2 size={13} /> Edit
-                </button>
+                {editMode && (
+                  <button
+                    type="button"
+                    onClick={() => onEditScene(scene)}
+                    className="flex items-center gap-1 rounded border border-zinc-700 px-2 py-1 text-zinc-300 transition hover:border-orange-400 hover:text-orange-200"
+                  >
+                    <Edit2 size={13} /> Edit
+                  </button>
+                )}
               </div>
             </div>
           ))}
@@ -245,7 +257,7 @@ export default function SceneTimeline({
                     )}
                   </div>
                   <div className="mt-0.5 text-sm leading-snug text-zinc-300">{event.note}</div>
-                  {event.sceneId && (
+                  {editMode && event.sceneId && (
                     <button
                       type="button"
                       onClick={() => {
@@ -264,10 +276,12 @@ export default function SceneTimeline({
         </div>
       </div>
 
-      <div className="pt-2 text-xs text-zinc-400">
-        Timeline is derived from <code>scenes.json</code> history arrays. Edit in the modal to
-        append entries. Export JSON and commit to persist across machines.
-      </div>
+      {editMode && (
+        <div className="pt-2 text-xs text-zinc-400">
+          Timeline is derived from <code>scenes.json</code> history arrays. Edit in the modal to
+          append entries. Export JSON and commit to persist across machines.
+        </div>
+      )}
     </div>
   );
 }

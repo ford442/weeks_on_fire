@@ -67,9 +67,11 @@ describe('App lazy routes render', () => {
   });
 
   it('/timeline', async () => {
+    window.localStorage.setItem('wof:edit-mode', '1');
     renderRoute(crewPath('/timeline'));
     await settled();
     expect(await screen.findByRole('button', { name: /Export to clip_stacker/ })).toBeTruthy();
+    window.localStorage.removeItem('wof:edit-mode');
   });
 
   it('/songs', async () => {

@@ -4,7 +4,7 @@ status: draft
 created: 2026-11-13
 reviewed:
 generated:
-links: [notes/callback-bank.md, characters/bible/the-pizza-guy.md, songs/Softcore.md]
+links: [notes/callback-bank.md, characters/bible/the-pizza-guy.md, songs/_drawer/Softcore.md]
 notes: "Kid-silly. Lace Waterfall (Rubella vocal, Lillith guitar). No new canon. The shopping mall is a one-off place. Do not tie it to the building, the elevator lane (Car Twelve, After Is a Floor, Negotiating) or the Unexpected Item supermarket. Callbacks spent: the Pizza Guy walking through someone else's shot at the same pace, the box held level at chest height, and one 23% phone frame. He never speaks, so no name miss is used. His uniform follows the rotation table; the Script Editor checks it is not the same uniform as his last cut appearance. Open on purpose: why the top of the escalator is the bottom. Do not answer it. Dedupe: escalators appear only as background in ideas/well-fall.md and ideas/big-city-hair-incidents.md and as a sung question in Level Four Dub. None of those is this premise."
 ---
 

@@ -5,7 +5,7 @@
 Lace Waterfall is Rubella and Lillith's band: **the two of them only, no Kenji, no third
 member.** Their catalog on `main` is warm 1970s rock anthems (*Lace Waterfall*, *Heavy
 Water*, *Both Coats* and the rest). Alongside that there's a modern joke lane:
-[`../../Softcore.md`](../../Softcore.md) (metalcore in tiger onesies) and the *Big City*
+[`../Softcore.md`](../Softcore.md) (metalcore in tiger onesies) and the *Big City*
 video, where they arrive late with giant metal hair.
 
 This folder adds two sets.

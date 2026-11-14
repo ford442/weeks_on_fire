@@ -7,6 +7,8 @@ import type {
   CartoonRecord,
   CutawayRecord,
   EpisodeRecord,
+  FilmSceneRecord,
+  TaxonomyRecord,
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
@@ -244,6 +246,93 @@ export function validateSequences(
   if (errors.length > 0) {
     throw new Error(
       `Sequence validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+/**
+ * `content/taxonomy.json` is the only source of episode ids, genres, themes and tools. Songs and
+ * gallery scenes must use its entries verbatim, so filter dropdowns never show near-duplicates.
+ */
+export function validateTaxonomy(
+  taxonomy: TaxonomyRecord,
+  episodes: EpisodeRecord[],
+  songs: Array<Pick<ParsedSong, 'id' | 'genre' | 'episode'>>,
+  gallery: Array<Pick<FilmSceneRecord, 'id' | 'episode' | 'theme' | 'tool'>>,
+): void {
+  const errors: string[] = [];
+
+  const duplicates = (label: string, values: string[]) => {
+    const seen = new Set<string>();
+    const folded = new Map<string, string>();
+    for (const value of values) {
+      if (seen.has(value)) errors.push(`Taxonomy: duplicate ${label} "${value}"`);
+      seen.add(value);
+      const key = value.trim().toLowerCase();
+      const clash = folded.get(key);
+      if (clash !== undefined && clash !== value) {
+        errors.push(`Taxonomy: ${label} "${value}" differs from "${clash}" only by case/spacing`);
+      }
+      folded.set(key, value);
+    }
+  };
+  duplicates(
+    'episode id',
+    taxonomy.episodes.map((entry) => entry.id),
+  );
+  duplicates(
+    'episode label',
+    taxonomy.episodes.map((entry) => entry.label),
+  );
+  duplicates('genre', taxonomy.genres);
+  duplicates('theme', taxonomy.themes);
+  duplicates(
+    'tool id',
+    taxonomy.tools.map((entry) => entry.id),
+  );
+  duplicates(
+    'tool label',
+    taxonomy.tools.map((entry) => entry.label),
+  );
+
+  const episodeIds = new Set(taxonomy.episodes.map((entry) => entry.id));
+  for (const episode of episodes) {
+    if (!episodeIds.has(episode.id)) {
+      errors.push(
+        `Taxonomy is missing an entry for episode "${episode.id}" (content/episodes.json)`,
+      );
+    }
+  }
+
+  const genres = new Set(taxonomy.genres);
+  for (const song of songs) {
+    if (!episodeIds.has(song.episode)) {
+      errors.push(
+        `Song ${song.id}: unknown episode "${song.episode}" (not in content/taxonomy.json)`,
+      );
+    }
+    if (!genres.has(song.genre)) {
+      errors.push(`Song ${song.id}: unknown genre "${song.genre}" (not in content/taxonomy.json)`);
+    }
+  }
+
+  const themes = new Set(taxonomy.themes);
+  const tools = new Set(taxonomy.tools.map((entry) => entry.id));
+  for (const scene of gallery) {
+    if (!episodeIds.has(scene.episode)) {
+      errors.push(`Gallery ${scene.id}: unknown episode "${scene.episode}"`);
+    }
+    if (!themes.has(scene.theme)) {
+      errors.push(`Gallery ${scene.id}: unknown theme "${scene.theme}"`);
+    }
+    if (scene.tool !== undefined && !tools.has(scene.tool)) {
+      errors.push(`Gallery ${scene.id}: unknown tool "${scene.tool}"`);
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Taxonomy validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

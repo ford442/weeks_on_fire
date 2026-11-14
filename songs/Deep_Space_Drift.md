@@ -2,9 +2,10 @@
 id: deep-space-drift
 title: Deep Space Drift
 added: 2026-07-22
-genre: Weightless ambient pedal-steel
+genre: "Ambient & downtempo"
+subgenre: "Weightless ambient pedal-steel"
 description: Lanois-processed pedal steel as an orbiting universe — the most weightless entry in the series.
-episode: Series cutaway
+episode: "cutaway"
 tags: [ambient, pedal-steel, lanois, instrumental, space]
 instrumental: true
 audioFile: null

@@ -2,9 +2,10 @@
 id: choose-your-basalt
 title: Choose Your Basalt
 added: 2026-07-27
-genre: Educational cabaret duet
+genre: "Cabaret & chamber"
+subgenre: "Educational cabaret duet"
 description: "Dead-pan Lillith & Rubella lava-classification jingle (~55s) that starts in their house and cracks open to magma — button line: “That’s nature for us.”"
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [cabaret, duet, lava, basalt, comedy, lillith, rubella]
 instrumental: false
 audioFile: null

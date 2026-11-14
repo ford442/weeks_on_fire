@@ -2,9 +2,11 @@
 id: the-roof-knows-how-to-wait
 title: The Roof Knows How to Wait
 added: 2026-09-06
-genre: Dark cabaret ruin ballad
+genre: "Cabaret & chamber"
+subgenre: "Dark cabaret ruin ballad"
 description: Rubella inventories a ceiling that has not fallen yet. Natural ventilation. The extra bar is the plaster still deciding.
-episode: Musical cutaway / The Two
+episode: "cutaway"
+slot: "The Two"
 tags: [rubella, the-two, cabaret, ruin, glamour, cutaway]
 instrumental: false
 audioFile: null

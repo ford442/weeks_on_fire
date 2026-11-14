@@ -9,7 +9,7 @@ This document explains the organized layout for the short film series production
   - `characters/bible/` – **Character bible**: committed sheets for the on-screen cast (appearance anchors, personality matrix, voice guide, committed backstory, tone rules). Index and template: [`characters/bible/README.md`](characters/bible/README.md). Pairings: [`characters/bible/relationship-map.md`](characters/bible/relationship-map.md)
   - `characters/suggested-characters.md` – staging area for new character seeds; graduated entries link into `bible/`
   - `characters/the-two.md`, `characters/building-cast.md`, `characters/riley-smith.md` – overview / cluster files
-  - Fictional **crew** (not cast) lives in `content/staff.json` + `characters/staff-portraits.md`
+  - Fictional **crew** (not cast) lives in `content/crew.json` + `characters/crew-portraits.md`
 - `songs/` – Track lists, licensing, and music notes
 
 ## New Organizational Folders

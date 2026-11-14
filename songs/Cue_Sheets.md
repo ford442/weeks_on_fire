@@ -2,9 +2,10 @@
 id: cue-sheets
 title: Cue Sheets
 added: 2026-09-09
-genre: Ledger soul
+genre: "Soul, funk & hip-hop"
+subgenre: "Ledger soul"
 description: "Cue Sheets title track and closer. 84 BPM D minor, back to the opener's key and chord. She sings the usage column as BACKGROUND, INSTRUMENTAL over an obviously foreground vocal."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, soul, nova-chen, cue-sheets, 84bpm, catalog, title-track]
 instrumental: false
 audioFile: null

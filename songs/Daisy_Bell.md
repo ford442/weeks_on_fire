@@ -2,9 +2,10 @@
 id: daisy-bell
 title: Daisy Bell
 added: 2026-08-17
-genre: Barbershop waltz duet
+genre: "Cabaret & chamber"
+subgenre: "Barbershop waltz duet"
 description: "Rubella & Lillith on a living flower bicycle into period London — color HD flipping with scratchy film grain. Board: Daisy Bell page."
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [duet, rubella, lillith, waltz, london, time-slip, flower-bike]
 instrumental: false
 audioFile: Daisy+Bell.mp3

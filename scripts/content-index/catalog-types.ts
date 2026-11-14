@@ -17,7 +17,7 @@ import type {
   SequenceRecord as SequenceSource,
   SeriesCharacterRecord,
   SongFrontmatter,
-  StaffMemberRecord,
+  CrewMemberRecord,
 } from './schemas';
 
 export type {
@@ -35,11 +35,12 @@ export type {
   SequenceMedium,
   SequenceRenderer,
   SightLane,
-  StaffRole,
+  CrewRole,
   SuggestionKind,
   SuggestionStatus,
 } from './schemas';
 export type { SightCandidateRecord as SightCandidate } from './schemas';
+export type { TaxonomyEpisode, TaxonomyRecord as Taxonomy, TaxonomyTool } from './schemas';
 
 /** Codegen rewrites a source image path into an imported asset URL. */
 type ResolveImage<T, PathKey extends keyof T, UrlKey extends string> = Omit<T, PathKey> & {
@@ -69,9 +70,9 @@ export type FilmScene = ResolveImage<FilmSceneRecord, 'imagePath', 'imageUrl'>;
 export type SeriesCharacter = ResolveImage<SeriesCharacterRecord, 'imagePath', 'imageUrl'>;
 export type DaisyBellFrame = ResolveImage<DaisyBellFrameRecord, 'imagePath', 'imageUrl'>;
 
-export type StaffRecord = StaffMemberRecord;
-/** Site-facing staff member: `imageFile` becomes a public `/cast` URL. */
-export type StaffMember = Omit<StaffRecord, 'imageFile'> & {
+export type CrewRecord = CrewMemberRecord;
+/** Site-facing crew member: `imageFile` becomes a public `/cast` URL. */
+export type CrewMember = Omit<CrewRecord, 'imageFile'> & {
   /** Public URL under /cast, with optional subdirectory prefix in production. */
   imageUrl: string;
 };

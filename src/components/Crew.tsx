@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Quote, Users } from 'lucide-react';
 
-import { staffMembers, type StaffMember } from '../data/staff';
+import { crewMembers, type CrewMember } from '../data/crew';
 import { firstCatalogItem } from '../lib/catalog';
 
-export default function Staff() {
-  const [selected, setSelected] = useState<StaffMember>(firstCatalogItem(staffMembers, 'staff'));
+export default function Crew() {
+  const [selected, setSelected] = useState<CrewMember>(firstCatalogItem(crewMembers, 'crew'));
 
   return (
     <section className="mx-auto grid max-w-7xl gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_390px] lg:px-8">
@@ -14,7 +14,7 @@ export default function Staff() {
           <div className="flex items-start gap-3">
             <Users className="mt-0.5 shrink-0 text-orange-300" size={18} aria-hidden="true" />
             <div>
-              <p className="text-sm font-semibold text-zinc-200">Fictional series crew</p>
+              <p className="text-sm font-semibold text-zinc-200">Fictional crew</p>
               <p className="mt-1 text-sm leading-6 text-zinc-400">
                 Made-up credits for Weeks on Fire — writer, producer, director, and the people who
                 keep the music and stills in sync. Select a name to read the full bio and quote.
@@ -24,7 +24,7 @@ export default function Staff() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {staffMembers.map((member) => {
+          {crewMembers.map((member) => {
             const isActive = selected.id === member.id;
 
             return (
@@ -71,13 +71,13 @@ export default function Staff() {
           <Quote size={17} aria-hidden="true" />
           Crew profile
         </div>
-        <StaffDetail member={selected} />
+        <CrewDetail member={selected} />
       </aside>
     </section>
   );
 }
 
-function StaffDetail({ member }: { member: StaffMember }) {
+function CrewDetail({ member }: { member: CrewMember }) {
   return (
     <div className="space-y-5 rounded-lg border border-zinc-800 bg-zinc-950 p-5">
       <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-zinc-900">

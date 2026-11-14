@@ -2,9 +2,11 @@
 id: box-box-hat
 title: "Box, Box, Hat"
 added: 2026-11-08
-genre: Jump-swing cartoon walking tune
+genre: "Jazz, lounge & torch"
+subgenre: "Jump-swing cartoon walking tune"
 description: "A flat voice sings a 32-second Saturday-morning errand: box, box, hat. The picture hops twice, the song counts three, and the miscount is never fixed."
-episode: Musical cutaway / Rubber-Hose Errand (sequence)
+episode: "cutaway"
+slot: "Rubber-Hose Errand (sequence)"
 tags: [cartoon, rubber-hose, swing, comedy, silly, sequence, loop, 32-seconds, 4x3]
 instrumental: false
 audioFile: null

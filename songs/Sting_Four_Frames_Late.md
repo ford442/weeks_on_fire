@@ -2,9 +2,10 @@
 id: sting-four-frames-late
 title: Sting, Four Frames Late
 added: 2026-09-09
-genre: Deadpan lounge funk
+genre: "Soul, funk & hip-hop"
+subgenre: "Deadpan lounge funk"
 description: "Cue Sheets track 8. 100 BPM B minor. Every stab lands four frames late. Notes came back saying keep it wrong."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, funk, nova-chen, cue-sheets, 100bpm, catalog, comedy]
 instrumental: false
 audioFile: null

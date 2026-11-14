@@ -3,6 +3,7 @@ import { Download, RefreshCw, Upload } from 'lucide-react';
 
 import { useEditMode } from '../hooks/useEditMode';
 import { useEpisodeProduction } from '../hooks/useEpisodeProduction';
+import { pluralize } from '../lib/plural';
 import {
   clipStackerToProduction,
   createEmptyScene,
@@ -108,7 +109,7 @@ export default function TimelinePage() {
 
       const imported = clipStackerToProduction(parsed, episodeId, committed ?? production);
       setProduction(imported);
-      setImportMessage(`Imported ${imported.scenes.length} clip(s) from clip_stacker.`);
+      setImportMessage(`Imported ${pluralize(imported.scenes.length, 'clip')} from clip_stacker.`);
     } catch {
       setImportMessage('Could not parse clip_stacker JSON file.');
     }

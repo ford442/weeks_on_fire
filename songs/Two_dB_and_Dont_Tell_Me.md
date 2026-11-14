@@ -2,9 +2,10 @@
 id: two-db-and-dont-tell-me
 title: Two dB and Don't Tell Me
 added: 2026-09-09
-genre: Fader blues
+genre: "Soul, funk & hip-hop"
+subgenre: "Fader blues"
 description: "Cue Sheets track 4. 88 BPM G minor. Somebody keeps lowering it. Each chorus is genuinely quieter than the last and the vocal never compensates."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, blues, nova-chen, cue-sheets, 88bpm, catalog]
 instrumental: false
 audioFile: null

@@ -2,9 +2,10 @@
 id: mysterium-a-cappella
 title: Mysterium (A Cappella)
 added: 2026-07-12
-genre: A cappella bubblegum pop
+genre: "Pop & synth-pop"
+subgenre: "A cappella bubblegum pop"
 description: Vocal-only variant of Mysterium for Minimax generation without instruments.
-episode: Series cutaway
+episode: "cutaway"
 tags: [a-cappella, italian, pop, vocal-group]
 instrumental: false
 audioFile: null

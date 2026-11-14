@@ -2,9 +2,10 @@
 id: g-train-fluorescent
 title: G Train Fluorescent
 added: 2026-09-08
-genre: Commute techno
+genre: "Techno & house"
+subgenre: "Commute techno"
 description: "Night Side track 2. 122 BPM F-sharp minor. Tight dry kick, sixteenth hats as ballast, fluorescent hum under the bass. Brooklyn commute grid. Generate first."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, techno, nova-chen, night-side, brooklyn, 122bpm, work-bed]
 instrumental: true
 audioFile: null

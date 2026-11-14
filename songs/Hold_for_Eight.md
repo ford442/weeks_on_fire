@@ -2,9 +2,10 @@
 id: hold-for-eight
 title: Hold for Eight
 added: 2026-09-09
-genre: Dry downtempo / counted soul
+genre: "Ambient & downtempo"
+subgenre: "Dry downtempo / counted soul"
 description: "Cue Sheets track 1. 84 BPM D minor. The instruction to wait, sung as a lullaby. The count reaches six and starts again — it never gets to eight."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, downtempo, nova-chen, cue-sheets, 84bpm, catalog]
 instrumental: false
 audioFile: null

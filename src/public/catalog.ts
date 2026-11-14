@@ -16,4 +16,4 @@ export function publicTracks(filter?: (song: Song) => boolean): {
 }
 
 export const artistFor = (song: Song) =>
-  song.episode === 'Lace Waterfall' ? 'Lace Waterfall' : 'Weeks of Fire';
+  song.episode === 'lace-waterfall' ? 'Lace Waterfall' : 'Weeks of Fire';

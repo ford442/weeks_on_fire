@@ -2,9 +2,11 @@
 id: pans-down
 title: Pans Down
 added: 2026-11-08
-genre: Jazzy boom-bap hip-hop (drumless bed, the kitchen is the kit)
+genre: "Soul, funk & hip-hop"
+subgenre: "Jazzy boom-bap hip-hop (drumless bed, the kitchen is the kit)"
 description: "A first-person soup bragger raps over a bass-and-Rhodes bed with no drums at all, because the cook's knife, lid and spoon are the kit. The bass drops, the lid lifts on a column of steam, and six pans fall on the beat."
-episode: Musical cutaway / Pans Down (kitchen stove plate)
+episode: "cutaway"
+slot: "Pans Down (kitchen stove plate)"
 tags: [hip-hop, boom-bap, jazz-sample, comedy, silly, kitchen, soup, diegetic, cutaway, 25-seconds, no-drums]
 instrumental: false
 audioFile: null

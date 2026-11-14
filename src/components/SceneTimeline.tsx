@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Clock, Edit2, Film, Loader2, Plus, Download } from 'lucide-react';
 
 import { flattenTimeline, statusColors } from '../data/production';
+import { pluralize } from '../lib/plural';
 
 import type {
   EpisodeId,
@@ -115,7 +116,8 @@ export default function SceneTimeline({
             <span>{production.title}</span>
           </div>
           <div className="text-xs text-zinc-400">
-            Last updated: {formatDate(production.lastUpdated)} • {production.scenes.length} scenes
+            Last updated: {formatDate(production.lastUpdated)} •{' '}
+            {pluralize(production.scenes.length, 'scene')}
           </div>
         </div>
 

@@ -14,7 +14,7 @@ const Cartoons = lazy(viewLoaders.cartoons);
 const Sequences = lazy(viewLoaders.sequences);
 const Characters = lazy(viewLoaders.characters);
 const Episodes = lazy(viewLoaders.episodes);
-const Staff = lazy(viewLoaders.staff);
+const Crew = lazy(viewLoaders.crew);
 const PublicLayout = lazy(() => import('./public/PublicLayout'));
 const Listen = lazy(() => import('./public/Listen'));
 const PublicHome = lazy(() =>
@@ -79,6 +79,11 @@ export default function App() {
     return <Navigate to={`${pathname.slice(CREW_PREFIX.length)}${search}`} replace />;
   }
 
+  // The Crew view used to be called Staff.
+  if (/^(\/show)?\/staff\/?$/.test(pathname)) {
+    return <Navigate to={`${crewPath('/crew')}${search}`} replace />;
+  }
+
   // Creator sections used to live at the root.
   if (isLegacyCrewPath(pathname)) {
     return <Navigate to={`${crewPath(pathname)}${search}`} replace />;
@@ -105,7 +110,7 @@ export default function App() {
             <Route path={viewPaths.characters} element={<Characters />} />
             <Route path={viewPaths.episodes} element={<Episodes />} />
             <Route path={`${viewPaths.episodes}/:id`} element={<Episodes />} />
-            <Route path={viewPaths.staff} element={<Staff />} />
+            <Route path={viewPaths.crew} element={<Crew />} />
             <Route path="*" element={<Navigate to={CREW_PREFIX} replace />} />
           </Routes>
         </Suspense>

@@ -2,9 +2,10 @@
 id: groove-break-earned
 title: Groove Break (Earned)
 added: 2026-09-08
-genre: Progressive / melodic techno
+genre: "Techno & house"
+subgenre: "Progressive / melodic techno"
 description: "Night Side track 3. 124 BPM A minor. Full groove from bar one. The break is not a drop — drums thin, bass keeps walking, groove returns without getting bigger."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, melodic-techno, nova-chen, night-side, 124bpm, work-bed]
 instrumental: true
 audioFile: null

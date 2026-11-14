@@ -2,9 +2,10 @@
 id: needle-drop-source
 title: Needle Drop, Source
 added: 2026-09-09
-genre: Diegetic soul
+genre: "Soul, funk & hip-hop"
+subgenre: "Diegetic soul"
 description: "Cue Sheets track 5. 96 BPM E minor. Starts as music playing inside a scene and becomes score halfway through. Nobody in the frame notices, and neither does the lyric."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, soul, nova-chen, cue-sheets, 96bpm, catalog, diegetic]
 instrumental: false
 audioFile: null

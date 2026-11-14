@@ -2,9 +2,10 @@
 id: porch-light-meridian
 title: Porch Light Meridian
 added: 2026-08-13
-genre: Progressive downtempo
+genre: "Ambient & downtempo"
+subgenre: "Progressive downtempo"
 description: Episode 3 crane reveal as music — porch bulb in the foreground, meridian logic overhead. Rubella, spare, unresolved.
-episode: Episode 03
+episode: "03"
 tags: [downtempo, rubella, ep3, porch, celestial]
 instrumental: false
 audioFile: null

@@ -2,9 +2,10 @@
 id: ghost-in-the-reverb
 title: Ghost in the Reverb
 added: 2026-07-22
-genre: Spectral slide-steel nocturne
+genre: "Ambient & downtempo"
+subgenre: "Spectral slide-steel nocturne"
 description: The darkest Lanois entry — a ghost story told entirely in reverb. No vocals.
-episode: Series cutaway
+episode: "cutaway"
 tags: [ambient, pedal-steel, lanois, instrumental, nocturne]
 instrumental: true
 audioFile: null

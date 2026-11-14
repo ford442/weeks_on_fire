@@ -2,9 +2,11 @@
 id: neon-exit-sign
 title: Neon Exit Sign
 added: 2026-08-05
-genre: 80s dark synth-pop / neon noir
+genre: "Pop & synth-pop"
+subgenre: "80s dark synth-pop / neon noir"
 description: Series signature cutaway — “don’t smudge the mascara” as a glamour-apocalypse anthem, sung by a woman who has tried every exit twice.
-episode: Episode 01 reprise
+episode: "01"
+slot: "Reprise"
 tags: [synthwave, neon-noir, 80s, the-two, rubella, signature]
 instrumental: false
 audioFile: null

@@ -12,7 +12,7 @@ const crewRoots = [
   'sequences',
   'characters',
   'episodes',
-  'staff',
+  'crew',
 ] as const;
 
 export function crewPath(path: string): string {
@@ -38,7 +38,7 @@ export const viewPaths: Record<SiteView, string> = {
   sequences: crewPath('/sequences'),
   characters: crewPath('/characters'),
   episodes: crewPath('/episodes'),
-  staff: crewPath('/staff'),
+  crew: crewPath('/crew'),
 };
 
 export function pathnameToView(pathname: string): SiteView {
@@ -59,7 +59,7 @@ export function pathnameToView(pathname: string): SiteView {
   if (bare.startsWith('/sequences')) return 'sequences';
   if (bare === '/characters') return 'characters';
   if (bare.startsWith('/episodes')) return 'episodes';
-  if (bare === '/staff') return 'staff';
+  if (bare === '/crew') return 'crew';
 
   return 'gallery';
 }

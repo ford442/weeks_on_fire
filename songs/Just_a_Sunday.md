@@ -2,9 +2,11 @@
 id: just-a-sunday
 title: Just a Sunday
 added: 2026-11-08
-genre: Toy-piano lullaby / music-box nursery record
+genre: "Cabaret & chamber"
+subgenre: "Toy-piano lullaby / music-box nursery record"
 description: "A music-box lullaby sung straight over a jet-engine lawn mower. The mower walks up the air, the engine and the song both stop for ten seconds while he mows a cloud square, and the lullaby comes back to say it is just a Sunday."
-episode: Musical cutaway / Mow the Sky (lawn loop)
+episode: "cutaway"
+slot: "Mow the Sky (lawn loop)"
 tags: [lullaby, music-box, toy-piano, comedy, silly, lawn, mower, loop, 20-seconds, silence]
 instrumental: false
 audioFile: null

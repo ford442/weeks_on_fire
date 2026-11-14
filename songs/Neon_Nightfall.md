@@ -2,9 +2,10 @@
 id: "neon-nightfall"
 title: "Neon Nightfall"
 added: "2026-11-06"
-genre: "cyberpunk"
+genre: "Pop & synth-pop"
+subgenre: "cyberpunk"
 description: "A synth‑wave chase cutaway with neon‑lit alley, drone, rain, and billboard flash"
-episode: "Visual Cutaway"
+episode: "visual"
 tags: ["cyberpunk", "chase", "neon", "rain", "drone"]
 ---
 

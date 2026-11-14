@@ -2,9 +2,11 @@
 id: terms-and-conditions
 title: Terms and Conditions (Complete Recording)
 added: 2026-08-19
-genre: Vegas big-band showstopper
+genre: "Jazz, lounge & torch"
+subgenre: "Vegas big-band showstopper"
 description: A tuxedoed crooner sings a licensing agreement in full. The tempo climbs 2 BPM per section because the trial is expiring; it stops mid-word on a chime.
-episode: EyeWash station-break / end of block
+episode: "eyewash"
+slot: "Station break · end of block"
 tags: [big-band, lounge, comedy, eyewash-station, continuity-voice, bumper]
 instrumental: false
 audioFile: null

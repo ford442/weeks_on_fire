@@ -185,6 +185,15 @@ describe('site search', () => {
 });
 
 describe('public site', () => {
+  it('/lace-waterfall renders the band page', async () => {
+    renderRoute('/lace-waterfall');
+    expect(await screen.findByRole('heading', { level: 1, name: 'Lace Waterfall' })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Lillith' })).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Rubella' })).toBeTruthy();
+    expect(screen.getByRole('navigation', { name: 'Public site' })).toBeTruthy();
+    expect(screen.queryByRole('navigation', { name: 'Site sections' })).toBeNull();
+  });
+
   it('/listen renders the public player without crew tabs', async () => {
     renderRoute('/listen');
     expect(await screen.findByRole('navigation', { name: 'Public site' })).toBeTruthy();

@@ -4,7 +4,7 @@ status: draft
 created: 2026-11-13
 reviewed:
 generated:
-links: [songs/Softcore.md, ideas/funny-rules.md, notes/callback-bank.md]
+links: [songs/_drawer/Softcore.md, ideas/funny-rules.md, notes/callback-bank.md]
 notes: "Kid-silly. Lace Waterfall (Rubella vocal, Lillith guitar). No new canon. One-off extras: a royal court (king, queen, knight, jester, a pantomime horse). They are props for this video, not cast, so the Lore Keeper has nothing to log. Costume is the canon black lace, nothing new. Neither the bouncy-castle gig nor the venue is a band bio fact, so the Script Editor should not treat it as a tour stop. Callback spent: Rubella's reaction shot (one downward two-finger brush, never flinches above the waist). Dedupe: no bouncy or inflatable castle anywhere in the repo. Lillith's happy-hardcore frog (ideas/lillith-crazy-frog-around.md) is a different joke: it is pitched-up novelty, and this vocal is never pitched up."
 ---
 

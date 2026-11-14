@@ -2,9 +2,11 @@
 id: i-second-peggy-babcock
 title: I Second Peggy Babcock
 added: 2026-08-17
-genre: Parliamentary patter / clubhouse organ
+genre: "Cabaret & chamber"
+subgenre: "Parliamentary patter / clubhouse organ"
 description: HOA recording secretary has the floor. The motion is thistle and shrub. Nobody can second Peggy Babcock. She re-reads the whole thing anyway.
-episode: Episode 04 / HOA
+episode: "04"
+slot: "HOA"
 tags: [hoa, patter, comedy, peggy-babcock, ep4]
 instrumental: false
 audioFile: null

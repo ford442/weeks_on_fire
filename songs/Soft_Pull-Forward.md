@@ -2,9 +2,10 @@
 id: soft-pull-forward
 title: Soft Pull-Forward
 added: 2026-09-08
-genre: Progressive house
+genre: "Techno & house"
+subgenre: "Progressive house"
 description: "Night Side track 1. 120 BPM F minor. Filtered loft pad, kick enters late and rounded. Warm-up, not a drop."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, progressive-house, nova-chen, night-side, 120bpm, work-bed]
 instrumental: true
 audioFile: null

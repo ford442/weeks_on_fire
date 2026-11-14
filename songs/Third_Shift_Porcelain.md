@@ -2,9 +2,11 @@
 id: third-shift-porcelain
 title: Third Shift Porcelain
 added: 2026-08-13
-genre: Heel-click electro / cold disco
+genre: "Dance & disco"
+subgenre: "Heel-click electro / cold disco"
 description: Beauty as hourly work. Unison deadpan, marble-stamp kick, bar-5 downbeat always late. The Two do not clock out.
-episode: One-panel gag / after hours
+episode: "gag"
+slot: "After hours"
 tags: [electro, disco, labor, gag, lillith, rubella]
 instrumental: false
 audioFile: null

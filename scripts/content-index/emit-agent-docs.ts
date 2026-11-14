@@ -9,7 +9,8 @@ import {
   loadDaisyBell,
   loadGallery,
   loadSongs,
-  loadStaff,
+  loadCrew,
+  loadTaxonomy,
 } from './load';
 import { syncOutputs } from './output';
 import { parseFrontmatter } from './parsers/frontmatter';
@@ -18,6 +19,10 @@ import { REPO_BASE, SITE_BASE, siteUrl, siteViews } from './views';
 const repoRoot = join(import.meta.dirname, '../..');
 const publicDir = join(repoRoot, 'public');
 const checkMode = process.argv.includes('--check');
+
+const episodeLabels = new Map(loadTaxonomy(repoRoot).episodes.map((e) => [e.id, e.label]));
+/** Catalog entries store canonical episode ids; agent docs show the label. */
+const episodeLabel = (id: string) => episodeLabels.get(id) ?? id;
 
 interface EpisodeSummary {
   number: string;
@@ -77,12 +82,15 @@ function emitLlmsTxt(
 
   const featuredScenes = gallery
     .slice(0, 6)
-    .map((scene) => `| ${scene.title} | ${scene.episode} | ${scene.theme ?? '—'} |`)
+    .map((scene) => `| ${scene.title} | ${episodeLabel(scene.episode)} | ${scene.theme ?? '—'} |`)
     .join('\n');
 
   const featuredTracks = songs
     .slice(0, 6)
-    .map((song) => `- ${song.title} (${song.genre}${song.instrumental ? ', instrumental' : ''})`)
+    .map(
+      (song) =>
+        `- ${song.title} (${song.subgenre ?? song.genre}${song.instrumental ? ', instrumental' : ''})`,
+    )
     .join('\n');
 
   const episodeLines = episodes
@@ -147,7 +155,7 @@ function emitLlmsFullTxt(
   characters: ReturnType<typeof loadCharacters>,
   cutaways: ReturnType<typeof loadCutaways>,
   daisyBell: ReturnType<typeof loadDaisyBell>,
-  staff: ReturnType<typeof loadStaff>,
+  crew: ReturnType<typeof loadCrew>,
   cartoons: ReturnType<typeof loadCartoons>,
   sequences: ReturnType<typeof loadSequences>,
   episodes: EpisodeSummary[],
@@ -173,12 +181,12 @@ ${paths}`;
   const galleryLines = gallery
     .map(
       (scene, index) =>
-        `${index + 1}. **${scene.title}** (${scene.episode}${scene.theme ? `, theme: ${scene.theme}` : ''})`,
+        `${index + 1}. **${scene.title}** (${episodeLabel(scene.episode)}${scene.theme ? `, theme: ${scene.theme}` : ''})`,
     )
     .join('\n');
 
   const songTable = songs
-    .map((song) => `| ${song.id} | ${song.title} | ${song.genre} | ${song.episode} |`)
+    .map((song) => `| ${song.id} | ${song.title} | ${song.genre} | ${episodeLabel(song.episode)} |`)
     .join('\n');
 
   const characterLines = characters
@@ -189,7 +197,7 @@ ${paths}`;
     .map((cutaway) => `- **${cutaway.title}** (${cutaway.id}) — ${cutaway.summary}`)
     .join('\n');
 
-  const staffLines = staff.map((member) => `- **${member.name}** — ${member.role}`).join('\n');
+  const crewLines = crew.map((member) => `- **${member.name}** — ${member.role}`).join('\n');
 
   const cartoonLines =
     cartoons.length > 0
@@ -260,7 +268,7 @@ ${characterLines}
 
 ## Series crew (fictional)
 
-${staffLines}
+${crewLines}
 
 ## Cutaways & suggestions
 
@@ -289,7 +297,7 @@ ${sequenceLines}
 \`\`\`
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
+├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills + cast notes
@@ -370,7 +378,7 @@ function main() {
   const gallery = loadGallery(repoRoot);
   const characters = loadCharacters(repoRoot);
   const daisyBell = loadDaisyBell(repoRoot);
-  const staff = loadStaff(repoRoot);
+  const crew = loadCrew(repoRoot);
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
   const episodes = loadEpisodes();
@@ -383,7 +391,7 @@ function main() {
       characters,
       cutaways,
       daisyBell,
-      staff,
+      crew,
       cartoons,
       sequences,
       episodes,

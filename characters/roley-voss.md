@@ -40,4 +40,4 @@ Sample: "The lot can freeze. It cannot host the hill."
 
 ---
 
-*Crew sheet · Weeks on Fire. Not yet in `content/staff.json`.*
+*Crew sheet · Weeks on Fire. Not yet in `content/crew.json`.*

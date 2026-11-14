@@ -2,9 +2,11 @@
 id: two-of-three
 title: Two of Three
 added: 2026-10-06
-genre: Tintinnabuli duet
+genre: "Classical & chant"
+subgenre: "Tintinnabuli duet"
 description: "Riley walks a stepwise line in the repeater hut. Rubella may sing only A, C, and E, and the bell has no C."
-episode: Episode 5 candidate / ridge
+episode: "05"
+slot: "Ridge"
 tags: [tintinnabuli, riley, rubella, ridge, duet]
 instrumental: false
 audioFile: null

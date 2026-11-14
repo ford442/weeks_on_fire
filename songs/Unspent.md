@@ -2,9 +2,11 @@
 id: unspent
 title: Unspent
 added: 2026-10-06
-genre: Lied
+genre: "Classical & chant"
+subgenre: "Lied"
 description: "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung."
-episode: Voice credit / small room
+episode: "voice-credit"
+slot: "Small room"
 tags: [lied, nilsson, piano, voice-credit]
 instrumental: false
 audioFile: null

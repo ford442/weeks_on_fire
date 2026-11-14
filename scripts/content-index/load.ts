@@ -7,10 +7,11 @@ import {
   FilmSceneSchema,
   SeriesCharacterSchema,
   DaisyBellSchema,
-  StaffMemberSchema,
+  CrewMemberSchema,
   EpisodeSchema,
   CartoonSchema,
   SequenceSchema,
+  TaxonomySchema,
 } from './schemas';
 import { SequenceGraphSchema } from './graph-schema';
 import { parseFrontmatter } from './parsers/frontmatter';
@@ -23,10 +24,11 @@ import type {
   FilmSceneRecord,
   SeriesCharacterRecord,
   DaisyBellRecord,
-  StaffMemberRecord,
+  CrewMemberRecord,
   EpisodeRecord,
   CartoonRecord,
   SequenceRecord,
+  TaxonomyRecord,
 } from './schemas';
 
 export interface ParsedSong {
@@ -34,8 +36,10 @@ export interface ParsedSong {
   title: string;
   added: string;
   genre: string;
+  subgenre?: string;
   description: string;
   episode: string;
+  slot?: string;
   tags: string[];
   instrumental: boolean;
   audioFile: string | null;
@@ -76,8 +80,10 @@ export function loadSongs(repoRoot: string): ParsedSong[] {
       title: meta.title,
       added: meta.added,
       genre: meta.genre,
+      ...(meta.subgenre ? { subgenre: meta.subgenre } : {}),
       description: meta.description,
       episode: meta.episode,
+      ...(meta.slot ? { slot: meta.slot } : {}),
       tags: meta.tags,
       instrumental: meta.instrumental ?? sections.lyrics === null,
       audioFile: meta.audioFile ?? null,
@@ -148,9 +154,13 @@ export function loadDaisyBell(repoRoot: string): DaisyBellRecord {
   return DaisyBellSchema.parse(readJson(join(repoRoot, 'content/daisy-bell.json')));
 }
 
-export function loadStaff(repoRoot: string): StaffMemberRecord[] {
-  return readList(join(repoRoot, 'content/staff.json'), 'staff').map((item) =>
-    StaffMemberSchema.parse(item),
+export function loadTaxonomy(repoRoot: string): TaxonomyRecord {
+  return TaxonomySchema.parse(readJson(join(repoRoot, 'content/taxonomy.json')));
+}
+
+export function loadCrew(repoRoot: string): CrewMemberRecord[] {
+  return readList(join(repoRoot, 'content/crew.json'), 'crew').map((item) =>
+    CrewMemberSchema.parse(item),
   );
 }
 

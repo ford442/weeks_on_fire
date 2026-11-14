@@ -2,9 +2,11 @@
 id: thank-you-for-the-lava
 title: Thank You for the Lava
 added: 2026-11-08
-genre: Melodic death-metal gallop / joke metal
+genre: "Metal"
+subgenre: "Melodic death-metal gallop / joke metal"
 description: "A dragon on a volcano cliff growls a polite dinner request, then a thank-you, with a smoke ring after each. The third time the whole band stops dead and a car-sized soap bubble comes out instead. Nobody says excuse me."
-episode: Musical cutaway / Bubble Dragon (volcano cliff)
+episode: "cutaway"
+slot: "Bubble Dragon (volcano cliff)"
 tags: [metal, death-metal, growl, comedy, silly, dragon, bubble, storm, volcano, silence, 24-seconds]
 instrumental: false
 audioFile: null

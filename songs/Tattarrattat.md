@@ -2,9 +2,11 @@
 id: tattarrattat
 title: Tattarrattat
 added: 2026-08-17
-genre: Smoked midnight jazz / locked-door
+genre: "Jazz, lounge & torch"
+subgenre: "Smoked midnight jazz / locked-door"
 description: After-gala hallway. The knock is the same from both sides of the wood. Rubella does not open. She counts the seals.
-episode: After-gala / hallway liminal
+episode: "cutaway"
+slot: "After-gala · hallway liminal"
 tags: [rubella, jazz, hallway, locked-door]
 instrumental: false
 audioFile: null

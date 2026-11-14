@@ -2,9 +2,10 @@
 id: seoul-at-night
 title: 서울의 밤
 added: 2026-11-01
-genre: K-pop
+genre: "Pop & synth-pop"
+subgenre: "K-pop"
 description: "Night bed for the Busan approach. Korean lyrics. 128 BPM. Working English title Seoul at Night; visual target is Busan Gwangan Bridge."
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [k-pop, korean, busan, yacht, night]
 instrumental: false
 ---

@@ -6,10 +6,11 @@ import {
   loadGallery,
   loadCharacters,
   loadDaisyBell,
-  loadStaff,
+  loadCrew,
   loadEpisodes,
   loadCartoons,
   loadSequences,
+  loadTaxonomy,
   loadCustomRendererIds,
 } from './load';
 import {
@@ -18,6 +19,7 @@ import {
   validateCartoons,
   validateCharacters,
   validateSequences,
+  validateTaxonomy,
 } from './validate';
 import {
   emitSongsModule,
@@ -25,10 +27,11 @@ import {
   emitGalleryModule,
   emitCharactersModule,
   emitDaisyBellModule,
-  emitStaffModule,
+  emitCrewModule,
   emitEpisodesModule,
   emitCartoonsModule,
   emitSequencesModule,
+  emitTaxonomyModule,
 } from './emit';
 import { syncOutputs } from './output';
 
@@ -42,13 +45,15 @@ function main() {
   const gallery = loadGallery(repoRoot);
   const characters = loadCharacters(repoRoot);
   const daisyBell = loadDaisyBell(repoRoot);
-  const staff = loadStaff(repoRoot);
+  const crew = loadCrew(repoRoot);
   const episodes = loadEpisodes(repoRoot);
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
+  const taxonomy = loadTaxonomy(repoRoot);
 
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
+  validateTaxonomy(taxonomy, episodes, songs, gallery);
   validateCartoons(repoRoot, cartoons);
   validateCharacters(repoRoot, characters);
   validateSequences(repoRoot, sequences, loadCustomRendererIds(repoRoot));
@@ -64,10 +69,11 @@ function main() {
     'gallery.ts': emitGalleryModule(gallery),
     'characters.ts': emitCharactersModule(characters),
     'daisy-bell.ts': emitDaisyBellModule(daisyBell),
-    'staff.ts': emitStaffModule(staff),
+    'crew.ts': emitCrewModule(crew),
     'episodes.ts': emitEpisodesModule(episodes),
     'cartoons.ts': emitCartoonsModule(cartoons),
     'sequences.ts': emitSequencesModule(sequences),
+    'taxonomy.ts': emitTaxonomyModule(taxonomy),
   };
   syncOutputs(generatedDir, outputs, {
     check: checkMode,
@@ -76,7 +82,7 @@ function main() {
   });
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${staff.length} staff, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
 }
 

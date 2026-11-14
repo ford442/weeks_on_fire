@@ -2,9 +2,10 @@
 id: les-ondes-courtes
 title: Les Ondes Courtes
 added: 2026-05-07
-genre: French electro-chanson
+genre: "Pop & synth-pop"
+subgenre: "French electro-chanson"
 description: Hypnagogic night-drive lullaby for the static altar sequence.
-episode: Episode 03
+episode: "03"
 tags: [french, jazz, night-drive, lullaby]
 instrumental: false
 audioFile: Les+Ondes+Courtes.mp3

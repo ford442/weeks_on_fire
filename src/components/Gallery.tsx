@@ -2,21 +2,38 @@ import { useMemo, useState } from 'react';
 import { Copy, ImageIcon, PanelRightClose, PanelRightOpen, Search } from 'lucide-react';
 
 import { filmScenes, imageKindMeta, type FilmScene, type ImageKind } from '../data/films';
+import { episodeWithSlot, toolLabel } from '../data/taxonomy';
 import { firstCatalogItem } from '../lib/catalog';
+import { pluralize } from '../lib/plural';
+import { episodeOptions, optionValues, themeOptions, toolOptions } from '../lib/filterOptions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
 
+import FilterSelect, { allValue } from './FilterSelect';
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
-
-const allValue = 'All';
 
 export default function Gallery() {
   const [selected, setSelected] = useState<FilmScene>(firstCatalogItem(filmScenes, 'gallery'));
   const [lightboxScene, setLightboxScene] = useState<FilmScene | null>(null);
   const [query, setQuery] = useUrlParam('q', '');
-  const [episode, setEpisode] = useUrlParam('episode', allValue);
-  const [theme, setTheme] = useUrlParam('theme', allValue);
+  const filters = useMemo(
+    () => ({
+      episodes: episodeOptions(filmScenes.map((scene) => scene.episode)),
+      themes: themeOptions(filmScenes.map((scene) => scene.theme)),
+      tools: toolOptions(filmScenes.flatMap((scene) => (scene.tool ? [scene.tool] : []))),
+    }),
+    [],
+  );
+  const [episode, setEpisode] = useUrlParam('episode', allValue, [
+    allValue,
+    ...optionValues(filters.episodes),
+  ]);
+  const [theme, setTheme] = useUrlParam('theme', allValue, [
+    allValue,
+    ...optionValues(filters.themes),
+  ]);
+  const [tool, setTool] = useUrlParam('tool', allValue, [allValue, ...optionValues(filters.tools)]);
   const [imageKind, setImageKind] = useUrlParam<typeof allValue | ImageKind>('kind', allValue, [
     allValue,
     ...(Object.keys(imageKindMeta) as ImageKind[]),
@@ -32,14 +49,6 @@ export default function Gallery() {
     return counts;
   }, []);
 
-  const filters = useMemo(
-    () => ({
-      episodes: uniqueValues(filmScenes.map((scene) => scene.episode)),
-      themes: uniqueValues(filmScenes.map((scene) => scene.theme)),
-    }),
-    [],
-  );
-
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
@@ -48,7 +57,8 @@ export default function Gallery() {
         normalizedQuery.length === 0 ||
         [
           scene.title,
-          scene.episode,
+          episodeWithSlot(scene.episode, scene.slot),
+          scene.tool ? toolLabel(scene.tool) : '',
           scene.prompt,
           scene.description,
           scene.theme,
@@ -65,10 +75,11 @@ export default function Gallery() {
         matchesSearch &&
         (episode === allValue || scene.episode === episode) &&
         (theme === allValue || scene.theme === theme) &&
+        (tool === allValue || scene.tool === tool) &&
         (imageKind === allValue || scene.imageKind === imageKind)
       );
     });
-  }, [episode, imageKind, query, theme]);
+  }, [episode, imageKind, query, theme, tool]);
 
   const openItem = (scene: FilmScene) => {
     setSelected(scene);
@@ -90,9 +101,10 @@ export default function Gallery() {
           <div className="rounded-xl border border-zinc-800/90 bg-zinc-950/70 p-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <p className="text-sm text-zinc-400">
-                {filtered.length} of {filmScenes.length} items
+                {filtered.length} of {pluralize(filmScenes.length, 'item')}
                 <span className="mx-2 text-zinc-700">·</span>
-                {filmScenes.filter((s) => s.imageUrl).length} with images
+                {filmScenes.filter((s) => s.imageUrl).length} with image
+                {filmScenes.filter((s) => s.imageUrl).length === 1 ? '' : 's'}
               </p>
               <button
                 type="button"
@@ -121,7 +133,13 @@ export default function Gallery() {
               ))}
             </div>
 
-            <div className="mt-3 grid gap-3 lg:grid-cols-[minmax(200px,1fr)_160px_160px]">
+            <div
+              className={`mt-3 grid gap-3 ${
+                filters.tools.length > 0
+                  ? 'lg:grid-cols-[minmax(200px,1fr)_170px_170px_170px]'
+                  : 'lg:grid-cols-[minmax(200px,1fr)_170px_170px]'
+              }`}
+            >
               <label className="relative block">
                 <span className="sr-only">Search prompts, titles, and tags</span>
                 <Search
@@ -141,13 +159,24 @@ export default function Gallery() {
                 value={episode}
                 options={filters.episodes}
                 onChange={setEpisode}
+                heightClass="h-10"
               />
               <FilterSelect
                 label="Theme"
                 value={theme}
                 options={filters.themes}
                 onChange={setTheme}
+                heightClass="h-10"
               />
+              {filters.tools.length > 0 && (
+                <FilterSelect
+                  label="Tool"
+                  value={tool}
+                  options={filters.tools}
+                  onChange={setTool}
+                  heightClass="h-10"
+                />
+              )}
             </div>
           </div>
 
@@ -249,7 +278,10 @@ function GalleryCard({ scene, selected, copiedKey, onOpen, onSelect, onCopy }: G
         )}
 
         <div className="space-y-2 p-3">
-          <p className="text-xs font-semibold text-orange-300/90">{scene.episode}</p>
+          <p className="text-xs font-semibold text-orange-300/90">
+            {episodeWithSlot(scene.episode, scene.slot)}
+            {scene.tool && <span className="text-zinc-400"> · {toolLabel(scene.tool)}</span>}
+          </p>
           <h2 className="line-clamp-2 text-sm font-semibold leading-snug text-white">
             {scene.title}
           </h2>
@@ -305,35 +337,4 @@ function KindChip({
       {label}
     </button>
   );
-}
-
-interface FilterSelectProps {
-  label: string;
-  value: string;
-  options: string[];
-  onChange: (value: string) => void;
-}
-
-function FilterSelect({ label, value, options, onChange }: FilterSelectProps) {
-  return (
-    <label className="block">
-      <span className="sr-only">{label}</span>
-      <select
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        className="h-10 w-full rounded-md border border-zinc-800 bg-black/70 px-3 text-sm text-white outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
-      >
-        <option value={allValue}>{label}: All</option>
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
-function uniqueValues(values: string[]) {
-  return [...new Set(values)].sort((a, b) => a.localeCompare(b));
 }

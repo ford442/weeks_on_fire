@@ -1,5 +1,6 @@
 import { Check, Copy, FileText, Music2, Tags } from 'lucide-react';
 
+import { episodeWithSlot } from '../data/taxonomy';
 import { formatSongDate } from '../lib/songDate';
 
 import SongAudioPlayer from './SongAudioPlayer';
@@ -19,7 +20,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
       <div>
         <p className="text-sm font-semibold text-orange-300">
-          {song.episode}
+          {episodeWithSlot(song.episode, song.slot)}
           <span className="text-zinc-400">
             {' · '}
             <time dateTime={song.added}>{formatSongDate(song.added)}</time>
@@ -38,6 +39,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
             <span>Genre</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{song.genre}</p>
+          {song.subgenre && <p className="mt-1 text-xs text-zinc-400">{song.subgenre}</p>}
           <p className="mt-1 text-xs text-zinc-400">
             {song.instrumental ? 'Instrumental' : 'Vocals'}
           </p>

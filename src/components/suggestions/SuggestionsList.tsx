@@ -7,6 +7,7 @@ import {
   type SuggestionKind,
 } from '../../data/suggestions';
 import { getDialogVersionsForScene } from '../../data/sceneDialogVersions';
+import { pluralize } from '../../lib/plural';
 
 import { allValue, isOpenSlot } from './sightSlots';
 
@@ -128,11 +129,11 @@ export default function SuggestionsList({
                   <Music2 size={14} /> {cutaway.songTitle}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1">
-                  <Sparkles size={14} /> {cutaway.segments.length} segments
+                  <Sparkles size={14} /> {pluralize(cutaway.segments.length, 'segment')}
                 </span>
                 {cutaway.sightBank && cutaway.sightBank.length > 0 && (
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 text-violet-200">
-                    <Lightbulb size={14} /> {cutaway.sightBank.length} sights
+                    <Lightbulb size={14} /> {pluralize(cutaway.sightBank.length, 'sight')}
                   </span>
                 )}
                 {getDialogVersionsForScene(cutaway.id) && (

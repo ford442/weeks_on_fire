@@ -1,10 +1,10 @@
-# Fictional Staff Portraits — Weeks on Fire
+# Fictional Crew Portraits — Weeks on Fire
 
 Grok Imagine portraits for the series crew (added 2026-07-22).
 
 Hosted on the Contabo FTP deploy (`test.1ink.us`) under `public/cast/`, so they ship with every `npm run build` + `python3 scripts/deploy_storage.py`. Google Drive hotlinks were unreliable in browsers.
 
-| Staff | Role | Image (relative) | Live FTP URL |
+| Crew | Role | Image (relative) | Live FTP URL |
 |-------|------|------------------|--------------|
 | **Mara Vell** | Writer | `./cast/mara-vell.jpg` | [view](https://test.1ink.us/weeks-on-fire/cast/mara-vell.jpg) |
 | **Julian Rook** | Producer | `./cast/julian-rook.jpg` | [view](https://test.1ink.us/weeks-on-fire/cast/julian-rook.jpg) |
@@ -14,9 +14,9 @@ Hosted on the Contabo FTP deploy (`test.1ink.us`) under `public/cast/`, so they 
 | **Roley Voss** | Animation (Marble Tick Tack) | **pending** — no portrait yet | — |
 | **Juno Halverd** | Stage Lighting Orchestrator (lasers) | **pending** — no portrait yet | — |
 
-These are wired into `content/staff.json` (`imageFile`) and rendered in the Crew section of the production hub. Source files live in `public/cast/` and are copied into `dist/cast/` on build.
+These are wired into `content/crew.json` (`imageFile`) and rendered in the Crew section of the production hub. Source files live in `public/cast/` and are copied into `dist/cast/` on build.
 
-**Roley Voss** is not in `content/staff.json` and does not render in the Crew view until a real portrait exists. Long-form crew pages for all seven: [`../docs/crew/`](../docs/crew/README.md).
+**Roley Voss** is not in `content/crew.json` and does not render in the Crew view until a real portrait exists. Long-form crew pages for all seven: [`../docs/crew/`](../docs/crew/README.md).
 
 Made with Grok Imagine magic ✨
 

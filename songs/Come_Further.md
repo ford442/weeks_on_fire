@@ -2,9 +2,10 @@
 id: come-further
 title: Come Further
 added: 2026-09-05
-genre: Minimal rising FM electronic
+genre: "Ambient & downtempo"
+subgenre: "Minimal rising FM electronic"
 description: "Drag bed for the mountain-lion wildflower cutaway. Careful digital FM chirps, sparse kick, whispered “further…” Same 110 BPM as Here They Are."
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [electronic, fm-synth, cutaway, mountain-lion, wildflowers, drag, 110bpm]
 instrumental: false
 audioFile: null

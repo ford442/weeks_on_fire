@@ -84,7 +84,7 @@ Prompt craft, orange fire against cold moon, tags that work at 2 a.m. New detail
 
 ### Roley Voss — animation bridge, Long Beach
 
-Not yet on `content/staff.json` (no portrait in `public/cast/`). Owns Marble Tick Tack and the cabinet that has to come home. Night-lot is the production take. Wrong Sets is a sibling, not a replacement. He does not mix worlds into the lot. Info plate: canvas jacket, open cabinet on a road case, brass lamp. Full sheet: [`roley-voss.md`](roley-voss.md).
+Not yet on `content/crew.json` (no portrait in `public/cast/`). Owns Marble Tick Tack and the cabinet that has to come home. Night-lot is the production take. Wrong Sets is a sibling, not a replacement. He does not mix worlds into the lot. Info plate: canvas jacket, open cabinet on a road case, brass lamp. Full sheet: [`roley-voss.md`](roley-voss.md).
 
 ---
 

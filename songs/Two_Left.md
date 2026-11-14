@@ -2,9 +2,11 @@
 id: two-left
 title: Two Left
 added: 2026-09-15
-genre: Vending-machine Motown / girl-group soul
+genre: "Soul, funk & hip-hop"
+subgenre: "Vending-machine Motown / girl-group soul"
 description: Lillith buys another life at 2 AM. The coil is honest. Each chorus has one fewer ding; the last chorus has none and she still holds out her hand.
-episode: Musical cutaway / Life Vending
+episode: "cutaway"
+slot: "Life Vending"
 tags: [motown, soul, comedy, lillith, vending, cartoon, lives]
 instrumental: false
 audioFile: null

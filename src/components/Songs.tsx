@@ -3,18 +3,19 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Headphones, Search, SlidersHorizontal } from 'lucide-react';
 
 import { linkedAudioFilenames, songs, type Song } from '../data/songs';
+import { episodeWithSlot } from '../data/taxonomy';
 import { crewPath } from '../routes/paths';
+import { episodeOptions, genreOptions, optionValues } from '../lib/filterOptions';
 import { firstCatalogItem } from '../lib/catalog';
 import { getUnlistedTracks } from '../lib/songAudio';
 import { formatSongDate } from '../lib/songDate';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlFlag, useUrlParam } from '../hooks/useUrlState';
 
+import FilterSelect, { allValue } from './FilterSelect';
 import SongAudioPlayer from './SongAudioPlayer';
 import SongDetail from './SongDetail';
 import WorkspaceLayout from './WorkspaceLayout';
-
-const allValue = 'All';
 
 type SongSort = 'added-desc' | 'added-asc' | 'title';
 
@@ -33,7 +34,13 @@ export default function Songs() {
   const [selected, setSelected] = useState<Song>(firstCatalogItem(songs, 'songs'));
   const [sheetOpen, setSheetOpen] = useState(false);
   const [query, setQuery] = useUrlParam('q', '');
-  const [episode, setEpisode] = useUrlParam('episode', allValue);
+  const episodes = useMemo(() => episodeOptions(songs.map((song) => song.episode)), []);
+  const genres = useMemo(() => genreOptions(songs.map((song) => song.genre)), []);
+  const [episode, setEpisode] = useUrlParam('episode', allValue, [
+    allValue,
+    ...optionValues(episodes),
+  ]);
+  const [genre, setGenre] = useUrlParam('genre', allValue, [allValue, ...optionValues(genres)]);
   const [hasAudio, setHasAudio] = useUrlFlag('audio');
   const [instrumentalOnly, setInstrumentalOnly] = useUrlFlag('instrumental');
   const [sort, setSort] = useUrlParam<SongSort>(
@@ -61,8 +68,6 @@ export default function Songs() {
     }
   }, [id, navigate]);
 
-  const episodes = useMemo(() => uniqueValues(songs.map((song) => song.episode)), []);
-
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
@@ -72,8 +77,9 @@ export default function Songs() {
         [
           song.title,
           song.genre,
+          song.subgenre ?? '',
           song.description,
-          song.episode,
+          episodeWithSlot(song.episode, song.slot),
           song.stylePrompt,
           song.lyrics ?? '',
           song.tags.join(' '),
@@ -85,13 +91,14 @@ export default function Songs() {
       return (
         matchesSearch &&
         (episode === allValue || song.episode === episode) &&
+        (genre === allValue || song.genre === genre) &&
         (!hasAudio || Boolean(song.audioFile)) &&
         (!instrumentalOnly || song.instrumental)
       );
     });
 
     return matches.sort((a, b) => compareSongs(a, b, sort));
-  }, [episode, hasAudio, instrumentalOnly, query, sort]);
+  }, [episode, genre, hasAudio, instrumentalOnly, query, sort]);
 
   const selectSong = (song: Song) => {
     setSelected(song);
@@ -147,12 +154,15 @@ export default function Songs() {
                   </select>
                 </label>
               </div>
-              <FilterSelect
-                label="Episode"
-                value={episode}
-                options={episodes}
-                onChange={setEpisode}
-              />
+              <div className="grid gap-3 sm:grid-cols-2">
+                <FilterSelect
+                  label="Episode"
+                  value={episode}
+                  options={episodes}
+                  onChange={setEpisode}
+                />
+                <FilterSelect label="Genre" value={genre} options={genres} onChange={setGenre} />
+              </div>
               <div className="flex flex-wrap items-center gap-2">
                 <FilterToggle pressed={hasAudio} onToggle={() => setHasAudio(!hasAudio)}>
                   <Headphones size={14} aria-hidden="true" />
@@ -194,7 +204,7 @@ export default function Songs() {
                           {song.title}
                         </span>
                         <span className="hidden min-w-0 flex-1 truncate text-zinc-400 sm:block">
-                          {song.genre}
+                          {song.subgenre ?? song.genre}
                         </span>
                         <time
                           dateTime={song.added}
@@ -249,33 +259,6 @@ export default function Songs() {
   );
 }
 
-interface FilterSelectProps {
-  label: string;
-  value: string;
-  options: string[];
-  onChange: (value: string) => void;
-}
-
-function FilterSelect({ label, value, options, onChange }: FilterSelectProps) {
-  return (
-    <label className="block">
-      <span className="sr-only">{label}</span>
-      <select
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 px-3 text-sm text-white outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
-      >
-        <option value={allValue}>{label}: All</option>
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-    </label>
-  );
-}
-
 interface FilterToggleProps {
   pressed: boolean;
   onToggle: () => void;
@@ -305,8 +288,4 @@ function compareSongs(a: Song, b: Song, sort: SongSort) {
     if (byDate !== 0) return sort === 'added-desc' ? -byDate : byDate;
   }
   return a.title.localeCompare(b.title);
-}
-
-function uniqueValues(values: string[]) {
-  return [...new Set(values)].sort((a, b) => a.localeCompare(b));
 }

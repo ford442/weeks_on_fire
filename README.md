@@ -58,7 +58,7 @@ Catalog data is **not** hand-edited in `src/data/*.ts`. Author in markdown/JSON,
 | Cutaways   | `content/cutaways/*.json` (+ optional `prompts/*-segments.md`) | `src/data/generated/cutaways.ts`   |
 | Gallery    | `content/gallery.json`                                         | `src/data/generated/gallery.ts`    |
 | Characters | `content/characters.json`                                      | `src/data/generated/characters.ts` |
-| Staff      | `content/staff.json`                                           | `src/data/generated/staff.ts`      |
+| Crew       | `content/crew.json`                                           | `src/data/generated/crew.ts`      |
 | Daisy Bell | `content/daisy-bell.json`                                      | `src/data/generated/daisy-bell.ts` |
 | Cartoons   | `content/cartoons/*.json` (one file per short cartoon)         | `src/data/generated/cartoons.ts`   |
 | Sequences  | `content/sequences/*.json` (one file per 3D sequence)          | `src/data/generated/sequences.ts`  |

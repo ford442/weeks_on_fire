@@ -2,9 +2,11 @@
 id: caffeinated-melon
 title: Caffeinated Melon
 added: 2026-08-13
-genre: Absurdist chamber pop
+genre: "Cabaret & chamber"
+subgenre: "Absurdist chamber pop"
 description: Gallery fog as truth serum. Spoken verses over a polite quartet that goes a quarter-tone flat, then one clap.
-episode: Gallery Fog cutaway
+episode: "cutaway"
+slot: "Gallery Fog"
 tags: [chamber-pop, gallery, comedy, justine, spoken-word]
 instrumental: false
 audioFile: null

@@ -2,9 +2,10 @@
 id: motif-refuses-the-peak
 title: Motif Refuses the Peak
 added: 2026-09-08
-genre: Melodic techno
+genre: "Techno & house"
+subgenre: "Melodic techno"
 description: "Night Side track 9. 126 BPM G minor. Layers every thirty-two bars, fullest at four-thirty, then the top arp leaves and the kick plus motif ride out. The refusal is the event."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, melodic-techno, nova-chen, night-side, 126bpm, work-bed]
 instrumental: true
 audioFile: null

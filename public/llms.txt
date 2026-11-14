@@ -48,12 +48,12 @@ Weeks on Fire is a personal cinematic experiment combining:
 
 | Scene | Episode | Theme |
 |-------|---------|--------|
-| Living Flower Engine | Grok Imagine · psychedelic | Psychedelic 3D |
-| Möbius Chrome Ribbon | Grok Imagine · psychedelic | Psychedelic 3D |
-| Gyre Over Victorian Street | Grok Imagine · psychedelic | Psychedelic 3D |
-| Tetrahedron Sea | Grok Imagine · psychedelic | Psychedelic 3D |
-| Sphere Tower of Daisies | Grok Imagine · psychedelic | Psychedelic 3D |
-| Glass Petal Cathedral | xAI API · psychedelic | Psychedelic 3D |
+| Living Flower Engine | Visual experiment | Psychedelic 3D |
+| Möbius Chrome Ribbon | Visual experiment | Psychedelic 3D |
+| Gyre Over Victorian Street | Visual experiment | Psychedelic 3D |
+| Tetrahedron Sea | Visual experiment | Psychedelic 3D |
+| Sphere Tower of Daisies | Visual experiment | Psychedelic 3D |
+| Glass Petal Cathedral | Visual experiment | Psychedelic 3D |
 
 ## Featured tracks
 

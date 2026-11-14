@@ -6,9 +6,15 @@ export const SongFrontmatterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
   added: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added must be YYYY-MM-DD'),
+  /** Family from `content/taxonomy.json` `genres`. */
   genre: z.string().min(1),
+  /** Free-text style detail under the family, e.g. "Late-80s glam strut". */
+  subgenre: z.string().min(1).optional(),
   description: z.string().min(1),
+  /** Id from `content/taxonomy.json` `episodes`. */
   episode: z.string().min(1),
+  /** Free-text placement detail under the episode, e.g. "Skeleton Union Break". */
+  slot: z.string().min(1).optional(),
   tags: z.array(z.string()),
   instrumental: z.boolean().optional(),
   audioFile: z.string().nullable().optional(),
@@ -71,7 +77,12 @@ export const MediaTypeSchema = z.enum(['image', 'video']);
 export const FilmSceneSchema = z.object({
   id: z.string().min(1),
   imageKind: ImageKindSchema,
-  episode: z.string(),
+  /** Id from `content/taxonomy.json` `episodes`. */
+  episode: z.string().min(1),
+  /** Free-text placement detail under the episode, e.g. "Short packet farm". */
+  slot: z.string().min(1).optional(),
+  /** Id from `content/taxonomy.json` `tools`, when a generator is worth filtering on. */
+  tool: z.string().min(1).optional(),
   title: z.string(),
   prompt: z.string(),
   promptVariations: z.array(z.string()),
@@ -80,8 +91,27 @@ export const FilmSceneSchema = z.object({
   musicCue: z.string(),
   musicStyle: z.string(),
   description: z.string(),
-  theme: z.string(),
+  /** Entry from `content/taxonomy.json` `themes`: a recurring visual motif, not a category. */
+  theme: z.string().min(1),
   tags: z.array(z.string()),
+});
+
+export const TaxonomyEpisodeSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  group: z.string().min(1),
+});
+
+export const TaxonomyToolSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+});
+
+export const TaxonomySchema = z.object({
+  episodes: z.array(TaxonomyEpisodeSchema).min(1),
+  genres: z.array(z.string().min(1)).min(1),
+  themes: z.array(z.string().min(1)).min(1),
+  tools: z.array(TaxonomyToolSchema),
 });
 
 export const CharacterBibleStatusSchema = z.enum(['concept', 'active', 'recurring', 'retired']);
@@ -154,7 +184,7 @@ export const DaisyBellSchema = z.object({
   frames: z.array(DaisyBellFrameSchema),
 });
 
-export const StaffRoleSchema = z.enum([
+export const CrewRoleSchema = z.enum([
   'Writer',
   'Producer',
   'Director',
@@ -162,10 +192,10 @@ export const StaffRoleSchema = z.enum([
   'Visual Designer',
 ]);
 
-export const StaffMemberSchema = z.object({
+export const CrewMemberSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
-  role: StaffRoleSchema,
+  role: CrewRoleSchema,
   location: z.string().min(1),
   yearsOnSeries: z.string().min(1),
   specialty: z.string().min(1),
@@ -249,6 +279,9 @@ export const SequenceSchema = z.object({
   graph: SequenceGraphSchema.optional(),
 });
 
+export type TaxonomyEpisode = z.infer<typeof TaxonomyEpisodeSchema>;
+export type TaxonomyTool = z.infer<typeof TaxonomyToolSchema>;
+export type TaxonomyRecord = z.infer<typeof TaxonomySchema>;
 export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegmentRecord = z.infer<typeof CutawaySegmentSchema>;
 export type SightCandidateRecord = z.infer<typeof SightCandidateSchema>;
@@ -257,8 +290,8 @@ export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type CharacterBibleStatus = z.infer<typeof CharacterBibleStatusSchema>;
 export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
-export type StaffRole = z.infer<typeof StaffRoleSchema>;
-export type StaffMemberRecord = z.infer<typeof StaffMemberSchema>;
+export type CrewRole = z.infer<typeof CrewRoleSchema>;
+export type CrewMemberRecord = z.infer<typeof CrewMemberSchema>;
 export type EpisodeStatus = z.infer<typeof EpisodeStatusSchema>;
 export type EpisodeFiles = z.infer<typeof EpisodeFilesSchema>;
 export type EpisodeRecord = z.infer<typeof EpisodeSchema>;

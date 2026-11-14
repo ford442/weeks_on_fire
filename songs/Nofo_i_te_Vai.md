@@ -2,9 +2,10 @@
 id: nofo-i-te-vai
 title: Nofo i te Vai
 added: 2026-11-01
-genre: Wallis and Futuna islander
+genre: "Folk, country & world"
+subgenre: "Wallis and Futuna islander"
 description: "Dark-island bed. Wallisian lyrics. 88 BPM log drums, pate, ukulele. Fire on the black sand. We do not land."
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [wallisian, islander, dark-island, yacht]
 instrumental: false
 ---

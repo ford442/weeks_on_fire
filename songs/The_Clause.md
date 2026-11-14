@@ -2,9 +2,11 @@
 id: the-clause
 title: The Clause
 added: 2026-10-06
-genre: Secco recitative
+genre: "Classical & chant"
+subgenre: "Secco recitative"
 description: "Christine Nilsson sings a rent petition in dry recitative. Every clause gets the same cadence, and the aria never starts."
-episode: Voice credit / petition
+episode: "voice-credit"
+slot: "Petition"
 tags: [recitative, nilsson, petition, voice-credit]
 instrumental: false
 audioFile: null

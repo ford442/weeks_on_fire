@@ -11,7 +11,7 @@ import { episodes } from '../data/episodes';
 import { filmScenes } from '../data/films';
 import { sequences } from '../data/sequences';
 import { songs } from '../data/songs';
-import { staffMembers } from '../data/staff';
+import { crewMembers } from '../data/crew';
 import { cutawaySuggestions } from '../data/suggestions';
 
 // jsdom has no WebGL; the sequence player falls back to its "unsupported" message.
@@ -107,9 +107,15 @@ describe('App lazy routes render', () => {
     await expectHeadingFrom(episodes.map((episode) => episode.title));
   });
 
-  it('/staff', async () => {
-    renderRoute(crewPath('/staff'));
-    await expectHeadingFrom(staffMembers.map((member) => member.name));
+  it('/crew', async () => {
+    renderRoute(crewPath('/crew'));
+    await expectHeadingFrom(crewMembers.map((member) => member.name));
+  });
+
+  it.each(['/staff', '/show/staff'])('%s redirects to the Crew view', async (legacy) => {
+    renderRoute(legacy);
+    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/show/crew'));
+    await expectHeadingFrom(crewMembers.map((member) => member.name));
   });
 });
 

@@ -2,9 +2,11 @@
 id: home-sweet-void-dialog
 title: Home Sweet Void (Dialog)
 added: 2026-09-06
-genre: Hull-hum table dialog
+genre: "Spoken & dialog"
+subgenre: "Hull-hum table dialog"
 description: Non-musical space-lounge table scene. No dedicated Minimax track — hull hum, cup, bag plastic, deadpan delivery.
-episode: Space visual experiment
+episode: "visual"
+slot: "Space"
 tags: [dialog, space, table, hull-hum, visual-experiment]
 instrumental: true
 audioFile: null

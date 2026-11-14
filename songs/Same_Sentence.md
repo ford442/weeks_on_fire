@@ -2,9 +2,11 @@
 id: same-sentence
 title: Same Sentence
 added: 2026-10-06
-genre: Phase-music duet
+genre: "Classical & chant"
+subgenre: "Phase-music duet"
 description: "Lillith holds six syllables. After one unison pass, Rubella shifts one syllable later and never returns."
-episode: Building cast / laundry
+episode: "building"
+slot: "Laundry"
 tags: [phase, rubella, lillith, laundry, duet]
 instrumental: false
 audioFile: null

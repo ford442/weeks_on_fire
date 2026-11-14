@@ -2,9 +2,10 @@
 id: well-fall
 title: Well Fall
 added: 2026-09-11
-genre: Instrumental heavy metal
+genre: "Metal"
+subgenre: "Instrumental heavy metal"
 description: "Well-mouth drip into a descending metal riff that never cadences. No vocal. The fall is the arrangement."
-episode: Musical Cutaway / Visual Experiment
+episode: "visual"
 tags: [instrumental, heavy-metal, well, fall, visual-experiment, no-vocal]
 instrumental: true
 audioFile: null

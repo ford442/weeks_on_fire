@@ -2,9 +2,10 @@
 id: cue-out-scene-continues
 title: Cue Out, Scene Continues
 added: 2026-09-09
-genre: Ambient soul
+genre: "Soul, funk & hip-hop"
+subgenre: "Ambient soul"
 description: "Cue Sheets track 7. 72 BPM C minor. The music leaves and the scene does not. Twenty-two seconds of room at the end with her still breathing in it."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, ambient, nova-chen, cue-sheets, 72bpm, catalog]
 instrumental: false
 audioFile: null

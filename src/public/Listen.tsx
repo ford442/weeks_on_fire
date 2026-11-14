@@ -103,7 +103,7 @@ export default function Listen() {
             {artistFor(selected)}
           </p>
           <h1 className="mt-1 text-3xl font-black text-white sm:text-4xl">{selected.title}</h1>
-          <p className="mt-1 text-sm text-zinc-400">{selected.genre}</p>
+          <p className="mt-1 text-sm text-zinc-400">{selected.subgenre ?? selected.genre}</p>
           <p className="mt-3 max-w-2xl text-zinc-300">{selected.description}</p>
 
           {canPlay ? (
@@ -222,7 +222,7 @@ function TrackList({
                     {song.title}
                   </span>
                   <span className="block truncate text-xs text-zinc-500">
-                    {artistFor(song)} · {song.genre}
+                    {artistFor(song)} · {song.subgenre ?? song.genre}
                   </span>
                 </span>
               </Link>

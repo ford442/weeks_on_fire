@@ -2,9 +2,10 @@
 id: eight-seconds
 title: Eight Seconds
 added: 2026-10-06
-genre: Slow organ-and-slide anthem
+genre: "Rock"
+subgenre: "Slow organ-and-slide anthem"
 description: "Long organ, a slide guitar, and eight seconds of real silence in the middle. The band comes back a half-beat off and stays off."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, rock, anthem, rubella, lillith, space-rock, silence]
 instrumental: false
 audioFile: null

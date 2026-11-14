@@ -33,10 +33,13 @@ export type {
   SightCandidate,
   SightLane,
   Song,
-  StaffMember,
-  StaffRecord,
-  StaffRole,
+  CrewMember,
+  CrewRecord,
+  CrewRole,
   SuggestionKind,
+  Taxonomy,
+  TaxonomyEpisode,
+  TaxonomyTool,
 } from '../../scripts/content-index/catalog-types';
 
 export const imageKindMeta: Record<

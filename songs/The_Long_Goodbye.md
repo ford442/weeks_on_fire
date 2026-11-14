@@ -2,9 +2,10 @@
 id: the-long-goodbye
 title: The Long Goodbye
 added: 2026-07-22
-genre: Sentimental pedal-steel ballad
+genre: "Ambient & downtempo"
+subgenre: "Sentimental pedal-steel ballad"
 description: Wordless farewell — the emotional peak of the Lanois pedal-steel series.
-episode: Series cutaway
+episode: "cutaway"
 tags: [ambient, pedal-steel, lanois, instrumental, farewell]
 instrumental: true
 audioFile: null

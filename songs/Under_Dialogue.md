@@ -2,9 +2,10 @@
 id: under-dialogue
 title: Under Dialogue
 added: 2026-09-09
-genre: Ducked soul / room-tone ballad
+genre: "Soul, funk & hip-hop"
+subgenre: "Ducked soul / room-tone ballad"
 description: "Cue Sheets track 2. 76 BPM B-flat minor. A song that ducks itself for a conversation we never hear. The duck arrives a beat before a line that never comes."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, downtempo, nova-chen, cue-sheets, 76bpm, catalog]
 instrumental: false
 audioFile: null

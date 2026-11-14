@@ -1,6 +1,7 @@
 import { useRef, useState, type ChangeEvent } from 'react';
 import { Download, RefreshCw, Upload } from 'lucide-react';
 
+import { useEditMode } from '../hooks/useEditMode';
 import { useEpisodeProduction } from '../hooks/useEpisodeProduction';
 import {
   clipStackerToProduction,
@@ -27,6 +28,7 @@ function downloadJson(data: unknown, filename: string) {
 }
 
 export default function TimelinePage() {
+  const editMode = useEditMode();
   const [editingScene, setEditingScene] = useState<ProductionScene | null>(null);
   const [isNewScene, setIsNewScene] = useState(false);
   const [importMessage, setImportMessage] = useState<string | null>(null);
@@ -118,50 +120,58 @@ export default function TimelinePage() {
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="max-w-3xl">
             <p className="text-sm text-zinc-400">
-              Track scene creation, prompt evolution, media links, and status changes. Local edits
-              auto-save in the browser — use <strong>Export JSON</strong> to save back into{' '}
-              <code>episodes/episode-{episodeId}/scenes.json</code> and commit.
+              {editMode ? (
+                <>
+                  Track scene creation, prompt evolution, media links, and status changes. Local
+                  edits auto-save in the browser — use <strong>Export JSON</strong> to save back
+                  into <code>episodes/episode-{episodeId}/scenes.json</code> and commit.
+                </>
+              ) : (
+                'Follow how each scene of the episode came together, from first draft to final cut.'
+              )}
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-2 text-xs">
-            <button
-              type="button"
-              onClick={resetToCommitted}
-              disabled={!production || isLoading}
-              className="flex items-center gap-1.5 rounded border border-zinc-800 px-2.5 py-1 text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-200 disabled:opacity-50"
-              title="Reset to committed scenes.json"
-            >
-              <RefreshCw size={14} /> Reset
-            </button>
-            <button
-              type="button"
-              onClick={() => clipStackerInputRef.current?.click()}
-              disabled={!production || isLoading}
-              className="flex items-center gap-1.5 rounded border border-zinc-800 px-2.5 py-1 text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-200 disabled:opacity-50"
-              title="Import clip_stacker JSON"
-            >
-              <Upload size={14} /> Import clip_stacker
-            </button>
-            <input
-              ref={clipStackerInputRef}
-              type="file"
-              accept=".json,application/json"
-              className="hidden"
-              onChange={(event) => void handleImportClipStacker(event)}
-            />
-            <button
-              type="button"
-              onClick={handleExportToClipStacker}
-              disabled={!production || isLoading}
-              className="flex items-center gap-1.5 rounded border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-orange-300 transition hover:bg-zinc-900 disabled:opacity-50"
-              title="Export starter data for clip_stacker"
-            >
-              <Download size={14} /> Export to clip_stacker
-            </button>
-          </div>
+          {editMode && (
+            <div className="flex flex-wrap items-center gap-2 text-xs">
+              <button
+                type="button"
+                onClick={resetToCommitted}
+                disabled={!production || isLoading}
+                className="flex items-center gap-1.5 rounded border border-zinc-800 px-2.5 py-1 text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-200 disabled:opacity-50"
+                title="Reset to committed scenes.json"
+              >
+                <RefreshCw size={14} /> Reset
+              </button>
+              <button
+                type="button"
+                onClick={() => clipStackerInputRef.current?.click()}
+                disabled={!production || isLoading}
+                className="flex items-center gap-1.5 rounded border border-zinc-800 px-2.5 py-1 text-zinc-400 transition hover:bg-zinc-900 hover:text-zinc-200 disabled:opacity-50"
+                title="Import clip_stacker JSON"
+              >
+                <Upload size={14} /> Import clip_stacker
+              </button>
+              <input
+                ref={clipStackerInputRef}
+                type="file"
+                accept=".json,application/json"
+                className="hidden"
+                onChange={(event) => void handleImportClipStacker(event)}
+              />
+              <button
+                type="button"
+                onClick={handleExportToClipStacker}
+                disabled={!production || isLoading}
+                className="flex items-center gap-1.5 rounded border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-orange-300 transition hover:bg-zinc-900 disabled:opacity-50"
+                title="Export starter data for clip_stacker"
+              >
+                <Download size={14} /> Export to clip_stacker
+              </button>
+            </div>
+          )}
         </div>
 
-        {importMessage && (
+        {editMode && importMessage && (
           <p className="rounded-md border border-zinc-800 bg-zinc-950 px-3 py-2 text-sm text-zinc-300">
             {importMessage}
           </p>
@@ -177,6 +187,7 @@ export default function TimelinePage() {
           onEditScene={handleEditScene}
           onAddScene={handleAddScene}
           onExport={handleExportJSON}
+          editMode={editMode}
         />
       </div>
 

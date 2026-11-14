@@ -27,6 +27,7 @@ import {
   type DaisyFrameTreatment,
 } from '../data/daisyBell';
 import { firstCatalogItem } from '../lib/catalog';
+import { useEditMode, publicText } from '../hooks/useEditMode';
 import { useEscapeKey } from '../hooks/useEscapeKey';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
@@ -37,6 +38,7 @@ const allValue = 'all' as const;
 type TreatmentFilter = typeof allValue | DaisyFrameTreatment;
 
 export default function DaisyBell() {
+  const editMode = useEditMode();
   const [treatment, setTreatment] = useUrlParam<TreatmentFilter>('treatment', allValue, [
     allValue,
     'color',
@@ -110,8 +112,13 @@ export default function DaisyBell() {
                 {counts.period} period film
               </span>
               <span className="rounded-md border border-zinc-700 bg-zinc-900/80 px-2.5 py-1 text-zinc-400">
-                {counts.withImage} stills linked · drop more in{' '}
-                <code className="text-zinc-300">images/daisy-bell/</code>
+                {counts.withImage} stills linked
+                {editMode && (
+                  <>
+                    {' '}
+                    · drop more in <code className="text-zinc-300">images/daisy-bell/</code>
+                  </>
+                )}
               </span>
             </div>
           </div>
@@ -150,9 +157,11 @@ export default function DaisyBell() {
               </a>
             </div>
 
-            <p className="text-sm leading-6 text-zinc-400">
-              Concept notes: <code className="text-zinc-400">{daisyBellMeta.conceptFile}</code>
-            </p>
+            {editMode && (
+              <p className="text-sm leading-6 text-zinc-400">
+                Concept notes: <code className="text-zinc-400">{daisyBellMeta.conceptFile}</code>
+              </p>
+            )}
           </div>
         </div>
       </header>
@@ -287,10 +296,12 @@ export default function DaisyBell() {
                       </span>
                     </div>
                     <div className="p-3">
-                      <p className="text-xs font-semibold text-zinc-400">{frame.beat}</p>
+                      <p className="text-xs font-semibold text-zinc-400">
+                        {publicText(frame.beat, editMode)}
+                      </p>
                       <h4 className="mt-1 text-sm font-semibold text-white">{frame.title}</h4>
                       <p className="mt-1 line-clamp-2 text-sm leading-6 text-zinc-400">
-                        {frame.description}
+                        {publicText(frame.description, editMode)}
                       </p>
                     </div>
                   </button>
@@ -309,7 +320,9 @@ export default function DaisyBell() {
         {/* Workspace */}
         <aside className="lg:sticky lg:top-6 lg:self-start">
           <div className="rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
-            <p className="text-sm font-semibold text-orange-300">{selected.beat}</p>
+            <p className="text-sm font-semibold text-orange-300">
+              {publicText(selected.beat, editMode)}
+            </p>
             <h3 className="mt-2 text-xl font-semibold text-white">{selected.title}</h3>
             <span
               className={`mt-3 inline-flex rounded-md border px-2.5 py-1 text-xs font-semibold ${
@@ -318,7 +331,9 @@ export default function DaisyBell() {
             >
               {daisyTreatmentMeta[selected.treatment].label}
             </span>
-            <p className="mt-3 text-sm leading-6 text-zinc-400">{selected.description}</p>
+            <p className="mt-3 text-sm leading-6 text-zinc-400">
+              {publicText(selected.description, editMode)}
+            </p>
             <p className="mt-2 text-sm leading-6 text-zinc-400">
               {daisyTreatmentMeta[selected.treatment].description}
             </p>
@@ -364,10 +379,16 @@ export default function DaisyBell() {
               </button>
             ) : (
               <p className="mt-4 rounded-md border border-dashed border-zinc-800 bg-black/40 p-3 text-sm leading-6 text-zinc-400">
-                After generating, save under{' '}
-                <code className="text-zinc-400">images/daisy-bell/</code> and set{' '}
-                <code className="text-zinc-400">imageUrl</code> on this frame in{' '}
-                <code className="text-zinc-400">src/data/daisyBell.ts</code>.
+                {editMode ? (
+                  <>
+                    After generating, save under{' '}
+                    <code className="text-zinc-400">images/daisy-bell/</code> and set{' '}
+                    <code className="text-zinc-400">imageUrl</code> on this frame in{' '}
+                    <code className="text-zinc-400">src/data/daisyBell.ts</code>.
+                  </>
+                ) : (
+                  'Still coming soon.'
+                )}
               </p>
             )}
           </div>
@@ -413,6 +434,7 @@ interface DaisyLightboxProps {
 }
 
 function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps) {
+  const editMode = useEditMode();
   const meta = daisyTreatmentMeta[frame.treatment];
   useEscapeKey(onClose);
   return (
@@ -449,9 +471,11 @@ function DaisyLightbox({ frame, onClose, copiedKey, onCopy }: DaisyLightboxProps
           )}
         </div>
         <div className="overflow-auto rounded-lg border border-zinc-800 bg-zinc-950 p-5">
-          <p className="text-sm font-semibold text-zinc-400">{frame.beat}</p>
+          <p className="text-sm font-semibold text-zinc-400">{publicText(frame.beat, editMode)}</p>
           <h3 className="mt-2 text-xl font-semibold text-white">{frame.title}</h3>
-          <p className="mt-3 text-sm leading-6 text-zinc-400">{frame.description}</p>
+          <p className="mt-3 text-sm leading-6 text-zinc-400">
+            {publicText(frame.description, editMode)}
+          </p>
           <button
             type="button"
             onClick={() => onCopy(frame.prompt, 'Prompt', `${frame.id}:lb`)}

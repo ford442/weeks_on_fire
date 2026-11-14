@@ -83,10 +83,10 @@ export const siteViews: SiteViewMeta[] = [
       'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
   },
   {
-    id: 'staff',
+    id: 'crew',
     label: 'Crew',
-    path: '/show/staff',
-    eyebrow: 'Series Crew',
+    path: '/show/crew',
+    eyebrow: 'Bios & credits',
     description:
       'Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.',
   },

@@ -2,9 +2,11 @@
 id: closed-for-cosmic-reasons
 title: Closed for Cosmic Reasons
 added: 2026-08-13
-genre: Hotel-lobby downtempo
+genre: "Ambient & downtempo"
+subgenre: "Hotel-lobby downtempo"
 description: A posted notice that becomes a lullaby. Rubella under a hovering pool; Continuity Voice on the title, always a half-step flat.
-episode: One-panel gag / any closed facility
+episode: "gag"
+slot: "Any closed facility"
 tags: [downtempo, rubella, continuity-voice, gag, vivienne]
 instrumental: false
 audioFile: null

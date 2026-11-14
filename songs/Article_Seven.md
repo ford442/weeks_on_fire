@@ -2,9 +2,11 @@
 id: article-seven
 title: Article Seven
 added: 2026-08-19
-genre: Dusty union lounge / paused funk
+genre: "Soul, funk & hip-hop"
+subgenre: "Dusty union lounge / paused funk"
 description: Mandatory funk interval. Plastic steward, laminated card, clock stuck at fourteen minutes. The lawn is on break; the lasers can wait.
-episode: Episode 03 / Skeleton Union Break
+episode: "03"
+slot: "Skeleton Union Break"
 tags: [halloween, union, skeleton, comedy, ep3, labor]
 instrumental: false
 audioFile: null

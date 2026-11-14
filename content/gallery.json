@@ -2,7 +2,8 @@
   {
     "id": "test-psy-flower-engine",
     "imageKind": "test",
-    "episode": "Grok Imagine \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Living Flower Engine",
     "prompt": "Psychedelic 3D still, 16:9: an impossible living flower engine \u2014 interlocking glass gears and blooming wildflower pistons suspended in a spherical nebula of pollen and iridescent smoke, soft pastel and electric lime, dreamlike depth, highly detailed, no text.",
     "promptVariations": [],
@@ -12,7 +13,7 @@
     "description": "Abstract 3D flower-machine \u2014 bridge between Daisy Bell and Soft Gyre energy.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "grok",
+      "grok-imagine",
       "psychedelic",
       "3d",
       "flowers"
@@ -22,7 +23,8 @@
   {
     "id": "test-psy-mobius-ribbon",
     "imageKind": "test",
-    "episode": "Grok Imagine \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "M\u00f6bius Chrome Ribbon",
     "prompt": "Strange psychedelic 3D abstract scene, cinematic 16:9: a cathedral-sized M\u00f6bius ribbon of molten chrome and prismatic crystal twisting through infinite black space, surface covered in microscopic daisy petals, volumetric god rays of magenta and cyan, no people, ultra detailed refractive materials, short-film title card energy.",
     "promptVariations": [],
@@ -32,7 +34,7 @@
     "description": "Title-card scale abstract \u2014 chrome M\u00f6bius + daisy petal texture.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "grok",
+      "grok-imagine",
       "psychedelic",
       "3d",
       "abstract"
@@ -42,7 +44,8 @@
   {
     "id": "test-psy-gyre-victorian",
     "imageKind": "test",
-    "episode": "Grok Imagine \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Gyre Over Victorian Street",
     "prompt": "Surreal cinematic 16:9 photoreal-3D hybrid still: a translucent floating geometric gyre made of glass and gel, rainbow internal caustics, slowly rotating above a Victorian cobblestone street at night while two silhouettes in black lace stand beside a bicycle covered in glowing bioluminescent flowers. Psychedelic but elegant, deep violet and amber light, Weeks on Fire short film.",
     "promptVariations": [],
@@ -52,7 +55,7 @@
     "description": "Soft Gyre meets Daisy Bell London \u2014 hybrid cutaway experiment.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "grok",
+      "grok-imagine",
       "psychedelic",
       "daisy-bell",
       "gyre"
@@ -62,7 +65,8 @@
   {
     "id": "test-psy-tetrahedron-sea",
     "imageKind": "test",
-    "episode": "Grok Imagine \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Tetrahedron Sea",
     "prompt": "Psychedelic 3D landscape 16:9 cinematic still: a calm ocean of transparent tetrahedrons and soft gelatin orbs under a liquid sky that drips upward, each orb holding a tiny black-lace silhouette and a miniature flower tandem bicycle, vast scale, uncanny calm, prismatic refraction, short-film still.",
     "promptVariations": [],
@@ -72,7 +76,7 @@
     "description": "Infinite calm geometry with tiny lace figures in orbs.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "grok",
+      "grok-imagine",
       "psychedelic",
       "3d",
       "landscape"
@@ -82,7 +86,8 @@
   {
     "id": "test-psy-sphere-tower",
     "imageKind": "test",
-    "episode": "Grok Imagine \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Sphere Tower of Daisies",
     "prompt": "Psychedelic 3D abstract 16:9: a spiral tower of interlocking chrome spheres and glass daisy petals rising from a field of static, each sphere filled with swirling magenta fog and tiny lightning, no people, hyper-detailed materials, dark cosmic background with soft nebula glow.",
     "promptVariations": [],
@@ -92,7 +97,7 @@
     "description": "Spiral chrome/glass tower \u2014 pure 3D mood board.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "grok",
+      "grok-imagine",
       "psychedelic",
       "3d",
       "tower"
@@ -102,7 +107,8 @@
   {
     "id": "test-psy-xai-glass-cathedral",
     "imageKind": "test",
-    "episode": "xAI API \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Glass Petal Cathedral",
     "prompt": "Psychedelic 3D cinematic 16:9: an impossible cathedral of refractive glass petals and floating chrome orbs, magenta and cyan volumetric light, daisy motifs etched in crystal, no people, ultra detailed materials, dark cosmic void",
     "promptVariations": [],
@@ -112,7 +118,7 @@
     "description": "api.x.ai grok-imagine-image-quality \u2014 glass cathedral abstract.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "xai-api",
+      "grok-imagine",
       "psychedelic",
       "3d"
     ],
@@ -121,7 +127,8 @@
   {
     "id": "test-psy-xai-flower-nebula",
     "imageKind": "test",
-    "episode": "xAI API \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Daisy Nebula",
     "prompt": "Psychedelic 3D still 16:9: a slowly rotating nebula shaped like a giant daisy, petals made of translucent gel and prismatic shards, pollen storms of gold dust, dreamlike depth, no text, short-film title card energy",
     "promptVariations": [],
@@ -131,7 +138,7 @@
     "description": "api.x.ai \u2014 giant daisy nebula title-card energy.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "xai-api",
+      "grok-imagine",
       "psychedelic",
       "3d"
     ],
@@ -140,7 +147,8 @@
   {
     "id": "test-psy-xai-klein-lattice",
     "imageKind": "test",
-    "episode": "xAI API \u00b7 psychedelic",
+    "episode": "visual",
+    "tool": "grok-imagine",
     "title": "Klein Flower Lattice",
     "prompt": "Strange psychedelic 3D abstract 16:9: a Klein-bottle lattice of interlocking soft metallic tubes blooming with tiny wildflowers at every junction, electric lime and violet caustics, infinite recursive space, highly detailed",
     "promptVariations": [],
@@ -150,7 +158,7 @@
     "description": "api.x.ai \u2014 recursive Klein lattice with wildflower nodes.",
     "theme": "Psychedelic 3D",
     "tags": [
-      "xai-api",
+      "grok-imagine",
       "psychedelic",
       "3d"
     ],
@@ -159,7 +167,7 @@
   {
     "id": "ep03-laser-serpent-awakening",
     "imageKind": "scene",
-    "episode": "Episode 03",
+    "episode": "03",
     "title": "Laser Serpent Awakening",
     "prompt": "Cinematic night desert scene, massive glowing laser serpent rising from dark dunes under a starry sky, charged red-orange energy waves, dramatic volumetric lighting, epic wide shot, surreal short-film still, Grok Imagine style.",
     "promptVariations": [
@@ -182,7 +190,7 @@
   {
     "id": "ep03-rubella-signal",
     "imageKind": "scene",
-    "episode": "Episode 03",
+    "episode": "03",
     "title": "Rubella Signal",
     "prompt": "Close cinematic portrait of a defiant character lit by pulsing red scanner light, dust and sparks in the air, fractured desert horizon behind them, intense short-film color grade, Grok Imagine realism.",
     "promptVariations": [
@@ -205,7 +213,7 @@
   {
     "id": "ep03-snake-battle-canyon",
     "imageKind": "scene",
-    "episode": "Episode 03",
+    "episode": "03",
     "title": "Snake Battle Canyon",
     "prompt": "High-energy canyon battle with multiple laser snakes weaving through smoke, glowing trails reflecting on stone walls, explosive practical sparks, dynamic camera motion, epic music-video scene, Grok Imagine.",
     "promptVariations": [
@@ -228,7 +236,7 @@
   {
     "id": "ep03-static-altar",
     "imageKind": "scene",
-    "episode": "Episode 03",
+    "episode": "03",
     "title": "Static Altar",
     "prompt": "Surreal desert altar made from old broadcast equipment and glowing cables, two characters framed by laser haze, ritualistic sci-fi mood, warm embers and cold blue static, detailed cinematic still.",
     "promptVariations": [
@@ -251,7 +259,7 @@
   {
     "id": "ep03-fireline-exit",
     "imageKind": "scene",
-    "episode": "Episode 03",
+    "episode": "03",
     "title": "Fireline Exit",
     "prompt": "Final shot of two figures walking along a thin line of fire at dawn, laser-serpent smoke fading behind them, hopeful but strange tone, warm sunrise, cinematic wide composition.",
     "promptVariations": [
@@ -274,7 +282,7 @@
   {
     "id": "character-reference-two",
     "imageKind": "character",
-    "episode": "Character Archive",
+    "episode": "character-archive",
     "title": "The Two",
     "prompt": "Reference portrait for two recurring Weeks on Fire leads, emotionally grounded, cinematic wardrobe, natural imperfections, ready for reuse across Grok Imagine scene prompts.",
     "promptVariations": [
@@ -285,7 +293,7 @@
     "musicCue": "Twilight Time - character motif",
     "musicStyle": "Nocturnal pop ballad",
     "description": "Reusable character anchor for keeping faces and tone consistent.",
-    "theme": "Characters",
+    "theme": "The Two",
     "tags": [
       "characters",
       "reference",
@@ -297,7 +305,7 @@
   {
     "id": "character-reference-alt",
     "imageKind": "character",
-    "episode": "Character Archive",
+    "episode": "character-archive",
     "title": "The Two - Alternate Frame",
     "prompt": "Alternate cinematic reference for the two recurring leads, closer crop, expressive lighting, usable as a face and mood anchor for future scene generations.",
     "promptVariations": [
@@ -308,7 +316,7 @@
     "musicCue": "Twilight Time - reprise",
     "musicStyle": "Soft synth reprise",
     "description": "Second reference image for prompt iteration and casting continuity.",
-    "theme": "Characters",
+    "theme": "The Two",
     "tags": [
       "characters",
       "reference",
@@ -320,7 +328,7 @@
   {
     "id": "test-computer-room",
     "imageKind": "test",
-    "episode": "Ideas / Meta",
+    "episode": "ideas",
     "title": "Computer Room \u2014 Broadcast Control",
     "prompt": "Dim retro broadcast control room with stacked CRT monitors, tangled cables, and a single operator silhouette lit by scan lines \u2014 meta-studio energy, 480p grain, Weeks on Fire production still, Grok Imagine style.",
     "promptVariations": [
@@ -344,7 +352,8 @@
   {
     "id": "test-hologram-glitch",
     "imageKind": "test",
-    "episode": "Episode 03 / Ideas",
+    "episode": "03",
+    "slot": "Ideas",
     "title": "Hologram Glitch \u2014 Rubella Double",
     "prompt": "Cinematic medium still of a glamorous woman at a silver vintage microphone as her body begins to fail \u2014 volumetric hologram scan lines, RGB channel split, digital static eating one shoulder, Monster Mash finale reveal energy, Grok Imagine style.",
     "promptVariations": [
@@ -368,7 +377,7 @@
   {
     "id": "suggestion-molten-silver-sphere",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway",
+    "episode": "cutaway",
     "title": "Molten Silver Sphere \u2014 Beat-Sync Pulse",
     "prompt": "Cinematic 8K still of a glossy molten silver liquid-metal sphere hovering dead-center in a vast pitch-black cave, mercury-chrome skin with capillary ripples pulsating to a deep musical kick, cavern walls mid-flash between razor-sharp black-and-white checkerboard and electric neon line grids, chromatic specular ribbons racing across the chrome, Grok Imagine style.",
     "promptVariations": [
@@ -379,7 +388,7 @@
     "musicCue": "Twilight Time \u2014 warehouse pulse",
     "musicStyle": "90s rave / beat-sync visual",
     "description": "Prompt-only cutaway suggestion \u2014 pure visual experiment synced to Twilight Time. Generate stills before locking video.",
-    "theme": "Visual Experiment",
+    "theme": "Liquid Metal",
     "tags": [
       "suggestion",
       "liquid-metal",
@@ -392,7 +401,7 @@
   {
     "id": "suggestion-glam-sham-poo",
     "imageKind": "suggestion",
-    "episode": "EyeWash Station",
+    "episode": "eyewash",
     "title": "Glam-Sham-Poo \u2014 Commercial Still Package",
     "prompt": "Cinematic still of exhausted glam-metal shampoo commercial energy: chrome bathroom set, screeching product bottle center frame, two women in black lace dead-pan behind a fog machine, Gang vocals on GLAM-SHAM-POO spelled in neon, joke-commercial short-film still, Grok Imagine style.",
     "promptVariations": [
@@ -403,7 +412,7 @@
     "musicCue": "Ultra Screech (Glam-Sham-Poo)",
     "musicStyle": "Glam metal joke commercial",
     "description": "Stills-first package for the Ultra Screech cutaway \u2014 see ideas/glam-sham-poo-commercial.md for full beat sheet.",
-    "theme": "Commercial Parody",
+    "theme": "Glam-Sham-Poo",
     "tags": [
       "suggestion",
       "glam-metal",
@@ -415,7 +424,7 @@
   {
     "id": "suggestion-soft-gyre-hover",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "The Soft Gyre \u2014 A Hover",
     "prompt": "Cinematic 8K photoreal 3D still of a house-sized hovering blob of glowing amorphous translucent gel floating a few hundred meters above a continuous floor of anvil thunderheads at golden-violet dusk, internal lava-lamp lobes and a slow gold-glass helix readable through the skin, oil-slick meniscus ridges gathering at the equator, three gold-white sparks just peeling off the limb, warm undersun lighting the cloud bottoms from below while the stratosphere above is crushed violet with a few hard stars, ultraviolet rim light on the gel, no ground no city no people, anamorphic 2.39:1, Arri Alexa look, short-film production still, Grok Imagine style",
     "promptVariations": [
@@ -440,7 +449,7 @@
   {
     "id": "suggestion-soft-gyre-weather",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "The Soft Gyre \u2014 B Weather",
     "prompt": "Cinematic 8K photoreal 3D still, three-quarter view: the same hovering translucent gel gyre left of frame above anvil thunderheads, clockwise skin spin implied by stretched meniscus, two wet ejecta already in the air \u2014 a raspberry gelatin cube tumbling and an electric-lime ribbon stretching downward \u2014 one memory-foam dent already in the nearest cloud, warm undersun from below, ultraviolet rim, gold-glass helix visible inside, sparks counter-rotating against the body, no people, 2.39:1 anamorphic, Grok Imagine style",
     "promptVariations": [
@@ -465,7 +474,7 @@
   {
     "id": "suggestion-soft-gyre-interior",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "The Soft Gyre \u2014 C Interior",
     "prompt": "Extreme cinematic 8K macro still looking into a translucent glowing amorphous gel body, skin filling most of the frame with oil-slick meniscus and a melting icosahedral facet, nested raspberry and lime lava-lamp lobes, a gold-glass double helix turning through the middle, two trapped bubbles each containing a tiny anvil-cloud lit from below, a phosphor-gold spark forming in a convection cell near camera, dusk cloud floor softly blurred far below the lower limb, ultraviolet rim, photoreal 3D, Grok Imagine style",
     "promptVariations": [
@@ -490,7 +499,7 @@
   {
     "id": "suggestion-soft-gyre-answer",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "The Soft Gyre \u2014 D Answer",
     "prompt": "Cinematic 8K photoreal 3D still of the hovering gel gyre above anvil clouds, a single pale vapor tendril rising from a lime-glowing lantern cloud toward the blob's underside, not yet touching, glass-flower crystal already blooming on a neighboring anvil where a spark planted, ejecta ribbons in the air counter-rotating, body slightly off-axis as if about to wobble, warm undersun, violet stratosphere, 2.39:1, Grok Imagine style",
     "promptVariations": [
@@ -515,7 +524,7 @@
   {
     "id": "suggestion-soft-gyre-soft-set",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "The Soft Gyre \u2014 E Soft set",
     "prompt": "Cinematic 8K photoreal wide still of the same gel gyre now smaller in frame above a vast anvil-cloud sea, spin almost spent, a faint gold spark-halo ringing the body, one glass flower catching light on the nearest cloud, a hole in the deck letting a single warm undersun flare up, crushed-violet sky with hard stars, ultraviolet remnant rim on the gel, quiet after-chaos, 2.39:1 anamorphic, Grok Imagine style",
     "promptVariations": [
@@ -540,7 +549,7 @@
   {
     "id": "suggestion-well-fall-lip",
     "imageKind": "suggestion",
-    "episode": "Musical Cutaway / Visual Experiment",
+    "episode": "visual",
     "title": "Well Fall \u2014 Lip of the Well",
     "imagePath": "images/well-fall/wf-a-lip.jpg",
     "prompt": "Cinematic 2.39:1 photoreal still at the lip of an old stone well in dry California hills, circular brick and fieldstone ring, dark cylinder dropping out of frame, a pale disk of sky or porch light on the water far below or none at all, no people, no text, crushed blacks, 35mm anamorphic, short-film production still, Grok Imagine style",
@@ -565,7 +574,8 @@
   {
     "id": "suggestion-rubella-stand-up-podium",
     "imageKind": "suggestion",
-    "episode": "Short packet farm / spoken cutaway",
+    "episode": "spoken",
+    "slot": "Short packet farm",
     "title": "Rubella Stand-Up — Podium Lock",
     "prompt": "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella a glamorous exhausted woman with long dark hair and blood-red lipstick in a modern black lace evening dress, no corset, no century costume, standing behind a honey-oak folding table used as a stage in a basement laundry room, mouths on mid-clause as if filing a complaint, unused brass-stem microphone on a short stand sitting on the table unused in spirit, World's Okayest Tenant mug half empty set down like evidence, empty first row of beige steel folding chairs facing her, resignation face, wet enamel only in the floor grout lines, flickering fluorescent troffer, fluorescent hallway bleed, Grok Imagine style",
     "promptVariations": [
@@ -589,7 +599,8 @@
   {
     "id": "suggestion-rubella-stand-up-detergent",
     "imageKind": "suggestion",
-    "episode": "Short packet farm / spoken cutaway",
+    "episode": "spoken",
+    "slot": "Short packet farm",
     "title": "Rubella Stand-Up — Detergent Relic",
     "prompt": "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella mid-set behind a honey-oak folding table used as a stage, modern black lace, mouths on, unused brass-stem microphone on a short stand, World's Okayest Tenant mug, contraband unlabeled detergent bottle in her off-hand held like a sacred relic for this one beat only, no readable brand text, beige steel folding chairs in soft focus, wet enamel only in the floor grout lines, flickering fluorescent, Grok Imagine style",
     "promptVariations": [
@@ -613,7 +624,8 @@
   {
     "id": "suggestion-rubella-stand-up-heckle",
     "imageKind": "suggestion",
-    "episode": "Short packet farm / spoken cutaway",
+    "episode": "spoken",
+    "slot": "Short packet farm",
     "title": "Rubella Stand-Up — Heckle Wide",
     "prompt": "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, wide laundry-room open mic, Rubella in modern black lace behind a honey-oak folding table used as a stage, she does not turn, mouths on toward the unused brass-stem microphone, rows of empty beige steel folding chairs, Lillith one chair in the back row in black lace, mouth open one frame, not a two-shot concert photo, clipboard silhouette in the last chair and no gavel, flickering fluorescent, wet enamel only in the floor grout lines, Grok Imagine style",
     "promptVariations": [
@@ -637,7 +649,8 @@
   {
     "id": "suggestion-rubella-stand-up-land",
     "imageKind": "suggestion",
-    "episode": "Short packet farm / spoken cutaway",
+    "episode": "spoken",
+    "slot": "Short packet farm",
     "title": "Rubella Stand-Up — Land",
     "prompt": "Photoreal cinematic still, 2.39:1, Grok Imagine building-cast, no real actor names, Rubella in a modern black lace evening dress behind a honey-oak folding table used as a stage, mouths on at the end of the complaint, two identical carbon forms already in her hand, World's Okayest Tenant mug empty, unused brass-stem microphone still unused in spirit, beige steel folding chairs that have crept one inch back, flickering fluorescent troffer, wet enamel only in the floor grout lines, clipboard silhouette in the last chair, Grok Imagine style",
     "promptVariations": [

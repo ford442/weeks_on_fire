@@ -2,9 +2,10 @@
 id: hold-the-note
 title: Hold the Note
 added: 2026-10-06
-genre: Slow heavy rock
+genre: "Rock"
+subgenre: "Slow heavy rock"
 description: "One riff, one long bend, a chant of hold. Rubella keeps the last hold two beats after the band has moved on."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, metal, rubella, lillith, slow]
 instrumental: false
 audioFile: null

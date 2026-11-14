@@ -27,6 +27,7 @@ import {
   type DaisyFrameTreatment,
 } from '../data/daisyBell';
 import { firstCatalogItem } from '../lib/catalog';
+import { pluralize } from '../lib/plural';
 import { useEscapeKey } from '../hooks/useEscapeKey';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
@@ -101,7 +102,7 @@ export default function DaisyBell() {
             </details>
             <div className="mt-4 flex flex-wrap gap-2 text-xs">
               <span className="rounded-md border border-zinc-700 bg-zinc-900/80 px-2.5 py-1 text-zinc-300">
-                {counts.total} keyframes
+                {pluralize(counts.total, 'keyframe')}
               </span>
               <span className={`rounded-md border px-2.5 py-1 ${daisyTreatmentMeta.color.accent}`}>
                 {counts.color} color HD
@@ -110,7 +111,7 @@ export default function DaisyBell() {
                 {counts.period} period film
               </span>
               <span className="rounded-md border border-zinc-700 bg-zinc-900/80 px-2.5 py-1 text-zinc-400">
-                {counts.withImage} stills linked · drop more in{' '}
+                {pluralize(counts.withImage, 'still')} linked · drop more in{' '}
                 <code className="text-zinc-300">images/daisy-bell/</code>
               </span>
             </div>

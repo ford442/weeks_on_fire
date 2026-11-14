@@ -2,9 +2,11 @@
 id: said-and-left
 title: Said and Left
 added: 2026-10-06
-genre: Sprechstimme
+genre: "Classical & chant"
+subgenre: "Sprechstimme"
 description: "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later."
-episode: Building cast / hallway
+episode: "building"
+slot: "Hallway"
 tags: [sprechstimme, rubella, hallway, building]
 instrumental: false
 audioFile: null

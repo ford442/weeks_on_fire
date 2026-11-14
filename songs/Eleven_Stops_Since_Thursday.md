@@ -2,9 +2,11 @@
 id: eleven-stops-since-thursday
 title: Eleven Stops Since Thursday
 added: 2026-11-08
-genre: Minimal sad-pop breakup anthem with a key change
+genre: "Pop & synth-pop"
+subgenre: "Minimal sad-pop breakup anthem with a key change"
 description: "A sleek 2020s breakup anthem sung straight inside a raccoon on a night bus, about a dumpster. The lid lifts on the key change; the band takes the key on time and the singer takes it one bar late."
-episode: Musical cutaway / Window Seat (night bus)
+episode: "cutaway"
+slot: "Window Seat (night bus)"
 tags: [pop, synth-pop, breakup, key-change, raccoon, bus, dumpster, comedy, silly, sequence, 30-seconds]
 instrumental: false
 audioFile: null

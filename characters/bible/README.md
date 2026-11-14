@@ -7,7 +7,7 @@ where they sit on the axes, how they talk, what happened to them, and what we wi
 do with them.
 
 > **This folder is for cast.** The fictional *crew* (Mara Vell, Julian Rook, Soren Kade,
-> Nova Chen, Elio Marsh) lives in `content/staff.json` and `../staff-portraits.md` and is
+> Nova Chen, Elio Marsh) lives in `content/crew.json` and `../crew-portraits.md` and is
 > rendered in the site's Crew view. Long-form crew pages — plus **Roley Voss**, who has no
 > portrait and is not in `staff.json` — live in [`../../docs/crew/`](../../docs/crew/README.md).
 > Do not mix them.

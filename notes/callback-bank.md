@@ -357,7 +357,7 @@ Series-wide rules that govern everything below (cite `characters/bible/README.md
 - **Who/where:** Meta-Studio (Mara Vell + Rubella + Lillith); the Ep2 safehouse coffee bar.
 - **Rules:** Barista energy is coded (informants); Justine's cup is explicitly *not* part of this. Mara never performs. "Item four got… louder."
 - **Portable forms:** the blue-and-orange cereal box on any table · a barista stamping a cup and mentioning the agenda · a 480p feed flicker as a transition.
-- **Locks:** The crew (Mara, Julian, Soren, Nova, Elio) stays in `content/staff.json`; don't mix them with cast.
+- **Locks:** The crew (Mara, Julian, Soren, Nova, Elio) stays in `content/crew.json`; don't mix them with cast.
 
 ### Bag at chest height
 - **Bit:** The Pizza Guy's box is at chest height; so is the kraft bag passed around the oak island, the cube at the Annex, the seed-disc in the palm, the notice that lowers itself. "CHEST HEIGHT MAINTAINED."

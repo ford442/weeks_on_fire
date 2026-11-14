@@ -2,9 +2,10 @@
 id: e-x-i
 title: E X I
 added: 2026-10-06
-genre: 1970s twin-guitar boogie metal
+genre: "Metal"
+subgenre: "1970s twin-guitar boogie metal"
 description: "A bright red corridor and three letters. The lead guitar's amp dies before the last chorus, and the third letter never gets sung."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, metal, rubella, lillith, twin-guitar, boogie]
 instrumental: false
 audioFile: null

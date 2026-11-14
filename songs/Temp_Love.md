@@ -2,9 +2,10 @@
 id: temp-love
 title: Temp Love
 added: 2026-09-09
-genre: Cassette soul
+genre: "Soul, funk & hip-hop"
+subgenre: "Cassette soul"
 description: "Cue Sheets track 6. 80 BPM F-sharp minor. She wrote the real cue and the cut fell in love with the temp track. The bridge is in the wrong key and stays there."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, soul, nova-chen, cue-sheets, 80bpm, catalog]
 instrumental: false
 audioFile: null

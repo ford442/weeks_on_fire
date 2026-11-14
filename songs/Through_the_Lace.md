@@ -2,9 +2,10 @@
 id: through-the-lace
 title: Through the Lace
 added: 2026-10-06
-genre: Pastoral rock anthem
+genre: "Rock"
+subgenre: "Pastoral rock anthem"
 description: "A 12-string anthem about light in the holes. The chant is one word, and the third Through always lands on the chord that already left."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, rock, anthem, rubella, lillith, pastoral]
 instrumental: false
 audioFile: null

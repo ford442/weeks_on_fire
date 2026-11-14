@@ -2,9 +2,10 @@
 id: both-coats
 title: Both Coats
 added: 2026-10-06
-genre: 1970s spy-riff heavy rock
+genre: "Rock"
+subgenre: "1970s spy-riff heavy rock"
 description: "A swaggering organ riff, one black coat and one white. The last chorus cuts to silence mid-syllable and nobody wins."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, metal, rubella, lillith, hammond, spy]
 instrumental: false
 audioFile: null

@@ -2,9 +2,10 @@
 id: out-on-the-cut
 title: Out on the Cut
 added: 2026-09-09
-genre: Clipped downtempo
+genre: "Ambient & downtempo"
+subgenre: "Clipped downtempo"
 description: "Cue Sheets track 3. 92 BPM A minor. Every phrase is clipped before its last word. The shortest thing on the record and it is still too long for the edit."
-episode: Catalog / Cue Sheets
+episode: "cue-sheets"
 tags: [vocal, downtempo, nova-chen, cue-sheets, 92bpm, catalog]
 instrumental: false
 audioFile: null

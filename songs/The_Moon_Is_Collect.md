@@ -2,9 +2,11 @@
 id: the-moon-is-collect
 title: The Moon Is Collect
 added: 2026-08-13
-genre: Nocturnal torch song
+genre: "Jazz, lounge & torch"
+subgenre: "Nocturnal torch song"
 description: A red phone whose cord is tied to the moon. Last lines missing their final word. Quietest of the gag songs.
-episode: One-panel gag / penthouse
+episode: "gag"
+slot: "Penthouse"
 tags: [torch, rubella, gag, liliane, night]
 instrumental: false
 audioFile: null

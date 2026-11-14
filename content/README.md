@@ -11,9 +11,11 @@ Authoring sources for the React production hub. **`npm run codegen`** reads thes
 id: your-track-id
 title: Your Track
 added: 2026-10-06   # day the file is written (YYYY-MM-DD), required
-genre: Genre label
+genre: Metal                     # a family from taxonomy.json "genres" (fixed list)
+subgenre: Late-80s glam strut    # optional free-text detail under the genre
 description: One-line catalog blurb
-episode: Episode 02 / cutaway tag
+episode: "02"                    # an id from taxonomy.json "episodes" (quote numeric ids)
+slot: Laundromat                 # optional free-text placement detail under the episode
 tags: [tag-one, tag-two]
 instrumental: false
 audioFile: null   # or "Daisy+Bell.mp3" when an mp3 exists in songs/
@@ -38,6 +40,22 @@ Production notes.
 3. Commit the markdown file **and** the regenerated `src/data/generated/*.ts` files.
 
 No edits to `src/data/songs.ts` are required.
+
+### Taxonomy (episode ids, genres, themes, tools)
+
+[`taxonomy.json`](taxonomy.json) is the only source of the values behind the filter dropdowns:
+
+| Key        | Used by                                   | Rule                                                                  |
+| ---------- | ----------------------------------------- | --------------------------------------------------------------------- |
+| `episodes` | `songs/*.md` `episode`, gallery `episode` | Canonical id (`01`–`05`, `eyewash`, `cutaway`, …) with one label each |
+| `genres`   | `songs/*.md` `genre`                      | Fixed list of families; put the specific style in `subgenre`          |
+| `themes`   | gallery `theme`                           | A recurring visual motif, never a category (`imageKind` is that)      |
+| `tools`    | gallery `tool` (optional)                 | One label per generator; "Grok Imagine" covers the xAI API too        |
+
+`npm run codegen` fails on an unknown id, genre, theme or tool, and on two entries that differ only by
+case or spacing. Add a new value to `taxonomy.json` first. Free-text nuance ("Skeleton Union Break",
+"Short packet farm") goes in `slot`, not in `episode`. Drawer sketches in `songs/_drawer/` are not
+codegen'd and keep their `Drawer / not promoted` note.
 
 ## Adding a cutaway
 
@@ -68,13 +86,13 @@ No edits to `src/data/songs.ts` are required.
 
 5. Run `npm run codegen` and commit.
 
-## Gallery, characters, staff, Daisy Bell
+## Gallery, characters, crew, Daisy Bell
 
 | File                                 | Purpose                                                           |
 | ------------------------------------ | ----------------------------------------------------------------- |
 | [`gallery.json`](gallery.json)       | Visual Archive cards (`imagePath` = repo-relative path)           |
 | [`characters.json`](characters.json) | Cast bios                                                         |
-| [`staff.json`](staff.json)           | Fictional crew bios (`imageFile` = filename under `public/cast/`) |
+| [`crew.json`](crew.json)             | Fictional crew bios (`imageFile` = filename under `public/cast/`) |
 | [`daisy-bell.json`](daisy-bell.json) | Daisy Bell keyframe board                                         |
 | [`episodes.json`](episodes.json)     | Episode Bible index (Episodes view) — see below                   |
 | [`cartoons/*.json`](cartoons/)       | Short cartoon seeds (Cartoons view) — one file per idea           |

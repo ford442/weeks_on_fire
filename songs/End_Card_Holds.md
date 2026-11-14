@@ -2,9 +2,10 @@
 id: end-card-holds
 title: End Card Holds
 added: 2026-09-08
-genre: Deep progressive
+genre: "Techno & house"
+subgenre: "Deep progressive"
 description: "Night Side track 10. 122 BPM F minor. Warm pad from the opener. Kick leaves before the pad. The pad holds one second too long."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, progressive, nova-chen, night-side, 122bpm, work-bed]
 instrumental: true
 audioFile: null

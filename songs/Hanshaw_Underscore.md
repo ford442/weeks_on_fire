@@ -2,9 +2,10 @@
 id: hanshaw-underscore
 title: Hanshaw Underscore (12-inch)
 added: 2026-09-08
-genre: Deep house
+genre: "Techno & house"
+subgenre: "Deep house"
 description: "Night Side track 5. 120 BPM C minor. Warm Rhodes stab as the hook. 1926 charm as harmony, not costume."
-episode: Catalog / Night Side
+episode: "night-side"
 tags: [instrumental, deep-house, nova-chen, night-side, 120bpm, work-bed]
 instrumental: true
 audioFile: null

@@ -2,9 +2,10 @@
 id: early-not-broken
 title: Early, Not Broken
 added: 2026-10-06
-genre: 1973 pulse-rock anthem
+genre: "Rock"
+subgenre: "1973 pulse-rock anthem"
 description: "A steady pulse, a Wurlitzer, and a chorus that always arrives one bar before the verse is done. It's early. Not broken."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, rock, anthem, rubella, lillith, wurlitzer]
 instrumental: false
 audioFile: null

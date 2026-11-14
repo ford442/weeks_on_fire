@@ -2,9 +2,10 @@
 id: standing-room
 title: Standing Room
 added: 2026-10-06
-genre: 1975 acoustic-and-slide stadium anthem
+genre: "Rock"
+subgenre: "1975 acoustic-and-slide stadium anthem"
 description: "Twelve-string, slide guitar, and a chorus built for a crowd. Where the applause would go there is one wooden creak."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, rock, anthem, rubella, lillith, twelve-string]
 instrumental: false
 audioFile: null

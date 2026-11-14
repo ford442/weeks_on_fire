@@ -2,9 +2,11 @@
 id: two-chairs-one-mirror
 title: Two Chairs, One Mirror
 added: 2026-09-14
-genre: Torch-song waltz / dressing-room chamber pop
+genre: "Jazz, lounge & torch"
+subgenre: "Torch-song waltz / dressing-room chamber pop"
 description: Lillith and Rubella at one mirror, trading lives one lipstick at a time. A waltz that never lets either sister take the downbeat. Made by Fable.
-episode: Musical cutaway / The Two
+episode: "cutaway"
+slot: "The Two"
 tags: [waltz, torch-song, chamber-pop, lillith, rubella, vale-sisters, the-two, house-of-mirrors, made-by-fable]
 instrumental: false
 audioFile: null

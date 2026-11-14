@@ -21,7 +21,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/staff`).
+Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/crew`).
 
 Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short cartoon seeds
 (`content/cartoons/<id>.json` — premise, still, optional prompt). No song id. Promote winners to
@@ -37,7 +37,7 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 ## Repository Structure
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
-**`content/`** — Cutaways, gallery, characters, staff, episodes, cartoons, sequences, Daisy Bell JSON.  
+**`content/`** — Cutaways, gallery, characters, crew, episodes, cartoons, sequences, Daisy Bell JSON.  
 **`songs/`** — YAML-frontmatter markdown + optional mp3. Frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches (not codegen'd).  
 **`characters/bible/`** — Canon cast sheets (voice, backstory, tone rules); `content/characters.json` links via `bibleSheet`.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  
@@ -74,7 +74,9 @@ See `content/README.md`. Typical path:
 2. `npm run codegen`
 3. Commit sources and generated TS
 
-Staff bios: `content/staff.json` (longer crew sheets in `docs/crew/`).  
+Crew bios: `content/crew.json` (longer crew sheets in `docs/crew/`).
+
+Filter values (episode ids, genres, gallery themes, tools) live in `content/taxonomy.json`; songs and gallery items must use them verbatim (codegen enforces it). Free-text nuance goes in `slot` / `subgenre`. Use `pluralize()` from `src/lib/plural.ts` for any "N things" label.  
 **Do not** invent `srt-tools.py` or `update-index.py` — they do not exist.
 
 ## Python helpers (real)

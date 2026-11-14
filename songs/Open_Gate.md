@@ -2,9 +2,10 @@
 id: open-gate
 title: Open Gate
 added: 2026-10-06
-genre: Bright twin-guitar metal
+genre: "Metal"
+subgenre: "Bright twin-guitar metal"
 description: "A daylight heavy anthem. The chant is open. The second guitar answers a fifth up, every time, and the gate stays open."
-episode: Lace Waterfall
+episode: "lace-waterfall"
 tags: [lace-waterfall, metal, rubella, lillith, twin-guitar]
 instrumental: false
 audioFile: null

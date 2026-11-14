@@ -4,8 +4,9 @@ import { episodes } from '../data/episodes';
 import { filmScenes } from '../data/films';
 import { sequences } from '../data/sequences';
 import { songs } from '../data/songs';
-import { staffMembers } from '../data/staff';
+import { crewMembers } from '../data/crew';
 import { cutawaySuggestions } from '../data/suggestions';
+import { episodeWithSlot, toolLabel } from '../data/taxonomy';
 import { crewPath } from '../routes/paths';
 
 export type SearchSection =
@@ -55,12 +56,19 @@ function withQuery(path: string, q: string) {
 export function buildSearchIndex(): SearchEntry[] {
   return [
     ...songs.map((song) =>
-      entry('Songs', song.title, `${song.episode} · ${song.genre}`, crewPath(`/songs/${song.id}`), [
-        song.description,
-        song.stylePrompt,
-        song.lyrics ?? '',
-        song.tags.join(' '),
-      ]),
+      entry(
+        'Songs',
+        song.title,
+        `${episodeWithSlot(song.episode, song.slot)} · ${song.genre}`,
+        crewPath(`/songs/${song.id}`),
+        [
+          song.subgenre ?? '',
+          song.description,
+          song.stylePrompt,
+          song.lyrics ?? '',
+          song.tags.join(' '),
+        ],
+      ),
     ),
     ...cutawaySuggestions.map((cutaway) =>
       entry(
@@ -72,12 +80,19 @@ export function buildSearchIndex(): SearchEntry[] {
       ),
     ),
     ...filmScenes.map((scene) =>
-      entry('Visual archive', scene.title, scene.episode, withQuery(crewPath('/'), scene.title), [
-        scene.description,
-        scene.prompt,
-        scene.theme,
-        scene.tags.join(' '),
-      ]),
+      entry(
+        'Visual archive',
+        scene.title,
+        episodeWithSlot(scene.episode, scene.slot),
+        withQuery(crewPath('/'), scene.title),
+        [
+          scene.tool ? toolLabel(scene.tool) : '',
+          scene.description,
+          scene.prompt,
+          scene.theme,
+          scene.tags.join(' '),
+        ],
+      ),
     ),
     ...episodes.map((episode) =>
       entry(
@@ -112,8 +127,8 @@ export function buildSearchIndex(): SearchEntry[] {
         [sequence.premise, sequence.tags.join(' ')],
       ),
     ),
-    ...staffMembers.map((member) =>
-      entry('Crew', member.name, member.role, crewPath('/staff'), [member.bio, member.specialty]),
+    ...crewMembers.map((member) =>
+      entry('Crew', member.name, member.role, crewPath('/crew'), [member.bio, member.specialty]),
     ),
   ];
 }

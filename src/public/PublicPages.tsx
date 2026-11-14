@@ -66,7 +66,7 @@ export function PublicHome() {
 }
 
 export function LaceWaterfall() {
-  const isBand = (song: Song) => song.episode === 'Lace Waterfall';
+  const isBand = (song: Song) => song.episode === 'lace-waterfall';
   const { playable, upcoming } = publicTracks(isBand);
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">

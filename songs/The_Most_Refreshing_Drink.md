@@ -2,9 +2,11 @@
 id: the-most-refreshing-drink
 title: The Most Refreshing Drink
 added: 2026-09-06
-genre: Industrial ASMR lounge / fake sponsor bed
+genre: "Ambient & downtempo"
+subgenre: "Industrial ASMR lounge / fake sponsor bed"
 description: EyeWash sponsor for an over-engineered glass of ice water. Apparatus clicks in the dark lab; the gulp lands a beat before the ice. No sung lead.
-episode: Ultra-Refreshed Water Lab / EyeWash sponsor
+episode: "eyewash"
+slot: "Ultra-Refreshed Water Lab sponsor"
 tags: [instrumental, sponsor, eyewash-station, lab, asmr, ultra-refreshed]
 instrumental: true
 audioFile: null

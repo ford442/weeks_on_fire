@@ -12,11 +12,14 @@ import {
   validateCartoons,
   validateCharacters,
   validateSequences,
+  validateTaxonomy,
 } from './validate';
 
 import type {
   CartoonRecord,
   CutawayRecord,
+  EpisodeRecord,
+  TaxonomyRecord,
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
@@ -431,5 +434,52 @@ describe('loadSequences', () => {
     rmSync(join(repoRoot, 'content/sequences/sequence-1.graph.json'));
     writeFileSync(join(repoRoot, 'content/sequences/ghost.graph.json'), JSON.stringify(graph));
     expect(() => loadSequences(repoRoot)).toThrow(/ghost.graph.json has no matching/);
+  });
+});
+
+describe('validateTaxonomy', () => {
+  const taxonomy: TaxonomyRecord = {
+    episodes: [
+      { id: '01', label: 'Episode 1', group: 'Episodes' },
+      { id: 'cutaway', label: 'Musical cutaway', group: 'Series & formats' },
+    ],
+    genres: ['Metal', 'Rock'],
+    themes: ['Well Fall'],
+    tools: [{ id: 'grok-imagine', label: 'Grok Imagine' }],
+  };
+  const episodes = [{ id: '01' }] as EpisodeRecord[];
+  const scene = { id: 'scene-1', episode: 'cutaway', theme: 'Well Fall', tool: 'grok-imagine' };
+
+  it('accepts catalog entries that use taxonomy values verbatim', () => {
+    expect(() =>
+      validateTaxonomy(taxonomy, episodes, [makeSong({ genre: 'Metal' })], [scene]),
+    ).not.toThrow();
+  });
+
+  it('rejects near-duplicate episode ids, as a case-variant of an existing one', () => {
+    const clash = {
+      ...taxonomy,
+      episodes: [...taxonomy.episodes, { id: 'Cutaway', label: 'Musical Cutaway', group: 'x' }],
+    };
+    expect(() => validateTaxonomy(clash, episodes, [], [])).toThrow(/case\/spacing/);
+  });
+
+  it('rejects a song with an unknown episode or genre', () => {
+    const songs = [makeSong({ episode: 'Musical Cutaway', genre: 'metal' })];
+    expect(() => validateTaxonomy(taxonomy, episodes, songs, [])).toThrow(
+      /unknown episode "Musical Cutaway"[\s\S]*unknown genre "metal"/,
+    );
+  });
+
+  it('rejects a gallery scene with an unknown episode, theme, or tool', () => {
+    const bad = { id: 'scene-2', episode: 'xAI API · psychedelic', theme: 'Characters', tool: 'x' };
+    expect(() => validateTaxonomy(taxonomy, episodes, [], [bad])).toThrow(
+      /unknown episode[\s\S]*unknown theme[\s\S]*unknown tool/,
+    );
+  });
+
+  it('requires a taxonomy entry for every episode in episodes.json', () => {
+    const extra = [{ id: '01' }, { id: '09' }] as EpisodeRecord[];
+    expect(() => validateTaxonomy(taxonomy, extra, [], [])).toThrow(/episode "09"/);
   });
 });

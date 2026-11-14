@@ -1,6 +1,7 @@
 import { Check, Copy, ExternalLink, Music2, Tags } from 'lucide-react';
 
 import { imageKindMeta, type FilmScene } from '../data/films';
+import { episodeWithSlot, toolLabel } from '../data/taxonomy';
 
 interface PromptCardProps {
   scene: FilmScene;
@@ -18,7 +19,9 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
           >
             {imageKindMeta[scene.imageKind].label}
           </span>
-          <p className="text-sm font-semibold text-orange-300">{scene.episode}</p>
+          <p className="text-sm font-semibold text-orange-300">
+            {episodeWithSlot(scene.episode, scene.slot)}
+          </p>
         </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{scene.title}</h2>
         <p className="mt-3 text-sm leading-6 text-zinc-300">{scene.description}</p>
@@ -39,6 +42,7 @@ export default function PromptCard({ scene, copiedKey, onCopy }: PromptCardProps
             <span>Theme</span>
           </div>
           <p className="mt-2 font-medium text-zinc-100">{scene.theme}</p>
+          {scene.tool && <p className="mt-1 text-xs text-zinc-400">{toolLabel(scene.tool)}</p>}
           <p className="mt-1 text-xs text-zinc-400">{scene.tags.join(', ')}</p>
         </div>
       </div>

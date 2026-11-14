@@ -30,7 +30,7 @@ The hub is a single-page app. Views are toggled in-app:
 7. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 8. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
 9. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-10. **Crew** (Series Crew) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+10. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
 
@@ -69,155 +69,155 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 
 ## Visual archive scenes (content index)
 
-1. **Living Flower Engine** (Grok Imagine · psychedelic, theme: Psychedelic 3D)
-2. **Möbius Chrome Ribbon** (Grok Imagine · psychedelic, theme: Psychedelic 3D)
-3. **Gyre Over Victorian Street** (Grok Imagine · psychedelic, theme: Psychedelic 3D)
-4. **Tetrahedron Sea** (Grok Imagine · psychedelic, theme: Psychedelic 3D)
-5. **Sphere Tower of Daisies** (Grok Imagine · psychedelic, theme: Psychedelic 3D)
-6. **Glass Petal Cathedral** (xAI API · psychedelic, theme: Psychedelic 3D)
-7. **Daisy Nebula** (xAI API · psychedelic, theme: Psychedelic 3D)
-8. **Klein Flower Lattice** (xAI API · psychedelic, theme: Psychedelic 3D)
-9. **Laser Serpent Awakening** (Episode 03, theme: Laser Snakes)
-10. **Rubella Signal** (Episode 03, theme: Signal Fire)
-11. **Snake Battle Canyon** (Episode 03, theme: Laser Snakes)
-12. **Static Altar** (Episode 03, theme: Shortwave Ritual)
-13. **Fireline Exit** (Episode 03, theme: Aftermath)
-14. **The Two** (Character Archive, theme: Characters)
-15. **The Two - Alternate Frame** (Character Archive, theme: Characters)
-16. **Computer Room — Broadcast Control** (Ideas / Meta, theme: Meta Studio)
-17. **Hologram Glitch — Rubella Double** (Episode 03 / Ideas, theme: Hologram Reveal)
-18. **Molten Silver Sphere — Beat-Sync Pulse** (Musical Cutaway, theme: Visual Experiment)
-19. **Glam-Sham-Poo — Commercial Still Package** (EyeWash Station, theme: Commercial Parody)
-20. **The Soft Gyre — A Hover** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
-21. **The Soft Gyre — B Weather** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
-22. **The Soft Gyre — C Interior** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
-23. **The Soft Gyre — D Answer** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
-24. **The Soft Gyre — E Soft set** (Musical Cutaway / Visual Experiment, theme: The Soft Gyre)
-25. **Well Fall — Lip of the Well** (Musical Cutaway / Visual Experiment, theme: Well Fall)
-26. **Rubella Stand-Up — Podium Lock** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
-27. **Rubella Stand-Up — Detergent Relic** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
-28. **Rubella Stand-Up — Heckle Wide** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
-29. **Rubella Stand-Up — Land** (Short packet farm / spoken cutaway, theme: Rubella Stand-Up)
+1. **Living Flower Engine** (Visual experiment, theme: Psychedelic 3D)
+2. **Möbius Chrome Ribbon** (Visual experiment, theme: Psychedelic 3D)
+3. **Gyre Over Victorian Street** (Visual experiment, theme: Psychedelic 3D)
+4. **Tetrahedron Sea** (Visual experiment, theme: Psychedelic 3D)
+5. **Sphere Tower of Daisies** (Visual experiment, theme: Psychedelic 3D)
+6. **Glass Petal Cathedral** (Visual experiment, theme: Psychedelic 3D)
+7. **Daisy Nebula** (Visual experiment, theme: Psychedelic 3D)
+8. **Klein Flower Lattice** (Visual experiment, theme: Psychedelic 3D)
+9. **Laser Serpent Awakening** (Episode 3, theme: Laser Snakes)
+10. **Rubella Signal** (Episode 3, theme: Signal Fire)
+11. **Snake Battle Canyon** (Episode 3, theme: Laser Snakes)
+12. **Static Altar** (Episode 3, theme: Shortwave Ritual)
+13. **Fireline Exit** (Episode 3, theme: Aftermath)
+14. **The Two** (Character archive, theme: The Two)
+15. **The Two - Alternate Frame** (Character archive, theme: The Two)
+16. **Computer Room — Broadcast Control** (Ideas / meta, theme: Meta Studio)
+17. **Hologram Glitch — Rubella Double** (Episode 3, theme: Hologram Reveal)
+18. **Molten Silver Sphere — Beat-Sync Pulse** (Musical cutaway, theme: Liquid Metal)
+19. **Glam-Sham-Poo — Commercial Still Package** (EyeWash Station, theme: Glam-Sham-Poo)
+20. **The Soft Gyre — A Hover** (Visual experiment, theme: The Soft Gyre)
+21. **The Soft Gyre — B Weather** (Visual experiment, theme: The Soft Gyre)
+22. **The Soft Gyre — C Interior** (Visual experiment, theme: The Soft Gyre)
+23. **The Soft Gyre — D Answer** (Visual experiment, theme: The Soft Gyre)
+24. **The Soft Gyre — E Soft set** (Visual experiment, theme: The Soft Gyre)
+25. **Well Fall — Lip of the Well** (Visual experiment, theme: Well Fall)
+26. **Rubella Stand-Up — Podium Lock** (Spoken cutaway, theme: Rubella Stand-Up)
+27. **Rubella Stand-Up — Detergent Relic** (Spoken cutaway, theme: Rubella Stand-Up)
+28. **Rubella Stand-Up — Heckle Wide** (Spoken cutaway, theme: Rubella Stand-Up)
+29. **Rubella Stand-Up — Land** (Spoken cutaway, theme: Rubella Stand-Up)
 
 ## Minimax song catalog (content index)
 
 | ID | Title | Genre | Episode tie |
 |----|-------|-------|-------------|
-| after-is-a-floor | After Is a Floor | Art Deco noir pop | EyeWash station-break |
-| aria-thirty-night | Aria Thirty (Night) | Melodic techno | Catalog / Night Side |
-| article-seven | Article Seven | Dusty union lounge / paused funk | Episode 03 / Skeleton Union Break |
-| big-city | Big City | Late-80s glam strut | Musical Cutaway / Glam catalog |
-| both-coats | Both Coats | 1970s spy-riff heavy rock | Lace Waterfall |
-| box-box-hat | Box, Box, Hat | Jump-swing cartoon walking tune | Musical cutaway / Rubber-Hose Errand (sequence) |
-| caffeinated-melon | Caffeinated Melon | Absurdist chamber pop | Gallery Fog cutaway |
-| call-forty-seven | Call Forty-Seven | Hold-music accretion / civic dispatch ballad | Episode 04 / 911 Wrong Shade |
-| choose-your-basalt | Choose Your Basalt | Educational cabaret duet | Musical Cutaway |
-| closed-since-ninety-eight | Closed Since Ninety-Eight | Nocturnal electro-chanson / dead-station duet | Musical cutaway / night-drive |
-| closed-for-cosmic-reasons | Closed for Cosmic Reasons | Hotel-lobby downtempo | One-panel gag / any closed facility |
-| come-further | Come Further | Minimal rising FM electronic | Musical Cutaway |
-| condition-report | Condition Report | Museum-hushed chamber noir | One-panel gag / gallery after hours |
-| cue-out-scene-continues | Cue Out, Scene Continues | Ambient soul | Catalog / Cue Sheets |
-| cue-sheets | Cue Sheets | Ledger soul | Catalog / Cue Sheets |
-| daisy-bell | Daisy Bell | Barbershop waltz duet | Musical Cutaway |
-| deep-space-drift | Deep Space Drift | Weightless ambient pedal-steel | Series cutaway |
-| desert-rose-horizon | Desert Rose Horizon | Atmospheric pedal-steel | Series cutaway |
-| e-x-i | E X I | 1970s twin-guitar boogie metal | Lace Waterfall |
-| early-not-broken | Early, Not Broken | 1973 pulse-rock anthem | Lace Waterfall |
-| eight-seconds | Eight Seconds | Slow organ-and-slide anthem | Lace Waterfall |
-| eleven-stops-since-thursday | Eleven Stops Since Thursday | Minimal sad-pop breakup anthem with a key change | Musical cutaway / Window Seat (night bus) |
-| empty-parking-lot-waltz | Empty Parking Lot Waltz | Slow cinematic waltz / dark cabaret | Post-party cutaway |
-| end-card-holds | End Card Holds | Deep progressive | Catalog / Night Side |
-| exhibit-a | Exhibit A | Courtroom doo-wop / vanished choir | Musical cutaway / Laser Dot Jury |
-| first-light-salt-flats | First Light Salt Flats | Luminous dawn pedal-steel | Series cutaway |
-| from-the-west | From the West | Plainchant | Episode 5 candidate / ridge |
-| g-train-fluorescent | G Train Fluorescent | Commute techno | Catalog / Night Side |
-| ghost-in-the-reverb | Ghost in the Reverb | Spectral slide-steel nocturne | Series cutaway |
-| ultra-screech | Ultra Screech (Glam-Sham-Poo) | Glam metal joke commercial | Musical Cutaway / EyeWash |
-| groove-break-earned | Groove Break (Earned) | Progressive / melodic techno | Catalog / Night Side |
-| ground-rent | Ground Rent | Passacaglia duet | Building cast |
-| halloween-snake-battle | Halloween Snake Battle | Comedic thrash metal | Episode 03 |
-| hallway-hum | Hallway Hum | Four-on-the-floor techno | Catalog / Night Side |
-| hanshaw-underscore | Hanshaw Underscore (12-inch) | Deep house | Catalog / Night Side |
-| haunted-or-unscheduled | Haunted or Unscheduled | Sparse institutional electro-lounge | EyeWash Station / Master Control |
-| heart-rate-optimal | Heart Rate Optimal | Spa-pop / wellness-notification ballad | Episode 03 / wellness ladies |
-| heavy-water | Heavy Water | 1970s organ-metal | Lace Waterfall |
-| heels-or-no-entry | Heels or No Entry | Slow-disco dress-code liturgy | Velvet Rope / Episode 05 opener |
-| here-they-are | Here They Are | Luminous ambient electronic | Musical Cutaway |
-| hold-for-eight | Hold for Eight | Dry downtempo / counted soul | Catalog / Cue Sheets |
-| hold-the-note | Hold the Note | Slow heavy rock | Lace Waterfall |
-| home-sweet-void-dialog | Home Sweet Void (Dialog) | Hull-hum table dialog | Space visual experiment |
-| i-second-peggy-babcock | I Second Peggy Babcock | Parliamentary patter / clubhouse organ | Episode 04 / HOA |
-| just-a-sunday | Just a Sunday | Toy-piano lullaby / music-box nursery record | Musical cutaway / Mow the Sky (lawn loop) |
-| lace-waterfall | Lace Waterfall | 1971 space-rock anthem | Lace Waterfall |
-| les-ondes-courtes | Les Ondes Courtes | French electro-chanson | Episode 03 |
-| marble-tick-tack | Marble Tick Tack | Experimental tick-tock instrumental | Musical Cutaway / Visual Experiment |
-| moth-hour | Moth Hour | 1970s galloping space-metal | Lace Waterfall |
-| motif-refuses-the-peak | Motif Refuses the Peak | Melodic techno | Catalog / Night Side |
-| mysterium | Mysterium | Bubblegum Italo-pop | Series cutaway |
-| mysterium-a-cappella | Mysterium (A Cappella) | A cappella bubblegum pop | Series cutaway |
-| needle-drop-source | Needle Drop, Source | Diegetic soul | Catalog / Cue Sheets |
-| negotiating-with-the-elevator | Negotiating with the Elevator | Argentine tango duet | Building cast / corridor transit |
-| neon-exit-sign | Neon Exit Sign | 80s dark synth-pop / neon noir | Episode 01 reprise |
-| neon-nightfall | Neon Nightfall | cyberpunk | Visual Cutaway |
-| nine-percent-battery | Nine Percent Battery | Sincere indie-folk ballad | Building cast / hallway 4 AM |
-| no-music-here | No Music Here | Sparse soul | Catalog / Cue Sheets |
-| nofo-i-te-vai | Nofo i te Vai | Wallis and Futuna islander | Musical Cutaway |
-| open-gate | Open Gate | Bright twin-guitar metal | Lace Waterfall |
-| out-on-the-cut | Out on the Cut | Clipped downtempo | Catalog / Cue Sheets |
-| pad-kid-poured-curd | Pad Kid Poured Curd (Pulled Cold) | Cold patter electro / recall bulletin | EyeWash Station / late correction |
-| pans-down | Pans Down | Jazzy boom-bap hip-hop (drumless bed, the kitchen is the kit) | Musical cutaway / Pans Down (kitchen stove plate) |
-| paper-lung | Paper Lung | Instrumental chamber / bellows miniature | Visual Experiment / Animation Bridge |
-| passing-lane | Passing Lane | Outlaw country chase song at walking speed | Musical cutaway / Snail Passing Lane |
-| pearls-in-the-ashtray | Pearls in the Ashtray | Smoked midnight jazz | After-gala cutaway |
-| pepperoni-or-margherita | Pepperoni or Margherita | Commercial jingle → minor-key piano ballad | Episode 03 / any crossover |
-| permit-for-the-purple-light | Permit for the Purple Light | Bureaucratic bossa nova / clipboard lounge | Episode 04 / HOA |
-| porch-light-meridian | Porch Light Meridian | Progressive downtempo | Episode 03 |
-| quarter-to-seventy-five | Quarter to Seventy-Five | Ambient lullaby / detuned soft rock | Episode 02 |
-| receipt-dated-thursday | Receipt Dated Thursday | Institutional receipt recitation | Musical cutaway / Biscuit |
-| recycling-bin-rebellion | Recycling Bin Rebellion | Absurd punk-ska | Episode 04 / HOA |
-| rinse-cycle | Rinse Cycle (Fifteen Minutes, Do Not Blink) | Institutional soft rock / sign-off theme | Series framing device |
-| rubella-stand-up | Rubella Stand-Up (Voice Bed) | Spoken gag / Voice bed | Short packet farm / spoken cutaway |
-| said-and-left | Said and Left | Sprechstimme | Building cast / hallway |
-| same-sentence | Same Sentence | Phase-music duet | Building cast / laundry |
-| second-sun | Second Sun | Warm rock anthem | Lace Waterfall |
-| seoul-at-night | 서울의 밤 | K-pop | Musical Cutaway |
-| slide-between-stations | Slide Between Stations | Broadcast dream-pop / test-pattern shoegaze | EyeWash station-break / channel slide |
-| snow-on-glass | Snow on Glass | Driving techno | Catalog / Night Side |
-| soft-pull-forward | Soft Pull-Forward | Progressive house | Catalog / Night Side |
-| spooky-telephone-poles-dialog | Spooky Telephone Poles (Dialog) | Halloween sidewalk pseudoscience | Episode 03 |
-| standing-room | Standing Room | 1975 acoustic-and-slide stadium anthem | Lace Waterfall |
-| static-between-stations | Static Between Stations | Nocturnal electro-indie | Episode 02 / Laundromat |
-| sting-four-frames-late | Sting, Four Frames Late | Deadpan lounge funk | Catalog / Cue Sheets |
-| strange-light | Strange Light | Celestial downtempo electro | Episode 03 sky |
-| studio-huddle-dialog | Studio Huddle (Dialog) | Production meta-dialog | Episode 02 |
-| tattarrattat | Tattarrattat | Smoked midnight jazz / locked-door | After-gala / hallway liminal |
-| temp-love | Temp Love | Cassette soul | Catalog / Cue Sheets |
-| terms-and-conditions | Terms and Conditions (Complete Recording) | Vegas big-band showstopper | EyeWash station-break / end of block |
-| thank-you-for-the-lava | Thank You for the Lava | Melodic death-metal gallop / joke metal | Musical cutaway / Bubble Dragon (volcano cliff) |
-| the-clause | The Clause | Secco recitative | Voice credit / petition |
-| the-laundromat-saints | The Laundromat Saints | Slow liminal waltz | 2AM Laundromat Slow Dance |
-| the-light-in-the-stair | The Light in the Stair | Motet | Building stair / voice credit |
-| the-long-goodbye | The Long Goodbye | Sentimental pedal-steel ballad | Series cutaway |
-| monster-mash-finale | The Monster Mash (Finale) | Halloween novelty-rock cover | Episode 03 |
-| the-moon-is-collect | The Moon Is Collect | Nocturnal torch song | One-panel gag / penthouse |
-| the-most-refreshing-drink | The Most Refreshing Drink | Industrial ASMR lounge / fake sponsor bed | Ultra-Refreshed Water Lab / EyeWash sponsor |
-| the-pour | The Pour | Industrial cabaret | One-panel gag / foundry gala |
-| the-roof-knows-how-to-wait | The Roof Knows How to Wait | Dark cabaret ruin ballad | Musical cutaway / The Two |
-| third-shift-porcelain | Third Shift Porcelain | Heel-click electro / cold disco | One-panel gag / after hours |
-| this-program-contains-dialogue | This Program Contains Dialogue | Institutional torch / legal-bumper hymn | EyeWash Station / The Long Way Up |
-| through-the-lace | Through the Lace | Pastoral rock anthem | Lace Waterfall |
-| triphthong-table | Triphthong Table | Educational cabaret duet | Musical cutaway |
-| twilight-time | Twilight Time | 90s rave / eurodance | Character Archive |
-| two-chairs-one-mirror | Two Chairs, One Mirror | Torch-song waltz / dressing-room chamber pop | Musical cutaway / The Two |
-| two-left | Two Left | Vending-machine Motown / girl-group soul | Musical cutaway / Life Vending |
-| two-db-and-dont-tell-me | Two dB and Don't Tell Me | Fader blues | Catalog / Cue Sheets |
-| two-of-three | Two of Three | Tintinnabuli duet | Episode 5 candidate / ridge |
-| under-dialogue | Under Dialogue | Ducked soul / room-tone ballad | Catalog / Cue Sheets |
-| unspent | Unspent | Lied | Voice credit / small room |
-| well-fall | Well Fall | Instrumental heavy metal | Musical Cutaway / Visual Experiment |
-| whatever-lets-us-be | Whatever Lets Us Be | Dark cabaret piano ballad | Episode 01 / 03 |
-| yacht-guitar-orchestra | Yacht Guitar Orchestra | Strange guitar orchestra | Musical Cutaway |
-| zero-g-click | Zero-G Click | Trance-adjacent techno | Catalog / Night Side |
+| after-is-a-floor | After Is a Floor | Jazz, lounge & torch | EyeWash Station |
+| aria-thirty-night | Aria Thirty (Night) | Techno & house | Night Side |
+| article-seven | Article Seven | Soul, funk & hip-hop | Episode 3 |
+| big-city | Big City | Metal | Musical cutaway |
+| both-coats | Both Coats | Rock | Lace Waterfall |
+| box-box-hat | Box, Box, Hat | Jazz, lounge & torch | Musical cutaway |
+| caffeinated-melon | Caffeinated Melon | Cabaret & chamber | Musical cutaway |
+| call-forty-seven | Call Forty-Seven | Spoken & dialog | Episode 4 |
+| choose-your-basalt | Choose Your Basalt | Cabaret & chamber | Musical cutaway |
+| closed-since-ninety-eight | Closed Since Ninety-Eight | Pop & synth-pop | Musical cutaway |
+| closed-for-cosmic-reasons | Closed for Cosmic Reasons | Ambient & downtempo | One-panel gag |
+| come-further | Come Further | Ambient & downtempo | Musical cutaway |
+| condition-report | Condition Report | Cabaret & chamber | One-panel gag |
+| cue-out-scene-continues | Cue Out, Scene Continues | Soul, funk & hip-hop | Cue Sheets |
+| cue-sheets | Cue Sheets | Soul, funk & hip-hop | Cue Sheets |
+| daisy-bell | Daisy Bell | Cabaret & chamber | Musical cutaway |
+| deep-space-drift | Deep Space Drift | Ambient & downtempo | Musical cutaway |
+| desert-rose-horizon | Desert Rose Horizon | Ambient & downtempo | Musical cutaway |
+| e-x-i | E X I | Metal | Lace Waterfall |
+| early-not-broken | Early, Not Broken | Rock | Lace Waterfall |
+| eight-seconds | Eight Seconds | Rock | Lace Waterfall |
+| eleven-stops-since-thursday | Eleven Stops Since Thursday | Pop & synth-pop | Musical cutaway |
+| empty-parking-lot-waltz | Empty Parking Lot Waltz | Cabaret & chamber | Musical cutaway |
+| end-card-holds | End Card Holds | Techno & house | Night Side |
+| exhibit-a | Exhibit A | Soul, funk & hip-hop | Musical cutaway |
+| first-light-salt-flats | First Light Salt Flats | Ambient & downtempo | Musical cutaway |
+| from-the-west | From the West | Classical & chant | Episode 5 candidate |
+| g-train-fluorescent | G Train Fluorescent | Techno & house | Night Side |
+| ghost-in-the-reverb | Ghost in the Reverb | Ambient & downtempo | Musical cutaway |
+| ultra-screech | Ultra Screech (Glam-Sham-Poo) | Metal | EyeWash Station |
+| groove-break-earned | Groove Break (Earned) | Techno & house | Night Side |
+| ground-rent | Ground Rent | Classical & chant | Building cast |
+| halloween-snake-battle | Halloween Snake Battle | Metal | Episode 3 |
+| hallway-hum | Hallway Hum | Techno & house | Night Side |
+| hanshaw-underscore | Hanshaw Underscore (12-inch) | Techno & house | Night Side |
+| haunted-or-unscheduled | Haunted or Unscheduled | Ambient & downtempo | EyeWash Station |
+| heart-rate-optimal | Heart Rate Optimal | Pop & synth-pop | Episode 3 |
+| heavy-water | Heavy Water | Metal | Lace Waterfall |
+| heels-or-no-entry | Heels or No Entry | Dance & disco | Episode 5 candidate |
+| here-they-are | Here They Are | Ambient & downtempo | Musical cutaway |
+| hold-for-eight | Hold for Eight | Ambient & downtempo | Cue Sheets |
+| hold-the-note | Hold the Note | Rock | Lace Waterfall |
+| home-sweet-void-dialog | Home Sweet Void (Dialog) | Spoken & dialog | Visual experiment |
+| i-second-peggy-babcock | I Second Peggy Babcock | Cabaret & chamber | Episode 4 |
+| just-a-sunday | Just a Sunday | Cabaret & chamber | Musical cutaway |
+| lace-waterfall | Lace Waterfall | Rock | Lace Waterfall |
+| les-ondes-courtes | Les Ondes Courtes | Pop & synth-pop | Episode 3 |
+| marble-tick-tack | Marble Tick Tack | Ambient & downtempo | Visual experiment |
+| moth-hour | Moth Hour | Metal | Lace Waterfall |
+| motif-refuses-the-peak | Motif Refuses the Peak | Techno & house | Night Side |
+| mysterium | Mysterium | Pop & synth-pop | Musical cutaway |
+| mysterium-a-cappella | Mysterium (A Cappella) | Pop & synth-pop | Musical cutaway |
+| needle-drop-source | Needle Drop, Source | Soul, funk & hip-hop | Cue Sheets |
+| negotiating-with-the-elevator | Negotiating with the Elevator | Folk, country & world | Building cast |
+| neon-exit-sign | Neon Exit Sign | Pop & synth-pop | Episode 1 |
+| neon-nightfall | Neon Nightfall | Pop & synth-pop | Visual experiment |
+| nine-percent-battery | Nine Percent Battery | Folk, country & world | Building cast |
+| no-music-here | No Music Here | Soul, funk & hip-hop | Cue Sheets |
+| nofo-i-te-vai | Nofo i te Vai | Folk, country & world | Musical cutaway |
+| open-gate | Open Gate | Metal | Lace Waterfall |
+| out-on-the-cut | Out on the Cut | Ambient & downtempo | Cue Sheets |
+| pad-kid-poured-curd | Pad Kid Poured Curd (Pulled Cold) | Spoken & dialog | EyeWash Station |
+| pans-down | Pans Down | Soul, funk & hip-hop | Musical cutaway |
+| paper-lung | Paper Lung | Cabaret & chamber | Visual experiment |
+| passing-lane | Passing Lane | Folk, country & world | Musical cutaway |
+| pearls-in-the-ashtray | Pearls in the Ashtray | Jazz, lounge & torch | Musical cutaway |
+| pepperoni-or-margherita | Pepperoni or Margherita | Pop & synth-pop | Episode 3 |
+| permit-for-the-purple-light | Permit for the Purple Light | Jazz, lounge & torch | Episode 4 |
+| porch-light-meridian | Porch Light Meridian | Ambient & downtempo | Episode 3 |
+| quarter-to-seventy-five | Quarter to Seventy-Five | Ambient & downtempo | Episode 2 |
+| receipt-dated-thursday | Receipt Dated Thursday | Spoken & dialog | Musical cutaway |
+| recycling-bin-rebellion | Recycling Bin Rebellion | Rock | Episode 4 |
+| rinse-cycle | Rinse Cycle (Fifteen Minutes, Do Not Blink) | Rock | EyeWash Station |
+| rubella-stand-up | Rubella Stand-Up (Voice Bed) | Spoken & dialog | Spoken cutaway |
+| said-and-left | Said and Left | Classical & chant | Building cast |
+| same-sentence | Same Sentence | Classical & chant | Building cast |
+| second-sun | Second Sun | Rock | Lace Waterfall |
+| seoul-at-night | 서울의 밤 | Pop & synth-pop | Musical cutaway |
+| slide-between-stations | Slide Between Stations | Ambient & downtempo | EyeWash Station |
+| snow-on-glass | Snow on Glass | Techno & house | Night Side |
+| soft-pull-forward | Soft Pull-Forward | Techno & house | Night Side |
+| spooky-telephone-poles-dialog | Spooky Telephone Poles (Dialog) | Spoken & dialog | Episode 3 |
+| standing-room | Standing Room | Rock | Lace Waterfall |
+| static-between-stations | Static Between Stations | Pop & synth-pop | Episode 2 |
+| sting-four-frames-late | Sting, Four Frames Late | Soul, funk & hip-hop | Cue Sheets |
+| strange-light | Strange Light | Ambient & downtempo | Episode 3 |
+| studio-huddle-dialog | Studio Huddle (Dialog) | Spoken & dialog | Episode 2 |
+| tattarrattat | Tattarrattat | Jazz, lounge & torch | Musical cutaway |
+| temp-love | Temp Love | Soul, funk & hip-hop | Cue Sheets |
+| terms-and-conditions | Terms and Conditions (Complete Recording) | Jazz, lounge & torch | EyeWash Station |
+| thank-you-for-the-lava | Thank You for the Lava | Metal | Musical cutaway |
+| the-clause | The Clause | Classical & chant | Voice credit |
+| the-laundromat-saints | The Laundromat Saints | Cabaret & chamber | EyeWash Station |
+| the-light-in-the-stair | The Light in the Stair | Classical & chant | Voice credit |
+| the-long-goodbye | The Long Goodbye | Ambient & downtempo | Musical cutaway |
+| monster-mash-finale | The Monster Mash (Finale) | Rock | Episode 3 |
+| the-moon-is-collect | The Moon Is Collect | Jazz, lounge & torch | One-panel gag |
+| the-most-refreshing-drink | The Most Refreshing Drink | Ambient & downtempo | EyeWash Station |
+| the-pour | The Pour | Cabaret & chamber | One-panel gag |
+| the-roof-knows-how-to-wait | The Roof Knows How to Wait | Cabaret & chamber | Musical cutaway |
+| third-shift-porcelain | Third Shift Porcelain | Dance & disco | One-panel gag |
+| this-program-contains-dialogue | This Program Contains Dialogue | Jazz, lounge & torch | EyeWash Station |
+| through-the-lace | Through the Lace | Rock | Lace Waterfall |
+| triphthong-table | Triphthong Table | Cabaret & chamber | Musical cutaway |
+| twilight-time | Twilight Time | Dance & disco | Character archive |
+| two-chairs-one-mirror | Two Chairs, One Mirror | Jazz, lounge & torch | Musical cutaway |
+| two-left | Two Left | Soul, funk & hip-hop | Musical cutaway |
+| two-db-and-dont-tell-me | Two dB and Don't Tell Me | Soul, funk & hip-hop | Cue Sheets |
+| two-of-three | Two of Three | Classical & chant | Episode 5 candidate |
+| under-dialogue | Under Dialogue | Soul, funk & hip-hop | Cue Sheets |
+| unspent | Unspent | Classical & chant | Voice credit |
+| well-fall | Well Fall | Metal | Visual experiment |
+| whatever-lets-us-be | Whatever Lets Us Be | Cabaret & chamber | Episode 1 |
+| yacht-guitar-orchestra | Yacht Guitar Orchestra | Folk, country & world | Musical cutaway |
+| zero-g-click | Zero-G Click | Techno & house | Night Side |
 
 Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/songs with STYLE / LYRICS / NOTES sections suitable for regenerating tracks in Minimax.
 
@@ -399,7 +399,7 @@ Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in `content
 ```
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, staff, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
+├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills + cast notes

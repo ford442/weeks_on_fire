@@ -31,7 +31,7 @@ export type SiteView =
   | 'sequences'
   | 'characters'
   | 'episodes'
-  | 'staff';
+  | 'crew';
 
 const viewMeta: Record<SiteView, { title: string; description: string; icon: typeof Film }> = {
   gallery: {
@@ -88,8 +88,8 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
       'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
     icon: BookOpen,
   },
-  staff: {
-    title: 'Series crew',
+  crew: {
+    title: 'Crew',
     description:
       'Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.',
     icon: Users,
@@ -106,7 +106,7 @@ const tabs: Array<{ view: SiteView; label: string }> = [
   { view: 'sequences', label: '3D sequences' },
   { view: 'characters', label: 'Characters' },
   { view: 'episodes', label: 'Episodes' },
-  { view: 'staff', label: 'Crew' },
+  { view: 'crew', label: 'Crew' },
 ];
 
 export default function SiteHeader() {
@@ -233,7 +233,7 @@ const tabIcons: Record<SiteView, typeof Film> = {
   sequences: Box,
   characters: UserCircle,
   episodes: BookOpen,
-  staff: Users,
+  crew: Users,
 };
 
 interface TabLinkProps {

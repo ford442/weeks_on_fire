@@ -2,9 +2,10 @@
 id: yacht-guitar-orchestra
 title: Yacht Guitar Orchestra
 added: 2026-11-01
-genre: Strange guitar orchestra
+genre: "Folk, country & world"
+subgenre: "Strange guitar orchestra"
 description: "Instrumental stack for the daylight yacht: Clean Line, Harmonic Choir, Low Orbit. 96 BPM D major. Rubella and Lillith sunbathing; guitar line on the rail."
-episode: Musical Cutaway
+episode: "cutaway"
 tags: [guitar-orchestra, instrumental, yacht, rubella, lillith]
 instrumental: true
 ---

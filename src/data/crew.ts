@@ -1,8 +1,8 @@
-import { staffRecords } from './generated/staff';
+import { crewRecords } from './generated/crew';
 
-import type { StaffMember } from './types';
+import type { CrewMember } from './types';
 
-export type { StaffMember, StaffRecord, StaffRole } from './types';
+export type { CrewMember, CrewRecord, CrewRole } from './types';
 
 /** Cast portraits live in public/cast and ship via deploy.py with the site. */
 function sitePrefix(): string {
@@ -12,7 +12,7 @@ function sitePrefix(): string {
   return '';
 }
 
-export const staffMembers: StaffMember[] = staffRecords.map((member) => ({
+export const crewMembers: CrewMember[] = crewRecords.map((member) => ({
   id: member.id,
   name: member.name,
   role: member.role,

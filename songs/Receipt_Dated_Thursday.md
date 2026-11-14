@@ -2,9 +2,11 @@
 id: receipt-dated-thursday
 title: Receipt Dated Thursday
 added: 2026-09-06
-genre: Institutional receipt recitation
+genre: "Spoken & dialog"
+subgenre: "Institutional receipt recitation"
 description: Continuity Voice reads a poodle’s return receipt from a store that will not exist until Thursday. The barcode is always one digit short.
-episode: Musical cutaway / Biscuit
+episode: "cutaway"
+slot: "Biscuit"
 tags: [biscuit, continuity-voice, receipt, comedy, eyewash-station, hoa]
 instrumental: false
 audioFile: null

@@ -1,8 +1,8 @@
 # French cabaret songs — Rubella and Lillith in French
 
-*Drawer. Text only. 2026-11-08; ten songs as of 2026-11-15. `promote?: no` on every song. Not codegen'd.*
+*Drawer. Text only. 2026-11-08; thirteen songs as of 2026-11-15. `promote?: no` on every song. Not codegen'd.*
 
-Ten silly songs in Paris cabaret and chanson styles, sung in French and played completely
+Thirteen silly songs in Paris cabaret and chanson styles, sung in French and played completely
 straight. Each one takes a single literal, absurd premise and treats it as the most serious
 thing in the world. Every file has an English gloss in its NOTES (for the room, not for
 singing). Lyrics and melodies are original; no existing chanson is quoted.
@@ -23,6 +23,9 @@ Shape matches [`../wet-enamel.md`](../wet-enamel.md): frontmatter, field table, 
 | [`Le_Manege.md`](Le_Manege.md) | valse-musette × steam fairground organ, 156 | the carousel horses get bored, gallop all over town, and click back into place before the music stops | Rubella, Lillith (pig, guitar) | the horses gallop all over town and come back before the music stops |
 | [`Le_Fromage.md`](Le_Fromage.md) | bal-musette java × spaghetti-western, 132 | her cheese is so stinky the whole train leaves without her, but the cows come to say hello | Rubella, Lillith (guitar) | the whole train leaves, and the cows come to say hello |
 | [`Le_Croissant.md`](Le_Croissant.md) | café-concert chanson × late-1970s disco, 118 | one bite of a croissant and the crumbs snow over the whole town (the morning after *La Baguette*) | Rubella, Lillith (wah guitar) | one bite and the crumbs snow over the whole town |
+| [`La_Cigogne.md`](La_Cigogne.md) | 1950s chanson à texte × mambo, 112 | she orders one silver teaspoon and the storks bring a whole house | Rubella, Lillith (guitar) | she ordered one tiny spoon and the storks brought her a whole house |
+| [`La_Bicyclette.md`](La_Bicyclette.md) | bal-musette java × village brass fanfare, 168 | she rides slowly to buy six eggs, and the whole bike race follows her because nobody will pass her | Rubella (pedals), Lillith (back seat, guitar) | she rides really slowly to buy eggs and wins the race because nobody wants to pass her |
+| [`L_Escargot.md`](L_Escargot.md) | 1930s chanson × slow 12/8 blues, 66 | the café waiter is a snail; by the time her coffee arrives, two winters have gone by | Rubella, Lillith (slide guitar) | the waiter is a snail, and two winters go by before her coffee arrives |
 
 **Neighbours, not to be replaced:** *Les Ondes Courtes* (French electro-chanson, the
 Ep3 night drive) · *Choose Your Basalt* (educational cabaret) · *Empty Parking Lot Waltz* ·
@@ -34,6 +37,9 @@ Ep3 night drive) · *Choose Your Basalt* (educational cabaret) · *Empty Parking
 - The **forty folding chairs at the curb** ("One item per household.") and **"they do not
   clap, they creak"** (*Le Cancan*).
 - The **bakery and the town** from *La Baguette*, continued the next morning in *Le Croissant*.
+- The **Pizza Guy** passes the bike race in *La Bicyclette*, the only rider who overtakes Rubella.
+- Lillith's **safety glasses**, pushed up and never used (*La Bicyclette*).
+- Rubella's **World's Okayest Tenant mug**, the scene's clock (*La Cigogne*).
 
 **Voice locks:** Rubella is dry, raspy and rationed, even in a torch song: the passion is in
 the music, not her face. Lillith is bright and conspiratorial, and her energy goes into the

@@ -18,6 +18,8 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `backlog.md` – quick capture of fleeting ideas
 
 ## Current files
+- `bounce-house-ring-war.md` – (2026-11-15) video, ~2:22 kids' tune vs cartoon snake death-metal band in an inflatable wrestling ring. Real↔cartoon flips on the genre drops, Pizza Guy snap-back at peak chaos, Lillith's mascara survives every switch. 15 clips, placeholder song structure (no drop map yet). Not the royal bouncy castle (`songs/bounce-castle`). Companion: `bounce-house-beats.md`. `stream: video`, `promote?: no`.
+- `bounce-house-beats.md` – (2026-11-15) 12 extra insert beats for the Ring War (referee deflating, drumsticks in the ceiling, cartoon tongue flick, slapped-mat revival, TV test pattern). Any-bar cuts, plus two switch shots on the exact genre flip. Kid-silly, no gore. `stream: video`.
 - `seed-casts-twice.md` – Reiniger shadow-puppet visual experiment: noir paper street, orphan shadow blooms into a fractal garden on the child's breath, seed is a flat disc. Silent 30s first. Paper Lung queued (76 BPM A minor). Prompts: [`prompts/seed-casts-twice-segments.md`](../prompts/seed-casts-twice-segments.md). Claude runbook: [`seed-casts-twice-agentic.md`](seed-casts-twice-agentic.md). Suggestions id `seed-casts-twice`. Farm [#22](https://github.com/ford442/weeks_on_fire/issues/22). Not [#42](https://github.com/ford442/weeks_on_fire/issues/42).
 - `monster-mash-expansion.md` – cameo beats (Amy & Alec, Thriller werewolf), staging ideas, and Grok Imagine prompt-craft notes for the Ep3 finale
 - `eyewash-station.md` – channel / network framing for the cutaways (diegesis locked: slide, never comment)

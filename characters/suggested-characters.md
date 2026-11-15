@@ -130,7 +130,7 @@ Character concepts ready to adopt, merge, or reject. **The Two** (Vivienne & Lil
 
 **🎓 Graduated — full sheet:** [`bible/justine.md`](bible/justine.md)
 
-**Role:** Deadpan finisher. Dry one-liners that land like gavels. **Fourth core cast member** on the Halloween lawn ensemble (younger, dark-haired — visually distinct from the near-identical lace sisters).
+**Role:** Deadpan finisher. Dry one-liners that land like gavels. **Fourth core cast member** on the Halloween lawn ensemble (younger, dark-haired — visually distinct from the near-identical lace trio).
 
 **Traits:** Appears uninvolved until she's the only one with a solution. Would buy a robot a latte.
 

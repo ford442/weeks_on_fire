@@ -15,10 +15,16 @@ They live in the same decaying, rule-obsessed structure where the HOA memos arri
 >
 > **Rubella and Lillith Vale are not Vivienne and Liliane Vale** ([`the-two.md`](the-two.md)).
 > Four Vales, no stated relation, never remarked on.
+>
+> **Rubella and Lillith now have enforceable sheets:** [`bible/rubella-vale.md`](bible/rubella-vale.md)
+> and [`bible/lillith-vale.md`](bible/lillith-vale.md) (look, voice, Do / Don't). The bios below are the
+> long-form background and scene index. Where they disagree with a sheet, **the sheet wins.**
 
 ---
 
 ## Rubella
+
+> Enforceable sheet: [`bible/rubella-vale.md`](bible/rubella-vale.md).
 
 **Role / Vibe**  
 Endlessly exhausted, cynical survivor with a razor-sharp wit. She is the one who has already seen this exact flavor of nightmare three times this week and is still somehow the most functional person in the room. Protagonist energy delivered through pure survival fatigue.
@@ -66,6 +72,8 @@ Core protagonist. Already heavy in Episode 3 scripts, audio cuts, and multiple m
 ---
 
 ## Lillith
+
+> Enforceable sheet: [`bible/lillith-vale.md`](bible/lillith-vale.md).
 
 **Role / Vibe**  
 The chaotic catalyst. Bold, slightly unhinged, and remarkably resilient. Where Rubella endures, Lillith *provokes*. She treats the building's escalating insanity as an artistic challenge rather than a hazard. If something can be improved with duct tape, neon, or an unauthorized fireworks display, she will try it.
@@ -151,7 +159,7 @@ HOA meeting episodes, any scene requiring an authority figure who is both ridicu
 Madelyn is never seen, so she cannot knock. If she could, she would leave a laminated card on the carved wood about unapproved snow load, and the card would sit in the gilt throat all night with no one to enforce it. There is no HOA on Christina hill. **Not on the hill this week, or any week.** Do not cast a face to find out.
 
 **Status**  
-Strong antagonist / authority energy. Already appears as Madelin in Episode 3 concepts and HOA sketches. Name standardized here as Madelyn.
+Strong antagonist / authority energy, never seen. **Not** Episode 3's Madelin (a different character). The rename question is still open with the series owner; until it is decided, spell her *Madelyn* and keep her off screen. See the [bible open questions](bible/README.md#open-questions-do-not-resolve-casually).
 
 ---
 

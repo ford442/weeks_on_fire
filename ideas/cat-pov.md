@@ -7,7 +7,7 @@
 **Prompts:** `prompts/cat-pov-segments.md`  
 **Catalog:** `content/cutaways/cat-pov.json`
 
-This is the proof that the series has a **pure-visual lane**: no Continuity Voice, no HOA minutes, no Vale sisters. The cat does not understand the plot and does not need to. We watch what it watches.
+This is the proof that the series has a **pure-visual lane**: no Continuity Voice, no HOA minutes, no Vales. The cat does not understand the plot and does not need to. We watch what it watches.
 
 ---
 

@@ -47,6 +47,8 @@ Every sheet's header carries one:
 |---|---|---|
 | [Vivienne Vale](vivienne-vale.md) | recurring | Ep1 · Ep4 (back wall) · House of Mirrors Rally |
 | [Liliane Vale](liliane-vale.md) | recurring | Ep1 · Ep4 (back wall) · House of Mirrors Rally |
+| [Rubella Vale](rubella-vale.md) | active | Ep3 · building-cast set · Rubella Stand-Up · The Long Way Up · Lace Waterfall |
+| [Lillith Vale](lillith-vale.md) | active | Ep3 · building-cast set · The Long Way Up · Lace Waterfall |
 | [The Pizza Guy](the-pizza-guy.md) | recurring | Ep3 · Ep4 · every crossover |
 | [Justine](justine.md) | active | Ep3 (Monster Mash, ping-pong) |
 | [Qing Rao](qing-rao.md) | active | Ep3 (Monster Mash) · building lobby cameo |
@@ -63,13 +65,13 @@ Every sheet's header carries one:
 
 Also cast, documented elsewhere and **not duplicated here**:
 
-- **Rubella Vale & Lillith Vale** — [`../building-cast.md`](../building-cast.md) (plus Madelyn, Qing).
+- **Madelyn** (building, never seen) — [`../building-cast.md`](../building-cast.md#madelyn). Long-form bios
+  for Rubella and Lillith also live there; their **sheets above win** wherever the two disagree.
 - **Riley Smith** — [`../riley-smith.md`](../riley-smith.md). That file is already bible-grade; treat it as one of these.
 - **The Radio Voice (Episode 2)** — documented at the bottom of
   [`eyewash-staff.md`](eyewash-staff.md#the-radio-voice-episode-2), because the only thing
   anyone needs to know about him is his relationship to the Continuity Voice.
-- **Scarlet** (silent third in black lace, Ep3 *Spooky Telephone Poles*) — catalog entry only,
-  `content/characters.json`; cameo rules in `notes/callback-bank.md`. No sheet yet.
+- **Scarlet** — **catalog cameo, no sheet.** See the [Scarlet lock](#scarlet-lock-catalog-cameo-no-sheet) below.
 - **Staging:** as of 2026-10-10 every seed in
   [`../suggested-characters.md`](../suggested-characters.md) carries a 🎓 marker. New seeds
   start there.
@@ -103,14 +105,19 @@ recorded here so a reversal is deliberate rather than accidental.
 | Pair | Who | Register | Home files |
 |---|---|---|---|
 | **The Two** | Vivienne Vale · Liliane Vale | Glamour-apocalypse. Ballrooms, galas, burning towns, the back wall of an HOA meeting. | [`../the-two.md`](../the-two.md), this bible, `notes/scenes/house-of-mirrors-rally.md` |
-| **The building pair** | Rubella Vale · Lillith Vale | Exhausted domestic. Laundry rooms, elevators, lawns, ridge roads. | [`../building-cast.md`](../building-cast.md), `content/characters.json`, `notes/scenes/` |
+| **The building pair** | Rubella Vale · Lillith Vale | Exhausted domestic. Laundry rooms, elevators, lawns, ridge roads. | [`rubella-vale.md`](rubella-vale.md), [`lillith-vale.md`](lillith-vale.md), [`../building-cast.md`](../building-cast.md), `notes/scenes/` |
 
 Four women, one surname, no stated relation. **Nobody on screen ever remarks on the name.**
 Do not write a scene that asks. Do not write a scene that answers. If the four are ever in
 one frame, the joke is that the framing treats it as unremarkable.
 
-*(Catalog: `content/characters.json` carries all four Vales, each with its own entry —
-Vivienne and Liliane with `bibleSheet` links to this folder.)*
+*(Catalog: `content/characters.json` carries all four Vales, each with its own entry and a
+`bibleSheet` link to this folder.)*
+
+**Naming in notes:** the building pair are **"the building pair"** or **"Rubella and Lillith."**
+On screen Rubella calls Lillith "my roommate." Nobody, in any file, calls any of the four
+"sisters" or "the Vale sisters." The catalog tag is `building-pair`; the old `vale-sisters` tag
+is retired.
 
 ### 2. Qing Rao is one person, and she is the one with the skull
 
@@ -136,21 +143,47 @@ hazard, not a mystery** — see [Open questions](#open-questions-do-not-resolve-
 hooks in `../the-two.md` are retained as a *Rejected / alternate* appendix on each sheet so
 nothing is lost, but they are no longer live options.
 
+### 5. Rubella and Lillith have sheets, and the register is domestic
+
+As of 2026-11-15, [`rubella-vale.md`](rubella-vale.md) and [`lillith-vale.md`](lillith-vale.md)
+are the enforceable sheets. The old catalog cards read the Ep3 Monster Mash costume (hologram
+mic, spy trenches, champagne) as the whole character and pulled them toward The Two. That
+reading is retired. **Black lace stays; the gala does not.** Spy vs. Spy and the hologram are one
+cutaway's costume. `../building-cast.md` keeps the long-form bios and the scene index; where it
+disagrees with a sheet, the sheet wins.
+
+### Scarlet lock: catalog cameo, no sheet
+
+Scarlet is a **catalog cameo** (`content/characters.json`). She does not get a sheet, and nobody
+writes her one without a series-owner decision in the table below.
+
+- **Who she is on screen:** the silent third woman in matching black lace. *Spooky Telephone
+  Poles* (Ep3): flanks Rubella, says nothing until the unison button line, leans away from the
+  pole in sync. Monster Mash finale (Ep3): the third woman in black lace on the couch, the one
+  sitting next to Justine, on purpose ([`justine.md`](justine.md)).
+- **What she is not:** not a Vale, not a sister, not related to anyone, as far as anyone says. No
+  surname. Never "the third sister."
+- **Rules:** silent except a unison button line. No solo line, no backstory, no reaction shot of
+  her own. Matching black lace and blood-red lipstick. Never in a Rubella and Lillith two-hander,
+  and never in Lace Waterfall (the band is two people).
+- **Non-canon:** `ai-contributions/gemini-3.1Pro/zero-gravity-laser-snakes.md` gives her lines
+  and calls her identical to Rubella. That file is a contribution, not canon. Do not pull from it.
+
 ---
 
 ## Open questions (do not resolve casually)
 
 | Question | Status | Who decides |
 |---|---|---|
-| Rename building-cast **Madelyn** (proposal: **Marilyn Ocasek**, or fold her into Karen, whom she already shares three lines with) | Open — recommended | Series owner |
+| Rename building-cast **Madelyn** (proposal: **Marilyn Ocasek**, or fold her into Karen, whom she already shares three lines with) | **Still open (reviewed 2026-11-15).** A rename touches every building scene and song, so it waits for the owner. **Writer rule until then:** spell it *Madelyn* (with a y) for the building enforcer and *Madelin* (with an i) for the Ep3 lawn character; Madelyn is never seen (intercom, laminated memo, or the Stand-Up clipboard silhouette); any Madelyn line that also appears in [`hoa-cast.md`](hoa-cast.md#karen) is Karen's. | Series owner |
 | Add Vivienne and Liliane to `content/characters.json` so the hub's Characters view carries all four Vales | **Done** — both entries exist with `bibleStatus` + `bibleSheet` | — |
 | Whether the Continuity Voice and the Radio Voice are the same person | **Locked as unresolved.** `docs/season-arc.md`. Never confirm on screen. | Nobody. It stays open. |
 | Whether the Pizza Guy knows | **Locked as unresolved on screen.** The sheet commits an answer for the writers' room only; it is never spoken. | Nobody. |
 | Cast UI (`src/data/cast.ts` + a Cast view beside Staff) | **Mostly covered** — the Characters view (`src/components/Characters.tsx`) already renders `bibleStatus` badges and links each `bibleSheet`. A separate Cast view is only needed if ensemble sheets (HOA, EyeWash, liminal) need their own cards. | Catalog maintainer |
-| Rubella and Lillith called **"Vale sisters"** in `episodes/episode-02/studio-huddle.md:292` (a production note). Canon is *no stated relation*; Rubella says "roommate" in *Rubella Stand-Up*. Scarlet's catalog role also says "third sister." | Open — recommend rewording both notes to "Vale pair" / "silent third" | Series owner |
-| The **third woman in black lace** on the Ep3 finale couch (`episodes/episode-03/monster-mash-finale.md`, "three women in black lace + Justine") is never named. Scarlet is the obvious candidate. | Open | Series owner |
-| **Karen holds swatches** in the Ep4 911 beat (`episodes/episode-04/scenes.md`, *Call Forty-Seven*). Swatches are Brad's prop everywhere else ("He always has swatches"). | **Done (2026-11-11)** — Ep4 `scenes.md` / `scenes.json` and `content/cutaways/911-wrong-shade.json` now give Karen her clipboard. Still open: Karen sings "I have the swatches" in `songs/Call_Forty-Seven.md` and `content/cutaways/mv-call-forty-seven.json` (lyric — owner's call). See `notes/scenes/continuity.md`. | Series owner (lyric only) |
-| Pizza Guy's Ep4 doorway uniform: "slightly wrong uniform" (`episodes/episode-04/scenes.md`) vs. "red uniform" (`notes/scenes/item-three-decorative-accent.md`). | **Done (2026-11-11)** — red, per the parent. Ep4 `scenes.md` / `scenes.json` updated. | — |
+| Rubella and Lillith called **"Vale sisters"** in `episodes/episode-02/studio-huddle.md:292` (a production note). Canon is *no stated relation*; Rubella says "roommate" in *Rubella Stand-Up*. Scarlet's catalog role also said "third sister." | **Decided (2026-11-15).** Nobody is a sister. The studio-huddle note now reads "building pair (Rubella / Lillith)"; Scarlet's catalog role is "Silent third"; the `vale-sisters` tag is retired from the catalog and songs; stray "sisters" wording in `justine.md`, `qing-rao.md`, the Ep3 finale treatment, `ideas/cat-pov.md` and two cartoon seeds was reworded. See [decision 1](#1-there-are-two-vale-pairs-and-the-show-never-explains-it) for the naming rule. | Series owner (bible decision, reversible) |
+| The **third woman in black lace** on the Ep3 finale couch (`episodes/episode-03/monster-mash-finale.md`, "three women in black lace + Justine") is never named. Scarlet is the obvious candidate. | **Decided (2026-11-15): it is Scarlet,** the one sitting next to Justine on purpose ([`justine.md`](justine.md), `notes/callback-bank.md`). Silent; no line added. The treatment's couch note now names her. Rules: [Scarlet lock](#scarlet-lock-catalog-cameo-no-sheet). | Series owner (bible decision, reversible) |
+| **Karen holds swatches** in the Ep4 911 beat (`episodes/episode-04/scenes.md`, *Call Forty-Seven*). Swatches are Brad's prop everywhere else ("He always has swatches"). | **Picture and dialog: done (2026-11-11)** — Ep4 `scenes.md` / `scenes.json` and `content/cutaways/911-wrong-shade.json` give Karen her clipboard. **Lyric: still open (reviewed 2026-11-15).** Karen sings "I have the swatches" in `songs/Call_Forty-Seven.md`, and the `content/cutaways/mv-call-forty-seven.json` shot list puts swatches in her hand. **Writer rule until then:** in any new scene, prompt or still, Karen holds the clipboard and Brad holds the swatches; do not quote that lyric line outside the song. See `notes/scenes/continuity.md`. | Series owner (lyric + MV shot list only) |
+| Pizza Guy's Ep4 doorway uniform: "slightly wrong uniform" (`episodes/episode-04/scenes.md`) vs. "red uniform" (`notes/scenes/item-three-decorative-accent.md`). | **Done (2026-11-11), re-checked 2026-11-15** — red, per the parent. Ep4 `scenes.md` / `scenes.json` say "red uniform"; the "slightly wrong" wording survives only in the `notes/scenes/continuity.md` changelog. (The Ep4 cold-open drive-by in a breakfast-shift polo is a different appearance and a different uniform, per the rotation rules in [`the-pizza-guy.md`](the-pizza-guy.md#uniform-rotation).) | — |
 
 ---
 

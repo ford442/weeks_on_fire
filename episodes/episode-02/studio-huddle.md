@@ -289,7 +289,7 @@ Both. That's how you know it's real.
 4. Lillith pointing at barista print (ref `image_9311e1.jpg`)
 5. Mara scribbling under softbox flare + neon WEEK ON FIRE
 
-**The Two (Vivienne & Liliane) — Appears:** No (Vale sisters as Rubella / Lillith)  
+**The Two (Vivienne & Liliane) — Appears:** No (building pair: Rubella / Lillith)  
 **Pizza Guy — Appears:** No (optional deep-background PA walk-through in wide)  
 **Key Props:** Annotated clipboard, cereal box, storyboard prints, folding chairs, orange neon fixture  
 **Status:** Draft — ready for asset gen (`prompts/studio-huddle-segments.md`)

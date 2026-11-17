@@ -17,11 +17,15 @@ const Episodes = lazy(viewLoaders.episodes);
 const Crew = lazy(viewLoaders.crew);
 const PublicLayout = lazy(() => import('./public/PublicLayout'));
 const Listen = lazy(() => import('./public/Listen'));
+const Album = lazy(() => import('./public/Listen').then((m) => ({ default: m.Album })));
 const PublicHome = lazy(() =>
   import('./public/PublicPages').then((m) => ({ default: m.PublicHome })),
 );
 const LaceWaterfall = lazy(() =>
   import('./public/PublicPages').then((m) => ({ default: m.LaceWaterfall })),
+);
+const MusicProjects = lazy(() =>
+  import('./public/PublicPages').then((m) => ({ default: m.MusicProjects })),
 );
 
 /** Card-shaped placeholders so the layout doesn't jump when a view's chunk arrives. */
@@ -126,6 +130,8 @@ export default function App() {
           <Route path="index.html" element={<PublicHome />} />
           <Route path="listen" element={<Listen />} />
           <Route path="listen/:id" element={<Listen />} />
+          <Route path="albums" element={<MusicProjects />} />
+          <Route path="albums/:id" element={<Album />} />
           <Route path="lace-waterfall" element={<LaceWaterfall />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

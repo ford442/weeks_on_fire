@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter, useLocation } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -209,6 +209,40 @@ describe('public site', () => {
     expect(screen.getByRole('link', { name: 'Crew hub →' }).getAttribute('href')).toBe('/show');
     expect(screen.queryByRole('link', { name: 'Weeks on Fire' })).toBeNull();
   });
+
+  it('links from the public home to the music index and both projects', async () => {
+    renderRoute('/');
+    const nav = await screen.findByRole('navigation', { name: 'Public site' });
+    expect(screen.getByRole('link', { name: /^Night Side/ }).getAttribute('href')).toBe(
+      '/albums/night-side',
+    );
+    fireEvent.click(within(nav).getByRole('link', { name: 'Music' }));
+    expect(await screen.findByRole('heading', { name: 'Music projects' })).toBeTruthy();
+    expect(screen.getByRole('link', { name: /^Lace Waterfall/ }).getAttribute('href')).toBe(
+      '/albums/lace-waterfall',
+    );
+  });
+
+  it.each([
+    ['night-side', 'Night Side', 'G Train Fluorescent', 'Heavy Water'],
+    ['lace-waterfall', 'Lace Waterfall', 'Heavy Water', 'G Train Fluorescent'],
+  ])(
+    'shows only the %s project tracks and lets visitors select an upcoming track',
+    async (albumId, title, track, unrelatedTrack) => {
+      renderRoute(`/albums/${albumId}?track=daisy-bell`);
+      expect(await screen.findByRole('heading', { name: title, level: 1 })).toBeTruthy();
+      expect(screen.queryByRole('link', { name: new RegExp(unrelatedTrack) })).toBeNull();
+      expect(screen.getByRole('heading', { name: 'Audio coming soon' })).toBeTruthy();
+
+      const link = screen.getByRole('link', { name: new RegExp(track) });
+      expect(link.getAttribute('href')).toMatch(new RegExp(`^/albums/${albumId}\\?track=`));
+      fireEvent.click(link);
+      const player = screen.getByRole('region', { name: 'Now playing' });
+      expect(await within(player).findByRole('heading', { name: track })).toBeTruthy();
+      expect(within(player).getByText('Audio coming soon')).toBeTruthy();
+      expect(within(player).queryByRole('button', { name: /^Play / })).toBeNull();
+    },
+  );
 
   it('moves a bare creator URL under /show', async () => {
     renderRoute('/songs');

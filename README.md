@@ -6,6 +6,10 @@
 
 **https://ford442.github.io/weeks_on_fire**
 
+The public [Music projects](https://ford442.github.io/weeks_on_fire/albums) page groups songs by
+album or project. Add a project in `src/public/catalog.ts`: its ID matches a song's episode or tag.
+Only songs with linked audio appear as playable; the rest are marked “Audio coming soon.”
+
 React + Vite gallery with production views:
 
 | View               | What you get                                             |

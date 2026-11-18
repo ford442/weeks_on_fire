@@ -18,6 +18,8 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `backlog.md` – quick capture of fleeting ideas
 
 ## Current files
+- `bounce-house-ring-war.md` – (2026-11-15) video, ~2:22 kids' tune vs cartoon snake death-metal band in an inflatable wrestling ring. Real↔cartoon flips on the genre drops, Pizza Guy snap-back at peak chaos, Lillith's mascara survives every switch. 15 clips, placeholder song structure (no drop map yet). Not the royal bouncy castle (`songs/bounce-castle`). Companion: `bounce-house-beats.md`. `stream: video`, `promote?: no`.
+- `bounce-house-beats.md` – (2026-11-15) 12 extra insert beats for the Ring War (referee deflating, drumsticks in the ceiling, cartoon tongue flick, slapped-mat revival, TV test pattern). Any-bar cuts, plus two switch shots on the exact genre flip. Kid-silly, no gore. `stream: video`.
 - `seed-casts-twice.md` – Reiniger shadow-puppet visual experiment: noir paper street, orphan shadow blooms into a fractal garden on the child's breath, seed is a flat disc. Silent 30s first. Paper Lung queued (76 BPM A minor). Prompts: [`prompts/seed-casts-twice-segments.md`](../prompts/seed-casts-twice-segments.md). Claude runbook: [`seed-casts-twice-agentic.md`](seed-casts-twice-agentic.md). Suggestions id `seed-casts-twice`. Farm [#22](https://github.com/ford442/weeks_on_fire/issues/22). Not [#42](https://github.com/ford442/weeks_on_fire/issues/42).
 - `monster-mash-expansion.md` – cameo beats (Amy & Alec, Thriller werewolf), staging ideas, and Grok Imagine prompt-craft notes for the Ep3 finale
 - `eyewash-station.md` – channel / network framing for the cutaways (diegesis locked: slide, never comment)
@@ -31,6 +33,7 @@ This folder is for raw brainstorming and high-level creative thinking.
 - `marble-tick-tack-orbit.md` – 2026-09-05 punch-in map: 136 BPM magnet orbits / gears / three-phase coils on the night-lot take (not a new cutaway).
 - `marble-tick-tack-magnetics.md` – 2026-09-05 second punch-in pass: cylinder bodies (discs spinning on their ends, rod pairs tumbling end-over-end), the jump gap (still, one-frame cross, slam on the kick), mutual orbit around an empty center, and a dancer bank so the rooms vibrate on the eighths. Dancers hop, magnets orbit.
 - `marble-tick-tack-agentic.md` – Grok 4.6 build + Claude agentic runbook for the remaining magnet–magnet half (generate C/D/G first).
+- `bounce-castle-agentic.md` – Claude runbook for the Bounce Castle song video (generate 01/05/08/09/11/13 first, locks, farm #22 / #18 / #33, never #42). Prompts: [`prompts/bounce-castle-segments.md`](../prompts/bounce-castle-segments.md). `promote?: no`.
 - `marble-tick-tack-worlds.md` – sibling *Wrong Sets* on the same song: magnets never notice while the episode regenerates (Halbach desert, hopping lion, Meissner ice, Helmholtz saucer, London / Seoul, souvenir chain).
 - `daisy-bell-cutaway.md` – Rubella & Lillith living-flower tandem, wildflower field → period London, B&W scratch ↔ HD color. Indoor-river room and paint rivulets pointed from here.
 - `big-city-hairdos.md` – downtown / Fleet Street think tank: giant awkward 1890s hairdos as civic obstacles (roundabout, cafe with no eye-line, revolving door). Feeds Daisy Bell street sights. Not Ultra Screech.

@@ -50,7 +50,7 @@ After the laser-snake battle, the core cast gathers on the lawn and demands Rube
 
 ### Justine (fourth character)
 
-Younger, dark-haired — distinct from the near-identical lace sisters. Deadpan finisher energy (see `characters/suggested-characters.md`). On the vintage couch during chorus 2; may hold the glowing crystal skull in some shots while Qing Rao mingles.
+Younger, dark-haired — distinct from the near-identical lace trio (Lillith, Rubella, Scarlet). Deadpan finisher energy (see `characters/suggested-characters.md`). On the vintage couch during chorus 2; may hold the glowing crystal skull in some shots while Qing Rao mingles.
 
 ---
 
@@ -243,7 +243,7 @@ SNL-style title card, pure black background, silver glitter portraits of two gla
 ### Core cast & set dressing
 - Large **silver vintage microphone** on lawn stand
 - **Defeated giant snake coils** on grass (battle aftermath)
-- **Vintage couch** dragged onto lawn — three women in black lace + Justine
+- **Vintage couch** dragged onto lawn — three women in black lace + Justine (Scarlet is the one beside Justine)
 - **Giant beige tote** with massive 3D skull (Madelin)
 - **Glowing transparent crystal skull** (Qing Rao / Justine)
 - **Fluffy white dog** (Biscuit) beside couch

@@ -7,6 +7,7 @@ POV musical cutaway. A mountain lion on a leash **insists** on showing us a fiel
 **Site:** Suggestions after codegen (`mountain-lion-wildflowers`)  
 **Songs:** `songs/Come_Further.md` (drag) · `songs/Here_They_Are.md` (field)  
 **Segments:** `prompts/mountain-lion-wildflowers-segments.md`  
+**Ocean act long-form (D+E):** `prompts/mountain-lion-ocean-act.md` (2026-11-17)  
 **Shared field paint:** `ideas/wildflower-paint-rivulets.md`  
 **Farm:** comment on [#22](https://github.com/ford442/weeks_on_fire/issues/22) · song intake [#18](https://github.com/ford442/weeks_on_fire/issues/18)
 
@@ -39,6 +40,8 @@ How the water behaves (locked, because this is where it can go wrong):
 Quiet humor for the water: one shake-off at the worst moment for the camera · a single blossom
 rides alongside the whole crossing and beaches itself first · the leash floats and nobody adjusts
 for it · the cat scratches at wet sand as if to bury something, gets bored, walks on.
+
+Long-form Imagine start/last/motion for D and E: [`prompts/mountain-lion-ocean-act.md`](../prompts/mountain-lion-ocean-act.md). Generate-first D1 (one substance) then E1 (causeway holds).
 
 ## Locked choices
 
@@ -151,7 +154,7 @@ Cinematic botanical surrealism, immersive dense field overflowing with an almost
 
 - [ ] Generate / trim the two Minimax beds to the timing table (do not ship 3:00 of drag).
 - [ ] Still pack: insistence look-back, deep pull, flower-only refs (density + tunnel + painted mix), **tideline where petals and foam are one substance**, **the causeway across open water**, far-shore return, multi-lion arrival.
-- [ ] Shoot the ocean act first — D and E are the risk. If the field and the water read as two pasted images instead of one substance, fix that before generating anything else.
+- [ ] Shoot the ocean act first — D and E are the risk. If the field and the water read as two pasted images instead of one substance, fix that before generating anything else. Long-form: `prompts/mountain-lion-ocean-act.md`.
 - [ ] Ground-only paint-rivulet plate (shared with Daisy). Lock dirt-not-petals before dropping under the leash.
 - [ ] 8–12s image-to-video clips from those stills; stitch. Prefer lush 10–12s when the model holds foliage; fall back to 6–8s multi-ref if the lion performance drifts.
 - [ ] Optional Daisy Bell handshake: same meadow, different exit (lion vs flower bicycle). Paint rivulets are the handshake, not a tandem in the clearing.

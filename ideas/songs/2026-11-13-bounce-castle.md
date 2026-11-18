@@ -10,6 +10,8 @@ notes: "Kid-silly. Lace Waterfall (Rubella vocal, Lillith guitar). No new canon.
 
 # Bounce Castle
 
+Prompts: [`prompts/bounce-castle-segments.md`](../../prompts/bounce-castle-segments.md) · runbook: [`ideas/bounce-castle-agentic.md`](../bounce-castle-agentic.md)
+
 **Genre collision:** 1990s UK happy hardcore × Renaissance-faire fanfare (herald trumpets, krummhorn, shawm, tabor, lute). A rave played by a royal court.
 
 **Visual concept:** Lace Waterfall play a gig on a giant inflatable castle on a village green, with a small royal court bouncing on it too. Every kick drum launches everything into the air: the amp, the king, a birthday cake, and a pantomime horse. Rubella goes up as high as the flags and comes down every time with her hair, lace and mic exactly where they were. She never stops singing and never looks down. Lillith plays upside down in mid-air with a flat face. The drops make it worse: the first doubles the height of every bounce, and the last bounces the whole castle off the ground and away over the trees.

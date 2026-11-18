@@ -6,7 +6,7 @@
 **Song:** `songs/Well_Fall.md` (`well-fall`)  
 **Prompts:** `prompts/well-fall-segments.md`  
 **Suggestions id:** `well-fall`  
-**Status:** suggested — lip locked, sights open
+**Status:** suggested — A–H locked (see `ideas/well-fall-locked.md`)
 
 We stand at a well. We fall. The picture is what we see on the way down.
 The metal is the bed, not a joke commercial. Ultra Screech owns glam-with-lyrics.
@@ -43,13 +43,13 @@ Do not overwrite A. H stays open until we decide whether there is a bottom.
 | Slot | Time | Music | What we see | Status |
 |------|------|-------|-------------|--------|
 | **A** | 0:00–0:10 | clean harmonics + drip | Lip of the well. Stone ring. Dark cylinder. We go. | LOCKED |
-| **B** | 0:10–0:20 | riff in (drop) | | open |
-| **C** | 0:20–0:32 | descending cycle 1 | | open |
-| **D** | 0:32–0:44 | descending cycle 2 | | open |
-| **E** | 0:44–0:56 | descending cycle 3 | | open |
-| **F** | 0:56–1:08 | descending cycle 4 | | open |
-| **G** | 1:08–1:20 | descending cycle 5 | | open |
-| **H** | 1:20–1:32 | cadence that never lands | The bottom — or there is none. | open |
+| **B** | 0:10–0:20 | riff in (drop) | Six-pipe junction, every joint leaking; streams drip *up* past us because we are faster | LOCKED |
+| **C** | 0:20–0:32 | descending cycle 1 | An empty escalator set into the curve, steps climbing as we drop past | LOCKED |
+| **D** | 0:32–0:44 | descending cycle 2 | Shaft widens into a cathedral of wet brick, narrows before we read the far wall | LOCKED |
+| **E** | 0:44–0:56 | descending cycle 3 | A dining table set for one, falling slower than we are; we pass it | LOCKED |
+| **F** | 0:56–1:08 | descending cycle 4 | Rain inside the shaft, falling slower than we are; we overtake every drop | LOCKED |
+| **G** | 1:08–1:20 | descending cycle 5 | Ring of candle niches, each flame blowing out as we pass | LOCKED |
+| **H** | 1:20–1:32 | cadence that never lands | The bottom is a sky: we drop out of the shaft into open daylight, still falling | LOCKED |
 
 **How to fill a slot**
 

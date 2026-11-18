@@ -27,6 +27,19 @@ Shape matches [`../wet-enamel.md`](../wet-enamel.md): frontmatter, field table, 
 | [`La_Bicyclette.md`](La_Bicyclette.md) | bal-musette java × village brass fanfare, 168 | she rides slowly to buy six eggs, and the whole bike race follows her because nobody will pass her | Rubella (pedals), Lillith (back seat, guitar) | she rides really slowly to buy eggs and wins the race because nobody wants to pass her |
 | [`L_Escargot.md`](L_Escargot.md) | 1930s chanson × slow 12/8 blues, 66 | the café waiter is a snail; by the time her coffee arrives, two winters have gone by | Rubella, Lillith (slide guitar) | the waiter is a snail, and two winters go by before her coffee arrives |
 
+**Second set (2026-11-15), filed in [`ideas/songs/`](../../../ideas/songs/) in the songwriter format** (Styles, MiniMax-safe lyrics, drop map, shot seeds, paste block). Lace Waterfall: Rubella sings, Lillith plays guitar. Each song collides cabaret with another genre.
+
+| Song | Language | Collision | Laugh |
+|---|---|---|---|
+| [`Le Parapluie`](../../../ideas/songs/2026-11-15-le-parapluie.md) | French | chanson × bossa nova, 128 | it only rains under her umbrella, and when she closes it, it rains everywhere else |
+| [`Le Fromage`](../../../ideas/songs/2026-11-15-le-fromage.md) | French | java × spaghetti western, 132 | her cheese is so stinky the whole train leaves without her, but the cows come to say hello |
+| [`La Bicyclette`](../../../ideas/songs/2026-11-15-la-bicyclette.md) | French | java × village brass fanfare, 168 in 3/4 | she rides slowly to buy eggs and wins the big race because nobody wants to pass her |
+| [`La Cigogne`](../../../ideas/songs/2026-11-15-la-cigogne.md) | French | chanson à texte × mambo, 112 | she ordered one spoon and the storks brought a whole house |
+| [`Le Croissant`](../../../ideas/songs/2026-11-15-le-croissant.md) | French + English | café-concert × 1970s disco, 118 | one bite and the crumbs snow over the whole town (the morning after *La Baguette*) |
+| [`Leçon Numéro Un`](../../../ideas/songs/2026-11-15-lecon-numero-un.md) | French + English | yé-yé × language-lab record, 126 | she teaches French to geese who only say honk, until they sing it perfectly and fly away |
+| [`Le Manège`](../../../ideas/songs/2026-11-15-le-manege.md) | French + English | valse-musette × fairground organ × music-hall, 156 in 3/4 | the carousel horses gallop all over town and come back before the music stops |
+| [`L'Escargot`](../../../ideas/songs/2026-11-15-l-escargot.md) | French + English | chanson × slow 12/8 blues, 66 | the waiter is a snail, two winters pass, and then she asks for the bill |
+
 **Neighbours, not to be replaced:** *Les Ondes Courtes* (French electro-chanson, the
 Ep3 night drive) · *Choose Your Basalt* (educational cabaret) · *Empty Parking Lot Waltz* ·
 *The Laundromat Saints* · *Rubella Stand-Up*.

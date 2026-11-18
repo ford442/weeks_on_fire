@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { artistFor, publicTracks } from './catalog';
+import { albums, artistFor, belongsToAlbum, hasPublicAudio, publicTracks } from './catalog';
 
 import type { Song } from '../data/types';
 
@@ -16,11 +16,43 @@ function SongCards({ songs }: { songs: Song[] }) {
             <p className="text-xs uppercase tracking-[0.2em] text-fuchsia-300">{artistFor(song)}</p>
             <p className="mt-1 font-bold text-white">{song.title}</p>
             <p className="mt-1 line-clamp-2 text-sm text-zinc-400">{song.description}</p>
-            {!song.audioFile && <p className="mt-2 text-xs text-zinc-500">Audio coming soon</p>}
+            {!hasPublicAudio(song) && (
+              <p className="mt-2 text-xs text-zinc-500">Audio coming soon</p>
+            )}
           </Link>
         </li>
       ))}
     </ul>
+  );
+}
+
+function AlbumCards() {
+  return (
+    <ul className="grid gap-3 sm:grid-cols-2">
+      {albums.map((album) => (
+        <li key={album.id}>
+          <Link
+            to={`/albums/${album.id}`}
+            className="block h-full rounded-xl border border-fuchsia-900/50 bg-gradient-to-br from-fuchsia-950/40 via-zinc-950 to-orange-950/30 p-5 transition hover:border-fuchsia-700 focus:outline-none focus:ring-2 focus:ring-fuchsia-300"
+          >
+            <p className="text-lg font-bold text-white">{album.title}</p>
+            <p className="mt-1 text-sm text-zinc-300">{album.description}</p>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function MusicProjects() {
+  return (
+    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <h1 className="text-4xl font-black text-white sm:text-5xl">Music projects</h1>
+      <p className="mb-8 mt-4 text-lg text-zinc-300">
+        Browse albums and playlists from Weeks of Fire.
+      </p>
+      <AlbumCards />
+    </div>
   );
 }
 
@@ -55,6 +87,15 @@ export function PublicHome() {
         </div>
       </section>
 
+      <section className="mb-12">
+        <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
+          <Link to="/albums" className="text-orange-300 hover:underline">
+            Music projects →
+          </Link>
+        </h2>
+        <AlbumCards />
+      </section>
+
       <section>
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
           Latest tracks
@@ -66,8 +107,7 @@ export function PublicHome() {
 }
 
 export function LaceWaterfall() {
-  const isBand = (song: Song) => song.episode === 'lace-waterfall';
-  const { playable, upcoming } = publicTracks(isBand);
+  const { playable, upcoming } = publicTracks((song) => belongsToAlbum(song, 'lace-waterfall'));
   return (
     <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-fuchsia-300">The band</p>
@@ -98,6 +138,12 @@ export function LaceWaterfall() {
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
           Discography
         </h2>
+        <Link
+          to="/albums/lace-waterfall"
+          className="mb-4 inline-block text-sm font-semibold text-orange-300 hover:underline"
+        >
+          Listen to the Lace Waterfall project →
+        </Link>
         <SongCards songs={[...playable, ...upcoming]} />
       </section>
     </div>

@@ -33,7 +33,7 @@ Ten-second photoreal POV shot. Subject: an old fieldstone and brick well mouth i
 
 **Last still → B start**
 ```
-POV straight down a circular wet brick and fieldstone well shaft in mid free fall, courses of dark red brick and grey stone streaking past in a motion-blurred spiral toward a black vanishing point. The fall is fast and has just begun; the brick nearest the lens is sharp with beads of water and green moss in the mortar, the rest smeared by speed. Far below, at the edge of the dark, the first hint of cast-iron pipes crossing the shaft. Cold blue daylight spills down from the shrinking mouth above and dies a few metres below us. Photoreal cinematic still, anamorphic 2.39:1, crushed blacks, faint oval bokeh, film grain. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV straight down a circular wet brick and fieldstone well shaft in mid free fall, courses of dark red brick and grey stone streaking past in a motion-blurred spiral toward a black vanishing point. The fall is fast and has just begun; the brick nearest the lens is sharp with beads of water and green moss in the mortar, the rest smeared by speed. Far below, at the edge of the dark, the first hint of cast-iron pipes crossing the shaft. Cold blue daylight spills down from the shrinking mouth above and dies a few metres below us. Photoreal cinematic still, anamorphic 2.39:1, crushed blacks, faint oval bokeh, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -49,7 +49,7 @@ Ten-second photoreal POV free fall down a circular wet brick well shaft. Subject
 
 **Last still → C start**
 ```
-POV looking down a circular wet brick well shaft in fast free fall, just below a junction of leaking cast-iron pipes. Above and around the lens, silver threads of water stream upward past us because we are falling faster than they drip; a few droplets frozen on the lens edge. Rusted pipe flanges are disappearing upward at the top of frame. Below, the round brick tunnel continues, and on one side of the curve the first metal edge of a long empty escalator begins to emerge from the dark, set into the wall. Light: thin blue daylight from far above, catching wet brick and water. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on the brick, film grain. Continuity lock: POV fall, camera never stops, no text, no titles, no HUD, no band, no people.
+POV looking down a circular wet brick well shaft in fast free fall, just below a junction of leaking cast-iron pipes. Above and around the lens, silver threads of water stream upward past us because we are falling faster than they drip; a few droplets frozen on the lens edge. Rusted pipe flanges are disappearing upward at the top of frame. Below, the round brick tunnel continues, and on one side of the curve the first metal edge of a long empty escalator begins to emerge from the dark, set into the wall. Light: thin blue daylight from far above, catching wet brick and water. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on the brick, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -65,7 +65,7 @@ Twelve-second photoreal POV free fall down a circular wet brick well shaft. Subj
 
 **Last still → D start**
 ```
-POV looking down a circular wet brick well shaft in fast free fall. At the top of frame the bottom end of an empty escalator vanishes upward into the brick, a last spill of cool fluorescent light on wet mortar. Below us the walls begin to flare outward: the courses of brick bend away from the lens and the round shaft opens toward a much larger dark space, the far wall beyond reach of the light. Motion blur on the near brick, a cold blue coin of daylight far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, film grain, soft depth haze in the widening void. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV looking down a circular wet brick well shaft in fast free fall. At the top of frame the bottom end of an empty escalator vanishes upward into the brick, a last spill of cool fluorescent light on wet mortar. Below us the walls begin to flare outward: the courses of brick bend away from the lens and the round shaft opens toward a much larger dark space, the far wall beyond reach of the light. Motion blur on the near brick, a cold blue coin of daylight far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, film grain, soft depth haze in the widening void. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -81,7 +81,7 @@ Twelve-second photoreal POV free fall. Subject: the well shaft suddenly widens i
 
 **Last still → E start**
 ```
-POV looking down a narrow circular wet brick well shaft in fast free fall, just after the shaft has closed back from a huge brick cathedral; the last arches and vault ribs recede upward at the top edge of frame in grey mist. Below, the tight round tunnel of wet brick and fieldstone runs on, and in the dark ahead, slightly below centre, the pale rectangle of a small white tablecloth catches the light — something falling below us, slower than we are. A cold blue coin of daylight far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, film grain. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV looking down a narrow circular wet brick well shaft in fast free fall, just after the shaft has closed back from a huge brick cathedral; the last arches and vault ribs recede upward at the top edge of frame in grey mist. Below, the tight round tunnel of wet brick and fieldstone runs on, and in the dark ahead, slightly below centre, the pale rectangle of a small white tablecloth catches the light — something falling below us, slower than we are. A cold blue coin of daylight far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -97,7 +97,7 @@ Twelve-second photoreal POV free fall down a circular wet brick well shaft. Subj
 
 **Last still → F start**
 ```
-POV looking down a circular wet brick well shaft in fast free fall, a small empty dining table set for one now just above us, receding upward, its white tablecloth hem lifting, one glass of water catching warm light. Below us the brick is darker and wetter; the first slow raindrops appear in the air of the shaft, suspended like glass beads, falling slower than we are. Cold blue daylight coin far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, sharp beads of water, film grain. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV looking down a circular wet brick well shaft in fast free fall, a small empty dining table set for one now just above us, receding upward, its white tablecloth hem lifting, one glass of water catching warm light. Below us the brick is darker and wetter; the first slow raindrops appear in the air of the shaft, suspended like glass beads, falling slower than we are. Cold blue daylight coin far above. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, sharp beads of water, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -113,7 +113,7 @@ Twelve-second photoreal POV free fall down a circular wet brick well shaft. Subj
 
 **Last still → G start**
 ```
-POV looking down a circular wet brick well shaft in fast free fall, the last slow raindrops hanging around the lens and streaming upward, water sheeting down the brick. Below us a ring of small arched candle niches is cut into the wall at regular intervals around the curve, each holding a lit white candle stub, flames standing upright, warm points of light leading down into the dark. Cold blue coin of daylight far above, much smaller now. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, film grain. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV looking down a circular wet brick well shaft in fast free fall, the last slow raindrops hanging around the lens and streaming upward, water sheeting down the brick. Below us a ring of small arched candle niches is cut into the wall at regular intervals around the curve, each holding a lit white candle stub, flames standing upright, warm points of light leading down into the dark. Cold blue coin of daylight far above, much smaller now. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, motion blur on near brick, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -129,7 +129,7 @@ Twelve-second photoreal POV free fall down a circular wet brick well shaft. Subj
 
 **Last still → H start**
 ```
-POV looking down a circular wet brick well shaft in fast free fall, nearly total darkness; thin grey smoke trails from extinguished candle niches streaming upward past the lens, the wet brick visible only as a faint rim of reflected light. Far above, the well mouth is a tiny cold coin of daylight. Far below, at the exact centre of the black vanishing point, a small pale circle of blue is beginning to appear — daylight, at the bottom. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, film grain, deep shadow. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV looking down a circular wet brick well shaft in fast free fall, nearly total darkness; thin grey smoke trails from extinguished candle niches streaming upward past the lens, the wet brick visible only as a faint rim of reflected light. Far above, the well mouth is a tiny cold coin of daylight. Far below, at the exact centre of the black vanishing point, a small pale circle of blue is beginning to appear — daylight, at the bottom. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks, film grain, deep shadow. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 ---
@@ -145,7 +145,7 @@ Twelve-second photoreal POV free fall. Subject: the bottom of the well is open s
 
 **Last still (end frame)**
 ```
-POV in free fall in open daylight sky, looking down into endless pale blue with a few thin high clouds and no ground, no horizon. At the top edge of frame, the circular underside of the well's brick and fieldstone shaft recedes upward like a dark round hole in the sky, its wet rim glittering with water and lit by sun, a last droplet trailing up from it. Still falling, nothing below, nothing landed. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks inside the receding shaft, bright clean sky, soft sun flare, film grain. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
+POV in free fall in open daylight sky, looking down into endless pale blue with a few thin high clouds and no ground, no horizon. At the top edge of frame, the circular underside of the well's brick and fieldstone shaft recedes upward like a dark round hole in the sky, its wet rim glittering with water and lit by sun, a last droplet trailing up from it. Still falling, nothing below, nothing landed. Photoreal cinematic still, 2.39:1 anamorphic, crushed blacks inside the receding shaft, bright clean sky, soft sun flare, film grain. Job of the frame: a chain still that hands the fall to the next segment, so the lens sits dead centre of the shaft and speed reads in the streaked brick. Wet mortar, green moss and rust stains run down the masonry. Continuity lock: POV fall, camera never stops falling, no text, no titles, no HUD, no band, no people.
 ```
 
 **Looking-up twin (optional insert, any slot):** replace "looking down" with "looking straight up at the well mouth as a bright coin shrinking above us, [sight] streaming past on the walls" — keep everything else identical.

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useMediaCoordinator } from '../contexts/MediaSessionContext';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
-import { createSequenceGl } from '../lib/webgl/context';
+import { createSequenceGl, glKind, type GlKind } from '../lib/webgl/context';
 import { SequenceEngine } from '../lib/webgl/engine';
 import { shouldAnimate } from '../lib/webgl/loop';
 import { PlaybackClock } from '../lib/playbackClock';
@@ -14,9 +14,16 @@ import type { SequenceRecord } from '../data/sequences';
 
 interface SequencePlayerProps {
   sequence: SequenceRecord;
+  /** Keep the drawing buffer so a frame can be read back (`?capture=1`). Off for playback. */
+  capture?: boolean;
 }
 
-export default function SequencePlayer({ sequence }: SequencePlayerProps) {
+function describeError(error: unknown): string {
+  const message = error instanceof Error ? error.message : String(error);
+  return message.trim() || 'unknown error';
+}
+
+export default function SequencePlayer({ sequence, capture = false }: SequencePlayerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const lastUiRef = useRef(0);
   const engineRef = useRef<SequenceEngine | null>(null);
@@ -33,6 +40,9 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
   const [uiTime, setUiTime] = useState(0);
   const [unsupported, setUnsupported] = useState(false);
   const [contextLost, setContextLost] = useState(false);
+  // Which context the canvas got (absent until the first attempt) and why it failed, if it did.
+  const [kind, setKind] = useState<GlKind | undefined>(undefined);
+  const [failure, setFailure] = useState<string | null>(null);
 
   const coordinator = useMediaCoordinator();
   const duration = sequence.durationSec;
@@ -66,27 +76,38 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const gl = createSequenceGl(canvas);
+    const creationErrors: string[] = [];
+    const gl = createSequenceGl(canvas, {
+      capture,
+      onCreationError: (message) => {
+        if (!creationErrors.includes(message)) creationErrors.push(message);
+      },
+    });
+    setKind(glKind(gl));
     if (!gl) {
+      setFailure(creationErrors.join(' · ') || null);
       setUnsupported(true);
       return;
     }
     setUnsupported(false);
     setContextLost(false);
+    setFailure(null);
 
     let lost = false;
     let hidden = document.hidden;
 
-    const setup = (): boolean => {
+    /** Builds the engine and scene; returns why it failed (shader link, mesh limit...) or null. */
+    const setup = (): string | null => {
       try {
         const engine = new SequenceEngine(gl);
         const scene = createSequenceScene(sequence.id);
         scene?.init(engine);
         engineRef.current = engine;
         sceneRef.current = scene;
-        return true;
-      } catch {
-        return false;
+        return null;
+      } catch (error) {
+        console.error(`SequencePlayer: could not start "${sequence.id}"`, error);
+        return describeError(error);
       }
     };
 
@@ -101,8 +122,10 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       sceneRef.current = undefined;
     };
 
-    if (!setup()) {
+    const startFailure = setup();
+    if (startFailure !== null) {
       teardown();
+      setFailure(startFailure);
       setUnsupported(true);
       return;
     }
@@ -186,8 +209,10 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
     };
 
     const onRestored = () => {
-      if (!setup()) {
+      const restoreFailure = setup();
+      if (restoreFailure !== null) {
         teardown();
+        setFailure(restoreFailure);
         setUnsupported(true);
         return;
       }
@@ -212,7 +237,7 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
       canvas.removeEventListener('webglcontextrestored', onRestored);
       teardown();
     };
-  }, [clock, coordinator, duration, mediaId, sequence.id]);
+  }, [capture, clock, coordinator, duration, mediaId, sequence.id]);
 
   useEffect(() => {
     if (!playing) {
@@ -266,11 +291,15 @@ export default function SequencePlayer({ sequence }: SequencePlayerProps) {
           className="h-full w-full"
           role="img"
           aria-label={`${sequence.title} 3D sequence`}
+          data-gl={kind}
         />
         {unsupported ? (
-          <p className="absolute inset-0 flex items-center justify-center p-4 text-center text-sm text-zinc-400">
-            WebGL is unavailable in this browser, so the in-hub player cannot run.
-          </p>
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 text-center text-sm text-zinc-400">
+            <p>WebGL is unavailable in this browser, so the in-hub player cannot run.</p>
+            {failure ? (
+              <p className="max-w-full break-words font-mono text-xs text-zinc-500">{failure}</p>
+            ) : null}
+          </div>
         ) : null}
         {contextLost && !unsupported ? (
           <p

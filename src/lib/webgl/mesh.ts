@@ -14,6 +14,60 @@ function pushV(target: number[], v: Vec3): void {
   target.push(v[0], v[1], v[2]);
 }
 
+/**
+ * Largest vertex slot an index can name. The engine draws indexed meshes with
+ * `gl.UNSIGNED_SHORT`, and a `Uint16Array` silently wraps anything above this.
+ */
+export const MAX_INDEX = 0xffff;
+
+/** A builder's working arrays, before they are packed into typed arrays. */
+export interface MeshParts {
+  positions: number[];
+  normals?: number[];
+  colors?: number[];
+  indices?: number[];
+  mode: MeshMode;
+}
+
+/**
+ * Packs a builder's arrays into a `MeshData`, throwing if an indexed mesh could not be drawn
+ * with 16-bit indices. `name` is the geometry name used in the error message.
+ *
+ * Widening to `Uint32Array` / `UNSIGNED_INT` is deliberately not done here: it needs
+ * `OES_element_index_uint` on WebGL1 and belongs with the engine v2 WebGL2 path (#94).
+ */
+export function finalizeMesh(name: string, parts: MeshParts): MeshData {
+  const { positions, normals, colors, indices, mode } = parts;
+  const tail =
+    'The engine draws with UNSIGNED_SHORT, so larger values would wrap silently. ' +
+    'Lower the segment counts or split the mesh.';
+
+  if (indices) {
+    const vertexCount = positions.length / 3;
+    if (vertexCount - 1 > MAX_INDEX) {
+      throw new RangeError(
+        `Mesh "${name}" has ${vertexCount} vertices; an indexed mesh may use at most ` +
+          `${MAX_INDEX + 1} (slots 0..${MAX_INDEX}). ${tail}`,
+      );
+    }
+    for (let i = 0; i < indices.length; i++) {
+      const index = indices[i] as number;
+      if (!Number.isInteger(index) || index < 0 || index > MAX_INDEX) {
+        throw new RangeError(
+          `Mesh "${name}" has index ${index} at position ${i}; indices must be integers ` +
+            `in 0..${MAX_INDEX}. ${tail}`,
+        );
+      }
+    }
+  }
+
+  const mesh: MeshData = { positions: new Float32Array(positions), mode };
+  if (normals) mesh.normals = new Float32Array(normals);
+  if (colors) mesh.colors = new Float32Array(colors);
+  if (indices) mesh.indices = new Uint16Array(indices);
+  return mesh;
+}
+
 export function createBox(sx: number, sy: number, sz: number): MeshData {
   const hx = sx / 2;
   const hy = sy / 2;
@@ -88,12 +142,7 @@ export function createBox(sx: number, sy: number, sz: number): MeshData {
     indices.push(base, base + 1, base + 2, base, base + 2, base + 3);
   });
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('box', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createLineCube(size: number): MeshData {
@@ -160,12 +209,7 @@ export function createSphere(radius: number, latBands = 16, longBands = 24): Mes
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('sphere', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createCylinder(
@@ -219,12 +263,7 @@ export function createCylinder(
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('cylinder', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createTorus(major: number, minor: number, majorSeg = 40, minorSeg = 16): MeshData {
@@ -256,12 +295,7 @@ export function createTorus(major: number, minor: number, majorSeg = 40, minorSe
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('torus', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createPlane(width: number, depth: number, nx = 1, nz = 1): MeshData {
@@ -294,13 +328,7 @@ export function createPlane(width: number, depth: number, nx = 1, nz = 1): MeshD
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    colors: new Float32Array(colors),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('plane', { positions, normals, colors, indices, mode: 'triangles' });
 }
 
 export function createIcosahedron(radius: number): MeshData {
@@ -369,12 +397,7 @@ export function createIcosahedron(radius: number): MeshData {
     indices.push(base, base + 1, base + 2);
   });
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('icosahedron', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createIcosahedronLines(radius: number): MeshData {
@@ -484,12 +507,7 @@ export function createRibbon(mix: number, uSeg = 90, vSeg = 10): MeshData {
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('ribbon', { positions, normals, indices, mode: 'triangles' });
 }
 
 export function createPoints(count: number): MeshData {
@@ -543,10 +561,5 @@ export function createLathe(profile: readonly [number, number][], segments = 24)
     }
   }
 
-  return {
-    positions: new Float32Array(positions),
-    normals: new Float32Array(normals),
-    indices: new Uint16Array(indices),
-    mode: 'triangles',
-  };
+  return finalizeMesh('lathe', { positions, normals, indices, mode: 'triangles' });
 }

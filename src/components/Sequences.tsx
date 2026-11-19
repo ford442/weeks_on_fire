@@ -11,7 +11,7 @@ import {
 import { crewPath } from '../routes/paths';
 import { formatTimecode } from '../lib/timecode';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
-import { useUrlParam } from '../hooks/useUrlState';
+import { useUrlFlag, useUrlParam } from '../hooks/useUrlState';
 
 import SequencePlayer from './SequencePlayer';
 
@@ -28,6 +28,7 @@ export default function Sequences() {
     allValue,
     ...mediumOrder,
   ]);
+  const [capture] = useUrlFlag('capture');
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && sequences.some((sequence) => sequence.id === id) ? id : (sequences[0]?.id ?? ''),
@@ -181,7 +182,12 @@ export default function Sequences() {
           Sequence player
         </div>
         {selected ? (
-          <SequenceDetail sequence={selected} copiedKey={copiedKey} onCopy={copyToClipboard} />
+          <SequenceDetail
+            sequence={selected}
+            capture={capture}
+            copiedKey={copiedKey}
+            onCopy={copyToClipboard}
+          />
         ) : (
           <EmptyWorkspace />
         )}
@@ -212,11 +218,12 @@ function EmptyWorkspace() {
 
 interface SequenceDetailProps {
   sequence: SequenceRecord;
+  capture: boolean;
   copiedKey: string | null;
   onCopy: (text: string, label: string, key: string) => void;
 }
 
-function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
+function SequenceDetail({ sequence, capture, copiedKey, onCopy }: SequenceDetailProps) {
   const meta = sequenceMediumMeta[sequence.medium];
 
   return (
@@ -238,7 +245,7 @@ function SequenceDetail({ sequence, copiedKey, onCopy }: SequenceDetailProps) {
         </p>
       </div>
 
-      <SequencePlayer sequence={sequence} />
+      <SequencePlayer sequence={sequence} capture={capture} />
 
       <section>
         <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>

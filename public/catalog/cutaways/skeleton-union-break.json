@@ -1,0 +1,38 @@
+{
+  "id": "skeleton-union-break",
+  "kind": "scene",
+  "title": "Skeleton Union Break",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "~20s stinger",
+  "episode": "Episode 03",
+  "songId": "article-seven",
+  "songTitle": "Article Seven",
+  "summary": "Battle freezes. Plastic skeleton holds ON BREAK. Fifteen-minute groove reset per contract. Pizza Guy as crossing guard. Score: Article Seven.",
+  "visualArc": "Frozen lasers → laminated break sign → stretches → resume on the downbeat.",
+  "tags": [
+    "ep3",
+    "halloween",
+    "union",
+    "pizza-guy",
+    "stinger"
+  ],
+  "episodeId": "03",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "union-break",
+      "label": "On break",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Frozen backyard battle, skeleton with sign, snakes paused, cat supervising.",
+      "lyrics": "SKELETON: Article seven: mandatory funk interval.",
+      "musicCue": "Four bars of funk silence, then slam back.",
+      "grokImaginePrompt": "Halloween backyard frozen mid laser battle, animated plastic skeleton holding ON BREAK sign, glowing snakes paused, black cat watching, suburban fence, deadpan comedy, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "12-second frozen battle. Skeleton stretches. Photoreal comedy.",
+      "promptVariations": []
+    }
+  ]
+}

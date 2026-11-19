@@ -1,0 +1,176 @@
+{
+  "id": "short-packet-jokes",
+  "kind": "gag",
+  "title": "Short Packet Farm — Joke Interrupts",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "10 × 5–8s",
+  "episode": "Short packet farm",
+  "songId": "i-second-peggy-babcock",
+  "songTitle": "I Second Peggy Babcock (echo source)",
+  "summary": "Ten 3–10s interrupts on the cowboy-chimp / bird-flock shelf. Building bureaucracy: forms, inventory, HOA, elevators, bags at chest height. Cut in, echo a prior line off camera, land one physical punch, cut out. No faces, one line maximum, never on screen.",
+  "visualArc": "Napkin that will not end → PROBABLY FINE → a sign that lowers itself → chairs creaking in unison → a cage tagged 1 → an extinguisher on a tag hook → a parking row shoved over → a chute that refolds your form → lint by the counted sheet → forty chairs in rows at the curb.",
+  "tags": [
+    "short-packet-farm",
+    "joke-interrupt",
+    "hoa",
+    "building",
+    "deadpan",
+    "no-faces"
+  ],
+  "segmentCount": 10,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "spj-extra-napkins",
+      "label": "extra-napkins (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "One napkin pulled from a chrome dispenser comes out as a single unbroken sheet and does not end. Frame fills at chest height; the hand is still pulling on the cut.",
+      "lyrics": "",
+      "musicCue": "Off-camera echo: “I brought extra napkins.” Plus dispenser tick. Pizza Guy never on camera, never named.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a clubhouse refreshment counter, a chrome napkin dispenser with one gloved hand drawing a napkin from it, the napkin already a continuous unbroken sheet a metre long and still coming, gathering in soft folds at chest height, framing cuts off above the elbow so there are no faces, three supporting figures: a coffee urn with a paper cup under it, a stack of laminated cards, a corkboard of unreadable notices, clubhouse linoleum, cream cinderblock, a fluorescent troffer with one tube pinker than the other, flat institutional light, locked camera, 35mm, T2.8, mild grain, dry chrome against soft white paper against yellowed linoleum, Grok Imagine style",
+      "geminiOmniPrompt": "6-second locked shot. The hand pulls steadily and the napkin never separates. Nothing else moves. No reaction, no face, no cut. Ends mid-pull.",
+      "promptVariations": [
+        "Alt: the sheet reaches the floor and keeps going, still uncreased."
+      ]
+    },
+    {
+      "id": "spj-break-card",
+      "label": "break-card (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "A vending machine dispenses a laminated card reading PROBABLY FINE. Pressed again: an identical card. Third press: it dispenses the clipboard that was doing the pressing.",
+      "lyrics": "",
+      "musicCue": "Off-camera echo plus machine thunk. No countdown anywhere in frame — the resetting clock belongs to EyeWash ident B.",
+      "grokImaginePrompt": "Photoreal interior still, 16:9, a break-room vending machine front in a windowless staff room, a gloved hand at the keypad, a laminated card lying in the delivery tray reading PROBABLY FINE in institutional Helvetica, a second identical card already in the tray beside it, framing cuts off above the elbow so there are no faces, three supporting figures: a folding chair pushed against the wall, a wall clock with no hands, a stained coffee maker, grey vinyl floor, cream cinderblock, one flickering fluorescent, flat cold light with the machine's own interior glow raking across the tray, locked camera, 40mm, T2.8, mild grain, scuffed plastic against laminate against vinyl, Grok Imagine style",
+      "geminiOmniPrompt": "6-second locked shot. Press, thunk, card. Press, thunk, identical card. Press, thunk — the clipboard arrives in the tray. Hand does not react. No faces, no cut, camera locked.",
+      "promptVariations": [
+        "Alt: the third delivery is the glove itself, still holding the pen."
+      ]
+    },
+    {
+      "id": "spj-chest-height-ordinance",
+      "label": "chest-height-ordinance (5s)",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "A posted notice on a bracket lowers itself down the wall until it sits at chest height, then stops. Nobody is reading it.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one bracket squeak. Sibling to the bag tile — same ordinance, different object obeying it.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a lobby vestibule with a small institutional notice board on a hinged steel bracket mounted high on cream plaster, the board tilted down and part-way through descending its bracket, a pale rubbed line on the wall at chest height where boards have stopped before, nobody in frame, no faces, no hands, three supporting figures: a brass mail slot, a rubber floor mat with a worn tread path, a radiator under the window, grey terrazzo floor, one caged bulb, warm pooled light on the plaster and cool spill on the terrazzo, locked camera at standing eye height, 35mm, T2.8, fine grain, dry steel against cream plaster against terrazzo, no legible text on the notice, Grok Imagine style",
+      "geminiOmniPrompt": "5-second locked shot. The board descends its bracket in one smooth mechanical move, stops dead at chest height, and holds. One squeak. Nothing else in the vestibule moves. No people enter.",
+      "promptVariations": [
+        "Alt: a second board higher on the wall begins the same descent as we cut."
+      ]
+    },
+    {
+      "id": "spj-peggy-babcock-second",
+      "label": "peggy-babcock-second (8s)",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "A hand goes up at the back of the room. Every folding chair in the clubhouse creaks one inch backwards, in unison, and stops.",
+      "lyrics": "",
+      "musicCue": "Off-camera: the motion re-read from the top, including the name. Chair creak on the move. Nobody says the name on camera.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a suburban HOA clubhouse meeting room seen wide from the front, forty beige steel folding chairs with grey polyester seats in neat empty rows facing camera, a single gloved hand raised above the back row with no head or shoulders visible, no faces anywhere in frame, three supporting figures: a folding banquet table with a cracked wooden gavel, a lectern with a gooseneck mic, a corkboard of overlapping unreadable notices, clubhouse linoleum with one cracked gavel mark in it, cream cinderblock walls, fluorescent troffers with one tube pinker than the others, flat institutional light, locked camera at seated eye height, 28mm, T4, mild grain, dry beige steel against grey polyester against yellowed linoleum, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked wide. Hold three seconds. The raised hand does not move. Then every chair in the room slides one inch backwards together, in one move, and stops. Nothing else. No people, no faces, camera locked.",
+      "promptVariations": [
+        "Alt: the chairs go forward one inch instead. Test both; the funnier direction is whichever reads as agreement."
+      ]
+    },
+    {
+      "id": "spj-storage-cage-one",
+      "label": "storage-cage-one (5s)",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "A basement storage cage packed floor to ceiling with folding chairs. The inventory tag wired to the door reads 1.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one cage rattle. Tag stays dark until the last beat, then a caged bulb finds it.",
+      "grokImaginePrompt": "Photoreal interior still, 4:5, a basement storage cage of heavy galvanised mesh packed solid floor to ceiling with beige steel folding chairs pressed flat against the wire, a small brass-eyeleted paper inventory tag wired to the cage door hanging in shadow, no people, no faces, three supporting figures: a concrete floor with an old painted line, a coiled hose on a wall hook, a fuse panel with the door open, unpainted block walls, a single caged bulb on the corridor side throwing hard mesh shadows across the chairs and leaving the tag unlit, locked camera, 40mm, T2.8, fine grain, galvanised wire against beige steel against raw concrete, Grok Imagine style",
+      "geminiOmniPrompt": "5-second locked shot. The stack settles a half inch and the cage rattles once. On the last beat the bulb swings a few degrees and the light finds the tag. Nothing else moves. No people.",
+      "promptVariations": [
+        "Alt: hold the tag unlit for the whole clip and let the rattle be the only event."
+      ]
+    },
+    {
+      "id": "spj-inspection-tag",
+      "label": "inspection-tag (7s) — NEW",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "A gloved hand adds one more inspection tag to a hook already carrying a thick fan of them. The hook holds. The extinguisher slips its bracket and hangs itself on the tag hook, swinging once.",
+      "lyrics": "",
+      "musicCue": "Off-camera echo: “Tagged.” Plus one bracket clank. No alarm, no strobe, no fire.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a building corridor with a recessed red fire extinguisher cabinet, its glass door open, a steel inspection hook beside the extinguisher carrying a thick fan of forty yellowed paper inspection tags, one gloved hand adding one more, framing cuts off above the elbow so there are no faces, the extinguisher still seated on its wall bracket, three supporting figures: a wall-mounted alarm pull with a painted-over lever, a rubber corridor mat, a door closer on the fire door beyond, cream painted cinderblock, grey vinyl tile, a fluorescent troffer with one tube pinker than the other, flat institutional light with a warm red bounce off the cabinet, locked camera, 35mm, T2.8, mild grain, chipped red enamel against galvanised steel against yellowed paper, no legible text on the tags, Grok Imagine style",
+      "geminiOmniPrompt": "7-second locked shot. The hand hangs the tag and withdraws. Hold. The extinguisher slips its bracket, drops six inches, catches on the tag hook and swings once before settling. The tags do not tear. Nothing discharges. No alarm, no strobe, no faces.",
+      "promptVariations": [
+        "Alt: the hook bends a few degrees under the weight and holds anyway."
+      ]
+    },
+    {
+      "id": "spj-stall-forty-seven",
+      "label": "stall-forty-seven (6s) — NEW",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "A repainted stall number is one digit too wide, so the painted line beside it slides over a foot to make room, and the next, and the next. The last stall in the row is a foot wide.",
+      "lyrics": "",
+      "musicCue": "Silent picture, roller squeak, then one chirp on the wide. No cars move, no driver in frame.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a concrete parking garage seen along a row of stencilled numbered bays, one bay number freshly repainted in crisp white and visibly one digit wider than its neighbours, the painted bay line beside it already shifted a foot down the row and the next lines shifting in sequence into the distance, wet paint sheen on the fresh line, no cars in the near bays, no people, no faces, three supporting figures: a painted structural column with a bay letter on it, a floor drain, a low concrete kerb, sodium-tinged fluorescent strips overhead, oil-stained concrete, flat garage light with long specular streaks on the wet paint, locked camera low at bumper height, 28mm, T4, mild grain, wet white paint against grey concrete, Grok Imagine style",
+      "geminiOmniPrompt": "6-second locked shot. The ripple travels away from camera down the row, one line at a time, and stops. The last bay in the row is a foot wide. Nothing else moves, no cars, no people. Show the ripple once — never cut back to it.",
+      "promptVariations": [
+        "Alt: end on the foot-wide bay with a fresh number stencilled in it, correctly."
+      ]
+    },
+    {
+      "id": "spj-chute-return",
+      "label": "chute-return (5s) — NEW",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "A folded form goes down the trash chute. The hopper door swings back open and the form is sitting on the lip, refolded. Dropped again, it returns folded tighter.",
+      "lyrics": "",
+      "musicCue": "Off-camera echo: “File it.” Plus hopper clang. Nothing else ever comes out of the chute.",
+      "grokImaginePrompt": "Photoreal interior still, 4:5, a building trash chute room, a heavy steel hopper door set in a painted block wall standing part open, a single sheet of pale form paper folded into a crisp square sitting squarely on the hopper lip, one gloved hand withdrawing at frame edge, no faces, three supporting figures: a wheeled bin with the lid down, a coiled hose bib, a painted stencil on the wall worn illegible, grey sealed concrete floor, cream block walls, one caged bulb directly above the hopper, hard top light on the steel with the chute mouth in total black behind, locked camera, 40mm, T2.8, fine grain, scratched steel against clean paper against sealed concrete, no legible text on the form, Grok Imagine style",
+      "geminiOmniPrompt": "5-second locked shot. The hand drops the form into the chute and the door swings shut. The door swings back open and the form is on the lip, refolded tighter. The hand drops it again. It comes back tighter still. Never open the chute onto a shaft — the mouth stays black. No rat, no smell gag, no faces.",
+      "promptVariations": [
+        "Alt: the third return is the same form folded to the size of a stamp."
+      ]
+    },
+    {
+      "id": "spj-lint-inventory",
+      "label": "lint-inventory (7s) — NEW",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "The lint screen comes out carrying one clean grey felted sheet. Pulled again, off an empty screen, it carries another. A counted stack of identical sheets is already squared on the folding table.",
+      "lyrics": "",
+      "musicCue": "Silent picture, dryer drum tick. No detergent bottle, no Rubella, no contraband — this is the room, not the character.",
+      "grokImaginePrompt": "Photoreal interior still, 16:9, a building laundry room, a commercial dryer with its lint screen half withdrawn carrying one clean rectangular sheet of grey felted lint with perfectly square corners, one gloved hand on the screen tab, no faces, a squared and counted stack of a dozen identical grey sheets already on the folding table beside the machine, not one fibre anywhere on the floor, three supporting figures: a wheeled canvas cart, a wall of coin slots, a taped handwritten notice gone illegible, speckled vinyl floor, cream block walls, fluorescent troffers, flat even light with warm spill from the dryer drum, locked camera, 35mm, T2.8, mild grain, grey felt against enamelled steel against speckled vinyl, Grok Imagine style",
+      "geminiOmniPrompt": "7-second locked shot. The screen is drawn out with a sheet on it, set on the stack, and pushed back in. It is drawn out again — the screen was empty and there is another identical sheet on it. Nothing else moves. The floor stays spotless. No faces.",
+      "promptVariations": [
+        "Alt: the stack on the table is numbered on the edge, the numbers unreadable."
+      ]
+    },
+    {
+      "id": "spj-bulk-item-pickup",
+      "label": "bulk-item-pickup (8s) — NEW",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "One folding chair set at the curb with a BULK ITEM tag on it. Pull wide: forty of them, each tagged, arranged in perfect meeting-room rows facing the street.",
+      "lyrics": "",
+      "musicCue": "Off-camera echo: “One item per household.” Nothing else. Not Brad's bins, no blue-shade joke.",
+      "grokImaginePrompt": "Photoreal exterior still, 2.39:1, a suburban kerb outside a multi-unit building at grey morning, forty beige steel folding chairs with grey polyester seats standing on the verge in perfect meeting-room rows all facing the empty street, each chair carrying a small municipal BULK ITEM tag tied to the frame, chairs squared to each other to the inch, nobody on the street, no faces, no cars, three supporting figures: a bin pad with the gate shut, a fire hydrant, a leaning mailbox post, cracked kerb concrete and thin verge grass, flat overcast light with no shadows and no colour, locked camera at standing height, 28mm, T4, mild grain, dry beige steel against wet grey concrete, no legible text on the tags, Grok Imagine style",
+      "geminiOmniPrompt": "8-second shot. Open tight on one tagged chair for three seconds. One slow pull back to the wide, revealing the full rows. Stop. Nothing moves, nobody arrives, no wind on the tags. Hold two seconds and cut.",
+      "promptVariations": [
+        "Alt: hold the wide the whole time and let the tags be the only thing that moves.",
+        "Alt: the front row is one chair short and the gap is squared like the rest."
+      ]
+    }
+  ]
+}

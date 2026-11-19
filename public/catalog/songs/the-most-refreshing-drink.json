@@ -1,0 +1,24 @@
+{
+  "id": "the-most-refreshing-drink",
+  "title": "The Most Refreshing Drink",
+  "added": "2026-09-06",
+  "genre": "Ambient & downtempo",
+  "subgenre": "Industrial ASMR lounge / fake sponsor bed",
+  "description": "EyeWash sponsor for an over-engineered glass of ice water. Apparatus clicks in the dark lab; the gulp lands a beat before the ice. No sung lead.",
+  "episode": "eyewash",
+  "slot": "Ultra-Refreshed Water Lab sponsor",
+  "tags": [
+    "instrumental",
+    "sponsor",
+    "eyewash-station",
+    "lab",
+    "asmr",
+    "ultra-refreshed"
+  ],
+  "instrumental": true,
+  "status": "generated",
+  "sourceFile": "The_Most_Refreshing_Drink.md",
+  "stylePrompt": "Industrial ASMR lounge / fake EyeWash sponsor bed at 76 BPM. Dark lab interior: pneumatic clicks, analog dial ticks, glycol-pump pulse, faint Tesla-coil fizz kept musical and quiet — not a sci-fi trailer. Soft Rhodes or wet electric piano, almost inaudible four-on-the-floor felt in the floor, no hats. When the camera is on the sunlit exterior desk, the top end may go clinical-bright (ice, glass, noon) — that contrast is the point; the lab side stays dark and worn. No sung vocal. Optional Continuity Voice, narrow bandwidth, small-print cadence only, never a jingle singer. **Structural flaw:** the gulp (a close, dry swallow sample) always happens one beat before the ice cube hits the glass. Every time. Do not reverse it. Do not “sync to picture” by moving the gulp onto the ice. Mood: the most refreshing drink in human history, played completely straight. Runtime ~1:20–1:40 (loopable 15–25s core for the lab cutaway). Instrumental only aside from one gulp and optional small print.",
+  "lyrics": "[Instrumental — no sung vocal]\n\n[0:00–0:12 Lab clicks]\nDark magenta and blue LEDs. Pneumatic chambers bubble. Dials spin. Pump pulse locks to 76.\n\n[0:12–0:28 Window apparatus]\nCryogenic vortex cannons. Frost on brass Joule-Thomson valves. Dry-ice fog over the sill. Still no gulp.\n\n[0:28–0:44 Laminar droplets]\nLaser-guided injector. Droplets that do not splash. Acoustic-levitation ice hovering a millimeter.\n\n[0:44–0:52 The drink]\nGulp — dry, close, one beat early.\nIce hits the glass late.\nNobody comments.\n\n[0:52–1:08 Repeat the pour]\nSame apparatus. Same early gulp. Same late ice. Do not correct it.\n\n[1:08–1:20 Small print (optional, spoken, not sung)]\nContinuity Voice, unread speed:\nNot a medical device. Do not rinse the eye with the product. Use the station.\nUltra-Refreshed. Because you're going to keep looking.\n\n[1:20–1:35 Decay]\nPump winds down. One cube still hovering. Last gulp, still early. Ice, still late.",
+  "notes": "**What the song is**\nFake EyeWash sponsor bed for **Ultra-Refreshed Water Lab** — the most refreshing glass of ice water in human history, delivered by an insanely complex window apparatus. Played completely straight. Visual bible: `ideas/ultra-refreshed-water-lab.md`. Prompts already exist: `prompts/ultra-refreshed-water-lab-segments.md`.\n\nThis is **not** a sign-off. The gulp is the hook. The ice is late.\n\n**Craft (keep this off-mic)**\n- *Rinse Cycle* owns fifteen minutes / do not blink / broadcast sign-off. Do not borrow the anthem cadence, the 9-bar phrase, or “do not blink.”\n- *Choose Your Basalt* owns educational cabaret smash-cuts. This is a **sponsor**, not a lesson.\n- *Glam-Sham-Poo / Ultra Screech* owns the joke commercial with a scream. This commercial does not scream. It swallows early.\n- Interior stays dark-top; exterior desk may go clean-digital bright (ice, noon) — same exception family as celestial tracks, but the subject is **glass and sun**, not the sky.\n\n**Production notes**\n- **Episode placement:** `content/cutaways/ultra-refreshed-water-lab.json`. Optional 10s ident loop under other EyeWash sponsor cards (Perpetual Optics adjacent, not a replacement).\n- **Voice:** None sung. Optional Continuity Voice small print only.\n- **Structural flaw:** Gulp one beat before ice hits glass, every pass.\n- **Runtime target:** 1:20–1:40 full; 15–25s core under the existing lab shot.\n- **instrumental:** true. Do not generate a belting vocal if Minimax invents one — prepend `instrumental only, no sung vocal`."
+}

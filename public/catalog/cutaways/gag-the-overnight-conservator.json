@@ -1,0 +1,52 @@
+{
+  "id": "gag-the-overnight-conservator",
+  "kind": "gag",
+  "title": "The Overnight Conservator",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 6s loop",
+  "episode": "One-panel gag",
+  "songId": "condition-report",
+  "songTitle": "Condition Report",
+  "summary": "3 a.m. gallery; she dusts a kouros; it holds her champagne; she holds its broken forearm like a clipboard. Post-gala Two. Sibling hour to Master Control.",
+  "visualArc": "Hard museum spot → torn ballgown → kouros with flute → condition report in lipstick.",
+  "tags": [
+    "gag",
+    "the-two",
+    "museum",
+    "eyewash-station",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-06-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Torn ballgown; kouros holding champagne; she holding its forearm like a clipboard; second statue with her heels.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 3:2, classical sculpture gallery at 3 a.m., a woman in a torn black ballgown and smeared red lipstick dusting a white marble kouros with a small conservator's brush, the statue calmly holding her champagne flute at the correct height, she holding the statue's broken marble forearm like a clipboard and initialing a condition-report form in lipstick, hard museum spotlight pools on marble and silk, everything else velvet black, marble dust hanging in the beam, a second statue in the dark holding her black heels by the straps, a tiny security monitor in the far corner playing EyeWash Station snow, high contrast, 35mm, T2.0, elegant and slightly dangerous, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 3:2, classical sculpture gallery at 3 a.m., a woman in a torn black ballgown and smeared red lipstick dusting a white marble kouros with a small conservator's brush, the statue calmly holding her champagne flute at the correct height, she holding the statue's broken marble forearm like a clipboard and initialing a condition-report form in lipstick, hard museum spotlight pools on marble and silk, everything else velvet black, marble dust hanging in the beam, a second statue in the dark holding her black heels by the straps, a tiny security monitor in the far corner playing EyeWash Station snow, high contrast, 35mm, T2.0, elegant and slightly dangerous, Grok Imagine style",
+      "promptVariations": [
+        "Condition report rates her for surface cracks, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-06-motion",
+      "label": "Motion (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "Dust motes; one bubble; page turn; stone eyes maybe blink; no jump scare.",
+      "lyrics": "",
+      "musicCue": "Condition Report — cello and una corda; clause 4 never arrives",
+      "grokImaginePrompt": "6-second locked gallery. Dust motes drift through the spotlight. One champagne bubble rises in the statue's glass. She turns a page. Stone eyes catch the light as if they blinked — maybe they did not. The second statue does not move. Photoreal, no dolly, no jump scare.",
+      "geminiOmniPrompt": "6-second locked gallery. Dust motes drift through the spotlight. One champagne bubble rises in the statue's glass. She turns a page. Stone eyes catch the light as if they blinked — maybe they did not. The second statue does not move. Photoreal, no dolly, no jump scare.",
+      "promptVariations": []
+    }
+  ]
+}

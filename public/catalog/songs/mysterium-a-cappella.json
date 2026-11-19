@@ -1,0 +1,21 @@
+{
+  "id": "mysterium-a-cappella",
+  "title": "Mysterium (A Cappella)",
+  "added": "2026-07-12",
+  "genre": "Pop & synth-pop",
+  "subgenre": "A cappella bubblegum pop",
+  "description": "Vocal-only variant of Mysterium for Minimax generation without instruments.",
+  "episode": "cutaway",
+  "tags": [
+    "a-cappella",
+    "italian",
+    "pop",
+    "vocal-group"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Mysterium_A_Cappella.md",
+  "stylePrompt": "A cappella bubblegum pop, contemporary vocal group, no instruments at all — every sound made by human voices and bodies, 128 BPM in C major with a whole-step key lift into the final chorus. Vocal percussion beatbox drives a four-on-the-floor groove with mouth kick, crisp lip-snare and hi-hat \"ts\" sixteenths, real handclaps and finger snaps on 2 and 4. Deep female contralto or low male bass voice sings a bouncing \"dum-dum\" bassline that pumps like a synth bass. Mid voices cover the arpeggios and stabs with bright staccato \"din-din\" and \"bap\" syllables, twinkling high \"ding\" voices imitating bells and glockenspiel for holiday sparkle. Lead vocal: warm expressive female alto on the verses, sweet playful energy, slightly breathy and cute, conversational modern Italian diction; soaring radiant female soprano takes the chorus hooks with bright glossy pop shine. Rich alto-soprano duets and thick stacked block harmonies on every chorus, full mixed choir swells into the bridge and last chorus but always with pop rhythm and bounce, never solemn or liturgical. Latin words sung with clear open vowels but snappy pop phrasing. The \"Alleluia\" hook is super catchy, repetitive and radio-ready. Overall mood: sweet, joyful, glowing, danceable and feel-good with a sense of wonder underneath — a vocal group singing in a winter piazza, breath visible in the cold, not a church choir. Tight modern a cappella production, close punchy vocal mix, wide stereo spread of background voices, prominent up-front lead, high energy but warm and human, big final chorus with key change and full choir, ending on a single held soprano note over one last finger snap.",
+  "lyrics": "[Verse 1]\nSi accendono le luci sulla piazza,\nil fiato che disegna il cielo blu,\nla gente corre e nessuno si accorge\nche stanotte c'è qualcosa in più.\nUn segreto che nessuno spiega,\ntroppo grande per finire in un perché.\n\n[Pre-Chorus]\nDimmi che lo senti anche tu,\nun mistero che ci tira su —\nuno, due, tre!\n\n[Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Verse 2]\nTra i mercatini e le campane in festa\nla città stasera è un presepe che si muove,\nanche chi non ci crede alza la testa\ne per un attimo ci crede pure lui.\nC'è una stella sopra i tetti bianchi\nche conosce il nome mio e il tuo.\n\n[Pre-Chorus]\nDimmi che lo senti anche tu,\nun mistero che ci tira su —\nuno, due, tre!\n\n[Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Bridge]\nO magnum mysterium,\net admirabile sacramentum...\nSotto questo cielo io e te,\nil mistero è che ci sei per me.\nGloria, gloria in excelsis —\ne poi più forte, dai!\n\n[Final Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Outro]\nAlleluia... mysterium...\nAlleluia... canta con me.",
+  "notes": "A cappella variant of Mysterium.md — same lyrics and structure, but the\nSTYLE block replaces every instrument with a vocal equivalent (beatbox\nkit, sung bassline, \"din-din\" arps, \"ding\" bells) so Minimax 2.6 keeps\nthe bubblegum groove without generating instruments. If instruments\nstill leak in, lead the style prompt with \"a cappella, voices only, no\ninstruments\" and trim some of the instrument-imitation imagery."
+}

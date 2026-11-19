@@ -1,0 +1,53 @@
+{
+  "id": "gag-third-shift-porcelain",
+  "kind": "gag",
+  "title": "Third Shift Porcelain",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 6s loop",
+  "episode": "One-panel gag",
+  "songId": "third-shift-porcelain",
+  "songTitle": "Third Shift Porcelain",
+  "summary": "Couture mannequins at a factory time-clock; one smokes chrome in the dock door. Beauty is hourly; overtime is not discussed. The Two do not punch out.",
+  "visualArc": "Marble lineup → time-clock → chrome cigarette in the dock → red LED in 4/4.",
+  "tags": [
+    "gag",
+    "mannequin",
+    "labor",
+    "after-hours",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-03-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Mannequins at a factory time-clock; one clocked out smoking chrome in the dock; red security LED; EyeWash CRT.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 3:2, after-hours luxury department store, pale fashion mannequins in black couture, pearls, and identical tired painted smiles lined up at an industrial factory time-clock bolted to a marble column, punch-cards in a steel slot, one mannequin already clocked out standing in a loading-dock doorway with a perfectly chrome cigarette, no lungs, a thin ribbon of metallic smoke, banks of cold fluorescent tubes in receding rows, one bank already dead, marble floor reflecting the lineup, a single red security-camera LED in the upper corner, a tiny wall-mounted CRT behind the clock playing EyeWash Station with the sound off, high contrast, strong silhouettes, no shoppers, no staff, 35mm, T2.8, deadpan and slightly menacing, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 3:2, after-hours luxury department store, pale fashion mannequins in black couture, pearls, and identical tired painted smiles lined up at an industrial factory time-clock bolted to a marble column, punch-cards in a steel slot, one mannequin already clocked out standing in a loading-dock doorway with a perfectly chrome cigarette, no lungs, a thin ribbon of metallic smoke, banks of cold fluorescent tubes in receding rows, one bank already dead, marble floor reflecting the lineup, a single red security-camera LED in the upper corner, a tiny wall-mounted CRT behind the clock playing EyeWash Station with the sound off, high contrast, strong silhouettes, no shoppers, no staff, 35mm, T2.8, deadpan and slightly menacing, Grok Imagine style",
+      "promptVariations": [
+        "Heels with time-clock stamps on the soles, otherwise identical, Grok Imagine",
+        "One mannequin smile slightly more tired than the factory paint allows, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-03-motion",
+      "label": "Motion (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "Thunk, punch-card drop, chrome smoke, fluorescents dying bank by bank, late bar-5 downbeat.",
+      "lyrics": "",
+      "musicCue": "Third Shift Porcelain — bar 5 late; do not quantize",
+      "grokImaginePrompt": "6-second locked wide. Time-clock thunks once. A punch-card drops into the catch. Chrome-cigarette smoke drifts toward the dock air. Fluorescents die one bank at a time, left to right. The camera LED blinks in 4/4. Downbeat of bar 5 is late — the lineup does not move on it. Mannequin faces do not change. Photoreal, no smile animation.",
+      "geminiOmniPrompt": "6-second locked wide. Time-clock thunks once. A punch-card drops into the catch. Chrome-cigarette smoke drifts toward the dock air. Fluorescents die one bank at a time, left to right. The camera LED blinks in 4/4. Downbeat of bar 5 is late — the lineup does not move on it. Mannequin faces do not change. Photoreal, no smile animation.",
+      "promptVariations": []
+    }
+  ]
+}

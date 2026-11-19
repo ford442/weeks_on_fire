@@ -1,4 +1,4 @@
-import { PRODUCTION_STATUSES } from '../../scripts/content-index/schemas';
+import { PRODUCTION_STATUSES } from '../../scripts/content-index/statuses';
 
 import type { ProductionStatus } from '../../scripts/content-index/schemas';
 import type { FilterOption } from './filterOptions';

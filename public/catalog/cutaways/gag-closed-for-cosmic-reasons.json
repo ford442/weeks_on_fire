@@ -1,0 +1,53 @@
+{
+  "id": "gag-closed-for-cosmic-reasons",
+  "kind": "gag",
+  "title": "Closed for Cosmic Reasons",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 6s loop",
+  "episode": "One-panel gag",
+  "songId": "closed-for-cosmic-reasons",
+  "songTitle": "Closed for Cosmic Reasons",
+  "summary": "Night infinity pool; laminated sign; the water hovers three feet up, still reflecting the city. She sits dry underneath and uses it as a ceiling. Vivienne energy.",
+  "visualArc": "Chrome stanchion → hovering water sheet → dry woman in the empty basin → smoke flattening on the underside.",
+  "tags": [
+    "gag",
+    "vivienne",
+    "pool",
+    "eyewash-station",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-01-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Hovering infinity-pool sheet; laminated CLOSED FOR COSMIC REASONS sign; dry woman in black maillot and heels reading a dry magazine.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, night luxury hotel rooftop infinity pool, the entire rectangular sheet of dark chlorinated water hovering three feet above the empty pale-blue tiled basin as one unbroken pane, underside faintly convex, still rippling, still reflecting a distant sodium-and-neon city skyline, a small laminated institutional sign on a chrome stanchion at pool's edge reading CLOSED FOR COSMIC REASONS in polite Helvetica, under the hovering water a bored glamorous woman with long black hair, blood-red lipstick, a black one-piece maillot, and black stiletto heels sitting dry on a white woven deck chair, an open glossy fashion magazine on her lap that is not wet, a thin cigarette between two fingers, smoke rising and flattening against the water's underside like a ceiling, a room-service tumbler of amber liquid on the dry limestone deck, a tiny lobby CRT in the far colonnade playing EyeWash Station color bars, high-contrast silver moonlight from above-right plus one submerged pool lamp shining upward through the levitating water so her face is lit by the moon and by green-cyan caustics, wet chrome, dry stone, lots of negative night sky, 35mm anamorphic, T2.0, fine grain, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 2.39:1, night luxury hotel rooftop infinity pool, the entire rectangular sheet of dark chlorinated water hovering three feet above the empty pale-blue tiled basin as one unbroken pane, underside faintly convex, still rippling, still reflecting a distant sodium-and-neon city skyline, a small laminated institutional sign on a chrome stanchion at pool's edge reading CLOSED FOR COSMIC REASONS in polite Helvetica, under the hovering water a bored glamorous woman with long black hair, blood-red lipstick, a black one-piece maillot, and black stiletto heels sitting dry on a white woven deck chair, an open glossy fashion magazine on her lap that is not wet, a thin cigarette between two fingers, smoke rising and flattening against the water's underside like a ceiling, a room-service tumbler of amber liquid on the dry limestone deck, a tiny lobby CRT in the far colonnade playing EyeWash Station color bars, high-contrast silver moonlight from above-right plus one submerged pool lamp shining upward through the levitating water so her face is lit by the moon and by green-cyan caustics, wet chrome, dry stone, lots of negative night sky, 35mm anamorphic, T2.0, fine grain, Grok Imagine style",
+      "promptVariations": [
+        "Same frame, magazine swapped for a dry room-service tray, Grok Imagine",
+        "Sign handwritten in lipstick on the laminated card, otherwise identical, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-01-motion",
+      "label": "Motion (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "Ripple across hovering water; smoke sheets on the underside; ember pulse; page does not turn.",
+      "lyrics": "",
+      "musicCue": "Closed for Cosmic Reasons — title line PA-narrow, half-step flat",
+      "grokImaginePrompt": "Locked-off 6-second photoreal loop. A slow ripple travels left to right across the hovering water sheet. Cigarette smoke rises, hits the underside, and sheets sideways. The submerged lamp's caustic crawls once across her collarbone. The ember pulses on beat two. The magazine page does not turn. The sign does not flutter. No one enters. Camera: 2 percent push only.",
+      "geminiOmniPrompt": "Locked-off 6-second photoreal loop. A slow ripple travels left to right across the hovering water sheet. Cigarette smoke rises, hits the underside, and sheets sideways. The submerged lamp's caustic crawls once across her collarbone. The ember pulses on beat two. The magazine page does not turn. The sign does not flutter. No one enters. Camera: 2 percent push only.",
+      "promptVariations": []
+    }
+  ]
+}

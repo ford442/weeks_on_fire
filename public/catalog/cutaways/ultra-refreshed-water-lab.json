@@ -1,0 +1,52 @@
+{
+  "id": "ultra-refreshed-water-lab",
+  "kind": "scene",
+  "title": "Ultra-Refreshed Water Lab",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~15–25s",
+  "episode": "Standalone visual gag",
+  "songId": "the-most-refreshing-drink",
+  "songTitle": "The Most Refreshing Drink",
+  "summary": "The most refreshing glass of ice water in human history, delivered by an insanely complex window apparatus. Played completely straight.",
+  "visualArc": "Dark neon lab → sunlit apparatus → laminar droplets → slow-motion gulp.",
+  "tags": [
+    "science",
+    "deadpan",
+    "sponsor",
+    "eyewash-station"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "ultra-refreshed-a-starter-image",
+      "label": "A — Starter Image",
+      "start": "first frame",
+      "end": "first frame",
+      "durationSec": 0,
+      "onScreen": "Starter Image",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "A dramatic wide-angle cinematic shot of a modern laboratory window where an insanely complex over-engineered matrix of industrial science equipment stretches out into bright afternoon sun. Chrome-finished cryogenic vortex cones swirling with micro-frost, glowing blue copper Tesla-coil towers pulling condensation from the air into clear glass spiral tubes, thick translucent quartz cylinders flowing with neon-turquoise cooling fluid, brass Joule-Thomson expansion valves with visible frost, heavy white dry-ice fog cascading over the rusted metal window sill. A precise carbon-fiber robotic arm extends over a wooden desk outside holding a heavy glass filled with crystal-clear water and large dense textured ice blocks. Dark laboratory interior behind the window glows with sharp magenta and blue digital LED monitors, waveforms, and technical diagnostics. Hyper-realistic, 8k, shot on Arri Alexa, intense photorealism, sharp macro ice texture, cinematic lighting, high contrast between harsh outdoor sunlight and neon indoor gloom, Grok Imagine style",
+      "geminiOmniPrompt": "",
+      "promptVariations": [
+        "Macro close-up starter: dense clear ice cubes in heavy glass, laminar water droplet frozen mid-air from micro-injector nozzle, dry-ice fog soft background, Arri Alexa photoreal, Grok Imagine",
+        "Interior POV from lab: window frame silhouetted, apparatus explosion into blinding daylight, LED monitors flanking frame, Grok Imagine"
+      ]
+    },
+    {
+      "id": "ultra-refreshed-b-video-generation",
+      "label": "B — Video Generation",
+      "start": "continuous shot",
+      "end": "continuous shot",
+      "durationSec": 0,
+      "onScreen": "Video Generation",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "Photorealistic video matching the starter image. Camera slowly zooms from wide shot of massive over-engineered laboratory window apparatus to tight macro close-up of the glass. Liquid dynamics fluid and continuous: perfect laminar-flow droplets of crystal-clear water stream from a micro-injector nozzle into the glass, hitting dense steaming ice cubes without splashing. Heavy dense white dry-ice fog actively cascades and pours downward over the window frame in smooth rhythmic current. Background: massive chrome vortex fans slowly spin, internal chambers bubble with pressure, neon-turquoise coolant pulses through glass spiral pipes. Dark lab interior flickers with moving digital graphs and audio waveforms. A hand reaches into frame, lifts the glass, and a man takes a slow-motion satisfying gulp of ice water. High-fidelity motion, realistic gravity, cinematic slow-motion, seamless continuous shot, 20 seconds, photoreal short film.",
+      "promptVariations": []
+    }
+  ]
+}

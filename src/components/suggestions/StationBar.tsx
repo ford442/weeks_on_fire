@@ -6,7 +6,7 @@ import StatusBadge from '../StatusBadge';
 
 import { OnAirPill, SlotBadges } from './ScheduleRow';
 
-import type { CutawaySuggestion } from '../../data/types';
+import type { CutawaySummary } from '../../data/types';
 
 export type SuggestionsView = 'schedule' | 'list';
 
@@ -25,7 +25,7 @@ interface StationBarProps {
     /** The on-air row exists in the guide below (filters have not hidden it). */
     canJump: boolean;
     onJump: () => void;
-    onOpen: (cutaway: CutawaySuggestion) => void;
+    onOpen: (cutaway: CutawaySummary) => void;
     crt: boolean;
     /** CRT cannot be turned on (reduced motion). */
     crtDisabled: boolean;

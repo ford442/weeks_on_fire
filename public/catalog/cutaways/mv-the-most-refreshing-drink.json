@@ -1,0 +1,103 @@
+{
+  "id": "mv-the-most-refreshing-drink",
+  "kind": "musical",
+  "title": "The Most Refreshing Drink",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "1:20–1:40",
+  "episode": "Ultra-Refreshed Water Lab / EyeWash sponsor",
+  "songId": "the-most-refreshing-drink",
+  "songTitle": "The Most Refreshing Drink",
+  "summary": "EyeWash sponsor for an over-engineered glass of ice water. Apparatus clicks in the dark lab; the gulp lands a beat before the ice. No sung lead.",
+  "visualArc": "Dark lab LEDs → window apparatus in noon sun → laminar droplets → early gulp / late ice → repeat uncorrected → hovering cube, small print.",
+  "tags": [
+    "instrumental",
+    "sponsor",
+    "eyewash-station",
+    "lab",
+    "asmr",
+    "ultra-refreshed"
+  ],
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "mrd-lab",
+      "label": "Dark lab diagnostics",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Magenta/blue LEDs, waveforms, pneumatic chambers. No people.",
+      "lyrics": "[Instrumental — lab clicks]",
+      "musicCue": "76 BPM pump pulse; dark top end",
+      "grokImaginePrompt": "Photoreal dark laboratory interior, magenta and blue LED readouts, digital waveforms, neon diagnostics, pneumatic bubbling chambers, no people yet, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "12-second lab interior. Dials spin. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mrd-window",
+      "label": "Window apparatus",
+      "start": "0:12",
+      "end": "0:28",
+      "durationSec": 16,
+      "onScreen": "Cryogenic cones, frosted brass, dry-ice fog over the sill, noon desk.",
+      "lyrics": "[Instrumental — still no gulp]",
+      "musicCue": "Apparatus clicks; exterior may go clinical-bright",
+      "grokImaginePrompt": "Modern laboratory window opening onto a bright exterior desk, chrome cryogenic vortex cannons and frosted brass valves reaching into harsh afternoon sunlight, dry-ice fog over the sill, over-engineered refreshment, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "16-second window. Fog cascades. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mrd-laminar",
+      "label": "Laminar droplets",
+      "start": "0:28",
+      "end": "0:44",
+      "durationSec": 16,
+      "onScreen": "Robotic arm, no-splash droplets, hovering ice.",
+      "lyrics": "[Instrumental — levitation ice]",
+      "musicCue": "Soft Rhodes under the pump",
+      "grokImaginePrompt": "Macro of laminar-flow water droplets from a carbon-fiber robotic arm into a glass of dense hovering ice, noon sun, no splash, scientific absurdity played straight, Grok Imagine style",
+      "geminiOmniPrompt": "16-second macro droplets. No splash. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mrd-gulp",
+      "label": "Early gulp, late ice",
+      "start": "0:44",
+      "end": "0:52",
+      "durationSec": 8,
+      "onScreen": "Swallow on the beat; ice hits the glass one beat later.",
+      "lyrics": "[Gulp — dry, close, one beat early]",
+      "musicCue": "Structural flaw: gulp before ice",
+      "grokImaginePrompt": "Close-up of a man drinking ice water in harsh sunlight, swallow on the beat, ice cube visibly hitting the glass one beat later, slow motion, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "8-second slow-motion gulp. Ice late. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mrd-repeat",
+      "label": "Repeat, uncorrected",
+      "start": "0:52",
+      "end": "1:08",
+      "durationSec": 16,
+      "onScreen": "Same timing. He does not react.",
+      "lyrics": "[Instrumental — same early gulp, same late ice]",
+      "musicCue": "Do not correct the gulp",
+      "grokImaginePrompt": "Same exterior desk, same gulp-before-ice timing, apparatus still running, he does not react, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "16-second repeat. Uncorrected. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mrd-print",
+      "label": "Small print / hover",
+      "start": "1:08",
+      "end": "1:28",
+      "durationSec": 20,
+      "onScreen": "Hovering cube; unread legal type in the glass; dark lab behind.",
+      "lyrics": "Not a medical device. Do not rinse the eye with the product. Use the station.",
+      "musicCue": "Optional Continuity Voice small print; last gulp still early",
+      "grokImaginePrompt": "Hovering ice cube over a glass rim on a sunlit lab desk, tiny unread legal type reflected in the glass, dark lab behind the window, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "20-second hover. Cube does not fall yet. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

@@ -9,6 +9,16 @@ import cartoonImg6 from '../../../images/cartoons/previously-on.jpg';
 import cartoonImg7 from '../../../images/cartoons/sheep-who-count-people.jpg';
 import cartoonImg8 from '../../../images/cartoons/witness-chicken.jpg';
 import cartoonImg9 from '../../../images/cartoons/worm-forecast.jpg';
+import cartoonImg0Pic from '../../../images/cartoons/cereal-wolf.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg1Pic from '../../../images/cartoons/crow-channel.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg2Pic from '../../../images/cartoons/fence-cat-opera.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg3Pic from '../../../images/cartoons/mailbox-mallard.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg4Pic from '../../../images/cartoons/pin-cat.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg5Pic from '../../../images/cartoons/possum-poker.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg6Pic from '../../../images/cartoons/previously-on.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg7Pic from '../../../images/cartoons/sheep-who-count-people.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg8Pic from '../../../images/cartoons/witness-chicken.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import cartoonImg9Pic from '../../../images/cartoons/worm-forecast.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
 
 import type { CartoonRecord } from '../types';
 
@@ -77,6 +87,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Family Guy cutaway energy: the recursion is the joke, the shrug is the button. Do not put readable cereal branding on the box — picture only, or it will garble. Do not make the wolf horrified; he is fine with this.",
     agent: "grok",
     stillUrl: cartoonImg0,
+    stillPicture: cartoonImg0Pic,
   },
   {
     id: "consensus",
@@ -141,6 +152,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Completely weird, completely pleased. If the TV ever shows something else the joke dies. No channel logos, no readable guide text.",
     agent: "grok",
     stillUrl: cartoonImg1,
+    stillPicture: cartoonImg1Pic,
   },
   {
     id: "egg-xylophone",
@@ -206,6 +218,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Weird, not cute. The frogs are a real chorus — posture and tuxedos, not gag hats. The repeating-background props are a wink, not the punchline. If the cat smiles, kill the take.",
     agent: "grok",
     stillUrl: cartoonImg2,
+    stillPicture: cartoonImg2Pic,
   },
   {
     id: "fig-four",
@@ -431,6 +444,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "This lane is allowed to be slapstick — do not dry it out into a valet gag. Keep photoreal lens language out of the prompt. The cat is a cameo, not the joke. No readable street names.",
     agent: "grok",
     stillUrl: cartoonImg3,
+    stillPicture: cartoonImg3Pic,
   },
   {
     id: "moose-hygienist",
@@ -560,6 +574,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Broad is correct here. The flag has to read at thumbnail size. Do not give the tabby a last-second dive out of the triangle; the joke is that this is his job now.",
     agent: "grok",
     stillUrl: cartoonImg4,
+    stillPicture: cartoonImg4Pic,
   },
   {
     id: "poodle-puff",
@@ -593,6 +608,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "The cards staying up is the newspaper-comic test. If they drop the cards it becomes a scare gag. Not a heist, not talking animals with jobs — they just live in the bag.",
     agent: "grok",
     stillUrl: cartoonImg5,
+    stillPicture: cartoonImg5Pic,
   },
   {
     id: "previously-on",
@@ -610,6 +626,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Humor first: the recap nobody asked for. Do not make the fish sad. The chalkboard is the still — if it needs a caption the arrows aren't frantic enough. Color bars, not a technical-difficulties card.",
     agent: "grok",
     stillUrl: cartoonImg6,
+    stillPicture: cartoonImg6Pic,
   },
   {
     id: "rooster-snooze",
@@ -675,6 +692,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "The loop is the Delivery Loop seen from the other side of the fence. Keep the jumpers on-model with Episode 4 toon sheets if they exist; if they drift, the sheep still reads. Do not let the sheep fall asleep — the gag is that counting people makes it worse.",
     agent: "grok",
     stillUrl: cartoonImg7,
+    stillPicture: cartoonImg7Pic,
   },
   {
     id: "snail-passing-lane",
@@ -891,6 +909,7 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "The eye-holes being in the wrong place is the still. Keep the mustache attached to the beak, not floating. Do not add cops or a punchline caption. The pigeons already know.",
     agent: "grok",
     stillUrl: cartoonImg8,
+    stillPicture: cartoonImg8Pic,
   },
   {
     id: "worm-forecast",
@@ -908,5 +927,6 @@ export const cartoonRecords: CartoonRecord[] = [
     notes: "Completely weird, completely professional. If he acknowledges the rain it becomes a workplace joke, which is the dry lane we are leaving. No readable station logo.",
     agent: "grok",
     stillUrl: cartoonImg9,
+    stillPicture: cartoonImg9Pic,
   },
 ];

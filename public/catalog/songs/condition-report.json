@@ -1,0 +1,24 @@
+{
+  "id": "condition-report",
+  "title": "Condition Report",
+  "added": "2026-08-16",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Museum-hushed chamber noir",
+  "description": "Rubella recites inventory like a vow. Clause four never arrives. Solo cello, una corda piano, no drums until the last line. Pairing for The Overnight Conservator.",
+  "episode": "gag",
+  "slot": "Gallery after hours",
+  "tags": [
+    "chamber",
+    "rubella",
+    "gag",
+    "museum",
+    "conservator",
+    "cello"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Condition_Report.md",
+  "stylePrompt": "Museum-hushed chamber noir at 64 BPM. Solo cello and una corda piano only — no drums, no kick, no hi-hat until the final spoken line. Marble dust replaces tape hiss as the texture. Room tone is HVAC and a security monitor's faint sync buzz, not mains hum. Soft breathy female vocal, Rubella, close-mic, almost spoken — she recites condition-report clauses like a vow rather than paperwork. No belting, no vibrato; the intimacy is procedural. Dark top end, real gallery reverb, never bright. **Structural flaw:** the condition report she dictates skips from clause 3 to clause 5, every verse, every time — clause 4 never arrives. Nobody in the song notices or fixes it. Mood: 3 a.m. classical wing; she is the conservator and the exhibit. Runtime ~2:00–2:20. Use the Rubella voice.",
+  "lyrics": "[Intro — HVAC / dust]\n(una corda figure, cello holds one note; no pulse yet)\n\n[Verse 1]\nClause one: the surface shows a hairline stress\nClause two: acceptable, given the address\nClause three: the varnish caught the flash and held\nClause five: recommend we leave it as it fell\n\n[Pre-Chorus]\nI initial in a color that will not stay\nThe marble keeps the hour better than I do\n\n[Chorus]\nI'm the conservator, you're the exhibit\nHold the glass steady, I'll note the damage\nEvery report I file skips a number\nIt's the only clause I ever manage\nTo lose on purpose\n\n[Verse 2]\nClause one: a fracture older than the gala\nClause two: the forearm came away without a fight\nClause three: the flute is at the correct height\nClause five: do not attempt to make it right\n\n[Pre-Chorus]\nI initial in a color that will not stay\nThe marble keeps the hour better than I do\n\n[Chorus]\nI'm the conservator, you're the exhibit\nHold the glass steady, I'll note the damage\nEvery report I file skips a number\nIt's the only clause I ever manage\nTo lose on purpose\n\n[Bridge]\nThe second statue has my shoes\nThe monitor is snow\nIf clause four was a confession\nI already know\n\n[Final Chorus]\nI'm the conservator, you're the exhibit\nHold the glass steady, I'll note the damage\nEvery report I file skips a number\nIt's the only clause I ever manage\n\n[Spoken — last line; one soft stamp as the only percussion]\nLeave it as it fell.",
+  "notes": "## Production notes\n- **Episode placement:** One-panel gag score for gag #6 **The Overnight Conservator** (`notes/one-panel-gags.md`). Also works as EyeWash \"gallery after hours\" insert, sibling hour to *Master Control, 4 AM*.\n- **Voice:** Rubella, close, almost spoken. No second voice. No Continuity Voice.\n- **Structural flaw:** Clause 4 is omitted in every verse. Do not \"fix\" it in a later pass. Do not let a backing vocal supply the missing number.\n- **Arrangement:** Cello + una corda only until the last spoken line, which may take a single marble-stamp / form-stamp hit. No drums before that.\n- **Sibling tracks:** *After Is a Floor* (bureaucracy as destination) and *Complaint Window, Deep Field*'s manners family — this one is inventory, not transit. Do not duplicate *Rinse Cycle* (sign-off owns the institutional anthem).\n- **Runtime target:** 2:00–2:20. Cheap to picture: one gallery, one statue, one spotlight.\n- **Chords (suggested):** Verse `i – VI – III – v` (Am–F–C–Em) landing on v instead of iv — the missing iv is clause 4. Chorus `VI – III – iv – i` (F–C–Dm–Am). Bridge holds III for two extra bars.\n- **Melodic motifs:** Spoken-sung falling minor 2nd on *clause five*; cello answers a fifth below and does not resolve. Title never appears as a sung hook — she names her job, not the form."
+}

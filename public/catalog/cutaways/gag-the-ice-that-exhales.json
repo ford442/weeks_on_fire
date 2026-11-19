@@ -1,0 +1,53 @@
+{
+  "id": "gag-the-ice-that-exhales",
+  "kind": "gag",
+  "title": "The Ice That Exhales",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 7s loop",
+  "episode": "One-panel gag",
+  "songId": "pearls-in-the-ashtray",
+  "songTitle": "Pearls in the Ashtray",
+  "summary": "Banquet ice sculpture of a woman melting into cigarette smoke, not water; cloth dry; waiter adjusts her a quarter inch. The Two as ice and absence.",
+  "visualArc": "White linen → ice woman mid-curtsy → smoke not melt → waiter micro-adjustment → empty chair.",
+  "tags": [
+    "gag",
+    "the-two",
+    "banquet",
+    "ice",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-08-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Ice woman exhaling smoke; dry cloth; waiter adjusting a quarter inch; empty chair; berries.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 3:2, formal banquet table with white linen and polished silver, a tall clear ice sculpture of an elegant woman mid-curtsy that is melting into dense cigarette-colored smoke instead of water, the tablecloth perfectly dry, a waiter in white gloves adjusting the sculpture a quarter inch as if this were still a centerpiece problem, a lipstick-stained napkin, one empty chair, two wine glasses and scattered berries at the far setting, candlelight leaning away from the smoke, high contrast, luxury and unease, 35mm, T2.0, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 3:2, formal banquet table with white linen and polished silver, a tall clear ice sculpture of an elegant woman mid-curtsy that is melting into dense cigarette-colored smoke instead of water, the tablecloth perfectly dry, a waiter in white gloves adjusting the sculpture a quarter inch as if this were still a centerpiece problem, a lipstick-stained napkin, one empty chair, two wine glasses and scattered berries at the far setting, candlelight leaning away from the smoke, high contrast, luxury and unease, 35mm, T2.0, Grok Imagine style",
+      "promptVariations": [
+        "Place card in front of the sculpture has her real name, Grok Imagine",
+        "Smoke spells nothing, which is worse, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-08-motion",
+      "label": "Motion (7s)",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "Smoke thickens; micro-adjustment; candle lean; ice earring becomes a puff; cloth stays dry.",
+      "lyrics": "",
+      "musicCue": "Pearls in the Ashtray — trumpet late",
+      "grokImaginePrompt": "7-second lockoff. Smoke thickens from the sculpture's mouth and shoulders. The waiter's gloves make a micro-adjustment. Candle flames lean away. One ice earring drops and becomes a puff. The cloth stays dry. Photoreal, no whip, no face of the waiter.",
+      "geminiOmniPrompt": "7-second lockoff. Smoke thickens from the sculpture's mouth and shoulders. The waiter's gloves make a micro-adjustment. Candle flames lean away. One ice earring drops and becomes a puff. The cloth stays dry. Photoreal, no whip, no face of the waiter.",
+      "promptVariations": []
+    }
+  ]
+}

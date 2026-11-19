@@ -1,0 +1,26 @@
+{
+  "id": "two-chairs-one-mirror",
+  "title": "Two Chairs, One Mirror",
+  "added": "2026-09-14",
+  "genre": "Jazz, lounge & torch",
+  "subgenre": "Torch-song waltz / dressing-room chamber pop",
+  "description": "Lillith and Rubella at one mirror, trading lives one lipstick at a time. A waltz that never lets either sister take the downbeat. Made by Fable.",
+  "episode": "cutaway",
+  "slot": "The Two",
+  "tags": [
+    "waltz",
+    "torch-song",
+    "chamber-pop",
+    "lillith",
+    "rubella",
+    "the-two",
+    "house-of-mirrors",
+    "made-by-fable"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Two_Chairs_One_Mirror.md",
+  "stylePrompt": "Torch-song waltz / dressing-room chamber pop in 3/4 at 72 BPM, A minor with a Picardy third that only arrives on the final word. Upright piano slightly out of tune with itself, a single cello, brushed snare with the wire loosened, a string quartet that enters only on the second chorus and is gone by the bridge. Two female voices in dialogue — Lillith dry and clipped, Rubella warm and unbothered — who never sing the downbeat together: one is always a beat early, the other a beat late, so the waltz limps like a heel that's about to give. Chorus in close harmony a third apart, mixed so you cannot tell which sister is on top. Intro is vanity-bulb hum and a lipstick cap clicking in 3. Bridge is one voice, then the other, then a mirror-image of the melody (retrograde) sung by both. Mood: elegant, bored, terrified of boredom, trading lives at a mirror while the town glows orange through the window. No drums louder than a brush. Ends on a single held note, both voices, and one bulb going out.",
+  "lyrics": "[Intro — Vanity Bulbs]\n(Bulb hum, lipstick cap click on 1-2-3, piano enters)\n\n[Verse 1 — Lillith]\nYou take the mouth. I'll take the eyes.\nWe split the face like we split the prize.\nNobody in the town will know\nWhich one of us is the one to go.\n\n[Verse 1 — Rubella]\nYou take the story. I'll take the name.\nEvery mirror tells it the same.\nSlide the pearls across the glass —\nWe'll trade again before the hour can pass.\n\n[Chorus — Both]\nTwo chairs, one mirror\nOne face we share\nTwo chairs, one mirror\nWhich one's there?\nIf the town is burning\nLet it burn in tune\nTwo chairs, one mirror\nOne of us leaves soon\n\n[Verse 2 — Rubella]\nYou never smudge. I never blink.\nWe learned the trick before we learned to think.\nThe window's orange. The powder's white.\nThere's a house of mirrors hiring tonight.\n\n[Verse 2 — Lillith]\nI'll be the witness. You be the cause.\nWe'll swap on the chorus, no applause.\nHand me the compact. Check the line.\nIf they ask which sister — say \"she's fine.\"\n\n[Chorus — Both]\nTwo chairs, one mirror\nOne face we share\nTwo chairs, one mirror\nWhich one's there?\nIf the town is burning\nLet it burn in tune\nTwo chairs, one mirror\nOne of us leaves soon\n\n[Bridge — Mirror Image]\n(Lillith, alone)\nI was you on Tuesday.\n(Rubella, alone)\nI was you at the fire.\n(Both, retrograde of the chorus melody)\nSoon leaves us of one —\nMirror one, chairs two.\n\n[Final Chorus — Both, strings gone]\nTwo chairs, one mirror\nOne face we share\nTwo chairs, one mirror\nNobody's there\nIf the town is burning\nLet it burn in tune\nTwo chairs, one mirror\nOne of us left at noon\n\n[Outro — Bulb]\n(Held note, both voices, one vanity bulb pops, piano holds A major)",
+  "notes": "## Production notes\n- **Episode placement:** The Two cutaway — Episode 1 house-of-mirrors register, but usable anywhere the sisters swap lives (Velvet Rope aftermath, Episode 3 costume change, any dressing room). The town fire stays outside the window.\n- **Emotional arc:** Business-like division of a face → the chorus admits they can't tell either → the bridge is the only time either sister is alone, and she immediately becomes the other → final chorus: the chair is empty and the waltz keeps going.\n- **Characters:** Lillith Vale and Rubella Vale, alternating verses, never on the downbeat together. No third voice. Grok Imagine: both sisters at one vanity, the reflection shows only one of them, never the same one twice.\n- **Structural flaw:** the early/late downbeat is the whole point; do not quantize it. If Minimax locks them together, use the take where it drifts most.\n- **Runtime target:** ~2:45. 15s bumper = intro + first chorus.\n- **Reference energy:** Kurt Weill in a Sephora; Julee Cruise if she had a sister; Tom Waits' waltzes without the gravel."
+}

@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 
+import Still from './Still';
+
 import type { CutawaySegment } from '../data/suggestions';
 
 const MIN_DWELL_SEC = 2.5;
@@ -121,9 +123,11 @@ export default function CutawayPreview({
             playsInline
           />
         ) : activeSegment.stillUrl ? (
-          <img
+          <Still
             key={activeSegment.id}
             src={activeSegment.stillUrl}
+            picture={activeSegment.stillPicture}
+            sizes="(min-width: 1024px) 50vw, 100vw"
             alt={activeSegment.label}
             className={`h-full w-full object-cover ${
               reducedMotion ? '' : 'animate-cutaway-ken-burns'

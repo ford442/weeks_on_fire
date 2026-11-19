@@ -1,0 +1,102 @@
+{
+  "id": "eyewash-idents",
+  "kind": "scene",
+  "title": "EyeWash Station Idents",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "6 × 5–10s",
+  "episode": "EyeWash Station",
+  "songId": "rinse-cycle",
+  "songTitle": "Rinse Cycle (ident variants)",
+  "summary": "Six analog bumpers: Please Stand By, Rinse Cycle, Unscheduled Programming, Aspect Ratio Matters, We Always Return, 3:44 Again. One still, one sting, one Continuity Voice line each. Nobody comments on the frame.",
+  "visualArc": "Difficulties card → rinse timer reset → future monitor → fixture nozzles → Biscuit steals the logo → sign-off at 3:44.",
+  "tags": [
+    "eyewash-station",
+    "ident",
+    "continuity-voice",
+    "broadcast",
+    "cheapest-asset"
+  ],
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "eyewash-idents-a-please-stand",
+      "label": "A — Please Stand By",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Please Stand By",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Full-frame 1980s television TECHNICAL DIFFICULTIES PLEASE STAND BY card, institutional blue background, chunky broadcast typeface, color bars strip along the bottom, visible scan lines and VHS chroma bleed, faint dust on the glass as if photographed off a CRT, static locked shot, analog affiliate ident, cinematic still, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked shot of a 1980s TECHNICAL DIFFICULTIES PLEASE STAND BY card filling the frame. Image never changes. Imperceptible CRT flicker and scan lines. Late-resolving Rhodes chord on the soundtrack, no VO until the last two seconds. Photoreal analog television, no cuts.",
+      "promptVariations": []
+    },
+    {
+      "id": "eyewash-idents-b-rinse-cycle",
+      "label": "B — Rinse Cycle",
+      "start": "0:08",
+      "end": "0:16",
+      "durationSec": 8,
+      "onScreen": "Rinse Cycle",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic still of a 15-minute analog countdown clock mounted above an industrial wall-mounted emergency eyewash station in a tiled institutional bathroom, the timer reading 14:59, twin chrome rinse nozzles below, pale green subway tile, fluorescent flicker, a bottom-third caption DO NOT BLINK in broadcast type, VHS chroma bleed, 1980s ident aesthetic, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked shot: a 15-minute analog countdown in a tiled eyewash room ticks from 15:00 to 14:59 and soft-resets back to 15:00. Soft tick bed. No people. Fluorescent hum. Photoreal analog ident.",
+      "promptVariations": []
+    },
+    {
+      "id": "eyewash-idents-c-unscheduled-programming",
+      "label": "C — Unscheduled Programming",
+      "start": "0:16",
+      "end": "0:24",
+      "durationSec": 8,
+      "onScreen": "Unscheduled Programming",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cramped 1980s television master-control room at 4 AM, wall of glowing CRT monitors each showing a different Weeks on Fire scene (lava floor, Halloween lawn, laundromat, HOA folding chairs), one center monitor showing this same room from a few seconds ahead with the operator standing while in the real room the chair is still occupied, grease-pencil log sheet, desk lamp, rack glow, faint haze, quiet, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked wide of master control. Monitors glow. One self-monitor is a second ahead of the room. Rack hum only. Photoreal, no scare sting, no host.",
+      "promptVariations": []
+    },
+    {
+      "id": "eyewash-idents-d-aspect-ratio",
+      "label": "D — Aspect Ratio Matters",
+      "start": "0:24",
+      "end": "0:32",
+      "durationSec": 8,
+      "onScreen": "Aspect Ratio Matters",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Close-up of an industrial wall-mounted emergency eyewash station in a flickering fluorescent hallway, twin chrome nozzles slowly rotated toward the camera as if they are looking, institutional green tile, faint steam, 1980s broadcast ident aesthetic, slight VHS chroma bleed, no people, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "8-second close-up: twin chrome eyewash nozzles rotate a few degrees toward the lens and stop. Fluorescent flicker. Four bars of warm pad, then one bar that is the wrong chord. Photoreal analog ident, no face.",
+      "promptVariations": []
+    },
+    {
+      "id": "eyewash-idents-e-we-always",
+      "label": "E — We Always Return",
+      "start": "0:32",
+      "end": "0:40",
+      "durationSec": 8,
+      "onScreen": "We Always Return",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic still of a blank television studio with seamless gray cyc, a standard poodle in an inexplicably purple bandana trotting left to right across the empty floor carrying a printed EyeWash Station Channel 12½ logo card in her mouth, the card just exiting frame, no host, no set dressing except a single floor mark, analog broadcast grain, deadpan, Grok Imagine style",
+      "geminiOmniPrompt": "8-second tracking shot: a standard poodle in a purple bandana trots across a blank studio floor with a station logo card in her mouth. The card leaves frame. The show does not put up a replacement card. Warm pad that never resolves. Photoreal, no cute music sting.",
+      "promptVariations": []
+    },
+    {
+      "id": "eyewash-idents-f-3-44",
+      "label": "F — 3:44 Again",
+      "start": "0:40",
+      "end": "0:48",
+      "durationSec": 8,
+      "onScreen": "3:44 Again",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Television sign-off card reading WE NOW CONCLUDE OUR BROADCAST DAY over slightly wrong stock footage of a suburban cul-de-sac at night, analog color, a wall clock in the lower corner stuck at 3:44, faint flag that is not quite the right flag, scan lines, institutional solemnity it has not earned, cinematic still, Grok Imagine style",
+      "geminiOmniPrompt": "8-second hold on a sign-off card over cul-de-sac stock. Clock 3:44. National-anthem-adjacent pad that runs a bar too long and does not conclude. Photoreal analog broadcast. Loopable.",
+      "promptVariations": []
+    }
+  ]
+}

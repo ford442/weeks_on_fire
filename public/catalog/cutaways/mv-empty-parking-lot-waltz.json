@@ -1,0 +1,35 @@
+{
+  "id": "mv-empty-parking-lot-waltz",
+  "kind": "musical",
+  "title": "Empty Parking Lot Waltz",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~3:00",
+  "episode": "Post-party cutaway",
+  "songId": "empty-parking-lot-waltz",
+  "songTitle": "Empty Parking Lot Waltz",
+  "summary": "Last two people in a vast wet lot. They could go or they could stay. The last chord never arrives.",
+  "visualArc": "Two cars → rumpled dress on a door → orbit without touching → unresolved.",
+  "tags": [
+    "waltz",
+    "afterparty",
+    "rubella"
+  ],
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "eplw-lot",
+      "label": "Last cars out",
+      "start": "0:00",
+      "end": "0:20",
+      "durationSec": 20,
+      "onScreen": "Two cars in a massive wet lot at 1am. Streetlight grid in puddles.",
+      "lyrics": "We could go / or we could stay",
+      "musicCue": "66 BPM waltz, detuned piano",
+      "grokImaginePrompt": "Cinematic wide still of a vast empty wet parking lot at 1am, only two cars left, their headlights the only lights, a woman in a rumpled evening dress leaning against a car door, reflections of streetlights in puddles forming a grid of stars, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "20-second slow orbit around two figures who almost dance without touching. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

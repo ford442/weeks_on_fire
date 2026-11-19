@@ -1,0 +1,23 @@
+{
+  "id": "this-program-contains-dialogue",
+  "title": "This Program Contains Dialogue",
+  "added": "2026-08-19",
+  "genre": "Jazz, lounge & torch",
+  "subgenre": "Institutional torch / legal-bumper hymn",
+  "description": "EyeWash pre-program warning. Continuity Voice sings the disclosure; S&P will not stamp until someone talks.",
+  "episode": "eyewash",
+  "slot": "The Long Way Up",
+  "tags": [
+    "eyewash-station",
+    "continuity-voice",
+    "disclaimer",
+    "comedy",
+    "ep4"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "This_Program_Contains_Dialogue.md",
+  "stylePrompt": "Institutional torch / legal-bumper hymn at 84 BPM. Narrow-bandwidth Continuity Voice — warm, sincere, half-step flat on the word “dialogue.” Small chapel organ that sounds like a legal department. Color-bar sine as a pedal tone. Tape hiss. No drums until a single rubber stamp on the last line. No belting. No vibrato. **Structural flaw:** he recites the warning as a song, which is not dialogue; after every chorus he adds one spoken aside to satisfy Standards & Practices; S&P is never satisfied; the card still reads CONTAINS DIALOGUE. The listed contents may grow; the bar count does not. Mood: EyeWash pre-program warning, not a sign-off. Runtime ~1:25–1:45. Use Continuity Voice; the S&P Skeleton may stamp once, dry, off-mic. Do not use Rubella.",
+  "lyrics": "[Intro — color bars / organ]\nThe following program contains dialogue.\nViewer discretion is a zoning matter.\n\n[Verse 1]\nThere will be sentences\nThere will be answers that arrive late\nThere will be a woman who is correct about a gate\nThis has been disclosed.\n\n[Pre-Chorus]\nIf you wanted music\nThat is a different block\nThis block contains dialogue\n\n[Chorus]\nThis program contains dialogue\nWe are not liable for what you heard\nWe are liable for the aspect ratio\nPlease hold your comments\n\n[Spoken aside 1]\n(That was singing.)\n(Please continue.)\n\n[Verse 2]\nThere will be indoor weather\nThere may be a dog\nThere will be one honest height\nNobody looks up. That is also disclosed.\n\n[Pre-Chorus]\nIf you wanted silence\nWe have a rinse for that\nThis block contains dialogue\n\n[Chorus 2]\nThis program contains dialogue\nThe tower predates the town\nThat is a zoning matter, not a mystery\nPlease hold your comments\n\n[Spoken aside 2]\n(Still singing.)\n(The stamp is waiting.)\n\n[Bridge]\nEveryone gets fifteen minutes\nThat is not fame\nThat is the rinse duration\nThe following program is longer than that\nWe have disclosed the length\nWe have not disclosed the words\n\n[Final]\nThis program contains dialogue\n(stamp: PROBABLY FINE)\nThis program contains dialogue\n(off-mic, dry)\nIs this on.\n\n[Spoken tag]\nIt is now.\nWe return you to your regularly scheduled difficulty.",
+  "notes": "## What the song is\nThe **pre-program warning** for the wordy episode. EyeWash is required to tell the affected that dialogue is coming. Continuity Voice does it as a hymn because that is how the station talks. Standards & Practices (the unionized skeleton, day job) is not satisfied: singing is not dialogue. He waits. Someone off-mic finally says “Is this on.” The stamp comes down. The card never changes.\n\nThe joke is the disclosure, not the wordiness. Nobody says “this is the talky one.”"
+}

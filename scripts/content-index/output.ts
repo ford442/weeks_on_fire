@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 export interface SyncOptions {
@@ -32,4 +32,31 @@ export function syncOutputs(
   if (stale.length > 0) {
     throw new Error(`${label} out of date (${stale.join(', ')}). ${fixHint}`);
   }
+}
+
+/**
+ * Like `syncOutputs`, for a directory codegen owns outright (`public/catalog/<kind>/`): files in
+ * `dir` that `outputs` no longer names are deleted, or reported as stale in check mode, so a
+ * removed record cannot keep serving its old JSON.
+ */
+export function syncOwnedDirectory(
+  dir: string,
+  outputs: Readonly<Record<string, string>>,
+  options: SyncOptions,
+): void {
+  const orphans = existsSync(dir)
+    ? readdirSync(dir).filter((name) => name.endsWith('.json') && !(name in outputs))
+    : [];
+  let orphanError: Error | undefined;
+  if (orphans.length > 0) {
+    if (options.check) {
+      orphanError = new Error(
+        `${options.label} has files codegen no longer writes (${orphans.join(', ')}). ${options.fixHint}`,
+      );
+    } else {
+      for (const name of orphans) rmSync(join(dir, name));
+    }
+  }
+  syncOutputs(dir, outputs, options);
+  if (orphanError) throw orphanError;
 }

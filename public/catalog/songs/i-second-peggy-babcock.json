@@ -1,0 +1,23 @@
+{
+  "id": "i-second-peggy-babcock",
+  "title": "I Second Peggy Babcock",
+  "added": "2026-08-17",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Parliamentary patter / clubhouse organ",
+  "description": "HOA recording secretary has the floor. The motion is thistle and shrub. Nobody can second Peggy Babcock. She re-reads the whole thing anyway.",
+  "episode": "04",
+  "slot": "HOA",
+  "tags": [
+    "hoa",
+    "patter",
+    "comedy",
+    "peggy-babcock",
+    "ep4"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "I_Second_Peggy_Babcock.md",
+  "stylePrompt": "Parliamentary patter at 100 BPM. Cracked gavel as kick (wood on wood, never a sample pack). Folding-chair creaks as hats. Cheap clubhouse organ holding one late chord. Fluorescent hum. Deadpan female secretary — precise, unhurried, never cute, never smiling. She can say her name. The room cannot. No belting. No vibrato. **Structural flaw:** after every failed second she re-reads the **entire motion including her name**; bar count does not change. Optional purple-light pulse under the organ, very quiet. Mood: HOA clubhouse that will not adjourn. Runtime ~1:15–1:40. Use a deadpan female secretary voice; do not use Rubella or Continuity Voice (this is the clubhouse, not EyeWash).",
+  "lyrics": "[Intro — cracked gavel]\nThe recording secretary has the floor.\nPlease hold your seconds.\n\n[Verse 1]\nPeggy Babcock has the floor\nThe thistle strip shall stay short\nThe special shrub shall sit six inches off the walk\nShe has it in the minutes. She does not look up.\n\n[Pre-Chorus]\nIs there a second?\n(folding chairs)\nIs there a second?\n\n[Chorus]\nI second Peggy Babcock\nI second Peggy Babcock\nSay it or sit down\nPeggy Babcock has the floor\n\n[Verse 2]\nDale says Pegg— and the gavel waits\nPatricia's hand is up and will not land\nKaren writes second pending, second pending\nThe shrub does not move. The thistle does not.\n\n[Pre-Chorus]\nIs there a second?\nBrad has a folder. That is not a second.\nIs there a second?\n\n[Chorus 2 — same bars, motion returns]\nI second Peggy Babcock\nThistle strip short, shrub six inches off the walk\nI second Peggy Babcock\nSay it or sit down\n\n[Bridge]\nThe Two do not vote\nBiscuit watches the gavel\nKaren has a form\nPeggy Babcock has the floor\n\n[Final]\nI second Peggy Babcock\nI second Peggy Babcock\nThe motion carries\nIf you can say it\n(gavel, cracked)\nPeggy Babcock has the floor",
+  "notes": "## What the song is\nAn HOA hearing that cannot take a second. **Peggy Babcock** is recording secretary. She has the floor. The motion is petty and physical: the thistle strip stays short; the special shrub sits six inches off the walk. She reads it correctly. Dale breaks on the first syllable of her name. Patricia's hand never lands. Karen logs `second pending`. The Two do not vote. Biscuit watches the gavel.\n\nThe joke is the meeting, not a lesson. Nobody says \"tongue twister.\" Nobody asks her to slow down."
+}

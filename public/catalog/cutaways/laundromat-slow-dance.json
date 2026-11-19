@@ -1,0 +1,51 @@
+{
+  "id": "laundromat-slow-dance",
+  "kind": "scene",
+  "title": "2AM Laundromat Slow Dance",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "3–4 min",
+  "episode": "Episode 02 extension",
+  "songId": "the-laundromat-saints",
+  "songTitle": "The Laundromat Saints",
+  "summary": "Two unnamed strangers fold a sheet, then slow-dance between dryers. The attendant mops around them. EyeWash always on in the corner.",
+  "visualArc": "Fluorescent rows → shared sheet → dance in dryer glow → attendant mop → sign-off TV.",
+  "tags": [
+    "laundromat",
+    "ep2",
+    "saints",
+    "tender",
+    "eyewash-station"
+  ],
+  "episodeId": "02",
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "laundry-a",
+      "label": "Off-balance dryer",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Two strangers several machines apart. Rain on the glass. Attendant mopping.",
+      "lyrics": "STRANGER 1: You don't have to.\nSTRANGER 2: I know. That's why I'm doing it.",
+      "musicCue": "Diegetic EyeWash TV, then The Laundromat Saints full score.",
+      "grokImaginePrompt": "Interior of a 24-hour laundromat at 2 AM, harsh fluorescent overhead light mixed with the warm amber glow of a single running dryer, rain streaking the front windows, two strangers standing several machines apart watching one off-balance dryer, an attendant in a hi-vis vest mopping in the background, lonely and warm, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "10-second locked laundromat interior. One dryer off-balance. Rain. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "laundry-dance",
+      "label": "The dance",
+      "start": "1:20",
+      "end": "2:00",
+      "durationSec": 40,
+      "onScreen": "Slow dance between humming dryers. Glitter on a cheek. Steam.",
+      "lyrics": "(Song. Almost no dialogue.)",
+      "musicCue": "Diegetic jukebox blooming into The Laundromat Saints full score.",
+      "grokImaginePrompt": "Two strangers slow-dancing between rows of humming dryers in a 24-hour laundromat at 2am, one with faded glitter on her cheek and a wool coat, the other in a wrinkled work uniform, harsh fluorescents above and warm dryer glow below, steam in the air, rain on the big windows, tender and slightly surreal, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "40-second slow dance between dryers. Attendant mops around them without looking. Photoreal, no cuts.",
+      "promptVariations": []
+    }
+  ]
+}

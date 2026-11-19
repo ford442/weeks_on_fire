@@ -35,6 +35,7 @@ import { allValue } from './FilterSelect';
 import SongAudioPlayer from './SongAudioPlayer';
 import StatusBadge from './StatusBadge';
 import VideoCard from './VideoCard';
+import Still from './Still';
 
 interface SceneDetailProps {
   board: SceneBoard;
@@ -305,8 +306,10 @@ export default function SceneDetail({ board }: SceneDetailProps) {
                     >
                       <div className={`relative aspect-video ${frameTone.tile}`}>
                         {frame.imageUrl ? (
-                          <img
+                          <Still
                             src={frame.imageUrl}
+                            picture={frame.imagePicture}
+                            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                             alt={frame.title}
                             loading="lazy"
                             className={`h-full w-full object-cover ${

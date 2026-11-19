@@ -84,8 +84,8 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 
 | What       | Source of truth            | Generated output                     |
 | ---------- | -------------------------- | ------------------------------------ |
-| Songs      | `songs/*.md`               | `src/data/generated/songs.ts`        |
-| Cutaways   | `content/cutaways/*.json`  | `src/data/generated/cutaways.ts`     |
+| Songs      | `songs/*.md`               | `src/data/generated/songs.ts` (summaries) + `public/catalog/songs/` |
+| Cutaways   | `content/cutaways/*.json`  | `src/data/generated/cutaways.ts` (summaries) + `public/catalog/cutaways/` |
 | Gallery    | `content/gallery.json`     | `src/data/generated/gallery.ts`      |
 | Characters | `content/characters.json`  | `src/data/generated/characters.ts`   |
 | Staff      | `content/staff.json`       | `src/data/generated/staff.ts`        |
@@ -94,6 +94,19 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 | Sequences  | `content/sequences/*.json` | `src/data/generated/sequences.ts`    |
 
 **Cast voice, look, backstory, and tone rules** live in the character bible, [`characters/bible/README.md`](characters/bible/README.md) (index, template, open questions), with pairings in [`characters/bible/relationship-map.md`](characters/bible/relationship-map.md). `content/characters.json` is the short catalog card; its `bibleSheet` field links each entry to its sheet. New seeds go in `characters/suggested-characters.md`.
+
+**Songs and cutaways have two outputs.** The bundled TS module holds only list-view summaries
+(no style prompts, lyrics, notes, segments or sight banks; cutaways carry `segmentCount` /
+`sightCount`). The full record is `public/catalog/<kind>/<id>.json`, with `index.json` beside it;
+detail views fetch it with `loadSong` / `loadCutaway` (`src/data/songs.ts`, `src/data/suggestions.ts`),
+validated by the same Zod schemas codegen wrote it with (`scripts/content-index/record-schemas.ts`).
+Never hand-edit `public/catalog/`; `codegen:check` fails on drifted or orphaned files there too.
+
+Song mp3s stay in `songs/` but are served at `audio/<slug>.mp3` (see
+`scripts/content-index/audio-names.ts`), never imported. Card stills render through
+`src/components/Still.tsx` (AVIF/WebP `srcset` from `vite-imagetools`, see
+`scripts/content-index/image-variants.ts`). Production builds register a Workbox service worker
+(app shell + catalog indexes precached; audio never cached).
 
 `src/data/*.ts` files are thin shims (types + re-exports). **Exception:** `src/data/sceneDialogVersions.ts` is hand-authored TypeScript. Dialog audition pages in `notes/scenes/versions/` are prose, not a codegen schema. See `content/README.md`.
 
@@ -116,6 +129,8 @@ npm run test:coverage    # same, with v8 coverage (no threshold yet)
 npm run test:e2e         # real-GL frame harness: Playwright + Chromium vs e2e/fixtures/ (needs a Pages-base build)
 npm run test:e2e:update  # regenerate e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check + dist/1ink.1ink
+npm run build:check      # build + raw chunk budgets (scripts/check-bundle-size.ts)
+npm run budgets          # Lighthouse CI on a Pages-base build (lighthouserc.json); CI blocks deploy on failure
 npm run preview
 ```
 
@@ -144,7 +159,7 @@ There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 
 1. Author the markdown/JSON source (`content/README.md`).
 2. `npm run codegen` (and `npm run agent-docs` if views/catalog summaries should change).
-3. Commit sources **and** regenerated `src/data/generated/*` / `public/llms*.txt` as needed.
+3. Commit sources **and** regenerated `src/data/generated/*`, `public/catalog/**` / `public/llms*.txt` as needed.
 
 Song frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches and is not codegen'd. Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 

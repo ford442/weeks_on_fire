@@ -1,0 +1,49 @@
+{
+  "id": "mv-neon-exit-sign",
+  "kind": "musical",
+  "title": "Neon Exit Sign",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~3:00–3:30",
+  "episode": "Episode 01 reprise",
+  "songId": "neon-exit-sign",
+  "songTitle": "Neon Exit Sign",
+  "summary": "Series signature. Wet alley of EXIT signs that never lead outside. The Two only as reflections. Don't smudge the mascara.",
+  "visualArc": "Flickering EXIT tube → heels on wet centerline → compact-mirror flames → closed-loop alley.",
+  "tags": [
+    "signature",
+    "the-two",
+    "rubella",
+    "synthwave"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "nes-exit",
+      "label": "EXIT tube",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Pink EXIT tube in rain. Condensation. City hiss.",
+      "lyrics": "(Instrumental neon hum)",
+      "musicCue": "Gated snare later; intro is hum only",
+      "grokImaginePrompt": "Extreme close-up of a flickering neon EXIT sign in rain, pink-magenta tube glow, condensation beads, wet metal housing, 80s neon noir, cinematic shallow depth of field, Grok Imagine style",
+      "geminiOmniPrompt": "12-second macro of a neon EXIT tube flickering in rain. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "nes-alley",
+      "label": "Alley loop",
+      "start": "0:55",
+      "end": "1:25",
+      "durationSec": 30,
+      "onScreen": "Mismatched EXIT signs. Doorways onto more alley. Twin reflections in puddles only.",
+      "lyrics": "Don't smudge the mascara / smudge the skyline instead",
+      "musicCue": "Chorus, stuttering arpeggio",
+      "grokImaginePrompt": "Wide tracking shot down a rain-soaked alley lined with mismatched neon EXIT signs, doorways leading only to more alley, twin glamorous reflections of two women in black lace visible only in puddles, never full faces, surreal neon noir, Grok Imagine style",
+      "geminiOmniPrompt": "30-second tracking shot down the EXIT alley. Photoreal, no full faces of The Two.",
+      "promptVariations": []
+    }
+  ]
+}

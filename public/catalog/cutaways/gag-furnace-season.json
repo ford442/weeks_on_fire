@@ -1,0 +1,52 @@
+{
+  "id": "gag-furnace-season",
+  "kind": "gag",
+  "title": "Furnace Season",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 8s loop",
+  "episode": "One-panel gag",
+  "songId": "the-pour",
+  "songTitle": "The Pour",
+  "summary": "Foundry gala; molten iron as the room's weather; she warms her hands at the pour; sparks die on mink. Vivienne hired a climate.",
+  "visualArc": "Molten ribbon → bored couture middle distance → hands at the trough → sparks on mink.",
+  "tags": [
+    "gag",
+    "vivienne",
+    "foundry",
+    "gala",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-07-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Foundry black-tie; molten pour; quartet not looking back; woman warming hands; sparks on mink.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, industrial iron foundry converted into a black-tie gala, a slow ribbon of molten iron pouring in the background from a lip into a trough, a string quartet in evening wear playing without looking back, glamorous guests in couture standing at a bored, safe distance, one woman in a torn black lace dress warming her hands at the pour as if it were a fireplace, orange molten light versus cold chrome and black silk, sparks dying on a mink stole over her shoulders, place cards that look fireproof, heat shimmer between her fingers and the trough, high contrast, strong silhouettes, 35mm anamorphic, T2.0, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 2.39:1, industrial iron foundry converted into a black-tie gala, a slow ribbon of molten iron pouring in the background from a lip into a trough, a string quartet in evening wear playing without looking back, glamorous guests in couture standing at a bored, safe distance, one woman in a torn black lace dress warming her hands at the pour as if it were a fireplace, orange molten light versus cold chrome and black silk, sparks dying on a mink stole over her shoulders, place cards that look fireproof, heat shimmer between her fingers and the trough, high contrast, strong silhouettes, 35mm anamorphic, T2.0, Grok Imagine style",
+      "promptVariations": [
+        "Quartet rosin smoke matching the pour color, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-07-motion",
+      "label": "Motion (8s)",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Endless pour; sparks die on mink; one bow-stroke; fingers flex once.",
+      "lyrics": "",
+      "musicCue": "The Pour — cello in 5 against 4",
+      "grokImaginePrompt": "8-second perfect loop. The pour never stops. Sparks drift and extinguish on the mink. One violin bow draws slowly. Heat shimmer. Her fingers flex once toward the iron. The quartet does not look back. Photoreal, locked camera, loop on the pour cycle.",
+      "geminiOmniPrompt": "8-second perfect loop. The pour never stops. Sparks drift and extinguish on the mink. One violin bow draws slowly. Heat shimmer. Her fingers flex once toward the iron. The quartet does not look back. Photoreal, locked camera, loop on the pour cycle.",
+      "promptVariations": []
+    }
+  ]
+}

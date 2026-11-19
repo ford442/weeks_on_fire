@@ -1,0 +1,57 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "npx vite preview --base /weeks_on_fire/ --port 4173 --strictPort",
+      "startServerReadyPattern": "Local",
+      "url": [
+        "http://localhost:4173/weeks_on_fire/",
+        "http://localhost:4173/weeks_on_fire/show/songs",
+        "http://localhost:4173/weeks_on_fire/show/sequences",
+        "http://localhost:4173/weeks_on_fire/show/cartoons"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "onlyCategories": [
+          "performance"
+        ],
+        "chromeFlags": "--no-sandbox --headless=new"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "largest-contentful-paint": [
+          "error",
+          {
+            "maxNumericValue": 3000,
+            "aggregationMethod": "median-run"
+          }
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.05,
+            "aggregationMethod": "median-run"
+          }
+        ],
+        "resource-summary:script:size": [
+          "error",
+          {
+            "maxNumericValue": 256000,
+            "aggregationMethod": "median-run"
+          }
+        ],
+        "resource-summary:total:size": [
+          "warn",
+          {
+            "maxNumericValue": 1536000,
+            "aggregationMethod": "median-run"
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": ".lighthouseci/reports"
+    }
+  }
+}

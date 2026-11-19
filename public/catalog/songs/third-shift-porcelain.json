@@ -1,0 +1,24 @@
+{
+  "id": "third-shift-porcelain",
+  "title": "Third Shift Porcelain",
+  "added": "2026-08-13",
+  "genre": "Dance & disco",
+  "subgenre": "Heel-click electro / cold disco",
+  "description": "Beauty as hourly work. Unison deadpan, marble-stamp kick, bar-5 downbeat always late. The Two do not clock out.",
+  "episode": "gag",
+  "slot": "After hours",
+  "tags": [
+    "electro",
+    "disco",
+    "labor",
+    "gag",
+    "lillith",
+    "rubella"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Third_Shift_Porcelain.md",
+  "stylePrompt": "Heel-click electro / cold disco at 108 BPM, mixed like a stockroom. Kick is a stamp on marble. Mannequin-joint clicks and heel-clicks as 16ths instead of bright hats. Dry analog bass. One fluorescent 60 Hz hum in the bed. Downbeat of bar 5 always late. Deadpan female unison, two voices stacked tight with no stereo width, not pretty, not cute. Dock-door verse can drop to a single dry voice. Mood: beauty as hourly work; overtime is not discussed; the chrome cigarette is the only break they can name. Early Human League stiffness, professional neutrality at dance tempo. Use Lillith and Rubella stacked in unison, no width.",
+  "lyrics": "[Intro — Stamp]\n(Marble kick, joint-click 16ths, hum)\n\n[Verse 1]\nLights in banks. Marble in rows.\nWe clock in wearing someone else's night\nA wrist that doesn't bend until it has to\nA smile that was painted on too tight\n\n[Pre-Chorus]\nBeauty is hourly\nOvertime is not discussed\n\n[Chorus]\nThird shift porcelain\nStand where they stood\nThird shift porcelain\nLook expensive. Look good.\nIf the floor is empty\nThe work is not\nThird shift porcelain\nDon't forget to clock\n\n[Verse 2]\nOne of us is smoking in the dock door\nChrome filter. No lungs. No break they can name.\nSecurity watches in a color that isn't color\nThe LED blinks like it knows we aren't the same\n\n[Pre-Chorus]\nBeauty is hourly\nOvertime is not discussed\n\n[Chorus]\nThird shift porcelain\nStand where they stood\nThird shift porcelain\nLook expensive. Look good.\nIf the floor is empty\nThe work is not\nThird shift porcelain\nDon't forget to clock\n\n[Bridge]\nI used to think the day people were realer\nThey leave their heat in the sleeves\nWe inherit the pose\nWe inherit the please\nWe do not inherit the leaving\n\n[Final Chorus]\nThird shift porcelain\nStand where they stood\nThird shift porcelain\nLook expensive. Look good.\nThe card drops\nThe night goes on\nThird shift porcelain\nDon't forget to clock\nDon't forget to clock",
+  "notes": "Direct score for gag #3 Third Shift Porcelain. Labor song. Nobody winks. Do not cast The Two as the mannequins unless you want a later reveal that they never left the floor — they do not punch out. Structural flaw: downbeat of bar 5 is always late (shift change); do not quantize it. Title chant on repeated tonic F#3. “Look expensive / look good” as two falling minor 2nds (G–F# then E–D#). Bass ostinato F#2–F#2–D3–E2. Verse F#m–D–E–F#m; chorus D–A–E–F#m; breakdown F#m pedal, no V. Fastest of the six — use it when the gala songs have been too velvet. Hero motion: punch-card drop, chrome smoke, LED in 4/4, late bar-5 downbeat as a held still. Runtime ~2:00. Ready for Minimax."
+}

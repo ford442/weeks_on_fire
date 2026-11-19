@@ -1,0 +1,113 @@
+{
+  "id": "the-long-way-up",
+  "kind": "scene",
+  "title": "The Long Way Up",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~9–12 min",
+  "episode": "Episode 05 candidate (wordy episode)",
+  "songId": "whatever-lets-us-be",
+  "songTitle": "The Honest Height (placeholder) / silence",
+  "summary": "The wordy episode — same juxtaposition family as Monster Mash (1958) on a laser-snake lawn and Rubella's monkey science: wrong channel, full commitment. Three women drive up a hill and walk the rest. Dialog versions: V2 Mulholland open → V3 daytime interview; Rosencrantz register (probability trucks, climbing metaphysics, padlock mood). One boot and one stiletto. Fourteen seconds of silence at the saddle.",
+  "visualArc": "2:10 PM county road (contract crawl) → sedan interview → ordinance gate → hood up → switchbacks → blue-hour saddle → fire under a black tower.",
+  "tags": [
+    "ep4",
+    "dialog",
+    "riley",
+    "rubella",
+    "lillith",
+    "ridge",
+    "wordy",
+    "juxtaposition",
+    "versions",
+    "rosencrantz"
+  ],
+  "characterIds": [
+    "rubella",
+    "lillith",
+    "riley-smith"
+  ],
+  "episodeId": "05",
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "the-long-a-2-10",
+      "label": "A — 2:10 PM — The Traffic Stop That Isn't One",
+      "start": "hero",
+      "end": "hero",
+      "durationSec": 0,
+      "onScreen": "2:10 PM — The Traffic Stop That Isn't One",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic wide film still, flat brutal overhead 2 PM summer light, no shadows to hide in. A sun-bleached blonde woman in a light green halter top with an amethyst pendant and a large trail backpack walks the faded center line of an empty two-lane county road through dry gold California hills. A dusty sedan crawls alongside her at exact walking pace, two women in black lace visible inside, one leaning out the passenger window. Heat shimmer off the asphalt, no shoulder, no other cars, telephone poles receding to the horizon. Deadpan procedural comedy staging, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "10-second slow tracking video alongside a woman with a backpack walking the center line of an empty county road in flat 2 PM heat. A dusty sedan pulls even with her and matches her walking speed exactly instead of passing. A woman in black lace leans out the passenger window and speaks. The walker does not stop, does not look over, and answers. Heat shimmer, dry gold hills, no other traffic. Photoreal cinematic, deadpan, no music.",
+      "promptVariations": []
+    },
+    {
+      "id": "the-long-b-2-40",
+      "label": "B — 2:40 PM — Aggressive Small Talk",
+      "start": "The Interview",
+      "end": "The Interview",
+      "durationSec": 0,
+      "onScreen": "2:40 PM — Aggressive Small Talk",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic interior car still, harsh hazy high-sun afternoon light through dusty glass. Three women in a moving sedan: driver in black lace with jet-black hair watching the road, passenger in matching black lace turned fully around with one knee up on the seat like a detective conducting an interview, and a sun-bleached blonde woman in a green halter in the back seat with a backpack belted in beside her like a passenger. Cooler on the floor. Interrogation blocking played completely casual, warm dust in the air, photoreal, anamorphic feel, Grok Imagine style",
+      "geminiOmniPrompt": "12-second handheld interior video inside a moving sedan in hazy afternoon light. The passenger in black lace turns fully around in her seat to question the blonde woman in the back, rapid overlapping dialogue, cop-show rhythm played casually. The driver never looks over and interjects once, flatly. The back-seat woman answers each question with a small precise correction. Dust, sun flare through the windshield, dry hills scrolling past. Photoreal cinematic, no score.",
+      "promptVariations": []
+    },
+    {
+      "id": "the-long-c-3-25",
+      "label": "C — 3:25 PM — The Gate",
+      "start": "hero",
+      "end": "hero",
+      "durationSec": 0,
+      "onScreen": "3:25 PM — The Gate",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic medium-wide film still, hard 3 PM shadows and hanging dust. Three women stand shoulder to shoulder in a row facing a faded official forest-service sign on a steel swing gate across a graded dirt fire road — two in black cocktail lace and heels, one sun-bleached in a green halter and hiking pack. All three read the dense wordy ordinance text with the exact posture of a jury reviewing evidence. A cut padlock hangs re-hung on the chain to look locked. Dry gold hillside, deadpan absurdity of formalwear at a trailhead, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "10-second locked-off medium-wide video at a steel gate across a dirt fire road, hard mid-afternoon shadows. Three women stand in a row reading a wordy closure sign aloud like evidence, one in a green halter, two in black lace and heels. One steps forward and examines a padlock without touching it. The driver in black lace walks out of frame, the gate swings open behind them, and nobody closes it. Photoreal cinematic, deadpan comedy, no music.",
+      "promptVariations": []
+    },
+    {
+      "id": "the-long-e-5-20",
+      "label": "E — 5:20 PM — Hood Up / The Boots",
+      "start": "hero",
+      "end": "hero",
+      "durationSec": 0,
+      "onScreen": "5:20 PM — Hood Up / The Boots",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic wide film still, warm 5 PM light with very long shadows across a dirt turnout on a steep fire road. A dusty sedan sits at an angle with its hood up, faint steam. A sun-bleached blonde woman is buried under the hood to the shoulders. A woman in black lace holds a phone flashlight up for her in full daylight with total sincerity. A second woman in black lace sits on a cooler watching. One pair of trail boots sits open on the bumper beside a discarded stiletto. Golden dust, dry hills falling away below, deadpan roadside comedy, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "12-second video at a dirt turnout in long warm late-afternoon light. A blonde woman emerges from under the hood of a steaming sedan and pulls a single pair of trail boots from her backpack. Two women in black lace divide them — each removes one heel and puts on one boot. One stands and takes two experimental steps uphill in one boot and one stiletto. It works badly. Nobody comments. Photoreal cinematic, deadpan, no music.",
+      "promptVariations": []
+    },
+    {
+      "id": "the-long-f-6-45",
+      "label": "F — 6:45 PM — The Switchbacks",
+      "start": "Overlap",
+      "end": "Overlap",
+      "durationSec": 0,
+      "onScreen": "6:45 PM — The Switchbacks",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic extreme-long-lens film still at full golden hour: three tiny figures strung out over forty yards along a dirt switchback cut across a vast gold California hillside, the valley opening blue and hazy behind them, light raking long and orange and specific. Two figures in black lace, one in a green halter with a backpack, all mid-climb, compressed telephoto perspective flattening the ridges into gold bands. Epic scale against three people having an argument about radio geometry, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "14-second long-lens video of three women climbing a dirt switchback across a gold hillside at golden hour, strung out over forty yards, compressed telephoto perspective. Overlapping continuous dialogue — nobody waits for a turn, the woman farthest downhill calls up, the woman uphill answers without turning around. Gravel underfoot, long orange light, huge hazy valley behind. Photoreal cinematic, no score, breath and footsteps audible.",
+      "promptVariations": []
+    },
+    {
+      "id": "the-long-g-8-05",
+      "label": "G — 8:05 PM — The Saddle",
+      "start": "The Silence, hero",
+      "end": "The Silence, hero",
+      "durationSec": 0,
+      "onScreen": "8:05 PM — The Saddle",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic wide film still at blue hour, dusk: three women stopped dead at the crest of a mountain saddle, silhouetted, the eastern world opening below them into deep blue valley with a single string of distant highway lights. Above and ahead of them a skeletal one-hundred-and-ninety-foot decommissioned lattice weather antenna with guy wires, absolutely still, black against a deep gradient sky with the first stars. Two silhouettes in black lace, one with a backpack. Nobody speaking, enormous quiet, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "14-second locked-off wide video at blue hour on a mountain saddle. Three women come over the crest and stop walking because the grade ended. A skeletal dead lattice antenna stands above them against a deep blue dusk sky. Nobody speaks for the entire clip. Wind only — and the cicadas stop partway through. No camera move, no music, no dialogue. Photoreal cinematic.",
+      "promptVariations": []
+    }
+  ]
+}

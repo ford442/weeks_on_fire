@@ -1,0 +1,36 @@
+{
+  "id": "mv-pepperoni-or-margherita",
+  "kind": "musical",
+  "title": "Pepperoni or Margherita",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~1:45",
+  "episode": "Episode 03 / recurring",
+  "songId": "pepperoni-or-margherita",
+  "songTitle": "Pepperoni or Margherita",
+  "summary": "Fifteen seconds of cheerful ad, hard cut, then a deadpan ballad about arriving when chaos peaks.",
+  "visualArc": "Box at chest height → laser battle soft → walking away without looking back.",
+  "tags": [
+    "pizza-guy",
+    "jingle",
+    "comedy"
+  ],
+  "episodeId": "03",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "pom-box",
+      "label": "The box",
+      "start": "0:15",
+      "end": "0:40",
+      "durationSec": 25,
+      "onScreen": "Pizza box at chest height. Chaos soft-focus behind. He is on schedule, not cool.",
+      "lyrics": "Pepperoni or margherita / the sky's on fire but the crust is fine",
+      "musicCue": "Hard cut from jingle to ballad",
+      "grokImaginePrompt": "Cinematic medium still of a deadpan pizza delivery man holding a box at chest height, a chaotic backyard laser battle in soft focus behind him, suburban night, he is not looking at the battle, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "25-second hold on the delivery. He does not look back. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

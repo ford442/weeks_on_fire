@@ -1,0 +1,103 @@
+{
+  "id": "mv-receipt-dated-thursday",
+  "kind": "musical",
+  "title": "Receipt Dated Thursday",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "1:40–2:00",
+  "episode": "Musical Cutaway / Biscuit",
+  "songId": "receipt-dated-thursday",
+  "songTitle": "Receipt Dated Thursday",
+  "summary": "Continuity Voice reads a poodle’s return receipt from a store that will not exist until Thursday. The barcode is always one digit short.",
+  "visualArc": "Thermal slip → heist under chairs → incomplete scan → rift lot → receipt in the minutes → return, still short.",
+  "tags": [
+    "biscuit",
+    "continuity-voice",
+    "receipt",
+    "comedy",
+    "eyewash-station",
+    "hoa"
+  ],
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "rdt-slip",
+      "label": "Thermal slip",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Receipt: GAVEL CRACKED, date THURSDAY, barcode missing last digit.",
+      "lyrics": "Item: gavel, cracked, character included. / Returned by: Biscuit. / Store: not yet.",
+      "musicCue": "80 BPM printer advance; incomplete beep",
+      "grokImaginePrompt": "Macro photoreal of a cheap thermal receipt, slightly purple-tinted paper, item line GAVEL CRACKED, date THURSDAY, barcode with the last digit missing, fluorescent lobby light, Grok Imagine style",
+      "geminiOmniPrompt": "10-second macro. Printer advance. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rdt-heist",
+      "label": "Heist under chairs",
+      "start": "0:10",
+      "end": "0:32",
+      "durationSec": 22,
+      "onScreen": "Poodle, purple bandana, cracked gavel, folding chairs.",
+      "lyrics": "She took it under the folding chairs. / No explanation. No apology.",
+      "musicCue": "Thermal-printer percussion",
+      "grokImaginePrompt": "Low tracking shot of a standard poodle in a glowing purple bandana trotting under rows of folding chairs with a cracked wooden gavel in her mouth, HOA meeting in progress above, deadpan comedy, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "22-second low track. Nails on tile. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rdt-scan",
+      "label": "Incomplete scan",
+      "start": "0:32",
+      "end": "0:52",
+      "durationSec": 20,
+      "onScreen": "Scanner, seven tones, poodle nose, EyeWash CRT.",
+      "lyrics": "Receipt dated Thursday / The barcode is short one number / We are not authorized to guess",
+      "musicCue": "Barcode beep always seven tones, not eight",
+      "grokImaginePrompt": "Close-up of a grocery barcode scanner beeping seven tones over a receipt dated Thursday, poodle nose at the edge of frame, EyeWash Station color bars on a tiny lobby CRT, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "20-second scan. Beep incomplete. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rdt-lot",
+      "label": "Rift lot",
+      "start": "0:52",
+      "end": "1:14",
+      "durationSec": 22,
+      "onScreen": "Empty lot, violet rift, receipt on a survey stake.",
+      "lyrics": "Change: a store that opens next Thursday on a lot that is currently a rift.",
+      "musicCue": "Verse 2; hum, no store Muzak",
+      "grokImaginePrompt": "Empty suburban lot at night where a store should be, a violet rift where the parking spaces would go, a receipt taped to a survey stake, no people, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "22-second empty lot. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rdt-minutes",
+      "label": "Tuck it in the minutes",
+      "start": "1:14",
+      "end": "1:32",
+      "durationSec": 18,
+      "onScreen": "Clipboard, receipt in the minutes, purple bandana on the clip.",
+      "lyrics": "The dog has a paper trail. / The paper trail has a dog.",
+      "musicCue": "Bridge; printer slower",
+      "grokImaginePrompt": "HOA clipboard with a thermal receipt tucked into the minutes, purple bandana caught on the clip, fluorescent clubhouse, deadpan, Grok Imagine style",
+      "geminiOmniPrompt": "18-second clipboard. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rdt-return",
+      "label": "Return, still short",
+      "start": "1:32",
+      "end": "1:55",
+      "durationSec": 23,
+      "onScreen": "Poodle in an aisle that does not exist yet; last beep still short.",
+      "lyrics": "Thank you for shopping where we aren't yet. / We'll return to your program. We always do.",
+      "musicCue": "Spoken small print; last incomplete beep",
+      "grokImaginePrompt": "Poodle sitting politely in a fluorescent aisle that does not exist yet, cracked gavel on the linoleum, receipt in a bow, last barcode beep missing its digit, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "23-second sit. No bark. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

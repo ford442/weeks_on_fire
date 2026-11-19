@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { PRODUCTION_STATUSES } from './statuses';
 import { SequenceGraphSchema } from './graph-schema';
 
 export const AddedDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added must be YYYY-MM-DD');
@@ -14,19 +15,7 @@ const optionalAdded = AddedDateSchema.optional();
 const linkId = z.string().min(1);
 const linkIds = z.array(linkId).min(1);
 
-/**
- * One production pipeline for every item on the hub (songs, stills, videos, cutaways, Timeline
- * scenes). Type (scene / song / image / video / character) is a separate field; this is only the
- * stage. Labels and colors live in `src/lib/status.ts`.
- */
-export const PRODUCTION_STATUSES = [
-  'suggested',
-  'ready-to-generate',
-  'generated',
-  'in-edit',
-  'approved',
-  'final',
-] as const;
+export { PRODUCTION_STATUSES };
 export const ProductionStatusSchema = z.enum(PRODUCTION_STATUSES);
 export type ProductionStatus = z.infer<typeof ProductionStatusSchema>;
 

@@ -4,10 +4,9 @@ import { MemoryRouter, useLocation } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import episode04Json from '../../episodes/episode-04/scenes.json';
-import App from '../App';
-import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { AVAILABLE_EPISODES } from '../data/production';
 import { EpisodeProductionSchema } from '../schemas/production';
+import { renderApp } from '../test/renderApp';
 
 import SceneEditorModal from './SceneEditorModal';
 import SceneTimeline from './SceneTimeline';
@@ -56,14 +55,7 @@ beforeEach(() => {
 
 describe('Timeline catalog links', () => {
   it('follows the seeded Episode 04 deep link all the way to the cutaway', async () => {
-    render(
-      <MemoryRouter initialEntries={['/show/timeline']}>
-        <MediaSessionProvider>
-          <App />
-          <LocationProbe />
-        </MediaSessionProvider>
-      </MemoryRouter>,
-    );
+    renderApp('/show/timeline');
 
     const episodeSelect = await screen.findByDisplayValue('Episode 01', {}, { timeout: 5000 });
     await userEvent.selectOptions(episodeSelect, '04');

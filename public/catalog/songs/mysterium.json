@@ -1,0 +1,21 @@
+{
+  "id": "mysterium",
+  "title": "Mysterium",
+  "added": "2026-07-11",
+  "genre": "Pop & synth-pop",
+  "subgenre": "Bubblegum Italo-pop",
+  "description": "Festive Italian bubblegum pop with Latin chorus hooks.",
+  "episode": "cutaway",
+  "tags": [
+    "italian",
+    "pop",
+    "christmas",
+    "choir"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Mysterium.md",
+  "stylePrompt": "Bubblegum pop, Italo-pop, festive Christmas electro-pop, 128 BPM in C major with a whole-step key lift into the final chorus, four-on-the-floor punchy drum machine with tight handclaps on 2 and 4, groovy sidechained synth bass pumping like fairy lights, bright sparkling supersaw stabs, twinkly bells, glockenspiel and sleigh bells for holiday sparkle, plucked arpeggiator at sixteenth notes, warm analog pad bed, short gated-reverb tom fill before each chorus. Lead vocal: warm expressive female alto on the verses, sweet playful energy, slightly breathy and cute, conversational modern Italian diction; soaring radiant female soprano takes the chorus hooks with bright glossy pop shine and light vocal runs. Rich alto-soprano duets and stacked harmonies on every chorus, supporting female choir \"ah\" pads for luminous contemporary choral depth in the background only, never churchy or solemn. Latin words sung with clear open-vowel pronunciation but pop phrasing and rhythm, not liturgical. The \"Alleluia\" hook is super catchy, repetitive and radio-ready like a classic 90s/2000s bubblegum chorus. Overall mood: sweet, joyful, glowing, danceable and feel-good with a sense of wonder underneath — winter night in an Italian piazza, market lights and cold breath, not a church service. Polished modern production, wide stereo image, prominent up-front vocals, high energy but warm and radiant, big last chorus with choir and key change, clean ending on a twinkling bell.",
+  "lyrics": "[Verse 1]\nSi accendono le luci sulla piazza,\nil fiato che disegna il cielo blu,\nla gente corre e nessuno si accorge\nche stanotte c'è qualcosa in più.\nUn segreto che nessuno spiega,\ntroppo grande per finire in un perché.\n\n[Pre-Chorus]\nDimmi che lo senti anche tu,\nun mistero che ci tira su —\nuno, due, tre!\n\n[Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Verse 2]\nTra i mercatini e le campane in festa\nla città stasera è un presepe che si muove,\nanche chi non ci crede alza la testa\ne per un attimo ci crede pure lui.\nC'è una stella sopra i tetti bianchi\nche conosce il nome mio e il tuo.\n\n[Pre-Chorus]\nDimmi che lo senti anche tu,\nun mistero che ci tira su —\nuno, due, tre!\n\n[Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Bridge]\nO magnum mysterium,\net admirabile sacramentum...\nSotto questo cielo io e te,\nil mistero è che ci sei per me.\nGloria, gloria in excelsis —\ne poi più forte, dai!\n\n[Final Chorus]\nAlleluia! Alleluia!\nO magnum mysterium!\nBalla con me sotto le stelle,\nalleluia, mysterium!\nAlleluia! Alleluia!\nEt admirabile!\nQuesta notte è una promessa,\nalleluia, canta con me!\n\n[Outro]\nAlleluia... mysterium...\nAlleluia... canta con me.",
+  "notes": "Minimax Music 2.6 tends to sing anything left inside brackets beyond the\nplain section name, so keep tags bare ([Verse 1], [Chorus], [Bridge]) and\nput all performance/arrangement direction in the STYLE block instead.\nLyrics are modern conversational Italian with the original Latin kept as\nthe chorus hook (\"O magnum mysterium\", \"Alleluia\", \"et admirabile\") and a\nshort chant quote in the bridge — pop first, hymn second."
+}

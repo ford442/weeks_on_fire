@@ -31,6 +31,7 @@ import FilterSelect, { allValue } from './FilterSelect';
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
 import StatusBadge from './StatusBadge';
+import Still from './Still';
 
 const statusCounts = countByStatus(filmScenes);
 
@@ -295,8 +296,10 @@ function GalleryCard({ scene, selected, copiedKey, onOpen, onSelect, onCopy }: G
       >
         {scene.imageUrl ? (
           <div className="relative aspect-[4/5] overflow-hidden bg-black">
-            <img
+            <Still
               src={scene.imageUrl}
+              picture={scene.imagePicture}
+              sizes="(min-width: 1536px) 20vw, (min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
               alt={scene.title}
               className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
               loading="lazy"

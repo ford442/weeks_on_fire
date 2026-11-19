@@ -8,6 +8,7 @@ import { useUrlParam } from '../hooks/useUrlState';
 import { viewPaths } from '../routes/paths';
 
 import RelatedLinks from './RelatedLinks';
+import Still from './Still';
 
 const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
 
@@ -188,8 +189,10 @@ export default function Characters() {
                       >
                         {character.imageUrl ? (
                           <div className="aspect-[4/5] w-full overflow-hidden bg-zinc-900">
-                            <img
+                            <Still
                               src={character.imageUrl}
+                              picture={character.imagePicture}
+                              sizes="(min-width: 1024px) 25vw, 50vw"
                               alt={`${character.name} — ${character.role}`}
                               className="h-full w-full object-cover object-top"
                               loading="lazy"
@@ -252,8 +255,10 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
     <div className="space-y-5 rounded-lg border border-zinc-800 bg-zinc-950 p-5">
       {character.imageUrl ? (
         <div className="aspect-[3/4] w-full overflow-hidden rounded-md bg-zinc-900">
-          <img
+          <Still
             src={character.imageUrl}
+            picture={character.imagePicture}
+            sizes="(min-width: 1024px) 480px, 100vw"
             alt={`${character.name} — ${character.role}`}
             className="h-full w-full object-cover object-top"
           />

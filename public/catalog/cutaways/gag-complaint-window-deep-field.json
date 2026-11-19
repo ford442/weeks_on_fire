@@ -1,0 +1,53 @@
+{
+  "id": "gag-complaint-window-deep-field",
+  "kind": "gag",
+  "title": "Complaint Window, Deep Field",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 8s loop",
+  "episode": "One-panel gag",
+  "songId": "after-is-a-floor",
+  "songTitle": "After Is a Floor",
+  "summary": "A wood-and-brass service window floating in a Hubble field; she slides a triplicate form; stamp: DENIED; now serving: —. Liliane files.",
+  "visualArc": "Deep-field galaxies → lone booth → triplicate through the slot → DENIED / 000000.",
+  "tags": [
+    "gag",
+    "liliane",
+    "bureaucracy",
+    "space",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-05-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Service window in deep space; DENIED; NOW SERVING: —; ticket 000000; pearl earring in zero-g.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, a single old-fashioned wood-and-brass customer-service window floating alone in deep space against a Hubble deep-field of distant galaxies, a glamorous woman in a black dress and pearls in microgravity sliding a triplicate carbon form through the slot, only a clerk's pale hands and a red rubber stamp visible inside the booth, the stamp just marking DENIED in wet red ink, a ticket display above the window reading NOW SERVING: — (an em dash, no number), her paper ticket printed 000000, a brass plaque reading PLEASE TAKE A NUMBER, her pearl earring lifting in zero-g, high contrast practical fluorescent window light against cosmic black, strong silhouette, no planet, no ship, 35mm anamorphic, T2.0, dry bureaucratic dread, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 2.39:1, a single old-fashioned wood-and-brass customer-service window floating alone in deep space against a Hubble deep-field of distant galaxies, a glamorous woman in a black dress and pearls in microgravity sliding a triplicate carbon form through the slot, only a clerk's pale hands and a red rubber stamp visible inside the booth, the stamp just marking DENIED in wet red ink, a ticket display above the window reading NOW SERVING: — (an em dash, no number), her paper ticket printed 000000, a brass plaque reading PLEASE TAKE A NUMBER, her pearl earring lifting in zero-g, high contrast practical fluorescent window light against cosmic black, strong silhouette, no planet, no ship, 35mm anamorphic, T2.0, dry bureaucratic dread, Grok Imagine style",
+      "promptVariations": [
+        "Stamp reads PLEASE STAND BY instead of DENIED, Grok Imagine",
+        "Her form is a seating chart, otherwise identical, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-05-motion",
+      "label": "Motion (8s)",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Stamp down; form edges lift; stars crawl; earring rotates; display never advances.",
+      "lyrics": "",
+      "musicCue": "After Is a Floor — extra ding / destinations as manners",
+      "grokImaginePrompt": "8-second slow drift. The stamp comes down. The form's edges lift as if in a draft vacuum should not have. Stars crawl. The booth's fluorescent tube flickers once. Her earring rotates a quarter turn. The display never advances. Photoreal, camera almost locked, one percent drift to imply no floor.",
+      "geminiOmniPrompt": "8-second slow drift. The stamp comes down. The form's edges lift as if in a draft vacuum should not have. Stars crawl. The booth's fluorescent tube flickers once. Her earring rotates a quarter turn. The display never advances. Photoreal, camera almost locked, one percent drift to imply no floor.",
+      "promptVariations": []
+    }
+  ]
+}

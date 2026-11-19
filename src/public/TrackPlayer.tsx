@@ -4,10 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { useCoordinatedAudio } from '../hooks/useCoordinatedAudio';
 import { loadSongAudioUrl } from '../lib/songAudio';
+import { useSongRecord } from '../data/songs';
 
 import { artistFor, hasPublicAudio } from './catalog';
 
-import type { Song } from '../data/types';
+import type { SongSummary as Song } from '../data/types';
 
 export default function TrackPlayer({
   playable,
@@ -191,16 +192,7 @@ export default function TrackPlayer({
             </p>
           )}
 
-          {!selected.instrumental && selected.lyrics?.trim() && (
-            <details className="mt-6">
-              <summary className="cursor-pointer text-sm font-semibold text-fuchsia-200">
-                Lyrics
-              </summary>
-              <pre className="mt-3 max-h-96 overflow-y-auto whitespace-pre-wrap font-sans text-sm leading-6 text-zinc-300">
-                {selected.lyrics}
-              </pre>
-            </details>
-          )}
+          {!selected.instrumental && <TrackLyrics songId={selected.id} />}
         </section>
       )}
 
@@ -285,4 +277,18 @@ function formatTime(seconds: number): string {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);
   return `${m}:${s.toString().padStart(2, '0')}`;
+}
+
+/** Lyrics live in the per-song record; fetched when a track is shown, not with the album. */
+function TrackLyrics({ songId }: { songId: string }) {
+  const { record } = useSongRecord(songId);
+  if (!record?.lyrics?.trim()) return null;
+  return (
+    <details className="mt-6">
+      <summary className="cursor-pointer text-sm font-semibold text-fuchsia-200">Lyrics</summary>
+      <pre className="mt-3 max-h-96 overflow-y-auto whitespace-pre-wrap font-sans text-sm leading-6 text-zinc-300">
+        {record.lyrics}
+      </pre>
+    </details>
+  );
 }

@@ -1,0 +1,50 @@
+{
+  "id": "mv-this-program-contains-dialogue",
+  "kind": "musical",
+  "title": "This Program Contains Dialogue",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "1:25–1:45",
+  "episode": "EyeWash Station / The Long Way Up",
+  "songId": "this-program-contains-dialogue",
+  "songTitle": "This Program Contains Dialogue",
+  "summary": "Pre-program warning sung as a hymn. S&P will not stamp until someone talks. The card never changes.",
+  "visualArc": "DIALOGUE card → lectern → legal crawl → unstamped PROBABLY FINE → off-mic “Is this on.”",
+  "tags": [
+    "eyewash-station",
+    "continuity-voice",
+    "disclaimer",
+    "comedy",
+    "ep4"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "tpcd-card",
+      "label": "The card",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Full-frame analog card: THE FOLLOWING PROGRAM CONTAINS DIALOGUE.",
+      "lyrics": "The following program contains dialogue. / Viewer discretion is a zoning matter.",
+      "musicCue": "84 BPM organ, color-bar sine",
+      "grokImaginePrompt": "Full-frame 1980s analog TV card reading THE FOLLOWING PROGRAM CONTAINS DIALOGUE, EyeWash Station color bars at the edge, institutional blue, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "10-second locked card. Image never changes. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "tpcd-stamp",
+      "label": "Probably fine",
+      "start": "1:28",
+      "end": "1:45",
+      "durationSec": 17,
+      "onScreen": "S&P skeleton finally stamps. Off-mic: Is this on.",
+      "lyrics": "This program contains dialogue / (stamp: PROBABLY FINE) / Is this on. / It is now.",
+      "musicCue": "Single rubber stamp, then spoken tag",
+      "grokImaginePrompt": "Extreme close-up of a rubber stamp PROBABLY FINE hitting a script in a tiny Standards & Practices booth, plastic skeleton steward, CRT glow, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "17-second stamp, then dark booth mic. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "mv-porch-light-meridian",
+  "kind": "musical",
+  "title": "Porch Light Meridian",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~3:00",
+  "episode": "Episode 03",
+  "songId": "porch-light-meridian",
+  "songTitle": "Porch Light Meridian",
+  "summary": "Crane up from a porch bulb after chaos. The yard is small but the sky will not fit.",
+  "visualArc": "Pizza box / porch circle → roofs → moon with a wrong second glow.",
+  "tags": [
+    "ep3",
+    "porch",
+    "downtempo",
+    "rubella"
+  ],
+  "episodeId": "03",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "plm-crane",
+      "label": "Crane reveal",
+      "start": "0:00",
+      "end": "0:20",
+      "durationSec": 20,
+      "onScreen": "Porch bulb as a tiny sun. Camera rising. Cul-de-sac flattening into a star chart.",
+      "lyrics": "Porch light meridian / the yard is small but the sky won't fit",
+      "musicCue": "108 BPM progressive pulse, gradual only",
+      "grokImaginePrompt": "Cinematic crane still from a suburban porch at night, a single warm porch bulb holding a small circle on the lawn, roofs and a pale moon with a faint wrong second glow above, after-chaos quiet, pizza box on the step, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "20-second crane up from porch bulb through roofs to a moon with one extra glow. Photoreal, no lasers in the hero frame.",
+      "promptVariations": []
+    }
+  ]
+}

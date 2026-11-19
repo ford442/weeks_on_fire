@@ -1,15 +1,26 @@
-const audioModules = import.meta.glob<string>('../../songs/*.mp3', {
-  import: 'default',
-});
+import { servedAudioPath } from '../../scripts/content-index/audio-names';
+import { audioFilenames } from '../data/generated/songs';
 
-export async function loadSongAudioUrl(filename: string): Promise<string | undefined> {
-  const loader = audioModules[`../../songs/${filename}`];
-  if (!loader) return undefined;
-  return loader();
+import { publicPath } from './basePath';
+
+const known = new Set(audioFilenames);
+
+/**
+ * URL for an mp3 in songs/. The files are copied to `dist/audio/` (and served there by the dev
+ * server) under stable names, so the browser and the service worker cache them by one URL across
+ * deploys, and no per-track JS chunk exists just to resolve a hashed asset name.
+ */
+export function songAudioUrl(filename: string): string | undefined {
+  return known.has(filename) ? publicPath(servedAudioPath(filename)) : undefined;
+}
+
+/** Kept async so callers don't care how the URL is resolved. */
+export function loadSongAudioUrl(filename: string): Promise<string | undefined> {
+  return Promise.resolve(songAudioUrl(filename));
 }
 
 export function listAudioFilenames(): string[] {
-  return Object.keys(audioModules).map((path) => path.split('/').pop() ?? '');
+  return [...audioFilenames];
 }
 
 function decodeAudioFilename(filename: string): string {

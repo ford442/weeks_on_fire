@@ -2,21 +2,21 @@ import { Check, Copy, FileText, Music2, Tags } from 'lucide-react';
 
 import { episodeWithSlot } from '../data/taxonomy';
 import { formatSongDate } from '../lib/songDate';
+import { useSongRecord, type Song, type SongSummary } from '../data/songs';
 
 import RelatedLinks from './RelatedLinks';
 import SongAudioPlayer from './SongAudioPlayer';
 import StatusBadge from './StatusBadge';
 
-import type { Song } from '../data/songs';
-
 interface SongDetailProps {
-  song: Song;
+  /** The bundled summary renders at once; prompts and lyrics arrive with the full record. */
+  song: SongSummary;
   copiedKey: string | null;
   onCopy: (text: string, label: string, key: string) => void;
 }
 
 export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps) {
-  const minimaxPayload = song.lyrics ? `${song.stylePrompt}\n\n${song.lyrics}` : song.stylePrompt;
+  const full = useSongRecord(song.id);
 
   return (
     <aside className="flex min-h-0 flex-col gap-5 rounded-lg border border-zinc-800 bg-zinc-950/95 p-5 shadow-2xl shadow-black/30">
@@ -61,6 +61,39 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
         </div>
       </div>
 
+      {full.status === 'ready' ? (
+        <SongPrompts song={full.record} copiedKey={copiedKey} onCopy={onCopy} />
+      ) : full.status === 'error' ? (
+        <p
+          role="alert"
+          className="rounded-md border border-red-500/40 bg-red-500/10 p-3 text-sm text-red-200"
+        >
+          Couldn’t load the style prompt and lyrics ({full.error.message}).
+        </p>
+      ) : (
+        <div role="status" className="space-y-3" aria-live="polite">
+          <span className="sr-only">Loading style prompt and lyrics…</span>
+          <div className="h-14 animate-pulse rounded-md border border-zinc-800 bg-zinc-900 motion-reduce:animate-none" />
+          <div className="h-52 animate-pulse rounded-md border border-zinc-800 bg-zinc-900 motion-reduce:animate-none" />
+        </div>
+      )}
+    </aside>
+  );
+}
+
+function SongPrompts({
+  song,
+  copiedKey,
+  onCopy,
+}: {
+  song: Song;
+  copiedKey: string | null;
+  onCopy: SongDetailProps['onCopy'];
+}) {
+  const minimaxPayload = song.lyrics ? `${song.stylePrompt}\n\n${song.lyrics}` : song.stylePrompt;
+
+  return (
+    <>
       <div className="flex items-center justify-between gap-3 rounded-md border border-orange-500/30 bg-orange-500/5 p-3">
         <p className="text-xs text-zinc-400">
           {song.lyrics ? 'Style prompt, blank line, lyrics' : 'Style prompt (instrumental)'}
@@ -114,7 +147,7 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
           </p>
         </section>
       )}
-    </aside>
+    </>
   );
 }
 

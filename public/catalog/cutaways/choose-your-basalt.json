@@ -1,0 +1,92 @@
+{
+  "id": "choose-your-basalt",
+  "kind": "musical",
+  "title": "Choose Your Basalt",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~55 seconds",
+  "episode": "Musical Cutaway",
+  "songId": "choose-your-basalt",
+  "songTitle": "Choose Your Basalt",
+  "summary": "Dead-pan educational cabaret duet: Lillith and Rubella classify lava types in their gothic living room, then the floor opens onto magma. Ends with “That’s nature for us” / “Science.” before a Twilight Time trance smash-cut.",
+  "visualArc": "House interior (black lace + Hawaiian leis) → heat shimmer in floorboards → cracked living-room floor → lava tubes beneath the foundation → white-flash smash-cut into trance remix.",
+  "tags": [
+    "basalt",
+    "cabaret",
+    "lava",
+    "lillith",
+    "rubella",
+    "house",
+    "duet",
+    "trance-handoff"
+  ],
+  "segmentCount": 5,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "choose-your-a-intro-living",
+      "label": "A — Intro / Living Room",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Intro / Living Room",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic wide still of two glamorous women in matching black lace dresses and bright pink-and-yellow Hawaiian leis standing dead-pan in a gothic living room, velvet sofa and mantel behind them, a cheap framed volcano painting on the wall, soft key light from the left, cool backlight rim, educational-cabaret comedy mood, short-film production still, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked-off wide video inside a gothic living room. Two women in black lace with bright Hawaiian leis stand dead-pan facing camera, lips barely moving as they sing a sweet educational duet. Slight piano-lounge feel. Velvet sofa, mantel, cheap volcano painting behind them. Soft left key light, cool rim light. No cuts. Subtle stillness, tiny blinks only. Photoreal cinematic short film.",
+      "promptVariations": []
+    },
+    {
+      "id": "choose-your-b-p-hoehoe",
+      "label": "B — Pāhoehoe",
+      "start": "0:08",
+      "end": "0:20",
+      "durationSec": 12,
+      "onScreen": "Pāhoehoe",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Same gothic living room wide shot, two women in black lace and Hawaiian leis, one making a tiny classroom conducting gesture, faint orange heat shimmer rising through the hardwood floorboards under their feet, dead-pan faces, soft cinematic lighting, short-film still, Grok Imagine style",
+      "geminiOmniPrompt": "12-second continuous wide video, same living-room setup. Duo sings call-and-response about smooth lava. On the chant “Pā-ho-e-ho-e” one woman makes a tiny classroom hand-wave. Spoken aside “Viscosity: agreeable.” Faint orange heat shimmer begins under the floorboards. Locked camera, dead-pan faces, no dancing. Photoreal cinematic.",
+      "promptVariations": []
+    },
+    {
+      "id": "choose-your-c-a-verse",
+      "label": "C — ‘A‘ā Verse & Punchline",
+      "start": "0:20",
+      "end": "0:35",
+      "durationSec": 15,
+      "onScreen": "‘A‘ā Verse & Punchline",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Gothic living room floor cracking into jagged plates like ‘a‘ā lava, orange magma light glowing up through the gaps under two dead-pan women in black lace and Hawaiian leis, dust in the air, clinical comedy lighting mixed with volcanic underglow, cinematic short-film still, Grok Imagine style",
+      "geminiOmniPrompt": "15-second video: living-room floorboards split into jagged plates while the duet continues dead-pan. Magma light rises through cracks. They chant “‘A-‘ā,” deliver the folk-etymology correction, then mirror “Ah. Ah.” Camera still mostly locked; subtle vibration as the floor fails. Photoreal, short-film comedy-horror tone.",
+      "promptVariations": []
+    },
+    {
+      "id": "choose-your-d-pillow-lava",
+      "label": "D — Pillow Lava + “That’s Nature for Us”",
+      "start": "0:35",
+      "end": "0:50",
+      "durationSec": 15,
+      "onScreen": "Pillow Lava + “That’s Nature for Us”",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Cinematic downward view from a ruptured gothic living-room floor into a glowing lava tube beneath a suburban house foundation, two silhouetted women in black lace and Hawaiian leis standing on the broken edge above, magma light painting the cavern, dead-pan educational-cabaret mood meeting geological sublime, short-film still, Grok Imagine style",
+      "geminiOmniPrompt": "15-second slow camera push or tilt down through cracked living-room floor into lava tubes beneath the house. Duo remains silhouetted at the top edge. Soft glockenspiel energy. They finish with dead-pan “That’s nature for us” then “Science.” Magma glow intensifies. Photoreal cinematic transition from domestic interior to subterranean lava.",
+      "promptVariations": []
+    },
+    {
+      "id": "choose-your-e-smash-cut",
+      "label": "E — Smash-Cut → Trance",
+      "start": "0:50",
+      "end": "0:55",
+      "durationSec": 5,
+      "onScreen": "Smash-Cut → Trance",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Sudden cinematic smash-cut still: the same two women in black lace and Hawaiian leis now standing on glowing pāhoehoe lava crust above an open magma chamber, bright white flash remnants, house debris floating in heat haze, euphoric trance-rave energy colliding with volcanic night, short-film impact frame, Grok Imagine style",
+      "geminiOmniPrompt": "5-second smash-cut video: white flash, then the duo on real lava crust above magma as a trance drop hits. Hard cut from house interior world to open volcanic night. Heat distortion, floating debris, dead-pan faces for one beat then lights strobe. Photoreal music-video punch.",
+      "promptVariations": []
+    }
+  ]
+}

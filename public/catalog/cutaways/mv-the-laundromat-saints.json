@@ -1,0 +1,50 @@
+{
+  "id": "mv-the-laundromat-saints",
+  "kind": "musical",
+  "title": "The Laundromat Saints",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "3:00–3:30",
+  "episode": "2AM Laundromat Slow Dance",
+  "songId": "the-laundromat-saints",
+  "songTitle": "The Laundromat Saints",
+  "summary": "Two strangers alternate lines like strangers who accidentally agree. Dryer thumps on bar 5. Diegetic EyeWash TV, then full score for the slow dance.",
+  "visualArc": "Four washers apart → slow orbit → dance between dryers → buzzer cuts mid-phrase.",
+  "tags": [
+    "laundromat",
+    "waltz",
+    "liminal",
+    "saints",
+    "ep2"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "tls-intro",
+      "label": "Off-balance dryer",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Two strangers four washers apart. Corner CRT on EyeWash. Rain on glass.",
+      "lyrics": "(Diegetic intro; dryer thump on bar 5)",
+      "musicCue": "66 BPM waltz, tinny then blooming",
+      "grokImaginePrompt": "Interior of a 24-hour laundromat at 2 AM, two strangers several machines apart watching one off-balance dryer, rain on front glass, corner CRT showing EyeWash Station, attendant mopping, warm liminal, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "12-second locked laundromat intro. Wrong-time dryer thump. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "tls-dance",
+      "label": "The dance",
+      "start": "0:45",
+      "end": "1:30",
+      "durationSec": 45,
+      "onScreen": "Slow dance between dryers. Steam as weather. No dialogue — faces do the work.",
+      "lyrics": "Laundromat saints / the dryer keeps time wrong",
+      "musicCue": "Full score; brushed kit, wet piano",
+      "grokImaginePrompt": "Two strangers slow-dancing between rows of humming dryers in a 24-hour laundromat at 2am, harsh fluorescents and warm dryer glow, steam in the air, rain on windows, tender and plain, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "45-second slow dance between dryers. Attendant mops around them. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

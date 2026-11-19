@@ -1,0 +1,37 @@
+{
+  "id": "velvet-rope",
+  "kind": "scene",
+  "title": "The Velvet Rope at the End of the World",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "60–90s",
+  "episode": "Episode 05 opener / cutaway",
+  "songId": "heels-or-no-entry",
+  "songTitle": "Heels or No Entry",
+  "summary": "Bouncer enforces heels-or-no-entry while the skyline burns. She produces emergency stilettos. Approved.",
+  "visualArc": "Velvet rope → ash → compact stilettos → mirrorball vs burning city.",
+  "tags": [
+    "glamour",
+    "apocalypse",
+    "the-two",
+    "nightclub"
+  ],
+  "episodeId": "05",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "velvet-rope",
+      "label": "Heels or no entry",
+      "start": "0:00",
+      "end": "0:20",
+      "durationSec": 20,
+      "onScreen": "Rooftop club, city burning, stone-faced bouncer, woman in a soot-stained gown.",
+      "lyrics": "BOUNCER: I don't care if the sky is on fire. Heels or no entry.",
+      "musicCue": "Heels or No Entry — kick after Approved.",
+      "grokImaginePrompt": "Dramatic cinematic shot of a velvet rope at the entrance to a still-open nightclub on a rooftop while the city burns in the background, stone-faced bouncer in a black suit enforcing dress code on a woman in a soot-stained evening gown, mirrorball light spilling out the door, ash in the air, high contrast lighting, dark glamour, Grok Imagine style",
+      "geminiOmniPrompt": "20-second velvet-rope standoff. She produces stilettos from a purse. Approved. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

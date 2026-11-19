@@ -10,17 +10,20 @@
  */
 import type {
   CartoonRecord as CartoonSource,
-  CutawayRecord,
   CutawaySegmentRecord,
   SceneBoardRecord,
   SceneFrameRecord,
   FilmSceneRecord,
   SequenceRecord as SequenceSource,
   SeriesCharacterRecord,
-  SongFrontmatter,
   CrewMemberRecord,
-  ProductionStatus,
 } from './schemas';
+import type {
+  CutawayFullRecord,
+  CutawaySummaryRecord,
+  SongRecord,
+  SongSummary as SongSummaryRecord,
+} from './record-schemas';
 
 export type {
   CartoonStatus,
@@ -54,28 +57,43 @@ export type {
 } from './schemas';
 export type { TaxonomyEpisode, TaxonomyRecord as Taxonomy, TaxonomyTool } from './schemas';
 
-/** Codegen rewrites a source image path into an imported asset URL. */
+/**
+ * A responsive still from `vite-imagetools` (`?…&as=picture`, see `./image-variants.ts`): one
+ * `srcset` per format, and the fallback image with its intrinsic size.
+ */
+export interface Picture {
+  sources: Record<string, string>;
+  img: { src: string; w: number; h: number };
+}
+
+type PictureKeyOf<UrlKey extends string> = UrlKey extends `${infer Stem}Url`
+  ? `${Stem}Picture`
+  : never;
+
+/**
+ * Codegen rewrites a source image path into an imported asset URL, and (for card stills) a
+ * responsive `Picture` beside it.
+ */
 type ResolveImage<T, PathKey extends keyof T, UrlKey extends string> = Omit<T, PathKey> & {
   [K in UrlKey]?: string;
-};
+} & { [K in PictureKeyOf<UrlKey>]?: Picture };
 
-export type Song = Omit<SongFrontmatter, 'instrumental' | 'audioFile' | 'status'> & {
-  instrumental: boolean;
-  status: ProductionStatus;
-  audioFile?: string;
-  stylePrompt: string;
-  lyrics: string | null;
-  notes: string | null;
-  sourceFile: string;
-};
+/** List-view song fields: bundled, and in `public/catalog/songs/index.json`. */
+export type SongSummary = SongSummaryRecord;
+/** A full song (style prompt, lyrics, notes), fetched from `public/catalog/songs/<id>.json`. */
+export type Song = SongRecord;
 
 export type CutawaySegment = ResolveImage<CutawaySegmentRecord, 'stillImagePath', 'stillUrl'>;
 
-/** `segmentsSource` / `segmentStills` are resolved into `segments` by codegen. */
-export type CutawaySuggestion = Omit<
-  CutawayRecord,
-  'segmentsSource' | 'segmentStills' | 'segments'
-> & {
+/** List-view cutaway fields (no segments or sight bank, only their counts). */
+export type CutawaySummary = CutawaySummaryRecord;
+
+/**
+ * A full cutaway, fetched from `public/catalog/cutaways/<id>.json`: `segmentsSource` /
+ * `segmentStills` are resolved into `segments` by codegen, and each segment's repo still into a
+ * bundled `stillUrl` by the loader.
+ */
+export type CutawaySuggestion = Omit<CutawayFullRecord, 'segments'> & {
   segments: CutawaySegment[];
 };
 

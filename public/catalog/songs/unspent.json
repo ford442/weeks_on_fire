@@ -1,0 +1,22 @@
+{
+  "id": "unspent",
+  "title": "Unspent",
+  "added": "2026-10-06",
+  "genre": "Classical & chant",
+  "subgenre": "Lied",
+  "description": "Christine Nilsson and a piano, one small poem, three times. The piano cadences a bar early, and the last line is never sung.",
+  "episode": "voice-credit",
+  "slot": "Small room",
+  "tags": [
+    "lied",
+    "nilsson",
+    "piano",
+    "voice-credit"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Unspent.md",
+  "stylePrompt": "Lied for lyric soprano and piano, 63 BPM, 4/4, D minor, strophic, about two minutes. One small room, one lamp, soft pedal, no kit, no strings, no choir, no reverb beyond the room. Christine Nilsson: lyric soprano, English, intimate, one note to a syllable, no cadenza, no high note actually sung, no belting, no crowd. The poem is the whole lyric. Stanzas 1 and 2 use the same melody. Stanza 3 uses it again and stops before the last line. Do not sing her name. The piano is a second character, not an accompaniment pad: it speaks in short phrases and then cadences. Structural flaw: in every stanza the piano finishes its cadence one bar before the voice arrives at the last line. She does not hurry. On stanza 3 she does not sing the last line at all. The piano has already cadenced, early, into silence, and the bar stays empty. Do not fill it. Do not add a fourth stanza. Dark top end. Mood: the note is in the room and is not spent.",
+  "lyrics": "[Piano — cadence ends a bar early]\n\n[Stanza 1]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\nI am not spending it.\n\n[Stanza 2 — same melody, piano early again]\nThe glass is full enough.\nThe chair can wait.\nSomeone may ask for the note tonight.\nI am not spending it.\n\n[Stanza 3 — same melody, last line withheld]\nFour bars. A lamp. A shut door.\nThe lamp is doing what a lamp does.\nI was given a note above the speaking voice.\n(she does not sing)\n(the piano has already finished, one bar early)",
+  "notes": "Voice credit only. Christine Nilsson is the historical lyric soprano, not a resident, and not the Christina wooden-house lane. One English poem, piano as the other voice. The high note is never spent. The piano's early cadence is never corrected, and the third stanza leaves the last line unsung.\n\nNot a cabaret ballad and not a roof song. Runtime about two minutes."
+}

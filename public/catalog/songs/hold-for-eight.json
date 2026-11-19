@@ -1,0 +1,23 @@
+{
+  "id": "hold-for-eight",
+  "title": "Hold for Eight",
+  "added": "2026-09-09",
+  "genre": "Ambient & downtempo",
+  "subgenre": "Dry downtempo / counted soul",
+  "description": "Cue Sheets track 1. 84 BPM D minor. The instruction to wait, sung as a lullaby. The count reaches six and starts again — it never gets to eight.",
+  "episode": "cue-sheets",
+  "tags": [
+    "vocal",
+    "downtempo",
+    "nova-chen",
+    "cue-sheets",
+    "84bpm",
+    "catalog"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Hold_for_Eight.md",
+  "stylePrompt": "Dry downtempo soul, patient trip-hop adjacent, 84 BPM, D minor. One female contralto, close-miked at about eight inches, dry and conversational, unhurried, speaking the technical words as if they are ordinary words. Warm low-mid, a little breath left in, no vibrato on held notes, no runs, no ad-libs, no doubling except where specified. She is a session voice and she is not selling anything. Same voice on every track of the record. Instruments: one warm Rhodes holding a single suspended chord for most of the song, brushed kit played with the brushes barely leaving the head, upright bass entering only on the second verse and playing four notes total, a soft felt-hammer piano doubling the count an octave up. Arrangement is almost entirely a held chord and a counted vocal — the song is about waiting and it is willing to be boring about it. Structural flaw: the counted section climbs one, two, three, four, five, six and then restarts at one instead of reaching eight, every single time, while the title line still says hold for eight; the band never corrects it and no instrument acknowledges the restart. Mood: an editor's room at four in the afternoon with the coffee gone cold, patience as a professional skill. No EDM drop, no festival riser, no white-noise sweep, no four-on-the-floor club kick, no trap hats, no orchestral trailer drums, no guitar solo, no choir, no crowd, no applause, no DJ announcement, no autotune, no vocal runs, no ad-libs, no belting, no key change for lift. Production: Brooklyn loft on nearfields, one brick window, small room. Vocal forward and dry with a short plate underneath, never a hall. Instruments recorded like furniture — audible chair creak and pedal noise are welcome. Analog tape warmth, gentle wow, no gloss, no sidechain pumping, no maximizer. About 1:50.",
+  "lyrics": "[Intro — room, one Rhodes chord]\nHold for eight.\n\n[Verse 1]\nNothing moves until the door does.\nI have the door at fourteen twenty-two.\nCount it with me, don't come in early —\nthe room is doing something without you.\n\n[Count]\nOne, two, three, four,\nfive, six — hold for eight.\n\n[Verse 2]\nHe looks up. That is not the cue.\nHe looks up again. That one is.\nEverything before it is furniture.\nEverything after it is his.\n\n[Count]\nOne, two, three, four,\nfive, six — hold for eight.\n\n[Outro]\nHold.\nHold.\nThere.",
+  "notes": "Cue Sheets album, Nova Chen. Opener. Same Rhodes chord returns on track 10. Generate first with Under Dialogue and Cue Sheets. Board: `ideas/cue-sheets.md`. Farm #18 / #33. Not #42."
+}

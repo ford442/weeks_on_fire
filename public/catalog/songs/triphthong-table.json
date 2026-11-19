@@ -1,0 +1,24 @@
+{
+  "id": "triphthong-table",
+  "title": "Triphthong Table",
+  "added": "2026-08-17",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Educational cabaret duet",
+  "description": "Flour-hire-coir and hvirvle-spurv-færge in one deadpan phonetics lesson. Lillith & Rubella; pronunciation guide always one vowel glide behind the melody.",
+  "episode": "cutaway",
+  "tags": [
+    "triphthong",
+    "cabaret",
+    "duet",
+    "lillith",
+    "rubella",
+    "phonetics",
+    "shibboleth"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Triphthong_Table.md",
+  "stylePrompt": "Educational cabaret duet at 92 BPM. Detuned upright piano (±5 cents), soft brushed snare, low-string pad. Lillith & Rubella in parallel thirds — **deadpan, never smiling**, like a 1960s language-lab film that cracked open. Lyrics showcase **English triphthongs** [aʊ̯ə̯ aɪ̯ə̯ ɔɪ̯ə̯] (flour/flower, hire/higher, coir/coyer/lawyer), plus **Danish** [iɐ̯u̯ uɐ̯u̯] (hvirvle, spurv, færge), **Spanish** [u̯ei̯ u̯ai̯] (buey, Uruguay), and rolling / r-heavy clusters (rural, ferrocarril, Børge). Diction forward in mix — consonants dry, vowels gliding. **Structural flaw:** the **pronunciation guide** (spoken IPA-ish prompts) is always **one vowel glide behind** the sung melody — the singers land the triphthong while the guide is still on the diphthong. Smash-cut optional Twilight Time handoff only if requested. Mood: Lillith & Rubella's gothic living room becomes a phonetics classroom. Runtime ~55–70 seconds. Use Lillith and Rubella voices.",
+  "lyrics": "[Intro — chalk on slate]\nTonight's lesson: three vowels in one syllable\nPlease keep your tongues where we can see them\n\n[Verse 1 — Lillith]\nFlour in the flower, hire in the higher\nCoir in the coyer lawyer by the loir\nIron in society, sour in an hour\nPlayer, slower — same suffix, different power\n\n[Rubella — guide, one glide late]\n(aʊ… ə) (aɪ… ə) (ɔɪ… ə)\n\n[Verse 2 — Rubella]\nHvirvle like a spurv in a færge at sea\nBørge whirls where the Danish roll free\nBuey in Uruguay, cambiáis in the rain\nRolling r's on the triphthong train\n\n[Lillith — guide, one glide late]\n(iɐ… u) (uɐ… u) (u̯ei… u̯ai)\n\n[Chorus — duet, parallel thirds]\nTriphthong table, set for three\nGlide on glide on glide for me\nFlour-hire-coir in one breath — don't blink\nSociety's iron sour on the brink\nThat's phonetics for us\n\n[Bridge — spoken fast, both]\nRural juror, ferrocarril, corroboratory corrobori\nW Szczebrzeszynie chrząszcz brzmi w trzcinie — we don't ask you to spell it\nStrč prst skrz krk — we only ask you to feel it\n\n[Outro — button line]\nThat's phonetics for us\n(the guide finishes the first vowel of the last word after the song ends)",
+  "notes": "## Phonetic research basis\n- **English triphthongs (RP / non-rhotic):** [aʊ̯ə̯] flour vs disyllabic flower; [aɪ̯ə̯] hire vs higher; [ɔɪ̯ə̯] coir vs coyer/lawyer/loir; also society, iron, sour, player, slower (Wells *Accents of English*).\n- **Danish triphthongs:** [iɐ̯u̯] hvirvle 'whirl'; [uɐ̯u̯] spurv 'sparrow'; [ɛɐ̯u̯] færge 'ferry'; [œ̞ɐ̯u̯] Børge.\n- **Spanish triphthongs:** [u̯ei̯] buey; [u̯ai̯] Uruguay; [i̯ai̯]/[i̯ei̯] cambiáis / cambiéis (European Spanish).\n- **Shibboleth / cluster garnish:** Polish *W Szczebrzeszynie chrząszcz brzmi w trzcinie*; Czech *strč prst skrz krk*; rural juror (legal tongue-twister meme); ferrocarril (Spanish rolling r)."
+}

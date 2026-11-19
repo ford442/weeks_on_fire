@@ -1,0 +1,37 @@
+{
+  "id": "morning-after-the-portal",
+  "kind": "scene",
+  "title": "Morning After the Portal",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "~90s cold open",
+  "episode": "Episode 03.5 / 04",
+  "songId": "empty-parking-lot-waltz",
+  "songTitle": "Empty Parking Lot Waltz (sunrise mix)",
+  "summary": "Golden-hour cul-de-sac cleanup. Someone power-washes a sigil. Pizza Guy now delivering breakfast burritos.",
+  "visualArc": "Dawn cul-de-sac → bathrobe neighbors → purple residue in GLASS ONLY → burrito pizza guy.",
+  "tags": [
+    "ep4",
+    "hoa",
+    "dawn",
+    "deadpan",
+    "pizza-guy"
+  ],
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "morning-wide",
+      "label": "Cul-de-sac dawn",
+      "start": "0:00",
+      "end": "0:15",
+      "durationSec": 15,
+      "onScreen": "Bathrobes, plastic skeletons, purple shimmer evaporating, power-washer.",
+      "lyrics": "KAREN: Item three — the purple light is now a decorative accent.",
+      "musicCue": "Off-kilter acoustic / waltz at sunrise.",
+      "grokImaginePrompt": "Golden hour dawn in a quiet suburban cul-de-sac the morning after Halloween, neighbors in bathrobes calmly cleaning up after some kind of strange event, one man power-washing a glowing sigil off his driveway, plastic skeletons still standing, faint purple residue evaporating, deadpan comedic atmosphere, cinematic lighting, Grok Imagine style",
+      "geminiOmniPrompt": "15-second dawn cul-de-sac wide. Power-washer. Photoreal deadpan.",
+      "promptVariations": []
+    }
+  ]
+}

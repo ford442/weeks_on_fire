@@ -18,9 +18,9 @@ import {
   type SuggestionFilters,
 } from './schedule';
 
-import type { CutawaySuggestion, Schedule } from '../data/types';
+import type { CutawaySummary, Schedule } from '../data/types';
 
-function cutaway(id: string, overrides: Partial<CutawaySuggestion> = {}): CutawaySuggestion {
+function cutaway(id: string, overrides: Partial<CutawaySummary> = {}): CutawaySummary {
   return {
     id,
     kind: 'scene',
@@ -33,7 +33,8 @@ function cutaway(id: string, overrides: Partial<CutawaySuggestion> = {}): Cutawa
     summary: `Summary ${id}`,
     visualArc: 'Arc',
     tags: [],
-    segments: [],
+    segmentCount: 0,
+    sightCount: 0,
     ...overrides,
   };
 }

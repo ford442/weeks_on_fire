@@ -1,0 +1,52 @@
+{
+  "id": "gag-cities-in-the-shell",
+  "kind": "gag",
+  "title": "Cities in the Shell",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 7s loop",
+  "episode": "One-panel gag",
+  "songId": "pearls-in-the-ashtray",
+  "songTitle": "Pearls in the Ashtray (lemon-drop beat)",
+  "summary": "2 a.m. oyster bar; each opened shell holds a tiny lit city; she squeezes lemon over one and sets it aside. Tonight's selection is a little metropolitan. Vivienne.",
+  "visualArc": "Black marble → nacre cities → lemon bead over a boulevard → dark-ocean shell kept.",
+  "tags": [
+    "gag",
+    "vivienne",
+    "oyster",
+    "miniature-city",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-04-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Woman shucking; each shell a tiny night city; lemon bead hanging; dark-ocean shell kept to her right.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel close-to-medium film still, 4:5, 2 a.m. luxury oyster bar, black marble counter beaded with seawater, a single warm Edison bulb on a cloth cord, a glamorous bored woman with long black hair, blood-red lips, and a dark sequined dress shucking with a short silver knife, each opened shell lined in wet nacre holding a tiny still-lit night city — sodium windows, microscopic traffic, a harbor no bigger than a thumbnail — she is squeezing a lemon wedge over one city so a single bead of juice hangs above a boulevard, a small pile of rejected city-oysters to her left, one empty shell containing only dark ocean to her right which she is keeping, no other patrons, high contrast, luxury materials, macro detail in the nacre and the miniature streetlights, 35mm, T1.4, quiet apocalypse, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel close-to-medium film still, 4:5, 2 a.m. luxury oyster bar, black marble counter beaded with seawater, a single warm Edison bulb on a cloth cord, a glamorous bored woman with long black hair, blood-red lips, and a dark sequined dress shucking with a short silver knife, each opened shell lined in wet nacre holding a tiny still-lit night city — sodium windows, microscopic traffic, a harbor no bigger than a thumbnail — she is squeezing a lemon wedge over one city so a single bead of juice hangs above a boulevard, a small pile of rejected city-oysters to her left, one empty shell containing only dark ocean to her right which she is keeping, no other patrons, high contrast, luxury materials, macro detail in the nacre and the miniature streetlights, 35mm, T1.4, quiet apocalypse, Grok Imagine style",
+      "promptVariations": [
+        "She keeps only the dark-ocean oyster, cities piled as rejects, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-04-motion",
+      "label": "Motion (7s)",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "Lemon bead falls; one window dies; microscopic headlights crawl; she does not eat.",
+      "lyrics": "",
+      "musicCue": "Pearls in the Ashtray — lemon-drop beat",
+      "grokImaginePrompt": "7-second macro-leaning lockoff. The lemon bead falls in slow motion and hits the miniature boulevard. One skyscraper window blinks out. Tiny headlights crawl a three-block grid. Her mouth almost smiles and does not. She does not eat. Steam from the lemon oil only. Photoreal, no camera orbit.",
+      "geminiOmniPrompt": "7-second macro-leaning lockoff. The lemon bead falls in slow motion and hits the miniature boulevard. One skyscraper window blinks out. Tiny headlights crawl a three-block grid. Her mouth almost smiles and does not. She does not eat. Steam from the lemon oil only. Photoreal, no camera orbit.",
+      "promptVariations": []
+    }
+  ]
+}

@@ -1,10 +1,7 @@
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { MemoryRouter, useLocation } from 'react-router-dom';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
-import App from '../App';
 import { crewPath } from '../routes/paths';
-import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { about } from '../data/about';
 import { cartoons } from '../data/cartoons';
 import { seriesCharacters } from '../data/characters';
@@ -15,6 +12,7 @@ import { sequences } from '../data/sequences';
 import { songs } from '../data/songs';
 import { crewMembers } from '../data/crew';
 import { cutawaySuggestions } from '../data/suggestions';
+import { renderApp } from '../test/renderApp';
 
 // jsdom has no WebGL; the sequence player falls back to its "unsupported" message.
 vi.mock('../lib/webgl/context', async (importOriginal) => ({
@@ -22,25 +20,8 @@ vi.mock('../lib/webgl/context', async (importOriginal) => ({
   createSequenceGl: () => null,
 }));
 
-function LocationProbe() {
-  const location = useLocation();
-  return (
-    <>
-      <output data-testid="location">{location.pathname}</output>
-      <output data-testid="search">{location.search}</output>
-    </>
-  );
-}
-
 function renderRoute(path: string) {
-  return render(
-    <MemoryRouter initialEntries={[path]}>
-      <MediaSessionProvider>
-        <App />
-        <LocationProbe />
-      </MediaSessionProvider>
-    </MemoryRouter>,
-  );
+  return renderApp(path);
 }
 
 async function settled() {
@@ -260,9 +241,14 @@ describe('App detail routes keep their id', () => {
     crewPath('/scenes'),
     crewPath('/episodes'),
     crewPath('/characters'),
-  ])('%s/:id redirects an unknown id to the list', async (base) => {
+  ])('%s/:id answers an unknown id with a not-found page that links back', async (base) => {
     renderRoute(`${base}/no-such-id`);
-    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe(base));
+    const alert = await screen.findByRole('alert', {}, { timeout: 5000 });
+    expect(within(alert).getByRole('heading', { name: 'Nothing here' })).toBeTruthy();
+    expect(within(alert).getByRole('link', { name: /^All / }).getAttribute('href')).toBe(base);
+    // The URL stays put (no silent redirect), and the header still renders around the error.
+    expect(screen.getByTestId('location').textContent).toBe(`${base}/no-such-id`);
+    expect(screen.getByRole('navigation', { name: 'Site sections' })).toBeTruthy();
   });
 
   it('unknown paths redirect to the public home', async () => {
@@ -428,7 +414,7 @@ describe('appears-in links from the catalog graph', () => {
   it('a song lists the cutaway it scores', async () => {
     renderRoute(crewPath('/songs/well-fall'));
     await settled();
-    const strip = await screen.findByRole('region', { name: 'Appears in' });
+    const strip = await screen.findByRole('region', { name: 'Appears in' }, { timeout: 5000 });
     expect(within(strip).getByRole('link', { name: 'Well Fall' }).getAttribute('href')).toBe(
       crewPath('/suggestions/well-fall'),
     );

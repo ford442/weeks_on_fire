@@ -1,0 +1,89 @@
+{
+  "id": "neon-nightfall",
+  "kind": "musical",
+  "title": "Neon Nightfall",
+  "added": "2026-11-06",
+  "status": "ready-to-generate",
+  "runtime": "~0:30 (short cutaway)",
+  "episode": "Visual Cutaway",
+  "songId": "neon-nightfall",
+  "songTitle": "Neon Nightfall",
+  "summary": "A neon‑lit alley chase with a hovering drone, rain‑slick walls, and a flashing billboard. The video drives a synth‑wave Minimax bed with drops for drone swoop and billboard flash.",
+  "visualArc": "Drone darts past runner → rain‑slick chase → billboard flash freezes action → siren rise → chase resumes into high‑energy chorus.",
+  "tags": [
+    "cyberpunk",
+    "chase",
+    "neon",
+    "rain",
+    "drone"
+  ],
+  "segmentCount": 5,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "neon-nightfall-a-alley-sprint",
+      "label": "A — Alley sprint",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Runner enters at a jog; LEDs strobing; drone hanging back; rain constant.",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Photoreal cinematic neo-noir still from the locked alley start still: runner accelerating past the camera in rain, white LED trim on jacket strobing, wet walls catching magenta-cyan neon, drone small in the upper alley gap, billboard a distant rectangle, no face visible, Grok Imagine style",
+      "geminiOmniPrompt": "8-second tracking video, camera low on wet asphalt, runner sprints toward and past lens-left, LED trim pulsing steady, rain streaks, drone holds position then begins to drift forward, neon reflections slide on the ground, no dialogue, mouths never shown, photoreal neo-noir",
+      "promptVariations": []
+    },
+    {
+      "id": "neon-nightfall-b-drone-swoop",
+      "label": "B — Drone swoop",
+      "start": "0:08",
+      "end": "0:10",
+      "durationSec": 2,
+      "onScreen": "Drone rockets past the runner at shoulder height; music **cuts out** here in the edit.",
+      "lyrics": "",
+      "musicCue": "Metallic rotor whir, 0.9s, rises and falls, Doppler pass left-to-right",
+      "grokImaginePrompt": "Photoreal action still, same alley, rain, the matte grey drone blurred mid-pass inches from the runner's shoulder, red status light streak, runner flinches forward without turning head, LED trim still strobing, neon walls, no HUD, Grok Imagine style",
+      "geminiOmniPrompt": "2-second burst: drone slashes across frame at shoulder height with a sharp whir, runner does not stop, rain and neon continuous, no music on the render, photoreal",
+      "promptVariations": []
+    },
+    {
+      "id": "neon-nightfall-c-chase-rhythm",
+      "label": "C — Chase rhythm",
+      "start": "0:10",
+      "end": "0:18",
+      "durationSec": 8,
+      "onScreen": "Side profile chase; footfalls in the puddles; verse rides the stride.",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Photoreal medium-wide profile still, runner sprinting screen-right along wet brick wall, drone pacing above left, rain sheets, cyan rim on the wall, magenta bounce from far signs, billboard growing larger at vanishing point, hood shadow, no mouth, Grok Imagine style",
+      "geminiOmniPrompt": "8-second lateral tracking shot matching runner pace, feet splashing in rhythm, drone matching overhead, billboard ahead flickering faintly, rain constant, no speech, photoreal neo-noir",
+      "promptVariations": []
+    },
+    {
+      "id": "neon-nightfall-d-billboard-flash",
+      "label": "D — Billboard flash",
+      "start": "0:18",
+      "end": "0:20",
+      "durationSec": 2,
+      "onScreen": "Billboard strobes white-magenta; runner **appears** frozen for one beat; bed **ducks to silence**.",
+      "lyrics": "",
+      "musicCue": "Electric buzz and transformer tick, 0.35s, replaces music; rain loud for this beat",
+      "grokImaginePrompt": "Photoreal still, alley toward billboard, entire frame washed in a hard magenta-white flash from the billboard, runner mid-stride frozen in a running pose silhouette, rain droplets suspended glitter, drone frozen in air, high contrast, no readable ad copy, Grok Imagine style",
+      "geminiOmniPrompt": "2-second hold: billboard flares, runner and drone freeze, rain sound dominant, then on the last frame motion resumes, photoreal",
+      "promptVariations": []
+    },
+    {
+      "id": "neon-nightfall-e-chorus-surge",
+      "label": "E — Chorus surge",
+      "start": "0:20",
+      "end": "0:30",
+      "durationSec": 10,
+      "onScreen": "Chase resumes; distant siren under the chorus; second drone pass at **0:26** (whoosh, no second music drop).",
+      "lyrics": "",
+      "musicCue": "",
+      "grokImaginePrompt": "Photoreal wide still, runner bursting back into motion leaving the billboard glow behind, drone diving from above, alley opening to a cross-street glow, rain heavier, LED trim bright, siren light hint far off-frame, no faces, Grok Imagine style",
+      "geminiOmniPrompt": "10-second chase finale: runner accelerates toward camera, drone dives past at 6 seconds with a short whoosh, distant police siren fades in from 4 seconds, billboard dim behind, rain, neon, no dialogue, photoreal",
+      "promptVariations": []
+    }
+  ]
+}

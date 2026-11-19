@@ -1,0 +1,79 @@
+{
+  "id": "item-three-decorative-accent",
+  "kind": "scene",
+  "title": "Item Three: Decorative Accent",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "4–6 min",
+  "episode": "Episode 04 (HOA anchor)",
+  "songId": "recycling-bin-rebellion",
+  "songTitle": "Recycling Bin Rebellion",
+  "summary": "Emergency HOA meeting. The purple driveway light is tabled as a decorative accent. Brad has swatches. Biscuit steals the gavel. Pizza Guy at the door.",
+  "visualArc": "Fluorescent clubhouse → cracked gavel → violet blinds → rift through the window → pizza in the doorway.",
+  "tags": [
+    "ep4",
+    "hoa",
+    "karen",
+    "dale",
+    "brad",
+    "biscuit",
+    "pizza-guy"
+  ],
+  "episodeId": "04",
+  "segmentCount": 4,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "item3-a",
+      "label": "Clubhouse wide",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "Crooked folding chairs, cracked gavel, blinds glowing violet.",
+      "lyrics": "DALE: Item three. Decorative accent.",
+      "musicCue": "Gavel rimshots. Recycling Bin Rebellion under later chorus.",
+      "grokImaginePrompt": "Wide low-angle shot of a drab suburban HOA clubhouse meeting room at night, crooked rows of folding chairs, tired residents, cracked gavel on a card table, horizontal blinds glowing violet from outside, fluorescent overhead light, deadpan comedy atmosphere, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked wide of an HOA clubhouse at night. Violet glow through blinds. Residents seated. Chairman with a cracked gavel. Deadpan. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "item3-gavel",
+      "label": "Gavel crack",
+      "start": "0:08",
+      "end": "0:16",
+      "durationSec": 8,
+      "onScreen": "Cracked gavel mid-strike; puff of violet smoke; nobody flinches.",
+      "lyrics": "DALE: Character.",
+      "musicCue": "Snare like a gavel.",
+      "grokImaginePrompt": "Medium shot of an HOA chairman gaveling at a card table, cracked wooden gavel mid-strike, small puff of violet smoke rising from the strike point, residents unmoved in folding chairs behind him, fluorescent institutional lighting, mundane horror comedy, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "8-second video: gavel strike, violet puff, residents unmoved. Photoreal deadpan.",
+      "promptVariations": []
+    },
+    {
+      "id": "item3-biscuit",
+      "label": "Biscuit's heist",
+      "start": "1:40",
+      "end": "1:50",
+      "durationSec": 10,
+      "onScreen": "Poodle in a glowing purple bandana trots under chairs with the gavel.",
+      "lyrics": "(No dialogue. Nails on tile.)",
+      "musicCue": "Silence except nails.",
+      "grokImaginePrompt": "Low tracking shot of a standard poodle in a glowing purple bandana trotting under rows of folding chairs with a cracked wooden gavel in her mouth, violet light, HOA meeting in progress above, deadpan comedy, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "10-second low tracking video of a poodle stealing a gavel under folding chairs. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "item3-pizza",
+      "label": "Pizza at the rift",
+      "start": "4:20",
+      "end": "4:35",
+      "durationSec": 15,
+      "onScreen": "Pizza Guy in the doorway; enormous violet rift behind him; unbothered.",
+      "lyrics": "PIZZA GUY: Order for… Vivien?",
+      "musicCue": "Pepperoni or Margherita sting optional.",
+      "grokImaginePrompt": "Doorway shot from inside a fluorescent-lit clubhouse looking out at a pizza delivery man in a red uniform holding two boxes, behind him a suburban driveway filled with an enormous violet rift, he is completely unbothered, cinematic contrast between warm interior and violet exterior, Grok Imagine style",
+      "geminiOmniPrompt": "15-second doorway video: pizza delivery, rift behind, he does not look back. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

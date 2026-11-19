@@ -16,6 +16,23 @@ import galleryImg13 from '../../../characters/image_001.webp';
 import galleryImg14 from '../../../characters/image_002.jpg';
 import galleryImg15 from '../../../ideas/computer_room.jpg';
 import galleryImg16 from '../../../ideas/hologram.webp';
+import galleryImg0Pic from '../../../images/psychedelic/psy-flower-engine.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg1Pic from '../../../images/psychedelic/psy-mobius-ribbon.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg2Pic from '../../../images/psychedelic/psy-gyre-victorian-street.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg3Pic from '../../../images/psychedelic/psy-tetrahedron-sea.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg4Pic from '../../../images/psychedelic/psy-sphere-tower.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg5Pic from '../../../images/psychedelic/psy-xai-01-glass-cathedral.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg6Pic from '../../../images/psychedelic/psy-xai-02-flower-nebula.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg7Pic from '../../../images/psychedelic/psy-xai-03-klein-lattice.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg8Pic from '../../../episodes/episode-03/image.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg9Pic from '../../../episodes/episode-03/image_004.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg10Pic from '../../../episodes/episode-03/image_005.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg11Pic from '../../../episodes/episode-03/image_006.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg12Pic from '../../../episodes/episode-03/image_007.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg13Pic from '../../../characters/image_001.webp?w=480;960;1440&format=avif;webp&as=picture';
+import galleryImg14Pic from '../../../characters/image_002.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg15Pic from '../../../ideas/computer_room.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import galleryImg16Pic from '../../../ideas/hologram.webp?w=480;960;1440&format=avif;webp&as=picture';
 
 import type { FilmScene } from '../types';
 
@@ -31,6 +48,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Psychedelic 3D still, 16:9: an impossible living flower engine — interlocking glass gears and blooming wildflower pistons suspended in a spherical nebula of pollen and iridescent smoke, soft pastel and electric lime, dreamlike depth, highly detailed, no text.",
     promptVariations: [],
     imageUrl: galleryImg0,
+    imagePicture: galleryImg0Pic,
     mediaType: "image",
     musicCue: "Daisy Bell / Orb background",
     musicStyle: "Ambient surreal",
@@ -49,6 +67,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Strange psychedelic 3D abstract scene, cinematic 16:9: a cathedral-sized Möbius ribbon of molten chrome and prismatic crystal twisting through infinite black space, surface covered in microscopic daisy petals, volumetric god rays of magenta and cyan, no people, ultra detailed refractive materials, short-film title card energy.",
     promptVariations: [],
     imageUrl: galleryImg1,
+    imagePicture: galleryImg1Pic,
     mediaType: "image",
     musicCue: "Deep Space Drift",
     musicStyle: "Cosmic ambient",
@@ -67,6 +86,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Surreal cinematic 16:9 photoreal-3D hybrid still: a translucent floating geometric gyre made of glass and gel, rainbow internal caustics, slowly rotating above a Victorian cobblestone street at night while two silhouettes in black lace stand beside a bicycle covered in glowing bioluminescent flowers. Psychedelic but elegant, deep violet and amber light, Weeks on Fire short film.",
     promptVariations: [],
     imageUrl: galleryImg2,
+    imagePicture: galleryImg2Pic,
     mediaType: "image",
     musicCue: "Daisy Bell bridge",
     musicStyle: "Surreal hybrid",
@@ -85,6 +105,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Psychedelic 3D landscape 16:9 cinematic still: a calm ocean of transparent tetrahedrons and soft gelatin orbs under a liquid sky that drips upward, each orb holding a tiny black-lace silhouette and a miniature flower tandem bicycle, vast scale, uncanny calm, prismatic refraction, short-film still.",
     promptVariations: [],
     imageUrl: galleryImg3,
+    imagePicture: galleryImg3Pic,
     mediaType: "image",
     musicCue: "Mysterium",
     musicStyle: "Dream ambient",
@@ -103,6 +124,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Psychedelic 3D abstract 16:9: a spiral tower of interlocking chrome spheres and glass daisy petals rising from a field of static, each sphere filled with swirling magenta fog and tiny lightning, no people, hyper-detailed materials, dark cosmic background with soft nebula glow.",
     promptVariations: [],
     imageUrl: galleryImg4,
+    imagePicture: galleryImg4Pic,
     mediaType: "image",
     musicCue: "Strange Light",
     musicStyle: "Dark psychedelic",
@@ -121,6 +143,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Psychedelic 3D cinematic 16:9: an impossible cathedral of refractive glass petals and floating chrome orbs, magenta and cyan volumetric light, daisy motifs etched in crystal, no people, ultra detailed materials, dark cosmic void",
     promptVariations: [],
     imageUrl: galleryImg5,
+    imagePicture: galleryImg5Pic,
     mediaType: "image",
     musicCue: "Deep Space Drift",
     musicStyle: "Cosmic ambient",
@@ -139,6 +162,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Psychedelic 3D still 16:9: a slowly rotating nebula shaped like a giant daisy, petals made of translucent gel and prismatic shards, pollen storms of gold dust, dreamlike depth, no text, short-film title card energy",
     promptVariations: [],
     imageUrl: galleryImg6,
+    imagePicture: galleryImg6Pic,
     mediaType: "image",
     musicCue: "Orb background",
     musicStyle: "Dream ambient",
@@ -157,6 +181,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Strange psychedelic 3D abstract 16:9: a Klein-bottle lattice of interlocking soft metallic tubes blooming with tiny wildflowers at every junction, electric lime and violet caustics, infinite recursive space, highly detailed",
     promptVariations: [],
     imageUrl: galleryImg7,
+    imagePicture: galleryImg7Pic,
     mediaType: "image",
     musicCue: "Strange Light",
     musicStyle: "Dark psychedelic",
@@ -174,6 +199,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Cinematic night desert scene, massive glowing laser serpent rising from dark dunes under a starry sky, charged red-orange energy waves, dramatic volumetric lighting, epic wide shot, surreal short-film still, Grok Imagine style.",
     promptVariations: ["Low-angle desert shot of a luminous serpent made of coherent laser light, sand lifting in rings, distant figures silhouetted by red plasma glow, 35mm anamorphic film frame.", "Wide cinematic tableau of neon serpents breaking through dunes during a midnight storm, electric haze, practical dust, high contrast firelight and cold moonlight."],
     imageUrl: galleryImg8,
+    imagePicture: galleryImg8Pic,
     mediaType: "image",
     musicCue: "Minimax Music - Halloween Snake Battle drop",
     musicStyle: "Dark trap build",
@@ -191,6 +217,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Close cinematic portrait of a defiant character lit by pulsing red scanner light, dust and sparks in the air, fractured desert horizon behind them, intense short-film color grade, Grok Imagine realism.",
     promptVariations: ["Hero portrait with red laser reflections in the eyes, shallow depth of field, smoky desert battlefield atmosphere, urgent musical cutaway energy.", "Medium shot of a survivor listening to a haunted signal through static, orange firelight and cyan edge light, cinematic grain."],
     imageUrl: galleryImg9,
+    imagePicture: galleryImg9Pic,
     mediaType: "image",
     musicCue: "MiniMax 2026-05-07 - Rubella",
     musicStyle: "Haunted synth cutaway",
@@ -208,6 +235,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "High-energy canyon battle with multiple laser snakes weaving through smoke, glowing trails reflecting on stone walls, explosive practical sparks, dynamic camera motion, epic music-video scene, Grok Imagine.",
     promptVariations: ["Fast tracking shot through a canyon as laser serpents cross overhead, red plasma ribbons, dust vortex, cinematic impact frames.", "Overhead battle map view of luminous snakes circling a small crew in a canyon basin, firelight pools, midnight blue shadows."],
     imageUrl: galleryImg10,
+    imagePicture: galleryImg10Pic,
     mediaType: "image",
     musicCue: "Minimax Music - Seismic Impact dark trap build",
     musicStyle: "Percussive battle cue",
@@ -225,6 +253,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Surreal desert altar made from old broadcast equipment and glowing cables, two characters framed by laser haze, ritualistic sci-fi mood, warm embers and cold blue static, detailed cinematic still.",
     promptVariations: ["Ancient technology altar in a burned-out desert set, analog screens showing snake-wave patterns, mystical sci-fi lighting.", "Two-person standoff at a glowing broadcast altar, red laser dust, handmade props, practical film texture."],
     imageUrl: galleryImg11,
+    imagePicture: galleryImg11Pic,
     mediaType: "image",
     musicCue: "Les Ondes Courtes - shortwave swell",
     musicStyle: "Analog synth pulse",
@@ -242,6 +271,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Final shot of two figures walking along a thin line of fire at dawn, laser-serpent smoke fading behind them, hopeful but strange tone, warm sunrise, cinematic wide composition.",
     promptVariations: ["Quiet dawn aftermath after a surreal laser snake battle, two silhouettes crossing scorched sand, orange-pink horizon, music fades out.", "Wide ending frame with smoke ribbons, ember trails, distant canyon, characters small against an enormous sky."],
     imageUrl: galleryImg12,
+    imagePicture: galleryImg12Pic,
     mediaType: "image",
     musicCue: "Whatever Lets Us Be - final refrain",
     musicStyle: "Melancholy anthem",
@@ -259,6 +289,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Reference portrait for two recurring Weeks on Fire leads, emotionally grounded, cinematic wardrobe, natural imperfections, ready for reuse across Grok Imagine scene prompts.",
     promptVariations: ["Two-person character reference sheet, neutral background, consistent faces, production still lighting.", "Cinematic duo portrait for a surreal short-film series, grounded expressions, warm practical light."],
     imageUrl: galleryImg13,
+    imagePicture: galleryImg13Pic,
     mediaType: "image",
     musicCue: "Twilight Time - character motif",
     musicStyle: "Nocturnal pop ballad",
@@ -276,6 +307,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Alternate cinematic reference for the two recurring leads, closer crop, expressive lighting, usable as a face and mood anchor for future scene generations.",
     promptVariations: ["Close portrait of the recurring duo with warm key light and dark neutral background, consistent character reference.", "Production reference image for two short-film characters, expressive faces, cinematic skin tones."],
     imageUrl: galleryImg14,
+    imagePicture: galleryImg14Pic,
     mediaType: "image",
     musicCue: "Twilight Time - reprise",
     musicStyle: "Soft synth reprise",
@@ -293,6 +325,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Dim retro broadcast control room with stacked CRT monitors, tangled cables, and a single operator silhouette lit by scan lines — meta-studio energy, 480p grain, Weeks on Fire production still, Grok Imagine style.",
     promptVariations: ["Wide still of a cluttered server-and-CRT room at night, blue monitor glow on dust, analog switchboard, cinematic short-film grain.", "Over-shoulder at a control desk buried in cables, multiple feeds showing the same lace-clad duo, paranoid thriller lighting."],
     imageUrl: galleryImg15,
+    imagePicture: galleryImg15Pic,
     mediaType: "image",
     musicCue: "Rinse Cycle — sign-off hum",
     musicStyle: "Institutional soft rock",
@@ -311,6 +344,7 @@ export const filmScenes: FilmScene[] = [
     prompt: "Cinematic medium still of a glamorous woman at a silver vintage microphone as her body begins to fail — volumetric hologram scan lines, RGB channel split, digital static eating one shoulder, Monster Mash finale reveal energy, Grok Imagine style.",
     promptVariations: ["Split frame: glitching hologram singer above, real performer in white spy gear in under-stage shadows below.", "Close on RGB-fringed hologram face still performing mid-lyric, projector haze, cold cyan versus warm party light."],
     imageUrl: galleryImg16,
+    imagePicture: galleryImg16Pic,
     mediaType: "image",
     musicCue: "The Monster Mash (Finale) — bridge glitch",
     musicStyle: "Halloween novelty-rock",

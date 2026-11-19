@@ -1,0 +1,24 @@
+{
+  "id": "receipt-dated-thursday",
+  "title": "Receipt Dated Thursday",
+  "added": "2026-09-06",
+  "genre": "Spoken & dialog",
+  "subgenre": "Institutional receipt recitation",
+  "description": "Continuity Voice reads a poodle’s return receipt from a store that will not exist until Thursday. The barcode is always one digit short.",
+  "episode": "cutaway",
+  "slot": "Biscuit",
+  "tags": [
+    "biscuit",
+    "continuity-voice",
+    "receipt",
+    "comedy",
+    "eyewash-station",
+    "hoa"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Receipt_Dated_Thursday.md",
+  "stylePrompt": "Institutional receipt recitation at 80 BPM. Narrow-bandwidth Continuity Voice — warm, tire-ad sincere, never cute, never “dog voice.” Cheap thermal-printer rhythm as percussion (staccato paper advance, not a drum kit). One polite barcode scanner beep that is musically useful and always incomplete. Tape hiss, 60Hz hum, lobby-CRT bed. Dark top end. No guitars. No woof samples. **Structural flaw:** the barcode beep is always one digit short — seven tones instead of eight, every scan, every chorus. The missing digit is Thursday. Do not complete the barcode. Do not let a second beep “finish” it. Mood: a poodle stole the plot and brought back paperwork. Runtime ~1:40–2:00. Use Continuity Voice only on the sung/spoken lead; Biscuit does not sing.",
+  "lyrics": "[Intro — printer advance, incomplete beep]\nItem: gavel, cracked, character included.\nReturned by: Biscuit.\nStore: not yet.\n\n[Verse 1]\nShe took it under the folding chairs.\nNo explanation. No apology.\nThe bandana matches the glow, which is not a confession.\nIt is merchandising.\n\n[Pre-Chorus]\nPaid in full.\nPaid in advance.\nPaid in a tense the register does not stock.\n\n[Chorus]\nReceipt dated Thursday\nThe shop is still a rumor\nReceipt dated Thursday\nPlease keep this for your records\nThe barcode is short one number\nWe are not authorized to guess\nReceipt dated Thursday\nTuck it in the minutes\n\n[Verse 2]\nSubtotal: one MacGuffin, slightly damp.\nTax: seasonal décor.\nTip: a purple bandana, which was already hers.\nChange: a store that opens next Thursday on a lot that is currently a rift.\n\n[Pre-Chorus]\nPaid in full.\nPaid in advance.\nPaid in a tense the register does not stock.\n\n[Chorus]\nReceipt dated Thursday\nThe shop is still a rumor\nReceipt dated Thursday\nPlease keep this for your records\nThe barcode is short one number\nWe are not authorized to guess\nReceipt dated Thursday\nTuck it in the minutes\n\n[Bridge]\nIf found, return to the aisle.\nIf the aisle is not built, wait.\nThe dog has a paper trail.\nThe paper trail has a dog.\n\n[Spoken — thermal print, last incomplete beep]\nThank you for shopping where we aren't yet.\nWe'll return to your program. We always do.",
+  "notes": "**What the song is**\nEyeWash Continuity Voice reading **Biscuit’s receipt**. Scratchpad seed: after stealing the plot MacGuffin, Biscuit returns it with a receipt from a store that won’t exist until next Thursday. Comedy stays professionally neutral — this is paperwork, not a cute-dog number.\n\nShips as a Musical cutaway still + motion, **not** gag #9. Do not add it to the eight-gag cycle.\n\n**Craft (keep this off-mic)**\n- *Pepperoni or Margherita* owns Pizza Guy professionalism. This is **station paperwork**, not delivery.\n- *I Second Peggy Babcock* owns HOA hearing tongue-twisters. Do not put Karen on the mic.\n- *Article Seven* owns the skeleton union pause. Biscuit may have been in that yard; this song is the receipt, not the break.\n- Do not score Item Three’s meeting muzak. The gavel may appear as an inventory line only.\n- No barking. No “who’s a good girl.” Continuity Voice does not break character.\n\n**Production notes**\n- **Episode placement:** Biscuit’s Heist (`notes/dialog-jokes-incidents.md`); optional insert near Item Three without replacing that scene’s bed. EyeWash lobby-CRT in frame.\n- **Voice:** Continuity Voice. Biscuit is pictured, not cast as a singer.\n- **Structural flaw:** Barcode beep always one digit short (seven tones, not eight).\n- **Runtime target:** 1:40–2:00."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "heels-or-no-entry",
+  "title": "Heels or No Entry",
+  "added": "2026-09-06",
+  "genre": "Dance & disco",
+  "subgenre": "Slow-disco dress-code liturgy",
+  "description": "A rooftop bouncer recites the door policy while the skyline burns. She produces emergency stilettos. The kick arrives after Approved.",
+  "episode": "05",
+  "slot": "Velvet Rope · opener",
+  "tags": [
+    "velvet-rope",
+    "bouncer",
+    "glamour",
+    "apocalypse",
+    "disco",
+    "deadpan"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Heels_or_No_Entry.md",
+  "stylePrompt": "Slow-disco dress-code liturgy at 98 BPM. Dry analog bass, muted four-on-the-floor that is felt more than heard, mirrorball as a dull click not a sparkle, ash as room tone, no bright hats. Deadpan baritone vocal, professionally neutral, zero vibrato, close-mic — a bouncer reciting policy, not a crooner, not the Pizza Guy. Dark top end; the city fire is orange in the picture, not in the mix. No belting. No wink. **Structural flaw:** the kick never lands on the word “Approved.” It lands one beat later, on the stiletto click, every chorus, every time. Do not quantize it. Do not “fix” the downbeat. Mood: heels or no entry while the skyline burns. Runtime ~1:50–2:10. Use a dry baritone lead; optional distant crowd hush, never a gang vocal.",
+  "lyrics": "[Intro — ash, velvet, no kick]\nHeels or no entry.\nI don't care if the sky is on fire.\n\n[Verse 1]\nThe rope is still velvet. The list is still closed.\nAsh on the stanchion. Ash on the coat.\nYou can hear the sirens. They are not on the list.\nI am not a metaphor. I am the door.\n\n[Pre-Chorus]\nSneakers are a no.\nExceptions are a no.\nThe sky can wait in line.\n\n[Chorus]\nHeels or no entry\nThe room is still open\nHeels or no entry\nThe city can burn from here\nApproved —\n(kick on the click, one beat late)\n— is a sound the floor makes.\n\n[Verse 2]\nShe opens a compact. Not makeup. Shoes.\nEmergency stilettos, still in the tissue.\nThe purse was built for this. The night was not.\nI look at the heels. I look at the fire. I look at the heels.\n\n[Pre-Chorus]\nSneakers are a no.\nExceptions are a no.\nThe sky can wait in line.\n\n[Chorus]\nHeels or no entry\nThe room is still open\nHeels or no entry\nThe city can burn from here\nApproved —\n(kick on the click, one beat late)\n— is a sound the floor makes.\n\n[Bridge]\nI don't check names. I check height off the ground.\nIf you can walk in, you can stay in.\nMirrorball light on a soot-stained hem.\nNobody inside is dancing like it's the last night.\nThey are dancing like it's Tuesday.\n\n[Final Chorus]\nHeels or no entry\nThe rope does not lower\nHeels or no entry\nCome back when you're dressed\nApproved —\n(kick on the click, one beat late)\nThe click is the stamp.\nThe fire is not my department.",
+  "notes": "**What the song is**\nDoor-policy liturgy for **The Velvet Rope at the End of the World**. The bouncer is sincere. The skyline is on fire. Neither of those facts revises the dress code. She produces emergency stilettos from a purse. He says Approved. The kick is late on purpose.\n\nThe joke is the policy, not the apocalypse. Nobody winks. Nobody says “end of the world” like a chorus.\n\n**Craft (keep this off-mic)**\n- *Neon Exit Sign* owns mascara / empire / walking away in pearls. This is **the door**, not the exit.\n- *Pepperoni or Margherita* owns professional neutrality as a delivery superpower. This is professional neutrality as a **stanchion**.\n- *House of Mirrors Rally* owns the ping-pong metronome. Do not put a ball in this mix.\n- Do not name The Two. The gown may be theirs. The bouncer does not care.\n\n**Production notes**\n- **Episode placement:** Velvet Rope rooftop cutaway (`content/cutaways/velvet-rope.json`, `notes/scene-suggestions.md`). Episode 05 opener candidate.\n- **Voice:** Deadpan baritone bouncer. Not Pizza Guy. Not Continuity Voice. Not Rubella.\n- **Structural flaw:** Kick after “Approved,” on the stiletto click. Hold it for every chorus.\n- **Runtime target:** 1:50–2:10."
+}

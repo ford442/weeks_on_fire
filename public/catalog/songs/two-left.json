@@ -1,0 +1,25 @@
+{
+  "id": "two-left",
+  "title": "Two Left",
+  "added": "2026-09-15",
+  "genre": "Soul, funk & hip-hop",
+  "subgenre": "Vending-machine Motown / girl-group soul",
+  "description": "Lillith buys another life at 2 AM. The coil is honest. Each chorus has one fewer ding; the last chorus has none and she still holds out her hand.",
+  "episode": "cutaway",
+  "slot": "Life Vending",
+  "tags": [
+    "motown",
+    "soul",
+    "comedy",
+    "lillith",
+    "vending",
+    "cartoon",
+    "lives"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Two_Left.md",
+  "stylePrompt": "Vending-machine Motown / girl-group soul, 108 BPM, F-sharp minor. Dry close female lead (Lillith, bright, transactional, no belt). Three deadpan backing singers who only sing inventory counts — \"three,\" \"two,\" \"one\" — never \"love,\" never \"baby.\" Kick is a coin slot. Snare is a coil-release thunk. Tambourine on the ands. Baritone sax that plays the vending-motor hum as a riff. No strings. No key change. **Structural flaw:** a sampled coil-drop ding after every chorus, counting down remaining stock. Intro has three dings. After chorus 1, two. After chorus 2, one. After the final chorus, silence where the ding belongs; she still holds the last note as if the heart is coming. Do not add a fake ding in the outro to be kind. Mood: 2 AM sidewalk, one streetlamp, a machine that is better at accounting than anyone she knows. Runtime ~1:40–2:00. Do not use Rubella (she already has a dying device). Do not use Continuity Voice.",
+  "lyrics": "[Intro — three dings, then the slot]\n(ding)\n(ding)\n(ding)\nTwo left after this.\nI know. I counted.\n\n[Verse 1]\nI did not come here to discuss it\nI came here with a fish\nThe slot takes what the slot takes\nThe coil does not negotiate\nYou can see the hearts from the sidewalk\nYou can see how many are not there\n\n[Pre-Chorus]\nI am not asking for nine\nI am asking for the one that drops\nI have been this person before\nI have the receipt in my mouth\n\n[Chorus]\nTwo left\nTwo left after this\nI pay, it drops, I leave\nNobody has to watch\nTwo left\nThat is still a number\nThat is still enough to be rude about\n(ding)\n(ding)\n\n[Verse 2]\nThe dog on the corner has a newspaper\nHe is not the clerk\nHe is not the choir\nHe is the only one here with an opinion\nI do not owe him a thank you\nThe machine does not either\n\n[Pre-Chorus]\nOne of these is for later\nOne of these is for the thing I already did\nI am restocking. That is all.\nDo not make it a lesson\n\n[Chorus 2]\nTwo left\nThen one left\nI pay, it drops, I leave\nThe tray is cold on purpose\nTwo left\nI will be back when I am back\nThe coil will still be honest\n(ding)\n\n[Bridge — sax motor-hum only]\nI have used more than I am admitting\nThe empty coil is not a metaphor\nIt is an empty coil\nI can see the next heart from here\nI am not taking it. I said two.\nI am keeping my word to a machine\nWhich is more than I do for a room\n\n[Final Chorus — no ding]\nTwo left\nThen none that I am allowed\nI pay, it drops, I leave\nI hold out my hand\nTwo left\n(silence where the ding belongs)\nI am still holding it.\nI know.\nI counted.",
+  "notes": "## What the song is\nLillith at a vending machine that sells lives. She is restocking, not praying. The cat from the cartoon parking lot (`life-vending`) is the usual customer; tonight she is doing the errand herself and does not want a witness. The dog with the newspaper can judge. The machine cannot. That is why she likes it.\n\nThe joke is inventory. Nobody says \"nine lives.\" Nobody thanks the coil."
+}

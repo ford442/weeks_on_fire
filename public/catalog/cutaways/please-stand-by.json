@@ -1,0 +1,36 @@
+{
+  "id": "please-stand-by",
+  "kind": "scene",
+  "title": "Please Stand By",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "60s hold",
+  "episode": "EyeWash Station",
+  "songId": "rinse-cycle",
+  "songTitle": "Rinse Cycle",
+  "summary": "Full-frame TECHNICAL DIFFICULTIES card. Everything happens in the audio. Never cut away.",
+  "visualArc": "One card. The image never changes. That is the shot.",
+  "tags": [
+    "eyewash-station",
+    "broadcast",
+    "ident",
+    "cheapest-asset"
+  ],
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "standby-card",
+      "label": "The card",
+      "start": "0:00",
+      "end": "1:00",
+      "durationSec": 60,
+      "onScreen": "Full-frame 1980s technical-difficulties card. Audio-only chaos behind it.",
+      "lyrics": "CONTINUITY VOICE: We'll return to your program. We always do.",
+      "musicCue": "Library music a bar too long.",
+      "grokImaginePrompt": "Full-frame 1980s television TECHNICAL DIFFICULTIES PLEASE STAND BY card, institutional blue background, chunky broadcast typeface, visible scan lines and VHS chroma bleed, static locked shot, nostalgic analog television aesthetic, Grok Imagine style",
+      "geminiOmniPrompt": "60-second locked card. Image never changes. Optional imperceptible zoom. Photoreal analog TV.",
+      "promptVariations": []
+    }
+  ]
+}

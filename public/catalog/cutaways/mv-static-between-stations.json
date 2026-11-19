@@ -1,0 +1,37 @@
+{
+  "id": "mv-static-between-stations",
+  "kind": "musical",
+  "title": "Static Between Stations",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~2:30",
+  "episode": "Episode 02 / Laundromat",
+  "songId": "static-between-stations",
+  "songTitle": "Static Between Stations",
+  "summary": "The dial left between two songs on purpose. Dashboard glow, mercury streetlamps, laundromat fluorescents humming with the hiss.",
+  "visualArc": "Tuner needle in the gray → mercury blur → fluorescent hum.",
+  "tags": [
+    "ep2",
+    "lillith",
+    "night-drive",
+    "laundromat"
+  ],
+  "episodeId": "02",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "sbs-dial",
+      "label": "Between stations",
+      "start": "0:00",
+      "end": "0:15",
+      "durationSec": 15,
+      "onScreen": "Analog tuner needle parked in the gray. Green dash. Wet glass.",
+      "lyrics": "Leave it between stations",
+      "musicCue": "84 BPM, musical static, no snares",
+      "grokImaginePrompt": "Close-up of a car radio face at night, analog needle parked between two stations, green backlight, driver's hand resting on the dial without turning it, shallow focus, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "15-second macro of a tuner needle that does not move. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "mv-rinse-cycle",
+  "kind": "musical",
+  "title": "Rinse Cycle",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "60–90s + 10s idents",
+  "episode": "EyeWash Station",
+  "songId": "rinse-cycle",
+  "songTitle": "Rinse Cycle (Fifteen Minutes, Do Not Blink)",
+  "summary": "Sign-off theme. Comfort that curdles on the second pass. Nine-bar phrases, late resolutions.",
+  "visualArc": "Eyewash fixture ident → empty master control → test pattern that blinks like an eye → 3:44 again.",
+  "tags": [
+    "eyewash-station",
+    "sign-off",
+    "continuity-voice"
+  ],
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "rc-fixture",
+      "label": "Fixture ident",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Wall-mounted eyewash. Nozzles turn toward camera.",
+      "lyrics": "EyeWash Station — channel twelve and a half.",
+      "musicCue": "Rhodes sting + tone bars",
+      "grokImaginePrompt": "Close-up of an industrial wall-mounted emergency eyewash station in a flickering fluorescent hallway, twin chrome nozzles slowly rotating toward camera, institutional green tile, 1980s broadcast ident aesthetic, slight VHS chroma bleed, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "10-second ident. Nozzles rotate toward lens. Photoreal analog TV.",
+      "promptVariations": []
+    }
+  ]
+}

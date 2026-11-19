@@ -1,0 +1,24 @@
+{
+  "id": "call-forty-seven",
+  "title": "Call Forty-Seven",
+  "added": "2026-09-06",
+  "genre": "Spoken & dialog",
+  "subgenre": "Hold-music accretion / civic dispatch ballad",
+  "description": "Karen reports existential zoning. Each transfer adds a bar of hold music. Democracy is bleeding, Steven. The call never drops.",
+  "episode": "04",
+  "slot": "911 Wrong Shade",
+  "tags": [
+    "hoa",
+    "karen",
+    "911",
+    "comedy",
+    "hold-music",
+    "ep4"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Call_Forty-Seven.md",
+  "stylePrompt": "Hold-music accretion / civic dispatch ballad at 92 BPM. Cheap on-hold Rhodes that sounds like a municipal phone tree, staccato muted brass on each transfer click, fluorescent buzz as the bed, cordless-phone compression on the lead. Female vocal, Karen, professionally furious, never louder than a kitchen, zero vibrato, no belting, no “mad mom” comedy voice. Dark top end; kitchen practicals only. **Structural flaw:** every transfer adds one extra bar of hold music instead of cutting — the phone tree accretes. Verse 1 is 8 bars of hold under the line; after transfer one it is 9; after transfer two it is 10; the last chorus is sitting on a pile of leftover bars nobody scheduled. Do not reset the hold loop. Do not “edit for radio.” Mood: 911 for a recycling bin. Runtime ~1:55–2:15. Use a dry close suburban female lead; operator is a second dry voice, tired, never sarcastic.",
+  "lyrics": "[Intro — click, then one bar of hold too many]\nCall forty-seven.\nCul-de-sac.\nPlease continue to hold.\n\n[Verse 1]\nIt's not a portal. It's an unapproved hardscape.\nI have the swatches. I have the light.\nBrad's bin is the wrong shade of democratic blue\nIn the kitchen, in the driveway, and under the sodium.\nI am not asking you to understand. I am asking you to log it.\n\n[Operator]\nMa'am, is anyone bleeding?\n\n[Karen]\nDemocracy is bleeding, Steven.\n\n[Transfer 1 — hold music, now nine bars]\nCity.\nNow HOA.\nNow city again.\nPlease continue to hold.\n\n[Verse 2]\nQuiet hours start at ten. The skeleton did not get the memo.\nThe purple light is a decorative accent. That is already filed.\nThis call is about the bin, Steven.\nThe bin is a color. The color is a crime. The crime is municipal.\n\n[Transfer 2 — hold music, now ten bars]\nYour call is important.\nYour call has been important.\nYour call is still in the tree.\n\n[Chorus]\nCall forty-seven\nCul-de-sac feature\nCall forty-seven\nPlease hold for zoning\nI survived the purple light\nI have a sticker that says so\nTransfer me to someone\nWho can see blue\n\n[Verse 3]\nI am in my robe. The clipboard is in the other hand.\nThrough the blinds: purple. Through the window: Brad, power-washing a sigil.\nI have been transferred to my own voicemail.\nI did not leave a message. I am the message.\n\n[Transfer 3 — hold music, now eleven bars]\nPlease continue to hold.\nPlease continue.\n\n[Final Chorus]\nCall forty-seven\nCul-de-sac feature\nCall forty-seven\nPlease hold for zoning\nThe doorbell.\nThat is not dispatch.\nThat is extra napkins.\nPlease continue to hold.",
+  "notes": "**What the song is**\n911 hold music that wandered into Episode 4. Karen is not panicking. She is **triaging color**. The operator asks if anyone is bleeding. Democracy is bleeding, Steven. Each transfer makes the hold longer. Pizza Guy rings the doorbell at the end. She does not hang up.\n\nThe joke is the tree, not the scream. Volume never rises. Brass never becomes ska.\n\n**Craft (keep this off-mic)**\n- *Recycling Bin Rebellion* owns the HOA protest anthem (horns, gang vocals, wrong-shade chorus). This is **the phone call**, not the meeting.\n- Do not write the Item Three muzak/theremin bed. Dale’s gavel is another song.\n- *Pepperoni or Margherita* owns the pizza-door sting. Extra napkins may appear; do not sing the order.\n- Do not wink. “Democracy is bleeding” is filed, not performed.\n\n**Production notes**\n- **Episode placement:** `content/cutaways/911-wrong-shade.json`; `notes/scene-suggestions.md` (“911 for the Wrong Shade of Blue”). Episode 4 cold open / cutaway.\n- **Voice:** Karen, kitchen volume. Operator (Steven) tired, two lines. No Continuity Voice. No Rubella glamour.\n- **Structural flaw:** Hold music accretes one bar per transfer. Do not cut the extras for “pacing.”\n- **Runtime target:** 1:55–2:15."
+}

@@ -2,6 +2,17 @@
 
 Authoring sources for the React production hub. **`npm run codegen`** reads these files and emits typed modules under [`src/data/generated/`](../src/data/generated/).
 
+**Songs and cutaways get two outputs:**
+
+| Output | Holds | Loaded |
+| --- | --- | --- |
+| `src/data/generated/songs.ts`, `cutaways.ts` | List-view summaries (title, tags, status, episode, …; cutaways add `segmentCount` / `sightCount`) | Bundled with the list view |
+| `public/catalog/<kind>/index.json` | The same summaries as JSON | Precached by the service worker; for agents and search |
+| `public/catalog/<kind>/<id>.json` | The full record: style prompt, lyrics, notes / segments, prompts, sight bank | Fetched when a detail view opens |
+
+Both are generated; commit them together. `npm run codegen` deletes the JSON of a removed record,
+and `codegen:check` fails on stale or orphaned files in `public/catalog/`.
+
 ## Production status (one set, every tab)
 
 Songs, gallery items, cutaways, scene videos and Timeline scenes share one `status` pipeline:
@@ -52,7 +63,11 @@ Production notes.
 ```
 
 2. Run `npm run codegen` (or `npm run build`).
-3. Commit the markdown file **and** the regenerated `src/data/generated/*.ts` files.
+3. Commit the markdown file **and** the regenerated `src/data/generated/*.ts` and `public/catalog/songs/*.json` files.
+
+Audio: put the mp3 in `songs/` and set `audioFile` to its filename. It is served at
+`audio/<slug>.mp3` (punctuation becomes `_`, e.g. `Everything's+Made+for+Love_.mp3` →
+`audio/Everything_s_Made_for_Love.mp3`); codegen fails if two files would share a slug.
 
 No edits to `src/data/songs.ts` are required.
 
@@ -101,7 +116,7 @@ codegen'd and keep their `Drawer / not promoted` note.
 
 4. `songId` must match a song `id` from `songs/*.md` frontmatter.
 
-5. Run `npm run codegen` and commit. The cutaway shows under **Unscheduled** on Suggestions until it has a slot in [`schedule.json`](schedule.json) (below).
+5. Run `npm run codegen` and commit (including `public/catalog/cutaways/`). The cutaway shows under **Unscheduled** on Suggestions until it has a slot in [`schedule.json`](schedule.json) (below).
 
 ## Adding to the schedule (EyeWash Station)
 

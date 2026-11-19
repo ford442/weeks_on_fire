@@ -1,0 +1,50 @@
+{
+  "id": "empty-highway-confession",
+  "kind": "scene",
+  "title": "Empty Highway Confession",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "3–4 min",
+  "episode": "Episode 02 tail",
+  "songId": "quarter-to-seventy-five",
+  "songTitle": "Quarter to Seventy-Five",
+  "summary": "4:17 a.m. The driver talks to the radio. Billboard: KEEP GOING. No advertiser.",
+  "visualArc": "Dashboard glow → needle between stations → lone lit window in a field → KEEP GOING.",
+  "tags": [
+    "ep2",
+    "night-drive",
+    "radio-voice",
+    "confession"
+  ],
+  "episodeId": "02",
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "hwy-dash",
+      "label": "Dashboard",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Driver silhouette, green dash, empty four-lane.",
+      "lyrics": "You're still here. That's the hard part.",
+      "musicCue": "Quarter to Seventy-Five bed.",
+      "grokImaginePrompt": "Cinematic interior of a car on an empty four-lane highway at 4 AM, driver in silhouette lit only by green dashboard glow, vast dark landscape outside, radio face illuminated, introspective and dreamlike, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "12-second interior night drive. Photoreal, no score except radio.",
+      "promptVariations": []
+    },
+    {
+      "id": "hwy-billboard",
+      "label": "KEEP GOING",
+      "start": "2:50",
+      "end": "3:20",
+      "durationSec": 30,
+      "onScreen": "Dawn billboard, plain friendly letters, no logo. One car passing under.",
+      "lyrics": "(Song. No spoken button.)",
+      "musicCue": "Title hook under the board.",
+      "grokImaginePrompt": "Enormous illuminated highway billboard at dawn reading KEEP GOING in plain friendly letters with no logo or advertiser, a single car passing beneath it, sky just beginning to lighten, surreal and sincere, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "30-second approach and pass under KEEP GOING. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

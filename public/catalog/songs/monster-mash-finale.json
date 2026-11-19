@@ -1,0 +1,24 @@
+{
+  "id": "monster-mash-finale",
+  "title": "The Monster Mash (Finale)",
+  "added": "2026-07-31",
+  "genre": "Rock",
+  "subgenre": "Halloween novelty-rock cover",
+  "description": "Rubella covers Bobby Pickett's \\\"Monster Mash\\\" on the post-snake-battle lawn — cursed guest list, hologram reveal, Spy vs. Spy outro.",
+  "episode": "03",
+  "tags": [
+    "halloween",
+    "cover",
+    "monster-mash",
+    "rubella",
+    "spy-vs-spy",
+    "finale"
+  ],
+  "instrumental": false,
+  "status": "final",
+  "audioFile": "The+Monster+Mash+(Finale).mp3",
+  "sourceFile": "The_Monster_Mash_Finale.md",
+  "stylePrompt": "Halloween novelty-rock cover of Bobby \"Boris\" Pickett's \"The Monster Mash\" (~2:30–3:00 total). Rubella lead vocal — theatrical, slightly camp, spooky cabaret energy without losing the original's deadpan Boris Karloff-adjacent charm. Mid-tempo (~138 BPM). Vintage 1962 go-go beat updated with subtle modern sheen: brushed snare, walking bass, Farfisa-style organ stabs, twangy guitar on accents, light reverb on vocals. Crowd chant layer on cold open (\"Sing us out!\"). Party ambience bleed optional under choruses — distant lawn chaos, not overpowering.\n\nKey elements:\n- Cold open dialog (Lillith, Madelin, crowd + jack-o'-lantern chant) before music kicks\n- Full original lyrics through all verses and choruses — Rubella voice throughout\n- Verse 2 plays under parallel bedroom heist (song continues, no ducking)\n- Brief glitch/static dip on hologram reveal bridge (~2:10) then resume\n- Outro: Igor \"Mash good!\" / Mad Scientist \"Easy, Igor, you impetuous—\" / Igor \"Mash good! Grrr!\" — can be spoken or sung\n- Handoff to Spy vs. Spy sting: final chord cuts hard to silence or single noir piano note\n\nMood: Cursed lawn-party fun, absurdist, Adult Swim collage energy, celebratory chaos\nTempo: ~138 BPM (classic Monster Mash feel)\nLength: ~2:30–3:00 including cold open and outro\nVocals: Rubella lead; optional crowd doubles on chorus; Igor/Mad Scientist spoken outro\n\nUse my Rubella voice.",
+  "lyrics": "[Intro]\nSing us out\nSing us out\n\n[Verse 1]\nI was working in the lab, late one night\nWhen my eyes beheld an eerie sight\nFor my monster from his slab, began to rise\nAnd suddenly to my surprise\n\n[Chorus]\nHe did the mash, he did the monster mash\nThe monster mash, it was a graveyard smash\nHe did the mash, it caught on in a flash\nHe did the mash, he did the monster mash\n\n[Verse 2]\nFrom my laboratory in the castle east\nTo the master bedroom where the vampires feast\nThe ghouls all came from their humble abodes\nTo get a jolt from my electrodes\n\n[Chorus]\nThey did the mash, they did the monster mash\nThe monster mash, it was a graveyard smash\nThey did the mash, it caught on in a flash\nThey did the mash, they did the monster mash\n\n[Verse 3]\nThe Zombies were having fun, the party had just begun\nThe guests included Wolfman, Dracula, and his son\nThe scene was rockin', all were digging the sounds\nIgor on chains, backed by his baying hounds\nThe coffin-bangers were about to arrive\nWith their vocal group, The Crypt-Kicker Five\n\n[Chorus]\nThey played the mash, they played the monster mash\nThe monster mash, it was a graveyard smash\nThey played the mash, it caught on in a flash\nThey played the mash, they played the monster mash\n\n[Verse 4]\nOut from the coffin, Drac's voice did ring\nSeems he was troubled by just one thing\nHe opened the lid and shook his fist and said\nWhatever happened to my Transylvania Twist\nIt's now the mash, it's now the monster mash\nThe monster mash, it was graveyard smash\nIt's now the mash, it caught on in a flash\nIt's now the mash, it's now the monster mash\n\n[Verse 5]\nNow everything's cool, Drac's a part of the band\nAnd my Monster Mash is the hit of the land\nFor you, the living this mash was meant too\nWhen you get to my door, tell them Boris sent you\n\n[Chorus]\nThen you can mash, then you can monster mash\nThe monster mash and do my graveyard smash\nThen you can mash, you'll catch on in a flash\nThen you can mash, then you can monster mash\n\n[Outro]\nMash good\nEasy, Igor, you impetuous\nMash good\nGrrr",
+  "notes": "Episode 3 Halloween finale. Visual plan: `episodes/episode-03/monster-mash-finale.md`. Per-segment Grok Imagine + Gemini Omni prompts: `prompts/monster-mash-finale-segments.md`. Site Suggestions view entry in `src/data/suggestions.ts`.\n\nCover arrangement — not a note-for-note clone. Lean into:\n- Slightly detuned organ for \"cursed\" color\n- One bar of vinyl crackle or tape wobble at hologram glitch moment\n- Final chorus can widen with ghost harmonies (Lillith/Rubella doubles) before Spy vs. Spy cut\n\nLicensing: \"Monster Mash\" © Pickett & Capizzi — confirm cover rights before distribution.\n\n---"
+}

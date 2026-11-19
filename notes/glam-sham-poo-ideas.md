@@ -155,6 +155,18 @@ Or just dump the thought — anything is fine.
 **Idea:** Kenji “Shred” Sato character card (Cast view + suggested-characters).
 **Why it might be fun:** Brand ambassador / alumnus now has a place in the hub next to Rubella and Lillith.
 
+## Retired archive still package (2026-11)
+
+The Visual Archive used to carry a stand-alone "Commercial Still Package" card for this cutaway
+(`suggestion-glam-sham-poo` in `content/gallery.json`). Cutaway ideas now live only in Suggestions
+(`mv-ultra-screech`, ten re-timed segments in `prompts/glam-sham-poo-segments.md`), so the card was
+removed. Its prompts were never in the segment board; kept here in case the product-bottle or
+two-shot looks are wanted again.
+
+- **Establishing still:** Cinematic still of exhausted glam-metal shampoo commercial energy: chrome bathroom set, screeching product bottle center frame, two women in black lace dead-pan behind a fog machine, Gang vocals on GLAM-SHAM-POO spelled in neon, joke-commercial short-film still, Grok Imagine style.
+- **Product hero:** oversized chrome shampoo bottle with GLAM-SHAM-POO label, stage fog, ring light, 80s commercial parody.
+- **Two-shot:** Lillith committed, Rubella exhausted, both mouthing an impossible high note in a fogged glam set.
+
 ---
 
 *Seeded 2026-08-16. Conformed to the 2:51 bed 2026-09-05. Beat-level punch-in 2026-09-06. Keep the volume high and the ordinance violations coming.*

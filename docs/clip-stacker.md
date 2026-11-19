@@ -9,7 +9,7 @@ schema-validated fields for the Timeline's clip_stacker payload. It is a differe
 **`clip_stacker_directions.md`**, a prose "edit grammar" reference for production notes
 (referenced from files under `ideas/` and `prompts/`, e.g. `prompts/home-sweet-void-segments.md`).
 That file is not committed to this repo — it's an external production artifact, the same way
-`daisyBellMeta.slideshowUrl` points at a hosted video rather than a git-tracked one. If you're
+a scene video's `url` (`content/scenes/daisy-bell.json`) points at a hosted video rather than a git-tracked one. If you're
 looking for narrative edit-grammar guidance, that's the wrong doc; if you're looking for the JSON
 field contract, you're in the right place.
 

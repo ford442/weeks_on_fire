@@ -8,6 +8,7 @@ import {
   crewPath,
   isLegacyArchiveLink,
   isLegacyCrewPath,
+  legacySceneRedirect,
   viewPaths,
 } from './routes/paths';
 
@@ -16,7 +17,8 @@ const Finalized = lazy(viewLoaders.finalized);
 const Gallery = lazy(viewLoaders.gallery);
 const TimelinePage = lazy(viewLoaders.timeline);
 const Songs = lazy(viewLoaders.songs);
-const DaisyBell = lazy(viewLoaders['daisy-bell']);
+const Scenes = lazy(viewLoaders.scenes);
+const Video = lazy(viewLoaders.video);
 const Suggestions = lazy(viewLoaders.suggestions);
 const Cartoons = lazy(viewLoaders.cartoons);
 const Sequences = lazy(viewLoaders.sequences);
@@ -106,6 +108,12 @@ export default function App() {
     return <Navigate to={`${viewPaths.gallery}${search}`} replace />;
   }
 
+  // Daisy Bell is one scene among many now.
+  const scenePath = legacySceneRedirect(pathname);
+  if (scenePath) {
+    return <Navigate to={`${scenePath}${search}`} replace />;
+  }
+
   // Creator hub: prompts, timeline, and the rest of the production tools.
   if (pathname === CREW_PREFIX || pathname.startsWith(`${CREW_PREFIX}/`)) {
     return (
@@ -116,10 +124,12 @@ export default function App() {
             <Route path={viewPaths.overview} element={<Overview />} />
             <Route path={viewPaths.finalized} element={<Finalized />} />
             <Route path={viewPaths.gallery} element={<Gallery />} />
+            <Route path={viewPaths.video} element={<Video />} />
             <Route path={viewPaths.timeline} element={<TimelinePage />} />
             <Route path={viewPaths.songs} element={<Songs />} />
             <Route path={`${viewPaths.songs}/:id`} element={<Songs />} />
-            <Route path={viewPaths['daisy-bell']} element={<DaisyBell />} />
+            <Route path={viewPaths.scenes} element={<Scenes />} />
+            <Route path={`${viewPaths.scenes}/:id`} element={<Scenes />} />
             <Route path={viewPaths.suggestions} element={<Suggestions />} />
             <Route path={`${viewPaths.suggestions}/:id`} element={<Suggestions />} />
             <Route path={viewPaths.cartoons} element={<Cartoons />} />

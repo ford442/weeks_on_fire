@@ -95,7 +95,11 @@ export const CutawaySchema = z.object({
   sightBank: z.array(SightCandidateSchema).optional(),
 });
 
-export const ImageKindSchema = z.enum(['scene', 'suggestion', 'test', 'character']);
+/**
+ * Archive lanes for stills. There is deliberately no `suggestion` lane: cutaway and gag ideas live
+ * once, in `content/cutaways/`, and the Suggestions view is their only home.
+ */
+export const ImageKindSchema = z.enum(['scene', 'test', 'character']);
 
 export const MediaTypeSchema = z.enum(['image', 'video']);
 
@@ -164,13 +168,52 @@ export const SeriesCharacterSchema = z.object({
   bibleSheet: z.string().min(1).optional(),
 });
 
-export const DaisyFrameTreatmentSchema = z.enum(['color', 'period']);
+/** Accent a treatment, beat or whole scene board is drawn in. Classes live in `src/data/types.ts`. */
+export const SCENE_TONES = [
+  'emerald',
+  'stone',
+  'orange',
+  'sky',
+  'violet',
+  'cyan',
+  'amber',
+] as const;
+export const SceneToneSchema = z.enum(SCENE_TONES);
 
-export const DaisyBellFrameSchema = z.object({
-  id: z.string(),
+/** A named look a scene is shot in, e.g. "Full color HD" vs "Scratchy period film". */
+export const SceneTreatmentSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  /** Chip text; also the filter label on the keyframe board. */
+  short: z.string().min(1),
+  tone: SceneToneSchema,
+  description: z.string().min(1),
+  /** Draw this treatment's stills in black and white, whatever the file holds. */
+  grayscale: z.boolean().optional(),
+});
+
+/** A copy-ready prompt block pasted into every re-roll of the scene. */
+export const SceneLockSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  text: z.string().min(1),
+});
+
+export const SceneBeatSchema = z.object({
+  id: z.string().min(1),
+  step: z.number(),
+  title: z.string().min(1),
+  summary: z.string().min(1),
+  /** Treatment id the beat is shot in; omitted when the beat has no single look. */
+  treatment: z.string().min(1).optional(),
+});
+
+export const SceneFrameSchema = z.object({
+  id: z.string().min(1),
   order: z.number(),
-  title: z.string(),
-  treatment: DaisyFrameTreatmentSchema,
+  title: z.string().min(1),
+  /** Treatment id from the board's `treatments`; omitted for a single-look scene. */
+  treatment: z.string().min(1).optional(),
   beat: z.string(),
   description: z.string(),
   prompt: z.string(),
@@ -178,39 +221,63 @@ export const DaisyBellFrameSchema = z.object({
   tags: z.array(z.string()),
 });
 
-export const DaisyBellSightSchema = z.object({
-  id: z.string(),
-  lyricCue: z.string().nullable(),
-  title: z.string(),
-  description: z.string(),
+export const SceneExtraSchema = z.object({
+  id: z.string().min(1),
+  /** The lyric or line this extra lands on, when there is one. */
+  cue: z.string().nullable(),
+  title: z.string().min(1),
+  description: z.string().min(1),
 });
 
-export const DaisyBellSequenceBeatSchema = z.object({
-  id: z.string(),
-  step: z.number(),
-  title: z.string(),
-  treatment: z.union([DaisyFrameTreatmentSchema, z.literal('flip')]),
-  summary: z.string(),
+/** A finished or in-progress cut of the scene: a slideshow or a generated clip. */
+export const SceneVideoSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  kind: z.enum(['slideshow', 'clip']),
+  /** Direct file (mp4/webm plays in the page) or a page to open. Large video is linked, not committed. */
+  url: z.string().url(),
+  /** Same pipeline as every other tab; see `PRODUCTION_STATUSES`. */
+  status: ProductionStatusSchema,
+  runtime: z.string().optional(),
+  note: z.string().optional(),
 });
 
-export const DaisyBellSchema = z.object({
-  meta: z.object({
-    id: z.string(),
-    title: z.string(),
-    subtitle: z.string(),
-    duo: z.string(),
-    audioFile: z.string(),
-    conceptFile: z.string(),
-    slideshowUrl: z.string(),
-    pitch: z.string(),
-    constant: z.string(),
-  }),
-  subjectLock: z.string(),
-  stylish1890s: z.string(),
-  working1890s: z.string(),
-  sequence: z.array(DaisyBellSequenceBeatSchema),
-  sights: z.array(DaisyBellSightSchema),
-  frames: z.array(DaisyBellFrameSchema),
+/**
+ * A scene with its own page: pitch, locks, sequence, keyframe board and finished video. One file
+ * per scene in `content/scenes/<id>.json`; every scene renders through the same template.
+ *
+ * Not the Timeline's `ProductionScene` (an episode slot) or the archive's `FilmScene` (a still);
+ * "board" is what the hub already calls a keyframe board.
+ */
+export const SceneBoardSchema = z.object({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  subtitle: z.string().optional(),
+  /** Eyebrow above the title, e.g. "Musical cutaway". */
+  format: z.string().optional(),
+  /** Who is on screen, e.g. "Rubella & Lillith". */
+  cast: z.string().optional(),
+  status: ProductionStatusSchema,
+  /** Accent for the page hero. Defaults to the hub orange. */
+  tone: SceneToneSchema.optional(),
+  /** Song id from `songs/*.md`; the page plays that song's audio. */
+  songId: z.string().min(1).optional(),
+  /** Repo-relative concept doc, shown to the crew in edit mode. */
+  conceptFile: z.string().min(1).optional(),
+  pitch: z.string().min(1),
+  /** Short continuity note: what never changes between takes. */
+  continuity: z.string().optional(),
+  locks: z.array(SceneLockSchema),
+  treatments: z.array(SceneTreatmentSchema),
+  beats: z.array(SceneBeatSchema),
+  frames: z.array(SceneFrameSchema),
+  extras: z
+    .object({
+      heading: z.string().min(1),
+      items: z.array(SceneExtraSchema),
+    })
+    .optional(),
+  videos: z.array(SceneVideoSchema),
 });
 
 export const CrewRoleSchema = z.enum([
@@ -322,7 +389,6 @@ export type CutawayRecord = z.infer<typeof CutawaySchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type CharacterBibleStatus = z.infer<typeof CharacterBibleStatusSchema>;
-export type DaisyBellRecord = z.infer<typeof DaisyBellSchema>;
 export type CrewRole = z.infer<typeof CrewRoleSchema>;
 export type CrewMemberRecord = z.infer<typeof CrewMemberSchema>;
 export type EpisodeStatus = z.infer<typeof EpisodeStatusSchema>;
@@ -338,8 +404,12 @@ export type SuggestionKind = z.infer<typeof SuggestionKindSchema>;
 export type SuggestionStatus = z.infer<typeof SuggestionStatusSchema>;
 export type ImageKind = z.infer<typeof ImageKindSchema>;
 export type MediaType = z.infer<typeof MediaTypeSchema>;
-export type DaisyFrameTreatment = z.infer<typeof DaisyFrameTreatmentSchema>;
-export type DaisyBellFrameRecord = z.infer<typeof DaisyBellFrameSchema>;
-export type DaisyBellSight = z.infer<typeof DaisyBellSightSchema>;
-export type DaisyBellSequenceBeat = z.infer<typeof DaisyBellSequenceBeatSchema>;
 export type SequenceRenderer = z.infer<typeof SequenceRendererSchema>;
+export type SceneTone = z.infer<typeof SceneToneSchema>;
+export type SceneTreatment = z.infer<typeof SceneTreatmentSchema>;
+export type SceneLock = z.infer<typeof SceneLockSchema>;
+export type SceneBeat = z.infer<typeof SceneBeatSchema>;
+export type SceneFrameRecord = z.infer<typeof SceneFrameSchema>;
+export type SceneExtra = z.infer<typeof SceneExtraSchema>;
+export type SceneVideo = z.infer<typeof SceneVideoSchema>;
+export type SceneBoardRecord = z.infer<typeof SceneBoardSchema>;

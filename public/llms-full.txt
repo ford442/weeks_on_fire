@@ -15,7 +15,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Video, Timeline, Songs, Scenes, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -23,16 +23,17 @@ The hub is a single-page app. Views are toggled in-app:
 
 1. **Overview** (About the show) — What Weeks on Fire is — logline, synopsis, tone and format, the episode list, the cast and crew, and what was added most recently.
 2. **Finalized** (Finished work) — Every song, still and video marked Approved or Final — the finished pieces, in one place.
-3. **Visual Archive** (Grok Imagine Archive) — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
-4. **Timeline** (Production Timeline) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
-5. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
-6. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
-7. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
-8. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
-9. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
-10. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
-11. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-12. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+3. **Visual Archive** (Grok Imagine Archive) — Production stills and test ideas — scene, test, and character lanes with copy-ready Grok prompts. Cutaway and gag ideas live in Suggestions.
+4. **Video** (Generated Video) — Every generated clip and slideshow in one place — scene slideshows, Timeline clips, archive clips and cutaway takes, each with its production status.
+5. **Timeline** (Production Timeline) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
+6. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
+7. **Scenes** (Scene Boards) — Scenes with a page of their own — pitch, prompt locks, sequence, keyframe board and finished video. Daisy Bell is the first; every scene uses the same template.
+8. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+9. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
+10. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
+11. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+12. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+13. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
 
@@ -88,18 +89,6 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 15. **The Two - Alternate Frame** (Character archive, theme: The Two)
 16. **Computer Room — Broadcast Control** (Ideas / meta, theme: Meta Studio)
 17. **Hologram Glitch — Rubella Double** (Episode 3, theme: Hologram Reveal)
-18. **Molten Silver Sphere — Beat-Sync Pulse** (Musical cutaway, theme: Liquid Metal)
-19. **Glam-Sham-Poo — Commercial Still Package** (EyeWash Station, theme: Glam-Sham-Poo)
-20. **The Soft Gyre — A Hover** (Visual experiment, theme: The Soft Gyre)
-21. **The Soft Gyre — B Weather** (Visual experiment, theme: The Soft Gyre)
-22. **The Soft Gyre — C Interior** (Visual experiment, theme: The Soft Gyre)
-23. **The Soft Gyre — D Answer** (Visual experiment, theme: The Soft Gyre)
-24. **The Soft Gyre — E Soft set** (Visual experiment, theme: The Soft Gyre)
-25. **Well Fall — Lip of the Well** (Visual experiment, theme: Well Fall)
-26. **Rubella Stand-Up — Podium Lock** (Spoken cutaway, theme: Rubella Stand-Up)
-27. **Rubella Stand-Up — Detergent Relic** (Spoken cutaway, theme: Rubella Stand-Up)
-28. **Rubella Stand-Up — Heckle Wide** (Spoken cutaway, theme: Rubella Stand-Up)
-29. **Rubella Stand-Up — Land** (Spoken cutaway, theme: Rubella Stand-Up)
 
 ## Minimax song catalog (content index)
 
@@ -390,18 +379,18 @@ Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in `content
 - **Möbius Chrome** (mobius-chrome, unreal, ~75 seconds) — A chrome ribbon that is only one-sided does a full career: twist, knot, split, and remember it was a ribbon. It never becomes a sphere.
 - **Screen Door Recessional** (screen-door-recessional, mixed, ~1:50) — A corridor of screen doors recedes the way a hymn does — each frame a little darker, moths still doing their job. The last door opens onto a brass lattice instead of a yard.
 
-## Daisy Bell cutaway
+## Scenes
 
-- **Title**: Daisy Bell
-- **Summary**: Rubella and Lillith ride a living flower bicycle from a modern wildflower field straight into period London. The joke is the bike. The experiment is the cut: scratchy black-and-white film grain flipping into crisp HD color and back, as if the century cannot settle.
-- **Sequence beats**: 6 board entries
+Scenes with their own page (`/show/scenes/<id>`): pitch, prompt locks, sequence, keyframe board and finished video, all through one template. Author in `content/scenes/<id>.json`.
+
+- **Daisy Bell** (daisy-bell, generated) — Rubella and Lillith ride a living flower bicycle from a modern wildflower field straight into period London. The joke is the bike. The experiment is the cut: scratchy black-and-white film grain flipping into crisp HD color and back, as if the century cannot settle. Keyframes: 26; videos: 1.
 
 ## Repo layout (high signal for agents)
 
 ```
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
+├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, scene boards (JSON)
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills + cast notes

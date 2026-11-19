@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { searchIndex, type SearchEntry } from './siteSearch';
+import { buildSearchIndex, searchIndex, type SearchEntry } from './siteSearch';
 
 function fixture(title: string, body: string, to = `/x/${title}`): SearchEntry {
   return {
@@ -38,5 +38,26 @@ describe('searchIndex', () => {
 
   it('respects the limit', () => {
     expect(searchIndex(index, 'bicycle', 1)).toHaveLength(1);
+  });
+});
+
+describe('buildSearchIndex', () => {
+  it('finds a scene board by title, under its own page', () => {
+    const hit = buildSearchIndex().find(
+      (entry) => entry.section === 'Scenes' && entry.title === 'Daisy Bell',
+    );
+    expect(hit?.to).toBe('/show/scenes/daisy-bell');
+  });
+
+  it('finds a scene by a keyframe it contains', () => {
+    const hits = searchIndex(buildSearchIndex(), 'fleet street', 200);
+    expect(hits.some((entry) => entry.section === 'Scenes')).toBe(true);
+  });
+
+  it('no longer indexes cutaway ideas under the Visual archive', () => {
+    const archive = buildSearchIndex().filter((entry) => entry.section === 'Visual archive');
+    expect(archive.some((entry) => entry.title.startsWith('The Soft Gyre'))).toBe(false);
+    const suggestions = buildSearchIndex().filter((entry) => entry.section === 'Suggestions');
+    expect(suggestions.some((entry) => entry.title.includes('Soft Gyre'))).toBe(true);
   });
 });

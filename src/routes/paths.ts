@@ -38,13 +38,23 @@ export function isLegacyArchiveLink(pathname: string, search: string): boolean {
   return normalized === CREW_PREFIX && search.length > 1;
 }
 
+/**
+ * Daisy Bell had a top-level tab before scenes shared one template. Returns where an old
+ * `/show/daisy-bell` link now lives, or null for any other path.
+ */
+export function legacySceneRedirect(pathname: string): string | null {
+  const normalized = pathname.replace(/\/+$/, '');
+  return normalized === crewPath('/daisy-bell') ? crewPath('/scenes/daisy-bell') : null;
+}
+
 export const viewPaths: Record<SiteView, string> = {
   overview: crewPath('/'),
   finalized: crewPath('/finalized'),
   gallery: crewPath('/archive'),
+  video: crewPath('/video'),
   timeline: crewPath('/timeline'),
   songs: crewPath('/songs'),
-  'daisy-bell': crewPath('/daisy-bell'),
+  scenes: crewPath('/scenes'),
   suggestions: crewPath('/suggestions'),
   cartoons: crewPath('/cartoons'),
   sequences: crewPath('/sequences'),
@@ -67,7 +77,8 @@ export function pathnameToView(pathname: string): SiteView {
   if (bare === '/finalized') return 'finalized';
   if (bare.startsWith('/songs')) return 'songs';
   if (bare === '/timeline') return 'timeline';
-  if (bare === '/daisy-bell') return 'daisy-bell';
+  if (bare.startsWith('/scenes')) return 'scenes';
+  if (bare === '/video') return 'video';
   if (bare.startsWith('/suggestions')) return 'suggestions';
   if (bare.startsWith('/cartoons')) return 'cartoons';
   if (bare.startsWith('/sequences')) return 'sequences';

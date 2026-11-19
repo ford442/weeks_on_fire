@@ -8,6 +8,7 @@ import type {
   CutawayRecord,
   EpisodeRecord,
   FilmSceneRecord,
+  SceneBoardRecord,
   TaxonomyRecord,
   SequenceRecord,
   SeriesCharacterRecord,
@@ -213,6 +214,88 @@ export function validateCharacters(repoRoot: string, characters: SeriesCharacter
   if (errors.length > 0) {
     throw new Error(
       `Character validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+/**
+ * Scene boards (`content/scenes/<id>.json`): every id a board points at must exist, so the page
+ * can render any board without a null check. Treatment ids are the board's own vocabulary.
+ */
+export function validateSceneBoards(
+  repoRoot: string,
+  boards: SceneBoardRecord[],
+  songIds: ReadonlySet<string>,
+): void {
+  const errors: string[] = [];
+  const idCounts = new Map<string, number>();
+
+  for (const board of boards) {
+    idCounts.set(board.id, (idCounts.get(board.id) ?? 0) + 1);
+    const at = `Scene ${board.id}`;
+
+    if (board.songId && !songIds.has(board.songId)) {
+      errors.push(`${at} references unknown songId: ${board.songId}`);
+    }
+    if (board.conceptFile && !existsSync(join(repoRoot, board.conceptFile))) {
+      errors.push(`${at} conceptFile not found: ${board.conceptFile}`);
+    }
+
+    const treatmentIds = new Set(board.treatments.map((treatment) => treatment.id));
+    const unique = (label: string, ids: string[]) => {
+      const seen = new Set<string>();
+      for (const id of ids) {
+        if (seen.has(id)) errors.push(`${at} has duplicate ${label} id: ${id}`);
+        seen.add(id);
+      }
+    };
+    unique(
+      'treatment',
+      board.treatments.map((treatment) => treatment.id),
+    );
+    unique(
+      'lock',
+      board.locks.map((lock) => lock.id),
+    );
+    unique(
+      'beat',
+      board.beats.map((beat) => beat.id),
+    );
+    unique(
+      'frame',
+      board.frames.map((frame) => frame.id),
+    );
+    unique(
+      'extra',
+      (board.extras?.items ?? []).map((item) => item.id),
+    );
+    unique(
+      'video',
+      board.videos.map((video) => video.id),
+    );
+
+    for (const beat of board.beats) {
+      if (beat.treatment && !treatmentIds.has(beat.treatment)) {
+        errors.push(`${at} beat ${beat.id} uses unknown treatment: ${beat.treatment}`);
+      }
+    }
+    for (const frame of board.frames) {
+      if (frame.treatment && !treatmentIds.has(frame.treatment)) {
+        errors.push(`${at} frame ${frame.id} uses unknown treatment: ${frame.treatment}`);
+      }
+      if (frame.imagePath && !existsSync(join(repoRoot, frame.imagePath))) {
+        errors.push(`${at} frame ${frame.id} imagePath not found: ${frame.imagePath}`);
+      }
+    }
+  }
+
+  for (const [id, count] of idCounts) {
+    if (count > 1) errors.push(`Duplicate scene id: ${id}`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Scene validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

@@ -77,8 +77,8 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
             aria-expanded={results.length > 0}
             aria-controls={listId}
             aria-activedescendant={results.length > 0 ? `${listId}-${active}` : undefined}
-            aria-label="Search songs, suggestions, episodes, characters…"
-            placeholder="Search songs, suggestions, episodes, characters…"
+            aria-label="Search songs, scenes, suggestions, episodes…"
+            placeholder="Search songs, scenes, suggestions, episodes…"
             className="h-14 min-w-0 flex-1 bg-transparent text-base text-white outline-none placeholder:text-zinc-400"
           />
           <button

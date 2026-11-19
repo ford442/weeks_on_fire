@@ -4,9 +4,10 @@ import { useMediaCoordinator } from '../contexts/MediaSessionContext';
 
 import type { RefObject } from 'react';
 
+/** Keeps one element playing at a time across the hub. Works for `<audio>` and `<video>` alike. */
 export function useCoordinatedAudio(
   id: string,
-  audioRef: RefObject<HTMLAudioElement | null>,
+  audioRef: RefObject<HTMLMediaElement | null>,
   title: string,
   artist = 'Weeks on Fire',
 ): void {

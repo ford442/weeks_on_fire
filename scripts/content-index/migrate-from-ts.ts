@@ -255,60 +255,11 @@ function migrateCharacters() {
   writeFileSync(join(repoRoot, 'content/characters.json'), `${JSON.stringify(output, null, 2)}\n`);
 }
 
-function migrateDaisyBell() {
-  const source = readFileSync(join(repoRoot, 'src/data/daisyBell.ts'), 'utf8');
-  const importMap = parseImportMap(source);
-
-  const metaMatch = source.match(/export const daisyBellMeta = (\{[\s\S]*?\}) as const;/);
-  const subjectLockMatch = source.match(
-    /export const daisyBellSubjectLock =\n\s*'((?:\\'|[^'])*)';/,
-  );
-  const stylishMatch = source.match(/export const daisyBellStylish1890s =\n\s*'((?:\\'|[^'])*)';/);
-  const workingMatch = source.match(/export const daisyBellWorking1890s =\n\s*'((?:\\'|[^'])*)';/);
-
-  const subjectLock = (subjectLockMatch?.[1] ?? '').replace(/\\'/g, "'");
-  const stylish1890s = (stylishMatch?.[1] ?? '').replace(/\\'/g, "'");
-  const working1890s = (workingMatch?.[1] ?? '').replace(/\\'/g, "'");
-
-  importMap.set('daisyBellSubjectLock', subjectLock);
-  importMap.set('daisyBellStylish1890s', stylish1890s);
-  importMap.set('daisyBellWorking1890s', working1890s);
-
-  const output = {
-    meta: metaMatch?.[1] ? eval(`(${metaMatch[1]})`) : {},
-    subjectLock,
-    stylish1890s,
-    working1890s,
-    sequence: evalArray<Record<string, unknown>>(
-      extractArray(source, 'daisyBellSequence'),
-      importMap,
-    ),
-    sights: evalArray<Record<string, unknown>>(extractArray(source, 'daisyBellSights'), importMap),
-    frames: evalArray<Record<string, unknown>>(
-      extractArray(source, 'daisyBellFrames'),
-      importMap,
-    ).map((frame) => ({
-      id: frame.id,
-      order: frame.order,
-      title: frame.title,
-      treatment: frame.treatment,
-      beat: frame.beat,
-      description: frame.description,
-      prompt: frame.prompt,
-      imagePath: frame.imageUrl ? importMap.get(String(frame.imageUrl)) : undefined,
-      tags: frame.tags,
-    })),
-  };
-
-  writeFileSync(join(repoRoot, 'content/daisy-bell.json'), `${JSON.stringify(output, null, 2)}\n`);
-}
-
 function main() {
   migrateSongs();
   migrateCutaways();
   migrateGallery();
   migrateCharacters();
-  migrateDaisyBell();
   console.log('Migration complete.');
 }
 

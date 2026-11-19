@@ -4,13 +4,20 @@ import { join } from 'node:path';
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { loadCartoons, loadProductions, loadSequences } from './load';
+import { loadCartoons, loadProductions, loadSceneBoards, loadSequences } from './load';
 import { SequenceGraphSchema } from './graph-schema';
-import { CartoonSchema, CutawaySchema, FilmSceneSchema, SequenceSchema } from './schemas';
+import {
+  CartoonSchema,
+  CutawaySchema,
+  FilmSceneSchema,
+  SceneBoardSchema,
+  SequenceSchema,
+} from './schemas';
 import {
   validateContent,
   validateCartoons,
   validateCharacters,
+  validateSceneBoards,
   validateScenes,
   validateSequences,
   validateTaxonomy,
@@ -21,6 +28,7 @@ import type {
   CutawayRecord,
   EpisodeRecord,
   TaxonomyRecord,
+  SceneBoardRecord,
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
@@ -645,5 +653,157 @@ describe('optional added date', () => {
     for (const schema of [CartoonSchema, CutawaySchema, FilmSceneSchema, SequenceSchema]) {
       expect(Object.keys(schema.shape)).toContain('added');
     }
+  });
+});
+
+function makeBoard(overrides: Partial<SceneBoardRecord> = {}): SceneBoardRecord {
+  return {
+    id: 'board-1',
+    title: 'Board One',
+    status: 'generated',
+    pitch: 'Two women, one bicycle.',
+    locks: [{ id: 'subject', label: 'Subject', text: 'Black lace.' }],
+    treatments: [
+      { id: 'color', label: 'Full color', short: 'Color', tone: 'emerald', description: 'HD.' },
+      { id: 'period', label: 'Period film', short: 'Period', tone: 'stone', description: 'Grain.' },
+    ],
+    beats: [{ id: 'b1', step: 1, title: 'Field', summary: 'Flowers.', treatment: 'color' }],
+    frames: [
+      {
+        id: 'f1',
+        order: 1,
+        title: 'Frame',
+        treatment: 'period',
+        beat: 'Beat',
+        description: 'Desc',
+        prompt: 'Prompt',
+        tags: [],
+      },
+    ],
+    videos: [
+      {
+        id: 'cut',
+        title: 'Cut',
+        kind: 'slideshow',
+        url: 'https://example.com/cut.mp4',
+        status: 'generated',
+      },
+    ],
+    ...overrides,
+  };
+}
+
+describe('validateSceneBoards', () => {
+  let repoRoot: string;
+  const songIds = new Set(['song-1']);
+
+  beforeEach(() => {
+    repoRoot = mkdtempSync(join(tmpdir(), 'wof-scenes-'));
+  });
+
+  afterEach(() => {
+    rmSync(repoRoot, { recursive: true, force: true });
+  });
+
+  it('passes for a board whose references all resolve', () => {
+    expect(() =>
+      validateSceneBoards(repoRoot, [makeBoard({ songId: 'song-1' })], songIds),
+    ).not.toThrow();
+  });
+
+  it('accepts a single-look board with no treatments at all', () => {
+    const board = makeBoard({
+      treatments: [],
+      beats: [{ id: 'b1', step: 1, title: 'Field', summary: 'Flowers.' }],
+      frames: [{ ...makeBoard().frames[0]!, treatment: undefined }],
+    });
+    expect(() => validateSceneBoards(repoRoot, [board], songIds)).not.toThrow();
+  });
+
+  it('flags an unknown songId, treatment, and a missing concept file or still', () => {
+    const board = makeBoard({
+      songId: 'nope',
+      conceptFile: 'ideas/missing.md',
+      beats: [{ id: 'b1', step: 1, title: 'Field', summary: 'x', treatment: 'sepia' }],
+      frames: [{ ...makeBoard().frames[0]!, treatment: 'sepia', imagePath: 'images/missing.webp' }],
+    });
+    expect(() => validateSceneBoards(repoRoot, [board], songIds)).toThrow(
+      /unknown songId: nope[\s\S]*conceptFile not found[\s\S]*beat b1 uses unknown treatment: sepia[\s\S]*frame f1 uses unknown treatment: sepia[\s\S]*imagePath not found/,
+    );
+  });
+
+  it('flags duplicate ids within a board and across boards', () => {
+    const board = makeBoard({ videos: [...makeBoard().videos, ...makeBoard().videos] });
+    expect(() => validateSceneBoards(repoRoot, [board, makeBoard()], songIds)).toThrow(
+      /duplicate video id: cut[\s\S]*Duplicate scene id: board-1/,
+    );
+  });
+});
+
+describe('SceneBoardSchema', () => {
+  it('requires a hosted video to be a URL with a production status', () => {
+    const video = makeBoard().videos[0]!;
+    expect(SceneBoardSchema.safeParse(makeBoard()).success).toBe(true);
+    expect(
+      SceneBoardSchema.safeParse(makeBoard({ videos: [{ ...video, url: 'videos/cut.mp4' }] }))
+        .success,
+    ).toBe(false);
+    expect(
+      SceneBoardSchema.safeParse(
+        makeBoard({ videos: [{ ...video, status: 'draft' as unknown as 'generated' }] }),
+      ).success,
+    ).toBe(false);
+  });
+});
+
+describe('loadSceneBoards', () => {
+  let repoRoot: string;
+
+  beforeEach(() => {
+    repoRoot = mkdtempSync(join(tmpdir(), 'wof-scene-load-'));
+    mkdirSync(join(repoRoot, 'content/scenes'), { recursive: true });
+  });
+
+  afterEach(() => {
+    rmSync(repoRoot, { recursive: true, force: true });
+  });
+
+  it('rejects a filename that does not match id', () => {
+    writeFileSync(join(repoRoot, 'content/scenes/wrong.json'), JSON.stringify(makeBoard()));
+    expect(() => loadSceneBoards(repoRoot)).toThrow(/id mismatch: board-1/);
+  });
+
+  it('loads one board per file, in filename order', () => {
+    writeFileSync(
+      join(repoRoot, 'content/scenes/b-second.json'),
+      JSON.stringify(makeBoard({ id: 'b-second' })),
+    );
+    writeFileSync(
+      join(repoRoot, 'content/scenes/a-first.json'),
+      JSON.stringify(makeBoard({ id: 'a-first' })),
+    );
+    expect(loadSceneBoards(repoRoot).map((board) => board.id)).toEqual(['a-first', 'b-second']);
+  });
+});
+
+describe('archive lanes', () => {
+  it('has no suggestion lane: cutaway ideas live only in content/cutaways', () => {
+    const base = {
+      id: 'x',
+      imageKind: 'scene',
+      status: 'generated',
+      episode: '01',
+      title: 'X',
+      prompt: 'p',
+      promptVariations: [],
+      mediaType: 'image',
+      musicCue: '',
+      musicStyle: '',
+      description: 'd',
+      theme: 't',
+      tags: [],
+    };
+    expect(FilmSceneSchema.safeParse(base).success).toBe(true);
+    expect(FilmSceneSchema.safeParse({ ...base, imageKind: 'suggestion' }).success).toBe(false);
   });
 });

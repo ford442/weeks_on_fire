@@ -21,7 +21,13 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Overview (`/show`, the default: logline, synopsis, episode list, cast and crew cards, What's new), Finalized (`/show/finalized`: every Approved/Final song, image and video), Visual Archive (`/show/archive`), Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/crew`).
+Overview (`/show`, the default: logline, synopsis, episode list, cast and crew cards, What's new), Finalized (`/show/finalized`: every Approved/Final song, image and video), Visual Archive (`/show/archive`), Video (`/show/video`), Timeline, Songs, Scenes (`/show/scenes`, `/show/scenes/:id`), Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/crew`).
+
+**One home per idea.** Cutaway, gag and scene _ideas_ live only in `content/cutaways/` and show on Suggestions; the Visual Archive is stills only (lanes: scene, test, character) and links into Suggestions rather than keeping its own suggestion cards. Do not add an archive record for a cutaway shot — put the still on the cutaway segment (`segmentStills`).
+
+Scenes (`/scenes`, `/scenes/:id`) are worked-up scenes with their own page (`content/scenes/<id>.json`: pitch, prompt locks, sequence, keyframe board, finished videos). Every scene renders through one template (`src/components/SceneDetail.tsx`); a new scene is a JSON file, not a component. Daisy Bell is the first. (Old `/daisy-bell` links redirect.)
+
+Video (`/video`) collects every video-shaped record that has a take — scene videos, committed Timeline clips, archive clips (`mediaType: video`) and cutaways past `ready-to-generate` — with the shared status badge. It is derived (`src/lib/videos.ts`); there is no video catalog to edit. Finalized's Video section is the same list narrowed to Approved/Final.
 
 Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short cartoon seeds
 (`content/cartoons/<id>.json` — premise, still, optional prompt). No song id. Promote winners to
@@ -42,7 +48,7 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 ## Repository Structure
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
-**`content/`** — Cutaways, gallery, characters, crew, episodes, cartoons, sequences, Daisy Bell JSON.  
+**`content/`** — Cutaways, gallery, characters, crew, episodes, cartoons, sequences, scene boards (`scenes/`) JSON.  
 **`songs/`** — YAML-frontmatter markdown + optional mp3. Frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches (not codegen'd).  
 **`characters/bible/`** — Canon cast sheets (voice, backstory, tone rules); `content/characters.json` links via `bibleSheet`.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  

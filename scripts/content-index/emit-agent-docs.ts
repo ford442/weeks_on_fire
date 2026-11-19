@@ -6,7 +6,7 @@ import {
   loadSequences,
   loadCharacters,
   loadCutaways,
-  loadDaisyBell,
+  loadSceneBoards,
   loadGallery,
   loadSongs,
   loadCrew,
@@ -159,7 +159,7 @@ function emitLlmsFullTxt(
   gallery: ReturnType<typeof loadGallery>,
   characters: ReturnType<typeof loadCharacters>,
   cutaways: ReturnType<typeof loadCutaways>,
-  daisyBell: ReturnType<typeof loadDaisyBell>,
+  sceneBoards: ReturnType<typeof loadSceneBoards>,
   crew: ReturnType<typeof loadCrew>,
   cartoons: ReturnType<typeof loadCartoons>,
   sequences: ReturnType<typeof loadSequences>,
@@ -214,6 +214,13 @@ ${paths}`;
           .join('\n')
       : '- (none yet — add `content/cartoons/<id>.json`)';
 
+  const sceneLines = sceneBoards
+    .map(
+      (board) =>
+        `- **${board.title}** (${board.id}, ${board.status}) — ${board.pitch} Keyframes: ${board.frames.length}; videos: ${board.videos.length}.`,
+    )
+    .join('\n');
+
   const sequenceLines =
     sequences.length > 0
       ? sequences
@@ -241,7 +248,7 @@ Prefer linking the live site and GitHub paths when citing.
 
 ## Elevator pitch
 
-Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
+Weeks on Fire is a personal short-film series that intercuts narrative scenes with musical cutaways. Still images and video frames are generated with Grok Imagine; soundtrack cues are authored as Minimax Music style prompts (and sometimes full lyrics). The GitHub repo is the production archive (markdown synopses, screenplays, SRT placeholders, prompts). The deployed Vite app is a cinematic production hub with views for Visual Archive, Video, Timeline, Songs, Scenes, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, and Crew.
 
 ## Site structure (client SPA)
 
@@ -291,18 +298,18 @@ Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in \`conten
 
 ${sequenceLines}
 
-## Daisy Bell cutaway
+## Scenes
 
-- **Title**: ${daisyBell.meta.title}
-- **Summary**: ${daisyBell.meta.pitch}
-- **Sequence beats**: ${daisyBell.sequence.length} board entries
+Scenes with their own page (\`/show/scenes/<id>\`): pitch, prompt locks, sequence, keyframe board and finished video, all through one template. Author in \`content/scenes/<id>.json\`.
+
+${sceneLines}
 
 ## Repo layout (high signal for agents)
 
 \`\`\`
 weeks_on_fire/
 ├── src/                 # React gallery app
-├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, Daisy Bell JSON
+├── content/             # Gallery, characters, crew, cutaways, episodes, cartoons, sequences, scene boards (JSON)
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, assets
 ├── songs/               # Minimax style docs + some mp3
 ├── characters/          # Reference stills + cast notes
@@ -382,7 +389,7 @@ function main() {
   const cutaways = loadCutaways(repoRoot);
   const gallery = loadGallery(repoRoot);
   const characters = loadCharacters(repoRoot);
-  const daisyBell = loadDaisyBell(repoRoot);
+  const sceneBoards = loadSceneBoards(repoRoot);
   const crew = loadCrew(repoRoot);
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
@@ -396,7 +403,7 @@ function main() {
       gallery,
       characters,
       cutaways,
-      daisyBell,
+      sceneBoards,
       crew,
       cartoons,
       sequences,

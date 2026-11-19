@@ -69,6 +69,12 @@ export default tseslint.config(
     rules: { 'jsx-a11y/media-has-caption': 'off' },
   },
   {
+    // Generated clips are picture and music, hosted elsewhere; there is no caption file to link.
+    // Spoken lines, where a scene has them, live in its screenplay and subtitle files.
+    files: ['src/components/VideoCard.tsx'],
+    rules: { 'jsx-a11y/media-has-caption': 'off' },
+  },
+  {
     // One-time legacy export: it deliberately evaluates the old src/data/*.ts array literals.
     files: ['scripts/content-index/migrate-from-ts.ts'],
     rules: {

@@ -4,7 +4,7 @@ Authoring sources for the React production hub. **`npm run codegen`** reads thes
 
 ## Production status (one set, every tab)
 
-Songs, gallery items, cutaways and Timeline scenes share one `status` pipeline:
+Songs, gallery items, cutaways, scene videos and Timeline scenes share one `status` pipeline:
 
 `suggested` → `ready-to-generate` → `generated` → `in-edit` → `approved` → `final`
 
@@ -15,6 +15,7 @@ Songs, gallery items, cutaways and Timeline scenes share one `status` pipeline:
   is `final` when the song has `audioFile`, else `generated`.
 - Timeline still reads the old `draft` status from exports / localStorage as `suggested`.
 - Anything `approved` or `final` shows up on **Finalized** (`/show/finalized`).
+- The **Video** view (`/show/video`) lists everything video-shaped that has a take, with this badge. It is derived, not authored: scene `videos`, committed Timeline scenes (`episodes/*/scenes.json`), gallery items with `mediaType: video`, and cutaways past `ready-to-generate`. An idea with no take yet (`suggested`, `ready-to-generate`) stays on its own page unless it already has a linked file.
 
 ## Adding a song
 
@@ -102,16 +103,84 @@ codegen'd and keep their `Drawer / not promoted` note.
 
 5. Run `npm run codegen` and commit.
 
-## Gallery, characters, crew, Daisy Bell
+## Gallery, characters, crew, scenes
 
 | File                                 | Purpose                                                           |
 | ------------------------------------ | ----------------------------------------------------------------- |
 | [`gallery.json`](gallery.json)       | Visual Archive cards (`imagePath` = repo-relative path)           |
 | [`characters.json`](characters.json) | Cast bios                                                         |
 | [`crew.json`](crew.json)             | Fictional crew bios (`imageFile` = filename under `public/cast/`) |
-| [`daisy-bell.json`](daisy-bell.json) | Daisy Bell keyframe board                                         |
+| [`scenes/*.json`](scenes/)           | Scene boards (Scenes view) — one file per scene                   |
 | [`episodes.json`](episodes.json)     | Episode Bible index (Episodes view) — see below                   |
 | [`cartoons/*.json`](cartoons/)       | Short cartoon seeds (Cartoons view) — one file per idea           |
+
+**The archive has three lanes: `scene`, `test`, `character`.** There is no `suggestion` lane. Cutaway, gag and scene ideas are authored once, in `content/cutaways/`, and shown on Suggestions; the archive's "Suggestions (N)" chip links there (carrying the current search). A still for one shot of a cutaway belongs on that cutaway's segment (`segmentStills` in the cutaway JSON), not in `gallery.json` — codegen rejects `imageKind: "suggestion"`.
+
+## Adding a scene (scene boards)
+
+A scene is a cutaway or sequence that has grown its own page: pitch, prompt locks, a sequence of beats, a keyframe board and one or more finished videos. Every scene renders through the same template, so adding one is a JSON file — no component.
+
+1. Create `content/scenes/your-scene-id.json` (the filename must equal `id`). Use [`scenes/daisy-bell.json`](scenes/daisy-bell.json) as the worked example:
+
+```json
+{
+  "id": "your-scene-id",
+  "title": "Title",
+  "subtitle": "Optional line under the title",
+  "format": "Musical cutaway",
+  "cast": "Rubella & Lillith",
+  "status": "generated",
+  "tone": "emerald",
+  "songId": "existing-song-id",
+  "conceptFile": "ideas/your-scene.md",
+  "pitch": "What the scene is.",
+  "continuity": "What never changes between takes.",
+  "locks": [{ "id": "subject", "label": "Subject", "text": "Paste-into-every-prompt block." }],
+  "treatments": [
+    {
+      "id": "color",
+      "label": "Full color HD",
+      "short": "Color",
+      "tone": "emerald",
+      "description": "..."
+    }
+  ],
+  "beats": [{ "id": "b1", "step": 1, "title": "Opening", "summary": "...", "treatment": "color" }],
+  "frames": [
+    {
+      "id": "f1",
+      "order": 1,
+      "title": "Frame",
+      "treatment": "color",
+      "beat": "Beat label",
+      "description": "...",
+      "prompt": "Copy-ready Grok prompt",
+      "imagePath": "images/your-scene/f1.webp",
+      "tags": []
+    }
+  ],
+  "extras": {
+    "heading": "Strange sights",
+    "items": [{ "id": "e1", "cue": null, "title": "...", "description": "..." }]
+  },
+  "videos": [
+    {
+      "id": "slideshow",
+      "title": "Timed slideshow",
+      "kind": "slideshow",
+      "url": "https://host.example/scene.mp4",
+      "status": "generated",
+      "runtime": "~4:20"
+    }
+  ]
+}
+```
+
+- Only `id`, `title`, `status`, `pitch`, `locks`, `treatments`, `beats`, `frames` and `videos` are required (the last five may be empty arrays). `format`, `cast`, `subtitle`, `tone`, `songId`, `conceptFile`, `continuity` and `extras` are optional; sections a scene doesn't use are left off the page.
+- `treatments` are the scene's own looks. A frame or beat names one by `id`; the keyframe board gets a filter when two or more treatments have frames. `tone` is one of `emerald`, `stone`, `orange`, `sky`, `violet`, `cyan`, `amber`. `grayscale: true` draws that treatment's stills black and white.
+- `videos[].url` must be a URL. A direct `.mp4`/`.webm` plays in the page; anything else (Drive, Imgur) opens in a new tab. Host large video elsewhere — do not commit it. `status` is the same pipeline as everywhere else, and the video appears on the **Video** view automatically.
+- Codegen fails on an unknown `songId`, a missing `conceptFile` or `imagePath`, a frame or beat that names an undefined treatment, and duplicate ids.
+- `npm run codegen`, then commit the JSON and the regenerated `src/data/generated/scene-boards.ts`.
 
 ## Adding/editing an episode (Episode Bible)
 

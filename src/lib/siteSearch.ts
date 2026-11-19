@@ -2,6 +2,7 @@ import { cartoons } from '../data/cartoons';
 import { seriesCharacters } from '../data/characters';
 import { episodes } from '../data/episodes';
 import { filmScenes } from '../data/films';
+import { sceneBoards } from '../data/sceneBoards';
 import { sequences } from '../data/sequences';
 import { songs } from '../data/songs';
 import { crewMembers } from '../data/crew';
@@ -12,6 +13,7 @@ import { crewPath } from '../routes/paths';
 export type SearchSection =
   | 'Songs'
   | 'Suggestions'
+  | 'Scenes'
   | 'Visual archive'
   | 'Episodes'
   | 'Characters'
@@ -77,6 +79,21 @@ export function buildSearchIndex(): SearchEntry[] {
         `${cutaway.episode} · ${cutaway.songTitle}`,
         crewPath(`/suggestions/${cutaway.id}`),
         [cutaway.summary, cutaway.visualArc, cutaway.tags.join(' ')],
+      ),
+    ),
+    ...sceneBoards.map((board) =>
+      entry(
+        'Scenes',
+        board.title,
+        [board.format, board.cast].filter(Boolean).join(' · ') || 'Scene',
+        crewPath(`/scenes/${board.id}`),
+        [
+          board.subtitle ?? '',
+          board.pitch,
+          board.continuity ?? '',
+          board.frames.map((frame) => `${frame.title} ${frame.description}`).join(' '),
+          board.extras?.items.map((extra) => `${extra.title} ${extra.description}`).join(' ') ?? '',
+        ],
       ),
     ),
     ...filmScenes.map((scene) =>

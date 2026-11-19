@@ -29,6 +29,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-flower-engine",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Living Flower Engine",
@@ -45,6 +46,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-mobius-ribbon",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Möbius Chrome Ribbon",
@@ -61,6 +63,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-gyre-victorian",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Gyre Over Victorian Street",
@@ -77,6 +80,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-tetrahedron-sea",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Tetrahedron Sea",
@@ -93,6 +97,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-sphere-tower",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Sphere Tower of Daisies",
@@ -109,6 +114,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-glass-cathedral",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Glass Petal Cathedral",
@@ -125,6 +131,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-flower-nebula",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Daisy Nebula",
@@ -141,6 +148,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-klein-lattice",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
     title: "Klein Flower Lattice",
@@ -157,6 +165,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-laser-serpent-awakening",
     imageKind: "scene",
+    added: "2026-10-09",
     episode: "03",
     title: "Laser Serpent Awakening",
     prompt: "Cinematic night desert scene, massive glowing laser serpent rising from dark dunes under a starry sky, charged red-orange energy waves, dramatic volumetric lighting, epic wide shot, surreal short-film still, Grok Imagine style.",
@@ -172,6 +181,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-rubella-signal",
     imageKind: "scene",
+    added: "2026-10-09",
     episode: "03",
     title: "Rubella Signal",
     prompt: "Close cinematic portrait of a defiant character lit by pulsing red scanner light, dust and sparks in the air, fractured desert horizon behind them, intense short-film color grade, Grok Imagine realism.",
@@ -187,6 +197,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-snake-battle-canyon",
     imageKind: "scene",
+    added: "2026-10-09",
     episode: "03",
     title: "Snake Battle Canyon",
     prompt: "High-energy canyon battle with multiple laser snakes weaving through smoke, glowing trails reflecting on stone walls, explosive practical sparks, dynamic camera motion, epic music-video scene, Grok Imagine.",
@@ -202,6 +213,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-static-altar",
     imageKind: "scene",
+    added: "2026-10-09",
     episode: "03",
     title: "Static Altar",
     prompt: "Surreal desert altar made from old broadcast equipment and glowing cables, two characters framed by laser haze, ritualistic sci-fi mood, warm embers and cold blue static, detailed cinematic still.",
@@ -217,6 +229,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-fireline-exit",
     imageKind: "scene",
+    added: "2026-10-09",
     episode: "03",
     title: "Fireline Exit",
     prompt: "Final shot of two figures walking along a thin line of fire at dawn, laser-serpent smoke fading behind them, hopeful but strange tone, warm sunrise, cinematic wide composition.",
@@ -232,6 +245,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "character-reference-two",
     imageKind: "character",
+    added: "2026-10-09",
     episode: "character-archive",
     title: "The Two",
     prompt: "Reference portrait for two recurring Weeks on Fire leads, emotionally grounded, cinematic wardrobe, natural imperfections, ready for reuse across Grok Imagine scene prompts.",
@@ -247,6 +261,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "character-reference-alt",
     imageKind: "character",
+    added: "2026-10-09",
     episode: "character-archive",
     title: "The Two - Alternate Frame",
     prompt: "Alternate cinematic reference for the two recurring leads, closer crop, expressive lighting, usable as a face and mood anchor for future scene generations.",
@@ -262,6 +277,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-computer-room",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "ideas",
     title: "Computer Room — Broadcast Control",
     prompt: "Dim retro broadcast control room with stacked CRT monitors, tangled cables, and a single operator silhouette lit by scan lines — meta-studio energy, 480p grain, Weeks on Fire production still, Grok Imagine style.",
@@ -277,6 +293,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-hologram-glitch",
     imageKind: "test",
+    added: "2026-10-09",
     episode: "03",
     slot: "Ideas",
     title: "Hologram Glitch — Rubella Double",
@@ -293,6 +310,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-molten-silver-sphere",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "cutaway",
     title: "Molten Silver Sphere — Beat-Sync Pulse",
     prompt: "Cinematic 8K still of a glossy molten silver liquid-metal sphere hovering dead-center in a vast pitch-black cave, mercury-chrome skin with capillary ripples pulsating to a deep musical kick, cavern walls mid-flash between razor-sharp black-and-white checkerboard and electric neon line grids, chromatic specular ribbons racing across the chrome, Grok Imagine style.",
@@ -307,6 +325,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-glam-sham-poo",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "eyewash",
     title: "Glam-Sham-Poo — Commercial Still Package",
     prompt: "Cinematic still of exhausted glam-metal shampoo commercial energy: chrome bathroom set, screeching product bottle center frame, two women in black lace dead-pan behind a fog machine, Gang vocals on GLAM-SHAM-POO spelled in neon, joke-commercial short-film still, Grok Imagine style.",
@@ -321,6 +340,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-hover",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — A Hover",
     prompt: "Cinematic 8K photoreal 3D still of a house-sized hovering blob of glowing amorphous translucent gel floating a few hundred meters above a continuous floor of anvil thunderheads at golden-violet dusk, internal lava-lamp lobes and a slow gold-glass helix readable through the skin, oil-slick meniscus ridges gathering at the equator, three gold-white sparks just peeling off the limb, warm undersun lighting the cloud bottoms from below while the stratosphere above is crushed violet with a few hard stars, ultraviolet rim light on the gel, no ground no city no people, anamorphic 2.39:1, Arri Alexa look, short-film production still, Grok Imagine style",
@@ -336,6 +356,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-weather",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — B Weather",
     prompt: "Cinematic 8K photoreal 3D still, three-quarter view: the same hovering translucent gel gyre left of frame above anvil thunderheads, clockwise skin spin implied by stretched meniscus, two wet ejecta already in the air — a raspberry gelatin cube tumbling and an electric-lime ribbon stretching downward — one memory-foam dent already in the nearest cloud, warm undersun from below, ultraviolet rim, gold-glass helix visible inside, sparks counter-rotating against the body, no people, 2.39:1 anamorphic, Grok Imagine style",
@@ -351,6 +372,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-interior",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — C Interior",
     prompt: "Extreme cinematic 8K macro still looking into a translucent glowing amorphous gel body, skin filling most of the frame with oil-slick meniscus and a melting icosahedral facet, nested raspberry and lime lava-lamp lobes, a gold-glass double helix turning through the middle, two trapped bubbles each containing a tiny anvil-cloud lit from below, a phosphor-gold spark forming in a convection cell near camera, dusk cloud floor softly blurred far below the lower limb, ultraviolet rim, photoreal 3D, Grok Imagine style",
@@ -366,6 +388,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-answer",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — D Answer",
     prompt: "Cinematic 8K photoreal 3D still of the hovering gel gyre above anvil clouds, a single pale vapor tendril rising from a lime-glowing lantern cloud toward the blob's underside, not yet touching, glass-flower crystal already blooming on a neighboring anvil where a spark planted, ejecta ribbons in the air counter-rotating, body slightly off-axis as if about to wobble, warm undersun, violet stratosphere, 2.39:1, Grok Imagine style",
@@ -381,6 +404,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-soft-set",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — E Soft set",
     prompt: "Cinematic 8K photoreal wide still of the same gel gyre now smaller in frame above a vast anvil-cloud sea, spin almost spent, a faint gold spark-halo ringing the body, one glass flower catching light on the nearest cloud, a hole in the deck letting a single warm undersun flare up, crushed-violet sky with hard stars, ultraviolet remnant rim on the gel, quiet after-chaos, 2.39:1 anamorphic, Grok Imagine style",
@@ -396,6 +420,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-well-fall-lip",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "visual",
     title: "Well Fall — Lip of the Well",
     prompt: "Cinematic 2.39:1 photoreal still at the lip of an old stone well in dry California hills, circular brick and fieldstone ring, dark cylinder dropping out of frame, a pale disk of sky or porch light on the water far below or none at all, no people, no text, crushed blacks, 35mm anamorphic, short-film production still, Grok Imagine style",
@@ -411,6 +436,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-podium",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
     title: "Rubella Stand-Up — Podium Lock",
@@ -426,6 +452,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-detergent",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
     title: "Rubella Stand-Up — Detergent Relic",
@@ -441,6 +468,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-heckle",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
     title: "Rubella Stand-Up — Heckle Wide",
@@ -456,6 +484,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-land",
     imageKind: "suggestion",
+    added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
     title: "Rubella Stand-Up — Land",

@@ -35,7 +35,9 @@ import {
   emitSequencesModule,
   emitCatalogRefsModule,
   emitTaxonomyModule,
+  emitWhatsNewModule,
 } from './emit';
+import { buildWhatsNew } from './whats-new';
 import { syncOutputs } from './output';
 
 const repoRoot = join(import.meta.dirname, '../..');
@@ -85,6 +87,9 @@ function main() {
     'cartoons.ts': emitCartoonsModule(cartoons),
     'sequences.ts': emitSequencesModule(sequences),
     'taxonomy.ts': emitTaxonomyModule(taxonomy),
+    'whats-new.ts': emitWhatsNewModule(
+      buildWhatsNew({ songs, cutaways, cartoons, sequences, gallery }),
+    ),
     'catalog-refs.ts': emitCatalogRefsModule({ songs, cutaways, sequences, cartoons, characters }),
   };
   syncOutputs(generatedDir, outputs, {

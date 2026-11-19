@@ -3,8 +3,15 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
 import SiteHeader from './components/SiteHeader';
 import { likelyViews, prefetchView, viewLoaders } from './routes/lazyViews';
-import { CREW_PREFIX, crewPath, isLegacyCrewPath, viewPaths } from './routes/paths';
+import {
+  CREW_PREFIX,
+  crewPath,
+  isLegacyArchiveLink,
+  isLegacyCrewPath,
+  viewPaths,
+} from './routes/paths';
 
+const Overview = lazy(viewLoaders.overview);
 const Gallery = lazy(viewLoaders.gallery);
 const TimelinePage = lazy(viewLoaders.timeline);
 const Songs = lazy(viewLoaders.songs);
@@ -93,6 +100,11 @@ export default function App() {
     return <Navigate to={`${crewPath(pathname)}${search}`} replace />;
   }
 
+  // The hub home used to be the Visual Archive; keep its filtered links working.
+  if (isLegacyArchiveLink(pathname, search)) {
+    return <Navigate to={`${viewPaths.gallery}${search}`} replace />;
+  }
+
   // Creator hub: prompts, timeline, and the rest of the production tools.
   if (pathname === CREW_PREFIX || pathname.startsWith(`${CREW_PREFIX}/`)) {
     return (
@@ -100,6 +112,7 @@ export default function App() {
         <SiteHeader />
         <Suspense fallback={<RouteFallback />}>
           <Routes>
+            <Route path={viewPaths.overview} element={<Overview />} />
             <Route path={viewPaths.gallery} element={<Gallery />} />
             <Route path={viewPaths.timeline} element={<TimelinePage />} />
             <Route path={viewPaths.songs} element={<Songs />} />

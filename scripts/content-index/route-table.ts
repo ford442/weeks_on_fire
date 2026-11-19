@@ -32,10 +32,15 @@ export const DEFAULT_OG_IMAGE_ALT = 'Weeks on Fire character reference still';
 
 /** One-breath format descriptions for index routes. Deadpan, no toolchain. */
 const viewCopy: Record<string, { title: string; description: string }> = {
-  gallery: {
+  overview: {
     title: `${BRAND} — nearly silent comedy`,
     description:
       'Nearly silent comedy. Deadpan characters, a loud world, and the picture changes when the music drops.',
+  },
+  gallery: {
+    title: `Visual Archive — ${BRAND}`,
+    description:
+      'Stills from the show, each with the prompt that made it. Searchable. Mostly calm.',
   },
   timeline: {
     title: `Production Timeline — ${BRAND}`,

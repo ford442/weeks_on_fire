@@ -84,7 +84,7 @@ export function buildSearchIndex(): SearchEntry[] {
         'Visual archive',
         scene.title,
         episodeWithSlot(scene.episode, scene.slot),
-        withQuery(crewPath('/'), scene.title),
+        withQuery(crewPath('/archive'), scene.title),
         [
           scene.tool ? toolLabel(scene.tool) : '',
           scene.description,

@@ -28,8 +28,18 @@ export function isLegacyCrewPath(pathname: string): boolean {
   return crewRoots.some((root) => normalized === `/${root}` || normalized.startsWith(`/${root}/`));
 }
 
+/**
+ * The hub home used to be the Visual Archive, whose filters live in the query string. A bare
+ * `/show?q=…` is therefore an archive link; the Overview takes no parameters.
+ */
+export function isLegacyArchiveLink(pathname: string, search: string): boolean {
+  const normalized = pathname.replace(/\/+$/, '');
+  return normalized === CREW_PREFIX && search.length > 1;
+}
+
 export const viewPaths: Record<SiteView, string> = {
-  gallery: crewPath('/'),
+  overview: crewPath('/'),
+  gallery: crewPath('/archive'),
   timeline: crewPath('/timeline'),
   songs: crewPath('/songs'),
   'daisy-bell': crewPath('/daisy-bell'),
@@ -50,7 +60,8 @@ export function pathnameToView(pathname: string): SiteView {
         ? normalized.slice(CREW_PREFIX.length)
         : normalized;
 
-  if (bare === '/' || bare === '') return 'gallery';
+  if (bare === '/' || bare === '') return 'overview';
+  if (bare === '/archive') return 'gallery';
   if (bare.startsWith('/songs')) return 'songs';
   if (bare === '/timeline') return 'timeline';
   if (bare === '/daisy-bell') return 'daisy-bell';
@@ -61,5 +72,5 @@ export function pathnameToView(pathname: string): SiteView {
   if (bare.startsWith('/episodes')) return 'episodes';
   if (bare === '/crew') return 'crew';
 
-  return 'gallery';
+  return 'overview';
 }

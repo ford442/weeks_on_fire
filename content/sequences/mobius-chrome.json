@@ -1,5 +1,6 @@
 {
   "id": "mobius-chrome",
+  "added": "2026-10-05",
   "title": "Möbius Chrome",
   "medium": "unreal",
   "runtime": "~75 seconds",

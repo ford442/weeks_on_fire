@@ -21,7 +21,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Visual Archive, Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/crew`).
+Overview (`/show`, the default: logline, synopsis, episode list, cast and crew cards, What's new), Visual Archive (`/show/archive`), Timeline, Songs, Daisy Bell, Suggestions, Cartoons, 3D Sequences, Characters, Episodes, Crew (`/crew`).
 
 Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short cartoon seeds
 (`content/cartoons/<id>.json` — premise, still, optional prompt). No song id. Promote winners to
@@ -29,6 +29,8 @@ Suggestions.
 
 3D Sequences (`/sequences`, `/sequences/:id`) plays procedural WebGL video sequences
 (`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed.
+
+Overview copy (logline, synopsis, tone, format) lives in `src/data/about.ts`; episodes, cast and crew come from the catalog. "What's new" is codegen'd into `src/data/generated/whats-new.ts` from each record's `added: YYYY-MM-DD` (songs require it; cutaways, cartoons, sequences and gallery items take it optionally — set it when you add one).
 
 Episodes (`/episodes`, `/episodes/:id`) is a read-only episode bible: logline, status, runtime, and
 in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/episodes.json` +

@@ -11,9 +11,17 @@ export const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
 
 export const siteViews: SiteViewMeta[] = [
   {
+    id: 'overview',
+    label: 'Overview',
+    path: '/show',
+    eyebrow: 'About the show',
+    description:
+      'What Weeks on Fire is — logline, synopsis, tone and format, the episode list, the cast and crew, and what was added most recently.',
+  },
+  {
     id: 'gallery',
     label: 'Visual Archive',
-    path: '/show',
+    path: '/show/archive',
     eyebrow: 'Grok Imagine Archive',
     description:
       'Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.',

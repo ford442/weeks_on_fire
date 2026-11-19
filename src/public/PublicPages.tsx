@@ -84,6 +84,12 @@ export function PublicHome() {
           >
             Meet Lace Waterfall
           </Link>
+          <Link
+            to="/show"
+            className="rounded-full border border-zinc-700 px-5 py-2.5 font-semibold text-zinc-200 hover:border-zinc-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-200"
+          >
+            About the show
+          </Link>
         </div>
       </section>
 

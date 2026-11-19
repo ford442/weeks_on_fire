@@ -14,6 +14,7 @@ React + Vite gallery with production views:
 
 | View               | What you get                                             |
 | ------------------ | -------------------------------------------------------- |
+| **Overview**       | Logline, synopsis, episodes, cast and crew, what's new   |
 | **Visual Archive** | Grok Imagine stills, prompt variations, music cues       |
 | **Timeline**       | Scene status, local edits, exportable production JSON    |
 | **Songs**          | Minimax catalog — style prompts, lyrics, episode ties    |

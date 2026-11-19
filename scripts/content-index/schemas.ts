@@ -2,10 +2,15 @@ import { z } from 'zod';
 
 import { SequenceGraphSchema } from './graph-schema';
 
+export const AddedDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added must be YYYY-MM-DD');
+
+/** Optional `added: YYYY-MM-DD` on non-song records; feeds the Overview "What's new" strip. */
+const optionalAdded = AddedDateSchema.optional();
+
 export const SongFrontmatterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
-  added: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added must be YYYY-MM-DD'),
+  added: AddedDateSchema,
   /** Family from `content/taxonomy.json` `genres`. */
   genre: z.string().min(1),
   /** Free-text style detail under the family, e.g. "Late-80s glam strut". */
@@ -56,6 +61,8 @@ export const CutawaySchema = z.object({
   id: z.string().min(1),
   kind: SuggestionKindSchema,
   title: z.string().min(1),
+  /** Day the record was added (YYYY-MM-DD). */
+  added: optionalAdded,
   status: SuggestionStatusSchema,
   runtime: z.string(),
   episode: z.string(),
@@ -77,6 +84,8 @@ export const MediaTypeSchema = z.enum(['image', 'video']);
 export const FilmSceneSchema = z.object({
   id: z.string().min(1),
   imageKind: ImageKindSchema,
+  /** Day the record was added (YYYY-MM-DD). */
+  added: optionalAdded,
   /** Id from `content/taxonomy.json` `episodes`. */
   episode: z.string().min(1),
   /** Free-text placement detail under the episode, e.g. "Short packet farm". */
@@ -236,6 +245,8 @@ export const CartoonSchema = z.object({
   title: z.string().min(1),
   premise: z.string().min(1),
   visual: z.string().min(1),
+  /** Day the record was added (YYYY-MM-DD). */
+  added: optionalAdded,
   status: CartoonStatusSchema,
   tags: z.array(z.string()),
   runtime: z.string().optional(),
@@ -258,6 +269,8 @@ export const SequenceSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
   medium: SequenceMediumSchema,
+  /** Day the record was added (YYYY-MM-DD). */
+  added: optionalAdded,
   runtime: z.string().min(1),
   durationSec: z.number().min(10).max(120),
   premise: z.string().min(1),

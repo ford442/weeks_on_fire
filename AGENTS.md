@@ -150,6 +150,7 @@ Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` 
 | `scripts/xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json` |
 | `scripts/xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes)    |
 | `scripts/assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                      |
+| `scripts/assemble-cutaway.py`         | Any cutaway's stills + song → timed MP4 preview (needs ffmpeg)    |
 | `scripts/create_episode.py`           | Scaffold `episodes/episode-NN/` from templates                    |
 | `scripts/eyewash_idents_generator.py` | Scaffold EyeWash ident tables                                     |
 | `scripts/cat_pov_generator.py`        | Scaffold a cat-POV cutaway outline                                |
@@ -191,6 +192,22 @@ python3 scripts/xai-batch.py mv-ultra-screech --only A,C --force           # by 
 - **Putting a still on the site:** the run prints a `segmentStills` block for
   `content/cutaways/<id>.json`; paste it and `npm run codegen`. Commit only stills you mean to
   ship (no large binaries without approval).
+
+### Assembling a cutaway preview (`assemble-cutaway.py`)
+
+Needs `ffmpeg` + `ffprobe`; no API key, no network. Reads the same generated catalog as
+`xai-batch.py`, so run `npm run codegen` first and `xai-batch.py` before it.
+
+```bash
+python3 scripts/assemble-cutaway.py --manifest content/cutaways/mv-ultra-screech.json --dry-run
+python3 scripts/assemble-cutaway.py --manifest content/cutaways/mv-ultra-screech.json --pan auto
+python3 scripts/assemble-cutaway.py --manifest content/cutaways/<id>.json --write-manifest ideas/<name>/assembly.json
+```
+
+`--manifest` is a cutaway record or an assembly manifest (`"version": 1`, explicit images, times,
+optional pans); the field reference, timing rules and flags are in
+[docs/cutaway-assembly.md](docs/cutaway-assembly.md). Output goes to `videos/` (gitignored): never
+commit the MP4; host it on Drive / Imgur and record the link in the manifest's `previewUrl`.
 
 ---
 
@@ -258,5 +275,6 @@ When in doubt about creative direction, consult `grok.md`. When in doubt about w
 | Grok prompt variations  | `python3 scripts/generate-prompts.py "scene"`                       |
 | xAI image               | `python3 scripts/xai-generate.py "prompt" -o images/out.jpg`        |
 | Stills for a cutaway    | `python3 scripts/xai-batch.py prompts/<name>-segments.md --dry-run` |
+| Preview MP4 of a cutaway | `python3 scripts/assemble-cutaway.py --manifest content/cutaways/<id>.json --dry-run` |
 | New episode folder      | `python3 scripts/create_episode.py 05 "Title"`                      |
 | Production log          | `docs/production-log.md`                                            |

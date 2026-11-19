@@ -104,6 +104,10 @@ Uploads `dist/` as project `weeks-on-fire`. The deploy token must be set via env
 
 `vite.config.ts` uses `base: './'` so the build works on project Pages (`/weeks_on_fire/`) and subdirectory hosts.
 
+### Cutaway previews (optional)
+
+`python3 scripts/assemble-cutaway.py` assembles a cutaway's stills and song into a timed MP4 preview in `videos/` (gitignored). It needs **ffmpeg** (with `ffprobe`) on your `PATH` — `apt install ffmpeg` or `brew install ffmpeg`; nothing else, the app and the rest of the scripts do not. See [`docs/cutaway-assembly.md`](docs/cutaway-assembly.md).
+
 ## Assets & repo size
 
 - Prefer **external hosting** (Drive / Imgur / etc.) for large video and batch images.

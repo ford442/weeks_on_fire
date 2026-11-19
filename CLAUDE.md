@@ -116,6 +116,7 @@ python3 scripts/xai-generate.py "prompt" -o images/out.jpg   # needs XAI_API_KEY
 python3 scripts/xai-batch.py prompts/<name>-segments.md --dry-run   # every segment of a cutaway; see AGENTS.md
 python3 scripts/create_episode.py 05 "Title"
 python3 scripts/assemble-daisy-slideshow.py
+python3 scripts/assemble-cutaway.py --manifest content/cutaways/<id>.json --dry-run   # stills + song → videos/<id>-preview.mp4; needs ffmpeg; docs/cutaway-assembly.md
 ```
 
 ## Media

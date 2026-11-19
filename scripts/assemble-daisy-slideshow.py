@@ -3,6 +3,8 @@
 
 Cue map follows ideas/daisy-bell-timing.md (energy-based form).
 
+For any other cutaway use scripts/assemble-cutaway.py (docs/cutaway-assembly.md).
+
 Usage:
   python3 scripts/assemble-daisy-slideshow.py
   # output: videos/daisy-bell-slideshow.mp4

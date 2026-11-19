@@ -5,6 +5,7 @@
 **Catalog:** `content/cutaways/yacht-guitar-orchestra.json` (`kind: musical`)  
 **Prompts:** `prompts/yacht-guitar-orchestra-segments.md`  
 **Songs:** `songs/Yacht_Guitar_Orchestra.md`, `songs/Nofo_i_te_Vai.md`, `songs/Seoul_at_Night.md`  
+**More ideas (drawer):** `ideas/guitar-boat-more-ideas.md` (2026-11-18)  
 **Local board:** `artifacts/yacht_guitar_orchestra.md`  
 **Suggestions id:** `yacht-guitar-orchestra`
 
@@ -30,6 +31,8 @@ No landing. No docking. Cannons stay inert. Hard cuts between songs. Mute Imagin
 ## Scene set
 
 `prompts/yacht-guitar-orchestra-segments.md` carries the picture: twenty timed Imagine scenes, A through T, about 3:24 as a working cut (nudge after an ear pass; none of the three songs states a length). Daylight A–I (90s), dark island J–O (54s), Busan night P–T (60s). Hard cuts at 1:30 and 2:24. Four chains: E → F, G → H, J → K, S → T. Every scene is a mouths-closed hold: no lip-sync anywhere, the sung beds are off-picture. The doc also holds the continuity lock, the negatives and the picture-sound rule; working choices it adds beyond the Lock (ivory deck dresses for the guitar line, black volcanic sand, three tiny continuity props) live there and can be changed there.
+
+Additional idea seeds (inserts, alternate corridors, longer experiments) live in `ideas/guitar-boat-more-ideas.md`. The A–T journey stays the spine.
 
 ## Generate-first
 

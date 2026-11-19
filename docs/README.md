@@ -9,5 +9,6 @@ Production notes, logs, references, and external asset links.
 - `external-assets.md` – all hosting links (Google Drive, Imgur, etc.)
 - `music-licensing.md` – Minimax Music rights info
 - `song-method.md` – owner lock: the video concept comes first, then the song is built around it
+- `generation-log.jsonl` – spend history appended by `scripts/xai-generate.py` / `xai-batch.py` when run with `--json-log` (model, aspect, prompt hash, usage, cost; never the prompt or key). Created on first use.
 
 Keep this folder as the single source of truth for everything that isn't code or creative assets.

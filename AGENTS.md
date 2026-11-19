@@ -126,6 +126,7 @@ npm run format           # Prettier check on src/, scripts/ and e2e/
 npm run format:write
 npm run test             # Vitest: libs in node, src/components/** in jsdom
 npm run test:coverage    # same, with v8 coverage (no threshold yet)
+npm run test:py          # Python helper tests (stdlib unittest, local fake xAI server; no key, no network)
 npm run test:e2e         # real-GL frame harness: Playwright + Chromium vs e2e/fixtures/ (needs a Pages-base build)
 npm run test:e2e:update  # regenerate e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check + dist/1ink.1ink
@@ -142,16 +143,54 @@ Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` 
 
 ### Python helpers (real files)
 
-| Script                                | Purpose                                                  |
-| ------------------------------------- | -------------------------------------------------------- |
-| `scripts/generate-prompts.py`         | Three Grok Imagine prompt variations from a scene string |
-| `scripts/xai-generate.py`             | Call xAI Imagine API (`XAI_API_KEY`)                     |
-| `scripts/assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`             |
-| `scripts/create_episode.py`           | Scaffold `episodes/episode-NN/` from templates           |
-| `scripts/eyewash_idents_generator.py` | Scaffold EyeWash ident tables                            |
-| `scripts/cat_pov_generator.py`        | Scaffold a cat-POV cutaway outline                       |
+| Script                                | Purpose                                                           |
+| ------------------------------------- | ----------------------------------------------------------------- |
+| `scripts/generate-prompts.py`         | Three Grok Imagine prompt variations from a scene string          |
+| `scripts/xai-generate.py`             | One xAI Imagine image (`XAI_API_KEY`); `--retries`, `--json-log`  |
+| `scripts/xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json` |
+| `scripts/xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes)    |
+| `scripts/assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                      |
+| `scripts/create_episode.py`           | Scaffold `episodes/episode-NN/` from templates                    |
+| `scripts/eyewash_idents_generator.py` | Scaffold EyeWash ident tables                                     |
+| `scripts/cat_pov_generator.py`        | Scaffold a cat-POV cutaway outline                                |
 
 There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
+
+### Batch-generating cutaway stills (`xai-batch.py`)
+
+Needs `XAI_API_KEY` in the environment (or `--api-key`); it is never read from a file and never
+committed, logged or written to a manifest. A paid API: always dry-run first.
+
+```bash
+python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run    # plan + every prompt, no API call
+python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md \
+  --model grok-imagine-image-quality --aspect 16:9 --out images/glam-sham-poo/ --json-log
+python3 scripts/xai-batch.py mv-ultra-screech --only A,C --force           # by cutaway id; redo two segments
+```
+
+- **Target** is a `prompts/*-segments.md` file or a cutaway id. Segments and their ids are read
+  from the generated `public/catalog/cutaways/<id>.json`, so the manifest's ids are the ids the
+  Suggestions view uses. It refuses to run if that catalog has drifted from the markdown: run
+  `npm run codegen` after editing a prompts file. Standalone prompt docs
+  (`content/standalone-prompts.json`) have no segment ids and are refused.
+- **Output:** `<out>/<segment-id>.<jpg|png|webp>` and `<out>/manifest.json` (segment id →
+  repo-relative path, prompt SHA-256, model, aspect, size, time), rewritten after every image so an
+  interrupted run loses nothing. `<out>` defaults to `images/<name>/`, where `<name>` is the
+  prompts file's name without `-segments.md`.
+- **Resume:** a segment is skipped when its image exists, when the cutaway already registers a
+  still for it (`segmentStills`), when it has no Grok Imagine prompt, or when the prompt still has
+  an unfilled `[PLACEHOLDER]` (Well Fall's `[SIGHT]`). `--force` regenerates, `--only` narrows.
+  A changed prompt on an existing image is flagged, not silently regenerated.
+- **Failures:** 429 / 5xx / network errors retry with exponential backoff (`--retries`, default 3,
+  honours `Retry-After`). A 401 / 403 stops the batch; any other failed segment is reported and the
+  rest continue. Re-run the same command to redo just the failures.
+- **Cost log:** `--json-log` appends one line per request to `docs/generation-log.jsonl` (model,
+  aspect, prompt hash, usage, `costUsd` from the response's `cost_in_usd_ticks`). Hash only, never
+  the prompt text. Commit it if you want the spend history; it is created on first use.
+- **Aspect** is one value per run (the prompts files carry none); run `--only` per ratio to mix.
+- **Putting a still on the site:** the run prints a `segmentStills` block for
+  `content/cutaways/<id>.json`; paste it and `npm run codegen`. Commit only stills you mean to
+  ship (no large binaries without approval).
 
 ---
 
@@ -193,8 +232,8 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 
 - **Do not hand-edit** `src/data/generated/` or `public/llms.txt` / `llms-full.txt` / `sitemap.xml`.
 - **Media**: prefer external hosting for large video; some stills and mp3s are already in-repo. Do not add large binaries without approval.
-- **No secrets** in the repo. `xai-generate.py` and `deploy_storage.py` read env vars.
-- **Python** stays stdlib-only (`scripts/deploy_storage.py` is the one legacy exception: it needs `requests`).
+- **No secrets** in the repo. `xai-generate.py`, `xai-batch.py` (`XAI_API_KEY`) and `deploy_storage.py` read env vars.
+- **Python** stays stdlib-only (`scripts/deploy_storage.py` is the one legacy exception: it needs `requests`). Shared client code lives in `scripts/xai_api.py`; its tests are `scripts/tests/` (`npm run test:py`, run in CI).
 
 ---
 
@@ -209,14 +248,15 @@ When in doubt about creative direction, consult `grok.md`. When in doubt about w
 
 ## Quick Reference
 
-| Task                    | Command / Location                                           |
-| ----------------------- | ------------------------------------------------------------ |
-| Preview hub             | `npm run dev` → http://localhost:5173                        |
-| Typecheck app + codegen | `npx tsc -b`                                                 |
-| Generate catalog        | `npm run codegen`                                            |
-| Agent crawl files       | `npm run agent-docs`                                         |
-| Production build        | `npm run build`                                              |
-| Grok prompt variations  | `python3 scripts/generate-prompts.py "scene"`                |
-| xAI image               | `python3 scripts/xai-generate.py "prompt" -o images/out.jpg` |
-| New episode folder      | `python3 scripts/create_episode.py 05 "Title"`               |
-| Production log          | `docs/production-log.md`                                     |
+| Task                    | Command / Location                                                  |
+| ----------------------- | ------------------------------------------------------------------- |
+| Preview hub             | `npm run dev` → http://localhost:5173                               |
+| Typecheck app + codegen | `npx tsc -b`                                                        |
+| Generate catalog        | `npm run codegen`                                                   |
+| Agent crawl files       | `npm run agent-docs`                                                |
+| Production build        | `npm run build`                                                     |
+| Grok prompt variations  | `python3 scripts/generate-prompts.py "scene"`                       |
+| xAI image               | `python3 scripts/xai-generate.py "prompt" -o images/out.jpg`        |
+| Stills for a cutaway    | `python3 scripts/xai-batch.py prompts/<name>-segments.md --dry-run` |
+| New episode folder      | `python3 scripts/create_episode.py 05 "Title"`                      |
+| Production log          | `docs/production-log.md`                                            |

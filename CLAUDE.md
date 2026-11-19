@@ -74,6 +74,7 @@ npm run lint             # type-aware ESLint: src/, scripts/, e2e/
 npm run format
 npm run test             # Vitest (node for libs, jsdom for src/components/**)
 npm run test:coverage    # v8 coverage, no threshold yet
+npm run test:py          # Python helpers (scripts/tests, stdlib unittest, no key needed)
 npm run test:e2e         # real-GL frame harness (Playwright + Chromium, software GL)
 npm run test:e2e:update  # rewrite e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
@@ -112,6 +113,7 @@ Filter values (episode ids, genres, gallery themes, tools) live in `content/taxo
 ```bash
 python3 scripts/generate-prompts.py "scene description"
 python3 scripts/xai-generate.py "prompt" -o images/out.jpg   # needs XAI_API_KEY
+python3 scripts/xai-batch.py prompts/<name>-segments.md --dry-run   # every segment of a cutaway; see AGENTS.md
 python3 scripts/create_episode.py 05 "Title"
 python3 scripts/assemble-daisy-slideshow.py
 ```

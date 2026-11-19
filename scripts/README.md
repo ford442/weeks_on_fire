@@ -20,7 +20,9 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 | Script                        | Purpose                                                                      |
 | ----------------------------- | ---------------------------------------------------------------------------- |
 | `generate-prompts.py`         | Three Grok Imagine variations (wide / close-up / action) from a scene string |
-| `xai-generate.py`             | xAI Grok Imagine HTTP client (`XAI_API_KEY`)                                 |
+| `xai-generate.py`             | One xAI Grok Imagine image (`XAI_API_KEY`); `--retries`, `--json-log`        |
+| `xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json`            |
+| `xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes); not a CLI    |
 | `assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                                 |
 | `create_episode.py`           | Scaffold `episodes/episode-NN/` from `templates/`                            |
 | `eyewash_idents_generator.py` | Markdown table for EyeWash idents                                            |
@@ -29,7 +31,14 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 ```bash
 python3 scripts/generate-prompts.py "night desert, laser serpent"
 python3 scripts/create_episode.py 05 "Title"
+python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run
+python3 -m unittest discover -s scripts/tests        # or: npm run test:py
 ```
+
+`xai-batch.py` takes a `prompts/*-segments.md` file or a cutaway id, reads the segments (and their
+ids) from the generated catalog, and writes one still per segment plus a manifest. It skips what
+exists, what has no Grok prompt and what still has a `[PLACEHOLDER]`. Full behaviour and flags:
+the script header, and [AGENTS.md](../AGENTS.md#batch-generating-cutaway-stills-xai-batchpy).
 
 There is no `srt-tools.py` or `update-index.py`.
 

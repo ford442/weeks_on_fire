@@ -13,6 +13,7 @@ notes: "Idea seeds only. Parent journey A–T stays the spine. promote?: no. Dra
 **Kind:** idea seeds, drawer only · `promote?: no`
 **Parent:** `ideas/yacht-guitar-orchestra.md` · scenes A–T in `prompts/yacht-guitar-orchestra-segments.md`
 **Beds:** Yacht Guitar Orchestra (96 BPM daylight) · Nofo i te Vai (88 BPM dark island) · Seoul at Night (128 BPM Busan)
+**Insert prompts (#3, #7, #11):** `prompts/guitar-boat-inserts.md`
 **Farm:** picture → [#22](https://github.com/ford442/weeks_on_fire/issues/22) · songs → [#18](https://github.com/ford442/weeks_on_fire/issues/18)/[#33](https://github.com/ford442/weeks_on_fire/issues/33) · never #42
 
 These are seeds only. The three-song journey (daylight → dark island → Busan night, scenes A–T)

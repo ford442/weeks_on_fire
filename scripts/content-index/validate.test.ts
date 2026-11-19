@@ -14,6 +14,7 @@ import {
   SequenceSchema,
 } from './schemas';
 import {
+  validateCatalogLinks,
   validateContent,
   validateCartoons,
   validateCharacters,
@@ -33,7 +34,7 @@ import type {
   SeriesCharacterRecord,
 } from './schemas';
 import type { LoadedProduction, ParsedSong } from './load';
-import type { CatalogIds } from './validate';
+import type { CatalogIds, CatalogLinkSources } from './validate';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {
@@ -805,5 +806,159 @@ describe('archive lanes', () => {
     };
     expect(FilmSceneSchema.safeParse(base).success).toBe(true);
     expect(FilmSceneSchema.safeParse({ ...base, imageKind: 'suggestion' }).success).toBe(false);
+  });
+});
+
+describe('validateCatalogLinks', () => {
+  function sources(overrides: Partial<CatalogLinkSources> = {}): CatalogLinkSources {
+    return {
+      songs: [{ id: 'song-1', episode: 'cutaway' }],
+      cutaways: [{ id: 'cutaway-1' }],
+      cartoons: [{ id: 'cartoon-1', status: 'seed' }],
+      sequences: [{ id: 'sequence-1' }],
+      sceneBoards: [{ id: 'scene-1' }],
+      characters: [{ id: 'rubella' }, { id: 'lillith' }],
+      episodes: [{ id: '01' }, { id: '03' }],
+      ...overrides,
+    };
+  }
+  const failure = (input: CatalogLinkSources) => {
+    try {
+      validateCatalogLinks(input);
+    } catch (error) {
+      return error instanceof Error ? error.message : String(error);
+    }
+    return null;
+  };
+
+  it('accepts records with no links at all', () => {
+    expect(failure(sources())).toBeNull();
+  });
+
+  it('accepts links that resolve, including a two-sided promotion', () => {
+    expect(
+      failure(
+        sources({
+          songs: [{ id: 'song-1', episode: 'cutaway', episodeId: '03' }],
+          cutaways: [
+            {
+              id: 'cutaway-1',
+              characterIds: ['rubella', 'lillith'],
+              episodeId: '01',
+              promotedFromCartoonId: 'cartoon-1',
+              sequenceInsertIds: ['sequence-1'],
+            },
+          ],
+          cartoons: [{ id: 'cartoon-1', status: 'promoted', promotedToCutawayId: 'cutaway-1' }],
+          sequences: [
+            { id: 'sequence-1', relatedCutawayIds: ['cutaway-1'], characterIds: ['rubella'] },
+          ],
+          sceneBoards: [{ id: 'scene-1', characterIds: ['lillith'] }],
+          dialogSceneIds: ['cutaway-1'],
+        }),
+      ),
+    ).toBeNull();
+  });
+
+  it('fails on unknown characterIds wherever they appear', () => {
+    const message = failure(
+      sources({
+        cutaways: [{ id: 'cutaway-1', characterIds: ['rubella', 'rubela'] }],
+        sequences: [{ id: 'sequence-1', characterIds: ['nobody'] }],
+        sceneBoards: [{ id: 'scene-1', characterIds: ['ghost'] }],
+      }),
+    );
+    expect(message).toContain('Cutaway cutaway-1 characterIds "rubela" is not a character id');
+    expect(message).toContain('Sequence sequence-1 characterIds "nobody" is not a character id');
+    expect(message).toContain('Scene scene-1 characterIds "ghost" is not a character id');
+    expect(message).not.toContain('"rubella" is not');
+  });
+
+  it('fails on a repeated id in a link list', () => {
+    expect(
+      failure(sources({ cutaways: [{ id: 'cutaway-1', characterIds: ['rubella', 'rubella'] }] })),
+    ).toContain('characterIds lists "rubella" twice');
+  });
+
+  it('fails on unknown episode, sequence and cutaway ids', () => {
+    const message = failure(
+      sources({
+        songs: [{ id: 'song-1', episode: 'cutaway', episodeId: '09' }],
+        cutaways: [{ id: 'cutaway-1', episodeId: '02', sequenceInsertIds: ['sequence-9'] }],
+        sequences: [{ id: 'sequence-1', relatedCutawayIds: ['cutaway-9'] }],
+      }),
+    );
+    expect(message).toContain('Song song-1 episodeId "09" is not an episode id');
+    expect(message).toContain('Cutaway cutaway-1 episodeId "02" is not an episode id');
+    expect(message).toContain('sequenceInsertIds "sequence-9" is not a sequence id');
+    expect(message).toContain('relatedCutawayIds "cutaway-9" is not a cutaway id');
+  });
+
+  it('fails when a song episodeId contradicts its episode', () => {
+    expect(
+      failure(sources({ songs: [{ id: 'song-1', episode: '01', episodeId: '03' }] })),
+    ).toContain('episodeId "03" disagrees with episode "01"');
+  });
+
+  it('fails on a one-sided or mismatched promotion', () => {
+    expect(
+      failure(
+        sources({
+          cartoons: [{ id: 'cartoon-1', status: 'promoted', promotedToCutawayId: 'cutaway-1' }],
+        }),
+      ),
+    ).toContain("that cutaway's promotedFromCartoonId is unset");
+    expect(
+      failure(sources({ cutaways: [{ id: 'cutaway-1', promotedFromCartoonId: 'cartoon-1' }] })),
+    ).toContain("that cartoon's promotedToCutawayId is unset");
+    expect(
+      failure(
+        sources({
+          cutaways: [{ id: 'cutaway-1', promotedFromCartoonId: 'cartoon-2' }],
+          cartoons: [{ id: 'cartoon-1', status: 'seed' }],
+        }),
+      ),
+    ).toContain('promotedFromCartoonId "cartoon-2" is not a cartoon id');
+  });
+
+  it('ties the promoted status to promotedToCutawayId', () => {
+    expect(failure(sources({ cartoons: [{ id: 'cartoon-1', status: 'promoted' }] }))).toContain(
+      'is status "promoted" but has no promotedToCutawayId',
+    );
+    expect(
+      failure(
+        sources({
+          cutaways: [{ id: 'cutaway-1', promotedFromCartoonId: 'cartoon-1' }],
+          cartoons: [{ id: 'cartoon-1', status: 'sketched', promotedToCutawayId: 'cutaway-1' }],
+        }),
+      ),
+    ).toContain('but status "sketched" (use "promoted")');
+  });
+
+  it('checks dialog audition keys against cutaway ids', () => {
+    const message = failure(
+      sources({ dialogSceneIds: ['cutaway-1', 'cutaway-1', 'the-long-way'] }),
+    );
+    expect(message).toContain('two dialog sets for sceneId "cutaway-1"');
+    expect(message).toContain('sceneId "the-long-way" is not a cutaway id');
+  });
+
+  it('parses the new link fields and rejects an empty list', () => {
+    const base = makeCutaway();
+    expect(CutawaySchema.parse({ ...base, characterIds: ['rubella'] }).characterIds).toEqual([
+      'rubella',
+    ]);
+    expect(() => CutawaySchema.parse({ ...base, characterIds: [] })).toThrow();
+    expect(
+      CartoonSchema.parse({
+        id: 'c',
+        title: 'C',
+        premise: 'P',
+        visual: 'V',
+        status: 'promoted',
+        tags: [],
+        promotedToCutawayId: 'cutaway-1',
+      }).promotedToCutawayId,
+    ).toBe('cutaway-1');
   });
 });

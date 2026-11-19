@@ -45,10 +45,10 @@ describe('sceneRefLinks', () => {
     });
   });
 
-  it('filters the Characters list by name, since that view has no per-id route', () => {
+  it('opens the character profile by id', () => {
     const [link] = sceneRefLinks({ characterIds: ['lillith'] });
     expect(link).toMatchObject({ key: 'characterIds', label: 'Character', title: 'Lillith Vale' });
-    expect(link?.to).toBe('/show/characters?q=Lillith%20Vale');
+    expect(link?.to).toBe('/show/characters/lillith');
   });
 
   it('keeps an id the catalog no longer has, without a route', () => {

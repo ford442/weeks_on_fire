@@ -37,7 +37,8 @@ export type SiteView =
   | 'sequences'
   | 'characters'
   | 'episodes'
-  | 'crew';
+  | 'crew'
+  | 'search';
 
 const viewMeta: Record<SiteView, { title: string; description: string; icon: typeof Film }> = {
   overview: {
@@ -117,6 +118,12 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
     description:
       'Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.',
     icon: Users,
+  },
+  search: {
+    title: 'Search',
+    description:
+      'Every catalog at once — songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew — by title, tag, summary or cast.',
+    icon: Search,
   },
 };
 
@@ -264,6 +271,7 @@ const tabIcons: Record<SiteView, typeof Film> = {
   characters: UserCircle,
   episodes: BookOpen,
   crew: Users,
+  search: Search,
 };
 
 interface TabLinkProps {

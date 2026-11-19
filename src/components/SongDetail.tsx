@@ -3,6 +3,7 @@ import { Check, Copy, FileText, Music2, Tags } from 'lucide-react';
 import { episodeWithSlot } from '../data/taxonomy';
 import { formatSongDate } from '../lib/songDate';
 
+import RelatedLinks from './RelatedLinks';
 import SongAudioPlayer from './SongAudioPlayer';
 import StatusBadge from './StatusBadge';
 
@@ -35,6 +36,8 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
       </div>
 
       {song.audioFile && <SongAudioPlayer audioFile={song.audioFile} title={song.title} />}
+
+      <RelatedLinks type="song" id={song.id} />
 
       <div className="grid gap-3 text-sm text-zinc-300 sm:grid-cols-2">
         <div className="rounded-md border border-zinc-800 bg-zinc-900/80 p-3">

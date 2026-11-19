@@ -32,6 +32,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "04",
   },
   {
     id: "big-city",
@@ -46,6 +47,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Lace Waterfall, Rubella and Lillith's band, travel to a gig in Glamora with gigantic 1980s metal hair already done: airport security, plane, bus terminal, bus roof hatch, taxi sunroof, freight elevator. Nothing fits. They're late; the house guitarist (Kenji, not in the band) covers the solo until the hair comes through the curtain and they walk on to play the rest of Big City. On the final chorus their hair rises through the club skylight and joins the hair-tower skyline. Kenji speaks the tag twice from the wings. Product off-screen. Not the Ultra Screech ad. Alternate arc kept: The Appointment Day.",
     visualArc: "Kenji tag on the empty stage → airport security (a cymbal comes out of the hair) → jet bridge and overhead bins → landing over the hair skyline → bus terminal revolving door → riding the bus through the roof hatch → taxi past the laundromat portholes → the freight elevator yields → Kenji covers the solo as Lace Waterfall walk on → bridge on stage → final chorus → hair through the skylight joins the skyline (drop) → Kenji tag again from the wings.",
     tags: ["glam-metal", "catalog", "lillith", "rubella", "kenji", "glamora", "hair-city"],
+    characterIds: ["rubella", "lillith", "kenji-shred-sato"],
     segments: [
       {
         id: "big-city-a-kenji-tag",
@@ -713,6 +715,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "02",
   },
   {
     id: "eyewash-idents",
@@ -1172,6 +1175,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "02",
   },
   {
     id: "home-sweet-void",
@@ -1347,6 +1351,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    characterIds: ["vivienne-vale", "liliane-vale"],
   },
   {
     id: "item-three-decorative-accent",
@@ -1415,6 +1420,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "04",
   },
   {
     id: "laundromat-slow-dance",
@@ -1457,6 +1463,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "02",
   },
   {
     id: "marble-tick-tack-worlds",
@@ -1977,6 +1984,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Rubella covers \"The Monster Mash\" on the post-snake-battle lawn while a cursed monster party erupts — Nixon, Furbies, knife-kittens, Skeksis and more. Amy and Alec return from the hiking sketch in full costume to dance, a Thriller-style werewolf moonwalks the perimeter, Lillith runs a parallel spy heist, and the hologram reveal tips into a Spy vs. Spy noir outro.",
     visualArc: "Lawn aftermath → sing-us-out cold open → Rubella at silver mic → cursed party montage → Amy & Alec dance in hiking costume → Lillith bedroom heist → party escalation → Thriller werewolf moonwalk → hologram glitch → white/black spy stalk → gadget standoff → cut to black.",
     tags: ["halloween", "monster-mash", "finale", "rubella", "lillith", "spy-vs-spy", "qing-rao", "justine", "madelin", "amy-alec-cameo", "thriller-werewolf", "long-form-prompts"],
+    characterIds: ["rubella", "lillith"],
+    episodeId: "03",
     segments: [
       {
         id: "monster-mash-1-aftermath-verse",
@@ -2274,6 +2283,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "mv-call-forty-seven",
@@ -2368,6 +2378,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "04",
   },
   {
     id: "mv-closed-since-ninety-eight",
@@ -2575,6 +2586,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "mv-heels-or-no-entry",
@@ -2669,6 +2681,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "05",
   },
   {
     id: "mv-neon-exit-sign",
@@ -2740,6 +2753,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "mv-porch-light-meridian",
@@ -2769,6 +2783,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "mv-quarter-to-seventy-five",
@@ -2798,6 +2813,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "02",
   },
   {
     id: "mv-receipt-dated-thursday",
@@ -2950,6 +2966,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "02",
   },
   {
     id: "mv-strange-light",
@@ -2979,6 +2996,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "mv-the-laundromat-saints",
@@ -3265,6 +3283,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Joke TV commercial for Ultra Screech Formula, conformed to the 2:51 Ultra Screech 2 bed with the take-1 scream spliced on. Cold-open scream, Kenji hype, laundry-room dual frontwomen, salaryman panic, product bottle, HOA/handbook trade, club glam, bridge solo, vending-machine logo. Original 5-still package is the spine; office stills only on shouting samples.",
     visualArc: "Cold-open scream → Kenji hero pitch → laundry-room Rubella + Lillith → office samples → product bottle chorus → neon-pour / HOA citation trade → handbook §12 → club glam chant → bridge argument + solo → logo / vending-machine outro.",
     tags: ["glam-metal", "commercial", "lillith", "rubella", "kenji", "eyewash-station"],
+    characterIds: ["kenji-shred-sato", "rubella", "lillith"],
     segments: [
       {
         id: "mv-ultra-a-cold-open",
@@ -3546,6 +3565,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    characterIds: ["rubella", "riley-smith", "lillith"],
+    episodeId: "05",
   },
   {
     id: "ping-pong-ai",
@@ -3575,6 +3596,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    characterIds: ["justine", "madelin"],
+    episodeId: "03",
   },
   {
     id: "please-stand-by",
@@ -3618,6 +3641,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "HSV table is the door: Alright, you caught me. I used to be a space cop, okay? Cut to nineteen at Transportation Patrol Annex. Years of two lines and one cube, nights, a yard over a canyon, Appendix C, then a bestowal — hollow-chevron wings, an odd short sword, a hymn that also files. She inhales for the first posting. Rubella cuts: we are expected back down to Earth, right away. Not a fight movie. Scenery beds hold the black hole; rooms stay short.",
     visualArc: "Table door → orbit scenery → first-year cube → nights / window planet → empty canyon yard → further exercises → Appendix C hold → bestowal + theme → two-moon sky (unfinished posting) → sage-crop return.",
     tags: ["riley", "space-cop", "annex", "dialog", "visual-experiment", "rubella", "lillith", "wings", "inventory"],
+    characterIds: ["riley-smith", "rubella"],
     segments: [
       {
         id: "riley-space-a-you-caught",
@@ -3764,6 +3788,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Item Seven: Resident Comments. The podium is a laundry-room intercom. Madelyn put her on the list. Folding chairs creak; they do not clap. Spoken Voice bed, not a musical.",
     visualArc: "Podium lock → detergent relic → heckle wide (she does not turn) → land with duplicate forms.",
     tags: ["gag", "spoken", "laundry", "hoa", "rubella", "lillith", "farm-22", "voice-bed"],
+    characterIds: ["rubella"],
     segments: [
       {
         id: "rubella-stand-a-podium-lock",
@@ -4353,6 +4378,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "03",
   },
   {
     id: "spooky-telephone-poles",
@@ -4367,6 +4393,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Halloween sidewalk pseudoscience lecture: Lillith, Rubella, and Scarlet explain why utility poles are spooky — rat electrocution, ground current, hydrogen sulfide, sewer-pipe bracing — then lean away in unison. Button line: “And that’s why you have to dodge phone poles!”",
     visualArc: "Wet Halloween sidewalk → crackle at utility pole → dead-pan lecture trio → synchronized dodge past the pole → keep walking.",
     tags: ["halloween", "dialog", "utility-poles", "pseudoscience", "lillith", "rubella", "scarlet", "suburban"],
+    characterIds: ["lillith", "rubella", "scarlet"],
+    episodeId: "03",
     segments: [
       {
         id: "spooky-telephone-a-what-s",
@@ -4448,6 +4476,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "Grainy 480p feed into the Meta-Studio: Rubella, Lillith, and writer Mara argue cereal bowls, barista informants, and Ep2 pacing under one harsh softbox — until Mara seeds the HOA Meeting and a one-octave synth bass conspiracy cue.",
     visualArc: "Warehouse + camera crane → softbox folding-chair huddle → cereal storyboard slap → barista print point → Mara scribbling → 480p static / standby.",
     tags: ["meta-studio", "dialog", "mara", "lillith", "rubella", "cereal", "barista", "hoa-seed", "480p", "episode-02"],
+    episodeId: "02",
     segments: [
       {
         id: "studio-huddle-a-feed-up",
@@ -4542,6 +4571,8 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
     summary: "The wordy episode — same juxtaposition family as Monster Mash (1958) on a laser-snake lawn and Rubella's monkey science: wrong channel, full commitment. Three women drive up a hill and walk the rest. Dialog versions: V2 Mulholland open → V3 daytime interview; Rosencrantz register (probability trucks, climbing metaphysics, padlock mood). One boot and one stiletto. Fourteen seconds of silence at the saddle.",
     visualArc: "2:10 PM county road (contract crawl) → sedan interview → ordinance gate → hood up → switchbacks → blue-hour saddle → fire under a black tower.",
     tags: ["ep4", "dialog", "riley", "rubella", "lillith", "ridge", "wordy", "juxtaposition", "versions", "rosencrantz"],
+    characterIds: ["rubella", "lillith", "riley-smith"],
+    episodeId: "05",
     segments: [
       {
         id: "the-long-a-2-10",
@@ -4774,6 +4805,7 @@ export const cutawaySuggestions: CutawaySuggestion[] = [
         promptVariations: [],
       },
     ],
+    episodeId: "05",
   },
   {
     id: "well-fall",

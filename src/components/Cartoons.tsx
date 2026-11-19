@@ -13,6 +13,8 @@ import { crewPath } from '../routes/paths';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
 
+import RelatedLinks from './RelatedLinks';
+
 const allValue = 'All';
 
 const statusOrder: CartoonStatus[] = ['seed', 'sketched', 'ready-to-generate', 'promoted'];
@@ -342,6 +344,8 @@ function CartoonDetail({ cartoon, copiedKey, onCopy }: CartoonDetailProps) {
           </p>
         ) : null}
       </div>
+
+      <RelatedLinks type="cartoon" id={cartoon.id} heading="Links" />
 
       <section>
         <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>

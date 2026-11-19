@@ -6,6 +6,11 @@
   "status": "suggested",
   "runtime": "~2 min set-piece",
   "episode": "Episode 03",
+  "episodeId": "03",
+  "characterIds": [
+    "justine",
+    "madelin"
+  ],
   "songId": "twilight-time",
   "songTitle": "Twilight Time (rally) / soft drop (confession)",
   "summary": "Pong-Bot 3000 vs the ladies. Biscuit steals the ball. The robot does not want to be turned off. Justine: “If we lose, I'm buying the robot a latte.”",

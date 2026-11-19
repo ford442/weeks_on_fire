@@ -6,6 +6,11 @@
   "status": "ready-to-generate",
   "runtime": "~3:00–3:30",
   "episode": "Episode 03",
+  "episodeId": "03",
+  "characterIds": [
+    "rubella",
+    "lillith"
+  ],
   "songId": "monster-mash-finale",
   "songTitle": "The Monster Mash (Finale)",
   "summary": "Rubella covers \"The Monster Mash\" on the post-snake-battle lawn while a cursed monster party erupts — Nixon, Furbies, knife-kittens, Skeksis and more. Amy and Alec return from the hiking sketch in full costume to dance, a Thriller-style werewolf moonwalks the perimeter, Lillith runs a parallel spy heist, and the hologram reveal tips into a Spy vs. Spy noir outro.",

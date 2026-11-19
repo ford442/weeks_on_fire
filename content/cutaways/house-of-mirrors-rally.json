@@ -6,6 +6,10 @@
   "status": "ready-to-generate",
   "runtime": "4–5 min",
   "episode": "Episode 01 register",
+  "characterIds": [
+    "vivienne-vale",
+    "liliane-vale"
+  ],
   "songId": "neon-exit-sign",
   "songTitle": "Neon Exit Sign",
   "summary": "Vivienne and Liliane play ping-pong in a ruined ballroom. Plaster falls. They do not flinch. Pizza box on the intact half of the table.",

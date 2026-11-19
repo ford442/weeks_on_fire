@@ -25,6 +25,7 @@ const Sequences = lazy(viewLoaders.sequences);
 const Characters = lazy(viewLoaders.characters);
 const Episodes = lazy(viewLoaders.episodes);
 const Crew = lazy(viewLoaders.crew);
+const SearchPage = lazy(viewLoaders.search);
 const PublicLayout = lazy(() => import('./public/PublicLayout'));
 const Listen = lazy(() => import('./public/Listen'));
 const Album = lazy(() => import('./public/Listen').then((m) => ({ default: m.Album })));
@@ -137,9 +138,11 @@ export default function App() {
             <Route path={viewPaths.sequences} element={<Sequences />} />
             <Route path={`${viewPaths.sequences}/:id`} element={<Sequences />} />
             <Route path={viewPaths.characters} element={<Characters />} />
+            <Route path={`${viewPaths.characters}/:id`} element={<Characters />} />
             <Route path={viewPaths.episodes} element={<Episodes />} />
             <Route path={`${viewPaths.episodes}/:id`} element={<Episodes />} />
             <Route path={viewPaths.crew} element={<Crew />} />
+            <Route path={viewPaths.search} element={<SearchPage />} />
             <Route path="*" element={<Navigate to={CREW_PREFIX} replace />} />
           </Routes>
         </Suspense>

@@ -46,9 +46,10 @@ Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/vi
 | Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts               |
 | Cartoons       | `/cartoons`    | Short cartoon seeds from agents (no song id)                   |
 | 3D Sequences   | `/sequences`   | Playable in-hub 3D video sequences (10s–2min)                  |
-| Characters     | `/characters`  | Recurring cast bible                                           |
+| Characters     | `/characters`  | Cast bible; `/characters/:id` profile with an Appears-in strip |
 | Episodes       | `/episodes`    | Read-only episode bible                                        |
 | Crew           | `/staff`       | Fictional series crew bios                                     |
+| Search         | `/search?q=`   | Every catalog at once (not a tab; header `/` or Ctrl/⌘-K)      |
 
 ---
 
@@ -147,7 +148,7 @@ There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 
 Song frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches and is not codegen'd. Cutaway `songId` values must exist in song frontmatter. `prompts/*-segments.md` used via `segmentsSource` must have a matching cutaway JSON entry.
 
-Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote.
+Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote. Promotion is a two-sided id link (cartoon `promotedToCutawayId` + cutaway `promotedFromCartoonId`); codegen checks both.
 
 3D video sequences (10s–2min, in-hub WebGL players) go in `content/sequences/<id>.json` plus a renderer in `src/sequences/`.
 

@@ -111,7 +111,7 @@ describe('Timeline catalog links', () => {
       '/show/songs/call-forty-seven',
       '/show/sequences/lattice-hymn',
       '/show/cartoons/cereal-wolf',
-      '/show/characters?q=Lillith%20Vale',
+      '/show/characters/lillith',
     ]);
     expect(screen.getByText(/removed-character \(not in catalog\)/)).toBeTruthy();
   });

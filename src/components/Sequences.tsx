@@ -13,6 +13,7 @@ import { formatTimecode } from '../lib/timecode';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlFlag, useUrlParam } from '../hooks/useUrlState';
 
+import RelatedLinks from './RelatedLinks';
 import SequencePlayer from './SequencePlayer';
 
 const allValue = 'All';
@@ -251,6 +252,8 @@ function SequenceDetail({ sequence, capture, copiedKey, onCopy }: SequenceDetail
         <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>
         <p className="mt-2 text-sm leading-6 text-zinc-300">{sequence.premise}</p>
       </section>
+
+      <RelatedLinks type="sequence" id={sequence.id} heading="Links" />
 
       <section>
         <h3 className="text-sm font-semibold text-zinc-400">Visual</h3>

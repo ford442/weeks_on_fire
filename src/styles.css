@@ -497,3 +497,55 @@ button:disabled {
     animation: none;
   }
 }
+
+/*
+ * EyeWash Station guide: an optional CRT look (scanlines, a soft vignette, a slow flicker) laid
+ * over the station card and the rundown, never over the prompt panel. Off unless the viewer turns
+ * it on; hidden outright under prefers-reduced-motion, whatever the stored preference says.
+ */
+.crt-screen {
+  position: relative;
+  isolation: isolate;
+}
+
+.crt-screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      rgba(0, 0, 0, 0.28) 2px,
+      rgba(0, 0, 0, 0.28) 3px
+    ),
+    radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+  animation: crt-flicker 7s ease-in-out infinite;
+}
+
+/* Slow and shallow: a few percent of opacity over several seconds, never a flash. */
+@keyframes crt-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  47% {
+    opacity: 0.94;
+  }
+  50% {
+    opacity: 0.86;
+  }
+  53% {
+    opacity: 0.95;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-screen::after {
+    display: none;
+  }
+}

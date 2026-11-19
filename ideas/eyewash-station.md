@@ -217,8 +217,11 @@ Ident pack (six 5–10s cards + three fake ads): `ideas/eyewash-idents.md`, `pro
 1. ~~Spec the six idents~~ — `ideas/eyewash-idents.md`. Stills + Minimax stings still to generate.
 2. Record "Rinse Cycle" via Minimax; use as sign-off over any existing footage.
 3. Shoot/generate "Please Stand By" — one static card, layered audio (60s hold still lives beside the 8s ident).
-4. If the concept holds, restructure the site **Suggestions** tab as a
-   **program schedule** with time slots instead of a flat list.
+4. ~~If the concept holds, restructure the site **Suggestions** tab as a
+   **program schedule** with time slots instead of a flat list.~~ — shipped:
+   `content/schedule.json` arranges the cutaways into the blocks above; Suggestions
+   shows it as a guide (the flat list is one switch away). The first-pass slotting is
+   editorial and not locked: move a line in the JSON to move a cutaway.
 
 ---
 

@@ -24,7 +24,7 @@ Weeks on Fire is a personal cinematic experiment combining:
 - Timeline (https://ford442.github.io/weeks_on_fire/show/timeline/) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
 - Songs (https://ford442.github.io/weeks_on_fire/show/songs/) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
 - Scenes (https://ford442.github.io/weeks_on_fire/show/scenes/) — Scenes with a page of their own — pitch, prompt locks, sequence, keyframe board and finished video. Daisy Bell is the first; every scene uses the same template.
-- Suggestions (https://ford442.github.io/weeks_on_fire/show/suggestions/) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+- Suggestions (https://ford442.github.io/weeks_on_fire/show/suggestions/) — EyeWash Station (Channel 12½) as a program guide — every cutaway, one-panel gag and scene suggestion in a time slot, with what is on now, reruns, idents and fake sponsors; unscheduled ones follow. Each opens its board of timed segments and copyable Grok Imagine / Gemini Omni prompts (/show/suggestions/<id>). ?at=HH:MM pins the guide to a time; List is the flat catalog with kind, status and search filters.
 - Cartoons (https://ford442.github.io/weeks_on_fire/show/cartoons/) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
 - 3D Sequences (https://ford442.github.io/weeks_on_fire/show/sequences/) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 - Characters (https://ford442.github.io/weeks_on_fire/show/characters/) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
@@ -35,6 +35,11 @@ Weeks on Fire is a personal cinematic experiment combining:
 ### Search and catalog graph
 - Hub search: https://ford442.github.io/weeks_on_fire/show/search/?q=<terms> — one ranked list across songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew (titles, tags, summaries, character names; not lyrics or prompts). Example: https://ford442.github.io/weeks_on_fire/show/search/?q=well
 - Catalog graph (JSON): https://ford442.github.io/weeks_on_fire/catalog-graph.json — every record with a page, and the typed links between them (song, character, episode, promotion, insert, related)
+
+### Program schedule
+- EyeWash Station, Channel 12½: https://ford442.github.io/weeks_on_fire/show/suggestions/ — every cutaway in a time slot, with what is on now; `?at=HH:MM` pins a time of day
+- Source: https://github.com/ford442/weeks_on_fire/blob/main/content/schedule.json
+- Readable rundown: https://ford442.github.io/weeks_on_fire/llms-full.txt (section "EyeWash Station schedule")
 
 ### Episodes (markdown, fully readable without JS)
 - Episode 1: https://github.com/ford442/weeks_on_fire/tree/main/episodes/episode-01

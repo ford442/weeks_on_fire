@@ -4,13 +4,21 @@ import { join } from 'node:path';
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { loadCartoons, loadProductions, loadSceneBoards, loadSequences } from './load';
+import {
+  loadCartoons,
+  loadCutaways,
+  loadProductions,
+  loadSceneBoards,
+  loadSchedule,
+  loadSequences,
+} from './load';
 import { SequenceGraphSchema } from './graph-schema';
 import {
   CartoonSchema,
   CutawaySchema,
   FilmSceneSchema,
   SceneBoardSchema,
+  ScheduleSchema,
   SequenceSchema,
 } from './schemas';
 import {
@@ -20,6 +28,7 @@ import {
   validateCharacters,
   validateSceneBoards,
   validateScenes,
+  validateSchedule,
   validateSequences,
   validateTaxonomy,
 } from './validate';
@@ -30,6 +39,7 @@ import type {
   EpisodeRecord,
   TaxonomyRecord,
   SceneBoardRecord,
+  ScheduleRecord,
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
@@ -960,5 +970,135 @@ describe('validateCatalogLinks', () => {
         promotedToCutawayId: 'cutaway-1',
       }).promotedToCutawayId,
     ).toBe('cutaway-1');
+  });
+});
+
+describe('validateSchedule', () => {
+  const cutawayIds = new Set(['a', 'b', 'c']);
+
+  function makeSchedule(overrides: Partial<ScheduleRecord> = {}): ScheduleRecord {
+    return {
+      station: 'EyeWash Station',
+      channel: '12½',
+      sponsors: [],
+      blocks: [
+        {
+          id: 'morning',
+          title: 'Morning',
+          when: 'Dawn',
+          about: 'Up first.',
+          slots: [
+            { at: '06:00', cutawayId: 'a' },
+            { at: '10:00', cutawayId: 'b' },
+          ],
+        },
+        {
+          id: 'night',
+          title: 'Night',
+          when: 'Late',
+          about: 'After dark.',
+          slots: [
+            { at: '23:00', cutawayId: 'c' },
+            { at: '02:00', cutawayId: 'a', rerun: true },
+          ],
+        },
+      ],
+      ...overrides,
+    };
+  }
+
+  function failure(schedule: ScheduleRecord): string {
+    try {
+      validateSchedule(schedule, cutawayIds);
+    } catch (error) {
+      return (error as Error).message;
+    }
+    return '';
+  }
+
+  it('accepts a day that crosses midnight and reruns an earlier slot', () => {
+    expect(() => validateSchedule(makeSchedule(), cutawayIds)).not.toThrow();
+  });
+
+  it('does not require every cutaway to have a slot', () => {
+    // "unslotted" exists in the catalog but nowhere in the rundown: it simply shows as unscheduled.
+    const withExtra = new Set([...cutawayIds, 'unslotted']);
+    expect(() => validateSchedule(makeSchedule(), withExtra)).not.toThrow();
+  });
+
+  it('rejects an unknown cutaway id', () => {
+    const schedule = makeSchedule();
+    schedule.blocks[0]!.slots[1] = { at: '10:00', cutawayId: 'nope' };
+    expect(failure(schedule)).toContain('unknown cutaway id "nope"');
+  });
+
+  it('rejects slots that run backwards within one broadcast day', () => {
+    const schedule = makeSchedule();
+    // 06:00 → 10:00 → 23:00 → 02:00 is one day; 09:00 after 10:00 is not.
+    schedule.blocks[0]!.slots.push({ at: '09:00', cutawayId: 'c' });
+    const message = failure(schedule);
+    expect(message).toContain('starts at 9:00 AM, not after the slot before it (10:00 AM)');
+    expect(message).toContain('wrapping past midnight once');
+  });
+
+  it('rejects two slots at the same time', () => {
+    const schedule = makeSchedule();
+    schedule.blocks[0]!.slots[1] = { at: '06:00', cutawayId: 'b' };
+    expect(failure(schedule)).toContain('not after the slot before it');
+  });
+
+  it('rejects a second airing that is not marked as a rerun', () => {
+    const schedule = makeSchedule();
+    schedule.blocks[1]!.slots[1] = { at: '02:00', cutawayId: 'a' };
+    expect(failure(schedule)).toContain('airs more than once; mark every airing after the first');
+  });
+
+  it('rejects a rerun that is really the first airing', () => {
+    const schedule = makeSchedule();
+    schedule.blocks[0]!.slots[0] = { at: '06:00', cutawayId: 'a', rerun: true };
+    schedule.blocks[1]!.slots[1] = { at: '02:00', cutawayId: 'b', rerun: true };
+    const message = failure(schedule);
+    expect(message).toContain('marked rerun, but this is its first airing');
+  });
+
+  it('checks ad breaks against the sponsor list and flags unused sponsors', () => {
+    const sponsors = [{ id: 'optics', name: 'Perpetual Optics', tagline: 'Keep looking.' }];
+    const schedule = makeSchedule({ sponsors });
+    expect(failure(schedule)).toContain('Schedule sponsor optics is never used');
+
+    schedule.blocks[0]!.slots[0] = { at: '06:00', cutawayId: 'a', adBreak: 'optics' };
+    expect(failure(schedule)).toBe('');
+
+    schedule.blocks[0]!.slots[1] = { at: '10:00', cutawayId: 'b', adBreak: 'missing' };
+    expect(failure(schedule)).toContain('unknown sponsor id "missing" in adBreak');
+  });
+
+  it('rejects duplicate block and sponsor ids', () => {
+    const schedule = makeSchedule();
+    schedule.blocks[1] = { ...schedule.blocks[1]!, id: 'morning' };
+    expect(failure(schedule)).toContain('Duplicate schedule block id: morning');
+  });
+
+  it('parses 24-hour HH:MM only and rejects misspelled fields', () => {
+    const slot = { at: '02:00', cutawayId: 'a' };
+    const block = { id: 'b', title: 'B', when: 'w', about: 'a', slots: [slot] };
+    const base = { station: 'S', channel: '1', sponsors: [], blocks: [block] };
+    expect(ScheduleSchema.safeParse(base).success).toBe(true);
+    for (const at of ['2:00', '24:00', '02:60', '2 AM', '']) {
+      const bad = { ...base, blocks: [{ ...block, slots: [{ ...slot, at }] }] };
+      expect(ScheduleSchema.safeParse(bad).success, at).toBe(false);
+    }
+    const typo = { ...base, blocks: [{ ...block, slots: [{ ...slot, rerrun: true }] }] };
+    expect(ScheduleSchema.safeParse(typo).success).toBe(false);
+    expect(ScheduleSchema.safeParse({ ...base, blocks: [] }).success).toBe(false);
+  });
+
+  it('accepts the committed rundown against the committed cutaways', () => {
+    const repoRoot = join(import.meta.dirname, '../..');
+    const cutaways = loadCutaways(repoRoot);
+    const schedule = loadSchedule(repoRoot);
+    expect(() =>
+      validateSchedule(schedule, new Set(cutaways.map((cutaway) => cutaway.id))),
+    ).not.toThrow();
   });
 });

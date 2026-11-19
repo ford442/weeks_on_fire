@@ -101,7 +101,46 @@ codegen'd and keep their `Drawer / not promoted` note.
 
 4. `songId` must match a song `id` from `songs/*.md` frontmatter.
 
-5. Run `npm run codegen` and commit.
+5. Run `npm run codegen` and commit. The cutaway shows under **Unscheduled** on Suggestions until it has a slot in [`schedule.json`](schedule.json) (below).
+
+## Adding to the schedule (EyeWash Station)
+
+Suggestions is the Channel 12½ program guide. [`schedule.json`](schedule.json) is its rundown: one looping broadcast day that **arranges existing cutaways in time**. It never holds a cutaway idea of its own (those live once, in `cutaways/`), so a new cutaway needs no schedule entry: with no slot it simply shows under **Unscheduled**. To give it a time, add a slot.
+
+```json
+{
+  "station": "EyeWash Station",
+  "channel": "12½",
+  "sponsors": [
+    {
+      "id": "brads-bins",
+      "name": "Brad’s Bins",
+      "tagline": "Every shade of blue. One of them is correct.",
+      "smallPrint": "Not affiliated with the HOA. The HOA is affiliated with us."
+    }
+  ],
+  "blocks": [
+    {
+      "id": "community-notice-board",
+      "title": "Community Notice Board",
+      "when": "Whenever, unannounced",
+      "about": "Scrolling HOA text over library music. Occasionally libelous.",
+      "slots": [
+        { "at": "14:22", "cutawayId": "911-wrong-shade", "adBreak": "brads-bins" },
+        { "at": "18:43", "cutawayId": "911-wrong-shade", "rerun": true }
+      ]
+    }
+  ]
+}
+```
+
+- **Times** are `HH:MM`, 24-hour, on the viewer's own clock. A slot runs until the next one starts; the last slot of the day runs until the first begins again. Write slots in broadcast order starting from the first slot's time (the file's first slot is the start of the day); the day may cross midnight once. Codegen fails on a slot that is not after the one before it.
+- **`block`** `title`, `when` and `about` are the station's own wording for the slot (see `ideas/eyewash-station.md` → Programming blocks). `when` is display text ("Weekday mid-morning"), not a time; the slot `at` values are what the guide runs on.
+- **`rerun: true`** on every airing of a cutaway after its first. The first airing is never a rerun, and an unmarked repeat fails codegen.
+- **`adBreak`** names a `sponsors[].id`: a fake-sponsor spot that airs after that slot. Sponsor copy is transcribed from the ident pack (`ideas/eyewash-idents.md`), where the full spot lives; a sponsor nothing uses fails codegen. Idents and sponsor cutaways are _not_ listed here: a cutaway tagged `ident` or `sponsor` gets the matching badge wherever it airs.
+- **Diegesis lock** (`docs/season-arc.md`): the series does not air an episode of itself on the station until a finale. Slot cutaways, not episodes.
+- Codegen fails on an unknown cutaway or sponsor id, a duplicate block or sponsor id, a misspelled field, and a time that is not `HH:MM`. `npm run codegen` emits `src/data/generated/schedule.ts` (ids and times only); `npm run agent-docs` writes the readable rundown into `public/llms-full.txt`.
+- "Now playing" follows the viewer's clock; `?at=HH:MM` on `/show/suggestions` pins the guide to a time (and the "Tune to" box sets it).
 
 ## Gallery, characters, crew, scenes
 

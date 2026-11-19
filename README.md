@@ -20,7 +20,7 @@ React + Vite gallery with production views:
 | **Timeline**       | Scene status, local edits, exportable production JSON    |
 | **Songs**          | Minimax catalog — style prompts, lyrics, episode ties    |
 | **Scenes**         | Scene pages: locks, sequence, keyframe board, video      |
-| **Suggestions**    | Cutaways, gags, and scene suggestions with timed prompts |
+| **Suggestions**    | EyeWash schedule: cutaways in time slots, timed prompts  |
 | **Cartoons**       | Short cartoon seeds from agents — premise, still, prompt |
 | **3D Sequences**   | Playable in-hub 3D video sequences (10s–2min)            |
 | **Characters**     | Recurring cast bible                                     |

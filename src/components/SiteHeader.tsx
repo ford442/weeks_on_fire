@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   BadgeCheck,
@@ -9,11 +9,11 @@ import {
   Film,
   Flame,
   Info,
-  Lightbulb,
   Music2,
   PenLine,
   UserCircle,
   Search,
+  Tv,
   Users,
   Video as VideoIcon,
 } from 'lucide-react';
@@ -84,10 +84,10 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
     icon: Clapperboard,
   },
   suggestions: {
-    title: 'Suggested cutaways',
+    title: 'Program schedule',
     description:
-      'Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.',
-    icon: Lightbulb,
+      'Channel 12½ as a program guide: cutaways, gags, idents and fake sponsors in time slots, with what is on now. Open any slot for its timed segments and copyable prompts; List is the flat catalog.',
+    icon: Tv,
   },
   cartoons: {
     title: 'Cartoon ideas',
@@ -149,6 +149,7 @@ export default function SiteHeader() {
   const meta = viewMeta[view];
   const TitleIcon = meta.icon;
   const [searchOpen, setSearchOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     rememberViewLocation(view, pathname, search);
@@ -157,6 +158,15 @@ export default function SiteHeader() {
   useEffect(() => {
     document.title = `${meta.title} · Weeks on Fire`;
   }, [meta.title]);
+
+  // The tab strip scrolls sideways: bring the current tab into view so a deep link to a late tab
+  // (Suggestions, Episodes) does not open with its own tab off-screen on a phone.
+  useEffect(() => {
+    const current = navRef.current?.querySelector('[aria-current="page"]');
+    if (current instanceof HTMLElement && typeof current.scrollIntoView === 'function') {
+      current.scrollIntoView({ inline: 'center', block: 'nearest' });
+    }
+  }, [view]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -215,6 +225,7 @@ export default function SiteHeader() {
         </div>
 
         <nav
+          ref={navRef}
           aria-label="Site sections"
           className="-mx-4 mt-2 overflow-x-auto px-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
         >
@@ -265,7 +276,7 @@ const tabIcons: Record<SiteView, typeof Film> = {
   timeline: Clock,
   songs: Music2,
   scenes: Clapperboard,
-  suggestions: Lightbulb,
+  suggestions: Tv,
   cartoons: PenLine,
   sequences: Box,
   characters: UserCircle,

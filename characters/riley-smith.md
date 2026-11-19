@@ -1,6 +1,6 @@
 # Riley Smith
 
-*Recurring candidate. First appearance: Episode 4 — The Long Way Up. Full card also lives in `suggested-characters.md`; this file is the inventory.*
+*Recurring candidate. First appearance: Episode 5 candidate — The Long Way Up (Episode 4 is HOA). Full card also lives in `suggested-characters.md`; this file is the inventory.*
 
 **Role:** The stranger on the center line. First character in the series who **knows things**. The straight woman for a show that has never had one.
 

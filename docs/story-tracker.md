@@ -2,7 +2,7 @@
 
 Bird's-eye production map. Update when episodes shift, setpieces lock, or meta-scenes rewrite the spine.
 
-*Last updated: 2026-08-31 — Episode 4 HOA spine locked; Long Way Up parked as Ep5 candidate (`docs/season-arc.md`)*
+*Last updated: 2026-11-19 — Episode 4 HOA spine locked; Long Way Up + No Other Human Sounds parked as Ep5 candidate, decision logged (`docs/production-log.md`, `docs/season-arc.md`)*
 
 ---
 
@@ -15,7 +15,7 @@ Bird's-eye production map. Update when episodes shift, setpieces lock, or meta-s
 | **Mara Vell** | Writer | Frantic, defensive of lore; bridges wild ideas and cast reality; seeds HOA Meeting via safehouse dialogue. |
 | **GEM / Directors** | Directors / Producers | Synthesize the chaos; schedule weirdness; keep prompts and cues honest. |
 | **Kenji "Shred" Sato** | Sponsor / Cutaway | Glam-Sham-Poo brand ambassador and college alumnus; pure hype, sells the school by accident. |
-| **Riley Smith** | Ridge / transmitter | Unemployed site-survey technician. Correct, never smug. First appearance Ep4. Keep above 5,000 ft. |
+| **Riley Smith** | Ridge / transmitter | Unemployed site-survey technician. Correct, never smug. First appearance Ep5 candidate (*The Long Way Up*; also *No Other Human Sounds*). Not in the Ep4 HOA room. Keep above 5,000 ft. |
 
 See also: `src/data/staff.ts`, `src/data/characters.ts`, `characters/the-two.md`.
 
@@ -32,8 +32,8 @@ See also: `src/data/staff.ts`, `src/data/characters.ts`, `characters/the-two.md`
 | **Midnight Ping Pong Duel** | Established setpiece. | `ai-contributions/gpt-4o/midnight-ping-pong-duel.md` |
 | **Last Call at the Comet Lounge** | Established Ep1 karaoke / lounge setpiece. | `ai-contributions/opus-4.7/last-call-at-the-comet-lounge.md` |
 | **Glam-Sham-Poo "Ultra Screech"** | Glam-metal joke commercial for a heavy-metal shampoo out of Glamora; stills-first cutaway that plays on the EyeWash TV and the laundry-room vending machine. Also seeds Glam-Sham-Poo College. | `ideas/glam-sham-poo-commercial.md`, `songs/Glam_Sham_Poo_Ultra_Screech.md`, `prompts/glam-sham-poo-segments.md` |
-| **The Long Way Up** | Wordy Ep4 dialog: meeting Riley, climbing Kestrel Ridge until dark. Juxtaposition = cable procedural (Monster Mash / monkey-science family). | `notes/scenes/the-long-way-up.md` · versions: `notes/scenes/versions/the-long-way-up-versions.md` |
-| **No Other Human Sounds** | Rubella & Riley rally the unmaintained cut-through, rejoin Lillith, drive to Pulpit Overlook. | `notes/scenes/no-other-human-sounds.md` · versions: `notes/scenes/versions/no-other-human-sounds-versions.md` |
+| **The Long Way Up** | Wordy **Ep5 candidate** dialog (not Ep4): meeting Riley, climbing Kestrel Ridge until dark. Juxtaposition = cable procedural (Monster Mash / monkey-science family). | `notes/scenes/the-long-way-up.md` · versions: `notes/scenes/versions/the-long-way-up-versions.md` |
+| **No Other Human Sounds** | Ep5 candidate insert, the quiet mile after *The Long Way Up* (Riley carries over; same ridge, later that afternoon). Rubella & Riley rally the unmaintained cut-through, rejoin Lillith, drive to Pulpit Overlook. | `notes/scenes/no-other-human-sounds.md` · versions: `notes/scenes/versions/no-other-human-sounds-versions.md` |
 
 ---
 

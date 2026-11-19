@@ -10,7 +10,7 @@ import {
   CutawaySchema,
   FilmSceneSchema,
   SeriesCharacterSchema,
-  DaisyBellSchema,
+  SceneBoardSchema,
   CrewMemberSchema,
   EpisodeSchema,
   CartoonSchema,
@@ -29,7 +29,7 @@ import type {
   FilmSceneRecord,
   ProductionStatus,
   SeriesCharacterRecord,
-  DaisyBellRecord,
+  SceneBoardRecord,
   CrewMemberRecord,
   EpisodeRecord,
   CartoonRecord,
@@ -158,8 +158,23 @@ export function loadCharacters(repoRoot: string): SeriesCharacterRecord[] {
   );
 }
 
-export function loadDaisyBell(repoRoot: string): DaisyBellRecord {
-  return DaisyBellSchema.parse(readJson(join(repoRoot, 'content/daisy-bell.json')));
+export function loadSceneBoards(repoRoot: string): SceneBoardRecord[] {
+  const scenesDir = join(repoRoot, 'content/scenes');
+  if (!existsSync(scenesDir)) {
+    throw new Error('Missing content/scenes/. Add one JSON file per scene board.');
+  }
+
+  return readdirSync(scenesDir)
+    .filter((file) => file.endsWith('.json'))
+    .sort()
+    .map((file) => {
+      const record = SceneBoardSchema.parse(readJson(join(scenesDir, file)));
+      const expectedId = file.replace(/\.json$/, '');
+      if (record.id !== expectedId) {
+        throw new Error(`Scene file ${file} id mismatch: ${record.id}`);
+      }
+      return record;
+    });
 }
 
 export function loadTaxonomy(repoRoot: string): TaxonomyRecord {

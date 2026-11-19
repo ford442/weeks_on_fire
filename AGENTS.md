@@ -19,13 +19,13 @@ Root `index.html` is the **Vite entry** (`/src/main.tsx`). It is not a standalon
 
 ## Technology Stack
 
-| Layer           | Technology                     | Notes                                                             |
-| --------------- | ------------------------------ | ----------------------------------------------------------------- |
-| App             | React 19 + TypeScript + Vite 8 | Source in `src/`. Tailwind CSS v4 via `@tailwindcss/vite`.        |
-| Content index   | Markdown / JSON → codegen      | Author in `content/` and `songs/`. Emit to `src/data/generated/`. |
-| Codegen         | `tsx` + Zod (devDependency)    | `scripts/content-index/*.ts`. No extra runtime libraries.         |
-| Episode archive | Markdown + SRT + `scenes.json` | Separate from the React catalog index.                            |
-| Python helpers  | stdlib-only scripts            | Imagine API, slideshow assemble, episode scaffold.                |
+| Layer           | Technology                     | Notes                                                                                                                                                |
+| --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| App             | React 19 + TypeScript + Vite 8 | Source in `src/`. Tailwind CSS v4 via `@tailwindcss/vite`.                                                                                           |
+| Content index   | Markdown / JSON → codegen      | Author in `content/` and `songs/`. Emit to `src/data/generated/`.                                                                                    |
+| Codegen         | `tsx` + Zod (devDependency)    | `scripts/content-index/*.ts`. No extra runtime libraries.                                                                                            |
+| Episode archive | Markdown + SRT + `scenes.json` | Separate from the React catalog index.                                                                                                               |
+| Python helpers  | stdlib-only scripts            | Imagine API, slideshow assemble, episode scaffold.                                                                                                   |
 | Deploy          | GitHub Actions → Pages         | `.github/workflows/deploy-pages.yml` (`npm ci && npm run build`). Pull requests run the same checks plus the e2e frame harness; only `main` deploys. |
 
 TypeScript is the hub language. Do not add a new runtime library, in-repo C++, or `compile_commands.json` unless explicitly asked.
@@ -36,18 +36,19 @@ TypeScript is the hub language. Do not add a new runtime library, in-repo C++, o
 
 Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/views.ts`:
 
-| View           | Path           | What you get                                          |
-| -------------- | -------------- | ----------------------------------------------------- |
-| Visual Archive | `/`            | Grok Imagine stills, prompt variations, music cues    |
-| Timeline       | `/timeline`    | Scene status, local edits, exportable production JSON |
-| Songs          | `/songs`       | Minimax catalog — style prompts, lyrics, episode ties |
-| Daisy Bell     | `/daisy-bell`  | Keyframe board, period/color treatments, sequence     |
-| Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts      |
-| Cartoons       | `/cartoons`    | Short cartoon seeds from agents (no song id)          |
-| 3D Sequences   | `/sequences`   | Playable in-hub 3D video sequences (10s–2min)         |
-| Characters     | `/characters`  | Recurring cast bible                                  |
-| Episodes       | `/episodes`    | Read-only episode bible                               |
-| Crew           | `/staff`       | Fictional series crew bios                            |
+| View           | Path           | What you get                                                   |
+| -------------- | -------------- | -------------------------------------------------------------- |
+| Visual Archive | `/`            | Grok Imagine stills, prompt variations, music cues             |
+| Video          | `/video`       | Generated clips and slideshows with production status          |
+| Timeline       | `/timeline`    | Scene status, local edits, exportable production JSON          |
+| Songs          | `/songs`       | Minimax catalog — style prompts, lyrics, episode ties          |
+| Scenes         | `/scenes`      | Scene pages (`/scenes/:id`): locks, sequence, keyframes, video |
+| Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts               |
+| Cartoons       | `/cartoons`    | Short cartoon seeds from agents (no song id)                   |
+| 3D Sequences   | `/sequences`   | Playable in-hub 3D video sequences (10s–2min)                  |
+| Characters     | `/characters`  | Recurring cast bible                                           |
+| Episodes       | `/episodes`    | Read-only episode bible                                        |
+| Crew           | `/staff`       | Fictional series crew bios                                     |
 
 ---
 
@@ -57,7 +58,7 @@ Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/vi
 weeks_of_fire/
 ├── src/                 # React gallery (App, components, data shims)
 │   └── data/generated/  # AUTO-GENERATED — do not hand-edit
-├── content/             # Catalog JSON (cutaways, gallery, characters, staff, episodes, cartoons, sequences, Daisy Bell)
+├── content/             # Catalog JSON (cutaways, gallery, characters, staff, episodes, cartoons, sequences, scene boards)
 ├── songs/               # Minimax markdown + some mp3
 ├── episodes/            # Per-episode synopsis, screenplay, SRT, scenes.json
 ├── characters/          # Reference stills + character notes
@@ -80,16 +81,16 @@ Each `episodes/episode-NN/` typically has YAML-frontmatter `synopsis.md`, `subti
 
 ### Content index (author here, not in generated TS)
 
-| What       | Source of truth            | Generated output                   |
-| ---------- | -------------------------- | ---------------------------------- |
-| Songs      | `songs/*.md`               | `src/data/generated/songs.ts`      |
-| Cutaways   | `content/cutaways/*.json`  | `src/data/generated/cutaways.ts`   |
-| Gallery    | `content/gallery.json`     | `src/data/generated/gallery.ts`    |
-| Characters | `content/characters.json`  | `src/data/generated/characters.ts` |
-| Staff      | `content/staff.json`       | `src/data/generated/staff.ts`      |
-| Daisy Bell | `content/daisy-bell.json`  | `src/data/generated/daisy-bell.ts` |
-| Cartoons   | `content/cartoons/*.json`  | `src/data/generated/cartoons.ts`   |
-| Sequences  | `content/sequences/*.json` | `src/data/generated/sequences.ts`  |
+| What       | Source of truth            | Generated output                     |
+| ---------- | -------------------------- | ------------------------------------ |
+| Songs      | `songs/*.md`               | `src/data/generated/songs.ts`        |
+| Cutaways   | `content/cutaways/*.json`  | `src/data/generated/cutaways.ts`     |
+| Gallery    | `content/gallery.json`     | `src/data/generated/gallery.ts`      |
+| Characters | `content/characters.json`  | `src/data/generated/characters.ts`   |
+| Staff      | `content/staff.json`       | `src/data/generated/staff.ts`        |
+| Scenes     | `content/scenes/*.json`    | `src/data/generated/scene-boards.ts` |
+| Cartoons   | `content/cartoons/*.json`  | `src/data/generated/cartoons.ts`     |
+| Sequences  | `content/sequences/*.json` | `src/data/generated/sequences.ts`    |
 
 **Cast voice, look, backstory, and tone rules** live in the character bible, [`characters/bible/README.md`](characters/bible/README.md) (index, template, open questions), with pairings in [`characters/bible/relationship-map.md`](characters/bible/relationship-map.md). `content/characters.json` is the short catalog card; its `bibleSheet` field links each entry to its sheet. New seeds go in `characters/suggested-characters.md`.
 

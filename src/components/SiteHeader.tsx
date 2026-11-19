@@ -4,10 +4,10 @@ import {
   BadgeCheck,
   BookOpen,
   Box,
+  Clapperboard,
   Clock,
   Film,
   Flame,
-  Flower2,
   Info,
   Lightbulb,
   Music2,
@@ -15,6 +15,7 @@ import {
   UserCircle,
   Search,
   Users,
+  Video as VideoIcon,
 } from 'lucide-react';
 
 import { prefetchView } from '../routes/lazyViews';
@@ -27,9 +28,10 @@ export type SiteView =
   | 'overview'
   | 'finalized'
   | 'gallery'
+  | 'video'
   | 'timeline'
   | 'songs'
-  | 'daisy-bell'
+  | 'scenes'
   | 'suggestions'
   | 'cartoons'
   | 'sequences'
@@ -53,8 +55,14 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
   gallery: {
     title: 'Visual archive',
     description:
-      'Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.',
+      'Production stills and test ideas — scene, test, and character lanes with copy-ready Grok prompts. Cutaway and gag ideas live in Suggestions.',
     icon: Film,
+  },
+  video: {
+    title: 'Video',
+    description:
+      'Every generated clip and slideshow in one place — scene slideshows, Timeline clips, archive clips and cutaway takes, each with its production status.',
+    icon: VideoIcon,
   },
   timeline: {
     title: 'Production timeline',
@@ -68,11 +76,11 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
       'Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.',
     icon: Music2,
   },
-  'daisy-bell': {
-    title: 'Daisy Bell cutaway',
+  scenes: {
+    title: 'Scenes',
     description:
-      'Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.',
-    icon: Flower2,
+      'Scenes with a page of their own — pitch, prompt locks, sequence, keyframe board and finished video. Daisy Bell is the first; every scene uses the same template.',
+    icon: Clapperboard,
   },
   suggestions: {
     title: 'Suggested cutaways',
@@ -116,9 +124,10 @@ const tabs: Array<{ view: SiteView; label: string }> = [
   { view: 'overview', label: 'Overview' },
   { view: 'finalized', label: 'Finalized' },
   { view: 'gallery', label: 'Visual archive' },
+  { view: 'video', label: 'Video' },
   { view: 'timeline', label: 'Timeline' },
   { view: 'songs', label: 'Songs' },
-  { view: 'daisy-bell', label: 'Daisy Bell' },
+  { view: 'scenes', label: 'Scenes' },
   { view: 'suggestions', label: 'Suggestions' },
   { view: 'cartoons', label: 'Cartoons' },
   { view: 'sequences', label: '3D sequences' },
@@ -245,9 +254,10 @@ const tabIcons: Record<SiteView, typeof Film> = {
   overview: Info,
   finalized: BadgeCheck,
   gallery: Film,
+  video: VideoIcon,
   timeline: Clock,
   songs: Music2,
-  'daisy-bell': Flower2,
+  scenes: Clapperboard,
   suggestions: Lightbulb,
   cartoons: PenLine,
   sequences: Box,

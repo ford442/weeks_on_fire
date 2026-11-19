@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { crewPath, isLegacyArchiveLink, pathnameToView, viewPaths } from './paths';
+import {
+  crewPath,
+  isLegacyArchiveLink,
+  legacySceneRedirect,
+  pathnameToView,
+  viewPaths,
+} from './paths';
 
 describe('pathnameToView', () => {
   it('maps sequence routes', () => {
@@ -10,6 +16,32 @@ describe('pathnameToView', () => {
 
   it('keeps cartoons distinct from sequences', () => {
     expect(pathnameToView('/show/cartoons')).toBe('cartoons');
+  });
+});
+
+describe('scene and video routes', () => {
+  it('maps the scenes list and every scene page to one view', () => {
+    expect(viewPaths.scenes).toBe('/show/scenes');
+    expect(pathnameToView('/show/scenes')).toBe('scenes');
+    expect(pathnameToView('/show/scenes/daisy-bell')).toBe('scenes');
+  });
+
+  it('gives Video its own view', () => {
+    expect(viewPaths.video).toBe('/show/video');
+    expect(pathnameToView('/show/video')).toBe('video');
+  });
+});
+
+describe('legacySceneRedirect', () => {
+  it('sends the old Daisy Bell tab to its scene page', () => {
+    expect(legacySceneRedirect('/show/daisy-bell')).toBe('/show/scenes/daisy-bell');
+    expect(legacySceneRedirect('/show/daisy-bell/')).toBe('/show/scenes/daisy-bell');
+  });
+
+  it('leaves every other path alone', () => {
+    expect(legacySceneRedirect('/show/scenes/daisy-bell')).toBeNull();
+    expect(legacySceneRedirect('/show/songs/daisy-bell')).toBeNull();
+    expect(legacySceneRedirect('/daisy-bell')).toBeNull();
   });
 });
 

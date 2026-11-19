@@ -1,13 +1,23 @@
 import { useMemo, useState } from 'react';
-import { Copy, ImageIcon, PanelRightClose, PanelRightOpen, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  ArrowUpRight,
+  Copy,
+  ImageIcon,
+  PanelRightClose,
+  PanelRightOpen,
+  Search,
+} from 'lucide-react';
 
 import { filmScenes, imageKindMeta, type FilmScene, type ImageKind } from '../data/films';
+import { cutawaySuggestions } from '../data/suggestions';
 import { episodeWithSlot, toolLabel } from '../data/taxonomy';
 import { firstCatalogItem } from '../lib/catalog';
 import { pluralize } from '../lib/plural';
 import { episodeOptions, optionValues, themeOptions, toolOptions } from '../lib/filterOptions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
+import { crewPath } from '../routes/paths';
 import {
   countByStatus,
   PRODUCTION_STATUSES,
@@ -16,6 +26,7 @@ import {
   type ProductionStatus,
 } from '../lib/status';
 
+import FilterChip from './FilterChip';
 import FilterSelect, { allValue } from './FilterSelect';
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
@@ -56,12 +67,15 @@ export default function Gallery() {
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
 
   const kindCounts = useMemo(() => {
-    const counts: Record<ImageKind, number> = { scene: 0, suggestion: 0, test: 0, character: 0 };
+    const counts: Record<ImageKind, number> = { scene: 0, test: 0, character: 0 };
     for (const scene of filmScenes) {
       counts[scene.imageKind] += 1;
     }
     return counts;
   }, []);
+
+  // Carry a typed search over, so "gyre" in the archive opens Suggestions already filtered.
+  const suggestionsSearch = query.trim() ? `?${new URLSearchParams({ q: query.trim() })}` : '';
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -133,20 +147,28 @@ export default function Gallery() {
             </div>
 
             <div className="mt-3 flex flex-wrap gap-2">
-              <KindChip
-                active={imageKind === allValue}
-                label={`All (${filmScenes.length})`}
-                onClick={() => setImageKind(allValue)}
-              />
+              <FilterChip active={imageKind === allValue} onClick={() => setImageKind(allValue)}>
+                All ({filmScenes.length})
+              </FilterChip>
               {(Object.keys(imageKindMeta) as ImageKind[]).map((kind) => (
-                <KindChip
+                <FilterChip
                   key={kind}
                   active={imageKind === kind}
-                  label={`${imageKindMeta[kind].label} (${kindCounts[kind]})`}
                   accentClass={imageKindMeta[kind].accent}
                   onClick={() => setImageKind(kind)}
-                />
+                >
+                  {imageKindMeta[kind].label} ({kindCounts[kind]})
+                </FilterChip>
               ))}
+              {/* Cutaway and gag ideas live once, in Suggestions; the archive only points there. */}
+              <Link
+                to={{ pathname: crewPath('/suggestions'), search: suggestionsSearch }}
+                title="Cutaway, gag and scene ideas live in Suggestions"
+                className="inline-flex items-center gap-1 rounded-md border border-dashed border-violet-500/40 px-2.5 py-1 text-sm font-semibold text-violet-200 transition hover:bg-violet-500/10 focus:outline-none focus:ring-2 focus:ring-orange-300"
+              >
+                Suggestions ({cutawaySuggestions.length})
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </Link>
             </div>
 
             <div
@@ -334,31 +356,5 @@ function GalleryCard({ scene, selected, copiedKey, onOpen, onSelect, onCopy }: G
         </button>
       </div>
     </article>
-  );
-}
-
-function KindChip({
-  active,
-  label,
-  accentClass,
-  onClick,
-}: {
-  active: boolean;
-  label: string;
-  accentClass?: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`rounded-md border px-2.5 py-1 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
-        active
-          ? (accentClass ?? 'border-orange-500/60 bg-orange-500/15 text-orange-100')
-          : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
-      }`}
-    >
-      {label}
-    </button>
   );
 }

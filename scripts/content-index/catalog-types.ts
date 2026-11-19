@@ -12,7 +12,8 @@ import type {
   CartoonRecord as CartoonSource,
   CutawayRecord,
   CutawaySegmentRecord,
-  DaisyBellFrameRecord,
+  SceneBoardRecord,
+  SceneFrameRecord,
   FilmSceneRecord,
   SequenceRecord as SequenceSource,
   SeriesCharacterRecord,
@@ -24,9 +25,6 @@ import type {
 export type {
   CartoonStatus,
   CharacterBibleStatus,
-  DaisyBellSequenceBeat,
-  DaisyBellSight,
-  DaisyFrameTreatment,
   EpisodeFiles,
   EpisodeRecord,
   EpisodeStatus,
@@ -34,6 +32,12 @@ export type {
   MediaType,
   SequenceAspect,
   SequenceMedium,
+  SceneBeat,
+  SceneExtra,
+  SceneLock,
+  SceneTone,
+  SceneTreatment,
+  SceneVideo,
   SequenceRenderer,
   SightLane,
   CrewRole,
@@ -71,7 +75,9 @@ export type CutawaySuggestion = Omit<
 
 export type FilmScene = ResolveImage<FilmSceneRecord, 'imagePath', 'imageUrl'>;
 export type SeriesCharacter = ResolveImage<SeriesCharacterRecord, 'imagePath', 'imageUrl'>;
-export type DaisyBellFrame = ResolveImage<DaisyBellFrameRecord, 'imagePath', 'imageUrl'>;
+export type SceneFrame = ResolveImage<SceneFrameRecord, 'imagePath', 'imageUrl'>;
+/** A scene board with each keyframe's `imagePath` resolved into an imported `imageUrl`. */
+export type SceneBoard = Omit<SceneBoardRecord, 'frames'> & { frames: SceneFrame[] };
 
 export type CrewRecord = CrewMemberRecord;
 /** Site-facing crew member: `imageFile` becomes a public `/cast` URL. */

@@ -32,7 +32,15 @@ export const siteViews: SiteViewMeta[] = [
     path: '/show/archive',
     eyebrow: 'Grok Imagine Archive',
     description:
-      'Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.',
+      'Production stills and test ideas — scene, test, and character lanes with copy-ready Grok prompts. Cutaway and gag ideas live in Suggestions.',
+  },
+  {
+    id: 'video',
+    label: 'Video',
+    path: '/show/video',
+    eyebrow: 'Generated Video',
+    description:
+      'Every generated clip and slideshow in one place — scene slideshows, Timeline clips, archive clips and cutaway takes, each with its production status.',
   },
   {
     id: 'timeline',
@@ -51,12 +59,12 @@ export const siteViews: SiteViewMeta[] = [
       'Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.',
   },
   {
-    id: 'daisy-bell',
-    label: 'Daisy Bell',
-    path: '/show/daisy-bell',
-    eyebrow: 'Daisy Bell Cutaway',
+    id: 'scenes',
+    label: 'Scenes',
+    path: '/show/scenes',
+    eyebrow: 'Scene Boards',
     description:
-      'Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.',
+      'Scenes with a page of their own — pitch, prompt locks, sequence, keyframe board and finished video. Daisy Bell is the first; every scene uses the same template.',
   },
   {
     id: 'suggestions',

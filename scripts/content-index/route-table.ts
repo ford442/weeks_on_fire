@@ -1,4 +1,11 @@
-import { loadCartoons, loadCutaways, loadEpisodes, loadSequences, loadSongs } from './load';
+import {
+  loadCartoons,
+  loadCutaways,
+  loadEpisodes,
+  loadSceneBoards,
+  loadSequences,
+  loadSongs,
+} from './load';
 import { SITE_BASE, siteViews } from './views';
 
 /**
@@ -11,7 +18,7 @@ import { SITE_BASE, siteViews } from './views';
 export interface RouteEntry {
   /** Router path under the site base, always with a trailing slash: `/show/songs/x/`. */
   path: string;
-  kind: 'view' | 'song' | 'episode' | 'cartoon' | 'sequence' | 'suggestion';
+  kind: 'view' | 'song' | 'episode' | 'scene' | 'cartoon' | 'sequence' | 'suggestion';
   title: string;
   description: string;
   /** Absolute URL, trailing slash (what Pages serves with a 200). */
@@ -46,6 +53,11 @@ const viewCopy: Record<string, { title: string; description: string }> = {
     description:
       'Stills from the show, each with the prompt that made it. Searchable. Mostly calm.',
   },
+  video: {
+    title: `Video — ${BRAND}`,
+    description:
+      'Generated clips and slideshows, each with its status. Some are finished. Some are a promising start.',
+  },
   timeline: {
     title: `Production Timeline — ${BRAND}`,
     description: 'Every scene, in order, with its status. Some of them are finished.',
@@ -55,10 +67,10 @@ const viewCopy: Record<string, { title: string; description: string }> = {
     description:
       'The soundtrack. Torch songs, thrash, lounge and worse, each written to a picture. Sound on.',
   },
-  'daisy-bell': {
-    title: `Daisy Bell cutaway — ${BRAND}`,
+  scenes: {
+    title: `Scenes — ${BRAND}`,
     description:
-      'Two women on a flower bicycle ride into old London. The film stock objects. Sound on.',
+      'Scenes with a page of their own: the pitch, the keyframes, the cut. The first rides a flower bicycle into old London.',
   },
   suggestions: {
     title: `Cutaways — ${BRAND}`,
@@ -218,6 +230,16 @@ export function buildRouteTable(repoRoot: string): RouteEntry[] {
     }),
   );
 
+  const scenes = loadSceneBoards(repoRoot).map((board) =>
+    entry({
+      path: `${viewPath('scenes')}/${board.id}`,
+      kind: 'scene',
+      ogType: 'video.other',
+      title: titled(board.title, '(scene)'),
+      description: describe(firstSentence(board.pitch), 'A scene from Weeks on Fire.'),
+    }),
+  );
+
   const suggestions = loadCutaways(repoRoot).map((cutaway) =>
     entry({
       path: `${viewPath('suggestions')}/${cutaway.id}`,
@@ -228,5 +250,5 @@ export function buildRouteTable(repoRoot: string): RouteEntry[] {
     }),
   );
 
-  return [...views, ...songs, ...episodes, ...cartoons, ...sequences, ...suggestions];
+  return [...views, ...songs, ...episodes, ...scenes, ...cartoons, ...sequences, ...suggestions];
 }

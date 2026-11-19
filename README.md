@@ -16,9 +16,10 @@ React + Vite gallery with production views:
 | ------------------ | -------------------------------------------------------- |
 | **Overview**       | Logline, synopsis, episodes, cast and crew, what's new   |
 | **Visual Archive** | Grok Imagine stills, prompt variations, music cues       |
+| **Video**          | Generated clips and slideshows, each with its status     |
 | **Timeline**       | Scene status, local edits, exportable production JSON    |
 | **Songs**          | Minimax catalog — style prompts, lyrics, episode ties    |
-| **Daisy Bell**     | Keyframe board, color vs period treatments, sequence     |
+| **Scenes**         | Scene pages: locks, sequence, keyframe board, video      |
 | **Suggestions**    | Cutaways, gags, and scene suggestions with timed prompts |
 | **Cartoons**       | Short cartoon seeds from agents — premise, still, prompt |
 | **3D Sequences**   | Playable in-hub 3D video sequences (10s–2min)            |
@@ -57,16 +58,16 @@ Scene production data lives in [`episodes/episode-NN/scenes.json`](episodes/epis
 
 Catalog data is **not** hand-edited in `src/data/*.ts`. Author in markdown/JSON, then codegen:
 
-| What       | Source of truth                                                | Generated output                   |
-| ---------- | -------------------------------------------------------------- | ---------------------------------- |
-| Songs      | `songs/*.md` (YAML frontmatter + STYLE/LYRICS/NOTES)           | `src/data/generated/songs.ts`      |
-| Cutaways   | `content/cutaways/*.json` (+ optional `prompts/*-segments.md`) | `src/data/generated/cutaways.ts`   |
-| Gallery    | `content/gallery.json`                                         | `src/data/generated/gallery.ts`    |
-| Characters | `content/characters.json`                                      | `src/data/generated/characters.ts` |
-| Crew       | `content/crew.json`                                           | `src/data/generated/crew.ts`      |
-| Daisy Bell | `content/daisy-bell.json`                                      | `src/data/generated/daisy-bell.ts` |
-| Cartoons   | `content/cartoons/*.json` (one file per short cartoon)         | `src/data/generated/cartoons.ts`   |
-| Sequences  | `content/sequences/*.json` (one file per 3D sequence)          | `src/data/generated/sequences.ts`  |
+| What       | Source of truth                                                | Generated output                     |
+| ---------- | -------------------------------------------------------------- | ------------------------------------ |
+| Songs      | `songs/*.md` (YAML frontmatter + STYLE/LYRICS/NOTES)           | `src/data/generated/songs.ts`        |
+| Cutaways   | `content/cutaways/*.json` (+ optional `prompts/*-segments.md`) | `src/data/generated/cutaways.ts`     |
+| Gallery    | `content/gallery.json`                                         | `src/data/generated/gallery.ts`      |
+| Characters | `content/characters.json`                                      | `src/data/generated/characters.ts`   |
+| Crew       | `content/crew.json`                                            | `src/data/generated/crew.ts`         |
+| Scenes     | `content/scenes/*.json` (one file per scene board)             | `src/data/generated/scene-boards.ts` |
+| Cartoons   | `content/cartoons/*.json` (one file per short cartoon)         | `src/data/generated/cartoons.ts`     |
+| Sequences  | `content/sequences/*.json` (one file per 3D sequence)          | `src/data/generated/sequences.ts`    |
 
 ```bash
 npm run codegen        # regenerate src/data/generated/*

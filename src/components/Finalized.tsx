@@ -1,91 +1,31 @@
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, Clapperboard, ImageIcon, Music2 } from 'lucide-react';
 
 import { filmScenes, type FilmScene } from '../data/films';
-import { AVAILABLE_EPISODES, loadEpisodeProduction } from '../data/production';
 import { songs } from '../data/songs';
-import { cutawaySuggestions } from '../data/suggestions';
 import { episodeWithSlot } from '../data/taxonomy';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
+import { useVideoItems } from '../hooks/useVideoItems';
 import { pluralize } from '../lib/plural';
 import { FINALIZED_STATUSES, isFinalized, productionStatusMeta } from '../lib/status';
-import { crewPath, viewPaths } from '../routes/paths';
+import { finalizedVideoItems } from '../lib/videos';
+import { crewPath } from '../routes/paths';
 
+import FilterChip from './FilterChip';
 import { allValue } from './FilterSelect';
 import Lightbox from './Lightbox';
 import SongAudioPlayer from './SongAudioPlayer';
 import StatusBadge from './StatusBadge';
-
-import type { ProductionStatus } from '../lib/status';
+import VideoCard from './VideoCard';
 
 type FinalizedType = 'song' | 'image' | 'video';
-
-interface VideoItem {
-  key: string;
-  title: string;
-  status: ProductionStatus;
-  context: string;
-  to?: string;
-  href?: string;
-}
 
 const finalizedSongs = songs.filter((song) => isFinalized(song.status));
 const finalizedImages = filmScenes.filter(
   (scene) => scene.mediaType === 'image' && isFinalized(scene.status),
 );
-const catalogVideos: VideoItem[] = [
-  ...filmScenes
-    .filter((scene) => scene.mediaType === 'video' && isFinalized(scene.status))
-    .map((scene) => ({
-      key: `gallery:${scene.id}`,
-      title: scene.title,
-      status: scene.status,
-      context: `Visual archive · ${episodeWithSlot(scene.episode, scene.slot)}`,
-      to: viewPaths.gallery,
-    })),
-  ...cutawaySuggestions
-    .filter((cutaway) => isFinalized(cutaway.status))
-    .map((cutaway) => ({
-      key: `cutaway:${cutaway.id}`,
-      title: cutaway.title,
-      status: cutaway.status,
-      context: `Cutaway · ${cutaway.episode} · ${cutaway.runtime}`,
-      to: crewPath(`/suggestions/${cutaway.id}`),
-    })),
-];
-
-/** Approved and Final timeline scenes from the committed `scenes.json` files (not local edits). */
-function useFinalizedTimelineVideos(): VideoItem[] {
-  const [items, setItems] = useState<VideoItem[]>([]);
-  useEffect(() => {
-    let cancelled = false;
-    void Promise.all(AVAILABLE_EPISODES.map((episode) => loadEpisodeProduction(episode))).then(
-      (productions) => {
-        if (cancelled) return;
-        setItems(
-          productions.flatMap((production) =>
-            (production?.scenes ?? [])
-              .filter((scene) => isFinalized(scene.status))
-              .map((scene) => ({
-                key: `timeline:${production?.episode}:${scene.id}`,
-                title: scene.title,
-                status: scene.status,
-                context: `Timeline · Episode ${production?.episode} · ${scene.timestamp}`,
-                ...(scene.mediaUrl ? { href: scene.mediaUrl } : { to: viewPaths.timeline }),
-              })),
-          ),
-        );
-      },
-    );
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-  return items;
-}
-
 export default function Finalized() {
   const [type, setType] = useUrlParam<typeof allValue | FinalizedType>('type', allValue, [
     allValue,
@@ -95,8 +35,9 @@ export default function Finalized() {
   ]);
   const [lightboxScene, setLightboxScene] = useState<FilmScene | null>(null);
   const { copiedKey, copy } = useCopyToClipboard();
-  const timelineVideos = useFinalizedTimelineVideos();
-  const videos = useMemo(() => [...catalogVideos, ...timelineVideos], [timelineVideos]);
+  const allVideos = useVideoItems();
+  // The same list as the Video view, narrowed to Approved and Final.
+  const videos = useMemo(() => finalizedVideoItems(allVideos), [allVideos]);
 
   const counts: Record<FinalizedType, number> = {
     song: finalizedSongs.length,
@@ -115,18 +56,18 @@ export default function Finalized() {
           across songs, stills and video.
         </p>
         <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filter by type">
-          <TypeChip active={type === allValue} onClick={() => setType(allValue)}>
+          <FilterChip active={type === allValue} onClick={() => setType(allValue)}>
             All ({total})
-          </TypeChip>
-          <TypeChip active={type === 'song'} onClick={() => setType('song')}>
+          </FilterChip>
+          <FilterChip active={type === 'song'} onClick={() => setType('song')}>
             Songs ({counts.song})
-          </TypeChip>
-          <TypeChip active={type === 'image'} onClick={() => setType('image')}>
+          </FilterChip>
+          <FilterChip active={type === 'image'} onClick={() => setType('image')}>
             Images ({counts.image})
-          </TypeChip>
-          <TypeChip active={type === 'video'} onClick={() => setType('video')}>
+          </FilterChip>
+          <FilterChip active={type === 'video'} onClick={() => setType('video')}>
             Video ({counts.video})
-          </TypeChip>
+          </FilterChip>
         </div>
       </div>
 
@@ -216,36 +157,14 @@ export default function Finalized() {
           icon={<Clapperboard size={18} aria-hidden="true" />}
           title="Video"
           count={counts.video}
-          empty="No video is marked Approved or Final yet. Timeline scenes, cutaways and archive clips land here when they are."
+          empty="No video is marked Approved or Final yet. Scene videos, Timeline clips, cutaways and archive clips land here when they are."
         >
           <ul className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {videos.map((video) => {
-              const label = (
-                <>
-                  <span className="block truncate font-semibold text-white">{video.title}</span>
-                  <span className="block truncate text-xs text-zinc-400">{video.context}</span>
-                </>
-              );
-              const linkClass =
-                'min-w-0 flex-1 hover:text-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-300';
-              return (
-                <li
-                  key={video.key}
-                  className="flex items-start justify-between gap-3 rounded-lg border border-zinc-800 bg-zinc-950 p-4"
-                >
-                  {video.href ? (
-                    <a href={video.href} target="_blank" rel="noreferrer" className={linkClass}>
-                      {label}
-                    </a>
-                  ) : (
-                    <Link to={video.to ?? viewPaths.timeline} className={linkClass}>
-                      {label}
-                    </Link>
-                  )}
-                  <StatusBadge status={video.status} size="xs" />
-                </li>
-              );
-            })}
+            {videos.map((video) => (
+              <li key={video.key} className="flex">
+                <VideoCard item={video} />
+              </li>
+            ))}
           </ul>
         </FinalizedSection>
       )}
@@ -294,30 +213,5 @@ function FinalizedSection({
         </p>
       )}
     </section>
-  );
-}
-
-function TypeChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      aria-pressed={active}
-      onClick={onClick}
-      className={`rounded-md border px-3 py-1.5 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
-        active
-          ? 'border-orange-500/60 bg-orange-500/15 text-orange-100'
-          : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
-      }`}
-    >
-      {children}
-    </button>
   );
 }

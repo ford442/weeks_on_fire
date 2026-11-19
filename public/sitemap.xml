@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ford442.github.io/weeks_on_fire/show/video/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ford442.github.io/weeks_on_fire/show/timeline/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -26,7 +31,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ford442.github.io/weeks_on_fire/show/daisy-bell/</loc>
+    <loc>https://ford442.github.io/weeks_on_fire/show/scenes/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -657,6 +662,11 @@
   </url>
   <url>
     <loc>https://ford442.github.io/weeks_on_fire/show/episodes/05/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ford442.github.io/weeks_on_fire/show/scenes/daisy-bell/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

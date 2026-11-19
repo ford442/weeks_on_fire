@@ -2,7 +2,23 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST_DIR = 'dist/assets';
-const MAIN_ENTRY_LIMIT_BYTES = 500 * 1024;
+// Raw (pre-gzip) bytes. The entry is React + React Router's data router; Lighthouse CI
+// (lighthouserc.json) budgets what is actually transferred.
+const MAIN_ENTRY_LIMIT_BYTES = 360 * 1024;
+/** View chunks that used to carry a whole catalog, and the catalog-index chunks they import. */
+const ROUTE_CHUNK_LIMIT_BYTES = 100 * 1024;
+const ROUTE_CHUNKS = ['Songs-', 'songs-', 'Suggestions-', 'suggestions-'] as const;
+/** Every other lazy chunk: a ceiling that catches a catalog sliding back into a view. */
+const ANY_CHUNK_LIMIT_BYTES = 200 * 1024;
+
+/**
+ * An emitted song or cutaway literal: a field only those records carry (a song's style prompt, a
+ * cutaway segment's on-screen description) followed directly by a string. Component code reads these
+ * fields but never writes them as literals, so a match means a full record is bundled. They live
+ * only in public/catalog/<kind>/<id>.json now. (Cartoons, sequences and episodes still bundle
+ * their own long fields; they are not split yet.)
+ */
+const RECORD_LITERAL = /\b(stylePrompt|onScreen):\s*[`"']/;
 
 // Property names that only exist in the full generated catalogs (`songs.ts` carries every
 // `stylePrompt` and lyric, `cutaways.ts` every segment `grokImaginePrompt`). Property names survive
@@ -110,3 +126,45 @@ if (heavy.length > 0) {
 }
 
 console.log('check-bundle-size: Timeline chunk has no full lyrics or segment prompts');
+
+// Route chunks stay small: the list views bundle summaries, not records.
+const overBudget: string[] = [];
+for (const prefix of ROUTE_CHUNKS) {
+  const name = files.find((file) => file.startsWith(prefix));
+  if (!name) {
+    overBudget.push(`no ${prefix}*.js chunk (renamed? update ROUTE_CHUNKS)`);
+    continue;
+  }
+  const size = statSync(join(DIST_DIR, name)).size;
+  if (size > ROUTE_CHUNK_LIMIT_BYTES) {
+    overBudget.push(`${name} is ${formatKb(size)} (limit ${formatKb(ROUTE_CHUNK_LIMIT_BYTES)})`);
+  }
+}
+for (const name of files) {
+  if (name === mainEntry) continue;
+  const size = statSync(join(DIST_DIR, name)).size;
+  if (size > ANY_CHUNK_LIMIT_BYTES) {
+    overBudget.push(`${name} is ${formatKb(size)} (limit ${formatKb(ANY_CHUNK_LIMIT_BYTES)})`);
+  }
+}
+if (overBudget.length > 0) {
+  console.error(`\ncheck-bundle-size: chunk budgets exceeded:\n  ${overBudget.join('\n  ')}`);
+  process.exit(1);
+}
+console.log(
+  `check-bundle-size: route chunks within ${formatKb(ROUTE_CHUNK_LIMIT_BYTES)}, others within ${formatKb(ANY_CHUNK_LIMIT_BYTES)}`,
+);
+
+// No full song or cutaway record in any chunk, the entry included.
+const bundledRecords = files.flatMap((name) => {
+  const match = RECORD_LITERAL.exec(readFileSync(join(DIST_DIR, name), 'utf8'));
+  return match ? [`${name} (${match[1]}: …)`] : [];
+});
+if (bundledRecords.length > 0) {
+  console.error(
+    `\ncheck-bundle-size: full catalog records are bundled:\n  ${bundledRecords.join('\n  ')}\n` +
+      'Long fields belong in public/catalog/<kind>/<id>.json (see scripts/content-index/record-schemas.ts).',
+  );
+  process.exit(1);
+}
+console.log('check-bundle-size: no lyrics, style prompts or segment prompts in any JS chunk');

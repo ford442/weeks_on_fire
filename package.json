@@ -18,6 +18,7 @@
     "format:write": "prettier --write src scripts e2e playwright.config.ts",
     "build": "npm run codegen && npm run agent-docs && tsc -b && vite build --base ${VITE_BASE:-./} && tsx scripts/check-index-encoding.ts && tsx scripts/emit-link-index.ts && tsx scripts/emit-route-html.ts && cp dist/index.html dist/404.html",
     "build:check": "npm run build && tsx scripts/check-bundle-size.ts",
+    "budgets": "lhci autorun",
     "preview": "vite preview",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",

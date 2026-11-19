@@ -82,15 +82,35 @@ export function RouteFallback() {
   );
 }
 
+/**
+ * Warms the views most visitors open next, once the current one has painted: after `load`, a
+ * further pause, then an idle slot. Starting earlier puts other views' parse and evaluate on the
+ * main thread while this one is still painting. Skipped on Save-Data / 2G connections.
+ */
 function usePrefetchLikelyViews() {
   useEffect(() => {
+    const connection = (
+      navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }
+    ).connection;
+    if (connection?.saveData || /2g/.test(connection?.effectiveType ?? '')) return;
+
+    let idle: number | undefined;
+    let timer: ReturnType<typeof setTimeout> | undefined;
     const run = () => likelyViews.forEach(prefetchView);
-    if ('requestIdleCallback' in window) {
-      const handle = window.requestIdleCallback(run, { timeout: 4000 });
-      return () => window.cancelIdleCallback(handle);
-    }
-    const handle = setTimeout(run, 2000);
-    return () => clearTimeout(handle);
+    const schedule = () => {
+      timer = setTimeout(() => {
+        if ('requestIdleCallback' in window)
+          idle = window.requestIdleCallback(run, { timeout: 4000 });
+        else run();
+      }, 3000);
+    };
+    if (document.readyState === 'complete') schedule();
+    else window.addEventListener('load', schedule, { once: true });
+    return () => {
+      window.removeEventListener('load', schedule);
+      if (timer !== undefined) clearTimeout(timer);
+      if (idle !== undefined) window.cancelIdleCallback(idle);
+    };
   }, []);
 }
 

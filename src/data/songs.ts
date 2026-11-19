@@ -1,5 +1,3 @@
-import { SongRecordSchema } from '../../scripts/content-index/record-schemas';
-
 import { songs } from './generated/songs';
 import { fetchRecord, prefetch, useRecord, type RecordSource } from './records';
 
@@ -11,7 +9,9 @@ export { songs, linkedAudioFilenames, audioFilenames } from './generated/songs';
 const songSource: RecordSource<Song> = {
   kind: 'songs',
   known: new Set(songs.map((song) => song.id)),
-  parse: (raw) => SongRecordSchema.parse(raw),
+  // Imported on first use: zod stays off the Songs list's critical path.
+  parse: async (raw) =>
+    (await import('../../scripts/content-index/record-schemas')).SongRecordSchema.parse(raw),
 };
 
 /** Full song (style prompt, lyrics, notes) from `public/catalog/songs/<id>.json`. */

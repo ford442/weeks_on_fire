@@ -1,5 +1,3 @@
-import { CutawayRecordSchema } from '../../scripts/content-index/record-schemas';
-
 import { cutawayStillPictures, cutawayStillUrls, cutawaySuggestions } from './generated/cutaways';
 import { fetchRecord, prefetch, useRecord, type RecordSource } from './records';
 
@@ -18,7 +16,9 @@ export { cutawaySuggestions } from './generated/cutaways';
 const cutawaySource: RecordSource<CutawaySuggestion> = {
   kind: 'cutaways',
   known: new Set(cutawaySuggestions.map((cutaway) => cutaway.id)),
-  parse: (raw) => {
+  parse: async (raw) => {
+    // Imported on first use: zod stays off the schedule's critical path.
+    const { CutawayRecordSchema } = await import('../../scripts/content-index/record-schemas');
     const record = CutawayRecordSchema.parse(raw);
     return {
       ...record,

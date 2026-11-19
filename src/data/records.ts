@@ -37,8 +37,11 @@ export interface RecordSource<T> {
   kind: RecordKind;
   /** Ids in the bundled index; anything else is a 404 without a request. */
   known: ReadonlySet<string>;
-  /** Validates the fetched JSON (and resolves anything bundle-relative, like still URLs). */
-  parse: (raw: unknown) => T;
+  /**
+   * Validates the fetched JSON (and resolves anything bundle-relative, like still URLs). May be
+   * async so the schema module loads beside the request instead of with the list view.
+   */
+  parse: (raw: unknown) => T | Promise<T>;
 }
 
 export function fetchRecord<T>(source: RecordSource<T>, id: string): Promise<T> {
@@ -54,7 +57,7 @@ export function fetchRecord<T>(source: RecordSource<T>, id: string): Promise<T> 
     const response = await fetch(url);
     if (response.status === 404) throw new RecordNotFoundError(source.kind, id);
     if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
-    return source.parse(await response.json());
+    return await source.parse(await response.json());
   })().then(
     (value) => {
       settled.set(key, { ok: true, value });

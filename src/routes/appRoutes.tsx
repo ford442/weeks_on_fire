@@ -2,6 +2,7 @@ import { data, Navigate, type LoaderFunctionArgs, type RouteObject } from 'react
 
 import { RecordNotFoundError } from '../data/records';
 
+import { prefetchView } from './lazyViews';
 import { CREW_PREFIX, viewPaths } from './paths';
 import {
   Album,
@@ -29,6 +30,8 @@ import {
   TimelinePage,
   Video,
 } from './routeElements';
+
+import type { SiteView } from '../components/SiteHeader';
 
 /** React Router's not-found contract: a thrown 404 response, caught by the nearest `errorElement`. */
 function throwNotFound(): never {
@@ -67,10 +70,23 @@ const cutawayLoader = recordLoader(async (id) =>
 );
 
 /** `/songs` opens on the first song; warm it with the list. */
-async function songsIndexLoader() {
-  const { loadSong, songs } = await import('../data/songs');
-  if (songs[0]) await loadSong(songs[0].id).catch(() => undefined);
+/** `/songs` opens on the first song: start its record with the list, without blocking the list. */
+function songsIndexLoader() {
+  void import('../data/songs').then(({ prefetchSong, songs }) => {
+    if (songs[0]) prefetchSong(songs[0].id);
+  });
   return null;
+}
+
+/**
+ * Starts the view's chunk alongside its loader. `React.lazy` would otherwise request it only
+ * once the loader settles and the element renders, a waterfall on every deep link.
+ */
+function withView(view: SiteView, loader: (args: LoaderFunctionArgs) => Promise<unknown>) {
+  return (args: LoaderFunctionArgs) => {
+    prefetchView(view);
+    return loader(args);
+  };
 }
 
 const detail = (path: string): string => `${path}/:id`;
@@ -82,38 +98,57 @@ const crewViews: RouteObject[] = [
   { path: viewPaths.video, element: <Video /> },
   { path: viewPaths.timeline, element: <TimelinePage /> },
   { path: viewPaths.songs, element: <Songs />, loader: songsIndexLoader },
-  { path: detail(viewPaths.songs), element: <Songs />, loader: songLoader },
+  { path: detail(viewPaths.songs), element: <Songs />, loader: withView('songs', songLoader) },
   { path: viewPaths.scenes, element: <Scenes /> },
   {
     path: detail(viewPaths.scenes),
     element: <Scenes />,
-    loader: idLoader(async () => (await import('../data/sceneBoards')).sceneBoards),
+    loader: withView(
+      'scenes',
+      idLoader(async () => (await import('../data/sceneBoards')).sceneBoards),
+    ),
   },
   { path: viewPaths.suggestions, element: <Suggestions /> },
-  { path: detail(viewPaths.suggestions), element: <Suggestions />, loader: cutawayLoader },
+  {
+    path: detail(viewPaths.suggestions),
+    element: <Suggestions />,
+    loader: withView('suggestions', cutawayLoader),
+  },
   { path: viewPaths.cartoons, element: <Cartoons /> },
   {
     path: detail(viewPaths.cartoons),
     element: <Cartoons />,
-    loader: idLoader(async () => (await import('../data/cartoons')).cartoons),
+    loader: withView(
+      'cartoons',
+      idLoader(async () => (await import('../data/cartoons')).cartoons),
+    ),
   },
   { path: viewPaths.sequences, element: <Sequences /> },
   {
     path: detail(viewPaths.sequences),
     element: <Sequences />,
-    loader: idLoader(async () => (await import('../data/sequences')).sequences),
+    loader: withView(
+      'sequences',
+      idLoader(async () => (await import('../data/sequences')).sequences),
+    ),
   },
   { path: viewPaths.characters, element: <Characters /> },
   {
     path: detail(viewPaths.characters),
     element: <Characters />,
-    loader: idLoader(async () => (await import('../data/characters')).seriesCharacters),
+    loader: withView(
+      'characters',
+      idLoader(async () => (await import('../data/characters')).seriesCharacters),
+    ),
   },
   { path: viewPaths.episodes, element: <Episodes /> },
   {
     path: detail(viewPaths.episodes),
     element: <Episodes />,
-    loader: idLoader(async () => (await import('../data/episodes')).episodes),
+    loader: withView(
+      'episodes',
+      idLoader(async () => (await import('../data/episodes')).episodes),
+    ),
   },
   { path: viewPaths.crew, element: <Crew /> },
   { path: viewPaths.search, element: <SearchPage /> },

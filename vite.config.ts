@@ -5,6 +5,7 @@ import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { imagetools } from 'vite-imagetools';
+import { VitePWA } from 'vite-plugin-pwa';
 
 import { servedAudioName } from './scripts/content-index/audio-names';
 
@@ -71,6 +72,54 @@ export default defineConfig({
       cache: { dir: '.cache/imagetools' },
     }),
     songAudio(),
+    VitePWA({
+      // main.tsx registers the worker itself (src/lib/serviceWorker.ts) so a relative-base build
+      // still finds it from a deep route.
+      injectRegister: false,
+      // Offline reading, not an installable app: there is no icon set to put in a manifest.
+      manifest: false,
+      workbox: {
+        // The app shell and the catalog indexes; everything else is cached the first time it's used.
+        globPatterns: ['index.html', 'assets/index-*.{js,css}', 'catalog/*/index.json'],
+        navigateFallback: 'index.html',
+        // Files the worker must never answer with the SPA shell.
+        navigateFallbackDenylist: [/\/audio\//, /\/catalog\//, /\.(?:txt|xml|json|webp)$/],
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
+        runtimeCaching: [
+          {
+            // Hashed view chunks and styles: immutable, so the first copy is the copy.
+            urlPattern: /\/assets\/[^/]+\.(?:js|css)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'wof-chunks',
+              expiration: { maxEntries: 250, maxAgeSeconds: 60 * 60 * 24 * 60 },
+            },
+          },
+          {
+            // Per-record JSON (public/catalog/<kind>/<id>.json): show the cached record at once,
+            // refresh it behind the scenes.
+            urlPattern: /\/catalog\/[^/]+\/[^/]+\.json$/,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'wof-catalog-records',
+              expiration: { maxEntries: 400 },
+            },
+          },
+          {
+            // Stills (hashed in assets/, or cast portraits in public/cast/).
+            urlPattern: /\/(?:assets|cast)\/[^/]+\.(?:avif|webp|jpe?g|png|gif|svg)$/,
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'wof-stills',
+              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 30 },
+            },
+          },
+          // No rule for audio/: mp3s are large, range-requested, and never cached by the worker.
+        ],
+      },
+    }),
   ],
   build: {
     rollupOptions: {

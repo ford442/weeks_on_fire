@@ -40,7 +40,10 @@ export default function Songs() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { search } = useLocation();
-  const [selected, setSelected] = useState<SongSummary>(firstCatalogItem(songs, 'songs'));
+  // Start on the linked song so a deep link never fetches the first song's record as well.
+  const [selected, setSelected] = useState<SongSummary>(
+    () => songs.find((song) => song.id === id) ?? firstCatalogItem(songs, 'songs'),
+  );
   const [sheetOpen, setSheetOpen] = useState(false);
   const [query, setQuery] = useUrlParam('q', '');
   const episodes = useMemo(() => episodeOptions(songs.map((song) => song.episode)), []);

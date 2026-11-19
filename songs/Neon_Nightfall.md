@@ -1,68 +1,94 @@
 ---
-id: "neon-nightfall"
-title: "Neon Nightfall"
-added: "2026-11-06"
+id: neon-nightfall
+title: Neon Nightfall
+added: 2026-11-06
 genre: "Pop & synth-pop"
-subgenre: "cyberpunk"
-description: "A synth‑wave chase cutaway with neon‑lit alley, drone, rain, and billboard flash"
-episode: "visual"
-tags: ["cyberpunk", "chase", "neon", "rain", "drone"]
+subgenre: cyberpunk chase synth-wave
+description: Thirty-second neo-noir alley chase — drone pass, billboard flash freeze, mouths off, diegetic rain and siren.
+episode: visual
+slot: Neon Nightfall (alley plate)
+tags: [cyberpunk, chase, neon, rain, drone, synth-wave, cutaway, 30-seconds, mouths-off]
+instrumental: false
+audioFile: null
 ---
+STYLE:
 
-## Video concept
-A 30‑second neon‑lit alley chase. A hovering drone darts between rain‑slick walls while a lone runner sprints, lighting up the wet pavement with strobing LEDs. Mid‑run a sudden neon billboard flickers, casting a brief flash that freezes the motion for a beat before the chase resumes.
+Synth-wave and dark synth-pop chase bed, 108 BPM locked (no drift), E minor, 4/4, straight eighths, exactly 0:30. Tight side-chain pumping on the kick, analog sub bass on the root, gated reverb snare on two and four after the intro, wide shimmering pads (magenta-tinted left, cyan-tinted right), one metallic portamento lead for the hook, short plate reverb on a single close female vocal — breathy, cool, not belting, never ad-libs, never crowd. Intro 0:00–0:08: low arpeggiated pulse and pads only, no snare. At 0:08.0 **hard mute** the entire bed for 2.0s (drone swoop slot — no kick, no tail, no reverb wash). At 0:10.0 bed returns with snare and verse energy. Verse 0:10–0:18: vocal rides the stride, bass walks in eighths. At 0:18.0 **full silence** for 2.0s (billboard flash — absolutely nothing from the song, not even a drone note). At 0:20.0 chorus slams in: doubled hook, brighter lead, sub drops an octave on the downbeat. 0:24–0:30: distant siren is **not** in the Minimax render — leave headroom for a picture siren stem. End on a sustained hook note that is **cut dead** at 0:30.0 with no fade. No EDM festival riser, no trap hats, no guitar, no choir, no spoken word, no male vocal, no copyrighted artist reference. Professionally neutral, never wink. Original melody.
 
-## Video use map
-- **Length:** 30 s (matching the video).
-- **Pattern:**
-  - 0:00‑0:08 – Continuous low‑drone bed while the runner starts.
-  - 0:08‑0:10 – Hard cut to a percussive burst as the drone zooms past (music drops).
-  - 0:10‑0:18 – Verse‑on‑action: melodic synth line rides the chase rhythm.
-  - 0:18‑0:20 – Sudden silence (music duck) for the billboard flash.
-  - 0:20‑0:30 – Chorus returns, higher‑energy synths, with a brief bridge‑style interlude at 0:26 for the drone’s “whoosh” impact.
-- **Breaks:** Music drops at 0:08 (drone swoop) and 0:18 (billboard flash).
-- **Mouths rule:** *Mouths off* – all picture dialogue stays silent; only diegetic sounds break through.
 
-## Diegetic sound list
-1. Rain patter – constant background, cuts the music at 0:18.
-2. Drone whir – short metallic swoosh (0:08‑0:09).
-3. Footsteps on wet pavement – syncopated thuds, layer under the verse.
-4. Neon billboard flicker – brief electric buzz, replaces music for 1 beat (0:18‑0:19).
-5. Street‑level siren – distant wail, fades in at 0:24 for an atmospheric lift.
+LYRICS:
 
-## Minimax STYLE
-```
-STYLE: synth‑wave, 108 BPM, tight side‑chain, gliding pads, metallic lead, reverb‑drenched vocals.
-GENRE: cyber‑punk chase interrupt.
-```
+[Intro]
 
-## Minimax LYRICS
-```
-(Verse)
-Neon veins, they pulse, we’re racing through the night,
-Rain‑kissed streets, reflected light, a thousand‑fold sight.
+[Verse]
+Neon veins, they pulse, we're racing through the night
+Rain-kissed streets, reflected light, a thousandfold sight
 
-(Pre‑Chorus)
-Drone above, humming cold, a silver scar,
-Heartbeats sync to the synth, we’re chasing far.
+[Pre-Chorus]
+Drone above, humming cold, a silver scar
+Heartbeats sync to the synth, we're chasing far
 
-(Chorus)
-Flash!—the billboard burns, a moment frozen thin,
-Silence bleeds, then beats return, we dive in.
-```
+[Chorus]
+Flash — the billboard burns, a moment frozen thin
+Silence bleeds, then beats return, we dive in
 
-## Flow SFX / stem brief
-1. **Drone swoop:** “metallic whir, 0.9 s, high‑pitched, with a quick rise‑fade”.
-2. **Rain patter loop:** “steady rain on concrete, 2‑bar looping, low‑pass filtered”.
-3. **Footstep thuds:** “wet concrete step, 0.4 s, tight compression, layered 4×”.
-4. **Billboard flash buzz:** “electric spark, 0.3 s, sharp high‑frequency crack”.
-5. **Siren swell:** “distant police siren, 1‑s fade‑in, low‑mid wobble”.
+[Outro]
 
-## Manipulation map
-- **0:08‑0:09** – Cut music, insert Drone swoop SFX, then restart synth bed.
-- **0:18‑0:19** – Full duck (silence) for Billboard flash buzz and Rain patter to dominate.
-- **0:24‑0:26** – Add Siren swell under chorus bridge; cross‑fade from synth lead.
-- **0:28‑0:30** – Hard cut to a 2‑bar repeat of the chorus hook, with a short Vinyl scratch on the word “flash”.
 
-## Board note
-*Neon Nightfall* pairs a high‑energy cyber‑punk chase visual with a synth‑wave Minimax bed that mirrors the runner’s tempo. The video dictates abrupt drops for the drone swoop and billboard flash, letting diegetic rain and siren sounds cut through the music, while the Minimax lead rides the chase’s momentum. The result is a concise 30‑second hybrid cutaway that feels like a live‑action soundtrack for a rain‑slick neon street.
+NOTES:
+
+### Picture (cutaway)
+**Neon Nightfall** — `content/cutaways/neon-nightfall.json`, board
+`prompts/neon-nightfall-segments.md`. One rain-slick megacity alley, one hooded runner with white
+LED trim, one matte-grey surveillance drone, one abstract billboard at the vanishing point. Series
+cast does not appear; this is its own neo-noir world.
+
+### Video use map (`docs/song-method.md`, item 1)
+- **Target length:** 0:30 wall clock, five segments A–E on the board. 108 BPM = 1.8 beats per second
+  (54 beats total); treat segment boundaries as **hard cuts**, not crossfades.
+- **Pattern:** continuous low bed on the sprint (A) · **full bed out** on the drone pass (B) ·
+  verse-on-action chase (C) · **full bed silent** on the billboard flash (D) · chorus-on-action
+  to the tag (E).
+- **Breaks:** mute 0:08.0–0:10.0 for rotor whir; mute 0:18.0–0:20.0 for electric buzz and rain;
+  no ducking elsewhere — picture sounds sit under the vocal when the bed plays.
+- **Mouths:** OFF all 30s. Vocal is off-picture narration / interior; the hood hides any face; no
+  lip-sync. Allowed because the singer never addresses anyone on screen and nothing in frame has a
+  mouth to contradict.
+
+### Diegetic sound (`docs/song-method.md`, item 2)
+Picture sounds are laid in the edit; Minimax supplies only the song stem.
+
+| Sound | When | Through picture or scored? | What the bed does |
+|---|---|---|---|
+| Rain on asphalt | 0:00–0:30 | Picture, constant under-bed, loudest in B and D | Nothing; never imitate rain in the synth |
+| Rotor swoop | 0:08–0:09 | Picture, loudest event in B | **Muted** 0:08–0:10 |
+| Footfalls in puddles | 0:10–0:18, 0:20–0:28 | Picture, syncopated under verse and chorus | Groove sits over; do not add kick fills that mimic steps |
+| Billboard buzz | 0:18–0:19 | Picture, sharp electric tick | **Silent** 0:18–0:20 |
+| Distant siren | 0:24–0:30 | Picture, fades in, never resolves | Chorus under; no siren in Minimax prompt |
+| Speech | — | None | — |
+
+Item 2 in `docs/song-method.md` is still truncated after this heading in the owner lock; no extra
+rules were invented beyond the table above.
+
+### Minimax generation (`docs/song-method.md`, item 3)
+- **Genre:** synth-wave chase interrupt — neon noir, side-chain, metallic lead. Chosen because the
+  plate is night rain and strobing signage, not glam metal or cabaret.
+- **Paste:** use the `STYLE:` and `LYRICS:` blocks above as-is. Expect to hard-cut mutes at 0:08
+  and 0:18 in the DAW if the model keeps playing through the drops.
+- Item 3 in `docs/song-method.md` is still truncated mid-sentence (“what the video suggests…”); any
+  steps after item 3 in the owner paste are still missing and were not guessed.
+
+### Flow / picture-sound
+The board treats the alley as the drummer: the drone pass and billboard flash are the two places
+the song must go completely quiet so rotor whir, rain, and buzz can land. The verse and chorus ride
+the runner’s stride in C and E while the LED trim keeps pulsing even during the “freeze” in D — the
+picture’s structural flaw, held. A distant siren stem finishes the last six seconds under the hook
+without resolving, so the cutaway can exit still chased.
+
+### Callbacks (references, not spends)
+Wet asphalt and neon that lies — house sonic brief (`notes/song-suggestions.md`), as atmosphere only.
+No cast callbacks, no Lace Waterfall, no EyeWash, no E X I hero prop (negatived on the board).
+
+### Open questions
+Whether the runner is pursuer or pursued; whether the drone is police or private; whether the
+billboard glyphs imply a story or stay abstract. Owner to lock before picture generate.

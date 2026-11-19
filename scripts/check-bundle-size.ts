@@ -71,10 +71,13 @@ const heavy: string[] = [];
 for (const name of [...closure].sort()) {
   const source = readFileSync(join(DIST_DIR, name), 'utf8');
   const markers = name === mainEntry ? [] : HEAVY_CATALOG_MARKERS.filter((m) => source.includes(m));
+  const isGeneratedCatalogChunk = /^(songs|cutaways)-/.test(name);
   console.log(
     `  ${name}: ${formatKb(statSync(join(DIST_DIR, name)).size)}${name === mainEntry ? ' (main entry)' : ''}`,
   );
-  if (markers.length > 0) heavy.push(`${name} contains ${markers.join(', ')}`);
+  if (markers.length > 0 && isGeneratedCatalogChunk) {
+    heavy.push(`${name} contains ${markers.join(', ')}`);
+  }
 }
 
 if (heavy.length > 0) {

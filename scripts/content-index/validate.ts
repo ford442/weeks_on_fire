@@ -14,6 +14,30 @@ import type {
 } from './schemas';
 import type { ParsedSong } from './load';
 
+/**
+ * Explicit opt-out for long-form prompt docs that intentionally have no cutaway
+ * (see content/README.md). Each entry needs a path and a non-empty reason.
+ */
+function loadStandalonePrompts(repoRoot: string, errors: string[]): Set<string> {
+  const file = join(repoRoot, 'content/standalone-prompts.json');
+  const result = new Set<string>();
+  if (!existsSync(file)) return result;
+  const entries = JSON.parse(readFileSync(file, 'utf8')) as Array<{
+    path?: string;
+    reason?: string;
+  }>;
+  for (const entry of entries) {
+    if (!entry.path || !/^prompts\/[^/]+-segments\.md$/.test(entry.path) || !entry.reason?.trim()) {
+      errors.push(
+        `content/standalone-prompts.json entries need a prompts/*-segments.md path and a reason: ${JSON.stringify(entry)}`,
+      );
+      continue;
+    }
+    result.add(entry.path);
+  }
+  return result;
+}
+
 export function validateContent(
   repoRoot: string,
   songs: ParsedSong[],
@@ -77,11 +101,25 @@ export function validateContent(
     const promptFiles = readdirSync(join(repoRoot, 'prompts')).filter((file) =>
       file.endsWith('-segments.md'),
     );
+    const standalone = loadStandalonePrompts(repoRoot, errors);
     for (const file of promptFiles) {
       const path = `prompts/${file}`;
       const stemId = file.replace(/-segments\.md$/, '');
+      if (standalone.has(path)) {
+        if (usedSources.has(path) || cutawayIds.has(stemId)) {
+          errors.push(
+            `${path} is listed in content/standalone-prompts.json but has a cutaway; remove the allowlist entry`,
+          );
+        }
+        continue;
+      }
       if (!usedSources.has(path) && !cutawayIds.has(stemId)) {
         errors.push(`Orphan prompts file with no cutaway segmentsSource: ${path}`);
+      }
+    }
+    for (const path of standalone) {
+      if (!promptFiles.includes(path.replace(/^prompts\//, ''))) {
+        errors.push(`content/standalone-prompts.json lists missing prompts file: ${path}`);
       }
     }
   }

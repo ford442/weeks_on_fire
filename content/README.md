@@ -80,6 +80,8 @@ codegen'd and keep their `Drawer / not promoted` note.
 
 2. **Optional:** set `"segmentsSource": "prompts/your-cutaway-segments.md"` instead of inline `segments` when timed Grok/Gemini prompts live in `prompts/`. Codegen parses `## A — Title (0:00–0:08)` headers when present; otherwise keep `segments` inline in JSON.
 
+   **Standalone prompt docs:** every `prompts/*-segments.md` must be claimed by a cutaway (`segmentsSource`, or a cutaway whose id matches the file stem). Long-form docs with no cutaway of their own (drawer songs, companion docs to a cutaway that already has a `segmentsSource`) are listed one by one in [`standalone-prompts.json`](standalone-prompts.json) as `{ "path", "reason" }`. Codegen fails on unlisted orphans, on listed files that don't exist, and on listed files that later gain a cutaway.
+
 3. **Optional:** `"sightBank"` — candidate sights for open `[SIGHT]` slots (Well Fall). Each item: `id`, `title`, `category`, `lane` (`fall` for mid-drop slots, `ending` for the last open slot), `prompt` (replaces `[SIGHT]`), `description`. Shown as a click-to-preview picker on Suggestions. Does not lock slots.
 
 4. `songId` must match a song `id` from `songs/*.md` frontmatter.

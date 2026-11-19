@@ -24,6 +24,7 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 | `xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json`            |
 | `xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes); not a CLI    |
 | `assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                                 |
+| `assemble-cutaway.py`         | Any cutaway's stills + song → timed MP4 preview in `videos/` (needs ffmpeg)  |
 | `create_episode.py`           | Scaffold `episodes/episode-NN/` from `templates/`                            |
 | `eyewash_idents_generator.py` | Markdown table for EyeWash idents                                            |
 | `cat_pov_generator.py`        | Markdown outline for a cat-POV cutaway                                       |
@@ -32,8 +33,13 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 python3 scripts/generate-prompts.py "night desert, laser serpent"
 python3 scripts/create_episode.py 05 "Title"
 python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run
+python3 scripts/assemble-cutaway.py --manifest content/cutaways/mv-ultra-screech.json --dry-run
 python3 -m unittest discover -s scripts/tests        # or: npm run test:py
 ```
+
+`assemble-cutaway.py` takes a cutaway record (segments, times, song and stills come from the
+catalog) or an assembly manifest (explicit images, times and optional Ken Burns pans), and makes one
+ffmpeg pass into `videos/<id>-preview.mp4`. Format and behaviour: [docs/cutaway-assembly.md](../docs/cutaway-assembly.md).
 
 `xai-batch.py` takes a `prompts/*-segments.md` file or a cutaway id, reads the segments (and their
 ids) from the generated catalog, and writes one still per segment plus a manifest. It skips what

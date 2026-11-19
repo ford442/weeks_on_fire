@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { z } from 'zod';
 
+import episode01Json from '../../episodes/episode-01/scenes.json';
 import episode04Json from '../../episodes/episode-04/scenes.json';
 import { clipStackerToProduction, exportToClipStacker } from '../data/production';
 
@@ -137,6 +138,102 @@ describe('clip_stacker import', () => {
 
     expect(parsed).not.toBeNull();
     expect(parsed).not.toHaveProperty('futureField');
+  });
+});
+
+describe('Timeline ↔ clip_stacker round trip on the committed Episode 01 file', () => {
+  // The real episodes/episode-01/scenes.json, sent through the same hops a person's files take:
+  // Export to clip_stacker → a .json file on disk → Import clip_stacker.
+  const committed = EpisodeProductionSchema.parse(episode01Json);
+  const throughAFile = (payload: unknown): unknown => JSON.parse(JSON.stringify(payload));
+
+  it('reads the committed file as four scenes', () => {
+    expect(committed.episode).toBe('01');
+    expect(committed.scenes.map((scene) => scene.id)).toEqual([
+      'scene-001',
+      'scene-002',
+      'scene-003',
+      'scene-004',
+    ]);
+  });
+
+  it('survives export → file → import with every scene field intact', () => {
+    const payload = parseClipStackerPayload(throughAFile(exportToClipStacker(committed)));
+    expect(payload).not.toBeNull();
+    if (!payload) return;
+
+    const imported = clipStackerToProduction(payload, committed.episode, committed);
+
+    expect(imported.title).toBe(committed.title);
+    expect(imported.episode).toBe(committed.episode);
+    expect(imported.episodeHistory).toEqual(committed.episodeHistory);
+    expect(imported.scenes).toHaveLength(committed.scenes.length);
+
+    imported.scenes.forEach((scene, index) => {
+      const original = committed.scenes[index];
+      if (!original) throw new Error(`no committed scene at ${index}`);
+      // Everything but the bookkeeping the import itself writes (lastEditedAt, one history entry).
+      const { lastEditedAt, history, ...rest } = scene;
+      const { lastEditedAt: _lastEditedAt, history: originalHistory, ...originalRest } = original;
+      void _lastEditedAt;
+      expect(lastEditedAt >= original.lastEditedAt).toBe(true);
+      expect(rest).toEqual(originalRest);
+      expect(history.slice(0, -1)).toEqual(originalHistory);
+      expect(history.at(-1)).toMatchObject({
+        action: 'edited',
+        note: 'Imported from clip_stacker',
+      });
+    });
+  });
+
+  it('is stable: re-exporting the imported episode gives the same clips', () => {
+    const first = exportToClipStacker(committed);
+    const payload = parseClipStackerPayload(throughAFile(first));
+    if (!payload) throw new Error('first export did not parse');
+    const second = exportToClipStacker(clipStackerToProduction(payload, '01', committed));
+
+    expect(second.clips).toEqual(first.clips);
+    expect(second.episodeHistory).toEqual(first.episodeHistory);
+    expect(second.project).toBe(first.project);
+  });
+
+  it('carries mediaUrl and status edited in clip_stacker onto the matching scene only', () => {
+    const exported = exportToClipStacker(committed);
+    const edited = {
+      ...exported,
+      clips: exported.clips.map((clip) =>
+        clip.id === 'scene-002'
+          ? { ...clip, mediaUrl: 'https://example.com/scene-002.mp4', status: 'approved' as const }
+          : clip,
+      ),
+    };
+    const payload = parseClipStackerPayload(throughAFile(edited));
+    if (!payload) throw new Error('edited export did not parse');
+
+    const imported = clipStackerToProduction(payload, '01', committed);
+    const byId = new Map(imported.scenes.map((scene) => [scene.id, scene]));
+    const changed = byId.get('scene-002');
+    const original = committed.scenes.find((scene) => scene.id === 'scene-002');
+
+    expect(changed?.mediaUrl).toBe('https://example.com/scene-002.mp4');
+    expect(changed?.status).toBe('approved');
+    expect(changed?.prompt).toBe(original?.prompt); // prompts never leave the Timeline
+    for (const id of ['scene-001', 'scene-003', 'scene-004']) {
+      expect(byId.get(id)?.mediaUrl).toBe(committed.scenes.find((s) => s.id === id)?.mediaUrl);
+    }
+  });
+
+  it('hydrates the Timeline from the export alone (no committed baseline), minus the prompts', () => {
+    const exported = exportToClipStacker(committed);
+    const payload = parseClipStackerPayload(throughAFile(exported));
+    if (!payload) throw new Error('export did not parse');
+
+    const hydrated = clipStackerToProduction(payload, '01', null);
+
+    expect(hydrated.scenes.map((scene) => scene.id)).toEqual(committed.scenes.map((s) => s.id));
+    expect(exportToClipStacker(hydrated).clips).toEqual(exported.clips);
+    // The documented data loss: prompts and per-scene history are not in the payload.
+    expect(hydrated.scenes.every((scene) => scene.prompt === '')).toBe(true);
   });
 });
 

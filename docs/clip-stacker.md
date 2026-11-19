@@ -15,7 +15,8 @@ field contract, you're in the right place.
 
 This repo also has no in-repo C++/emscripten toolchain and no `compile_commands.json` — native
 clip/video assembly from this JSON contract is out of scope for this SPA and is tracked separately
-in issue #43, consumed by a separate repo.
+in issue #43, consumed by a separate repo. (Stills → MP4 *previews* of a single cutaway are a different,
+in-repo tool: [cutaway-assembly.md](cutaway-assembly.md). It does not read or write this payload.)
 
 ## Export payload (`clip-stacker-NN.json`)
 
@@ -79,6 +80,20 @@ When importing a `clip-stacker-*.json` file:
 
 - Import cannot restore `prompt` or per-scene history for clips whose `id` does not match a committed scene.
 - Re-importing after editing only in clip_stacker will overwrite matched scene fields.
+
+### Round-trip proof (Episode 01)
+
+`src/schemas/production.test.ts` ("Timeline ↔ clip_stacker round trip on the committed Episode 01
+file") runs the real `episodes/episode-01/scenes.json` through export → a JSON file (stringify and
+parse, as a download and upload would) → import, and checks that:
+
+- every scene keeps all of its fields, including `prompt`, `addedAt` and its existing history, and
+  gains exactly one `"Imported from clip_stacker"` history entry;
+- exporting the imported episode again gives the same `clips[]` (the round trip is stable);
+- `mediaUrl` and `status` edited on a clip land on that scene only (`clips[].mediaUrl` ↔
+  `ProductionScene.mediaUrl`; an unset `mediaUrl` is `""` in the scene and `null` in the clip);
+- with no committed baseline, the Timeline can be rebuilt from the export alone, minus the
+  per-scene `prompt` and history the payload does not carry (the data loss noted above).
 
 ## Stored edits (localStorage)
 

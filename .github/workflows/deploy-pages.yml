@@ -124,6 +124,27 @@ jobs:
         with:
           path: dist
 
+  # scripts/assemble-cutaway.py end to end: builds 2-segment clips (a hold, a pan, a gap, a silent
+  # one, a failed encode) from fixtures the tests generate, and checks frame counts, durations and
+  # streams with ffprobe. Needs the real ffmpeg, which the runner image is not guaranteed to ship, so
+  # it is its own job (the build job's `npm run test:py` skips these tests when it is absent). REQUIRE_FFMPEG makes a missing
+  # ffmpeg fail here instead of skip. Not a deploy gate: a preview helper must not block the site.
+  assemble-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ffmpeg
+
+      - name: Assemble test clips
+        env:
+          REQUIRE_FFMPEG: '1'
+        run: python3 -m unittest discover -s scripts/tests -p 'test_assemble_cutaway.py' -v
+
   deploy:
     needs: build
     # Pull requests verify only; they never deploy or request the github-pages environment.

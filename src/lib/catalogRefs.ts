@@ -67,12 +67,9 @@ export const SINGLE_REF_FIELDS: readonly SingleRefField[] = [
 
 export const CHARACTER_OPTIONS: readonly CatalogRef[] = byTitle(characterRefs);
 
-/**
- * Characters is a searchable list, not a per-id route, so the link filters it by name
- * (`?q=`). It is the closest thing to "filtered to that id" until the view reads an id.
- */
+/** The character's profile (`/show/characters/:id`). */
 function characterPath(character: CatalogRef): string {
-  return `${viewPaths.characters}?q=${encodeURIComponent(character.title)}`;
+  return detailPath(viewPaths.characters)(character.id);
 }
 
 export interface SceneRefLink {

@@ -107,6 +107,14 @@ export const siteViews: SiteViewMeta[] = [
       'Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.',
   },
   {
+    id: 'search',
+    label: 'Search',
+    path: '/show/search',
+    eyebrow: 'Hub search',
+    description:
+      'Search every catalog at once — songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew — by title, tag, summary or character name. Deep-linkable: /show/search?q=<terms>.',
+  },
+  {
     id: 'crew',
     label: 'Crew',
     path: '/show/crew',

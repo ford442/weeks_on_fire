@@ -1,9 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ExternalLink, Search, UserCircle } from 'lucide-react';
 
 import { seriesCharacters, type SeriesCharacter } from '../data/characters';
 import { firstCatalogItem } from '../lib/catalog';
 import { useUrlParam } from '../hooks/useUrlState';
+import { viewPaths } from '../routes/paths';
+
+import RelatedLinks from './RelatedLinks';
 
 const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
 
@@ -91,10 +95,21 @@ function groupByCluster(characters: SeriesCharacter[]): Array<[string, SeriesCha
 }
 
 export default function Characters() {
-  const [selected, setSelected] = useState<SeriesCharacter>(
-    firstCatalogItem(seriesCharacters, 'characters'),
-  );
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const { search } = useLocation();
+  // The profile follows the URL (`/show/characters/:id`), so a character can be linked to.
+  const match = id ? seriesCharacters.find((character) => character.id === id) : undefined;
+  const selected = match ?? firstCatalogItem(seriesCharacters, 'characters');
   const [query, setQuery] = useUrlParam('q', '');
+
+  useEffect(() => {
+    if (id && !match) void navigate(viewPaths.characters, { replace: true });
+  }, [id, match, navigate]);
+
+  const setSelected = (character: SeriesCharacter) => {
+    void navigate({ pathname: `${viewPaths.characters}/${character.id}`, search });
+  };
 
   const filtered = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -269,6 +284,13 @@ function CharacterDetail({ character }: { character: SeriesCharacter }) {
         <p className="text-sm font-semibold text-zinc-400">Bio</p>
         <p className="mt-2 text-sm leading-7 text-zinc-300">{character.bio}</p>
       </div>
+
+      <RelatedLinks
+        type="character"
+        id={character.id}
+        throughSongs
+        emptyText={`Nothing links to ${character.name} yet. Add "${character.id}" to the characterIds of a cutaway, scene or sequence, then run codegen.`}
+      />
 
       <div>
         <p className="text-sm font-semibold text-zinc-400">Episodes</p>

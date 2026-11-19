@@ -257,9 +257,16 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
     - Put the payoff on the music drop (third hiccup, the POP, the BWAAAMP).
 - Do not reuse the locked gags listed in `notes/one-panel-gags.md`.
 - Optional `stillImagePath` is shown on the Cartoons view. Local 6–8s I2V loops may live at `public/cartoons/<id>.mp4` (gitignored).
-- When a seed is ready, promote it to `content/cutaways/` (Suggestions). Leave `status: "promoted"`
-  on the cartoon file so the parking lot keeps the credit.
-- Run `npm run codegen` and commit the JSON + `src/data/generated/cartoons.ts`.
+- When a seed is ready, promote it to `content/cutaways/` (Suggestions) and record the link on
+  **both** files, so the cartoon page and the Suggestions board link to each other:
+  - cartoon: `"status": "promoted"` and `"promotedToCutawayId": "<cutaway-id>"` (the parking lot
+    keeps the credit);
+  - cutaway: `"promotedFromCartoonId": "<cartoon-id>"`.
+
+  Codegen fails if only one side is set, the two disagree, or `status` and `promotedToCutawayId`
+  do not go together.
+
+- Run `npm run codegen` and commit the JSON + `src/data/generated/` changes.
 
 ## Adding a 3D sequence (in-hub player)
 
@@ -366,6 +373,42 @@ Graph shape (angles in degrees, times in seconds; unknown keys are rejected):
 - `loop`: after `outSec`, scene time wraps back to `inSec`.
 - No song id, no glTF, no three.js in v1.
 
+## Linking records (catalog graph and search)
+
+Records point at each other by **id**. Every link is optional, validated at codegen time, and
+emitted into `src/data/generated/catalog-graph.ts` (nodes + typed edges) and
+`public/catalog-graph.json` (the same, with absolute URLs, for agents). Character, song, episode,
+cartoon, cutaway and sequence pages show the result as an **Appears in** / **Links** strip.
+
+| Record         | Field                    | Points at                                  | Edge (`rel`)                                     |
+| -------------- | ------------------------ | ------------------------------------------ | ------------------------------------------------ |
+| Cutaway        | `songId` (required)      | song                                       | `song`                                           |
+| Cutaway        | `characterIds`           | `characters.json` ids                      | `character`                                      |
+| Cutaway        | `episodeId`              | `episodes.json` id                         | `episode`                                        |
+| Cutaway        | `promotedFromCartoonId`  | cartoon (must point back)                  | `promotion`                                      |
+| Cutaway        | `sequenceInsertIds`      | 3D sequences cut into it                   | `insert`                                         |
+| Cartoon        | `promotedToCutawayId`    | cutaway (must point back)                  | `promotion`                                      |
+| Sequence       | `relatedCutawayIds`      | cutaways it goes with (still no song id)   | `related`                                        |
+| Sequence       | `characterIds`           | characters                                 | `character`                                      |
+| Scene board    | `songId`, `characterIds` | song, characters                           | `song`, `character`                              |
+| Song           | `episodeId`              | `episodes.json` id                         | `episode`                                        |
+| Timeline scene | refs (see below)         | song / cutaway / sequence / cartoon / cast | `song`, `insert`, `character` (from the episode) |
+
+- `episode` on songs and gallery items is a taxonomy id; when it is also an Episode Bible id
+  (`01`–`05`) the episode edge is derived, so set song `episodeId` only when `episode` is a bucket
+  (`cutaway`, `eyewash`, …). A song `episodeId` that contradicts an episode id fails codegen.
+- Cutaway `episode` stays free-text placement ("Episode 03 / wellness ladies"); `episodeId` is the
+  typed link. Leave it off when the placement is ambiguous ("Episode 03 / 04 witness").
+- Only add a `characterIds` entry for someone on screen in the record itself (the summary or
+  segments name them), not for a passing mention. Lists may not repeat an id and are never `[]`.
+- The `sceneId` keys in `src/data/sceneDialogVersions.ts` must be cutaway ids.
+
+**Search.** `npm run codegen` also writes `src/data/generated/search-index.ts`: one slim document
+per record (title, subtitle, tags, summary clipped to 360 characters, linked character names, route)
+— no lyrics, style prompts or Grok prompts. The header search (`/`, Ctrl/⌘-K) and
+`/show/search?q=…&type=…` index it with MiniSearch, lazily; the build's bundle gate fails if
+MiniSearch or the corpus lands in the main chunk.
+
 ## "What's new" on the Overview
 
 The hub's Overview page shows the newest additions. Codegen reads `added: "YYYY-MM-DD"` (the day you add the record) and writes the picks to `src/data/generated/whats-new.ts`:
@@ -392,6 +435,9 @@ The Suggestions workspace reads **only** the selected Riley Rosencrantz exchange
 - Orphan `prompts/*-segments.md` files (`npm run codegen:check`)
 - Episode `files.*` paths exist on disk; duplicate episode `id`/`number`
 - Cartoon filename matches `id`; duplicate cartoon ids
+- Catalog links: unknown or repeated `characterIds`, unknown `episodeId` / `sequenceInsertIds` /
+  `relatedCutawayIds`, one-sided or mismatched cartoon ⇄ cutaway promotion, dialog `sceneId` keys
+  (see [Linking records](#linking-records-catalog-graph-and-search))
 
 ## Migration from legacy TS
 

@@ -14,6 +14,7 @@ const crewRoots = [
   'characters',
   'episodes',
   'crew',
+  'search',
 ] as const;
 
 export function crewPath(path: string): string {
@@ -61,7 +62,14 @@ export const viewPaths: Record<SiteView, string> = {
   characters: crewPath('/characters'),
   episodes: crewPath('/episodes'),
   crew: crewPath('/crew'),
+  search: crewPath('/search'),
 };
+
+/** `/show/search?q=…` — the full results page for a query (blank query → the bare page). */
+export function searchPath(query: string): string {
+  const q = query.trim();
+  return q ? `${viewPaths.search}?${new URLSearchParams({ q }).toString()}` : viewPaths.search;
+}
 
 export function pathnameToView(pathname: string): SiteView {
   const normalized = pathname.replace(/\/+$/, '') || '/';
@@ -82,9 +90,10 @@ export function pathnameToView(pathname: string): SiteView {
   if (bare.startsWith('/suggestions')) return 'suggestions';
   if (bare.startsWith('/cartoons')) return 'cartoons';
   if (bare.startsWith('/sequences')) return 'sequences';
-  if (bare === '/characters') return 'characters';
+  if (bare === '/characters' || bare.startsWith('/characters/')) return 'characters';
   if (bare.startsWith('/episodes')) return 'episodes';
   if (bare === '/crew') return 'crew';
+  if (bare === '/search') return 'search';
 
   return 'overview';
 }

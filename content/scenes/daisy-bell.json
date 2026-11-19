@@ -4,6 +4,10 @@
   "subtitle": "A bicycle built for two — into old London",
   "format": "Musical cutaway",
   "cast": "Rubella & Lillith",
+  "characterIds": [
+    "rubella",
+    "lillith"
+  ],
   "status": "generated",
   "tone": "emerald",
   "songId": "daisy-bell",

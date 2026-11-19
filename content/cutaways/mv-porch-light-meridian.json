@@ -6,6 +6,7 @@
   "status": "ready-to-generate",
   "runtime": "~3:00",
   "episode": "Episode 03",
+  "episodeId": "03",
   "songId": "porch-light-meridian",
   "songTitle": "Porch Light Meridian",
   "summary": "Crane up from a porch bulb after chaos. The yard is small but the sky will not fit.",

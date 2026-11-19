@@ -1,6 +1,7 @@
 import { X } from 'lucide-react';
 
 import CutawayPreview from '../CutawayPreview';
+import RelatedLinks from '../RelatedLinks';
 
 import CopyButton from './CopyButton';
 import SightBank from './SightBank';
@@ -46,6 +47,9 @@ export default function CutawayBoard({
 }: CutawayBoardProps) {
   return (
     <div className="space-y-5">
+      <div className="rounded-lg border border-zinc-800 bg-zinc-950/95 p-4">
+        <RelatedLinks type="cutaway" id={cutaway.id} heading={`${cutaway.title} — links`} />
+      </div>
       <CutawayPreview
         segments={cutaway.segments}
         activeSegmentId={segment.id}

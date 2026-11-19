@@ -241,6 +241,7 @@ describe('App detail routes keep their id', () => {
     [crewPath('/cartoons'), () => first(cartoons).id],
     [crewPath('/sequences'), () => first(sequences).id],
     [crewPath('/episodes'), () => first(episodes).id],
+    [crewPath('/characters'), () => first(seriesCharacters).id],
   ] as const;
 
   it.each(details)('%s/:id', async (base, pickId) => {
@@ -258,6 +259,7 @@ describe('App detail routes keep their id', () => {
     crewPath('/suggestions'),
     crewPath('/scenes'),
     crewPath('/episodes'),
+    crewPath('/characters'),
   ])('%s/:id redirects an unknown id to the list', async (base) => {
     renderRoute(`${base}/no-such-id`);
     await waitFor(() => expect(screen.getByTestId('location').textContent).toBe(base));
@@ -343,6 +345,104 @@ describe('site search', () => {
     await waitFor(() =>
       expect(screen.getByTestId('location').textContent).toBe(crewPath(`/songs/${song.id}`)),
     );
+  });
+});
+
+describe('search page', () => {
+  it('/show/search?q=well lists the Well Fall cutaway and song first', async () => {
+    renderRoute(`${crewPath('/search')}?q=well`);
+    await settled();
+    const list = await screen.findByRole('list', { name: 'Search results' });
+    const hrefs = within(list)
+      .getAllByRole('listitem')
+      .slice(0, 2)
+      .map((item) => within(item).getByRole('link').getAttribute('href'));
+    expect(new Set(hrefs)).toEqual(
+      new Set([crewPath('/suggestions/well-fall'), crewPath('/songs/well-fall')]),
+    );
+    expect(screen.getByRole('searchbox', { name: 'Search the hub' })).toHaveProperty(
+      'value',
+      'well',
+    );
+  });
+
+  it('narrows to one type from the URL and offers the others as filters', async () => {
+    renderRoute(`${crewPath('/search')}?q=well&type=song`);
+    await settled();
+    expect(await screen.findByRole('heading', { level: 2, name: 'Well Fall' })).toBeTruthy();
+    expect(screen.queryByText('Suggestion', { selector: 'span' })).toBeNull();
+    const filters = screen.getByRole('group', { name: 'Result type' });
+    expect(
+      within(filters)
+        .getByRole('button', { name: /^Song \(/ })
+        .getAttribute('aria-pressed'),
+    ).toBe('true');
+    fireEvent.click(within(filters).getByRole('button', { name: /^All \(/ }));
+    await waitFor(() => expect(screen.getByTestId('search').textContent).toBe('?q=well'));
+  });
+
+  it('moves a bare /search link under /show, query intact', async () => {
+    renderRoute('/search?q=well');
+    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/show/search'));
+    expect(screen.getByTestId('search').textContent).toBe('?q=well');
+  });
+
+  it('is reachable from the header search with the query carried over', async () => {
+    renderRoute('/show');
+    await settled();
+    fireEvent.keyDown(document.body, { key: '/' });
+    const input = await screen.findByRole('combobox', { name: /Search songs, scenes/ });
+    fireEvent.change(input, { target: { value: 'marble' } });
+    fireEvent.click(await screen.findByRole('link', { name: /All results for “marble”/ }));
+    await waitFor(() => expect(screen.getByTestId('location').textContent).toBe('/show/search'));
+    expect(screen.getByTestId('search').textContent).toBe('?q=marble');
+  });
+});
+
+describe('appears-in links from the catalog graph', () => {
+  it('a character profile lists the cutaways and scenes that name her', async () => {
+    renderRoute(crewPath('/characters/riley-smith'));
+    await settled();
+    // The card grid and the profile both carry her name; the profile is the one with the strip.
+    expect((await screen.findAllByRole('heading', { level: 2, name: 'Riley Smith' })).length).toBe(
+      2,
+    );
+    const strip = screen.getByRole('region', { name: 'Appears in' });
+    const suggestions = within(strip).getByRole('list', { name: 'Suggestions' });
+    expect(
+      within(suggestions).getByRole('link', { name: 'No Other Human Sounds' }).getAttribute('href'),
+    ).toBe(crewPath('/suggestions/no-other-human-sounds'));
+  });
+
+  it('clicking a character card opens that profile by id', async () => {
+    renderRoute(crewPath('/characters'));
+    await settled();
+    fireEvent.click(await screen.findByRole('button', { name: /Scarlet/ }));
+    await waitFor(() =>
+      expect(screen.getByTestId('location').textContent).toBe(crewPath('/characters/scarlet')),
+    );
+    const strip = screen.getByRole('region', { name: 'Appears in' });
+    expect(within(strip).getByRole('link', { name: 'Spooky Telephone Poles' })).toBeTruthy();
+  });
+
+  it('a song lists the cutaway it scores', async () => {
+    renderRoute(crewPath('/songs/well-fall'));
+    await settled();
+    const strip = await screen.findByRole('region', { name: 'Appears in' });
+    expect(within(strip).getByRole('link', { name: 'Well Fall' }).getAttribute('href')).toBe(
+      crewPath('/suggestions/well-fall'),
+    );
+  });
+
+  it('an episode lists its Timeline cutaway and the cast linked to it', async () => {
+    renderRoute(crewPath('/episodes/04'));
+    await settled();
+    const strip = await screen.findByRole('region', { name: 'In this episode' });
+    expect(
+      within(strip)
+        .getByRole('link', { name: '911 for the Wrong Shade of Blue' })
+        .getAttribute('href'),
+    ).toBe(crewPath('/suggestions/911-wrong-shade'));
   });
 });
 

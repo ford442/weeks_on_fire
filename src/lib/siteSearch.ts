@@ -1,180 +1,97 @@
-import { cartoons } from '../data/cartoons';
-import { seriesCharacters } from '../data/characters';
-import { episodes } from '../data/episodes';
-import { filmScenes } from '../data/films';
-import { sceneBoards } from '../data/sceneBoards';
-import { sequences } from '../data/sequences';
-import { songs } from '../data/songs';
-import { crewMembers } from '../data/crew';
-import { cutawaySuggestions } from '../data/suggestions';
-import { episodeWithSlot, toolLabel } from '../data/taxonomy';
-import { crewPath } from '../routes/paths';
+// Hub-wide search: MiniSearch over the slim documents codegen writes to
+// `data/generated/search-index.ts` (titles, tags, summaries, linked character names — no lyrics or
+// prompts). Only the lazily loaded search overlay and `/show/search` import this module, so neither
+// MiniSearch nor the corpus ships in the main chunk; `scripts/check-bundle-size.ts` enforces it.
+import MiniSearch from 'minisearch';
 
-export type SearchSection =
-  | 'Songs'
-  | 'Suggestions'
-  | 'Scenes'
-  | 'Visual archive'
-  | 'Episodes'
-  | 'Characters'
-  | 'Cartoons'
-  | '3D sequences'
-  | 'Crew';
+import { searchDocuments } from '../data/generated/search-index';
 
-export interface SearchEntry {
-  section: SearchSection;
-  title: string;
-  subtitle: string;
-  /** Router path (no basename), including any query string. */
-  to: string;
-  /** Lowercased title, weighted above body matches. */
-  titleText: string;
-  /** Lowercased searchable body. */
-  bodyText: string;
+import type { SearchDocType, SearchDocument } from '../data/generated/search-index';
+
+export type { SearchDocType, SearchDocument };
+
+/** Badge text per result type, in the order the search page lists its filters. */
+export const SEARCH_TYPE_LABELS: Record<SearchDocType, string> = {
+  song: 'Song',
+  cutaway: 'Suggestion',
+  scene: 'Scene',
+  still: 'Still',
+  episode: 'Episode',
+  character: 'Character',
+  cartoon: 'Cartoon',
+  sequence: '3D sequence',
+  crew: 'Crew',
+};
+
+export const SEARCH_TYPES = Object.keys(SEARCH_TYPE_LABELS) as SearchDocType[];
+
+export interface SearchHit extends SearchDocument {
+  score: number;
 }
 
-function entry(
-  section: SearchSection,
-  title: string,
-  subtitle: string,
-  to: string,
-  body: readonly string[],
-): SearchEntry {
-  return {
-    section,
-    title,
-    subtitle,
-    to,
-    titleText: title.toLowerCase(),
-    bodyText: [subtitle, ...body].join(' ').toLowerCase(),
-  };
+export interface SearchOptions {
+  /** Defaults to 40. */
+  limit?: number;
+  /** Only this type. */
+  type?: SearchDocType;
 }
 
-function withQuery(path: string, q: string) {
-  return `${path}?${new URLSearchParams({ q }).toString()}`;
+export interface HubSearch {
+  search(query: string, options?: SearchOptions): SearchHit[];
+  /** Hits per type for `query`, ignoring any type filter. */
+  countByType(query: string): Partial<Record<SearchDocType, number>>;
 }
 
-/** Flattens every catalog into one list. Views without detail routes link to a filtered list. */
-export function buildSearchIndex(): SearchEntry[] {
-  return [
-    ...songs.map((song) =>
-      entry(
-        'Songs',
-        song.title,
-        `${episodeWithSlot(song.episode, song.slot)} · ${song.genre}`,
-        crewPath(`/songs/${song.id}`),
-        [
-          song.subgenre ?? '',
-          song.description,
-          song.stylePrompt,
-          song.lyrics ?? '',
-          song.tags.join(' '),
-        ],
-      ),
-    ),
-    ...cutawaySuggestions.map((cutaway) =>
-      entry(
-        'Suggestions',
-        cutaway.title,
-        `${cutaway.episode} · ${cutaway.songTitle}`,
-        crewPath(`/suggestions/${cutaway.id}`),
-        [cutaway.summary, cutaway.visualArc, cutaway.tags.join(' ')],
-      ),
-    ),
-    ...sceneBoards.map((board) =>
-      entry(
-        'Scenes',
-        board.title,
-        [board.format, board.cast].filter(Boolean).join(' · ') || 'Scene',
-        crewPath(`/scenes/${board.id}`),
-        [
-          board.subtitle ?? '',
-          board.pitch,
-          board.continuity ?? '',
-          board.frames.map((frame) => `${frame.title} ${frame.description}`).join(' '),
-          board.extras?.items.map((extra) => `${extra.title} ${extra.description}`).join(' ') ?? '',
-        ],
-      ),
-    ),
-    ...filmScenes.map((scene) =>
-      entry(
-        'Visual archive',
-        scene.title,
-        episodeWithSlot(scene.episode, scene.slot),
-        withQuery(crewPath('/archive'), scene.title),
-        [
-          scene.tool ? toolLabel(scene.tool) : '',
-          scene.description,
-          scene.prompt,
-          scene.theme,
-          scene.tags.join(' '),
-        ],
-      ),
-    ),
-    ...episodes.map((episode) =>
-      entry(
-        'Episodes',
-        episode.title,
-        `Episode ${episode.number}`,
-        crewPath(`/episodes/${episode.id}`),
-        [episode.logline],
-      ),
-    ),
-    ...seriesCharacters.map((character) =>
-      entry(
-        'Characters',
-        character.name,
-        character.role,
-        withQuery(crewPath('/characters'), character.name),
-        [character.bio, character.tags.join(' ')],
-      ),
-    ),
-    ...cartoons.map((cartoon) =>
-      entry('Cartoons', cartoon.title, cartoon.status, crewPath(`/cartoons/${cartoon.id}`), [
-        cartoon.premise,
-        cartoon.tags.join(' '),
-      ]),
-    ),
-    ...sequences.map((sequence) =>
-      entry(
-        '3D sequences',
-        sequence.title,
-        sequence.medium,
-        crewPath(`/sequences/${sequence.id}`),
-        [sequence.premise, sequence.tags.join(' ')],
-      ),
-    ),
-    ...crewMembers.map((member) =>
-      entry('Crew', member.name, member.role, crewPath('/crew'), [member.bio, member.specialty]),
-    ),
-  ];
+/** Lowercase and drop diacritics, so "mobius" finds Möbius Chrome. */
+function normalizeTerm(term: string): string {
+  return term
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase();
 }
 
 /**
- * Every whitespace-separated term must appear in the entry. Title hits rank first, then
- * title-prefix hits, then body-only hits; ties keep catalog order.
+ * Every term must match (AND). Terms of two letters or more also match as a prefix ("marb" →
+ * marble); terms of five or more tolerate a typo. Title hits outrank cast, tag and summary hits.
  */
-export function searchIndex(index: readonly SearchEntry[], query: string, limit = 40) {
-  const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
-  if (terms.length === 0) return [];
-
-  const scored: Array<{ entry: SearchEntry; score: number; order: number }> = [];
-  index.forEach((candidate, order) => {
-    let score = 0;
-    for (const term of terms) {
-      if (candidate.titleText.includes(term)) {
-        score += candidate.titleText.startsWith(term) ? 3 : 2;
-      } else if (candidate.bodyText.includes(term)) {
-        score += 1;
-      } else {
-        return;
-      }
-    }
-    scored.push({ entry: candidate, score, order });
+export function createHubSearch(documents: readonly SearchDocument[] = searchDocuments): HubSearch {
+  const engine = new MiniSearch<SearchDocument>({
+    fields: ['title', 'subtitle', 'tags', 'characters', 'summary'],
+    processTerm: normalizeTerm,
+    searchOptions: {
+      boost: { title: 4, characters: 2, tags: 1.5, subtitle: 1.2 },
+      prefix: (term) => term.length >= 2,
+      fuzzy: (term) => (term.length >= 5 ? 0.2 : false),
+      combineWith: 'AND',
+    },
   });
+  engine.addAll(documents);
+  const byId = new Map(documents.map((document) => [document.id, document]));
 
-  return scored
-    .sort((a, b) => b.score - a.score || a.order - b.order)
-    .slice(0, limit)
-    .map((hit) => hit.entry);
+  const run = (query: string, type?: SearchDocType): SearchHit[] => {
+    if (!query.trim()) return [];
+    return engine
+      .search(query, type ? { filter: (result) => byId.get(String(result.id))?.type === type } : {})
+      .flatMap((result) => {
+        const document = byId.get(String(result.id));
+        return document ? [{ ...document, score: result.score }] : [];
+      });
+  };
+
+  return {
+    search: (query, { limit = 40, type } = {}) => run(query, type).slice(0, limit),
+    countByType: (query) => {
+      const counts: Partial<Record<SearchDocType, number>> = {};
+      for (const hit of run(query)) counts[hit.type] = (counts[hit.type] ?? 0) + 1;
+      return counts;
+    },
+  };
+}
+
+let shared: HubSearch | undefined;
+
+/** One index per page load, built on first use (a few hundred documents, a few milliseconds). */
+export function hubSearch(): HubSearch {
+  shared ??= createHubSearch();
+  return shared;
 }

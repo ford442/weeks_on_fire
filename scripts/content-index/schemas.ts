@@ -8,6 +8,13 @@ export const AddedDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added mu
 const optionalAdded = AddedDateSchema.optional();
 
 /**
+ * Catalog links (see `validateCatalogLinks`). Ids only, validated against their catalog at codegen
+ * time and emitted into `src/data/generated/catalog-graph.ts`. Omit a field rather than leave it empty.
+ */
+const linkId = z.string().min(1);
+const linkIds = z.array(linkId).min(1);
+
+/**
  * One production pipeline for every item on the hub (songs, stills, videos, cutaways, Timeline
  * scenes). Type (scene / song / image / video / character) is a separate field; this is only the
  * stage. Labels and colors live in `src/lib/status.ts`.
@@ -41,6 +48,11 @@ export const SongFrontmatterSchema = z.object({
   audioFile: z.string().nullable().optional(),
   /** Production stage. Omitted → `final` when the song has audio, else `generated`. */
   status: ProductionStatusSchema.optional(),
+  /**
+   * Episode Bible id (`content/episodes.json`) when the song belongs to one but `episode` is a
+   * bucket (`cutaway`, `eyewash`, …). Omitted → derived from `episode` when that is an episode id.
+   */
+  episodeId: linkId.optional(),
 });
 
 export const CutawaySegmentSchema = z.object({
@@ -93,6 +105,14 @@ export const CutawaySchema = z.object({
   segmentStills: z.record(z.string(), z.string()).optional(),
   segments: z.array(CutawaySegmentSchema).optional(),
   sightBank: z.array(SightCandidateSchema).optional(),
+  /** Cast on screen: ids from `content/characters.json`. */
+  characterIds: linkIds.optional(),
+  /** Episode Bible id (`content/episodes.json`); `episode` stays the free-text placement. */
+  episodeId: linkId.optional(),
+  /** The cartoon this cutaway was promoted from; that cartoon must name it in `promotedToCutawayId`. */
+  promotedFromCartoonId: linkId.optional(),
+  /** 3D sequences (`content/sequences/`) cut into this cutaway. */
+  sequenceInsertIds: linkIds.optional(),
 });
 
 /**
@@ -265,6 +285,8 @@ export const SceneBoardSchema = z.object({
   /** Repo-relative concept doc, shown to the crew in edit mode. */
   conceptFile: z.string().min(1).optional(),
   pitch: z.string().min(1),
+  /** Cast on screen: ids from `content/characters.json`. `cast` stays the display line. */
+  characterIds: linkIds.optional(),
   /** Short continuity note: what never changes between takes. */
   continuity: z.string().optional(),
   locks: z.array(SceneLockSchema),
@@ -344,6 +366,11 @@ export const CartoonSchema = z.object({
   notes: z.string().optional(),
   agent: z.string().optional(),
   stillImagePath: z.string().optional(),
+  /**
+   * The Suggestions cutaway this seed was promoted to. Required when `status` is `promoted` (and
+   * only then); the cutaway must point back with `promotedFromCartoonId`.
+   */
+  promotedToCutawayId: linkId.optional(),
 });
 
 export const SequenceMediumSchema = z.enum(['unreal', 'photoreal', 'cartoon', 'mixed']);
@@ -371,6 +398,10 @@ export const SequenceSchema = z.object({
   notes: z.string().optional(),
   agent: z.string().optional(),
   stillImagePath: z.string().optional(),
+  /** Cutaways this sequence belongs with. Sequences still never carry a `songId`. */
+  relatedCutawayIds: linkIds.optional(),
+  /** Cast in the sequence: ids from `content/characters.json`. */
+  characterIds: linkIds.optional(),
   /**
    * `graph`: played from a scene graph (`<id>.graph.json` or the `graph` key). `custom`: a
    * hand-written factory in `src/sequences/registry.ts`. Derived from the graph when omitted.

@@ -37,6 +37,7 @@ export const sceneBoards: SceneBoard[] = [
     songId: "daisy-bell",
     conceptFile: "ideas/daisy-bell-cutaway.md",
     pitch: "Rubella and Lillith ride a living flower bicycle from a modern wildflower field straight into period London. The joke is the bike. The experiment is the cut: scratchy black-and-white film grain flipping into crisp HD color and back, as if the century cannot settle.",
+    characterIds: ["rubella", "lillith"],
     continuity: "Core lock: black-lace Rubella + Lillith (field still look) · tandem fully covered in living wildflowers (slightly too alive) · Fleet Street energy with St. Paul’s deep in background. Stylish 1890–96 = leg-of-mutton + feathered hats; working class = patched wool, no decoration. Prototype gen: 1280×720, 50 steps.",
     locks: [
       {

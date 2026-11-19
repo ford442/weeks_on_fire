@@ -74,6 +74,20 @@ describe('App lazy routes render', () => {
     );
   });
 
+  it('/show/finalized lists every Approved or Final song', async () => {
+    renderRoute(crewPath('/finalized'));
+    await settled();
+    expect(await screen.findByRole('heading', { level: 1, name: 'Finalized' })).toBeTruthy();
+    const finished = songs.filter((song) => song.status === 'final' || song.status === 'approved');
+    for (const song of finished) {
+      expect(
+        screen
+          .getAllByRole('link', { name: song.title })
+          .some((link) => link.getAttribute('href') === crewPath(`/songs/${song.id}`)),
+      ).toBe(true);
+    }
+  });
+
   it('/show/archive (Gallery)', async () => {
     renderRoute(crewPath('/archive'));
     await expectHeadingFrom(filmScenes.map((scene) => scene.title));

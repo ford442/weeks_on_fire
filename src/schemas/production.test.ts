@@ -9,6 +9,8 @@ import {
   EpisodeProductionSchema,
   PRODUCTION_STORAGE_SCHEMA_VERSION,
   ProductionSceneSchema,
+  SCENE_STATUSES,
+  SceneStatusSchema,
   createStoredProductionMigrator,
   migrateStoredProduction,
   parseClipStackerPayload,
@@ -46,7 +48,7 @@ function fixtureEpisode(): EpisodeProduction {
         description: 'Physical discomfort symbolizes restriction.',
         prompt: 'cinematic ping-pong match in near darkness',
         mediaUrl: 'https://example.com/scene-002.mp4',
-        status: 'draft',
+        status: 'suggested',
         addedAt: '2026-06-20T09:40:00Z',
         lastEditedAt: '2026-06-20T09:40:00Z',
         history: [{ date: '2026-06-20T09:40:00Z', action: 'added', note: 'Added from synopsis' }],
@@ -57,6 +59,18 @@ function fixtureEpisode(): EpisodeProduction {
     ],
   };
 }
+
+describe('unified status', () => {
+  it('reads the pre-unification "draft" Timeline status as "suggested"', () => {
+    const parsed = SceneStatusSchema.parse('draft');
+    expect(parsed).toBe('suggested');
+  });
+
+  it('accepts every hub-wide status and rejects unknown ones', () => {
+    for (const status of SCENE_STATUSES) expect(SceneStatusSchema.parse(status)).toBe(status);
+    expect(SceneStatusSchema.safeParse('in-production').success).toBe(false);
+  });
+});
 
 describe('clip_stacker export', () => {
   it('produces a payload that satisfies the shared schema', () => {

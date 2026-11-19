@@ -182,7 +182,7 @@ export function createEmptyScene(order: number): ProductionScene {
     description: '',
     prompt: '',
     mediaUrl: '',
-    status: 'draft',
+    status: 'suggested',
     addedAt: now,
     lastEditedAt: now,
     history: [
@@ -279,12 +279,3 @@ export function flattenTimeline(production: EpisodeProduction) {
   // Sort newest first
   return events.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
-
-// Status badge colors (Tailwind classes)
-export const statusColors: Record<SceneStatus, string> = {
-  draft: 'bg-zinc-700 text-zinc-200',
-  generated: 'bg-sky-900 text-sky-200',
-  approved: 'bg-emerald-900 text-emerald-200',
-  'in-edit': 'bg-amber-900 text-amber-200',
-  final: 'bg-orange-700 text-orange-100',
-};

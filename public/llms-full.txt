@@ -22,16 +22,17 @@ Weeks on Fire is a personal short-film series that intercuts narrative scenes wi
 The hub is a single-page app. Views are toggled in-app:
 
 1. **Overview** (About the show) — What Weeks on Fire is — logline, synopsis, tone and format, the episode list, the cast and crew, and what was added most recently.
-2. **Visual Archive** (Grok Imagine Archive) — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
-3. **Timeline** (Production Timeline) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
-4. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
-5. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
-6. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
-7. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
-8. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
-9. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
-10. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-11. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+2. **Finalized** (Finished work) — Every song, still and video marked Approved or Final — the finished pieces, in one place.
+3. **Visual Archive** (Grok Imagine Archive) — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
+4. **Timeline** (Production Timeline) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
+5. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
+6. **Daisy Bell** (Daisy Bell Cutaway) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
+7. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+8. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
+9. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
+10. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+11. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+12. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
 

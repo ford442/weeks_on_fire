@@ -4,6 +4,7 @@ import type { SiteView } from '../components/SiteHeader';
 export const CREW_PREFIX = '/show';
 
 const crewRoots = [
+  'finalized',
   'timeline',
   'songs',
   'daisy-bell',
@@ -39,6 +40,7 @@ export function isLegacyArchiveLink(pathname: string, search: string): boolean {
 
 export const viewPaths: Record<SiteView, string> = {
   overview: crewPath('/'),
+  finalized: crewPath('/finalized'),
   gallery: crewPath('/archive'),
   timeline: crewPath('/timeline'),
   songs: crewPath('/songs'),
@@ -62,6 +64,7 @@ export function pathnameToView(pathname: string): SiteView {
 
   if (bare === '/' || bare === '') return 'overview';
   if (bare === '/archive') return 'gallery';
+  if (bare === '/finalized') return 'finalized';
   if (bare.startsWith('/songs')) return 'songs';
   if (bare === '/timeline') return 'timeline';
   if (bare === '/daisy-bell') return 'daisy-bell';

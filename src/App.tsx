@@ -12,6 +12,7 @@ import {
 } from './routes/paths';
 
 const Overview = lazy(viewLoaders.overview);
+const Finalized = lazy(viewLoaders.finalized);
 const Gallery = lazy(viewLoaders.gallery);
 const TimelinePage = lazy(viewLoaders.timeline);
 const Songs = lazy(viewLoaders.songs);
@@ -113,6 +114,7 @@ export default function App() {
         <Suspense fallback={<RouteFallback />}>
           <Routes>
             <Route path={viewPaths.overview} element={<Overview />} />
+            <Route path={viewPaths.finalized} element={<Finalized />} />
             <Route path={viewPaths.gallery} element={<Gallery />} />
             <Route path={viewPaths.timeline} element={<TimelinePage />} />
             <Route path={viewPaths.songs} element={<Songs />} />

@@ -11,11 +11,20 @@ import { getUnlistedTracks } from '../lib/songAudio';
 import { formatSongDate } from '../lib/songDate';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlFlag, useUrlParam } from '../hooks/useUrlState';
+import {
+  countByStatus,
+  PRODUCTION_STATUSES,
+  statusOptions,
+  type ProductionStatus,
+} from '../lib/status';
 
 import FilterSelect, { allValue } from './FilterSelect';
 import SongAudioPlayer from './SongAudioPlayer';
 import SongDetail from './SongDetail';
+import StatusBadge from './StatusBadge';
 import WorkspaceLayout from './WorkspaceLayout';
+
+const songStatusOptions = statusOptions(countByStatus(songs));
 
 type SongSort = 'added-desc' | 'added-asc' | 'title';
 
@@ -41,6 +50,10 @@ export default function Songs() {
     ...optionValues(episodes),
   ]);
   const [genre, setGenre] = useUrlParam('genre', allValue, [allValue, ...optionValues(genres)]);
+  const [status, setStatus] = useUrlParam<typeof allValue | ProductionStatus>('status', allValue, [
+    allValue,
+    ...PRODUCTION_STATUSES,
+  ]);
   const [hasAudio, setHasAudio] = useUrlFlag('audio');
   const [instrumentalOnly, setInstrumentalOnly] = useUrlFlag('instrumental');
   const [sort, setSort] = useUrlParam<SongSort>(
@@ -92,13 +105,14 @@ export default function Songs() {
         matchesSearch &&
         (episode === allValue || song.episode === episode) &&
         (genre === allValue || song.genre === genre) &&
+        (status === allValue || song.status === status) &&
         (!hasAudio || Boolean(song.audioFile)) &&
         (!instrumentalOnly || song.instrumental)
       );
     });
 
     return matches.sort((a, b) => compareSongs(a, b, sort));
-  }, [episode, genre, hasAudio, instrumentalOnly, query, sort]);
+  }, [episode, genre, hasAudio, instrumentalOnly, query, sort, status]);
 
   const selectSong = (song: Song) => {
     setSelected(song);
@@ -154,7 +168,7 @@ export default function Songs() {
                   </select>
                 </label>
               </div>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-3">
                 <FilterSelect
                   label="Episode"
                   value={episode}
@@ -162,6 +176,12 @@ export default function Songs() {
                   onChange={setEpisode}
                 />
                 <FilterSelect label="Genre" value={genre} options={genres} onChange={setGenre} />
+                <FilterSelect
+                  label="Status"
+                  value={status}
+                  options={songStatusOptions}
+                  onChange={(value) => setStatus(value as typeof allValue | ProductionStatus)}
+                />
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <FilterToggle pressed={hasAudio} onToggle={() => setHasAudio(!hasAudio)}>
@@ -206,6 +226,7 @@ export default function Songs() {
                         <span className="hidden min-w-0 flex-1 truncate text-zinc-400 sm:block">
                           {song.subgenre ?? song.genre}
                         </span>
+                        <StatusBadge status={song.status} size="xs" />
                         <time
                           dateTime={song.added}
                           className="w-24 shrink-0 text-right text-xs tabular-nums text-zinc-400"

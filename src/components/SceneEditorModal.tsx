@@ -9,7 +9,8 @@ import {
   sameCatalogRefs,
   withCurrentOption,
 } from '../lib/catalogRefs';
-import { pickCatalogRefs, withCatalogRefs } from '../schemas/production';
+import { productionStatusMeta } from '../lib/status';
+import { pickCatalogRefs, SCENE_STATUSES, withCatalogRefs } from '../schemas/production';
 
 import SceneRefLinks from './SceneRefLinks';
 
@@ -23,7 +24,7 @@ interface SceneEditorModalProps {
   onSave: (updated: ProductionScene) => void;
 }
 
-const STATUSES: SceneStatus[] = ['draft', 'generated', 'approved', 'in-edit', 'final'];
+const STATUSES: readonly SceneStatus[] = SCENE_STATUSES;
 
 export default function SceneEditorModal({
   scene,
@@ -197,7 +198,7 @@ function SceneEditorModalContent({
               >
                 {STATUSES.map((s) => (
                   <option key={s} value={s}>
-                    {s}
+                    {productionStatusMeta[s].label}
                   </option>
                 ))}
               </select>

@@ -130,7 +130,7 @@ describe('SceneEditorModal catalog picker', () => {
       title: 'My own scene title',
       timestamp: '00:00:09',
       description: 'A beat.',
-      status: 'draft',
+      status: 'suggested',
       addedAt: '2026-01-01T00:00:00Z',
       lastEditedAt: '2026-01-01T00:00:00Z',
       history: [],

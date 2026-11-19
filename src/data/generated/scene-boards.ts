@@ -22,6 +22,29 @@ import sceneImg19 from '../../../images/daisy-bell/db-03-fleet-street.webp';
 import sceneImg20 from '../../../images/daisy-bell/db-04-victorian-hd.webp';
 import sceneImg21 from '../../../images/daisy-bell/db-05-carriage-lyric.webp';
 import sceneImg22 from '../../../images/daisy-bell/db-07-stylish-glance.webp';
+import sceneImg0Pic from '../../../images/daisy-bell/db-x01-crowded-downtown.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg1Pic from '../../../images/daisy-bell/db-x02-city-thinning.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg2Pic from '../../../images/daisy-bell/db-x03-open-road-flowers.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg3Pic from '../../../images/daisy-bell/db-x04-reaction-moment.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg4Pic from '../../../images/daisy-bell/db-g01-open-road-grok.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg5Pic from '../../../images/daisy-bell/db-g02-london-crowded-grok.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg6Pic from '../../../images/daisy-bell/db-g03-bw-fleet-grain-grok.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg7Pic from '../../../images/daisy-bell/db-g04-gyre-street-hybrid-grok.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg8Pic from '../../../images/daisy-bell/db-g05-field-to-london-edit.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg9Pic from '../../../images/daisy-bell/db-xai-01-tandem-field.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg10Pic from '../../../images/daisy-bell/db-xai-02-london-tandem.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg11Pic from '../../../images/daisy-bell/db-xai-03-bw-scratch.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import sceneImg12Pic from '../../../images/daisy-bell/db-p01-wide-grain-entry.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg13Pic from '../../../images/daisy-bell/db-p02-carriage-beggars.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg14Pic from '../../../images/daisy-bell/db-p03-stylish-glance.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg15Pic from '../../../images/daisy-bell/db-p04-street-hd-color.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg16Pic from '../../../images/daisy-bell/db-p05-flower-girl-doubletake.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg17Pic from '../../../images/daisy-bell/db-01-field-tandem.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg18Pic from '../../../images/daisy-bell/db-02-first-grain.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg19Pic from '../../../images/daisy-bell/db-03-fleet-street.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg20Pic from '../../../images/daisy-bell/db-04-victorian-hd.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg21Pic from '../../../images/daisy-bell/db-05-carriage-lyric.webp?w=480;960;1440&format=avif;webp&as=picture';
+import sceneImg22Pic from '../../../images/daisy-bell/db-07-stylish-glance.webp?w=480;960;1440&format=avif;webp&as=picture';
 
 import type { SceneBoard } from '../types';
 
@@ -134,6 +157,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Wide: black lace + bangs on living flower tandem through busy late-Victorian street; stylish stare, beggars on curb, St. Paul’s haze.",
         prompt: "Two young women with long black hair and bangs, pale skin and dark red lips, wearing form-fitting black lace dresses with sheer long sleeves, riding a tandem bicycle completely covered in living colorful wildflowers through a busy late-Victorian London street. Dense crowd of period pedestrians, horse-drawn carriages and hansom cabs. Stylish women in 1890s fashion with enormous leg-of-mutton sleeves, high collars, and large feathered hats turn to stare. A line of poor beggars sits along the curb. Tall brick buildings, shop signs, and the dome of St. Paul's visible in the hazy distance. Soft natural daylight mixed with slight film grain, cinematic wide shot, highly detailed.",
         imageUrl: sceneImg0,
+        imagePicture: sceneImg0Pic,
         tags: ["ride-arc", "downtown", "fleet-street", "wide"],
       },
       {
@@ -145,6 +169,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Fewer carriages, more walkers and ordinary bikes; grass and wildflowers creep in; lace duo stays focal.",
         prompt: "Rubella and Lillith — two young women with long black hair and bangs, pale skin and dark red lips, form-fitting black lace dresses with sheer long sleeves — on a living flower-covered tandem bicycle riding along a late-Victorian London road as the dense city begins to open up. Fewer carriages, more pedestrians and ordinary bicycles. Stylish women in leg-of-mutton sleeve jackets and wide decorated hats walking or cycling past, glancing at the strange floral bike. Smaller brick houses and low walls appear on the sides. Patches of grass and wildflowers start creeping into the frame along the road edges. The two women in black lace remain the clear focal point, soft afternoon light, slight cinematic depth of field, highly detailed.",
         imageUrl: sceneImg1,
+        imagePicture: sceneImg1Pic,
         tags: ["ride-arc", "transition", "thinning"],
       },
       {
@@ -156,6 +181,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Quieter verges, daisies and poppies; stylish woman on ordinary bike looks back; flower tandem glows against green.",
         prompt: "Wide shot of the same two gothic women with long black hair and bangs, dark red lips, form-fitting black lace dresses with sheer long sleeves, riding their tandem bicycle made entirely of blooming wildflowers down a quieter late-Victorian road on the edge of London. Smaller terraced houses and cottages line the sides. Lush grass and clusters of daisies, poppies and other wildflowers grow along the verges and between the cobbles. Other period pedestrians and a few ordinary bicycles share the road. A stylish woman in an 1890s walking suit with large puffed sleeves and a feathered hat rides past on her own bicycle and looks back. Soft golden light, gentle atmosphere, the flower bike glowing slightly against the greener surroundings, cinematic and detailed.",
         imageUrl: sceneImg2,
+        imagePicture: sceneImg2Pic,
         tags: ["ride-arc", "open-road", "verges"],
       },
       {
@@ -167,6 +193,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Medium: lace duo on flower tandem; 1890s women with leg-of-mutton + feathered hats; one full head-turn.",
         prompt: "Medium shot of Rubella and Lillith — long black hair with bangs, pale skin, dark red lips, form-fitting black lace dresses with sheer long sleeves — on a tandem bicycle completely covered in living wildflowers as a group of elegantly dressed 1890s women in high-collared blouses, giant leg-of-mutton sleeves and elaborate feathered hats walk or cycle past them on a London street that is starting to open into greenery. One of the stylish women turns her head fully to look at the living bicycle and the two modern gothic figures. Smaller houses and grass verges visible in the background. Natural daylight, sharp detail on the lace dresses and the flowers covering the bike, cinematic framing, highly detailed.",
         imageUrl: sceneImg3,
+        imagePicture: sceneImg3Pic,
         tags: ["ride-arc", "reaction", "medium"],
       },
       {
@@ -178,6 +205,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "xAI Imagine: black lace duo on living flower tandem, golden-hour verges, cottages — Daisy Bell mood.",
         prompt: "Cinematic photoreal 16:9 still: the same two gothic women in black lace with long dark hair and bangs on a living wildflower tandem bicycle at golden hour on a quiet edge-of-London road. Poppies and daisies along grass verges, small cottages, soft backlight, pollen in the air, flower bike glowing slightly too alive against the green.",
         imageUrl: sceneImg4,
+        imagePicture: sceneImg4Pic,
         tags: ["grok", "open-road", "color"],
       },
       {
@@ -189,6 +217,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "xAI Imagine: lace + flower tandem through busy late-Victorian street, stylish stares, St. Paul’s haze.",
         prompt: "Cinematic photoreal 16:9 short-film still: two young women with long black hair and bangs, pale skin, dark red lipstick, form-fitting black lace dresses with sheer sleeves, riding a tandem bicycle completely covered in living colorful wildflowers and vines through a busy late-Victorian London street. Horse carriages, stylish 1890s women with leg-of-mutton sleeves and feathered hats staring, St. Paul's dome hazy in the distance. Soft daylight, slight film grain, Weeks on Fire mood.",
         imageUrl: sceneImg5,
+        imagePicture: sceneImg5Pic,
         tags: ["grok", "london", "color"],
       },
       {
@@ -200,6 +229,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "xAI Imagine: scratched monochrome period street; luminous flower bike cutting through.",
         prompt: "Cinematic 16:9 scratched early nitrate black-and-white film still with heavy grain and vertical emulsion scratches: two women in modern black lace on a tandem bicycle made of luminous white living flowers riding into monochrome Victorian Fleet Street, St. Paul's in the background, the flowers slightly too sharp and bright against pure monochrome.",
         imageUrl: sceneImg6,
+        imagePicture: sceneImg6Pic,
         tags: ["grok", "period", "grain"],
       },
       {
@@ -211,6 +241,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "xAI Imagine: translucent gel gyre above night cobblestones; lace silhouettes + bioluminescent flower bike.",
         prompt: "Surreal cinematic 16:9 photoreal-3D hybrid still: a translucent floating geometric gyre made of glass and gel, rainbow internal caustics, slowly rotating above a Victorian cobblestone street at night while two silhouettes in black lace stand beside a bicycle covered in glowing bioluminescent flowers. Psychedelic but elegant, deep violet and amber light, Weeks on Fire short film.",
         imageUrl: sceneImg7,
+        imagePicture: sceneImg7Pic,
         tags: ["grok", "psychedelic", "hybrid"],
       },
       {
@@ -222,6 +253,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "image_edit from the flower-field still: same faces/wardrobe dropped onto the London ride.",
         prompt: "Keep the same two women with long dark hair, black lace dresses, and red lips from the reference. Place them riding a tandem bicycle completely covered in living wildflowers through a busy late-Victorian London street with St. Paul's dome in the hazy distance. Same faces and wardrobe, new setting only. Cinematic 16:9 photoreal short-film still.",
         imageUrl: sceneImg8,
+        imagePicture: sceneImg8Pic,
         tags: ["grok", "edit", "consistency"],
       },
       {
@@ -233,6 +265,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Direct api.x.ai generation — meadow + living flower tandem + black lace duo.",
         prompt: "Cinematic photoreal 16:9 short-film still: two young women with long black hair and bangs, pale skin, dark red lips, form-fitting black lace dresses with sheer sleeves, standing with a tandem bicycle completely covered in living colorful wildflowers in a golden-hour wildflower meadow, soft backlight, pollen motes, Weeks on Fire mood, highly detailed",
         imageUrl: sceneImg9,
+        imagePicture: sceneImg9Pic,
         tags: ["xai-api", "field", "quality"],
       },
       {
@@ -244,6 +277,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "api.x.ai — Fleet Street energy with flower tandem and 1890s stares.",
         prompt: "Cinematic photoreal 16:9: two gothic women with long black hair and bangs, dark red lips, form-fitting black lace dresses, riding a tandem bicycle completely covered in living wildflowers through late-Victorian London, horse carriages, stylish 1890s women with leg-of-mutton sleeves and feathered hats staring, dome of St. Paul's hazy in the distance, soft daylight, slight film grain",
         imageUrl: sceneImg10,
+        imagePicture: sceneImg10Pic,
         tags: ["xai-api", "london", "quality"],
       },
       {
@@ -255,6 +289,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "api.x.ai — nitrate grain monochrome Fleet Street slip.",
         prompt: "Early nitrate black-and-white film still 16:9, heavy grain and vertical scratches: two women in modern black lace on a tandem made of luminous living flowers riding into monochrome Victorian Fleet Street, St. Paul's behind, flowers too bright for monochrome",
         imageUrl: sceneImg11,
+        imagePicture: sceneImg11Pic,
         tags: ["xai-api", "period", "quality"],
       },
       {
@@ -266,6 +301,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Wide: flower tandem into black-and-white Fleet Street as nitrate grain and scratches land. St. Paul’s deep background. Black lace vs monochrome world.",
         prompt: "Wide cinematic 16:9 scratched early nitrate black-and-white film still, heavy grain vertical emulsion scratches slight flicker, two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background, pedaling straight into the monochrome period street as first film grain and scratches appear over the frame, horse traffic bowler hats shop fronts, the living flower bicycle slightly too sharp and faintly luminous against pure monochrome, soft period lens, damaged film leader aesthetic",
         imageUrl: sceneImg12,
+        imagePicture: sceneImg12Pic,
         tags: ["prototype", "wide", "grain", "london", "lock"],
       },
       {
@@ -277,6 +313,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Broken hansom + working-class curb line; one wilted daisy offered as the living bike rolls past.",
         prompt: "Medium 16:9 scratched black-and-white 1890s London street film still, grain and vertical scratches, two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background rolling past in midground, foreground broken hansom cab missing one wheel with resigned horse still harnessed, line of beggars and poor on the curb 1890s working-class figures in heavy worn wool and coarse cotton, faded dark colors, patched dusty functional clothes, women in long plain skirts shawls practical boots headscarves, men in cloth caps waistcoats heavy jackets boots, no giant sleeves no decoration, one beggar holds up a single wilted daisy, deadpan lyric beat can't afford a carriage, St. Paul's dome hazy in deep background",
         imageUrl: sceneImg13,
+        imagePicture: sceneImg13Pic,
         tags: ["prototype", "medium", "carriage", "beggars", "lock"],
       },
       {
@@ -288,6 +325,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "1890–96 leg-of-mutton + feathered hats; one long amused look. Structured period elegance vs modern black lace.",
         prompt: "Medium-close 16:9 scratched black-and-white 1895 London sidewalk film still, grain scratches soft focus, foreground three 1890-1896 fashionable women with extreme hourglass corseted waists, leg-of-mutton gigot sleeves massive at the shoulder tapering to the wrist, high standing collars, gored A-line skirts clearing the ground, large heavily decorated hats with feathers ribbons flowers, Gibson Girl pompadour hair, tailored walking suits in silk and wool, polished rigid period elegance one woman turning her head with a long amused slightly admiring glance toward camera-right, midground two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background passing by, strong silhouette contrast: structured period elegance versus modern black lace that moves with the body, leg-of-mutton sleeves and big feathered hats readable at a glance, St. Paul's deep background",
         imageUrl: sceneImg14,
+        imagePicture: sceneImg14Pic,
         tags: ["prototype", "medium-close", "fashion", "glance", "lock"],
       },
       {
@@ -299,6 +337,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Same Fleet Street geometry, clean modern color; living flower bike still glowing too bright.",
         prompt: "Full-color crisp modern 8K photoreal 16:9 cinema still of the same Victorian Fleet Street, contemporary lenses high dynamic range, no film scratches pure clean HD, period architecture horse traffic top hats bowlers fully 1890s, two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background, the living flower bicycle glowing slightly too bright with saturated wildflower color against the period world, surreal time-slip, pollen motes, St. Paul's dome deep background",
         imageUrl: sceneImg15,
+        imagePicture: sceneImg15Pic,
         tags: ["prototype", "color", "hd", "time-slip", "lock"],
       },
       {
@@ -310,6 +349,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Flower girl freezes with ordinary cut blooms; living bike makes her basket look dead. Policeman optional in depth.",
         prompt: "Quick reaction medium 16:9 scratched black-and-white 1890s London curb film still, grain and scratches, foreground young flower girl kneeling with a basket of ordinary cut flowers freezing mid-arrange, eyes wide double-take, midground two glamorous modern women (Rubella and Lillith) with long dark hair, blood-red lipstick, body-conscious slightly sheer black lace evening dresses with no corset hourglass, no leg-of-mutton sleeves, no towering hats, modern gothic fashion dropped into the wrong century, riding a tandem bicycle whose entire frame, wheels, handlebars and seat are completely covered in living wildflowers and green vines, bright multicolored blooms slightly too alive, no bare metal visible on the bicycle, period London street with Fleet Street energy, dome of St. Paul's Cathedral deep in the background rolling past so her basket flowers look dead compared to the living bike, optional period policeman in background also mid double-take then looking away, 1890s working-class figures in heavy worn wool and coarse cotton, faded dark colors, patched dusty functional clothes, women in long plain skirts shawls practical boots headscarves, men in cloth caps waistcoats heavy jackets boots, no giant sleeves no decoration passersby, St. Paul's soft in fog behind, deadpan comedy",
         imageUrl: sceneImg16,
+        imagePicture: sceneImg16Pic,
         tags: ["prototype", "reaction", "flower-girl", "lock"],
       },
       {
@@ -321,6 +361,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Color field reference for lace + meadow. Bike still reads as metal with baskets — use LOCK for London reels.",
         prompt: "Cinematic photoreal 16:9 still, golden-hour wildflower meadow, vast chaotic field of daisies and mixed blooms, a tandem bicycle built entirely of living flowers and vines half-swallowed by the petals, two glamorous women in matching black lace dresses with long dark hair and blood-red lipstick — Rubella dry and wry looking back, Lillith brighter slightly ahead — soft backlight, pollen and motes in the air, gothic softness against saturated color, shallow depth, 35mm anamorphic, fine grain, Weeks on Fire short-film still",
         imageUrl: sceneImg17,
+        imagePicture: sceneImg17Pic,
         tags: ["archive", "field", "open"],
       },
       {
@@ -332,6 +373,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Early grain experiment on the meadow (pre-lock).",
         prompt: "Same wildflower meadow and living flower tandem bicycle with two women in black lace, but as early 1900s nitrate film: heavy film grain, vertical emulsion scratches, slight gate weave and flicker, color almost drained to monochrome with a faint warm tint only on the flower bike, soft focus, damaged leader aesthetics, photoreal figures under period film decay, 16:9 cinematic still",
         imageUrl: sceneImg18,
+        imagePicture: sceneImg18Pic,
         tags: ["archive", "grain", "field"],
       },
       {
@@ -343,6 +385,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Pre-lock Fleet Street; good St. Paul’s depth, weaker living-bike coverage.",
         prompt: "Scratched black-and-white 1900s film still of Fleet Street looking toward the dome of St. Paul's Cathedral, dense horse-drawn traffic, bowler hats, period shop fronts, a tandem bicycle made of living white flowers cutting through the crowd ridden by two women in black lace dresses, the flower bike slightly too sharp and faintly luminous against pure monochrome, heavy grain, vertical scratches, flicker, soft period lens, 16:9",
         imageUrl: sceneImg19,
+        imagePicture: sceneImg19Pic,
         tags: ["archive", "london", "fleet-street"],
       },
       {
@@ -354,6 +397,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Pre-lock full-color street pass.",
         prompt: "Crisp modern 8K photoreal color photograph of the same Victorian Fleet Street toward St. Paul's, 1890s–1910s architecture and horse traffic fully period, but shot with contemporary cinema lenses and full natural color, two women in black lace on a tandem bicycle built of living multicolored flowers riding through the crowd, pollen and petal fragments in the air, high dynamic range, no film scratches, surreal time-slip, 16:9 anamorphic",
         imageUrl: sceneImg20,
+        imagePicture: sceneImg20Pic,
         tags: ["archive", "hd", "london"],
       },
       {
@@ -365,6 +409,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Pre-lock carriage beat.",
         prompt: "Black-and-white scratched period film still, London gutter, broken hansom cab missing one wheel, resigned horse still harnessed, two women in black lace pedaling a luminous living-flower tandem bicycle past in the foreground, soft focus background of period street, grain and vertical scratches, deadpan comedy, 16:9",
         imageUrl: sceneImg21,
+        imagePicture: sceneImg21Pic,
         tags: ["archive", "carriage"],
       },
       {
@@ -376,6 +421,7 @@ export const sceneBoards: SceneBoard[] = [
         description: "Pre-lock color glance; prefer p03 for 1895 silhouette.",
         prompt: "Full-color photoreal cinema still, Victorian London sidewalk, three stylishly dressed women in large feathered hats and tailored walking suits, one turning her head with a long amused admiring glance, background two women in black lace on a living flower tandem bicycle, crisp modern HD of period fashion and street, shallow depth on the glance, 16:9",
         imageUrl: sceneImg22,
+        imagePicture: sceneImg22Pic,
         tags: ["archive", "glance"],
       },
       {

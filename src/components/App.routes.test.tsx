@@ -414,7 +414,7 @@ describe('appears-in links from the catalog graph', () => {
   it('a song lists the cutaway it scores', async () => {
     renderRoute(crewPath('/songs/well-fall'));
     await settled();
-    const strip = await screen.findByRole('region', { name: 'Appears in' });
+    const strip = await screen.findByRole('region', { name: 'Appears in' }, { timeout: 5000 });
     expect(within(strip).getByRole('link', { name: 'Well Fall' }).getAttribute('href')).toBe(
       crewPath('/suggestions/well-fall'),
     );

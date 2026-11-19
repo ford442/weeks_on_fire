@@ -2,6 +2,7 @@ import { X } from 'lucide-react';
 
 import CutawayPreview from '../CutawayPreview';
 import RelatedLinks from '../RelatedLinks';
+import Still from '../Still';
 
 import CopyButton from './CopyButton';
 import SightBank from './SightBank';
@@ -144,8 +145,10 @@ function SegmentDetail({
       )}
 
       {segment.stillUrl && (
-        <img
+        <Still
           src={segment.stillUrl}
+          picture={segment.stillPicture}
+          sizes="(min-width: 1024px) 480px, 100vw"
           alt={segment.label}
           className="w-full rounded-md border border-zinc-800 object-cover"
         />

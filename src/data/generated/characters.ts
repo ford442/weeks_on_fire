@@ -3,6 +3,10 @@ import characterImg0 from '../../../characters/image_001.webp';
 import characterImg1 from '../../../characters/image_002.jpg';
 import characterImg2 from '../../../characters/image_003.png';
 import characterImg3 from '../../../episodes/episode-03/image_004.jpg';
+import characterImg0Pic from '../../../characters/image_001.webp?w=480;960;1440&format=avif;webp&as=picture';
+import characterImg1Pic from '../../../characters/image_002.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
+import characterImg2Pic from '../../../characters/image_003.png?w=480;960;1440&format=avif;webp;png&as=picture';
+import characterImg3Pic from '../../../episodes/episode-03/image_004.jpg?w=480;960;1440&format=avif;webp;jpg&as=picture';
 
 import type { SeriesCharacter } from '../types';
 
@@ -17,6 +21,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Speaker wire coil", "Safety glasses (never used)", "Soldering iron", "6BQ5 vacuum tube", "Black lace dress", "Black spy trenchcoat (Ep3 Spy vs. Spy only)"],
     tags: ["building-pair", "lace", "duet", "lace-waterfall"],
     imageUrl: characterImg0,
+    imagePicture: characterImg0Pic,
     cluster: "The building pair",
     bibleStatus: "active",
     bibleSheet: "characters/bible/lillith-vale.md",
@@ -31,6 +36,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["World's Okayest Tenant mug", "Contraband detergent (never used)", "Full fire extinguisher (never discharged)", "Black lace long-sleeve dress", "Silver vintage microphone (Ep3 Monster Mash)", "White spy trenchcoat (Ep3 Spy vs. Spy only)", "Hawaiian lei (basalt cutaway)"],
     tags: ["building-pair", "lace", "monster-mash", "lace-waterfall"],
     imageUrl: characterImg1,
+    imagePicture: characterImg1Pic,
     cluster: "The building pair",
     bibleStatus: "active",
     bibleSheet: "characters/bible/rubella-vale.md",
@@ -45,6 +51,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Ping-pong paddle", "Champagne flute (never set down)", "Silver pendant"],
     tags: ["the-two", "glamour-apocalypse", "lace"],
     imageUrl: characterImg0,
+    imagePicture: characterImg0Pic,
     cluster: "The Two",
     bibleStatus: "recurring",
     bibleSheet: "characters/bible/vivienne-vale.md",
@@ -59,6 +66,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Leather-bound notebook (never opened on screen)", "Wine glass she sets down", "Silver at wrist and ear"],
     tags: ["the-two", "glamour-apocalypse", "lace"],
     imageUrl: characterImg2,
+    imagePicture: characterImg2Pic,
     cluster: "The Two",
     bibleStatus: "recurring",
     bibleSheet: "characters/bible/liliane-vale.md",
@@ -74,6 +82,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Glowing transparent crystal skull"],
     tags: ["ep3", "monster-mash", "lawn-ensemble", "crystal-skull"],
     imageUrl: characterImg3,
+    imagePicture: characterImg3Pic,
     cluster: "The Ep3 ensemble",
     bibleStatus: "active",
     bibleSheet: "characters/bible/qing-rao.md",
@@ -114,6 +123,7 @@ export const seriesCharacters: SeriesCharacter[] = [
     props: ["Black lace dress", "Blood-red lipstick"],
     tags: ["ep3", "lace", "utility-poles"],
     imageUrl: characterImg0,
+    imagePicture: characterImg0Pic,
   },
   {
     id: "pizza-guy",

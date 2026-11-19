@@ -57,10 +57,26 @@ export type {
 } from './schemas';
 export type { TaxonomyEpisode, TaxonomyRecord as Taxonomy, TaxonomyTool } from './schemas';
 
-/** Codegen rewrites a source image path into an imported asset URL. */
+/**
+ * A responsive still from `vite-imagetools` (`?…&as=picture`, see `./image-variants.ts`): one
+ * `srcset` per format, and the fallback image with its intrinsic size.
+ */
+export interface Picture {
+  sources: Record<string, string>;
+  img: { src: string; w: number; h: number };
+}
+
+type PictureKeyOf<UrlKey extends string> = UrlKey extends `${infer Stem}Url`
+  ? `${Stem}Picture`
+  : never;
+
+/**
+ * Codegen rewrites a source image path into an imported asset URL, and (for card stills) a
+ * responsive `Picture` beside it.
+ */
 type ResolveImage<T, PathKey extends keyof T, UrlKey extends string> = Omit<T, PathKey> & {
   [K in UrlKey]?: string;
-};
+} & { [K in PictureKeyOf<UrlKey>]?: Picture };
 
 /** List-view song fields: bundled, and in `public/catalog/songs/index.json`. */
 export type SongSummary = SongSummaryRecord;

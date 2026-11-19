@@ -22,6 +22,7 @@ export type {
   FilmScene,
   ImageKind,
   MediaType,
+  Picture,
   ProductionStatus,
   SceneBeat,
   SceneBoard,

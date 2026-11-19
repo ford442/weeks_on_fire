@@ -8,3 +8,5 @@ videos/
 coverage/
 playwright-report/
 test-results/
+.cache/
+.lighthouseci/

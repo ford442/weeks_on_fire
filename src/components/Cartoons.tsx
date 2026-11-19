@@ -14,6 +14,7 @@ import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
 
 import RelatedLinks from './RelatedLinks';
+import Still from './Still';
 
 const allValue = 'All';
 
@@ -164,9 +165,12 @@ export default function Cartoons() {
                     className="block w-full text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
                   >
                     {cartoon.stillUrl ? (
-                      <img
+                      <Still
                         src={cartoon.stillUrl}
+                        picture={cartoon.stillPicture}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         alt=""
+                        loading="lazy"
                         className="aspect-[4/3] w-full object-cover"
                       />
                     ) : null}
@@ -306,8 +310,10 @@ function CartoonMedia({ cartoon }: { cartoon: CartoonRecord }) {
 
   if (cartoon.stillUrl) {
     return (
-      <img
+      <Still
         src={cartoon.stillUrl}
+        picture={cartoon.stillPicture}
+        sizes="(min-width: 1024px) 480px, 100vw"
         alt=""
         className="mt-3 w-full rounded-md border border-zinc-800 bg-black object-cover"
       />

@@ -1,6 +1,6 @@
 import { CutawayRecordSchema } from '../../scripts/content-index/record-schemas';
 
-import { cutawayStillUrls, cutawaySuggestions } from './generated/cutaways';
+import { cutawayStillPictures, cutawayStillUrls, cutawaySuggestions } from './generated/cutaways';
 import { fetchRecord, prefetch, useRecord, type RecordSource } from './records';
 
 import type { CutawaySuggestion } from './types';
@@ -25,7 +25,12 @@ const cutawaySource: RecordSource<CutawaySuggestion> = {
       // A repo still is a bundled asset; the JSON names it by path.
       segments: record.segments.map(({ stillImagePath, ...segment }) => {
         const stillUrl = segment.stillUrl ?? (stillImagePath && cutawayStillUrls[stillImagePath]);
-        return stillUrl ? { ...segment, stillUrl } : segment;
+        const stillPicture = stillImagePath ? cutawayStillPictures[stillImagePath] : undefined;
+        return {
+          ...segment,
+          ...(stillUrl ? { stillUrl } : {}),
+          ...(stillPicture ? { stillPicture } : {}),
+        };
       }),
     };
   },

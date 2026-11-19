@@ -7,6 +7,7 @@ import { crewPath } from '../routes/paths';
 
 import SceneDetail from './SceneDetail';
 import StatusBadge from './StatusBadge';
+import Still from './Still';
 
 /** `/scenes` lists every scene board; `/scenes/:id` renders one through the shared template. */
 export default function Scenes() {
@@ -60,8 +61,10 @@ export default function Scenes() {
             >
               <div className={`aspect-video overflow-hidden ${tone.tile}`}>
                 {cover?.imageUrl && (
-                  <img
+                  <Still
                     src={cover.imageUrl}
+                    picture={cover.imagePicture}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     alt=""
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"

@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import { imagetools } from 'vite-imagetools';
 
 import { servedAudioName } from './scripts/content-index/audio-names';
 
@@ -59,7 +60,18 @@ function safeName(name: string): string {
 // does not work: Vite bundles this file and replaces process.env.VITE_*.
 export default defineConfig({
   base: './',
-  plugins: [react(), tailwindcss(), songAudio()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    // Only codegen's `?…&as=picture` still imports (scripts/content-index/image-variants.ts) are
+    // re-encoded; plain image imports pass through untouched.
+    imagetools({
+      include: /\.(?:jpe?g|png|webp)\?(?:.*&)?as=picture/,
+      // Outside node_modules so `npm ci` keeps it; CI restores it between runs.
+      cache: { dir: '.cache/imagetools' },
+    }),
+    songAudio(),
+  ],
   build: {
     rollupOptions: {
       output: {

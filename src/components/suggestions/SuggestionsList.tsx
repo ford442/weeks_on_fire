@@ -11,6 +11,7 @@ import {
 import { getDialogVersionsForScene } from '../../data/sceneDialogVersions';
 import { pluralize } from '../../lib/plural';
 import StatusBadge from '../StatusBadge';
+import Still from '../Still';
 
 import { isOpenSlot } from './sightSlots';
 
@@ -179,8 +180,10 @@ function SegmentRow({ segment, active, previewTitle, locked, onSelect }: Segment
           </p>
         </div>
         {segment.stillUrl && (
-          <img
+          <Still
             src={segment.stillUrl}
+            picture={segment.stillPicture}
+            sizes="80px"
             alt=""
             className="h-12 w-20 shrink-0 rounded border border-zinc-800 object-cover"
           />

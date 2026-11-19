@@ -19,6 +19,7 @@ import Lightbox from './Lightbox';
 import SongAudioPlayer from './SongAudioPlayer';
 import StatusBadge from './StatusBadge';
 import VideoCard from './VideoCard';
+import Still from './Still';
 
 type FinalizedType = 'song' | 'image' | 'video';
 
@@ -124,8 +125,10 @@ export default function Finalized() {
                 >
                   <div className="aspect-[4/5] overflow-hidden bg-black">
                     {scene.imageUrl ? (
-                      <img
+                      <Still
                         src={scene.imageUrl}
+                        picture={scene.imagePicture}
+                        sizes="(min-width: 1536px) 20vw, (min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                         alt={scene.title}
                         loading="lazy"
                         className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"

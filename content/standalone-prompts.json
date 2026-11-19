@@ -1,0 +1,14 @@
+[
+  {
+    "path": "prompts/bounce-castle-segments.md",
+    "reason": "Drawer song (Lace Waterfall); no cutaway JSON, no codegen by design."
+  },
+  {
+    "path": "prompts/waterslide-segments.md",
+    "reason": "28-segment slide-cam music-video shot bank; not a cutaway."
+  },
+  {
+    "path": "prompts/well-fall-locked-segments.md",
+    "reason": "Long-form locked companion to the well-fall cutaway, which already uses prompts/well-fall-segments.md."
+  }
+]

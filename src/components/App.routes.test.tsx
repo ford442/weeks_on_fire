@@ -5,6 +5,7 @@ import { describe, expect, it, vi } from 'vitest';
 import App from '../App';
 import { crewPath } from '../routes/paths';
 import MediaSessionProvider from '../contexts/MediaSessionProvider';
+import { about } from '../data/about';
 import { cartoons } from '../data/cartoons';
 import { seriesCharacters } from '../data/characters';
 import { episodes } from '../data/episodes';
@@ -55,8 +56,26 @@ function first<T>(items: readonly T[]): T {
 }
 
 describe('App lazy routes render', () => {
-  it('/show (Gallery)', async () => {
+  it('/show (Overview)', async () => {
     renderRoute('/show');
+    await settled();
+    expect(await screen.findByRole('heading', { level: 1, name: 'About the show' })).toBeTruthy();
+    expect(screen.getByRole('heading', { level: 2, name: about.logline })).toBeTruthy();
+  });
+
+  it('/show?theme=… still opens the archive, filters intact', async () => {
+    renderRoute('/show?q=zz-no-such-still-zz');
+    await waitFor(() =>
+      expect(screen.getByTestId('location').textContent).toBe(crewPath('/archive')),
+    );
+    await settled();
+    expect(screen.getByPlaceholderText<HTMLInputElement>(/Search/).value).toBe(
+      'zz-no-such-still-zz',
+    );
+  });
+
+  it('/show/archive (Gallery)', async () => {
+    renderRoute(crewPath('/archive'));
     await expectHeadingFrom(filmScenes.map((scene) => scene.title));
   });
 

@@ -254,6 +254,15 @@ Graph shape (angles in degrees, times in seconds; unknown keys are rejected):
 - `loop`: after `outSec`, scene time wraps back to `inSec`.
 - No song id, no glTF, no three.js in v1.
 
+## "What's new" on the Overview
+
+The hub's Overview page shows the newest additions. Codegen reads `added: "YYYY-MM-DD"` (the day you add the record) and writes the picks to `src/data/generated/whats-new.ts`:
+
+- **Songs** — `added` is required (frontmatter).
+- **Cutaways, cartoons, 3D sequences, gallery items** — `added` is optional. Put it right under `id` when you add a new one; records without it never appear in the strip.
+
+It shows the newest two of each kind (song, suggestion, cartoon, sequence, video, image), newest first. Existing records were backfilled from the date their file or entry first appeared in git. The Overview's own prose (logline, synopsis, tone, format) is `src/data/about.ts`.
+
 ## Dialog versions (intentional TS exception)
 
 Long-form dialog audition pages live in [`notes/scenes/versions/`](../notes/scenes/versions/). They are prose (competing registers, fragments, juxtaposition notes), not a codegen schema.

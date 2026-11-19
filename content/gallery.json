@@ -1,6 +1,7 @@
 [
   {
     "id": "test-psy-flower-engine",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -22,6 +23,7 @@
   },
   {
     "id": "test-psy-mobius-ribbon",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -43,6 +45,7 @@
   },
   {
     "id": "test-psy-gyre-victorian",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -64,6 +67,7 @@
   },
   {
     "id": "test-psy-tetrahedron-sea",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -85,6 +89,7 @@
   },
   {
     "id": "test-psy-sphere-tower",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -106,6 +111,7 @@
   },
   {
     "id": "test-psy-xai-glass-cathedral",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -126,6 +132,7 @@
   },
   {
     "id": "test-psy-xai-flower-nebula",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -146,6 +153,7 @@
   },
   {
     "id": "test-psy-xai-klein-lattice",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "visual",
     "tool": "grok-imagine",
@@ -166,6 +174,7 @@
   },
   {
     "id": "ep03-laser-serpent-awakening",
+    "added": "2026-10-09",
     "imageKind": "scene",
     "episode": "03",
     "title": "Laser Serpent Awakening",
@@ -189,6 +198,7 @@
   },
   {
     "id": "ep03-rubella-signal",
+    "added": "2026-10-09",
     "imageKind": "scene",
     "episode": "03",
     "title": "Rubella Signal",
@@ -212,6 +222,7 @@
   },
   {
     "id": "ep03-snake-battle-canyon",
+    "added": "2026-10-09",
     "imageKind": "scene",
     "episode": "03",
     "title": "Snake Battle Canyon",
@@ -235,6 +246,7 @@
   },
   {
     "id": "ep03-static-altar",
+    "added": "2026-10-09",
     "imageKind": "scene",
     "episode": "03",
     "title": "Static Altar",
@@ -258,6 +270,7 @@
   },
   {
     "id": "ep03-fireline-exit",
+    "added": "2026-10-09",
     "imageKind": "scene",
     "episode": "03",
     "title": "Fireline Exit",
@@ -281,6 +294,7 @@
   },
   {
     "id": "character-reference-two",
+    "added": "2026-10-09",
     "imageKind": "character",
     "episode": "character-archive",
     "title": "The Two",
@@ -304,6 +318,7 @@
   },
   {
     "id": "character-reference-alt",
+    "added": "2026-10-09",
     "imageKind": "character",
     "episode": "character-archive",
     "title": "The Two - Alternate Frame",
@@ -327,6 +342,7 @@
   },
   {
     "id": "test-computer-room",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "ideas",
     "title": "Computer Room \u2014 Broadcast Control",
@@ -351,6 +367,7 @@
   },
   {
     "id": "test-hologram-glitch",
+    "added": "2026-10-09",
     "imageKind": "test",
     "episode": "03",
     "slot": "Ideas",
@@ -376,6 +393,7 @@
   },
   {
     "id": "suggestion-molten-silver-sphere",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "cutaway",
     "title": "Molten Silver Sphere \u2014 Beat-Sync Pulse",
@@ -400,6 +418,7 @@
   },
   {
     "id": "suggestion-glam-sham-poo",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "eyewash",
     "title": "Glam-Sham-Poo \u2014 Commercial Still Package",
@@ -423,6 +442,7 @@
   },
   {
     "id": "suggestion-soft-gyre-hover",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "The Soft Gyre \u2014 A Hover",
@@ -448,6 +468,7 @@
   },
   {
     "id": "suggestion-soft-gyre-weather",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "The Soft Gyre \u2014 B Weather",
@@ -473,6 +494,7 @@
   },
   {
     "id": "suggestion-soft-gyre-interior",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "The Soft Gyre \u2014 C Interior",
@@ -498,6 +520,7 @@
   },
   {
     "id": "suggestion-soft-gyre-answer",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "The Soft Gyre \u2014 D Answer",
@@ -523,6 +546,7 @@
   },
   {
     "id": "suggestion-soft-gyre-soft-set",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "The Soft Gyre \u2014 E Soft set",
@@ -548,6 +572,7 @@
   },
   {
     "id": "suggestion-well-fall-lip",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "visual",
     "title": "Well Fall \u2014 Lip of the Well",
@@ -573,6 +598,7 @@
   },
   {
     "id": "suggestion-rubella-stand-up-podium",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "spoken",
     "slot": "Short packet farm",
@@ -598,6 +624,7 @@
   },
   {
     "id": "suggestion-rubella-stand-up-detergent",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "spoken",
     "slot": "Short packet farm",
@@ -623,6 +650,7 @@
   },
   {
     "id": "suggestion-rubella-stand-up-heckle",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "spoken",
     "slot": "Short packet farm",
@@ -648,6 +676,7 @@
   },
   {
     "id": "suggestion-rubella-stand-up-land",
+    "added": "2026-10-09",
     "imageKind": "suggestion",
     "episode": "spoken",
     "slot": "Short packet farm",

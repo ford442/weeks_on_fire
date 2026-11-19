@@ -6,7 +6,7 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { loadCartoons, loadProductions, loadSequences } from './load';
 import { SequenceGraphSchema } from './graph-schema';
-import { SequenceSchema } from './schemas';
+import { CartoonSchema, CutawaySchema, FilmSceneSchema, SequenceSchema } from './schemas';
 import {
   validateContent,
   validateCartoons,
@@ -625,5 +625,24 @@ describe('scene catalog refs', () => {
         /episodes\/episode-01\/scenes\.json does not match the Timeline schema[\s\S]*songId/,
       );
     });
+  });
+});
+
+describe('optional added date', () => {
+  const cartoon = { id: 'c', title: 'C', premise: 'P', visual: 'V', status: 'seed', tags: [] };
+
+  it('is accepted as YYYY-MM-DD and may be omitted', () => {
+    expect(CartoonSchema.parse(cartoon).added).toBeUndefined();
+    expect(CartoonSchema.parse({ ...cartoon, added: '2026-11-19' }).added).toBe('2026-11-19');
+  });
+
+  it.each(['2026-1-9', '19 Nov 2026', '2026-11-19T00:00:00Z', ''])('rejects %j', (added) => {
+    expect(CartoonSchema.safeParse({ ...cartoon, added }).success).toBe(false);
+  });
+
+  it('is defined on every non-song record schema', () => {
+    for (const schema of [CartoonSchema, CutawaySchema, FilmSceneSchema, SequenceSchema]) {
+      expect(Object.keys(schema.shape)).toContain('added');
+    }
   });
 });

@@ -1,5 +1,6 @@
 {
   "id": "kick-lattice",
+  "added": "2026-10-05",
   "title": "Kick Lattice",
   "medium": "unreal",
   "runtime": "~16 seconds",

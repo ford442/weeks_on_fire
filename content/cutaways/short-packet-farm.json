@@ -1,5 +1,6 @@
 {
   "id": "short-packet-farm",
+  "added": "2026-10-05",
   "kind": "scene",
   "title": "Short Packet Farm — Generate-First Boards",
   "status": "ready-to-generate",

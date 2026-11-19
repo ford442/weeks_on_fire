@@ -7,6 +7,7 @@ import {
   Film,
   Flame,
   Flower2,
+  Info,
   Lightbulb,
   Music2,
   PenLine,
@@ -22,6 +23,7 @@ import { rememberedViewLocation, rememberViewLocation } from '../routes/viewSear
 const SiteSearch = lazy(() => import('./SiteSearch'));
 
 export type SiteView =
+  | 'overview'
   | 'gallery'
   | 'timeline'
   | 'songs'
@@ -34,6 +36,12 @@ export type SiteView =
   | 'crew';
 
 const viewMeta: Record<SiteView, { title: string; description: string; icon: typeof Film }> = {
+  overview: {
+    title: 'About the show',
+    description:
+      'What Weeks on Fire is, who is in it, and what just landed — start here, then browse the archive, songs, and episodes.',
+    icon: Info,
+  },
   gallery: {
     title: 'Visual archive',
     description:
@@ -97,6 +105,7 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
 };
 
 const tabs: Array<{ view: SiteView; label: string }> = [
+  { view: 'overview', label: 'Overview' },
   { view: 'gallery', label: 'Visual archive' },
   { view: 'timeline', label: 'Timeline' },
   { view: 'songs', label: 'Songs' },
@@ -224,6 +233,7 @@ export default function SiteHeader() {
 }
 
 const tabIcons: Record<SiteView, typeof Film> = {
+  overview: Info,
   gallery: Film,
   timeline: Clock,
   songs: Music2,

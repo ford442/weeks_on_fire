@@ -14,7 +14,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 - Respect the artistic vision (`grok.md`)
 - Keep the clone lightweight: prefer external media links; do not add large binaries without approval
-- Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/`
+- Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/` or `public/catalog/` (songs and cutaways: bundled summaries + per-record JSON fetched by detail views; see `content/README.md`)
 - Before any writing or joke pass, read `notes/callback-bank.md` and pull at least three callbacks.
 - Songs start from a video, not from a genre: read `docs/song-method.md` (owner lock) before writing any song, sketch or pitch.
 - Writing and joke passes go to the **`wof-writer`** subagent (`.claude/agents/wof-writer.md`): reading order, comedy rules, locks, and where each kind of output is filed.
@@ -53,7 +53,7 @@ in-app markdown (synopsis / scenes / screenplay / notes) sourced from `content/e
 
 **`src/`** — React app. Thin `src/data/*.ts` shims re-export generated modules.  
 **`content/`** — Cutaways, gallery, characters, crew, episodes, cartoons, sequences, scene boards (`scenes/`) JSON.  
-**`songs/`** — YAML-frontmatter markdown + optional mp3. Frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches (not codegen'd).  
+**`songs/`** — YAML-frontmatter markdown + optional mp3 (served at `audio/<slug>.mp3`, never imported). Frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted sketches (not codegen'd).  
 **`characters/bible/`** — Canon cast sheets (voice, backstory, tone rules); `content/characters.json` links via `bibleSheet`.  
 **`episodes/`** — Synopsis, scenes, SRT, `scenes.json` (Timeline).  
 **`prompts/`** — Segment / Grok Imagine prompt docs (`segmentsSource`).  
@@ -77,6 +77,8 @@ npm run test:coverage    # v8 coverage, no threshold yet
 npm run test:e2e         # real-GL frame harness (Playwright + Chromium, software GL)
 npm run test:e2e:update  # rewrite e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
+npm run build:check      # build + raw chunk budgets
+npm run budgets          # Lighthouse CI (lighthouserc.json); CI blocks the deploy on failure
 ```
 
 Use Node 22 (`.nvmrc`).

@@ -11,6 +11,8 @@ crowds, the same street with torches, smoke and fire cauldrons, and a forest-fir
 night. The world is loud and the two leads are not. Nobody flinches above the waist. The
 troop is background texture, not new cast: no faces get featured and nobody gets a name.
 
+**Long-form generate-first prompts:** `prompts/fire-girls-generate-first.md` (2026-11-19 — #6, #1, #15)
+
 **Lane locks for every card.** Rubella and Lillith only as featured cast. Canon black lace
 shows at collar and cuffs under the coverall (see *Open questions*). Performance is flat:
 Rubella endures, and Lillith's energy goes into the thing (the flag, the band, the
@@ -245,6 +247,8 @@ ideas farm to [#22](https://github.com/ford442/weeks_on_fire/issues/22). Songs f
    multiplication in one move, and the laugh is clear to a kid.
 3. **#15 Helmet Rain.** It sits on the established look, its drop is a clean "falls" with a
    satisfying sound, and the very-end adjust gives Rubella one deadpan beat.
+
+Long-form prompts for these three: `prompts/fire-girls-generate-first.md`
 
 ## Open questions (left open)
 - **Black lace vs. red coveralls.** The reference stills show coveralls only. This file

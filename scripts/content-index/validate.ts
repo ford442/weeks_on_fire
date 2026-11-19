@@ -469,8 +469,9 @@ export interface CatalogIds {
 
 /**
  * Checks the optional catalog refs on committed `episodes/episode-NN/scenes.json` scenes — the same
- * class of check as `cutaway.songId`. Scenes without refs are always fine; hand-edited dialog
- * auditions (`src/data/sceneDialogVersions.ts`) are prose and deliberately not covered.
+ * class of check as `cutaway.songId`. Scenes without refs are always fine. The lines of the
+ * hand-edited dialog auditions (`src/data/sceneDialogVersions.ts`) are prose and not covered; their
+ * `sceneId` keys are, in `validateCatalogLinks`.
  */
 export function validateScenes(productions: LoadedProduction[], catalog: CatalogIds): void {
   const errors: string[] = [];
@@ -501,6 +502,144 @@ export function validateScenes(productions: LoadedProduction[], catalog: Catalog
   if (errors.length > 0) {
     throw new Error(
       `Scene validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+/** The link-bearing fields of every catalog, as `validateCatalogLinks` reads them. */
+export interface CatalogLinkSources {
+  songs: ReadonlyArray<Pick<ParsedSong, 'id' | 'episode' | 'episodeId'>>;
+  cutaways: ReadonlyArray<
+    Pick<
+      CutawayRecord,
+      'id' | 'characterIds' | 'episodeId' | 'promotedFromCartoonId' | 'sequenceInsertIds'
+    >
+  >;
+  cartoons: ReadonlyArray<Pick<CartoonRecord, 'id' | 'status' | 'promotedToCutawayId'>>;
+  sequences: ReadonlyArray<Pick<SequenceRecord, 'id' | 'relatedCutawayIds' | 'characterIds'>>;
+  sceneBoards: ReadonlyArray<Pick<SceneBoardRecord, 'id' | 'characterIds'>>;
+  characters: ReadonlyArray<{ id: string }>;
+  /** Episode Bible entries (`content/episodes.json`). */
+  episodes: ReadonlyArray<{ id: string }>;
+  /** `sceneId` keys of `src/data/sceneDialogVersions.ts`; each must be a cutaway id. */
+  dialogSceneIds?: readonly string[];
+}
+
+/**
+ * The typed links between catalogs (characters, episodes, promotion, sequence inserts). Every id
+ * must resolve, lists may not repeat an id, and a cartoon → cutaway promotion must be recorded on
+ * both records so the two pages link to each other. Feeds `catalog-graph.ts`, which can then trust
+ * every edge.
+ */
+export function validateCatalogLinks(sources: CatalogLinkSources): void {
+  const errors: string[] = [];
+  const ids = (records: ReadonlyArray<{ id: string }>) => new Set(records.map((r) => r.id));
+  const known = {
+    character: ids(sources.characters),
+    cutaway: ids(sources.cutaways),
+    cartoon: ids(sources.cartoons),
+    sequence: ids(sources.sequences),
+    episode: ids(sources.episodes),
+  };
+
+  const one = (where: string, key: string, id: string | undefined, noun: keyof typeof known) => {
+    if (id !== undefined && !known[noun].has(id)) {
+      errors.push(
+        `${where} ${key} "${id}" is not ${/^[aeiou]/.test(noun) ? 'an' : 'a'} ${noun} id`,
+      );
+    }
+  };
+  const many = (
+    where: string,
+    key: string,
+    list: readonly string[] | undefined,
+    noun: keyof typeof known,
+  ) => {
+    const seen = new Set<string>();
+    for (const id of list ?? []) {
+      if (seen.has(id)) errors.push(`${where} ${key} lists "${id}" twice`);
+      seen.add(id);
+      one(where, key, id, noun);
+    }
+  };
+
+  for (const song of sources.songs) {
+    const where = `Song ${song.id}`;
+    one(where, 'episodeId', song.episodeId, 'episode');
+    if (song.episodeId && known.episode.has(song.episode) && song.episodeId !== song.episode) {
+      errors.push(
+        `${where} episodeId "${song.episodeId}" disagrees with episode "${song.episode}"`,
+      );
+    }
+  }
+
+  const cartoonsById = new Map(sources.cartoons.map((cartoon) => [cartoon.id, cartoon]));
+  const cutawaysById = new Map(sources.cutaways.map((cutaway) => [cutaway.id, cutaway]));
+
+  for (const cutaway of sources.cutaways) {
+    const where = `Cutaway ${cutaway.id}`;
+    many(where, 'characterIds', cutaway.characterIds, 'character');
+    one(where, 'episodeId', cutaway.episodeId, 'episode');
+    many(where, 'sequenceInsertIds', cutaway.sequenceInsertIds, 'sequence');
+    one(where, 'promotedFromCartoonId', cutaway.promotedFromCartoonId, 'cartoon');
+
+    const source = cutaway.promotedFromCartoonId
+      ? cartoonsById.get(cutaway.promotedFromCartoonId)
+      : undefined;
+    if (source && source.promotedToCutawayId !== cutaway.id) {
+      errors.push(
+        `${where} promotedFromCartoonId "${source.id}", but that cartoon's promotedToCutawayId is ${
+          source.promotedToCutawayId ? `"${source.promotedToCutawayId}"` : 'unset'
+        }`,
+      );
+    }
+  }
+
+  for (const cartoon of sources.cartoons) {
+    const where = `Cartoon ${cartoon.id}`;
+    one(where, 'promotedToCutawayId', cartoon.promotedToCutawayId, 'cutaway');
+    if (cartoon.status === 'promoted' && !cartoon.promotedToCutawayId) {
+      errors.push(`${where} is status "promoted" but has no promotedToCutawayId`);
+    }
+    if (cartoon.promotedToCutawayId && cartoon.status !== 'promoted') {
+      errors.push(
+        `${where} has promotedToCutawayId "${cartoon.promotedToCutawayId}" but status "${cartoon.status}" (use "promoted")`,
+      );
+    }
+
+    const target = cartoon.promotedToCutawayId
+      ? cutawaysById.get(cartoon.promotedToCutawayId)
+      : undefined;
+    if (target && target.promotedFromCartoonId !== cartoon.id) {
+      errors.push(
+        `${where} promotedToCutawayId "${target.id}", but that cutaway's promotedFromCartoonId is ${
+          target.promotedFromCartoonId ? `"${target.promotedFromCartoonId}"` : 'unset'
+        }`,
+      );
+    }
+  }
+
+  for (const sequence of sources.sequences) {
+    const where = `Sequence ${sequence.id}`;
+    many(where, 'relatedCutawayIds', sequence.relatedCutawayIds, 'cutaway');
+    many(where, 'characterIds', sequence.characterIds, 'character');
+  }
+
+  for (const board of sources.sceneBoards) {
+    many(`Scene ${board.id}`, 'characterIds', board.characterIds, 'character');
+  }
+
+  const dialogKeys = new Set<string>();
+  for (const id of sources.dialogSceneIds ?? []) {
+    const where = 'src/data/sceneDialogVersions.ts';
+    if (dialogKeys.has(id)) errors.push(`${where} has two dialog sets for sceneId "${id}"`);
+    dialogKeys.add(id);
+    if (!known.cutaway.has(id)) errors.push(`${where} sceneId "${id}" is not a cutaway id`);
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Catalog link validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

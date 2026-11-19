@@ -54,6 +54,8 @@ export interface ParsedSong {
   stylePrompt: string;
   lyrics: string | null;
   notes: string | null;
+  /** Episode Bible id, when the frontmatter sets one (see `SongFrontmatterSchema`). */
+  episodeId?: string;
 }
 
 function readJson(path: string): unknown {
@@ -99,6 +101,7 @@ export function loadSongs(repoRoot: string): ParsedSong[] {
       stylePrompt: sections.stylePrompt,
       lyrics: sections.lyrics,
       notes: sections.notes,
+      ...(meta.episodeId ? { episodeId: meta.episodeId } : {}),
     };
   });
 }
@@ -262,6 +265,15 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
 export function loadCustomRendererIds(repoRoot: string): Set<string> {
   const source = readFileSync(join(repoRoot, 'src/sequences/registry.ts'), 'utf8');
   return new Set([...source.matchAll(/^\s*'([a-z0-9-]+)':\s*create\w+,?\s*$/gm)].map((m) => m[1]!));
+}
+
+/**
+ * `sceneId` keys of the hand-authored dialog auditions in `src/data/sceneDialogVersions.ts` (the
+ * Suggestions "Dialog" tab looks them up by cutaway id). Read as text, like the registry above.
+ */
+export function loadDialogSceneIds(repoRoot: string): string[] {
+  const source = readFileSync(join(repoRoot, 'src/data/sceneDialogVersions.ts'), 'utf8');
+  return [...source.matchAll(/^\s*sceneId:\s*'([^']+)',?\s*$/gm)].map((m) => m[1]!);
 }
 
 /** A committed Timeline file, validated against the same Zod contract the app uses. */

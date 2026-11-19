@@ -6,6 +6,7 @@
   "status": "ready-to-generate",
   "runtime": "~1:45",
   "episode": "Episode 03 / recurring",
+  "episodeId": "03",
   "songId": "pepperoni-or-margherita",
   "songTitle": "Pepperoni or Margherita",
   "summary": "Fifteen seconds of cheerful ad, hard cut, then a deadpan ballad about arriving when chaos peaks.",

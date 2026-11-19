@@ -42,6 +42,27 @@ console.log(
   `\ncheck-bundle-size: main entry ${formatKb(mainSize)} is within ${formatKb(MAIN_ENTRY_LIMIT_BYTES)} limit`,
 );
 
+// Hub search is lazy: MiniSearch and the codegen'd corpus (`search-index.ts`) load with the search
+// overlay or `/show/search`, never with the first paint. MiniSearch's error strings and the corpus
+// record shape both survive minification.
+const SEARCH_MARKERS: ReadonlyArray<[string, RegExp]> = [
+  ['MiniSearch', /MiniSearch: duplicate ID/],
+  // The minifier may quote with ", ' or ` (it currently prefers template literals).
+  ['the search corpus', /id:["'`]song:[a-z0-9-]+["'`],type:["'`]song["'`]/],
+];
+const mainSource = readFileSync(mainPath, 'utf8');
+const eagerSearch = SEARCH_MARKERS.filter(([, pattern]) => pattern.test(mainSource)).map(
+  ([name]) => name,
+);
+if (eagerSearch.length > 0) {
+  console.error(
+    `\ncheck-bundle-size: main entry ${mainEntry} contains ${eagerSearch.join(' and ')}. ` +
+      'Import src/lib/siteSearch.ts only from lazily loaded modules (SiteSearch, SearchPage).',
+  );
+  process.exit(1);
+}
+console.log('check-bundle-size: MiniSearch and the search corpus stay out of the main entry');
+
 // The Timeline labels and links catalog records from the slim `{ id, title }` lists only. Walk the
 // chunks it loads statically; none of them may be (or contain) the full songs / cutaways modules.
 // The main entry is skipped: it loads on every route and is capped above.

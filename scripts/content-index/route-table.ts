@@ -1,5 +1,6 @@
 import {
   loadCartoons,
+  loadCharacters,
   loadCutaways,
   loadEpisodes,
   loadSceneBoards,
@@ -18,7 +19,7 @@ import { SITE_BASE, siteViews } from './views';
 export interface RouteEntry {
   /** Router path under the site base, always with a trailing slash: `/show/songs/x/`. */
   path: string;
-  kind: 'view' | 'song' | 'episode' | 'scene' | 'cartoon' | 'sequence' | 'suggestion';
+  kind: 'view' | 'song' | 'episode' | 'scene' | 'cartoon' | 'sequence' | 'suggestion' | 'character';
   title: string;
   description: string;
   /** Absolute URL, trailing slash (what Pages serves with a 200). */
@@ -93,6 +94,11 @@ const viewCopy: Record<string, { title: string; description: string }> = {
   episodes: {
     title: `Episodes — ${BRAND}`,
     description: 'Every episode, its runtime and its logline. Almost no dialogue. Sound on.',
+  },
+  search: {
+    title: `Search — ${BRAND}`,
+    description:
+      'Search the whole show at once: songs, cutaways, stills, cartoons, characters. Type a word. Something will turn up.',
   },
   crew: {
     title: `Crew — ${BRAND}`,
@@ -250,5 +256,27 @@ export function buildRouteTable(repoRoot: string): RouteEntry[] {
     }),
   );
 
-  return [...views, ...songs, ...episodes, ...scenes, ...cartoons, ...sequences, ...suggestions];
+  const characters = loadCharacters(repoRoot).map((character) =>
+    entry({
+      path: `${viewPath('characters')}/${character.id}`,
+      kind: 'character',
+      ogType: 'website',
+      title: titled(character.name, '(character)'),
+      description: describe(
+        `${character.role}. ${withPeriod(firstSentence(character.bio))}`,
+        'From the Weeks on Fire cast.',
+      ),
+    }),
+  );
+
+  return [
+    ...views,
+    ...songs,
+    ...episodes,
+    ...scenes,
+    ...cartoons,
+    ...sequences,
+    ...suggestions,
+    ...characters,
+  ];
 }

@@ -33,9 +33,16 @@ The hub is a single-page app. Views are toggled in-app:
 10. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 11. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
 12. **Episodes** (Episode Bible) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-13. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+13. **Search** (Hub search) — Search every catalog at once — songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew — by title, tag, summary or character name. Deep-linkable: /show/search?q=<terms>.
+14. **Crew** (Bios & credits) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD `TVSeries`, and static lists of scenes/songs/episodes inside `#root`).
+
+## Search and catalog graph
+
+- **Search**: https://ford442.github.io/weeks_on_fire/show/search/?q=<terms> (also the header search, `/` or Ctrl/⌘-K). Indexes titles, tags, summaries and linked character names across every catalog; lyrics and Grok prompts are not indexed.
+- **Graph**: https://ford442.github.io/weeks_on_fire/catalog-graph.json — 281 records and 144 typed links. Node keys are `<type>:<id>` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge `rel`: `song` (scored by), `character` (has on screen), `episode` (belongs to), `promotion` (cartoon promoted to cutaway), `insert` (cuts in), `related` (sequence goes with cutaway).
+- Links are authored as ids in `content/` (`characterIds`, `episodeId`, `promotedFromCartoonId` / `promotedToCutawayId`, `sequenceInsertIds`, `relatedCutawayIds`) and Timeline `scenes.json` refs; codegen fails on an unknown id.
 
 ## Episode index
 

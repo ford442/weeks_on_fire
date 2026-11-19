@@ -15,6 +15,7 @@ export const viewLoaders = {
   characters: () => import('../components/Characters'),
   episodes: () => import('../components/Episodes'),
   crew: () => import('../components/Crew'),
+  search: () => import('../components/SearchPage'),
 } satisfies Record<SiteView, () => Promise<unknown>>;
 
 const requested = new Set<SiteView>();

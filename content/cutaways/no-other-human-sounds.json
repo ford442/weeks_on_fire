@@ -6,6 +6,12 @@
   "status": "ready-to-generate",
   "runtime": "6–8 min",
   "episode": "Episode 05 candidate (insert — cut-through, then the cliff)",
+  "episodeId": "05",
+  "characterIds": [
+    "rubella",
+    "riley-smith",
+    "lillith"
+  ],
   "songId": "whatever-lets-us-be",
   "songTitle": "Southwest Ten (untitled) / silence",
   "summary": "Rubella and Riley walk the unmaintained cut-through and fall into a short-line rally. They rejoin Lillith and drive to Pulpit Overlook. Rosencrantz dialog alts: silence wager, Smith as coin flip, waiting for the repeater. The last name is Smith. The tower stays offscreen. The car does not go up.",

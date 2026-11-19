@@ -29,7 +29,12 @@ Weeks on Fire is a personal cinematic experiment combining:
 - 3D Sequences (https://ford442.github.io/weeks_on_fire/show/sequences/) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 - Characters (https://ford442.github.io/weeks_on_fire/show/characters/) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
 - Episodes (https://ford442.github.io/weeks_on_fire/show/episodes/) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+- Search (https://ford442.github.io/weeks_on_fire/show/search/) — Search every catalog at once — songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew — by title, tag, summary or character name. Deep-linkable: /show/search?q=<terms>.
 - Crew (https://ford442.github.io/weeks_on_fire/show/crew/) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+
+### Search and catalog graph
+- Hub search: https://ford442.github.io/weeks_on_fire/show/search/?q=<terms> — one ranked list across songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew (titles, tags, summaries, character names; not lyrics or prompts). Example: https://ford442.github.io/weeks_on_fire/show/search/?q=well
+- Catalog graph (JSON): https://ford442.github.io/weeks_on_fire/catalog-graph.json — every record with a page, and the typed links between them (song, character, episode, promotion, insert, related)
 
 ### Episodes (markdown, fully readable without JS)
 - Episode 1: https://github.com/ford442/weeks_on_fire/tree/main/episodes/episode-01

@@ -6,6 +6,7 @@
   "status": "ready-to-generate",
   "runtime": "~2:30",
   "episode": "Episode 02 / Laundromat",
+  "episodeId": "02",
   "songId": "static-between-stations",
   "songTitle": "Static Between Stations",
   "summary": "The dial left between two songs on purpose. Dashboard glow, mercury streetlamps, laundromat fluorescents humming with the hiss.",

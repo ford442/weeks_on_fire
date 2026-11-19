@@ -13,6 +13,7 @@ import {
   loadProductions,
   loadTaxonomy,
   loadCustomRendererIds,
+  loadDialogSceneIds,
 } from './load';
 import {
   validateContent,
@@ -23,6 +24,7 @@ import {
   validateScenes,
   validateSceneBoards,
   validateTaxonomy,
+  validateCatalogLinks,
 } from './validate';
 import {
   emitSongsModule,
@@ -37,7 +39,11 @@ import {
   emitCatalogRefsModule,
   emitTaxonomyModule,
   emitWhatsNewModule,
+  emitCatalogGraphModule,
+  emitSearchIndexModule,
 } from './emit';
+import { buildCatalogGraph } from './catalog-graph';
+import { buildSearchDocuments } from './search-docs';
 import { buildWhatsNew } from './whats-new';
 import { syncOutputs } from './output';
 
@@ -72,6 +78,28 @@ function main() {
     cartoons: new Set(cartoons.map((cartoon) => cartoon.id)),
     characters: new Set(characters.map((character) => character.id)),
   });
+  validateCatalogLinks({
+    songs,
+    cutaways,
+    cartoons,
+    sequences,
+    sceneBoards,
+    characters,
+    episodes,
+    dialogSceneIds: loadDialogSceneIds(repoRoot),
+  });
+
+  const graph = buildCatalogGraph({
+    songs,
+    cutaways,
+    sceneBoards,
+    gallery,
+    episodes,
+    characters,
+    cartoons,
+    sequences,
+    productions,
+  });
 
   const outputs = {
     'songs.ts': emitSongsModule(songs),
@@ -93,6 +121,22 @@ function main() {
       buildWhatsNew({ songs, cutaways, cartoons, sequences, gallery }),
     ),
     'catalog-refs.ts': emitCatalogRefsModule({ songs, cutaways, sequences, cartoons, characters }),
+    'catalog-graph.ts': emitCatalogGraphModule(graph),
+    'search-index.ts': emitSearchIndexModule(
+      buildSearchDocuments({
+        songs,
+        cutaways,
+        sceneBoards,
+        gallery,
+        episodes,
+        characters,
+        cartoons,
+        sequences,
+        crew,
+        taxonomy,
+        graph,
+      }),
+    ),
   };
   syncOutputs(generatedDir, outputs, {
     check: checkMode,
@@ -101,7 +145,7 @@ function main() {
   });
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${sceneBoards.length} scene boards, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences; checked ${productions.length} scenes.json files.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${sceneBoards.length} scene boards, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences; ${graph.nodes.length} graph nodes, ${graph.edges.length} edges; checked ${productions.length} scenes.json files.`,
   );
 }
 

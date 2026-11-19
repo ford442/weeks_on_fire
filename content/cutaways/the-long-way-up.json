@@ -6,6 +6,12 @@
   "status": "ready-to-generate",
   "runtime": "~9–12 min",
   "episode": "Episode 05 candidate (wordy episode)",
+  "episodeId": "05",
+  "characterIds": [
+    "rubella",
+    "lillith",
+    "riley-smith"
+  ],
   "songId": "whatever-lets-us-be",
   "songTitle": "The Honest Height (placeholder) / silence",
   "summary": "The wordy episode — same juxtaposition family as Monster Mash (1958) on a laser-snake lawn and Rubella's monkey science: wrong channel, full commitment. Three women drive up a hill and walk the rest. Dialog versions: V2 Mulholland open → V3 daytime interview; Rosencrantz register (probability trucks, climbing metaphysics, padlock mood). One boot and one stiletto. Fourteen seconds of silence at the saddle.",

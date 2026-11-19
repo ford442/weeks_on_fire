@@ -9,6 +9,8 @@ import { crewPath } from '../routes/paths';
 import { loadMarkdownFile } from '../lib/episodeMarkdown';
 import { AVAILABLE_EPISODES } from '../data/production';
 
+import RelatedLinks from './RelatedLinks';
+
 import type { EpisodeFiles } from '../data/episodes';
 
 const REPO_BASE = 'https://github.com/ford442/weeks_on_fire';
@@ -167,6 +169,16 @@ export default function EpisodeDetail({ id }: EpisodeDetailProps) {
           </p>
         ) : null}
       </header>
+
+      <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5">
+        <RelatedLinks
+          type="episode"
+          id={episode.id}
+          heading="In this episode"
+          throughSongs
+          emptyText="Nothing links to this episode yet. Set episodeId on a song or cutaway, or a catalog ref on a Timeline scene."
+        />
+      </div>
 
       {availableTabs.length > 0 ? (
         <div className="rounded-lg border border-zinc-800 bg-zinc-950">

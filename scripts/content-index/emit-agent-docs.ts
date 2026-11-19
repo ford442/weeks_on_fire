@@ -11,9 +11,12 @@ import {
   loadSongs,
   loadCrew,
   loadTaxonomy,
+  loadEpisodes as loadEpisodeBible,
+  loadProductions,
 } from './load';
+import { buildCatalogGraph, type CatalogGraph } from './catalog-graph';
 import { syncOutputs } from './output';
-import { buildRouteTable, type RouteEntry } from './route-table';
+import { buildRouteTable, routePath, type RouteEntry } from './route-table';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { REPO_BASE, SITE_BASE, siteViews } from './views';
 
@@ -123,6 +126,10 @@ Weeks on Fire is a personal cinematic experiment combining:
 ### Live app views (SPA; HTML shell also embeds key titles)
 ${viewLines}
 
+### Search and catalog graph
+- Hub search: ${SITE_BASE}/show/search/?q=<terms> — one ranked list across songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew (titles, tags, summaries, character names; not lyrics or prompts). Example: ${SITE_BASE}/show/search/?q=well
+- Catalog graph (JSON): ${SITE_BASE}/catalog-graph.json — every record with a page, and the typed links between them (song, character, episode, promotion, insert, related)
+
 ### Episodes (markdown, fully readable without JS)
 ${episodeLines}
 
@@ -164,6 +171,7 @@ function emitLlmsFullTxt(
   cartoons: ReturnType<typeof loadCartoons>,
   sequences: ReturnType<typeof loadSequences>,
   episodes: EpisodeSummary[],
+  graph: CatalogGraph,
 ): string {
   const viewLines = siteViews
     .map((view, index) => `${index + 1}. **${view.label}** (${view.eyebrow}) — ${view.description}`)
@@ -258,6 +266,12 @@ ${viewLines}
 
 Crawlers that do not execute JavaScript still receive a content-rich HTML shell (title, description, Open Graph, JSON-LD \`TVSeries\`, and static lists of scenes/songs/episodes inside \`#root\`).
 
+## Search and catalog graph
+
+- **Search**: ${SITE_BASE}/show/search/?q=<terms> (also the header search, \`/\` or Ctrl/⌘-K). Indexes titles, tags, summaries and linked character names across every catalog; lyrics and Grok prompts are not indexed.
+- **Graph**: ${SITE_BASE}/catalog-graph.json — ${graph.nodes.length} records and ${graph.edges.length} typed links. Node keys are \`<type>:<id>\` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge \`rel\`: \`song\` (scored by), \`character\` (has on screen), \`episode\` (belongs to), \`promotion\` (cartoon promoted to cutaway), \`insert\` (cuts in), \`related\` (sequence goes with cutaway).
+- Links are authored as ids in \`content/\` (\`characterIds\`, \`episodeId\`, \`promotedFromCartoonId\` / \`promotedToCutawayId\`, \`sequenceInsertIds\`, \`relatedCutawayIds\`) and Timeline \`scenes.json\` refs; codegen fails on an unknown id.
+
 ## Episode index
 
 ${episodeSections}
@@ -345,6 +359,31 @@ Do not invent episode plots beyond the published synopses and scene files.
 `;
 }
 
+/** Absolute URL for a router path that may carry a query (`/show/archive?q=…`). */
+function absoluteUrl(path: string): string {
+  const [pathname = path, query] = path.split('?');
+  return `${SITE_BASE}${routePath(pathname)}${query ? `?${query}` : ''}`;
+}
+
+/** `public/catalog-graph.json`: the same graph the app imports, with absolute URLs. One record per line. */
+function emitCatalogGraphJson(graph: CatalogGraph): string {
+  const nodes = graph.nodes.map(({ key, type, id, title, path }) =>
+    JSON.stringify({ key, type, id, title, url: absoluteUrl(path) }),
+  );
+  const edges = graph.edges.map((edge) => JSON.stringify(edge));
+  return `{
+  "site": ${JSON.stringify(`${SITE_BASE}/`)},
+  "about": "Weeks on Fire catalog graph. Nodes are records with a page; edges are typed links authored as ids in content/ and checked by codegen. rel: song = scored by, character = has on screen, episode = belongs to, promotion = cartoon promoted to cutaway, insert = cuts in, related = sequence goes with cutaway.",
+  "nodes": [
+${nodes.map((line) => `    ${line}`).join(',\n')}
+  ],
+  "edges": [
+${edges.map((line) => `    ${line}`).join(',\n')}
+  ]
+}
+`;
+}
+
 function emitSitemap(routes: RouteEntry[], episodes: EpisodeSummary[]): string {
   const spaUrls = routes.map((route, index) => ({
     loc: route.canonical,
@@ -355,6 +394,7 @@ function emitSitemap(routes: RouteEntry[], episodes: EpisodeSummary[]): string {
   const staticUrls = [
     { loc: `${SITE_BASE}/llms.txt`, changefreq: 'monthly', priority: '0.6' },
     { loc: `${SITE_BASE}/llms-full.txt`, changefreq: 'monthly', priority: '0.5' },
+    { loc: `${SITE_BASE}/catalog-graph.json`, changefreq: 'weekly', priority: '0.5' },
     { loc: REPO_BASE, changefreq: 'weekly', priority: '0.8' },
     { loc: `${REPO_BASE}/tree/main/episodes`, changefreq: 'weekly', priority: '0.7' },
   ];
@@ -395,6 +435,17 @@ function main() {
   const sequences = loadSequences(repoRoot);
   const episodes = loadEpisodes();
   const routes = buildRouteTable(repoRoot);
+  const graph = buildCatalogGraph({
+    songs,
+    cutaways,
+    sceneBoards,
+    gallery,
+    episodes: loadEpisodeBible(repoRoot),
+    characters,
+    cartoons,
+    sequences,
+    productions: loadProductions(repoRoot),
+  });
 
   const outputs = {
     'llms.txt': emitLlmsTxt(routes, songs, gallery, episodes),
@@ -408,8 +459,10 @@ function main() {
       cartoons,
       sequences,
       episodes,
+      graph,
     ),
     'sitemap.xml': emitSitemap(routes, episodes),
+    'catalog-graph.json': emitCatalogGraphJson(graph),
   };
 
   syncOutputs(
@@ -428,7 +481,7 @@ function main() {
   );
 
   console.log(
-    `Generated agent docs: ${siteViews.length} views, ${routes.length} routes, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
+    `Generated agent docs: ${siteViews.length} views, ${routes.length} routes, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences, ${graph.nodes.length} graph nodes, ${graph.edges.length} edges.`,
   );
 }
 

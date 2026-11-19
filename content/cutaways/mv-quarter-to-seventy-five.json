@@ -6,6 +6,7 @@
   "status": "ready-to-generate",
   "runtime": "~3:00",
   "episode": "Episode 02",
+  "episodeId": "02",
   "songId": "quarter-to-seventy-five",
   "songTitle": "Quarter to Seventy-Five",
   "summary": "No chorus — only the title phrase, a clock stuck at 3:44, and an FM needle drifting left.",

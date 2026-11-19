@@ -1,9 +1,10 @@
 import { useEffect, useId, useMemo, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CornerDownLeft, Search, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowRight, CornerDownLeft, Search, X } from 'lucide-react';
 
 import { useEscapeKey } from '../hooks/useEscapeKey';
-import { buildSearchIndex, searchIndex } from '../lib/siteSearch';
+import { SEARCH_TYPE_LABELS, hubSearch } from '../lib/siteSearch';
+import { searchPath } from '../routes/paths';
 
 interface SiteSearchProps {
   onClose: () => void;
@@ -14,10 +15,9 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
   const navigate = useNavigate();
   const inputRef = useRef<HTMLInputElement>(null);
   const listId = useId();
-  const index = useMemo(() => buildSearchIndex(), []);
   const [query, setQuery] = useState('');
   const [active, setActive] = useState(0);
-  const results = useMemo(() => searchIndex(index, query), [index, query]);
+  const results = useMemo(() => hubSearch().search(query), [query]);
 
   useEscapeKey(onClose);
 
@@ -43,7 +43,8 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
       setActive((current) => Math.max(current - 1, 0));
     } else if (event.key === 'Enter') {
       const hit = results[active];
-      if (hit) go(hit.to);
+      if (hit) go(hit.route);
+      else if (query.trim()) go(searchPath(query));
     }
   };
 
@@ -96,12 +97,12 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
             // Keyboard selection lives on the combobox input (arrows + Enter), per the ARIA pattern.
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <li
-              key={`${hit.section}:${hit.to}:${hit.title}`}
+              key={hit.id}
               id={`${listId}-${position}`}
               role="option"
               aria-selected={position === active}
               onMouseMove={() => setActive(position)}
-              onClick={() => go(hit.to)}
+              onClick={() => go(hit.route)}
               className={`mx-2 flex cursor-pointer items-center gap-3 rounded-md px-3 py-2.5 ${
                 position === active ? 'bg-orange-500/15' : ''
               }`}
@@ -111,7 +112,7 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
                 <p className="truncate text-sm text-zinc-400">{hit.subtitle}</p>
               </div>
               <span className="shrink-0 rounded border border-zinc-700 px-2 py-0.5 text-xs text-zinc-300">
-                {hit.section}
+                {SEARCH_TYPE_LABELS[hit.type]}
               </span>
               {position === active && (
                 <CornerDownLeft size={15} className="shrink-0 text-orange-300" aria-hidden="true" />
@@ -125,9 +126,18 @@ export default function SiteSearch({ onClose }: SiteSearchProps) {
         )}
         {!query.trim() && (
           <p className="px-5 py-6 text-sm text-zinc-400">
-            Searches titles, lyrics, prompts, loglines, and tags across every tab. Use ↑ ↓ and
-            Enter.
+            Searches titles, tags, summaries, loglines and cast across every tab. Use ↑ ↓ and Enter.
           </p>
+        )}
+        {query.trim() && (
+          <Link
+            to={searchPath(query)}
+            onClick={onClose}
+            className="flex items-center justify-between gap-3 border-t border-zinc-800 px-5 py-3 text-sm text-zinc-300 transition hover:bg-zinc-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
+          >
+            <span>All results for “{query.trim()}”, with filters</span>
+            <ArrowRight size={15} aria-hidden="true" />
+          </Link>
         )}
       </div>
     </div>

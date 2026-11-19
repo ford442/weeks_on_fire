@@ -1,0 +1,86 @@
+{
+  "id": "no-other-human-sounds",
+  "kind": "scene",
+  "title": "No Other Human Sounds",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "6–8 min",
+  "episode": "Episode 05 candidate (insert — cut-through, then the cliff)",
+  "songId": "whatever-lets-us-be",
+  "songTitle": "Southwest Ten (untitled) / silence",
+  "summary": "Rubella and Riley walk the unmaintained cut-through and fall into a short-line rally. They rejoin Lillith and drive to Pulpit Overlook. Rosencrantz dialog alts: silence wager, Smith as coin flip, waiting for the repeater. The last name is Smith. The tower stays offscreen. The car does not go up.",
+  "visualArc": "5:40 PM fork → needle road → rally two-shot → eight-second stop → idle at the canopy break → picnic table on a cliff, the drop, no tower.",
+  "tags": [
+    "ep4",
+    "dialog",
+    "riley",
+    "rubella",
+    "woods",
+    "two-hander",
+    "quiet",
+    "cliff",
+    "rosencrantz"
+  ],
+  "characterIds": [
+    "rubella",
+    "riley-smith",
+    "lillith"
+  ],
+  "episodeId": "05",
+  "segmentCount": 4,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "nohs-a",
+      "label": "A — 5:40 PM — The Fork",
+      "start": "5:40 PM",
+      "end": "5:46 PM",
+      "durationSec": 6,
+      "onScreen": "Sedan idling at GRADED / UNMAINTAINED arrows. Lillith keeps the car. Rubella and Riley take the trees.",
+      "lyrics": "LILLITH: If something clocks in early, I want it in writing.",
+      "musicCue": "Idle receding. Then nothing.",
+      "grokImaginePrompt": "Cinematic wide film still, late-afternoon, a dusty sedan idling at a fork on a California fire road, gold hillside above, a dark seam of mixed conifer down and west. A faded county arrow: GRADED / UNMAINTAINED. A woman in black lace at the open driver's door, one trail boot and one stiletto. Two figures — one in black lace, one in a light green halter with a 40-liter pack — at the tree line about to enter deep shade. Still air, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "6-second video at a fire-road fork. A sedan turns up the graded road. Two women step into a dark tree line. Idle fades. No music, no birds.",
+      "promptVariations": []
+    },
+    {
+      "id": "nohs-e",
+      "label": "E — 6:08 PM — The Rally",
+      "start": "6:08 PM",
+      "end": "6:16 PM",
+      "durationSec": 8,
+      "onScreen": "Walking two-shot. Short turns. Pack inventory, why they got out, Vale on the license tonight.",
+      "lyrics": "RUBELLA: Your turn. / RILEY: Why did you get out of the car.",
+      "musicCue": "Needles. Cloth. Clean turns. No overlap.",
+      "grokImaginePrompt": "Cinematic medium two-shot at walking pace, deep late-afternoon forest shade on an unmaintained needle-covered dirt road. A sun-bleached blonde in a light green halter with a taped amethyst pendant and a large trail pack, and a woman in black lace with one trail boot and one stiletto, talking in short turns, not looking at each other. Absolutely still woods, no birds, no wind, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "8-second tracking two-shot of two women walking and talking in short, clean turns on an unmaintained forest road. No overlap, no music, no birds. Photoreal cinematic, deadpan.",
+      "promptVariations": []
+    },
+    {
+      "id": "nohs-f",
+      "label": "F — 6:16 PM — The Stop",
+      "start": "6:16 PM",
+      "end": "6:24 PM",
+      "durationSec": 8,
+      "onScreen": "They stop because walking feels too loud. Written 8-second silence.",
+      "lyrics": "RILEY: Nothing happening, extremely well.",
+      "musicCue": "Zero score. The woods do not help.",
+      "grokImaginePrompt": "Cinematic locked-off wide film still, two women stopped dead on an unmaintained forest road, not looking at each other, closed canopy, no particles, no wind, enormous quiet. Black lace and a green halter, one pack, one boot and one stiletto. The road ahead disappearing into trees. Photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "8-second locked-off wide video on an unmaintained forest road. Two women stand still. A jay does not call. A branch does not move. No music, no dialogue for the full eight seconds. Photoreal cinematic.",
+      "promptVariations": []
+    },
+    {
+      "id": "nohs-h",
+      "label": "H — 6:22 PM — Pulpit Overlook",
+      "start": "6:22 PM",
+      "end": "6:28 PM",
+      "durationSec": 6,
+      "onScreen": "Picnic table bolted to rock. No useful guardrail. Four hundred feet of air. No tower.",
+      "lyrics": "LILLITH: That's a cliff. / RILEY: That's the finding.",
+      "musicCue": "First wind since the woods. Cicadas. No score.",
+      "grokImaginePrompt": "Cinematic wide film still, golden hour, a Forest Service overlook bolted to a cliff — picnic table on rock, no useful guardrail, four hundred feet of copper air and a distant valley highway. Dusty sedan parked short of the edge. Three women: two in black lace (one boot, one stiletto), one blonde in a green halter with a pack. Nobody looking at a tower. Photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "6-second wide video at a cliff overlook at golden hour. Three women get out of a dusty sedan. Wind. A bolted picnic table on rock. The drop. No tower in frame. No music. Photoreal cinematic.",
+      "promptVariations": []
+    }
+  ]
+}

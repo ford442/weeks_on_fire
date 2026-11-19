@@ -1,0 +1,22 @@
+{
+  "id": "said-and-left",
+  "title": "Said and Left",
+  "added": "2026-10-06",
+  "genre": "Classical & chant",
+  "subgenre": "Sprechstimme",
+  "description": "Rubella touches a pitch on each hallway fact and leaves it. The piano picks up the abandoned note one beat later.",
+  "episode": "building",
+  "slot": "Hallway",
+  "tags": [
+    "sprechstimme",
+    "rubella",
+    "hallway",
+    "building"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Said_and_Left.md",
+  "stylePrompt": "Sprechstimme, one voice, about 66 BPM as a grid under the speech, not as a tune. Rubella only. Dry, slightly raspy, close-miked, exhausted, no belting, no vibrato, no pretty tone. She does not sing. Each phrase aims at one pitch, touches it, and drops back into speech before the pitch can sound like a note. Rhythm stays on the grid. Do not sing her name. Ensemble: one B-flat clarinet in the chalumeau, one upright piano with the soft pedal down, no kit, no bass guitar, no choir, no second voice. Dark top end. Small hallway, almost no reverb. Central idea: the sentence is said, the pitch is left. Structural flaw: one beat after every phrase, the piano plays the exact pitch she abandoned, single notes, no chord, and neither of them adjusts. The clarinet only plays a pitch she has already left. Do not turn the last line into a melody. Do not add a chorus. Runtime about 90 to 110 seconds. Mood: 3 a.m., the hall inventory, professionally neutral.",
+  "lyrics": "[Intro — clarinet touches one pitch and leaves it]\n(piano answers, one beat late)\n\n[The light]\nThe hall is lit.\nThat is the light on the bill.\nThe third shelf still has the old bottle.\nIt smells like cloth, not like a number.\n\n[The hum]\nThe dryer is on.\nI did not start it.\nThe hum is in the wall.\nThe wall can keep it.\n\n[The rent]\nRent went out on the first.\nThe floor stayed.\nI put my hand on the note.\nThe note did not stay in the hand.\n\n[Morning]\nSomeone smiled before ten.\nI do not keep that.\nSaid.\nAnd left.\n\n[Outro]\n(piano plays the last abandoned pitch, one beat late, and stops)",
+  "notes": "Rubella alone in the hallway. Sprechstimme: the rhythm is exact and the pitch is only touched. The piano is the flaw, always one beat behind the note she refused to hold.\n\nNot a duet. Not a tune. Runtime about 90–110 seconds."
+}

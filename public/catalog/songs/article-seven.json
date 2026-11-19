@@ -1,0 +1,24 @@
+{
+  "id": "article-seven",
+  "title": "Article Seven",
+  "added": "2026-08-19",
+  "genre": "Soul, funk & hip-hop",
+  "subgenre": "Dusty union lounge / paused funk",
+  "description": "Mandatory funk interval. Plastic steward, laminated card, clock stuck at fourteen minutes. The lawn is on break; the lasers can wait.",
+  "episode": "03",
+  "slot": "Skeleton Union Break",
+  "tags": [
+    "halloween",
+    "union",
+    "skeleton",
+    "comedy",
+    "ep3",
+    "labor"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Article_Seven.md",
+  "stylePrompt": "Dusty union lounge at 96 BPM. Laminated-paper shuffle as hats. Bone-click clave that arrives a sixteenth late and is never corrected. Cheap Wurlitzer holding one warm chord. Funk bass that starts a riff and is immediately put on break — four notes, then rest. Very quiet frozen laser hum under the bed, treated like HVAC. Deadpan baritone steward — plastic, precise, laminated, never cute, never rattling for comic effect. No belting. No vibrato. **Structural flaw:** the remaining-time line is always “fourteen minutes remaining,” no matter how far into the song we are. The clock in the mix is 3:44 on every pass. Mood: Halloween backyard that has been legally paused. Runtime ~1:20–1:40. Use a dry baritone steward voice; do not use Rubella or Continuity Voice (this is the lawn, not the station).",
+  "lyrics": "[Intro — laminated shuffle]\nArticle seven.\nMandatory funk interval.\nPlease power down the lasers.\n\n[Verse 1]\nThe skeleton has the floor\nThe snakes will coil and wait\nFifteen minutes on the laminated card\nThe cat is not the steward. She is the floor.\n\n[Pre-Chorus]\nFourteen minutes remaining.\n(clock: 3:44)\nFourteen minutes remaining.\n\n[Chorus]\nArticle seven\nGroove reset per contract\nWe do not dance on break\nWe stretch. We sit. We do not resume.\n\n[Verse 2]\nKaren at the fence has quiet hours\nThe pizza guy walks through like a crossing guard\nThe snakes have powered down awkwardly\nThe sign says ON BREAK. The sign is current.\n\n[Pre-Chorus]\nFourteen minutes remaining.\n(clock: 3:44)\nFourteen minutes remaining.\n\n[Chorus 2 — same bars, same time]\nArticle seven\nGroove reset per contract\nWe do not dance on break\nWe stretch. We sit. We do not resume.\n\n[Bridge]\nThe Two do not clock in\nBiscuit watches the sign\nDale has a gavel. That is a different local.\nArticle seven has the lawn.\n\n[Final]\nArticle seven\nFourteen minutes remaining\nThe battle will resume\nWhen the card says so\n(clock: 3:44)\nArticle seven has the lawn.",
+  "notes": "## What the song is\nThe **union pause** for the Episode 3 laser-snake backyard. A plastic skeleton holds a laminated ON BREAK sign. The battle freezes. He reads article seven. The snakes power down. The black cat supervises. Pizza Guy crosses like a crossing guard. Nobody treats this as a gag on the lawn — it is a contract.\n\nThe joke is the meeting, not the bones. Nobody says “Halloween.” Nobody rattles for punctuation."
+}

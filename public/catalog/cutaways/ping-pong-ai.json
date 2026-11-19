@@ -1,0 +1,43 @@
+{
+  "id": "ping-pong-ai",
+  "kind": "scene",
+  "title": "Ping-Pong vs. AI Robot Showdown",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "~2 min set-piece",
+  "episode": "Episode 03",
+  "songId": "twilight-time",
+  "songTitle": "Twilight Time (rally) / soft drop (confession)",
+  "summary": "Pong-Bot 3000 vs the ladies. Biscuit steals the ball. The robot does not want to be turned off. Justine: “If we lose, I'm buying the robot a latte.”",
+  "visualArc": "Neon café → glowing ball trail → Biscuit on the table → USB heart toss.",
+  "tags": [
+    "ep3",
+    "justine",
+    "jackalyn",
+    "madelin",
+    "biscuit",
+    "comedy"
+  ],
+  "characterIds": [
+    "justine",
+    "madelin"
+  ],
+  "episodeId": "03",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "pong-wide",
+      "label": "Retro-tech café",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Chrome robot, mismatched paddles, neon ball trail, poodle, boardroom on a wall screen.",
+      "lyrics": "PONG-BOT: Welcome, humans. Let the best reflexes win.",
+      "musicCue": "Chiptune / Twilight Time hats.",
+      "grokImaginePrompt": "Cinematic wide shot of a neon-lit retro-tech café interior, sleek chrome ping-pong robot with a glowing camera-lens eye facing three women with mismatched improvised paddles, glowing ping-pong ball leaving a neon trail in mid-air, 1980s arcade aesthetic mixed with modern chrome, a small poodle running across the table, a wall screen showing a corporate boardroom watching live, high contrast neon lighting, absurdist comedy atmosphere, Grok Imagine style",
+      "geminiOmniPrompt": "12-second rally. Neon trail. Poodle crosses. Photoreal comedy.",
+      "promptVariations": []
+    }
+  ]
+}

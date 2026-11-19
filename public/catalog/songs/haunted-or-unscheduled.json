@@ -1,0 +1,24 @@
+{
+  "id": "haunted-or-unscheduled",
+  "title": "Haunted or Unscheduled",
+  "added": "2026-08-16",
+  "genre": "Ambient & downtempo",
+  "subgenre": "Sparse institutional electro-lounge",
+  "description": "Master Control 4 AM bed — Rhodes four-note loop that never develops, 3:44 clock motif twice identically, optional Continuity Voice. Not a second sign-off.",
+  "episode": "eyewash",
+  "slot": "Master Control",
+  "tags": [
+    "eyewash-station",
+    "instrumental",
+    "continuity-voice",
+    "oz",
+    "4am",
+    "underscore"
+  ],
+  "instrumental": true,
+  "status": "generated",
+  "sourceFile": "Haunted_or_Unscheduled.md",
+  "stylePrompt": "Sparse institutional electro-lounge at 72 BPM. Rack hum and 60Hz mains as bed. Muted Rhodes four-note figure enters at bar 9 and loops unchanged for the entire runtime — never develops, never adds a fifth note. Soft sub sine, no kick until bar 17. Continuity Voice optional: one spoken line, warm announcer, narrow bandwidth, half-step flat against the pad — tire-ad cadence, not sung. No belting, no drama. Warm procedural dread. Tape hiss. Crystal mix but dark top end. Mood: a man doing his job correctly while the clock refuses to advance. Instrumental-first; 90–120 seconds. **Structural flaw:** the clock motif repeats 3:44 twice identically — same bars, same voicing, no escalation — while unrelated program audio (laser hum, gavel, poodle) bleeds in underneath on the second pass only. Not a second sign-off — Rinse Cycle owns sign-off. This is the 4 AM log music: warm, procedural, unresolved.",
+  "lyrics": "[Bars 1–8 — Rack hum / mains only]\n(instrumental bed)\n\n[Bar 9 — Rhodes four-note figure enters, loops unchanged]\n(instrumental)\n\n[Bar 17 — Soft sub kick enters, stays minimal]\n(instrumental)\n\n[Spoken — optional, Continuity Voice, narrow bandwidth, half-step flat]\nThis program may be haunted or unscheduled.\nYour mileage is not our department.\n\n[Clock motif — 3:44, first pass]\n(instrumental; identical voicing both times)\n\n[Clock motif — 3:44, second pass]\n(program bleed under: laser hum, gavel, poodle — unrelated, quiet)\n\n[Outro — Rhodes figure continues unchanged; hum only]\n(loopable underscore; no resolution)",
+  "notes": "## Production notes\n- **Episode placement:** EyeWash framing / scene score for `notes/scenes/master-control-4am.md` — underscore before sign-off, not a duplicate of Rinse Cycle's emotional job. Connective tissue between any two cutaways.\n- **Oz is not on the mic — the room is.** Optional Continuity Voice V.O. only; one line max.\n- **Structural flaws:** (1) Rhodes four-note figure never develops. (2) 3:44 clock motif repeats twice identically; second pass only gets program bleed underneath.\n- **Do not duplicate Rinse Cycle** unless intentional quote — this track is the \"we're still on air\" hum; Rinse Cycle is sign-off.\n- **Runtime target:** 90–120 seconds. Loopable as master-control bed.\n- **Reference:** Analog rack hum, institutional lounge, warm procedural dread. Sister energy to Rinse Cycle pad warmth without the nine-bar sign-off structure."
+}

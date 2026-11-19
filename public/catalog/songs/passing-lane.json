@@ -1,0 +1,24 @@
+{
+  "id": "passing-lane",
+  "title": "Passing Lane",
+  "added": "2026-09-15",
+  "genre": "Folk, country & world",
+  "subgenre": "Outlaw country chase song at walking speed",
+  "description": "A proud baritone sells a high-speed pass. The click is 140. The band is 48. A skeleton horn is the only thing on time, and it has been honking since last autumn.",
+  "episode": "cutaway",
+  "slot": "Snail Passing Lane",
+  "tags": [
+    "country",
+    "comedy",
+    "snail",
+    "highway",
+    "cartoon",
+    "skeleton"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Passing_Lane.md",
+  "stylePrompt": "Outlaw country chase song, advertised as 140 BPM, performed at 48 BPM, E major. Deadpan baritone lead (professionally proud, zero wink, not Pizza Guy). Telecaster with slight slapback, pedal steel that takes four bars to finish a two-note phrase, upright bass on one and three only. A click track at 140 BPM is audible in the headphones and leaks into the left side of the mix; the band ignores it. **Structural flaw:** the kick is one beat every two bars. A distant skeleton car-horn sits on the 140 grid and never desyncs from the click; it is the only on-time performer. A drum fill is counted off at the end of every chorus and never arrives because the fill would take four bars at this tempo. Mood: left lane, slime trail, cobwebs on the bumpers, a checkered flag that has not moved. Runtime ~1:45–2:05. Do not use Rubella. Do not swing it into a waltz to be clever.",
+  "lyrics": "[Intro — click leaking, one horn]\nI am passing.\nI have been passing.\nI will complete the pass.\n\n[Verse 1]\nGot a stripe on the shell and a spoiler I paid for\nGot a helmet that fits if I don't breathe in\nLeft lane is a promise I intend to keep\nThe cars behind me can wait their turn\nThey have been waiting\nThat is their contribution\n\n[Pre-Chorus]\nYou can go around\nYou will not go around\nThat is also a lane\nI checked\n\n[Chorus]\nPassing lane\nI live here\nPassing lane\nI am the traffic\nPassing lane\nWave if you want\nI will wave when I arrive\n(horn, on the click)\n(drum fill counted: a-one, a-two — fill does not start)\n\n[Verse 2]\nThere's a nest on a hood two lengths back\nThere's a web in a grille that has weather now\nThere's a gentleman in a convertible\nWho has been honking since the leaves were on\nI respect the commitment\nI will not pull over for it\n\n[Pre-Chorus]\nCheckered flag is still a rumor\nCheckered flag is still ahead\nI can see it if I don't blink\nI don't blink\n\n[Chorus 2]\nPassing lane\nI live here\nPassing lane\nI am the traffic\nPassing lane\nThey can change lanes\nThey have not\nThat is the hymn\n(horn)\n(a-one, a-two — no fill)\n\n[Bridge — steel takes the whole section to say two notes]\nI am not slow\nI am thorough\nI am not blocking\nI am using the lane as labeled\nIf you wanted a different label\nYou should have brought a different sign\nI brought a spoiler\nThat should have been enough\n\n[Final]\nPassing lane\nI live here\nPassing lane\n(horn, still on time)\nPassing lane\nI will complete the pass\n(click continues)\n(band does not)\n(a-one, a-two)\n(the fill would have been here)",
+  "notes": "## What the song is\nA chase song whose hero is a snail in the passing lane. He is not embarrassed. He has the correct equipment. The skeleton in the convertible has been honking since Episode 3 and is still on the clock; that is respect, not a complaint. The cobwebs are a time signature.\n\nThe joke is the tempo. Nobody says \"snail's pace.\" Nobody asks him to move."
+}

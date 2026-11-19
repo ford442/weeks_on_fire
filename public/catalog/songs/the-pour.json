@@ -1,0 +1,23 @@
+{
+  "id": "the-pour",
+  "title": "The Pour",
+  "added": "2026-08-13",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Industrial cabaret",
+  "description": "They hired a climate. Cello in 5 against the song in 4. Lillith deadpan; Rubella only on “dress warm.”",
+  "episode": "gag",
+  "slot": "Foundry gala",
+  "tags": [
+    "cabaret",
+    "lillith",
+    "gag",
+    "vivienne",
+    "foundry"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "The_Pour.md",
+  "stylePrompt": "Industrial cabaret, 80 BPM in 4/4. Low cello ostinato phrased in 5 against the song in 4, never aligning with the kick. Detuned upright piano plus or minus five cents, soft pedal. Foundry hiss and pour as room tone, never a cheap industrial loop. Distant string quartet one room back. Deadpan female lead, Lillith-compatible, almost monotone until dress warm leaps a sixth. Soft harmony only on dress warm (Rubella). Mood: manners in front of molten iron; they hired a climate. Not rock, not protest. Dark top end. Use my Lillith voice.",
+  "lyrics": "[Intro — Pour]\n(Cello in five, foundry hiss, piano late)\n\n[Verse 1]\nThey booked the foundry for the season\nBlack tie, low talk, a quartet that won't turn\nThe trough is tonight's weather\nOrange, and slow, and none of our concern\n\n[Pre-Chorus]\nSparks on the mink\nNobody flinches\nThis is how the room\nDoes the inches\n\n[Chorus]\nWarm your hands\nThe pour is the fire we can stand\nWarm your hands\nDress warm\nIf the empire needs a climate\nWe hired one\nWarm your hands\nAnd don't look too long\n\n[Verse 2]\nI used to need a reason for the heat\nNow I need a reason for the calm\nThe cello is counting in five\nThe evening is counting in champagne\nA man asked if this was safe\nI asked if he was new\nHe laughed like a person\nWho still thought the question was due\n\n[Pre-Chorus]\nSparks on the mink\nNobody flinches\nThis is how the room\nDoes the inches\n\n[Chorus]\nWarm your hands\nThe pour is the fire we can stand\nWarm your hands\nDress warm\nIf the empire needs a climate\nWe hired one\nWarm your hands\nAnd don't look too long\n\n[Bridge]\nI could love a thing that only falls\nI could leave a thing that only glows\nI warm my hands and call it manners\nThe iron calls it what it knows\n\n[Coda]\nDress warm\nThe pour continues\nDress warm\n(spoken) Dress warm.",
+  "notes": "Direct score for gag #7 Furnace Season. Vivienne at the trough; Liliane in the bored middle distance counting exits. Choose Your Basalt deadpan without leis or classroom. Not a rock song. Structural flaw: cello ostinato in 5 against the song in 4 — D2–F2–G2–Ab2–A2 looping, never landing with the kick; the weather does not keep time. Voice flat until “dress warm” leaps a sixth (A3 to F4). Last “dress warm” is spoken. Verse Dm–Eb–Dm–Am; chorus Bb–C–Dm–Gm; coda Dm pedal with Eb neighbor. Do not cut to the outdoor fireline from Episode 1 — the point is indoor weather. Loop the pour; sparks die on mink; one bow-stroke. Runtime ~2:00. Ready for Minimax."
+}

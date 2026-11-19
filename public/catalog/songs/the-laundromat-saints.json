@@ -1,0 +1,24 @@
+{
+  "id": "the-laundromat-saints",
+  "title": "The Laundromat Saints",
+  "added": "2026-08-16",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Slow liminal waltz",
+  "description": "Two breathy voices alternate like strangers who accidentally agree. Dryer thumps on bar 5, not bar 1. Diegetic EyeWash TV, then full score for the 2 AM slow dance.",
+  "episode": "eyewash",
+  "slot": "2AM Laundromat Slow Dance",
+  "tags": [
+    "waltz",
+    "laundromat",
+    "duet",
+    "liminal",
+    "eyewash-station",
+    "ep2"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "The_Laundromat_Saints.md",
+  "stylePrompt": "Slow 3/4 waltz / warm liminal lounge at 66 BPM. Sibling to Empty Parking Lot Waltz but warmer, not devastating — availability instead of aftermath. Sparse arrangement: slightly wet upright piano, brushed snare or finger-on-cymbal, distant upright bass, fluorescent hum and rain-on-glass as a field-recording bed. Two breathy close-mic voices (Rubella-ish female + dry baritone or second female) that never name each other and never harmonize sweetly — they alternate lines like strangers who accidentally agree. Vocal never belted, never winking. **Structural flaw:** the off-balance dryer thumps on bar 5 instead of bar 1 for the entire song — the percussion bed is literally wrong and nobody fixes it. Diegetic intro (tinny, corner TV) for 8 bars, then blooms past diegetic into full score. Runtime 3:00–3:30 with a hard-cuttable outro (buzzer cuts mid-phrase). Mood: two strangers four washers apart in a 24-hour laundromat at 2 AM; the song is the only honest speaker. Dark top end, tape hiss, room reverb. Use Rubella voice for HER lines; dry baritone or second close female for HIM lines — no sweet harmonies.",
+  "lyrics": "[Intro — 8 bars, diegetic / tinny]\n(instrumental; off-balance dryer thump on bar 5, not bar 1)\n\n[Verse 1 — HER]\nThat one's not level\nIt worked in June\n\n[Verse 1 — HIM]\nWe're both available\nThat's worse than alone\n\n[Verse 1 — HER]\nThe light makes everyone processed\nExcept the thump\n\n[Verse 1 — HIM]\nThe thump knows what we're not saying\n\n[Pre-Chorus — HER]\nThe hour goes by anyway\n\n[Pre-Chorus — HIM]\nWe don't have to name it\n\n[Chorus — alternate, unison only on title]\nLaundromat saints\nDon't ask for names\nLaundromat saints\nThe dryer keeps time wrong\nIf the song says it\nWe'll let the buzzer take it back\n\n[Verse 2 — HIM]\nYou came here instead of going home\nI came here instead of calling\n\n[Verse 2 — HER]\nThe corner TV is always on\nNobody watches it on purpose\n\n[Verse 2 — HIM]\nThe mop goes around us\nThat's the whole religion\n\n[Verse 2 — HER]\nSaints don't mean good\nSaints mean showed up\n\n[Pre-Chorus — HER]\nThe hour goes by anyway\n\n[Pre-Chorus — HIM]\nWe don't have to name it\n\n[Chorus]\nLaundromat saints\nDon't ask for names\nLaundromat saints\nThe dryer keeps time wrong\nIf the song says it\nWe'll let the buzzer take it back\n\n[Bridge — instrumental, or one held vowel]\n(piano and dryer thump; this is where the dance is — no words compete with the faces)\n\n[Final Chorus — half volume, as if the TV took it back]\nLaundromat saints\nDon't ask for names\nLaundromat saints\nThe dryer keeps time wrong\nIf the song says it\nWe'll let the buzzer take it back\n\n[Outro — 4 bars, cut off by buzzer]\n(dryer BUZZ — song does not finish; mid-phrase cut is correct)",
+  "notes": "## Production notes\n- **Episode placement:** Musical cutaway scoring `notes/scenes/laundromat-slow-dance.md` — diegetic on the corner EyeWash TV, then blooms past diegetic. Pairs fluorescents + rain glass + one machine with an opinion.\n- **Voice map:** Anonymous dual presence — alternate lines, never sweet harmony. Rubella-ish + dry baritone or second female. The Laundromat Saints are never credited on screen.\n- **Structural flaw:** Dryer thump on bar 5, not bar 1, for the entire runtime. Do not quantize or \"fix\" in mix.\n- **Sibling track:** Empty Parking Lot Waltz (same waltz DNA, colder / more devastating). Static Between Stations can underscore the liminal drive *into* this room.\n- **Runtime target:** 3:00–3:30. Outro must be buzzer-cuttable.\n- **Continuity Voice:** Optional on the corner TV before diegetic bloom — not required."
+}

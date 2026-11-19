@@ -1,0 +1,224 @@
+{
+  "id": "short-packet-strange-3d",
+  "kind": "scene",
+  "title": "Short Packet Farm — Strange 3D",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "8 loop tiles (3–8s) + 5 gag sketches (~30s)",
+  "episode": "Short packet farm",
+  "songId": "third-shift-porcelain",
+  "songTitle": "Third Shift Porcelain (kick is a stamp on marble)",
+  "summary": "Thirteen packets of objects with jobs, doing the job wrong or too well. Porcelain, marble insert, honey-oak, brass, wet enamel on the ground only, geometric white panels, short honeycomb guards. Locked camera or slow orbit. No HUD, no lightning, no nebula — these things are employed.",
+  "visualArc": "Loop tiles: a form that splits and rejoins, enamel in the grout, a cube on detents, a key cabinet that audits, a fan with one empty cell, a scale that tares itself, a tap that always finds the same hex, a tube carrier that arrives empty. Gag sketches: a dock floor that rises to meet policy, a directory that costs a floor, a lift with a counteroffer, a balance that weighs its own pan, a cabinet that files itself.",
+  "tags": [
+    "short-packet-farm",
+    "loop-tile",
+    "strange-3d",
+    "porcelain",
+    "brass",
+    "honey-oak",
+    "no-faces"
+  ],
+  "segmentCount": 13,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "sp3-form-duplicate",
+      "label": "Loop — form-duplicate (8s)",
+      "start": "0:00",
+      "end": "0:08",
+      "durationSec": 8,
+      "onScreen": "One form on a honey-oak counter slides apart into two identical forms, then slides back into one. Nobody filed anything.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one paper slide per split. Job: form-duplicate.",
+      "grokImaginePrompt": "Photoreal object still, 4:5, a single sheet of pale carbon-blue form paper lying squarely on a honey-oak counter, caught mid-split as it separates into two identical sheets sliding apart along a seam that should not exist, edges crisp and uncurled, no hands, no faces, three supporting figures: a wire in-tray holding nothing, a rubber date-stamp lying face down, a porcelain cup of pencils, cream plaster wall behind, one caged bulb directly overhead, warm pooled light on the oak with fast falloff, locked camera looking down at forty degrees, 50mm, T2.8, fine grain, dry paper against warm honey-oak against matte porcelain, no legible text anywhere on the form, Grok Imagine style",
+      "geminiOmniPrompt": "8-second seamless loop. One form slides apart into two and back into one, returning to the exact opening position. Nothing else moves. Camera locked. No stack grows, no third sheet, no hands. Ends on the opening frame.",
+      "promptVariations": [
+        "If you can read the form twice the gag dies — keep all text illegible."
+      ]
+    },
+    {
+      "id": "sp3-grout-rivulet-circuit",
+      "label": "Loop — grout-rivulet-circuit (6s)",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "Wet enamel runs the grout line of a utility floor, reaches the drain, and comes back out of the far grout line. Ground only.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one drain tick. Obeys the field grammar in ideas/wildflower-paint-rivulets.md.",
+      "grokImaginePrompt": "Photoreal floor-level still, 16:9, a white tiled utility room floor seen low and raking, a thin bright ultramarine wet enamel rivulet running along one grout line toward a brass floor drain with a short honeycomb-pattern guard over it, the enamel feathering at its edges into the grout dust and never touching the tile faces, a second faint streak already emerging from the far grout line, no people, no faces, three supporting figures: a mop bucket wheel, a skirting cove, a coiled hose bib low on the wall, cream block wall above, one caged bulb throwing a long specular sheen down the wet grout, locked camera at floor height, 35mm, T2.8, fine grain, wet pigment against dry white tile against satin brass, Grok Imagine style",
+      "geminiOmniPrompt": "6-second seamless loop. The rivulet travels one grout line, reaches the drain, and re-emerges at the far line in the exact opening position. No pooling, no level rising, no second colour. The enamel never climbs the tile face, a wall, or an object. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Alt colours from the field bank: sap green, cadmium yellow, alizarin. One per take, never mixed."
+      ]
+    },
+    {
+      "id": "sp3-cube-at-chest",
+      "label": "Loop — cube-at-chest (3s)",
+      "start": "0:00",
+      "end": "0:03",
+      "durationSec": 3,
+      "onScreen": "A white panel cube hangs at chest height and quarter-turns on the tick. The room's shadow turns with it. Four ticks, home.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one click per detent. Job: cube-at-chest.",
+      "grokImaginePrompt": "Photoreal object still, 4:5, a matte white geometric panel cube about the size of a filing box hanging unsupported at chest height in the centre of an empty vestibule of geometric white wall panels, caught between detents at a clean forty-five degrees, hard-edged and completely without glow or emission, no cables, no rig, no people, no faces, three supporting figures: a flush skirting shadow gap, a closed panel door with no handle, a grey terrazzo floor seam, cool even light from a concealed cove throwing one crisp cube shadow onto the floor, locked camera at chest height, 50mm, T4, fine grain, matte white panel against matte white panel with only shadow separating them, no HUD, no glow, no lens flare, Grok Imagine style",
+      "geminiOmniPrompt": "3-second seamless loop. The cube quarter-turns four times on hard detents and returns to the opening orientation. The floor shadow turns with it. Nothing else moves. Camera locked. No glow, no particles, no fifth tick. Ends on the opening frame.",
+      "promptVariations": [
+        "Not the annex. No wings, no pink, no geometry that reads as a wing."
+      ]
+    },
+    {
+      "id": "sp3-key-cabinet-audit",
+      "label": "Loop — key-cabinet-audit (7s)",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "A wall key cabinet slides open, one brass key rotates on its hook to face out, and the cabinet slides closed. Audit complete.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one latch click. Job: cabinet-slide.",
+      "grokImaginePrompt": "Photoreal object still, 16:9, a honey-oak key cabinet mounted flat on a corridor wall with its sliding front half open, four ranks of small brass keys hanging on numbered hooks inside, one single key rotated ninety degrees on its hook to face the camera while every other key hangs flat, no hands, no faces, three supporting figures: a corridor door closer, a rubber floor mat with a worn tread path, a fuse panel with the door shut, cream painted plaster, grey vinyl tile, one warm wall sconce raking across the oak grain and picking out the turned key, locked camera, 50mm, T2.8, fine grain, satin brass against warm honey-oak against cream plaster, no legible numbers on the hooks, Grok Imagine style",
+      "geminiOmniPrompt": "7-second seamless loop. The cabinet front slides open, one key rotates on its hook to face out, and the front slides closed. Returns to the exact opening position with the key flat again. The cabinet never leaves the wall. Nothing else moves. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Not the Marble cabinet: this one stays on the wall, never travels, never comes home."
+      ]
+    },
+    {
+      "id": "sp3-honeycomb-guard-fan",
+      "label": "Loop — honeycomb-guard-fan (5s)",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "One hex cell of the guard is empty. The blade behind it slows every time it passes that cell, then catches back up.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one fan wobble per revolution.",
+      "grokImaginePrompt": "Photoreal object still, 4:5, a floor fan in a boiler room behind a short honeycomb-pattern guard fixed with a brass wingnut, one hex cell of the guard missing its web so the blade behind it is seen clean, the blade caught mid-revolution and visibly slower where it crosses that one cell, dust on the guard everywhere except the open cell, no people, no faces, three supporting figures: a lagged pipe run, a pressure gauge, a painted floor line, unpainted block walls, sealed concrete floor, one caged bulb behind the fan so the blade reads as a moving silhouette against warm haze, locked camera, 50mm, T2.8, fine grain, dusty steel against satin brass against raw block, Grok Imagine style",
+      "geminiOmniPrompt": "5-second seamless loop. The blade completes revolutions at a constant rate except across the one open cell, where it visibly slows and then catches up. Nothing else in the room moves in the wind — no dust drift, no swinging cable. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Alt: the dust ring on the guard is worn away only around the open cell."
+      ]
+    },
+    {
+      "id": "sp3-tare-loop",
+      "label": "Loop — tare-loop (6s) — NEW",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "A porcelain postal scale weighs its own empty brass pan, tares itself to zero, lifts the pan, and weighs it again. Nothing is ever placed on it.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one needle tick per cycle. Job: tick-tock.",
+      "grokImaginePrompt": "Photoreal object still, 4:5, a porcelain-bodied postal balance scale with a brass weighing pan standing on a honey-oak package counter, the enamelled dial face caught with its needle mid-swing between a small reading and zero, the pan empty and lifted a half inch clear of its seat, no hands, no faces, no parcels anywhere in frame, three supporting figures: a brass paper spike, a roll of gummed tape on a cast-iron dispenser, a porcelain cup of pencils, cream plaster wall behind, one caged bulb directly over the counter, warm pooled light on the oak with the dial face catching a clean specular, locked camera at counter height, 50mm, T2.8, fine grain, glazed porcelain against satin brass against warm honey-oak, no legible numbers on the dial, Grok Imagine style",
+      "geminiOmniPrompt": "6-second seamless loop. The needle swings off zero, returns to zero, the pan lifts a half inch and resettles, and the scale returns to the exact opening position. Nothing is ever placed on the pan. The needle never passes the same mark twice in a cycle. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Alt: the pan resettles a hair off-centre each cycle and corrects itself before the loop point."
+      ]
+    },
+    {
+      "id": "sp3-honeycomb-drip-tray",
+      "label": "Loop — honeycomb-drip-tray (4s) — NEW",
+      "start": "0:00",
+      "end": "0:04",
+      "durationSec": 4,
+      "onScreen": "A brass tap drips into a short honeycomb drip tray. Always the same hex cell. The cell dries before the next drop forms.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one drop tick. Job: drip.",
+      "grokImaginePrompt": "Photoreal macro still, 4:5, a brass utility tap over a short honeycomb-pattern drip tray in a tiled sink alcove, one clear droplet hanging fully formed at the lip of the spout, one hex cell of the tray directly below darkened with water while every surrounding cell is bone dry and dusty, no pooling anywhere in the tray, no people, no faces, three supporting figures: a chained plug, a soap bracket with no soap, a wall of small white tiles with one cracked, cream grout, one caged bulb above and behind throwing a hard specular down the brass and a single bright caustic into the wet cell, locked camera, 100mm macro, T4, fine grain, polished brass against matte honeycomb against dry white tile, Grok Imagine style",
+      "geminiOmniPrompt": "4-second seamless loop. One drop forms, falls, is taken by the same single hex cell, and that cell dries completely before the next drop forms at the spout. No pooling, no rising level, never a second cell. The water stays in the tray and never reaches the floor. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Not the grout rivulet — that one is on the floor and this one never is."
+      ]
+    },
+    {
+      "id": "sp3-pneumatic-return",
+      "label": "Loop — pneumatic-return (6s) — NEW",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "A brass carrier lands in the tube station with a thunk. The hatch opens on nothing. It closes. The carrier leaves.",
+      "lyrics": "",
+      "musicCue": "Silent picture, one thunk and one hiss. Job: bag-lift, inverted.",
+      "grokImaginePrompt": "Photoreal object still, 16:9, a brass pneumatic tube station mounted on a basement wall, its hinged hatch standing open on a seated carrier whose felt-lipped lid is also open and completely empty inside, polished brass tube runs entering and leaving the housing overhead, no hands, no faces, nothing anywhere in the carrier, three supporting figures: a pressure gauge with a cracked glass, a bundled conduit run, a painted floor line, unpainted block walls, sealed concrete floor, one caged bulb directly over the station throwing a hard specular along the tube runs, locked camera, 40mm, T2.8, fine grain, polished brass against dull felt against raw block, Grok Imagine style",
+      "geminiOmniPrompt": "6-second seamless loop. The carrier lands with a thunk, the hatch opens, the empty carrier sits one beat, the hatch closes and the carrier departs on a hiss, returning the station to the exact opening position. Nothing is ever inside. No hand ever reaches in. Station light stays at one level. Camera locked. Ends on the opening frame.",
+      "promptVariations": [
+        "Alt: the carrier's lid is already open when it lands."
+      ]
+    },
+    {
+      "id": "sp3-chest-height-audit",
+      "label": "Gag — chest-height-audit (30s)",
+      "start": "0:00",
+      "end": "0:30",
+      "durationSec": 30,
+      "onScreen": "Every porcelain handoff on the dock lands an inch low, so the floor rises to meet it. By the last handoff the bag is out of frame at the ceiling. A card slides in: CHEST HEIGHT MAINTAINED.",
+      "lyrics": "",
+      "musicCue": "Silent picture, floor groan on each rise. Setup / wrong turn / land.",
+      "grokImaginePrompt": "Photoreal object still, 2.39:1, a loading dock interior, two pale porcelain human hands on short brass wrist-posts facing each other across a gap, the second post visibly shorter than the first, a kraft paper grocery bag with one crisp square fold across its top passing between them, the concrete dock floor beneath the shorter post risen a clean inch above the surrounding slab with a fresh unweathered edge, no arms, no bodies, no faces, three supporting figures: a roll-up door with its bottom seal, a wheeled pallet jack, a short honeycomb-pattern vent guard low on the wall, raw concrete and painted safety line, one high sodium bay light and cold daylight under the roll-up door, locked camera at dock height, 35mm, T4, fine grain, matte porcelain against satin brass against dry kraft and raw concrete, Grok Imagine style",
+      "geminiOmniPrompt": "Locked camera per beat. Only the hands and the floor move — one handoff, one rise, in that order, never together. The rises are clean mechanical steps with a fresh concrete edge each time, no dust cloud, no crumbling, no glow. The bag never opens and never changes height relative to the hands. No people, no faces.",
+      "promptVariations": [
+        "Not the mail room — that is bag-at-chest-height, and the two must never share a frame.",
+        "Land on a hand-lettered card sliding in at the old floor level: CHEST HEIGHT MAINTAINED."
+      ]
+    },
+    {
+      "id": "sp3-the-directory-board",
+      "label": "Gag — the-directory-board (30s)",
+      "start": "0:00",
+      "end": "0:30",
+      "durationSec": 30,
+      "onScreen": "Correcting a misspelt name on the lobby directory costs one letter. The letter is taken from a floor number. The elevator opens on nothing.",
+      "lyrics": "",
+      "musicCue": "Silent picture, slide-in letter clicks, one ding on the land.",
+      "grokImaginePrompt": "Photoreal object still, 4:5, a lobby building directory board of black felt and slide-in white plastic letters, a resident name mid-correction with two letters part-way out of their channels and one empty slot waiting, a floor number in the column beside it now missing a digit and showing bare felt, no people, no faces, no hands, three supporting figures: a brushed steel elevator call panel with one button unlit, a rubber floor mat with a worn tread path, a radiator under the window, cream plaster and grey terrazzo, one warm lobby sconce raking across the felt so the letters cast small hard shadows, locked camera square to the board, 50mm, T2.8, fine grain, white plastic against black felt against brushed steel, letters legible only as shapes, Grok Imagine style",
+      "geminiOmniPrompt": "Locked camera on the board, one clean cut to the call panel and one to the open car. Letters slide in their channels as mechanical moves, no floating, no glow. When the digit leaves the floor number, the matching button on the panel goes dark in the same frame. Land on the car opening onto flat unlit shaft wall. No people, no faces, no purple light.",
+      "promptVariations": [
+        "No elevator interior beyond the open doorway — the car interior belongs to elevator-counteroffer."
+      ]
+    },
+    {
+      "id": "sp3-elevator-counteroffer",
+      "label": "Gag — elevator-counteroffer (28s)",
+      "start": "0:00",
+      "end": "0:28",
+      "durationSec": 28,
+      "onScreen": "The car opens on a supply closet. Doors close. Opens on the same closet with one more folding chair in it. Again. Again.",
+      "lyrics": "",
+      "musicCue": "Dry car hum only. The elevator does not sing here — that is the tango, and it stays a musical cutaway.",
+      "grokImaginePrompt": "Photoreal interior still, 4:5, the inside of a freight elevator car hung with quilted grey moving pads, the doors standing open on a shallow supply closet of steel shelving, mop handles and cartons, one beige steel folding chair standing incongruously in the middle of the closet floor facing the car, brass floor-indicator dial above the doors with the needle between two numbers, no people, no faces, three supporting figures: a keyed service panel, a scuffed brass handrail, a rubber bumper strip at floor level, worn steel plate floor, one caged bulb in the car ceiling throwing hard light into the closet, locked camera from the back of the car, 28mm, T4, mild grain, quilted grey pad against scuffed brass against grey steel, Grok Imagine style",
+      "geminiOmniPrompt": "Locked camera from the back of the car for the whole packet. The doors close and open; between each cycle exactly one more folding chair has appeared in the closet, arranged into rows with the others. Nothing else changes: same closet, same shelving, same light. No lift movement, no floor change, no voice, no music. No people, no faces.",
+      "promptVariations": [
+        "Alt land: the last opening shows the closet full, chairs in rows, and the car itself now has one chair in it."
+      ]
+    },
+    {
+      "id": "sp3-the-weighing-room",
+      "label": "Gag — the-weighing-room (30s) — NEW",
+      "start": "0:00",
+      "end": "0:30",
+      "durationSec": 30,
+      "onScreen": "A porcelain balance matches whatever is in the left pan by producing its twin in the right. Emptied, it matches empty with empty. Then it lifts off its own right pan, sets it in the left, and reads level.",
+      "lyrics": "",
+      "musicCue": "Silent picture, brass pan settle. Setup / wrong turn / land. Removing the pan is a cut, not a melt.",
+      "grokImaginePrompt": "Photoreal object still, 16:9, a large porcelain-bodied balance scale with two polished brass pans standing on a grey marble plinth in the centre of a bare room of matte white geometric wall panels, the left pan holding a single small brass weight and the right pan holding an identical brass weight, the beam dead level, no hands, no faces, no people, three supporting figures: a flush skirting shadow gap, a closed panel door with no handle, a single grey terrazzo floor seam running under the plinth, cool even light from a concealed cove with one soft specular down each pan chain, locked camera at plinth height, 50mm, T4, fine grain, glazed porcelain against polished brass against cold marble against matte white panel, no glow, no emission, Grok Imagine style",
+      "geminiOmniPrompt": "Locked camera, or one slow orbit at constant rate. The scale is the only thing that moves. Twins appear in the right pan as clean cuts between held frames, never as a melt, a morph or a materialisation glow. The beam settles fully between events. No hands after the setup, no people, no faces, no particles.",
+      "promptVariations": [
+        "Land: the right pan lifts off its chains, is set in the left pan, and the beam reads level with one pan. Hold five seconds.",
+        "Alt wrong turn: it matches the plinth by producing a second plinth, then abandons that and returns to the pans."
+      ]
+    },
+    {
+      "id": "sp3-the-filing-cabinet",
+      "label": "Gag — the-filing-cabinet (30s) — NEW",
+      "start": "0:00",
+      "end": "0:30",
+      "durationSec": 30,
+      "onScreen": "Every form is a size the cabinet does not have, so it grows a drawer to fit. The last form is the cabinet's own inventory card, and it opens a drawer exactly its own size.",
+      "lyrics": "",
+      "musicCue": "Silent picture, drawer runners. Land is a cut, not a melt — Home Sweet Void sit-up grammar.",
+      "grokImaginePrompt": "Photoreal object still, 2.39:1, a honey-oak filing cabinet standing alone against a corridor wall, four drawers of four different heights stacked in ascending order with a fifth drawer front visibly newer than the rest and sized to an odd tall format, one drawer standing open on a single sheet of pale form paper, brass drawer pulls and small brass card frames on each front, no hands, no faces, no people, three supporting figures: a corridor door closer on the fire door beyond, a rubber floor mat with a worn tread path, a wall sconce with one dark bulb, cream painted plaster, grey vinyl tile, warm raking sconce light down the oak grain, locked camera square to the cabinet, 40mm, T2.8, fine grain, warm honey-oak against satin brass against cream plaster, no legible text on the cards, Grok Imagine style",
+      "geminiOmniPrompt": "Locked camera square to the cabinet, one slow orbit permitted on the last beat only. New drawers appear between held frames as clean cuts — the cabinet is never seen stretching, morphing or growing on camera. Runners, pulls and fronts stay in the same material and finish as the originals. Nothing else in the corridor moves. No people, no faces, no glow.",
+      "promptVariations": [
+        "Land: a drawer exactly the cabinet's own size opens, one cut, and the corridor holds one drawer front lying on the floor.",
+        "Not the Marble cabinet: this one never travels, never comes home, and is never in the night lot."
+      ]
+    }
+  ]
+}

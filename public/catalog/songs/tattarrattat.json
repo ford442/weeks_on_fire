@@ -1,0 +1,22 @@
+{
+  "id": "tattarrattat",
+  "title": "Tattarrattat",
+  "added": "2026-08-17",
+  "genre": "Jazz, lounge & torch",
+  "subgenre": "Smoked midnight jazz / locked-door",
+  "description": "After-gala hallway. The knock is the same from both sides of the wood. Rubella does not open. She counts the seals.",
+  "episode": "cutaway",
+  "slot": "After-gala · hallway liminal",
+  "tags": [
+    "rubella",
+    "jazz",
+    "hallway",
+    "locked-door"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Tattarrattat.md",
+  "stylePrompt": "Smoked midnight jazz at 70 BPM. Upright bass barely walking, wet Rhodes, brushed kit, one muted trumpet that answers a beat late and a half-step low. Rubella close-mic — almost speaking on verses, singing only on the knock. Tape hiss. Door-knock samples: three knocks, same spacing every time (knock — pause — knock knock — pause — knock). **Structural flaw:** the knock pattern and the chorus are identical every pass — no second-verse information in the hook, no louder knock, no open door. The leftover syllable at the end (`...ta`) is written; do not depend on tape-reverse to make the song work. No belting. Mood: after-gala hallway; someone at a door that keeps knocking the same knock; she does not open. Runtime ~1:40–2:05. Use the Rubella voice.",
+  "lyrics": "[Intro — three knocks, same spacing]\n(knock — pause — knock knock — pause — knock)\nTattarrattat\n\n[Verse 1]\nI heard the same knock from either side\nThe carpet runs the same both ways\nI left the latch the way I found the latch\nWhoever it is can keep the name\n\n[Pre-Chorus]\nThe glass is where the hallway bends\nI watch the peephole watch me back\n\n[Chorus]\nTattarrattat — same knock, same spot\nI don't open\nTattarrattat — same knock, same hall\nI just count the seals\n\n[Verse 2]\nA welcome mat that faces the wrong room\nA sconce that learned my lipstick first\nIf this is a return, it's late\nIf this is a guest, they've rehearsed\n\n[Pre-Chorus]\nThe glass is where the hallway bends\nI watch the peephole watch me back\n\n[Chorus]\nTattarrattat — same knock, same spot\nI don't open\nTattarrattat — same knock, same hall\nI just count the seals\n\n[Bridge — trumpet late, half-step low]\nI don't open\nI just count the seals\nThe knock comes back as the knock\nThat is the deal\n\n[Final Chorus]\nTattarrattat — same knock, same spot\nI don't open\nTattarrattat\nMadam, I'm Adam\nI'm Adam, Madam\n(the knock eats the last syllable)\n...ta\n\n[Outro — knock fades, same spacing]\nTattarrattat",
+  "notes": "## What the song is\nA locked-door torch song. Rubella in an after-gala hallway. The knock is the same from both sides of the wood. She does not open. She counts the seals.\n\n*Tattarrattat* is the sound at the door — Joyce's knock-word, used as onomatopoeia, not as a vocabulary lesson. The only tourist palindrome that stays is **Madam, I'm Adam**: it is the person on the other side of the door, naming themselves. It does not get her to open. The name flips. The knock eats the last syllable."
+}

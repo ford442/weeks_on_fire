@@ -1,0 +1,50 @@
+{
+  "id": "mv-haunted-or-unscheduled",
+  "kind": "musical",
+  "title": "Haunted or Unscheduled",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "90–120s",
+  "episode": "EyeWash Station / Master Control",
+  "songId": "haunted-or-unscheduled",
+  "songTitle": "Haunted or Unscheduled",
+  "summary": "Master Control 4 AM underscore — Rhodes four-note loop that never develops, 3:44 twice identically, program bleed on the second pass. Not a second sign-off.",
+  "visualArc": "Rack hum → Rhodes loop → optional Continuity Voice → 3:44 → 3:44 again with bleed → unresolved.",
+  "tags": [
+    "eyewash-station",
+    "oz",
+    "4am",
+    "instrumental",
+    "underscore"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "hou-rack",
+      "label": "Rack hum",
+      "start": "0:00",
+      "end": "0:15",
+      "durationSec": 15,
+      "onScreen": "Windowless master control. Clock approaching 3:44. Grease-pencil log.",
+      "lyrics": "(Rack hum / mains only)",
+      "musicCue": "72 BPM, no kick until bar 17",
+      "grokImaginePrompt": "Windowless broadcast master control at 4 AM, wall of CRT monitors showing lava, snakes, laundromat, mirrors, grease-pencil log sheet, analog clock stuck approaching 3:44, rack hum atmosphere, warm procedural calm, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "15-second locked wide of master control. Clock near 3:44. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "hou-344",
+      "label": "3:44 twice",
+      "start": "0:50",
+      "end": "1:20",
+      "durationSec": 30,
+      "onScreen": "Clock reads 3:44. Hand on fader that does not move. Second pass: one monitor off-schedule.",
+      "lyrics": "This program may be haunted or unscheduled. Your mileage is not our department.",
+      "musicCue": "Rhodes four-note loop unchanged; program bleed on second pass",
+      "grokImaginePrompt": "Master control wall of CRT monitors, analog clock reading 3:44, operator hand on fader without moving, one screen showing an unscheduled program, warm institutional dread, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "30-second hold: 3:44 motif twice. Second pass adds quiet absurd bleed. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

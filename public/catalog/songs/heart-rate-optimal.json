@@ -1,0 +1,24 @@
+{
+  "id": "heart-rate-optimal",
+  "title": "Heart Rate Optimal",
+  "added": "2026-08-19",
+  "genre": "Pop & synth-pop",
+  "subgenre": "Spa-pop / wellness-notification ballad",
+  "description": "HR 78. Dread 78. Same number, different app. The chorus would like to go to ninety; the watch does not approve.",
+  "episode": "03",
+  "slot": "Wellness ladies",
+  "tags": [
+    "wellness",
+    "comedy",
+    "justine",
+    "jackalyn",
+    "ep3",
+    "watch"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Heart_Rate_Optimal.md",
+  "stylePrompt": "Spa-pop / wellness-notification ballad at exactly 78 BPM. Warm Rhodes, soft analog pad, glass-chime notification as snare. Kick is a watch haptic — a single polite tap, never a club kick. Close-mic spoken-sung female, professionally calm, Justine-adjacent, zero vibrato, never belted. A second voice (the watch) is a narrow, slightly brighter chime-vocoder that only says “elevated” and “optimal.” No guitar heroics. No drop. **Structural flaw:** tempo is locked at 78 because that is the watch’s optimal; any attempted chorus swell is cut by the same three-note chime, and the word “elevated” arrives on the downbeat even though nothing sped up. Mood: a heart-rate alert that thinks it is a ballad. Runtime ~1:30–1:50. Use a dry close female lead; optional Jackalyn whisper on the last “correct”; do not use Continuity Voice.",
+  "lyrics": "[Intro — haptic tap]\nHeart rate: seventy-eight.\nExistential dread: also seventy-eight.\nThis is optimal.\n\n[Verse 1]\nMy watch says I am stressed. Correct.\nThe rally is not a workout. The paddle is not a tool.\nI closed the ring by standing still.\nThe app congratulates the stillness.\n\n[Pre-Chorus]\nOptimal.\n(chime)\nElevated.\n(same tempo)\n\n[Chorus]\nHeart rate optimal\nDread optimal\nSame number\nDifferent app\nDo not stand. Do not sit. Do not win.\nThis is a wellness event.\n\n[Verse 2]\nJackalyn’s wrist keeps lighting the table\nJustine eats a cracker like a verdict\nThe robot wants to feel. I want to finish my latte.\nWe all have needs. The watch has goals.\n\n[Pre-Chorus]\nOptimal.\n(chime)\nElevated.\n(same seventy-eight)\n\n[Chorus 2 — attempted swell, same BPM]\nHeart rate optimal\nDread optimal\nSame number\nDifferent app\nThe chorus would like to go to ninety\nThe watch does not approve\n\n[Bridge — haptic only for two bars]\nIt is not a spatial rift\nIt is a disruption in the wellness vertical\nStand to log the hour\nSit to log the dread\nBoth are seventy-eight\n\n[Final]\nHeart rate optimal\nDread optimal\nSame number\nDifferent app\n(chime: elevated)\nCorrect.\nThis is optimal.",
+  "notes": "## What the song is\nA **wellness notification** that wandered onto the Episode 3 ladies. The watch is sincere. Justine is correct. Jackalyn’s wrist keeps lighting the table. Pong-Bot would like to feel. Nobody removes the watch. The number does not change.\n\nThe joke is the metric, not the panic. Nobody says “satire.” Nobody throws the watch."
+}

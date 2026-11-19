@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { albums, artistFor, belongsToAlbum, hasPublicAudio, publicTracks } from './catalog';
 
-import type { Song } from '../data/types';
+import type { SongSummary as Song } from '../data/types';
 
 function SongCards({ songs }: { songs: Song[] }) {
   return (

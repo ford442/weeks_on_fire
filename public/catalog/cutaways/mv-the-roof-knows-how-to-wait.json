@@ -1,0 +1,103 @@
+{
+  "id": "mv-the-roof-knows-how-to-wait",
+  "kind": "musical",
+  "title": "The Roof Knows How to Wait",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "2:00–2:20",
+  "episode": "Musical Cutaway / The Two",
+  "songId": "the-roof-knows-how-to-wait",
+  "songTitle": "The Roof Knows How to Wait",
+  "summary": "Rubella inventories a ceiling that has not fallen yet. Natural ventilation. The extra bar is the plaster still deciding.",
+  "visualArc": "Hole and stars → low chandelier → bored under the draft → glasses and berries → chandelier keeps its job → extra bar, piano late.",
+  "tags": [
+    "rubella",
+    "the-two",
+    "cabaret",
+    "ruin",
+    "glamour",
+    "cutaway"
+  ],
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "roof-hole",
+      "label": "Hole, stars",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Ballroom ceiling hole, stars, plaster dust, two glasses, berries.",
+      "lyrics": "We said we'd leave before the roof came down. / Turns out the roof knows how to wait.",
+      "musicCue": "72 BPM wet piano; first empty bar",
+      "grokImaginePrompt": "Photoreal abandoned grand ballroom at night, a hole in the water-stained fresco ceiling showing stars, plaster dust hanging in chandelier light, buckled parquet, two wine glasses and scattered berries on a side table, dark glamour, Grok Imagine style",
+      "geminiOmniPrompt": "12-second locked wide. Dust only. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "roof-chandelier",
+      "label": "Low chandelier",
+      "start": "0:12",
+      "end": "0:40",
+      "durationSec": 28,
+      "onScreen": "Chandelier three feet too low; plaster like a seating chart; she does not brush it.",
+      "lyrics": "The chain decided, sometime last decade, to hang three feet low. / I do not brush it off. It knows where to sit.",
+      "musicCue": "Verse 1; extra bar of dust after the last line",
+      "grokImaginePrompt": "Wide shot of a chandelier hanging three feet too low in a ruined ballroom, plaster on the floor like a seating chart, a woman in black lace not brushing it off, moonlight through the roof, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "28-second wide. Extra bar: nobody moves. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "roof-draft",
+      "label": "Natural ventilation",
+      "start": "0:40",
+      "end": "1:02",
+      "durationSec": 22,
+      "onScreen": "Woman under the hole; bored, not frightened; night air.",
+      "lyrics": "Finally. / Natural ventilation. / The roof knows how to wait / So we stayed in the weather",
+      "musicCue": "Chorus; piano late into it",
+      "grokImaginePrompt": "Medium shot of a glamorous bored woman in a torn black lace dress standing under a hole in a ballroom ceiling, night air moving her hair almost not at all, she looks bored not frightened, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "22-second medium. Hair almost still. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "roof-glasses",
+      "label": "Glasses, berries",
+      "start": "1:02",
+      "end": "1:28",
+      "durationSec": 26,
+      "onScreen": "Two glasses, crushed berries, plaster on linen, stars in the wine.",
+      "lyrics": "Two glasses. Berries. A hole the size of a polite apology.",
+      "musicCue": "Verse 2; extra bar again",
+      "grokImaginePrompt": "Close table: two wine glasses, crushed berries, plaster dust on white linen, stars reflected in the wine, abandoned ballroom background, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "26-second table lockoff. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "roof-job",
+      "label": "Chandelier keeps its job",
+      "start": "1:28",
+      "end": "1:48",
+      "durationSec": 20,
+      "onScreen": "Lit chandelier, taut chain, nobody looking up.",
+      "lyrics": "You can keep the chandelier if it keeps its job.",
+      "musicCue": "Bridge; longer empty bar",
+      "grokImaginePrompt": "The low chandelier still lit in a ruined ballroom, chain taut, plaster drifting, no one looking up, high contrast, Grok Imagine style",
+      "geminiOmniPrompt": "20-second chandelier hold. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "roof-late",
+      "label": "Extra bar, piano late",
+      "start": "1:48",
+      "end": "2:15",
+      "durationSec": 27,
+      "onScreen": "Locked hole; dust; she steps into frame half a beat late.",
+      "lyrics": "The roof knows how to wait / Don't smudge the plaster / It is doing manners",
+      "musicCue": "Final extra bar; piano late, then gone",
+      "grokImaginePrompt": "Locked wide of the hole in the ceiling, dust motes only, no one moving, then a woman in black lace steps half a beat late into frame, natural ventilation, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "27-second lockoff. She enters late. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

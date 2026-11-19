@@ -1,0 +1,74 @@
+{
+  "id": "short-packet-farm",
+  "kind": "scene",
+  "title": "Short Packet Farm — Generate-First Boards",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "5s + 7s + 30s",
+  "episode": "Short packet farm",
+  "songId": "rinse-cycle",
+  "songTitle": "Rinse Cycle (tile bed, optional)",
+  "summary": "The three boarded packets off the joke / strange-3D farm: a 5s seamless loop tile, a 7s joke interrupt, and a 30s strange-3D gag. One room each, one job each, no faces, no lipsync. Full boards in prompts/short-packet-farm-segments.md.",
+  "visualArc": "Mail-room bag orbit at chest height → clubhouse chair that unfolds into a second chair → brass lamp that approves the form, the desk, the stamp and finally itself.",
+  "tags": [
+    "short-packet-farm",
+    "loop-tile",
+    "joke-interrupt",
+    "strange-3d",
+    "generate-first",
+    "no-faces"
+  ],
+  "segmentCount": 3,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "spf-bag-at-chest-height",
+      "label": "Loop tile — bag-at-chest-height",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "Three porcelain hands on brass wrist-posts pass one kraft bag around an oval honey-oak island at exactly chest height. Full circuit, home to the same frame.",
+      "lyrics": "",
+      "musicCue": "Silent picture. One dry paper crease per handover. Reads as EyeWash wallpaper; the station never comments on it.",
+      "grokImaginePrompt": "Photoreal product-lab still, 4:5, an oval honey-oak service counter island in a small municipal mail room, three pale porcelain human hands mounted on short brass wrist-posts spaced evenly around the outer edge of the island, fingers relaxed and open, no arms, no bodies, no faces anywhere in frame, a single kraft paper grocery bag with one crisp square fold across its top standing upright in the first hand at exactly chest height, the island's outer edge worn to a pale rubbed line at chest height around the outer edge from decades of the same pass, bag closed and full and completely unlabelled, three supporting figures in the room: a wall of small unlit brass pigeonholes behind the island, a rubber date-stamp lying face down on the oak, and a short honeycomb-pattern floor vent guard at the wainscot, institutional cream plaster walls, grey terrazzo floor, one caged bulb hanging directly over the island pooling warm light on the oak and cool spill on the terrazzo, everything beyond the island in soft falloff, locked camera at counter height, 50mm, T2.8, fine grain, matte porcelain against satin brass against dry kraft paper, no chrome, no signage, no legible text, Grok Imagine style",
+      "geminiOmniPrompt": "5-second seamless loop. Three porcelain hands pass one kraft bag once around the oval oak island and return it to the first hand in the exact opening position, fold facing camera. Height never changes. Nothing else in the room moves. Camera locked, no push, no drift. The bag does not open, does not soften, does not gain a crease per lap. Ends on the opening frame.",
+      "promptVariations": [
+        "Board has five stills: A rest pose (in/out point), B first pass, C far side, D closing the circuit, E macro of the rub line.",
+        "Loop check: in-point equals out-point on pose, fold angle and bulb intensity. If lap two looks worn against lap one, regenerate — do not stitch."
+      ]
+    },
+    {
+      "id": "spf-we-will-stand",
+      "label": "Joke interrupt — we-will-stand",
+      "start": "0:00",
+      "end": "0:07",
+      "durationSec": 7,
+      "onScreen": "A gloved hand sets down and opens one folding chair, then withdraws. Two seconds of nothing. The seat hinges once too many and a second identical chair separates out and stands itself alongside.",
+      "lyrics": "",
+      "musicCue": "Prior-scene echo off camera at 2.8s: “We'll stand.” Then hinge creak and one chirp. No new Minimax.",
+      "grokImaginePrompt": "Photoreal interior still, 2.39:1, a suburban HOA clubhouse meeting room, one beige steel folding chair with a grey polyester seat standing open and empty dead centre, no hands anywhere in frame, no faces, the room composed and patient as though it expects to be sat in, three supporting figures: a stacked chair trolley against the far wall loaded eight deep, a folding banquet table with a cracked wooden gavel on it, a corkboard of overlapping unreadable notices, clubhouse linoleum with one cracked gavel mark in it running across the foreground, cream cinderblock walls, a fluorescent troffer with one tube pinker than the other directly overhead, flat institutional light, two overlapping soft shadows under the chair, generous empty floor to the left with nothing in it, locked camera at seated eye height, 35mm, T2.8, mild grain, dry beige steel against grey polyester against yellowed linoleum, no signage legible, Grok Imagine style",
+      "geminiOmniPrompt": "7-second locked interior, no camera move. Hand sets the chair down, opens it, withdraws. Hold two seconds. The seat hinges once more than it should and a second identical chair separates out and stands itself beside the first as clean hinge mechanics: no stretch, no melt, no glow, no particles. Both settle and hold one second. Nobody sits.",
+      "promptVariations": [
+        "Board has five stills: A the offer, B set down and opened, C the dead hold, D the split, E two chairs.",
+        "Four-slot clip_stacker, straight cuts only. A wipe would sell the joke harder than the joke — the punch is that nobody reacted."
+      ]
+    },
+    {
+      "id": "spf-the-approval-desk",
+      "label": "Gag sketch — the-approval-desk",
+      "start": "0:00",
+      "end": "0:30",
+      "durationSec": 30,
+      "onScreen": "Brass lamp with a stamp arm approves two forms. No third form arrives. It stamps the bare marble, the desk edge, the drawer pull, its own base, and finally its own shade. Then a real form arrives and it does not stamp it.",
+      "lyrics": "",
+      "musicCue": "Silent picture, four stamp thumps added in the stacker. Third Shift Porcelain kick is a stamp on marble — same DNA, do not lay the song under the picture.",
+      "grokImaginePrompt": "Photoreal object still, 16:9, an articulated brass desk lamp with two small pale pink lenses set in the shade rim standing folded and at rest on a honey-oak desk with a rectangular grey marble insert, a second brass arm ending in a wooden-handled rubber stamp hanging folded at the lamp's side like a tool at rest, the marble insert bare and clean, no face, no mouth, no eyes beyond the two pink lenses, the lamp posed as equipment and not as a character, three supporting figures on the desk: a wire in-tray holding nothing, a brass paper spike, and a porcelain cup of pencils, a short honeycomb-pattern vent guard in the wainscot behind, dark green painted office walls, a closed panelled door far left, warm practical light coming only from the lamp's own bulb pooling on the marble and falling off fast into the oak grain, the two pink lenses glowing faintly at half intensity, locked camera at desk height, 40mm, T2.8, fine grain, satin brass against cold grey marble against warm honey-oak against matte porcelain, no chrome, no legible text on any paper, Grok Imagine style",
+      "geminiOmniPrompt": "Locked or slow-orbit photoreal object shot. The lamp is the only thing that moves — one arm, one job. Stamp strikes are mechanical: lift, drive, contact, lift, no wobble, no recoil bounce. The pink lenses change intensity only, never shape, never blink like eyes. Tray, spike, pencil cup and vent guard are furniture. No glow, no particles, no sparks, no HUD. The orbit runs at a constant slow rate and never stops mid-move.",
+      "promptVariations": [
+        "Board has six stills: A rest, B the strike, C the bare marble, D desk edge and drawer pull, E the self-stamp, F the unstamped form.",
+        "Eight-slot clip_stacker. The one real trick is reusing the rest take as the wait — same framing reads as patience, not a repeat.",
+        "The 3–7s approval beat is liftable later as its own 4s loop tile. Cut it fresh, do not carve it out of the finished 30."
+      ]
+    }
+  ]
+}

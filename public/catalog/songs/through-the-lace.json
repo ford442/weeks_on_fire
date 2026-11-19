@@ -1,0 +1,23 @@
+{
+  "id": "through-the-lace",
+  "title": "Through the Lace",
+  "added": "2026-10-06",
+  "genre": "Rock",
+  "subgenre": "Pastoral rock anthem",
+  "description": "A 12-string anthem about light in the holes. The chant is one word, and the third Through always lands on the chord that already left.",
+  "episode": "lace-waterfall",
+  "tags": [
+    "lace-waterfall",
+    "rock",
+    "anthem",
+    "rubella",
+    "lillith",
+    "pastoral"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Through_the_Lace.md",
+  "stylePrompt": "Pastoral 1970s rock anthem, 96 BPM, G major, about two minutes. Lace Waterfall: Lillith and Rubella only, no male voice, no Kenji. Opens on a 12-string acoustic, warm and close, then a small band: organ, bass, soft kit, one clean electric with a little tape echo. Pink Floyd around Obscured by Clouds and Fearless: daylight, major, a walking feel, not a lament. Vocals are a chant of one word, \"Through,\" sung on a single pitch, unison, no belting, no harmony stack, no scream. Lillith leads the verse in a brighter tone. Rubella answers the second half, drier. The chorus is only the chant, three times. Middle: the 12-string alone for about sixteen seconds, then the band returns. Structural flaw: on every chorus the guitars change chord before the third \"Through,\" and the voices stay on the old pitch. Do not move the voices. Do not hold the old chord. No doom, no minor-key collapse, no thrash. Mood: sun through cloth. The holes are the point.",
+  "lyrics": "[12-string]\n\n[Verse]\nHoles in the cloth\nSun in the holes\nLILLITH: That's the whole picture\nRUBELLA: That's what it holds\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Verse]\nCloth on the window\nDay on the floor\nLILLITH: We don't pull it shut\nRUBELLA: The light knows the door\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Middle — 12-string alone]\n\n[Chant]\nBOTH: Through\nBOTH: Through\nBOTH: Through\n\n[Outro]\nBOTH: Through",
+  "notes": "Lace Waterfall. One-word chorus. The third \"Through\" is always late to the chord change. The voices do not follow the guitars.\n\nNot a cabaret ballad. Runtime about 2:00."
+}

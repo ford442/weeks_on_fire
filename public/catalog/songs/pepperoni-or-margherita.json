@@ -1,0 +1,24 @@
+{
+  "id": "pepperoni-or-margherita",
+  "title": "Pepperoni or Margherita",
+  "added": "2026-08-05",
+  "genre": "Pop & synth-pop",
+  "subgenre": "Commercial jingle → minor-key piano ballad",
+  "description": "The Pizza Guy theme: fifteen seconds of cheerful ad music, a hard cut, then ninety seconds about always arriving when chaos peaks.",
+  "episode": "03",
+  "slot": "Any crossover",
+  "tags": [
+    "jingle",
+    "ballad",
+    "deadpan",
+    "pizza-guy",
+    "comedy",
+    "eyewash-station"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Pepperoni_or_Margherita.md",
+  "stylePrompt": "Two-part structure. PART A (0:00–0:15): cheesy commercial pizza jingle — bright major key, clean surf/lounge guitar, snappy snare, cartoon brass stabs, deadpan baritone or unfazed androgynous vocal with zero vibrato, professionally neutral, never \"acting,\" 120 BPM, radio-ad brightness, ends on a sampled doorbell ding. HARD CUT (silence or tape splice). PART B (0:15–~2:00): collapses into minor-key 90s piano ballad — soft upright or grand piano, brushed drums, warm bass, subtle string pad, same deadpan vocal (do not suddenly become emotional — sincerity is accidental), ~72 BPM. Optional very quiet distant laser zaps treated like wind chimes under the ballad. Ends on doorbell ding reversed into a soft piano overtone. Mood: the Pizza Guy theme — chaos is not his department; extra napkins are. Comedy that becomes unexpected sincerity without the singer noticing. Use a deadpan male or unfazed androgynous voice; do not use Rubella for the jingle unless requested as a parody cover.",
+  "lyrics": "[Jingle — 15 seconds]\nPepperoni or margherita?\nExtra napkins in the bag\nYou've been out for delivery\nSince the world began to lag\nTip is appreciated —\nSo is silence when you dine!\n(doorbell ding)\n\n[Hard Cut]\n(tape splice / silence)\n\n[Ballad — Verse 1]\nI don't ask about the lasers\nI don't clock the purple light\nI just ring the bell on time\nAnd leave the crust upright\nEvery doorway looks the same\nWhen you're holding something warm\nI've been out for delivery\nSince before the last big storm\n\n[Ballad — Verse 2]\nUPS last Tuesday, cable on the third\nSpiritual advisor when the HOA preferred\nSame shoes, different logo, same exact pace\nChaos peaks — I arrive — I never break the face\nPepperoni or margherita?\nYou can choose while the sky collapses\nExtra napkins in the bag\nFor the ash and for the lapses\n\n[Ballad — Chorus]\nYou've been out for delivery\nSince the world began to lag\nI don't need a reason\nI just need the address and the bag\nIf the neighborhood is ending\nSomeone still has to bring the food\nPepperoni or margherita?\nNeither one will change my mood\n\n[Ballad — Verse 3]\nSkeleton union on a fifteen\nLaser snakes soft-focus behind\nI walk through like a crossing guard\nWith a receipt you have to sign\nThey ask me how I stay so calm\nI say the crust is fine\nTip is appreciated\nSo is silence when you dine\n\n[Ballad — Final Chorus]\nYou've been out for delivery\nSince the world began to lag\nI don't need a reason\nI just need the address and the bag\nWalking away from the explosion\nNot cool — just on schedule, friend\nPepperoni or margherita?\nThis is where the song should end\n\n[Outro]\n(doorbell ding, reversed)\n(piano overtone)\nExtra napkins in the bag.",
+  "notes": "## Production notes\n- **Episode placement:** Episode 3 pizza reveal / laser-snake aftermath; recurring Pizza Guy crossover stinger across episodes; end-credits variant (jingle-only 15s or full ballad). EyeWash Station “Out For Delivery” programming block.\n- **Emotional arc:** Jingle is pure gag → hard cut → ballad accidentally sincere about always arriving when chaos peaks → final chorus still deadpan → reversed doorbell. The joke is that the singer never “acts” the emotion.\n- **Reference artists:** Beach Boys — *Surfer Girl* (emotionally inverted); elevator music that refuses to acknowledge the building is on fire; 90s soft-rock piano ballads sung by someone who thinks they’re still in a commercial.\n- **Runtime target:** ~1:45–2:10 full; 15s jingle-only bumper for end tags.\n- **Character:** Pizza Guy (uniform rotation: pizza / UPS / cable / spiritual advisor). Never explains why he’s everywhere."
+}

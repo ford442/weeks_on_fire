@@ -1,0 +1,37 @@
+{
+  "id": "911-wrong-shade",
+  "kind": "scene",
+  "title": "911 for the Wrong Shade of Blue",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "~90s",
+  "episode": "Episode 04 cold open",
+  "songId": "call-forty-seven",
+  "songTitle": "Call Forty-Seven",
+  "summary": "Karen reports existential zoning. Operator asks if anyone is bleeding. “Democracy is bleeding, Steven.” Transfer loop until pizza arrives.",
+  "visualArc": "Kitchen clipboard + purple blinds | 911 fluorescents | pizza doorbell.",
+  "tags": [
+    "hoa",
+    "karen",
+    "comedy",
+    "ep4"
+  ],
+  "episodeId": "04",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "911-split",
+      "label": "Split screen",
+      "start": "0:00",
+      "end": "0:15",
+      "durationSec": 15,
+      "onScreen": "Karen with her clipboard; tired operator; purple glow.",
+      "lyrics": "KAREN: It's not a portal, it's an unapproved hardscape.",
+      "musicCue": "Call Forty-Seven — hold music accretes a bar per transfer.",
+      "grokImaginePrompt": "Split cinematic composition: suburban woman in bathrobe on cordless phone holding a clipboard with a small sticker, purple glow through kitchen blinds, tired 911 operator in headset under harsh office lighting, deadpan comedy, high contrast, Grok Imagine style",
+      "geminiOmniPrompt": "15-second split: kitchen vs dispatch. Photoreal deadpan.",
+      "promptVariations": []
+    }
+  ]
+}

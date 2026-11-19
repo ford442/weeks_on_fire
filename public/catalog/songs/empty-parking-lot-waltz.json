@@ -1,0 +1,23 @@
+{
+  "id": "empty-parking-lot-waltz",
+  "title": "Empty Parking Lot Waltz",
+  "added": "2026-08-13",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Slow cinematic waltz / dark cabaret",
+  "description": "Last two people in a vast wet lot. 3/4, detuned piano, unresolved last chord. They do not decide.",
+  "episode": "cutaway",
+  "slot": "Post-party",
+  "tags": [
+    "waltz",
+    "cabaret",
+    "rubella",
+    "afterparty",
+    "unresolved"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Empty_Parking_Lot_Waltz.md",
+  "stylePrompt": "Slow cinematic waltz / dark cabaret, 3/4 time, 66 BPM, minor key with major lifts in the chorus. Sparse arrangement: slightly detuned upright piano as the main voice, distant upright bass, brushed snare or finger-on-cymbal, one haunting close-mic female vocal with lots of space and plate reverb. Parking-lot wind and distant traffic as a field-recording bed. Almost no high frequencies until a single swelling violin or glass harmonica enters for eight bars near 2:15 then vanishes. Vocal almost whispered in places, Rubella-compatible, never belted. One unresolved last chord — they do not decide. Mood: last two people in a massive empty lot after an event that was concert, disaster, or both. Use my Rubella voice.",
+  "lyrics": "[Intro — Lot Wind]\n(Detuned piano, one-two-three, wind under)\n\n[Verse 1]\nThe lot is a grid of nobody's names\nTwo cars left like punctuation\nKeys in my hand, a dress that remembers the room\nYou lock your door and don't walk away\n\n[Pre-Chorus]\nStreetlights watching us pretend\nThere's still somewhere to be\n\n[Chorus]\nWe could go\nOr we could stay\nAnd let the streetlights watch us pretend\nThere's still somewhere to be\nWe could go\nOr we could stay\nThe last cars out\nAre still circling me\n\n[Verse 2]\nPuddles making a second sky\nYour headlights on my shoes like a decision\nI almost say the real thing\nI almost put the key in\n\n[Pre-Chorus]\nStreetlights watching us pretend\nThere's still somewhere to be\n\n[Chorus]\nWe could go\nOr we could stay\nAnd let the streetlights watch us pretend\nThere's still somewhere to be\nWe could go\nOr we could stay\nThe last cars out\nAre still circling me\n\n[Bridge]\nOne violin for eight bars\nThen it leaves like it had another lot to do\nI could dance without touching you\nI don't. You don't. The wind does.\n\n[Final Chorus]\nWe could go\nOr we could stay\nMaybe next time\nIs a kind of tonight\nWe could go\nOr we could stay\n(unresolved)\n\n[Outro]\n(Piano winds down. One car door does not close.)",
+  "notes": "Post-chaos / post-party cutaway; button for Episode 3 or 4, or the Velvet Rope morning-after. Intimate, hesitant, ends on an unresolved “maybe next time.” Structural flaw: the last tonic never arrives — chorus lifts to major and walks back. Piano slightly detuned. Visual: two cars in a vast wet parking lot at 1am; a woman in a rumpled dress leaning on a door; slow orbit without touching. Ready for Minimax."
+}

@@ -1,0 +1,103 @@
+{
+  "id": "mv-closed-since-ninety-eight",
+  "kind": "musical",
+  "title": "Closed Since Ninety-Eight",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "2:10–2:30",
+  "episode": "Musical Cutaway / night-drive",
+  "songId": "closed-since-ninety-eight",
+  "songTitle": "Closed Since Ninety-Eight",
+  "summary": "Two reflections leave a house of mirrors in the wrong car. The radio is a station that signed off in 1998. Harmony is always one bar late.",
+  "visualArc": "Tuner parked on 1998 → wrong lot arm-in-arm → rearview singing last bar → ten and two → dead studio furniture → taillights, passenger late.",
+  "tags": [
+    "radio-voice",
+    "night-drive",
+    "reflections",
+    "liminal",
+    "1998",
+    "the-two"
+  ],
+  "segmentCount": 6,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "cs98-tuner",
+      "label": "Tuner, 1998",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Radio needle on a dead frequency; visor card 1998; rain.",
+      "lyrics": "This is not a sign-off. / This is a station that already left. / Closed since ninety-eight.",
+      "musicCue": "84 BPM carrier bed; no live-station hunt",
+      "grokImaginePrompt": "Macro of a car radio tuner needle parked on a dead frequency, dashboard green glow, a tiny station ID card in the visor reading 1998, night windshield rain, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "12-second macro. Needle does not hunt. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "cs98-lot",
+      "label": "Wrong-reflection lot",
+      "start": "0:12",
+      "end": "0:40",
+      "durationSec": 28,
+      "onScreen": "Two women arm in arm; puddle faces do not quite match.",
+      "lyrics": "We walked out arm in arm / I thought it was you / The glass had opinions",
+      "musicCue": "Live line; harmony one bar late",
+      "grokImaginePrompt": "Two nearly identical women in black lace walking arm in arm across a wet night parking lot away from a house of mirrors, their faces in the puddles do not quite match the women walking, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "28-second lot walk. Puddles disagree. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "cs98-rearview",
+      "label": "Rearview last bar",
+      "start": "0:40",
+      "end": "1:05",
+      "durationSec": 25,
+      "onScreen": "Rearview mouth on last bar's words; driver on this bar.",
+      "lyrics": "Closed since ninety-eight / Third passenger, no body / If you sing along you are late",
+      "musicCue": "Chorus; ghost double delayed",
+      "grokImaginePrompt": "Interior car at night, rearview mirror showing a mouth singing last bar's words while the driver sings this bar, dashboard glow, empty wet lot through the windshield, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "25-second interior. Mouth late. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "cs98-hands",
+      "label": "Ten and two",
+      "start": "1:05",
+      "end": "1:28",
+      "durationSec": 23,
+      "onScreen": "Gloved hands; two windshield reflections out of register.",
+      "lyrics": "Your mouth in the rearview / Is doing last year's sentence / I keep my hands at ten and two",
+      "musicCue": "Verse 2; still late",
+      "grokImaginePrompt": "Close on gloved hands at ten and two on a steering wheel, two reflections in the dark windshield slightly out of register, radio glow, nocturnal, Grok Imagine style",
+      "geminiOmniPrompt": "23-second hands. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "cs98-studio",
+      "label": "Dead studio furniture",
+      "start": "1:28",
+      "end": "1:50",
+      "durationSec": 22,
+      "onScreen": "1990s radio studio; ON AIR dark; carts still threaded.",
+      "lyrics": "I don't take requests. / I don't take the present tense. / We are still ninety-eight.",
+      "musicCue": "Bridge; Radio Voice only",
+      "grokImaginePrompt": "Empty 1990s radio studio at night, cart machines still threaded, ON AIR lamp dark, no people, dust, the feeling the furniture is still broadcasting, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "22-second empty studio. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "cs98-drive",
+      "label": "Keep driving, late",
+      "start": "1:50",
+      "end": "2:20",
+      "durationSec": 30,
+      "onScreen": "Taillights; passenger head turns a beat late.",
+      "lyrics": "Don't correct the reflection / Don't correct the year / Keep driving",
+      "musicCue": "Final chorus; harmony still one bar behind",
+      "grokImaginePrompt": "Taillights on a wet empty road, two silhouettes in the front seats, the passenger's head turns a beat late, rain, no other cars, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "30-second taillights. Head turn late. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

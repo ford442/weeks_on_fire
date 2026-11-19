@@ -1,0 +1,23 @@
+{
+  "id": "caffeinated-melon",
+  "title": "Caffeinated Melon",
+  "added": "2026-08-13",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Absurdist chamber pop",
+  "description": "Gallery fog as truth serum. Spoken verses over a polite quartet that goes a quarter-tone flat, then one clap.",
+  "episode": "cutaway",
+  "slot": "Gallery Fog",
+  "tags": [
+    "chamber-pop",
+    "gallery",
+    "comedy",
+    "justine",
+    "spoken-word"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Caffeinated_Melon.md",
+  "stylePrompt": "Absurdist chamber pop / art-gallery performance piece, 92 BPM. Polite cello and viola ostinato, very serious. Espresso machine hiss sampled as hi-hat. Spoken-word verses over the quartet. Fog-release: strings detune slightly; a chorus of gallery guests hum one note wrong on purpose. End: everything snaps back to normal on a single polite clap. Intimate spoken female lead, Laurie Anderson gravity, never belted. Mood: pretentious until it is accidentally sincere, then collective denial. Use a dry close spoken voice (Justine-adjacent) with a polite quartet that refuses to smile.",
+  "lyrics": "[Intro — Ostinato]\n(Cello + viola, espresso hiss as hi-hat)\n\n[Verse 1 — Spoken]\nThe melon asks what you'll absorb tonight\nI absorbed the truth and the canapés\nThe tubes are honest. The fog is on time.\nArtforum says it's brave.\n\n[Chorus]\nThe melon asks\nWhat you'll absorb tonight\nI absorbed the truth\nAnd the canapés\nThe fog lifts\nAnd we pretend we're fine\nArtforum says\nIt's brave\n\n[Verse 2 — Spoken]\nNinety seconds of weather that tells the truth\nSomeone proposes. Someone files. Someone hates berries.\nMy watch says be present. I am. Unfortunately.\nJustine eats a cracker like a verdict.\n\n[Chorus]\nThe melon asks\nWhat you'll absorb tonight\nI absorbed the truth\nAnd the canapés\nThe fog lifts\nAnd we pretend we're fine\nArtforum says\nIt's brave\n\n[Bridge — Detuned]\n(Strings sag. Guests hum one note wrong.)\nI absorbed my ex-wife's lawyer. Does that count.\nThe melon does not answer. That is the installation.\n\n[Outro]\n(One polite clap. Quartet in tune again. Nobody makes eye contact.)",
+  "notes": "Gallery Fog / Caffeinated Melon scene. Starts pretentious, becomes uncomfortably sincere, ends in collective denial — comedy with a bruise. Structural flaw: during the fog the quartet is a quarter-tone flat; the clap snaps it back and nobody mentions the confessions. Visual: melon on pedestal with tubes and fog; guests frozen mid-confession; Justine in sharp focus eating crackers while the world blurs. Ready for Minimax."
+}

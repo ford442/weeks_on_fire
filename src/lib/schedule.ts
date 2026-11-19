@@ -1,7 +1,7 @@
 import { DAY_MINUTES, broadcastOffset, formatClock, parseClock, toClock } from './clock';
 
 import type {
-  CutawaySuggestion,
+  CutawaySummary,
   ProductionStatus,
   Schedule,
   ScheduleSponsor,
@@ -20,7 +20,7 @@ export interface AiredSlot {
   key: string;
   blockId: string;
   blockTitle: string;
-  cutaway: CutawaySuggestion;
+  cutaway: CutawaySummary;
   /** Minutes since midnight. */
   at: number;
   /** `"2:00 AM"`. */
@@ -49,10 +49,10 @@ export interface Guide {
   /** Every slot in broadcast order (the blocks, flattened). */
   slots: AiredSlot[];
   /** Cutaways with no slot, in catalog order. */
-  unscheduled: CutawaySuggestion[];
+  unscheduled: CutawaySummary[];
 }
 
-export function buildGuide(schedule: Schedule, cutaways: readonly CutawaySuggestion[]): Guide {
+export function buildGuide(schedule: Schedule, cutaways: readonly CutawaySummary[]): Guide {
   const byId = new Map(cutaways.map((cutaway) => [cutaway.id, cutaway]));
   const sponsors = new Map(schedule.sponsors.map((sponsor) => [sponsor.id, sponsor]));
   const slots: AiredSlot[] = [];
@@ -135,19 +135,16 @@ export function tuneClock(at: string | null | undefined, nowMinutes: number): Tu
 export type SlotBadge = 'ident' | 'sponsor' | 'rerun';
 
 /** Station idents are tagged `ident` in the cutaway (`ideas/eyewash-idents.md`). */
-export function isIdent(cutaway: Pick<CutawaySuggestion, 'tags'>): boolean {
+export function isIdent(cutaway: Pick<CutawaySummary, 'tags'>): boolean {
   return cutaway.tags.includes('ident');
 }
 
 /** Sponsor cutaways (the ice-water spot) are tagged `sponsor`. */
-export function isSponsorSpot(cutaway: Pick<CutawaySuggestion, 'tags'>): boolean {
+export function isSponsorSpot(cutaway: Pick<CutawaySummary, 'tags'>): boolean {
   return cutaway.tags.includes('sponsor');
 }
 
-export function cutawayBadges(
-  cutaway: Pick<CutawaySuggestion, 'tags'>,
-  rerun = false,
-): SlotBadge[] {
+export function cutawayBadges(cutaway: Pick<CutawaySummary, 'tags'>, rerun = false): SlotBadge[] {
   const badges: SlotBadge[] = [];
   if (isIdent(cutaway)) badges.push('ident');
   if (isSponsorSpot(cutaway)) badges.push('sponsor');
@@ -170,7 +167,7 @@ export function hasActiveFilters(filters: SuggestionFilters): boolean {
   return filters.kind !== ALL || filters.status !== ALL || filters.query.trim().length > 0;
 }
 
-function searchText(cutaway: CutawaySuggestion): string {
+function searchText(cutaway: CutawaySummary): string {
   return [
     cutaway.title,
     cutaway.summary,
@@ -188,7 +185,7 @@ function sponsorText(sponsor: ScheduleSponsor | undefined): string {
 }
 
 /** The kind / status / text filters of the Suggestions list, for one cutaway. */
-export function matchesFilters(cutaway: CutawaySuggestion, filters: SuggestionFilters): boolean {
+export function matchesFilters(cutaway: CutawaySummary, filters: SuggestionFilters): boolean {
   if (filters.kind !== ALL && cutaway.kind !== filters.kind) return false;
   if (filters.status !== ALL && cutaway.status !== filters.status) return false;
   const query = filters.query.trim().toLowerCase();
@@ -210,7 +207,7 @@ export function slotMatchesFilters(slot: AiredSlot, filters: SuggestionFilters):
 export interface FilteredGuide {
   /** Blocks that still have a visible slot, with only those slots. */
   blocks: GuideBlock[];
-  unscheduled: CutawaySuggestion[];
+  unscheduled: CutawaySummary[];
   /** Distinct cutaways left after filtering (a rerun is the same cutaway, not another one). */
   cutawayCount: number;
 }

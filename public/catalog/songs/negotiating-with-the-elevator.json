@@ -1,0 +1,24 @@
+{
+  "id": "negotiating-with-the-elevator",
+  "title": "Negotiating with the Elevator",
+  "added": "2026-08-19",
+  "genre": "Folk, country & world",
+  "subgenre": "Argentine tango duet",
+  "description": "Lillith bargains with a freight elevator that sings only floor numbers. Each verse loses a beat as the car descends; the lobby arrives in 2/4.",
+  "episode": "building",
+  "slot": "Corridor transit",
+  "tags": [
+    "tango",
+    "duet",
+    "comedy",
+    "lillith",
+    "elevator",
+    "building"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Negotiating_with_the_Elevator.md",
+  "stylePrompt": "Argentine tango duet, 116 BPM, between Lillith and a freight elevator.\nBandoneón, one nylon guitar, upright bass, no drums — heel-stomp on the car\nfloor for percussion. Lillith sings words, urgent and conspiratorial, the way\nyou flatter a machine you need something from. The elevator sings **only floor\nnumbers**, through a heavily vocoded low tenor with the building's PA\nbandwidth (250 Hz–3.5 kHz, nothing outside it). It is a real duet — the\nelevator has melody, phrasing, and better intonation than she does.\n**Structural flaw:** every verse drops a beat as the car descends — 5/4, then\n4/4, then 3/4, then 2/4 — and neither singer adjusts their phrasing, so by the\nlast section Lillith is arriving late to a bar that has already left. Do not\ncorrect it. The door chime at the end is a semitone above the final chord and\nis the last sound in the mix. Runtime ~2:00–2:20. No belting. No wink.",
+  "lyrics": "[Intro — bandoneón alone, doors closing, 5/4]\n(doors close)\nELEVATOR: Twelve.\nLILLITH: Twelve. Good. We agree on twelve.\n\n[Verse 1 — 5/4]\nLILLITH:\nI need the lobby and you need to be needed\nThat's a deal, that's the whole deal, that's the shape of it\nI have said kind things about you to the boiler\nI have never once called you a lift\nELEVATOR: Eleven. Eleven. Nine.\nLILLITH: Ten. There's a ten. Ten exists.\nELEVATOR: Nine.\n\n[Chorus 1 — 5/4]\nLILLITH:\nTake me down, take me down, take me anywhere but back\nI'll say the building loves you — I will lie into the shaft\nWhatever floor you're dreaming of, I'll pretend I chose it too\nTake me down\nELEVATOR: Nine.\nLILLITH: We're negotiating.\nELEVATOR: Nine.\n\n[Verse 2 — 4/4, nobody mentions the missing beat]\nLILLITH:\nI fixed the neon and I fixed the ping-pong table\nThe table tells the weather now — I could do that for you\nOne evening, one screwdriver, one questionable capacitor\nAnd you could tell them anything you want\nELEVATOR: Seven.\nLILLITH: Seven's fine. Seven's progress.\nELEVATOR: Seven. Seven. Seven.\n\n[Bridge — 3/4, bandoneón only, both voices quiet]\nLILLITH:\nWhat if I stopped asking\nWhat if I just rode\nSome nights I think you're not refusing\nSome nights I think you're just afraid of the lobby too\nELEVATOR: Four.\nLILLITH: ...Four.\nELEVATOR: Four.\nLILLITH: Okay. Okay. Look at that.\n\n[Final Chorus — 2/4, Lillith consistently a beat behind]\nLILLITH:\nTake me down, take me down, I'll say it was your idea\nI'll tell Madelyn you were compliant, I'll tell the board you're new\nI'll sign your inspection sticker with a name that isn't mine\nTake me down\nELEVATOR: Two.\nLILLITH: Two —\nELEVATOR: Two.\nLILLITH: — I'll take two.\nELEVATOR: One.\nLILLITH: You beautiful machine.\n\n[Outro]\n(doors open)\nELEVATOR: Thirteen.\nLILLITH: There's no thirteen.\n(door chime, a semitone sharp)\n(doors close)",
+  "notes": "## What the song is\nLillith needs to get to the lobby. The elevator has terms. Two minutes of\ngenuine tango courtship in which one party can only say numbers and is\nnonetheless the more persuasive negotiator. She wins — she reaches the lobby —\nand then it offers her a floor that does not exist, which is either a joke, a\ncounteroffer, or an invitation. The song does not adjudicate. Neither does the\nbuilding.\n\nCallback: Rubella's line, \"The elevator just tried to negotiate. I told it I\nalready pay rent.\" That's the other tenant's approach. This is Lillith's."
+}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { Headphones, Search, SlidersHorizontal } from 'lucide-react';
 
-import { linkedAudioFilenames, songs, type Song } from '../data/songs';
+import { linkedAudioFilenames, prefetchSong, songs, type SongSummary } from '../data/songs';
 import { episodeWithSlot } from '../data/taxonomy';
 import { crewPath } from '../routes/paths';
 import { episodeOptions, genreOptions, optionValues } from '../lib/filterOptions';
@@ -40,7 +40,7 @@ export default function Songs() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { search } = useLocation();
-  const [selected, setSelected] = useState<Song>(firstCatalogItem(songs, 'songs'));
+  const [selected, setSelected] = useState<SongSummary>(firstCatalogItem(songs, 'songs'));
   const [sheetOpen, setSheetOpen] = useState(false);
   const [query, setQuery] = useUrlParam('q', '');
   const episodes = useMemo(() => episodeOptions(songs.map((song) => song.episode)), []);
@@ -93,8 +93,6 @@ export default function Songs() {
           song.subgenre ?? '',
           song.description,
           episodeWithSlot(song.episode, song.slot),
-          song.stylePrompt,
-          song.lyrics ?? '',
           song.tags.join(' '),
         ]
           .join(' ')
@@ -114,7 +112,7 @@ export default function Songs() {
     return matches.sort((a, b) => compareSongs(a, b, sort));
   }, [episode, genre, hasAudio, instrumentalOnly, query, sort, status]);
 
-  const selectSong = (song: Song) => {
+  const selectSong = (song: SongSummary) => {
     setSelected(song);
     setSheetOpen(true);
     void navigate({ pathname: crewPath(`/songs/${song.id}`), search });
@@ -138,7 +136,7 @@ export default function Songs() {
             <div className="sticky top-0 z-10 space-y-3 border-b border-zinc-800 bg-zinc-950 p-4">
               <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_180px]">
                 <label className="relative block">
-                  <span className="sr-only">Search songs, lyrics, and tags</span>
+                  <span className="sr-only">Search songs, genres, and tags</span>
                   <Search
                     aria-hidden="true"
                     size={18}
@@ -147,7 +145,7 @@ export default function Songs() {
                   <input
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
-                    placeholder="Search songs, lyrics, genres..."
+                    placeholder="Search songs, genres, tags..."
                     className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
                   />
                 </label>
@@ -209,6 +207,8 @@ export default function Songs() {
                       <button
                         type="button"
                         onClick={() => selectSong(song)}
+                        onPointerEnter={() => prefetchSong(song.id)}
+                        onFocus={() => prefetchSong(song.id)}
                         aria-current={isSelected ? 'true' : undefined}
                         className={`flex w-full items-center gap-3 border-l-2 px-4 py-2.5 text-left text-sm transition focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300 ${
                           isSelected
@@ -303,7 +303,7 @@ function FilterToggle({ pressed, onToggle, children }: FilterToggleProps) {
   );
 }
 
-function compareSongs(a: Song, b: Song, sort: SongSort) {
+function compareSongs(a: SongSummary, b: SongSummary, sort: SongSort) {
   if (sort !== 'title') {
     const byDate = a.added.localeCompare(b.added);
     if (byDate !== 0) return sort === 'added-desc' ? -byDate : byDate;

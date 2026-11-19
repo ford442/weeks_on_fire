@@ -1,0 +1,37 @@
+{
+  "id": "gallery-fog",
+  "kind": "scene",
+  "title": "Gallery Fog / Caffeinated Melon",
+  "added": "2026-10-05",
+  "status": "suggested",
+  "runtime": "~2 min",
+  "episode": "Episode 02 extension",
+  "songId": "caffeinated-melon",
+  "songTitle": "Caffeinated Melon",
+  "summary": "Espresso-hooked melon emits honesty fog. Ninety seconds of truth. Then everyone pretends. Justine eats crackers.",
+  "visualArc": "White cube → melon + tubes → fog → frozen confessions → clap.",
+  "tags": [
+    "gallery",
+    "justine",
+    "comedy",
+    "ep2"
+  ],
+  "episodeId": "02",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "melon-wide",
+      "label": "The installation",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Melon on pedestal, espresso machine, fog, crowd in black, Justine with crackers.",
+      "lyrics": "CURATOR: The melon asks what we're willing to absorb.",
+      "musicCue": "Cello ostinato, espresso hiss as hi-hat.",
+      "grokImaginePrompt": "Surreal art gallery opening, large melon on pedestal connected to espresso machine emitting artistic fog, fashionable crowd in black, one woman deadpan eating crackers, cinematic soft lighting, absurdist comedy, Grok Imagine style",
+      "geminiOmniPrompt": "12-second gallery wide. Fog begins. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

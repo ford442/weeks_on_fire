@@ -1,0 +1,23 @@
+{
+  "id": "pad-kid-poured-curd",
+  "title": "Pad Kid Poured Curd (Pulled Cold)",
+  "added": "2026-08-17",
+  "genre": "Spoken & dialog",
+  "subgenre": "Cold patter electro / recall bulletin",
+  "description": "EyeWash late correction at 3:44. A pad kid poured curd that should have been pulled cold; Continuity Voice reads the form while the health department adds clauses and the tempo does not slow.",
+  "episode": "eyewash",
+  "slot": "Late correction",
+  "tags": [
+    "continuity-voice",
+    "eyewash-station",
+    "patter",
+    "recall",
+    "comedy"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Pad_Kid_Poured_Curd.md",
+  "stylePrompt": "Cold patter electro at 108 BPM. Marble-stamp kick, joint-click hats, analog bass dry. Continuity Voice narrow-bandwidth announcer — sincere, institutional, never winking — reading a **late correction** that keeps growing. The title line is the official incident sentence on the form; he is not allowed to paraphrase it. No belting. No vibrato. **Structural flaw:** every chorus the health department adds another clause — lot, time, vehicle, route — and the bar count does not change. Tempo stays 108. Nobody acknowledges the squeeze. Optional distant laser zaps as percussion, very quiet. Mood: EyeWash Station mid-break notice at 3:44, not a sign-off. Runtime ~1:45–2:10. Use Continuity Voice or a deadpan baritone; do not use Rubella unless as a parody cover.",
+  "lyrics": "[Intro — mains hum / narrow-band click]\nThis is a late correction.\nLot twelve remains in circulation.\n\n[Verse 1 — spoken-sung, close]\nPad kid poured curd pulled cold\nThe splash still shines on cellar shelf three\nShe signed the sheet. The lid was never sealed.\nThe roller door still hangs a little free\n\n[Pre-Chorus]\nResidents who purchased lot twelve\nShould rinse the shelf and press the lid\nIf the splash still shows, do not swallow\nCall the cellar. Do not blend.\n\n[Chorus 1]\nPad kid poured curd pulled cold\nReturn the lot if the lid is loose\nDo not shake. Do not serve. Do not blend.\nWe now return you to your regularly scheduled difficulty\n\n[Verse 2]\nThe copper cooler coughed and settled\nA proper pot of curd gone slack\nThe loader cleared the Little River\nHis wristwatch lagged the cooling rack\n\n[Pre-Chorus]\nThe red lorry cleared before the listing\nThe yellow one is still against the dock\nThe clock above the cooler called it early\nThe rural route still lists the lot as fresh\n\n[Chorus 2 — same tempo, more clauses]\nPad kid poured curd pulled cold\nReturn the lot if the lid is loose\nLogged three forty-four, cooler still slack\nRed lorry gone, yellow lorry at the dock\nDo not shake. Do not serve. Do not blend.\nWe now return you to your regularly scheduled difficulty\n\n[Bridge — half-time feel, still no mercy]\nHe poured what the pad required\nHe pulled what the cold would hold\nI am reading what the form required\nI am not revising the cold\nPad kid poured curd pulled cold\nPad kid poured curd pulled cold\n\n[Final Chorus — full stack, tempo unchanged]\nPad kid poured curd pulled cold\nLot twelve, cellar shelf three, lid unsealed\nLogged three forty-four on a lagging watch\nRed lorry gone, yellow lorry at the dock\nRural route still showing fresh\nDo not shake. Do not serve. Do not blend.\nWe now conclude our broadcast day\nWe have been concluding it for years\n\n[Spoken tag]\nDo not blink.\nDo not blend.",
+  "notes": "## What the song is\nA mid-break **product notice**, not a lesson. Overnight, a pad kid (loading-dock, third shift) poured curd that should have been pulled from the cold first. EyeWash is required to read the correction every hour. Continuity Voice does it professionally. The kid is never interviewed. The sentence on the form is never rewritten.\n\nThe title phrase is the official line. It is hard to say because whoever typed the incident report was tired, not because the show is teaching phonetics."
+}

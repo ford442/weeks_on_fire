@@ -1,0 +1,51 @@
+{
+  "id": "mv-heart-rate-optimal",
+  "kind": "musical",
+  "title": "Heart Rate Optimal",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "1:30–1:50",
+  "episode": "Episode 03 / wellness ladies",
+  "songId": "heart-rate-optimal",
+  "songTitle": "Heart Rate Optimal",
+  "summary": "A heart-rate alert that thinks it is a ballad. 78 and 78. The chorus would like to go to ninety; the watch does not approve.",
+  "visualArc": "Watch face 78/78 → still woman closes a ring → ELEVATED chime at the same tempo → cracker, latte, robot → OPTIMAL.",
+  "tags": [
+    "wellness",
+    "comedy",
+    "justine",
+    "jackalyn",
+    "ep3"
+  ],
+  "episodeId": "03",
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "hro-face",
+      "label": "78 / 78",
+      "start": "0:00",
+      "end": "0:12",
+      "durationSec": 12,
+      "onScreen": "Macro watch face. HR 78. Second ring also 78. Café neon in the glass.",
+      "lyrics": "Heart rate: seventy-eight. / Existential dread: also seventy-eight. / This is optimal.",
+      "musicCue": "Exactly 78 BPM, haptic kick",
+      "grokImaginePrompt": "Macro of a sleek wellness smartwatch face reading HR 78 and a second ring also at 78, café neon reflecting in the glass, nocturnal, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "12-second macro. Chime once. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "hro-elevated",
+      "label": "Elevated (same tempo)",
+      "start": "0:38",
+      "end": "0:58",
+      "durationSec": 20,
+      "onScreen": "Watch flashes ELEVATED. The room does not speed up. Justine does not stand.",
+      "lyrics": "Heart rate optimal / Dread optimal / Same number / Different app",
+      "musicCue": "Attempted swell cut by three-note chime",
+      "grokImaginePrompt": "Close two-shot: watch face flashing ELEVATED in soft mint while a deadpan woman in a retro-tech café does not speed up, ping-pong paddle on the table, photoreal, Grok Imagine style",
+      "geminiOmniPrompt": "20-second hold. No tempo change. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

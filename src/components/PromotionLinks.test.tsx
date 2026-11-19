@@ -1,10 +1,8 @@
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { MemoryRouter, useLocation } from 'react-router-dom';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
-import App from '../App';
-import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { crewPath } from '../routes/paths';
+import { renderApp } from '../test/renderApp';
 
 import type * as GraphModule from '../data/generated/catalog-graph';
 
@@ -24,24 +22,13 @@ vi.mock('../data/generated/catalog-graph', async (importOriginal) => {
   };
 });
 
-function LocationProbe() {
-  return <output data-testid="location">{useLocation().pathname}</output>;
-}
-
 async function settled() {
   await waitFor(() => expect(screen.queryByText('Loading…')).toBeNull(), { timeout: 5000 });
 }
 
 describe('cartoon → cutaway promotion', () => {
   it('links the cartoon to its Suggestions board and the board back to the cartoon', async () => {
-    render(
-      <MemoryRouter initialEntries={[crewPath('/cartoons/hold-music')]}>
-        <MediaSessionProvider>
-          <App />
-          <LocationProbe />
-        </MediaSessionProvider>
-      </MemoryRouter>,
-    );
+    renderApp(crewPath('/cartoons/hold-music'));
     await settled();
 
     const cartoonLinks = await screen.findByRole('region', { name: 'Links' });

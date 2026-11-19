@@ -1,0 +1,92 @@
+{
+  "id": "the-soft-gyre",
+  "kind": "musical",
+  "title": "The Soft Gyre",
+  "added": "2026-10-05",
+  "status": "generated",
+  "runtime": "30 seconds (5 × 6s)",
+  "episode": "Musical Cutaway / Visual Experiment",
+  "songId": "porch-light-meridian",
+  "songTitle": "Porch Light Meridian (instrumental lean)",
+  "summary": "A house-sized translucent gel blob hovers above anvil thunderheads, spins, and throws sparks and jello at the weather. Clouds dent, lantern, and grow glass flowers. The gyre spins clockwise; every ejecta counter-rotates. Five locked stills, ready to animate.",
+  "visualArc": "Hover above the deck → jello weather + dented cloud → interior helix and cloud-bubbles → vapor tendril answers → pull-back, halo, glass flower, undersun flare.",
+  "tags": [
+    "soft-gyre",
+    "abstract",
+    "gel",
+    "clouds",
+    "psychedelic",
+    "jello",
+    "visual-experiment",
+    "long-form-prompts"
+  ],
+  "segmentCount": 5,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gyre-a",
+      "label": "A — Hover",
+      "start": "0:00",
+      "end": "0:06",
+      "durationSec": 6,
+      "onScreen": "Hover",
+      "lyrics": "[Instrumental — no vocal]",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "",
+      "promptVariations": []
+    },
+    {
+      "id": "gyre-b",
+      "label": "B — Weather",
+      "start": "0:06",
+      "end": "0:12",
+      "durationSec": 6,
+      "onScreen": "Weather",
+      "lyrics": "[Instrumental — no vocal]",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "",
+      "promptVariations": []
+    },
+    {
+      "id": "gyre-c",
+      "label": "C — Interior",
+      "start": "0:12",
+      "end": "0:18",
+      "durationSec": 6,
+      "onScreen": "Interior",
+      "lyrics": "[Instrumental — no vocal]",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "",
+      "promptVariations": []
+    },
+    {
+      "id": "gyre-d",
+      "label": "D — Answer",
+      "start": "0:18",
+      "end": "0:24",
+      "durationSec": 6,
+      "onScreen": "Answer",
+      "lyrics": "[Instrumental — no vocal]",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "",
+      "promptVariations": []
+    },
+    {
+      "id": "gyre-e",
+      "label": "E — Soft set",
+      "start": "0:24",
+      "end": "0:30",
+      "durationSec": 6,
+      "onScreen": "Soft set",
+      "lyrics": "[Instrumental — no vocal]",
+      "musicCue": "",
+      "grokImaginePrompt": "",
+      "geminiOmniPrompt": "",
+      "promptVariations": []
+    }
+  ]
+}

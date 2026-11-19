@@ -1,6 +1,6 @@
 import { linkedAudioFilenames, songs } from '../data/songs';
 
-import type { Song } from '../data/types';
+import type { SongSummary as Song } from '../data/types';
 
 export const albums = [
   {

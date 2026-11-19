@@ -1,0 +1,37 @@
+{
+  "id": "mv-quarter-to-seventy-five",
+  "kind": "musical",
+  "title": "Quarter to Seventy-Five",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~3:00",
+  "episode": "Episode 02",
+  "songId": "quarter-to-seventy-five",
+  "songTitle": "Quarter to Seventy-Five",
+  "summary": "No chorus — only the title phrase, a clock stuck at 3:44, and an FM needle drifting left.",
+  "visualArc": "Mercury streetlamps → frozen 3:44 → café looped three times → empty road.",
+  "tags": [
+    "ep2",
+    "lullaby",
+    "radio",
+    "3:44"
+  ],
+  "episodeId": "02",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "q75-clock",
+      "label": "3:44",
+      "start": "0:40",
+      "end": "1:00",
+      "durationSec": 20,
+      "onScreen": "Analog car clock frozen at 3:44. Radio face glowing green.",
+      "lyrics": "Quarter to seventy-five and low",
+      "musicCue": "Detuned soft rock / ambient lullaby",
+      "grokImaginePrompt": "Extreme close-up of an analog car clock stuck at 3:44, AM/FM radio face glowing green, slight tape-hiss atmosphere, nocturnal, cinematic macro, Grok Imagine style",
+      "geminiOmniPrompt": "20-second macro of the frozen clock. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

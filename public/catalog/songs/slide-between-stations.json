@@ -1,0 +1,25 @@
+{
+  "id": "slide-between-stations",
+  "title": "Slide Between Stations",
+  "added": "2026-09-14",
+  "genre": "Ambient & downtempo",
+  "subgenre": "Broadcast dream-pop / test-pattern shoegaze",
+  "description": "The EyeWash transmitter never explains itself. A song for the half-second where the channel slides and the room changes. Made by Fable.",
+  "episode": "eyewash",
+  "slot": "Station break · channel slide",
+  "tags": [
+    "dream-pop",
+    "shoegaze",
+    "eyewash-station",
+    "broadcast",
+    "radio-voice",
+    "liminal",
+    "made-by-fable"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Slide_Between_Stations.md",
+  "stylePrompt": "Broadcast dream-pop / test-pattern shoegaze, 84 BPM, E major that keeps slipping down a half step into E-flat on every \"slide\" and then climbing back as if nothing happened. Washed-out guitars in tremolo and reverse reverb, a 1 kHz test tone held under the intro and hidden inside the pad for the rest of the track, soft tape-flutter drum machine, sub bass felt not heard. Vocals: one female voice, breathy, close, far away in the same take — like a CRT in the next room. A second voice (the Radio Voice) is processed as if between stations: AM band-limited, slightly off-pitch, only on the bridge. Chorus adds a wall of hazy guitar but the vocal stays small. Mood: the picture changes before the sound does; the couch is the same, the world is not. No breakdown, no build, no chorus louder than the last. Ends on the test tone alone, then the tone drops a half step and cuts.",
+  "lyrics": "[Intro — Test Tone]\n(1 kHz tone, tremolo guitar swells in, tape flutter)\n\n[Verse 1]\nNobody changed the channel\nThe channel changed the room\nThe couch is where I left it\nThe window's showing noon\nThere's a station in the corner\nThat airs all of it and more\nIt never says what for\n\n[Chorus]\nSlide between stations\nStay where you are\nSlide between stations\nThe picture goes far\nDon't fix the tracking\nDon't touch the dial\nSlide, and it's the same room\nFor a little while\n\n[Verse 2]\nThe Two are on a talk show\nThat the guide says isn't on\nA porch light in a desert\nWhere the desert should be gone\nThere's a man selling water\nThat's more refreshed than mine\nAnd the signal's doing fine\n\n[Chorus]\nSlide between stations\nStay where you are\nSlide between stations\nThe picture goes far\nDon't fix the tracking\nDon't touch the dial\nSlide, and it's the same room\nFor a little while\n\n[Bridge — Radio Voice]\n(AM band-limited, drifting pitch)\nYou are watching. You have always been watching.\nThis program contains a room.\nPlease remain on the couch.\nWe will slide you shortly.\n\n[Final Chorus]\nSlide between stations\nStay where you are\nSlide between stations\nThe picture goes far\nDon't fix the tracking\nDon't touch the dial\nSlide, and it's a new room\nWith the same old smile\n\n[Outro — Tone Drops]\n(Guitars thin out, test tone alone, tone drops a half step, cut)",
+  "notes": "## Production notes\n- **Episode placement:** EyeWash station-break that runs across an actual channel slide — any moment where a character has EyeWash on in the background and the show changes without anyone touching it. Sister to *Static Between Stations* and *This Program Contains Dialogue*; this one is the slide itself, not the static.\n- **Emotional arc:** Domestic and calm → the room stays, the world doesn't → the Radio Voice is the only one who admits it's a broadcast → final chorus accepts the new room.\n- **Characters:** Unnamed viewer voice (Rubella-compatible, small). The Radio Voice on the bridge only. The Two appear on-screen inside the TV, never in the room.\n- **Structural flaw:** the half-step slip on every \"slide\" should be a real key drop, not a pitch bend; if Minimax smooths it, keep the take with the worst seam.\n- **Runtime target:** ~3:00. Trim to 20s (intro + one chorus) as a hard channel-slide sting.\n- **Reference energy:** Cocteau Twins as a test card; Beach House at 3 AM on a dead channel; Broadcast, the band, obviously."
+}

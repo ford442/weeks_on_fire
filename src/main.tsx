@@ -1,28 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from './App';
-import MediaSessionProvider from './contexts/MediaSessionProvider';
+import { appRoutes } from './routes/appRoutes';
+import { routerBasename } from './lib/basePath';
 import './styles.css';
 
-function routerBasename(): string {
-  if (!import.meta.env.PROD) return '/';
-  const first = window.location.pathname.split('/').filter(Boolean)[0];
-  if (first === 'weeks-on-fire' || first === 'weeks_on_fire') {
-    return `/${first}`;
-  }
-  return '/';
-}
-
-const basename = routerBasename();
+const router = createBrowserRouter(appRoutes, { basename: routerBasename() });
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename={basename}>
-      <MediaSessionProvider>
-        <App />
-      </MediaSessionProvider>
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </StrictMode>,
 );

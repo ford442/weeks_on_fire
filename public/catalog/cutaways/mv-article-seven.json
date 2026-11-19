@@ -1,0 +1,51 @@
+{
+  "id": "mv-article-seven",
+  "kind": "musical",
+  "title": "Article Seven",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "1:20–1:40",
+  "episode": "Episode 03 / Skeleton Union Break",
+  "songId": "article-seven",
+  "songTitle": "Article Seven",
+  "summary": "Mandatory funk interval. Plastic steward reads the laminated card. Remaining time is always fourteen minutes. The lawn is on break.",
+  "visualArc": "Frozen lasers → ON BREAK sign → stretches, no dancing → Pizza Guy crossing guard → clock still 3:44.",
+  "tags": [
+    "halloween",
+    "union",
+    "skeleton",
+    "comedy",
+    "ep3"
+  ],
+  "episodeId": "03",
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "a7-sign",
+      "label": "On break",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Halloween backyard frozen mid-battle. Laminated ON BREAK. Snakes paused. Cat supervising.",
+      "lyrics": "Article seven. / Mandatory funk interval. / Please power down the lasers.",
+      "musicCue": "96 BPM dusty union lounge, funk bass put on break",
+      "grokImaginePrompt": "Halloween suburban backyard frozen mid laser battle, animated plastic skeleton holding a laminated ON BREAK sign, glowing snakes paused mid-strike, black cat watching, suburban fence, deadpan comedy, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "10-second locked-off freeze. Sign does not flutter. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "a7-fourteen",
+      "label": "Fourteen minutes remaining",
+      "start": "0:32",
+      "end": "0:52",
+      "durationSec": 20,
+      "onScreen": "Skeleton stretches. Clock in the kitchen window is 3:44. Nobody resumes.",
+      "lyrics": "Fourteen minutes remaining. / Article seven / Groove reset per contract",
+      "musicCue": "Same bars, same remaining time",
+      "grokImaginePrompt": "Plastic skeleton doing mandated workplace stretches beside an ON BREAK sign, analog kitchen clock 3:44 in a window, laser snakes powered down, suburban night, deadpan, Grok Imagine style",
+      "geminiOmniPrompt": "20-second hold. Clock does not advance. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

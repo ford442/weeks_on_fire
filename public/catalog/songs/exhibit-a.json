@@ -1,0 +1,24 @@
+{
+  "id": "exhibit-a",
+  "title": "Exhibit A",
+  "added": "2026-09-15",
+  "genre": "Soul, funk & hip-hop",
+  "subgenre": "Courtroom doo-wop / vanished choir",
+  "description": "A dog prosecutor presents a red laser dot. The cat choir never finishes a vowel. The downbeat is the click they follow instead of the conductor.",
+  "episode": "cutaway",
+  "slot": "Laser Dot Jury",
+  "tags": [
+    "doo-wop",
+    "courtroom",
+    "comedy",
+    "cats",
+    "laser",
+    "cartoon"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Exhibit_A.md",
+  "stylePrompt": "Courtroom doo-wop, 92 BPM, B-flat major. Deadpan tenor lead (dog prosecutor in a rumpled suit — warm, sincere, selling the case to an empty box). Finger snaps on 2 and 4. Upright bass walking. One piano stab on the word \"exhibit.\" No drums except a gavel that is always late. Backup: a cat choir stacked in close harmony who are supposed to hold \"ooo.\" **Structural flaw:** a 5 kHz laser-pointer tick lands every 7 seconds, off the grid, never on a bar line. Each tick, the choir abandons the chord mid-phoneme and the stereo image of them yanks hard right toward the tick; the prosecutor keeps conducting the space they left. By the last chorus there is no choir, only the lead and the tick. Do not bring the cats back for a button. Mood: a trial that is going extremely well for nobody. Runtime ~1:30–1:50. Do not use Continuity Voice (this is not the station). Do not use Dale's gavel as a joke prop — a different bulldog, a different local.",
+  "lyrics": "[Intro — snaps, one late gavel]\nThe people call Exhibit A.\n(tick)\nPlease remain seated.\n\n[Verse 1]\nLadies and gentlemen of the jury\nI have a light\nI have a wall\nI have a theory of the case\nThe theory is: look\nThe theory is: look again\nYou may not pounce\nThat is in the instructions\n\n[Pre-Chorus]\nIf you would hold the \"ooo\"\nIf you would hold the room\nIf you would not\n\n[Chorus]\nExhibit A\nA red fact on a beige wall\nExhibit A\nI rest, I rise, I point\nExhibit A\nPlease do not follow it\nPlease follow me\n(tick)\n(choir gone for one bar)\n\n[Verse 2]\nThe defendant is also a cat\nThe defendant is also airborne\nI did not call the defendant to the air\nI called the defendant to the stand\nThe stand is still here\nThe defendant is not\n\n[Pre-Chorus]\nYour honor I object to physics\nYour honor I object to joy\nYour honor I object to the way\nA red thing wins a room\n\n[Chorus 2 — choir thinner]\nExhibit A\nStill the same dot\nExhibit A\nStill the same wall\nExhibit A\nI have notes\nI have a suit\nI have no jury\n(tick)\n\n[Bridge — tenor alone, snaps continue]\nI was told the evidence would speak\nThe evidence is a circle\nThe evidence does not speak\nThe evidence moves one inch\nAnd the law moves with it\nI am still talking\nThat is also in the instructions\n\n[Final]\nExhibit A\nI point\nExhibit A\nI rest\nExhibit A\n(tick)\n(no choir)\nPlease remain seated.\nThe seats are empty.\nThat is my case.",
+  "notes": "## What the song is\nThe prosecutor did not bring a laser to court so the jury would leave. He brought it because it was Exhibit A. The cats did what cats do. He continues, professionally, to an empty box, because the instructions said remain seated and he is the only one who read them.\n\nThe joke is the tick, not the cats being cute. Nobody meows on the record. Nobody says \"cats, am I right.\""
+}

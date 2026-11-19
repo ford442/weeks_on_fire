@@ -1,0 +1,24 @@
+{
+  "id": "big-city",
+  "title": "Big City",
+  "added": "2026-09-11",
+  "genre": "Metal",
+  "subgenre": "Late-80s glam strut",
+  "description": "Lillith starts, Rubella answers, Kenji spoken tag. Glamora as a city made of hair. Catalog single, not the Ultra Screech ad.",
+  "episode": "cutaway",
+  "slot": "Glam catalog",
+  "tags": [
+    "glam-metal",
+    "lillith",
+    "rubella",
+    "kenji",
+    "glamora",
+    "catalog"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Big_City.md",
+  "stylePrompt": "Sincere late-80s glam metal strut, 126 BPM, A major. Open bright rhythm guitar riff, big gated snare, one cowbell used straight, heavy lead guitar with wide vibrato and a single dive bomb at the last chorus exit. Neon synth sits underneath the guitars, never on top. Anthemic gang vocals chanting \"Big City\" only — no product name, no \"Glam-Sham-Poo,\" no comedy samples, no Japanese salaryman shouts. Two female vocals: one brighter and committed on verse 1 and the pre-chorus, one dry and slightly raspy on verse 2 and the bridge. One male spoken line only, twice, same sentence both times, not sold, not announced. High-energy, earnest glam about hair as a city skyline. Use Lillith, Rubella, and Kenji voices.",
+  "lyrics": "[Intro]\nThat hair is in Big City, man.\n\n[Verse 1]\nCrown work on a Tuesday\nTeased it till the street looked small\nEvery strand a fire escape\nYou can climb but you can't call\n\nThe wind does the combing\nThe neon does the part\nI didn't build a building\nI just wouldn't let it start\n\n[Pre-chorus]\nFrom the dorms you can see it\nPrefecture lights in a stack\nAuthorized volume ends\nWhere the bangs don't go back\n\n[Chorus]\nBig City\nHair like a skyline, stay out of the street\nBig City\nOne tease and the elevator yields\nBig City\nIf the temples go to sleep at four\nthe crown still keeps the keys\n\n[Verse 2]\nI walked under somebody's fringe\nfor six blocks and a fine\nThe HOA called it structure\nI called it standing in line\n\nSplit ends humming like windows\nleft open on a heat\nYou can wash it if you want to\nIt'll still be a city when it dries\n\n[Pre-chorus]\nFrom the laundry you can see it\nthrough the glass of the machine\nA skyline in the spin cycle\ngoing gold, going green\n\n[Chorus]\nBig City\nHair like a skyline, stay out of the street\nBig City\nOne tease and the elevator yields\nBig City\nIf the temples go to sleep at four\nthe crown still keeps the keys\n\n[Solo]\n\n[Bridge]\nThey wanted a formula\nI gave them a map\nThey wanted a volume\nI gave them a block\nThey wanted it quiet\nthe quiet slot is taped\nThey wanted a product\nI gave them a city and left\n\n[Final chorus]\nBig City\nHair like a skyline, stay out of the street\nBig City\nOne tease and the elevator yields\nBig City\nIf the temples go to sleep at four\nthe crown still keeps the keys\nthe crown still keeps the keys\n\n[Outro]\nThat hair is in Big City, man.",
+  "notes": "Catalog glam, not the Ultra Screech interrupt. Hair is the architecture. Product stays off-screen. Kenji speaks the tag twice and plays the rest of the way. Option_a take (~2:46.82) is the edit master; heard line is \"The hair is in big city man.\" Use the take. Binary not committed to `songs/` yet.\n\nVideo: A-roll small club stage, B-roll hair-city cutaways. Imagine audio-prompt recipe and timed stems: `prompts/big-city-segments.md`. Idea lock: `ideas/big-city-cutaway.md`. Suggestions id `big-city` after codegen.\n\nFarm on #18 / #33. Origin #32. Picture #22. Not #42. Worlds do not mix."
+}

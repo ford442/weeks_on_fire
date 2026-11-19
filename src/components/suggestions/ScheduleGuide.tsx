@@ -3,7 +3,7 @@ import { Fragment } from 'react';
 import { AdBreakRow, ScheduleRow, UnscheduledRow } from './ScheduleRow';
 
 import type { FilteredGuide } from '../../lib/schedule';
-import type { CutawaySuggestion } from '../../data/types';
+import type { CutawaySummary } from '../../data/types';
 
 interface ScheduleGuideProps {
   guide: FilteredGuide;
@@ -12,7 +12,7 @@ interface ScheduleGuideProps {
   selectedId?: string;
   /** Scanlines on. The caller has already ruled out reduced motion. */
   crt: boolean;
-  onSelect: (cutaway: CutawaySuggestion) => void;
+  onSelect: (cutaway: CutawaySummary) => void;
 }
 
 /**

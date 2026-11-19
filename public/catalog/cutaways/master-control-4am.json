@@ -1,0 +1,63 @@
+{
+  "id": "master-control-4am",
+  "kind": "scene",
+  "title": "Master Control, 4 AM",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "3–5 min",
+  "episode": "EyeWash Station",
+  "songId": "haunted-or-unscheduled",
+  "songTitle": "Haunted or Unscheduled",
+  "summary": "Oz logs a timecode. One monitor shows this room a few seconds ahead. He stands up to top off his tea. He does not look at the monitor. “It's not haunted, it's unscheduled.”",
+  "visualArc": "CRT wall → thermos → future-monitor offset → empty chair, still airing.",
+  "tags": [
+    "eyewash-station",
+    "oz",
+    "continuity-voice",
+    "4am",
+    "dialog"
+  ],
+  "segmentCount": 3,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "mc-wide",
+      "label": "Wall of monitors",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Cramped 1980s master control. Oz fills a log sheet.",
+      "lyrics": "OZ: It's not haunted, it's unscheduled.",
+      "musicCue": "Rack hum, sparse Rhodes. Haunted or Unscheduled underscore.",
+      "grokImaginePrompt": "Cramped 1980s television master-control room at 4 AM, wall of glowing CRT monitors each showing a different scene, lone operator in a cardigan filling out a paper log sheet with a grease pencil, single desk lamp, equipment rack glow, faint haze, cinematic low-key lighting, quiet melancholy, Grok Imagine style",
+      "geminiOmniPrompt": "10-second locked wide of master control at 4 AM. Operator writes. Monitors glow. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "mc-offset",
+      "label": "The future monitor",
+      "start": "0:40",
+      "end": "0:55",
+      "durationSec": 15,
+      "onScreen": "One CRT shows Oz standing. In the room he is still seated.",
+      "lyrics": "OZ: (to the monitor, without looking) Not yet.",
+      "musicCue": "Hum only.",
+      "grokImaginePrompt": "A single CRT monitor in a wall of monitors showing the same master-control room it sits in, the operator visible from behind on the screen standing up while in the real room he remains seated, slight scan-line offset, uncanny, quiet, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "15-second video: seated operator, standing operator on the self-monitor, then he stands to match. Photoreal, no scare sting.",
+      "promptVariations": []
+    },
+    {
+      "id": "mc-signoff",
+      "label": "3:44 again",
+      "start": "3:20",
+      "end": "3:40",
+      "durationSec": 20,
+      "onScreen": "Sign-off card. Clock 3:44. Hand on a fader that does not move.",
+      "lyrics": "CONTINUITY VOICE: We now conclude our broadcast day.",
+      "musicCue": "Rinse Cycle — chord lands late.",
+      "grokImaginePrompt": "Television sign-off card reading WE NOW CONCLUDE OUR BROADCAST DAY on a CRT in a dark master-control room, wall clock above reading 3:44, operator's hand resting on a master fader without moving it, deep analog blues and greens, quiet dread, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "20-second hold on sign-off card and 3:44 clock. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

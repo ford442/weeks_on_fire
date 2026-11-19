@@ -1,0 +1,24 @@
+{
+  "id": "nine-percent-battery",
+  "title": "Nine Percent Battery",
+  "added": "2026-08-19",
+  "genre": "Folk, country & world",
+  "subgenre": "Sincere indie-folk ballad",
+  "description": "A 4 AM love song to a dying smoke detector. Rubella can’t reach it; the chirp lands every 47 seconds and is the only in-tune pitch on the record.",
+  "episode": "building",
+  "slot": "Hallway 4 AM",
+  "tags": [
+    "folk",
+    "ballad",
+    "comedy",
+    "rubella",
+    "building",
+    "deadpan"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Nine_Percent_Battery.md",
+  "stylePrompt": "Sincere indie-folk breakup ballad, 68 BPM, addressed to a smoke detector.\nNylon-string guitar close-mic'd with finger squeak left in, upright bass, one\nbrushed floor tom, no cymbals. Rubella singing at 4 AM volume — the volume you\nuse when the neighbors are asleep and you are not. Genuinely tender. No wink,\nno comedy voice, no \"funny song\" phrasing; the joke is that the arrangement\nnever learns it is a joke. **Structural flaw:** the detector's low-battery\nchirp lands every 47 seconds — it does not fall on a bar line, a beat, or a\nlyric, and it never will. It is also the only perfectly in-tune pitch in the\nrecording (Bb6); tune the entire band six cents flat against it. Do not gate\nit, do not quantize it, do not fade it under the vocal. Second voice optional:\nthe chirp is the duet partner. Ends on a chirp with no music under it. Runtime\n~2:10–2:30.",
+  "lyrics": "[Intro — nylon guitar, one chirp before the downbeat]\n(chirp)\nOkay.\nOkay, I heard you.\n\n[Verse 1]\nNine percent battery, ceiling of the hall\nFourteen feet of nothing between me and the wall\nI have a chair. The chair has opinions.\nThe ladder is downstairs and the stairs are downstairs too\nYou have been honest with me every forty-seven seconds\nWhich is more than anyone I know has ever done\n\n[Pre-Chorus]\nI'm not asking you to stop\nI'm asking what you want\nAnd I already know\nAnd I can't reach it\n\n[Chorus]\nNine percent battery\nYou are the only thing in this building telling me the truth\nNo committee, no laminate, no memo, no excuse\nJust a small square saying: soon, soon, soon\nI would save you if the ceiling were lower\nI would save you if I were taller\n(chirp)\nI know.\n\n[Verse 2]\nI bought the nine-volt in November\nIt's in a drawer with the keys to a door I don't have\nEvery night I plan the rescue\nEvery morning I forget the drawer exists\nYou never bring it up\nYou just keep the appointment\n\n[Bridge — half-time, floor tom only]\nEveryone in Unit 4B says the sound is haunted\nEveryone in Unit 6 says it's the pipes\nMadelyn issued a notice about \"recurring tones\"\nNobody said it was dying\nNobody said it was doing its job\n\n[Final Chorus]\nNine percent battery\nNine percent is still percent\nNine percent is more than the elevator has\nMore than the boiler, more than me\nYou will outlast the smoke you were built for\nYou will outlast the hallway light\nYou will outlast this song by about four chirps\n(chirp)\n\n[Outro — guitar stops, chirp continues alone]\n(chirp)\n(chirp)\nGoodnight.\n(chirp)",
+  "notes": "## What the song is\nA love song to a dying smoke detector, played completely straight. Rubella\ncannot reach it, will not replace it, and has stopped pretending either of\nthose is the point. The building is full of people announcing things that\naren't true; the one honest device in it is announcing its own death on a\nfixed schedule. Nobody in the song laughs."
+}

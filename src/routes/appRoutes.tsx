@@ -1,0 +1,153 @@
+import { data, Navigate, type LoaderFunctionArgs, type RouteObject } from 'react-router-dom';
+
+import { RecordNotFoundError } from '../data/records';
+
+import { CREW_PREFIX, viewPaths } from './paths';
+import {
+  Album,
+  Cartoons,
+  Characters,
+  Crew,
+  CrewLayout,
+  Episodes,
+  Finalized,
+  Gallery,
+  LaceWaterfall,
+  Listen,
+  MusicProjects,
+  Overview,
+  PublicHome,
+  PublicLayout,
+  Root,
+  RouteError,
+  RouteFallback,
+  Scenes,
+  SearchPage,
+  Sequences,
+  Songs,
+  Suggestions,
+  TimelinePage,
+  Video,
+} from './routeElements';
+
+/** React Router's not-found contract: a thrown 404 response, caught by the nearest `errorElement`. */
+function throwNotFound(): never {
+  // eslint-disable-next-line @typescript-eslint/only-throw-error -- a route response, not an Error
+  throw data(null, { status: 404 });
+}
+
+/** A detail loader that only checks the id against a bundled list (its chunk is the view's own). */
+function idLoader(ids: () => Promise<Iterable<{ id: string }>>) {
+  return async ({ params }: LoaderFunctionArgs) => {
+    const id = params.id ?? '';
+    for (const record of await ids()) if (record.id === id) return null;
+    throwNotFound();
+  };
+}
+
+/**
+ * Fetches the full record before the view renders, so a deep link or a click paints its detail
+ * pane at once. A missing id is a 404; a failed fetch (offline) still renders the view, which
+ * shows its own retryable error in the pane.
+ */
+function recordLoader(load: (id: string) => Promise<unknown>) {
+  return async ({ params }: LoaderFunctionArgs) => {
+    try {
+      await load(params.id ?? '');
+    } catch (error) {
+      if (error instanceof RecordNotFoundError) throwNotFound();
+    }
+    return null;
+  };
+}
+
+const songLoader = recordLoader(async (id) => (await import('../data/songs')).loadSong(id));
+const cutawayLoader = recordLoader(async (id) =>
+  (await import('../data/suggestions')).loadCutaway(id),
+);
+
+/** `/songs` opens on the first song; warm it with the list. */
+async function songsIndexLoader() {
+  const { loadSong, songs } = await import('../data/songs');
+  if (songs[0]) await loadSong(songs[0].id).catch(() => undefined);
+  return null;
+}
+
+const detail = (path: string): string => `${path}/:id`;
+
+const crewViews: RouteObject[] = [
+  { index: true, element: <Overview /> },
+  { path: viewPaths.finalized, element: <Finalized /> },
+  { path: viewPaths.gallery, element: <Gallery /> },
+  { path: viewPaths.video, element: <Video /> },
+  { path: viewPaths.timeline, element: <TimelinePage /> },
+  { path: viewPaths.songs, element: <Songs />, loader: songsIndexLoader },
+  { path: detail(viewPaths.songs), element: <Songs />, loader: songLoader },
+  { path: viewPaths.scenes, element: <Scenes /> },
+  {
+    path: detail(viewPaths.scenes),
+    element: <Scenes />,
+    loader: idLoader(async () => (await import('../data/sceneBoards')).sceneBoards),
+  },
+  { path: viewPaths.suggestions, element: <Suggestions /> },
+  { path: detail(viewPaths.suggestions), element: <Suggestions />, loader: cutawayLoader },
+  { path: viewPaths.cartoons, element: <Cartoons /> },
+  {
+    path: detail(viewPaths.cartoons),
+    element: <Cartoons />,
+    loader: idLoader(async () => (await import('../data/cartoons')).cartoons),
+  },
+  { path: viewPaths.sequences, element: <Sequences /> },
+  {
+    path: detail(viewPaths.sequences),
+    element: <Sequences />,
+    loader: idLoader(async () => (await import('../data/sequences')).sequences),
+  },
+  { path: viewPaths.characters, element: <Characters /> },
+  {
+    path: detail(viewPaths.characters),
+    element: <Characters />,
+    loader: idLoader(async () => (await import('../data/characters')).seriesCharacters),
+  },
+  { path: viewPaths.episodes, element: <Episodes /> },
+  {
+    path: detail(viewPaths.episodes),
+    element: <Episodes />,
+    loader: idLoader(async () => (await import('../data/episodes')).episodes),
+  },
+  { path: viewPaths.crew, element: <Crew /> },
+  { path: viewPaths.search, element: <SearchPage /> },
+  { path: '*', element: <Navigate to={CREW_PREFIX} replace /> },
+];
+
+/** The whole app as data-router route objects (`createBrowserRouter` / `createMemoryRouter`). */
+export const appRoutes: RouteObject[] = [
+  {
+    element: <Root />,
+    errorElement: <RouteError />,
+    hydrateFallbackElement: <RouteFallback />,
+    children: [
+      {
+        path: CREW_PREFIX,
+        element: <CrewLayout />,
+        // A pathless child keeps the header up while a view's error replaces just the view.
+        children: [{ errorElement: <RouteError />, children: crewViews }],
+      },
+      {
+        path: '/',
+        element: <PublicLayout />,
+        errorElement: <RouteError />,
+        children: [
+          { index: true, element: <PublicHome /> },
+          { path: 'index.html', element: <PublicHome /> },
+          { path: 'listen', element: <Listen /> },
+          { path: 'listen/:id', element: <Listen /> },
+          { path: 'albums', element: <MusicProjects /> },
+          { path: 'albums/:id', element: <Album /> },
+          { path: 'lace-waterfall', element: <LaceWaterfall /> },
+          { path: '*', element: <Navigate to="/" replace /> },
+        ],
+      },
+    ],
+  },
+];

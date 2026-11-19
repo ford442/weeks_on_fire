@@ -1,0 +1,22 @@
+{
+  "id": "quarter-to-seventy-five",
+  "title": "Quarter to Seventy-Five",
+  "added": "2026-08-05",
+  "genre": "Ambient & downtempo",
+  "subgenre": "Ambient lullaby / detuned soft rock",
+  "description": "Episode 2 nocturnal drive as a song — no chorus, just the title phrase, a clock stuck at 3:44, and an FM needle drifting left.",
+  "episode": "02",
+  "tags": [
+    "ambient",
+    "night-drive",
+    "lullaby",
+    "radio-voice",
+    "rubella"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Quarter_to_Seventy-Five.md",
+  "stylePrompt": "Slow ambient lullaby / detuned soft rock, ~65 BPM, drifting 4/4 with no clear downbeat (or soft 6/8 feel). Upright bass bowed underwater with long room reverb, vibraphone tremolo with occasional \"missed\" notes like a tired DJ, distant detuned soft-rock electric guitar through a dying amp (very quiet, never lead), music-box piano winding down, field recordings of windshield wipers and dashboard hum and FM needle drift as musical texture. Half-whispered solo vocal — intimate, sleepy, Rubella-adjacent — optionally dual-tracked as \"driver\" (close, dry) and \"radio\" (thin AM bandwidth, more plate reverb, slightly late). No big chorus; the hook is the title phrase repeating like a station ID. Bridge: 8 bars of only static and a single streetlamp buzz. Ends without resolution — fade on the groove as if the car keeps going. Mood: Empty Highway Confession, Ep2 nocturnal drive. Reference: Morphine underwater bass, late-night public radio jazz drift, Les Ondes Courtes sibling energy but English and softer. Use my Rubella voice; optional second pass as thin radio double.",
+  "lyrics": "[Verse 1]\nYellow lines like lullabies\nBass and treble lose the fight\nHalf-conscious heart on drift\nDashboard glow the only light\nWindshield keeps a sleepy time\nStreetlamps stretch and blur and climb\n\n[Hook]\nQuarter to seventy-five and low\nThe DJ's gone but the static knows\nCarry my heart on the signal fade\nDon't pull over, don't pull over\n\n[Verse 2]\nSame café three times or four\nClock stuck open at three forty-four\nFM needle drifts to the left\nBass walking soft like underwater theft\nI pass the exit, miss it twice\nThe groove is gentle and the canyon's nice\n\n[Hook]\nQuarter to seventy-five and low\nThe DJ's gone but the static knows\nCarry my heart on the signal fade\nDon't pull over, don't pull over\n\n[Verse 3 — Dual: Driver + Radio]\n(Driver) I should find a place to sleep\n(Radio) The road is rocking you like a cradle\n(Driver) Yellow lines still counting sheep\n(Radio) Every reflector monotonous and faithful\n(Together) Half-conscious heart on drift\n(Together) Quarter to seventy-five and low\n\n[Bridge — Static Only]\n(Streetlamp buzz)\n(Windshield wipe)\n(FM hiss)\n(Barely whispered) Don't pull over...\n\n[Verse 4 — Sparse]\nNow the piano is a music box\nWinding down, losing the locks\nCity is a cough way up north\nI become the music, become the road\n\n[Final Hook — Fading]\nQuarter to seventy-five and low\nQuarter to seventy-five and low\nThe static knows\nDon't pull over\nDon't pull over\n(fade — car keeps going)",
+  "notes": "## Production notes\n- **Episode placement:** Episode 2, Empty Highway Confession / nocturnal drive (approx. 00:10:41–end of poetic half). Scores Radio Voice needs; sibling to *Les Ondes Courtes* (English, slower, no accordion costume). Also usable under “Static Between Stations” EyeWash overnight block.\n- **Emotional arc:** Fog → hypnotic drift → dual driver/radio almost-clarity → pure static bridge → unresolved fade. No catharsis; the car does not stop.\n- **Reference artists:** Morphine — *The Night*; Ep2 transcript poetry (primary lyric DNA); late-night public-radio jazz drift; weeks_of_fire — *Les Ondes Courtes*.\n- **Runtime target:** ~2:30–3:00; can loop the hook + verse for longer drive montages.\n- **Mix note for Minimax:** Emphasize bowed bass and vibraphone; keep guitar under the vocal; static must stay musical, not noisy."
+}

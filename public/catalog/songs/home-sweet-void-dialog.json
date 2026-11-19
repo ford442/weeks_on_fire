@@ -1,0 +1,23 @@
+{
+  "id": "home-sweet-void-dialog",
+  "title": "Home Sweet Void (Dialog)",
+  "added": "2026-09-06",
+  "genre": "Spoken & dialog",
+  "subgenre": "Hull-hum table dialog",
+  "description": "Non-musical space-lounge table scene. No dedicated Minimax track — hull hum, cup, bag plastic, deadpan delivery.",
+  "episode": "visual",
+  "slot": "Space",
+  "tags": [
+    "dialog",
+    "space",
+    "table",
+    "hull-hum",
+    "visual-experiment"
+  ],
+  "instrumental": true,
+  "status": "generated",
+  "sourceFile": "Home_Sweet_Void_Dialog.md",
+  "stylePrompt": "No underscore. Soft hull hum, glass-table cup, jumbo-bag plastic. Almost no music when the camera is on the floor. One dry close cat line, one take. Snake voice pleased and industry, coffee-house, never a monster roar.",
+  "lyrics": null,
+  "notes": "Dialog-only cutaway. Board: ideas/home-sweet-void.md. Segment prompts:\nprompts/home-sweet-void-segments.md. Canonical board (local):\nartifacts/space_house_return_board.md.\n\nNo Ultra Screech under this table. No Marble Tick Tack. Cat does not get a\nvoice series. Worlds do not mix — this is not a musical bed."
+}

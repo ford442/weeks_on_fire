@@ -1,0 +1,24 @@
+{
+  "id": "terms-and-conditions",
+  "title": "Terms and Conditions (Complete Recording)",
+  "added": "2026-08-19",
+  "genre": "Jazz, lounge & torch",
+  "subgenre": "Vegas big-band showstopper",
+  "description": "A tuxedoed crooner sings a licensing agreement in full. The tempo climbs 2 BPM per section because the trial is expiring; it stops mid-word on a chime.",
+  "episode": "eyewash",
+  "slot": "Station break · end of block",
+  "tags": [
+    "big-band",
+    "lounge",
+    "comedy",
+    "eyewash-station",
+    "continuity-voice",
+    "bumper"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Terms_and_Conditions.md",
+  "stylePrompt": "Vegas big-band showstopper, 124 BPM at the top, performing an end-user license\nagreement in full. Full horn section, walking upright bass, ride cymbal, a\nstring sweep on every subheading. Deadpan baritone crooner in a tuxedo who\nbelieves this is the best material he has ever been given — warm, generous,\nselling it to the back row. Never winking; the sincerity is the entire act.\n**Structural flaw:** the tempo increases 2 BPM at every section break because\nthe free trial is expiring, and nobody in the band acknowledges it. By the\narbitration clause the band is at 138; by the final section it is at 152 and\nthe words are no longer fully intelligible. The song does not end — it stops\nmid-word on a sampled interface chime. Horn stabs on all-caps clauses only.\nOptional tiny audience applause bed that never grows. Runtime ~1:50–2:15. Use\na deadpan baritone or Continuity Voice with a bigger room; do not use Rubella.",
+  "lyrics": "[Overture — 8 bars, 124 BPM]\n(horns, string sweep, one ride crash)\n\n[Verse 1 — Acceptance]\nBy clicking, tapping, breathing near this screen\nBy continuing to exist inside this room\nYou accept the terms as written\nAnd the terms as they will be\nAnd the terms we haven't finished yet\n(that last one's my favorite)\n\n[Chorus 1]\nTerms! And! Conditions!\nRead in full for the very first time\nSomebody finally sang them, folks\nSomebody finally gave them a rhyme\nNothing in this agreement is a promise\nNothing in this agreement is a lie\nTerms and conditions apply\n\n[Verse 2 — Section 4: Limitation of Liability — 126 BPM]\nWe are not liable for the hallway\nWe are not liable for the light\nWe are not liable for anything that happened\nBetween the hours of any night\nNot liable for the elevator's opinions\nNot liable for the sky above the lot\nOur maximum liability, in aggregate, forever\nIs the amount you have already forgot\n\n[Chorus 2 — 128 BPM]\nTerms! And! Conditions!\nSection four, subsection C\nYou waived it in a hallway in November\nYou waived it on behalf of me\nYou waived it for your heirs and your assignees\nAnd the version of yourself you'll be\nTerms and conditions apply\n\n[Section 9 — Arbitration — 138 BPM, key change up a whole step]\nAny dispute! Any claim! Any grievance or complaint!\nShall be resolved in a room that we describe as a room\nBy a neutral third party that we personally selected\nAnd who is, at this time, unavailable\nYOU HAVE WAIVED YOUR RIGHT TO A JURY\nYOU HAVE WAIVED YOUR RIGHT TO A CLASS\nYou may opt out within thirty days\nOf a date we have not published yet\n(horn stab)\n\n[Section 12 — Changes to These Terms — 146 BPM, breathless]\nWe may amend, we may revise, we may replace, we may rescind\nContinued use constitutes acceptance\nContinued life constitutes continued use\nWe will notify you by a method\nWe will notify you eventually\nWe will notify you by the sound of this song\n\n[Final Section — 152 BPM, unintelligible, joyful]\nSeverability governing-law entire-agreement force-majeure\nNo-waiver no-warranty as-is as-available where-is\nSurvives termination survives assignment survives you\nSurvives the building survives the channel survives the\n(interface chime)\n\n[Outro]\n(silence)\n(single string sweep, unresolved)",
+  "notes": "## What the song is\nA tuxedo crooner performs a licensing agreement end to end as if it were the\ngreat American songbook standard nobody has had the courage to attempt. He is\nnot mocking the document. He thinks it is beautiful. The audience bed never\ngrows, and he never notices that either.\n\nThe gag is legal-adjacent set dressing only — invented clauses for a fake\nlow-power affiliate, not advice, not a real agreement, not a parody of any\nspecific company's terms."
+}

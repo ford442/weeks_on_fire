@@ -1,8 +1,10 @@
 import { Lightbulb, Music2, Sparkles, Timer, MessageSquare } from 'lucide-react';
 
 import {
+  prefetchCutaway,
   type CutawaySegment,
   type CutawaySuggestion,
+  type CutawaySummary,
   type SightCandidate,
   type SuggestionKind,
 } from '../../data/suggestions';
@@ -19,18 +21,21 @@ const kindLabel: Record<SuggestionKind, string> = {
 };
 
 interface SuggestionsListProps {
-  suggestions: CutawaySuggestion[];
+  suggestions: CutawaySummary[];
   selectedId?: string;
+  /** Full record of the selected cutaway, once fetched: its card opens out to the segments. */
+  selectedRecord?: CutawaySuggestion;
   activeSegmentId?: string;
   previewSightBySegment: Map<string, SightCandidate>;
-  onSelectCutaway: (cutaway: CutawaySuggestion) => void;
-  onSelectSegment: (cutaway: CutawaySuggestion, segmentId: string) => void;
+  onSelectCutaway: (cutaway: CutawaySummary) => void;
+  onSelectSegment: (cutaway: CutawaySummary, segmentId: string) => void;
 }
 
 /** The flat list: every suggestion as a card, the selected one opened out to its timed segments. */
 export default function SuggestionsList({
   suggestions,
   selectedId,
+  selectedRecord,
   activeSegmentId,
   previewSightBySegment,
   onSelectCutaway,
@@ -40,6 +45,7 @@ export default function SuggestionsList({
     <div className="space-y-5">
       {suggestions.map((cutaway) => {
         const isSelected = selectedId === cutaway.id;
+        const full = isSelected && selectedRecord?.id === cutaway.id ? selectedRecord : undefined;
 
         return (
           <article
@@ -53,6 +59,8 @@ export default function SuggestionsList({
             <button
               type="button"
               onClick={() => onSelectCutaway(cutaway)}
+              onPointerEnter={() => prefetchCutaway(cutaway.id)}
+              onFocus={() => prefetchCutaway(cutaway.id)}
               className="block w-full p-5 text-left focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-300"
             >
               <div className="flex flex-wrap items-start justify-between gap-3">
@@ -75,11 +83,11 @@ export default function SuggestionsList({
                   <Music2 size={14} /> {cutaway.songTitle}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-md border border-zinc-800 bg-zinc-900 px-2.5 py-1">
-                  <Sparkles size={14} /> {pluralize(cutaway.segments.length, 'segment')}
+                  <Sparkles size={14} /> {pluralize(cutaway.segmentCount, 'segment')}
                 </span>
-                {cutaway.sightBank && cutaway.sightBank.length > 0 && (
+                {cutaway.sightCount > 0 && (
                   <span className="inline-flex items-center gap-1.5 rounded-md border border-violet-500/30 bg-violet-500/10 px-2.5 py-1 text-violet-200">
-                    <Lightbulb size={14} /> {pluralize(cutaway.sightBank.length, 'sight')}
+                    <Lightbulb size={14} /> {pluralize(cutaway.sightCount, 'sight')}
                   </span>
                 )}
                 {getDialogVersionsForScene(cutaway.id) && (
@@ -109,17 +117,17 @@ export default function SuggestionsList({
               )}
             </button>
 
-            {isSelected && (
+            {full && (
               <div className="border-t border-zinc-800 p-4">
                 <h3 className="mb-3 text-sm font-semibold text-zinc-400">Timed segments</h3>
                 <div className="space-y-2">
-                  {cutaway.segments.map((segment) => (
+                  {full.segments.map((segment) => (
                     <SegmentRow
                       key={segment.id}
                       segment={segment}
                       active={activeSegmentId === segment.id}
                       previewTitle={previewSightBySegment.get(segment.id)?.title}
-                      locked={!isOpenSlot(segment) && Boolean(cutaway.sightBank?.length)}
+                      locked={!isOpenSlot(segment) && cutaway.sightCount > 0}
                       onSelect={() => onSelectSegment(cutaway, segment.id)}
                     />
                   ))}

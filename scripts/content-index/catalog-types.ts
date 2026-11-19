@@ -10,17 +10,20 @@
  */
 import type {
   CartoonRecord as CartoonSource,
-  CutawayRecord,
   CutawaySegmentRecord,
   SceneBoardRecord,
   SceneFrameRecord,
   FilmSceneRecord,
   SequenceRecord as SequenceSource,
   SeriesCharacterRecord,
-  SongFrontmatter,
   CrewMemberRecord,
-  ProductionStatus,
 } from './schemas';
+import type {
+  CutawayFullRecord,
+  CutawaySummaryRecord,
+  SongRecord,
+  SongSummary as SongSummaryRecord,
+} from './record-schemas';
 
 export type {
   CartoonStatus,
@@ -59,23 +62,22 @@ type ResolveImage<T, PathKey extends keyof T, UrlKey extends string> = Omit<T, P
   [K in UrlKey]?: string;
 };
 
-export type Song = Omit<SongFrontmatter, 'instrumental' | 'audioFile' | 'status'> & {
-  instrumental: boolean;
-  status: ProductionStatus;
-  audioFile?: string;
-  stylePrompt: string;
-  lyrics: string | null;
-  notes: string | null;
-  sourceFile: string;
-};
+/** List-view song fields: bundled, and in `public/catalog/songs/index.json`. */
+export type SongSummary = SongSummaryRecord;
+/** A full song (style prompt, lyrics, notes), fetched from `public/catalog/songs/<id>.json`. */
+export type Song = SongRecord;
 
 export type CutawaySegment = ResolveImage<CutawaySegmentRecord, 'stillImagePath', 'stillUrl'>;
 
-/** `segmentsSource` / `segmentStills` are resolved into `segments` by codegen. */
-export type CutawaySuggestion = Omit<
-  CutawayRecord,
-  'segmentsSource' | 'segmentStills' | 'segments'
-> & {
+/** List-view cutaway fields (no segments or sight bank, only their counts). */
+export type CutawaySummary = CutawaySummaryRecord;
+
+/**
+ * A full cutaway, fetched from `public/catalog/cutaways/<id>.json`: `segmentsSource` /
+ * `segmentStills` are resolved into `segments` by codegen, and each segment's repo still into a
+ * bundled `stillUrl` by the loader.
+ */
+export type CutawaySuggestion = Omit<CutawayFullRecord, 'segments'> & {
   segments: CutawaySegment[];
 };
 

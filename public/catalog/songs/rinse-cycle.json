@@ -1,0 +1,23 @@
+{
+  "id": "rinse-cycle",
+  "title": "Rinse Cycle (Fifteen Minutes, Do Not Blink)",
+  "added": "2026-08-05",
+  "genre": "Rock",
+  "subgenre": "Institutional soft rock / sign-off theme",
+  "description": "EyeWash Station sign-off — warm, over-rehearsed, and structurally wrong: nine-bar phrases, late resolutions, and a “please stand by” outro that loops.",
+  "episode": "eyewash",
+  "slot": "Sign-off",
+  "tags": [
+    "eyewash-station",
+    "sign-off",
+    "continuity-voice",
+    "loopable",
+    "ident"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Rinse_Cycle.md",
+  "stylePrompt": "Institutional soft rock / late-night TV theme, warm and over-rehearsed, ~78 BPM. Brushed drum kit very soft with no fills, Rhodes or wet upright piano with heavy room reverb, muted trumpet on the final phrase only, tape hiss and 60Hz hum baked in as if this is a transmission not a studio recording. Every 8-bar phrase runs 9 bars on purpose; final chords resolve a beat late. Continuity Voice energy — announcer cadence, warm, slightly wrong national-anthem solemnity it hasn't earned. Structure: short ident sting → verse → faux-sponsor break (spoken over bed) → verse → \"please stand by\" outro that can loop. Runtime ~60–90 seconds, loopable for sign-off. Mood: EyeWash Station end-of-broadcast; comfort that curdles on the second pass without changing a note. Reference: analog TV sign-off anthems, Twilight Time pad warmth, Les Ondes Courtes hiss. Use an announcer-style male or androgynous Continuity Voice — not Rubella lead; optional soft choir pad under the title line.",
+  "lyrics": "[Ident Sting — 4 bars]\n(Rhodes chord + soft tone bars)\nEyeWash Station —\nChannel twelve and a half.\n\n[Verse 1]\nWe now conclude our broadcast day\nWe've been concluding it for years\nThe rinse runs fifteen minutes long\nYou'll want the full fifteen, my dears\nCul-de-sac stock footage rolls\nA flag that isn't quite the right\nWe thank you for your eyes tonight\nAnd whoever borrowed all the light\n\n[Faux-Sponsor Break — Spoken over bed]\nThis portion of our sign-off is brought to you by\nUltra-Refreshed Water Lab —\nWhen you've seen something,\nwe'll take it from here.\nFlush for fifteen, darling.\nDo not blink.\n\n[Verse 2]\nNobody's watching but everybody's seen it\nThe monitors sit one second ahead\nMaster control at four a.m.\nStill signing off from a bed that's been\nEmpty since the first goodbye\nThe test pattern blinks like an eye\nWe now conclude our broadcast day\nAgain. Again. Again. Goodnight.\n\n[Please Stand By — Outro Loop]\nPlease stand by\nPlease stand by\nRinse cycle — fifteen minutes\nDo not blink\nPlease stand by\n(loopable — chord lands late)\nDo not blink.\n(spoken, not sung) Do not blink.",
+  "notes": "## Production notes\n- **Episode placement:** Between any musical cutaways as EyeWash Station framing; “Sign-Off at 3:44” and “Master Control, 4 AM” scenes (`notes/scene-suggestions.md`, `ideas/eyewash-station.md`). Cheap tonal upgrade over existing footage.\n- **Emotional arc:** First pass = warm nostalgia / institutional comfort. Loop at 3:44 = same music, wrong feeling. The lateness of the resolving chord is the joke and the dread.\n- **Reference artists / cues:** Analog TV sign-off anthems; weeks_of_fire — *Twilight Time* pad; *Les Ondes Courtes* hiss; Continuity Voice character energy.\n- **Runtime target:** 60–90s full; also generate **10-second ident variants** (below) for bumpers.\n- **Network:** EyeWash Station — Channel 12½. Tagline options: “Rinse for fifteen minutes. Do not blink.”\n\n### EyeWash 10-second ident variants (Minimax / bumper)\nGenerate as separate short clips; same sonic DNA, no full verses.\n\n1. **Fixture Ident** — Rhodes sting + Continuity Voice: “EyeWash Station. You've seen something.” → tone.\n2. **Rinse Timer** — soft tick bed; voice: “Fifteen minutes. Do not blink.” Countdown soft-resets at 14:59.\n3. **Please Stand By** — late-resolving chord loop; stamped card VO: “Please stand by.”\n4. **Sign-Off Sting** — four bars of warm pad + one wrong bar; “We now conclude our broadcast day.”"
+}

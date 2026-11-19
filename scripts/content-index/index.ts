@@ -15,6 +15,7 @@ import {
   loadTaxonomy,
   loadCustomRendererIds,
   loadDialogSceneIds,
+  listMp3Filenames,
 } from './load';
 import {
   validateContent,
@@ -44,14 +45,17 @@ import {
   emitWhatsNewModule,
   emitCatalogGraphModule,
   emitSearchIndexModule,
+  emitRecordFiles,
 } from './emit';
 import { buildCatalogGraph } from './catalog-graph';
 import { buildSearchDocuments } from './search-docs';
 import { buildWhatsNew } from './whats-new';
-import { syncOutputs } from './output';
+import { syncOutputs, syncOwnedDirectory } from './output';
+import { buildCutawayRecords, buildSongRecords } from './records';
 
 const repoRoot = join(import.meta.dirname, '../..');
 const generatedDir = join(repoRoot, 'src/data/generated');
+const catalogDir = join(repoRoot, 'public/catalog');
 const checkMode = process.argv.includes('--check');
 
 function main() {
@@ -106,14 +110,12 @@ function main() {
     productions,
   });
 
+  const songRecords = buildSongRecords(songs);
+  const cutawayRecords = buildCutawayRecords(cutaways);
+
   const outputs = {
-    'songs.ts': emitSongsModule(songs),
-    'cutaways.ts': emitCutawaysModule(
-      cutaways.map((cutaway) => ({
-        ...cutaway,
-        segments: cutaway.segments ?? [],
-      })),
-    ).code,
+    'songs.ts': emitSongsModule(songRecords.summaries, listMp3Filenames(repoRoot)),
+    'cutaways.ts': emitCutawaysModule(cutawayRecords.summaries, cutawayRecords.stillPaths),
     'gallery.ts': emitGalleryModule(gallery),
     'characters.ts': emitCharactersModule(characters),
     'scene-boards.ts': emitSceneBoardsModule(sceneBoards),
@@ -149,6 +151,16 @@ function main() {
     label: 'Generated files',
     fixHint: 'Run npm run codegen and commit the changes.',
   });
+  for (const [kind, { summaries, records }] of [
+    ['songs', songRecords],
+    ['cutaways', cutawayRecords],
+  ] as const) {
+    syncOwnedDirectory(join(catalogDir, kind), emitRecordFiles(summaries, records), {
+      check: checkMode,
+      label: `public/catalog/${kind}`,
+      fixHint: 'Run npm run codegen and commit the changes.',
+    });
+  }
 
   console.log(
     `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${sceneBoards.length} scene boards, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences, ${schedule.blocks.reduce((n, block) => n + block.slots.length, 0)} schedule slots; ${graph.nodes.length} graph nodes, ${graph.edges.length} edges; checked ${productions.length} scenes.json files.`,

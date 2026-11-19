@@ -4,7 +4,8 @@ import { Lightbulb, MessageSquare, Sparkles } from 'lucide-react';
 
 import {
   cutawaySuggestions,
-  type CutawaySuggestion,
+  useCutawayRecord,
+  type CutawaySummary,
   type SuggestionKind,
 } from '../data/suggestions';
 import { schedule } from '../data/schedule';
@@ -97,7 +98,7 @@ export default function Suggestions() {
     cutawaySuggestions.some((cutaway) => cutaway.id === id),
   );
   const [selectedId, setSelectedId] = useState(initial?.id ?? '');
-  const [activeSegmentId, setActiveSegmentId] = useState(initial?.segments[0]?.id ?? '');
+  const [activeSegmentId, setActiveSegmentId] = useState('');
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [workspaceTab, setWorkspaceTab] = useState<'prompts' | 'dialog'>('prompts');
   const [expandedExchangeId, setExpandedExchangeId] = useState<string | null>(null);
@@ -125,13 +126,17 @@ export default function Suggestions() {
     return filtered.find((cutaway) => cutaway.id === selectedId) ?? fromCatalog ?? filtered[0];
   }, [filtered, selectedId]);
 
+  // The list and guide work from bundled summaries; the open board fetches its full record
+  // (segments, prompts, sight bank) from public/catalog/cutaways/<id>.json.
+  const full = useCutawayRecord(selected?.id);
+  const record = full.record;
+
   const activeSegment = useMemo(
-    () =>
-      selected?.segments.find((segment) => segment.id === activeSegmentId) ?? selected?.segments[0],
-    [activeSegmentId, selected],
+    () => record?.segments.find((segment) => segment.id === activeSegmentId) ?? record?.segments[0],
+    [activeSegmentId, record],
   );
 
-  const sights = useSightPreviews(selected, activeSegmentId, setActiveSegmentId);
+  const sights = useSightPreviews(record, activeSegmentId, setActiveSegmentId);
 
   useEffect(() => {
     if (id) {
@@ -156,15 +161,19 @@ export default function Suggestions() {
     if (selected.id !== selectedId) {
       setSelectedId(selected.id);
     }
-    const segmentIds = new Set(selected.segments.map((segment) => segment.id));
-    if (!segmentIds.has(activeSegmentId)) {
-      setActiveSegmentId(selected.segments[0]?.id ?? '');
-    }
-  }, [activeSegmentId, selected, selectedId]);
+  }, [selected, selectedId]);
 
-  const selectCutaway = (cutaway: CutawaySuggestion) => {
+  useEffect(() => {
+    if (!record) return;
+    const segmentIds = new Set(record.segments.map((segment) => segment.id));
+    if (!segmentIds.has(activeSegmentId)) {
+      setActiveSegmentId(record.segments[0]?.id ?? '');
+    }
+  }, [activeSegmentId, record]);
+
+  const selectCutaway = (cutaway: CutawaySummary) => {
+    if (cutaway.id !== selectedId) setActiveSegmentId('');
     setSelectedId(cutaway.id);
-    setActiveSegmentId(cutaway.segments[0]?.id ?? '');
     setWorkspaceTab('prompts');
     setExpandedExchangeId(null);
     setSheetOpen(true);
@@ -259,6 +268,7 @@ export default function Suggestions() {
             <SuggestionsList
               suggestions={filtered}
               selectedId={selected?.id}
+              selectedRecord={record}
               activeSegmentId={activeSegment?.id}
               previewSightBySegment={sights.previewSightBySegment}
               onSelectCutaway={selectCutaway}
@@ -298,9 +308,9 @@ export default function Suggestions() {
               }
               onCopy={copyToClipboard}
             />
-          ) : selected && activeSegment ? (
+          ) : record && activeSegment ? (
             <CutawayBoard
-              cutaway={selected}
+              cutaway={record}
               segment={activeSegment}
               previewSight={sights.previewSightBySegment.get(activeSegment.id)}
               copiedKey={copiedKey}
@@ -316,9 +326,24 @@ export default function Suggestions() {
               onSightCategory={sights.setSightCategory}
               onSelectSight={sights.assignSight}
             />
+          ) : selected && full.status === 'error' ? (
+            <p
+              role="alert"
+              className="rounded-lg border border-red-500/40 bg-red-500/10 p-5 text-sm text-red-200"
+            >
+              Couldn’t load the prompts for {selected.title} ({full.error.message}).
+            </p>
+          ) : selected && full.status === 'loading' ? (
+            <div role="status" aria-live="polite" className="space-y-3">
+              <span className="sr-only">Loading prompts…</span>
+              <div className="h-40 animate-pulse rounded-lg border border-zinc-800 bg-zinc-950 motion-reduce:animate-none" />
+              <div className="h-64 animate-pulse rounded-lg border border-zinc-800 bg-zinc-950 motion-reduce:animate-none" />
+            </div>
           ) : (
             <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-5 text-sm text-zinc-400">
-              Select a suggestion to copy prompts.
+              {selected && record?.segments.length === 0
+                ? 'This suggestion has no timed segments yet.'
+                : 'Select a suggestion to copy prompts.'}
             </div>
           )}
         </div>

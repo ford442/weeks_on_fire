@@ -1,0 +1,21 @@
+{
+  "id": "nofo-i-te-vai",
+  "title": "Nofo i te Vai",
+  "added": "2026-11-01",
+  "genre": "Folk, country & world",
+  "subgenre": "Wallis and Futuna islander",
+  "description": "Dark-island bed. Wallisian lyrics. 88 BPM log drums, pate, ukulele. Fire on the black sand. We do not land.",
+  "episode": "cutaway",
+  "tags": [
+    "wallisian",
+    "islander",
+    "dark-island",
+    "yacht"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "Nofo_i_te_Vai.md",
+  "stylePrompt": "Wallis and Futuna / Polynesian islander, mid-tempo 88 BPM, warm log drums and pate, soft ukulele and slack-key guitar, distant choir pads, night beach fire atmosphere, orange practical light mood, gentle and slightly mysterious, not a tourist cover, light lead vocal in Wallisian (Fakaʻuvea).",
+  "lyrics": "[Verse]\nAfi i te oneʻuli\nMālama i te ʻakau\nKohu e toʻo te kulā\nKae tuku te laini\n\n[Chorus]\nNofo i te vai\nMotu e mālama\nʻIkai te tūʻuta\nʻIkai te nofo\n\n[Verse]\nFana e moe\nManulele e ʻalu\nLali e tali\nPō e hoko\n\n[Chorus]\nNofo i te vai\nMotu e mālama\nʻIkai te tūʻuta\nʻIkai te nofo",
+  "notes": "Hard cut from the daylight guitar orchestra. Dark island plates only. Wallisian is a working version for MiniMax. Farm #18 / #33. Not #42."
+}

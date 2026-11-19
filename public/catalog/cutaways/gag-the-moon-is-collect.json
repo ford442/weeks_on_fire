@@ -1,0 +1,53 @@
+{
+  "id": "gag-the-moon-is-collect",
+  "kind": "gag",
+  "title": "The Moon Is Collect",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "still + 5s loop",
+  "episode": "One-panel gag",
+  "songId": "the-moon-is-collect",
+  "songTitle": "The Moon Is Collect",
+  "summary": "Red rotary, taut cord to a huge moon, empty chair, abandoned gloves. Someone is calling collect; the charges are astronomical; she stepped out. Liliane energy.",
+  "visualArc": "Red plastic on black lacquer → cord out the window → moon as the other party → empty gloves.",
+  "tags": [
+    "gag",
+    "liliane",
+    "moon",
+    "telephone",
+    "one-panel"
+  ],
+  "segmentCount": 2,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "gag-02-still",
+      "label": "Still",
+      "start": "0:00",
+      "end": "0:00",
+      "durationSec": 0,
+      "onScreen": "Red rotary; cord taut to the moon; empty chair; lipstick filters; abandoned gloves; two glasses and berries.",
+      "lyrics": "",
+      "musicCue": "Hold for newspaper-comic test. If it needs a caption, the still is unfinished.",
+      "grokImaginePrompt": "Photoreal one-panel film still, 2.39:1, black-lacquer penthouse interior at 2 a.m., a single cherry-red 1960s rotary telephone ringing on a leather blotter, the coiled red plastic cord running out an open floor-to-ceiling window and stretching taut across high thin cloud all the way to a huge detailed full moon filling the upper right, empty oxblood leather chair pulled back as if someone just stood, crystal ashtray crowded with lipstick-stained filter ends, a pair of black evening gloves abandoned on the blotter with one finger still slightly curled, two wine glasses (one upright, one stem-down) and a few crushed berries on a saucer at the far edge of the desk, city grid far below the window, practical desk lamp off, the only warm light the telephone's tiny indicator, high-contrast red plastic against black lacquer and cold silver moonlight, strong negative space, 35mm, T1.8, quiet menace, Grok Imagine style",
+      "geminiOmniPrompt": "Photoreal one-panel film still, 2.39:1, black-lacquer penthouse interior at 2 a.m., a single cherry-red 1960s rotary telephone ringing on a leather blotter, the coiled red plastic cord running out an open floor-to-ceiling window and stretching taut across high thin cloud all the way to a huge detailed full moon filling the upper right, empty oxblood leather chair pulled back as if someone just stood, crystal ashtray crowded with lipstick-stained filter ends, a pair of black evening gloves abandoned on the blotter with one finger still slightly curled, two wine glasses (one upright, one stem-down) and a few crushed berries on a saucer at the far edge of the desk, city grid far below the window, practical desk lamp off, the only warm light the telephone's tiny indicator, high-contrast red plastic against black lacquer and cold silver moonlight, strong negative space, 35mm, T1.8, quiet menace, Grok Imagine style",
+      "promptVariations": [
+        "Moon with a tiny NO CHARGES ACCEPTED sticker, otherwise identical, Grok Imagine",
+        "Gloves still faintly steaming, otherwise identical, Grok Imagine"
+      ]
+    },
+    {
+      "id": "gag-02-motion",
+      "label": "Motion (5s)",
+      "start": "0:00",
+      "end": "0:05",
+      "durationSec": 5,
+      "onScreen": "Three rings; moon half-stop pulse; ash lengthens a millimeter; nobody returns.",
+      "lyrics": "",
+      "musicCue": "The Moon Is Collect — last syllables missing; rest, not fade",
+      "grokImaginePrompt": "5-second locked interior. The receiver trembles on three rings. The cord sways in high-altitude wind. The moon brightens a half-stop on each ring and dims between. One ash cylinder lengthens a millimeter. The gloves do not move. No one returns. Photoreal, no whip-pans, no face.",
+      "geminiOmniPrompt": "5-second locked interior. The receiver trembles on three rings. The cord sways in high-altitude wind. The moon brightens a half-stop on each ring and dims between. One ash cylinder lengthens a millimeter. The gloves do not move. No one returns. Photoreal, no whip-pans, no face.",
+      "promptVariations": []
+    }
+  ]
+}

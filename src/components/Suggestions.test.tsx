@@ -1,39 +1,20 @@
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { MemoryRouter, useLocation } from 'react-router-dom';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import App from '../App';
-import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { schedule } from '../data/schedule';
 import { cutawaySuggestions } from '../data/suggestions';
 import { buildGuide } from '../lib/schedule';
 import { crewPath } from '../routes/paths';
 import { rememberedViewLocation } from '../routes/viewSearch';
+import { renderApp } from '../test/renderApp';
 
 const guide = buildGuide(schedule, cutawaySuggestions);
 const base = crewPath('/suggestions');
 const CRT_KEY = 'wof:suggestions-crt';
 
-function LocationProbe() {
-  const location = useLocation();
-  return (
-    <>
-      <output data-testid="location">{location.pathname}</output>
-      <output data-testid="search">{location.search}</output>
-    </>
-  );
-}
-
 /** Renders the hub at `path` and waits for the Suggestions view (the station card) to arrive. */
 async function open(path: string) {
-  render(
-    <MemoryRouter initialEntries={[path]}>
-      <MediaSessionProvider>
-        <App />
-        <LocationProbe />
-      </MediaSessionProvider>
-    </MemoryRouter>,
-  );
+  renderApp(path);
   await waitFor(() => expect(screen.queryByText('Loading…')).toBeNull(), { timeout: 5000 });
   await screen.findByRole('heading', { level: 2, name: 'EyeWash Station' });
 }

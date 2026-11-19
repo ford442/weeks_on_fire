@@ -1,0 +1,37 @@
+{
+  "id": "mv-strange-light",
+  "kind": "musical",
+  "title": "Strange Light",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "~3:00",
+  "episode": "Episode 03 sky",
+  "songId": "strange-light",
+  "songTitle": "Strange Light",
+  "summary": "Sun and moon sharing one daylight sky. One witness. Quiet cosmic lawbreaking. Complements the Episode 3 crane.",
+  "visualArc": "Quiet street → dual celestial bodies → two-direction shadows → color carried home.",
+  "tags": [
+    "celestial",
+    "ep3",
+    "lillith",
+    "sine-bass"
+  ],
+  "episodeId": "03",
+  "segmentCount": 1,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "sl-sky",
+      "label": "Dual sky",
+      "start": "0:00",
+      "end": "0:20",
+      "durationSec": 20,
+      "onScreen": "Daylight street. Sun and pale moon at the same height. Two-direction shadows.",
+      "lyrics": "Strange light / sun and moon at the same height",
+      "musicCue": "Sine bass orbital pulse, 96 BPM",
+      "grokImaginePrompt": "Cinematic still, middle of the day, sun still burning and a pale full moon hanging in the same blue sky over a quiet suburban street, shadows stretching in two directions at once, one lone figure standing still looking up, no eclipse, photoreal, 35mm, Grok Imagine style",
+      "geminiOmniPrompt": "20-second locked wide of a quiet street under sun and moon in the same blue sky. Shadows in two directions. One witness. Photoreal, no panic.",
+      "promptVariations": []
+    }
+  ]
+}

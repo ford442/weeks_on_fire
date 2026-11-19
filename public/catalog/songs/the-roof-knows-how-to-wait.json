@@ -1,0 +1,24 @@
+{
+  "id": "the-roof-knows-how-to-wait",
+  "title": "The Roof Knows How to Wait",
+  "added": "2026-09-06",
+  "genre": "Cabaret & chamber",
+  "subgenre": "Dark cabaret ruin ballad",
+  "description": "Rubella inventories a ceiling that has not fallen yet. Natural ventilation. The extra bar is the plaster still deciding.",
+  "episode": "cutaway",
+  "slot": "The Two",
+  "tags": [
+    "rubella",
+    "the-two",
+    "cabaret",
+    "ruin",
+    "glamour",
+    "cutaway"
+  ],
+  "instrumental": false,
+  "status": "generated",
+  "sourceFile": "The_Roof_Knows_How_to_Wait.md",
+  "stylePrompt": "Dark cabaret ruin ballad at 72 BPM. Wet upright piano, slightly detuned, soft pedal. One low cello that does not bow on the downbeat. Distant plaster-dust as the high-end texture — never bright, never a cymbal. Rubella, close-mic, almost spoken, bored glamour, no belting, no vibrato. Room reverb of a ballroom that has already lost a wall. **Structural flaw:** every verse holds one extra bar after the last lyric line — the roof has not fallen yet, and the bar is the wait. Do not fill the extra bar with a fill, a harmony, or a witty tag. Silence plus dust. The extra bar never resolves into the next section on time; the piano arrives late like a beam that sagged and then held. Mood: finally, natural ventilation. Runtime ~2:00–2:20. Use the Rubella voice. Optional Lillith only as a room echo on the last “wait,” not a duet.",
+  "lyrics": "[Intro — piano, one empty bar]\nWe said we'd leave before the roof came down.\nTurns out the roof knows how to wait.\n\n[Verse 1]\nThe fresco has a continent nobody would want.\nThe chain decided, sometime last decade, to hang three feet low.\nPlaster on the parquet like a seating chart.\nI do not brush it off. It knows where to sit.\n(extra bar — dust only)\n\n[Pre-Chorus]\nFinally.\nNatural ventilation.\nThe night air had been trying to RSVP.\n\n[Chorus]\nThe roof knows how to wait\nWe said we'd go\nThe roof knows how to wait\nSo we stayed in the weather\nDon't call it a collapse\nCall it a window\nThe roof knows how to wait\nAnd so do we\n\n[Verse 2]\nTwo glasses. Berries. A hole the size of a polite apology.\nStars where the gilt used to lecture.\nIf the empire needs a climate, it can use this one.\nI warm my hands on nothing. The nothing is draft.\n(extra bar — dust only)\n\n[Pre-Chorus]\nFinally.\nNatural ventilation.\nThe night air had been trying to RSVP.\n\n[Chorus]\nThe roof knows how to wait\nWe said we'd go\nThe roof knows how to wait\nSo we stayed in the weather\nDon't call it a collapse\nCall it a window\nThe roof knows how to wait\nAnd so do we\n\n[Bridge]\nYou can keep the chandelier if it keeps its job.\nYou can keep the better name.\nI'll keep the part that opened\nAnd still looks like a room.\n(extra bar — longer, still empty)\n\n[Final Chorus]\nThe roof knows how to wait\nWe said we'd go\nThe roof knows how to wait\nThe sky is the ceiling now\nDon't smudge the plaster\nIt is doing manners\nThe roof knows how to wait\n(extra bar — piano late, then gone)",
+  "notes": "**What the song is**\nA ruin inventory for The Two. The roof has not fallen; it is **waiting**, which is a kind of hospitality. “Finally. Natural ventilation.” is load-bearing and must stay deadpan. Scratchpad hook: *We said we'd leave before the roof came down / Turns out the roof knows how to wait.*\n\nCheap to picture: one ballroom, one hole, two glasses, berries, plaster.\n\n**Craft (keep this off-mic)**\n- *Neon Exit Sign* owns mascara and the burning-town walk. This is **the ceiling**, not the road.\n- *Empty Parking Lot Waltz* owns aftermath in a lot. This is aftermath that is still a room.\n- *The Pour* owns hired climate (foundry). Do not import molten iron.\n- *House of Mirrors Rally* owns the ping-pong metronome and the mascara beat. Do not score the rally. No paddles.\n- Do not belt “wait.” Do not make the extra bar a joke fill.\n\n**Production notes**\n- **Episode placement:** Standalone musical cutaway; visual cousin to the abandoned ballroom in `notes/scenes/house-of-mirrors-rally.md` without replacing that scene’s bed. The Two as silhouettes or red-lip close-ups, not named on screen.\n- **Voice:** Rubella. Optional Lillith room-echo on last “wait” only.\n- **Structural flaw:** Extra bar after every verse (and the bridge). Piano late into the next section. Never corrected.\n- **Runtime target:** 2:00–2:20."
+}

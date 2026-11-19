@@ -1,0 +1,68 @@
+{
+  "id": "house-of-mirrors-rally",
+  "kind": "scene",
+  "title": "We Play to Win (House of Mirrors Rally)",
+  "added": "2026-10-05",
+  "status": "ready-to-generate",
+  "runtime": "4–5 min",
+  "episode": "Episode 01 register",
+  "songId": "neon-exit-sign",
+  "songTitle": "Neon Exit Sign",
+  "summary": "Vivienne and Liliane play ping-pong in a ruined ballroom. Plaster falls. They do not flinch. Pizza box on the intact half of the table.",
+  "visualArc": "Chandelier ballroom → rally → plaster dust → chin tilt → split table + pizza.",
+  "tags": [
+    "the-two",
+    "vivienne",
+    "liliane",
+    "ep1",
+    "ping-pong",
+    "glamour"
+  ],
+  "characterIds": [
+    "vivienne-vale",
+    "liliane-vale"
+  ],
+  "segmentCount": 3,
+  "sightCount": 0,
+  "segments": [
+    {
+      "id": "rally-wide",
+      "label": "Abandoned ballroom",
+      "start": "0:00",
+      "end": "0:10",
+      "durationSec": 10,
+      "onScreen": "Two women in black lace, low chandelier, buckled parquet.",
+      "lyrics": "VIVIENNE: We play to win.",
+      "musicCue": "Synth arpeggio, pendulum rhythm.",
+      "grokImaginePrompt": "Wide shot of two nearly identical women in black lace dresses playing ping-pong in an abandoned grand ballroom, low-hanging lit chandelier, buckled parquet floor, water-stained fresco ceiling, moonlight and warm chandelier glow, dramatic chiaroscuro, elegant decay, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "10-second wide of a ping-pong rally in a ruined ballroom. Deadpan faces. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rally-chin",
+      "label": "The chin",
+      "start": "3:10",
+      "end": "3:25",
+      "durationSec": 15,
+      "onScreen": "One tilts the other's chin with a knuckle. Tenderness at arm's length.",
+      "lyrics": "LILIANE: Don't smudge the mascara.",
+      "musicCue": "Neon Exit Sign pre-chorus energy, dry.",
+      "grokImaginePrompt": "Cinematic close-up of one woman tilting the other's chin toward the light with a single knuckle, both in black lace with blood-red lipstick, chandelier glow, ruined ballroom, unbearable tenderness held at arm's length, filmic, Grok Imagine style",
+      "geminiOmniPrompt": "15-second close two-shot, chin tilt, no smile. Photoreal.",
+      "promptVariations": []
+    },
+    {
+      "id": "rally-pizza",
+      "label": "Button",
+      "start": "4:20",
+      "end": "4:40",
+      "durationSec": 20,
+      "onScreen": "Table split by fallen plaster. Unopened pizza box on the intact half. Stars through the roof.",
+      "lyrics": "PIZZA GUY: Order for… Viviane?",
+      "musicCue": "Pepperoni sting, then silence.",
+      "grokImaginePrompt": "Wide shot of two women in black lace standing beside a ping-pong table split in half by fallen ceiling plaster, a lit chandelier above, stars visible through the hole in the roof, an unopened pizza box on the intact half of the table, dark glamour, cinematic, Grok Imagine style",
+      "geminiOmniPrompt": "20-second hold on the split table and pizza box. Photoreal.",
+      "promptVariations": []
+    }
+  ]
+}

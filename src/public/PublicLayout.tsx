@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 
+import LaserSnakes from './LaserSnakes';
+
 /** Public-facing shell: no production tooling, no prompts, no crew tabs. */
 const nav = [
   { to: '/', label: 'Home', end: true },
@@ -18,6 +20,15 @@ const titles: Record<string, string> = {
 export const DISCLOSURE =
   'Weeks of Fire is a comedy series. Lace Waterfall is a fictional band from the show. Music and visuals are AI-generated.';
 
+/** Routes that get the laser-snake background (home + music pages). */
+function showsLaserSnakes(pathname: string): boolean {
+  return (
+    pathname === '/' ||
+    pathname === '/index.html' ||
+    /^\/(albums|music)(\/|$)/.test(pathname)
+  );
+}
+
 export default function PublicLayout() {
   const { pathname } = useLocation();
 
@@ -29,8 +40,9 @@ export default function PublicLayout() {
   }, [pathname]);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#0b0710] text-zinc-100">
-      <header className="border-b border-fuchsia-950/60 bg-[radial-gradient(circle_at_top,_rgba(217,70,239,0.14),_transparent_55%)]">
+    <div className="relative flex min-h-screen flex-col bg-[#0b0710] text-zinc-100">
+      {showsLaserSnakes(pathname) && <LaserSnakes />}
+      <header className="relative z-[1] border-b border-fuchsia-950/60 bg-[radial-gradient(circle_at_top,_rgba(217,70,239,0.14),_transparent_55%)]">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-4 py-4 sm:px-6">
           <Link
             to="/"
@@ -62,11 +74,11 @@ export default function PublicLayout() {
         </div>
       </header>
 
-      <div className="flex-1">
+      <div className="relative z-[1] flex-1">
         <Outlet />
       </div>
 
-      <footer className="border-t border-zinc-900 py-6 text-xs text-zinc-500">
+      <footer className="relative z-[1] border-t border-zinc-900 py-6 text-xs text-zinc-500">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>{DISCLOSURE}</p>
           <Link

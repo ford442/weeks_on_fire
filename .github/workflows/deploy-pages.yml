@@ -81,3 +81,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+      # Every hub route must be a real page (200), not the 404.html SPA fallback.
+      # sitemap.xml is emitted from the same route table as dist/show/**/index.html.
+      - name: Check route pages return 200
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          base="${PAGE_URL%/}"
+          sleep 15
+          urls=$(curl -fsSL --retry 5 --retry-all-errors "$base/sitemap.xml" | grep -o '<loc>[^<]*/show/[^<]*</loc>' | sed 's/<[^>]*>//g')
+          count=$(echo "$urls" | grep -c . || true)
+          if [ "$count" -lt 10 ]; then echo "Only $count /show/ routes in sitemap.xml"; exit 1; fi
+          failed=0
+          for url in $urls; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-all-errors "$url")
+            if [ "$code" != "200" ]; then echo "::error::$code $url"; failed=$((failed + 1)); fi
+          done
+          echo "Checked $count routes, $failed failed"
+          [ "$failed" -eq 0 ]

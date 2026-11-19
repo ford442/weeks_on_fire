@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Generate images via the xAI Grok Imagine API (stdlib only).
+"""Generate one image via the xAI Grok Imagine API (stdlib only).
 
 Usage:
   export XAI_API_KEY=xai-...
   python3 scripts/xai-generate.py "your prompt" -o images/out.jpg
   python3 scripts/xai-generate.py "prompt" -o images/out.jpg --model grok-imagine-image-quality --aspect 16:9
+  python3 scripts/xai-generate.py "prompt" -o images/out.jpg --retries 5 --json-log
+
+Every segment of a cutaway at once: scripts/xai-batch.py (same flags, plus a manifest).
 
 Models (team-dependent):
-  grok-imagine-image
-  grok-imagine-image-2.0
-  grok-imagine-image-quality
+  grok-imagine-image          cheapest ($0.02 / image per the xAI docs)
+  grok-imagine-image-2.0      newer generation ($0.04 / image per the xAI docs)
+  grok-imagine-image-quality  default
+
+--aspect takes any ratio the API documents (1:1, 16:9, 9:16, 4:3, 3:4, ... or auto).
+--retries N retries 429 / 5xx / network errors with exponential backoff (default 3).
+--json-log [PATH] appends one JSON line per call (model, aspect, prompt hash, usage, cost) to
+PATH, default docs/generation-log.jsonl. The prompt text and the key are never logged.
 
 Never commit API keys. Prefer env XAI_API_KEY.
 """
@@ -17,98 +25,121 @@ Never commit API keys. Prefer env XAI_API_KEY.
 from __future__ import annotations
 
 import argparse
-import json
 import os
 import sys
-import urllib.error
-import urllib.request
+import time
 from pathlib import Path
 
-API_URL = "https://api.x.ai/v1/images/generations"
-UA = "Mozilla/5.0 (compatible; weeks-on-fire/1.0)"
+import xai_api
+from xai_api import ApiError
 
 
-def generate(
-    prompt: str,
-    *,
-    model: str,
-    aspect_ratio: str,
-    api_key: str,
-    n: int = 1,
-) -> dict:
-    payload = {
-        "model": model,
-        "prompt": prompt,
-        "n": n,
-        "aspect_ratio": aspect_ratio,
-    }
-    req = urllib.request.Request(
-        API_URL,
-        data=json.dumps(payload).encode(),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "User-Agent": UA,
-            "Accept": "application/json",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        return json.loads(resp.read().decode())
-
-
-def download(url: str, dest: Path) -> int:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = resp.read()
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    dest.write_bytes(data)
-    return len(data)
-
-
-def main() -> int:
+def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="xAI Grok Imagine image generation")
     parser.add_argument("prompt", help="Text prompt")
     parser.add_argument("-o", "--output", required=True, help="Output image path")
     parser.add_argument(
         "--model",
-        default="grok-imagine-image-quality",
-        help="Model id (default: grok-imagine-image-quality)",
+        default=xai_api.DEFAULT_MODEL,
+        help=f"Model id (default: {xai_api.DEFAULT_MODEL})",
     )
-    parser.add_argument("--aspect", default="16:9", help="Aspect ratio (default 16:9)")
+    parser.add_argument(
+        "--aspect",
+        default=xai_api.DEFAULT_ASPECT,
+        choices=xai_api.ASPECT_RATIOS,
+        metavar="RATIO",
+        help=f"Aspect ratio (default {xai_api.DEFAULT_ASPECT}; one of: {', '.join(xai_api.ASPECT_RATIOS)})",
+    )
+    parser.add_argument(
+        "--retries",
+        type=int,
+        default=xai_api.DEFAULT_RETRIES,
+        help=f"Retries on 429 / 5xx / network errors, exponential backoff (default {xai_api.DEFAULT_RETRIES})",
+    )
+    parser.add_argument(
+        "--json-log",
+        nargs="?",
+        const=str(xai_api.DEFAULT_LOG),
+        default=None,
+        metavar="PATH",
+        help="Append a JSON line per call to PATH (default docs/generation-log.jsonl in the repo)",
+    )
     parser.add_argument(
         "--api-key",
         default=os.environ.get("XAI_API_KEY", ""),
         help="Or set XAI_API_KEY env var",
     )
-    args = parser.parse_args()
+    return parser
 
-    if not args.api_key:
-        print("ERROR: set XAI_API_KEY or pass --api-key", file=sys.stderr)
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    if args.retries < 0:
+        print("ERROR: --retries must be >= 0", file=sys.stderr)
         return 2
 
+    api_key = xai_api.require_api_key(args.api_key)
+    if api_key is None:
+        return 2
+
+    log_record = {
+        "ts": xai_api.utc_now(),
+        "tool": "xai-generate",
+        "model": args.model,
+        "aspect": args.aspect,
+        "promptSha256": xai_api.prompt_hash(args.prompt),
+        "path": args.output,
+    }
+    started = time.monotonic()
+    dest = Path(args.output)
+
+    def log(message: str) -> None:
+        print(message, file=sys.stderr)
+
     try:
-        result = generate(
+        generation = xai_api.generate(
             args.prompt,
             model=args.model,
             aspect_ratio=args.aspect,
-            api_key=args.api_key,
+            api_key=api_key,
+            retries=args.retries,
+            log=log,
         )
-    except urllib.error.HTTPError as exc:
-        body = exc.read().decode(errors="replace")
-        print(f"API error {exc.code}: {body[:800]}", file=sys.stderr)
+        data, download_attempts = xai_api.fetch(generation.url, retries=args.retries, log=log)
+        xai_api.write_atomic(dest, data)
+    except ApiError as exc:
+        print(f"API error: {exc}", file=sys.stderr)
+        if args.json_log:
+            xai_api.append_jsonl(
+                Path(args.json_log),
+                {
+                    **log_record,
+                    "ok": False,
+                    "error": str(exc)[:300],
+                    "status": exc.status,
+                    "attempts": exc.attempts,
+                    "elapsedSec": round(time.monotonic() - started, 2),
+                },
+            )
         return 1
 
-    items = result.get("data") or []
-    if not items or not items[0].get("url"):
-        print(f"Unexpected response: {result!r}"[:500], file=sys.stderr)
-        return 1
-
-    dest = Path(args.output)
-    size = download(items[0]["url"], dest)
-    print(f"Wrote {dest} ({size} bytes)")
-    if "usage" in result:
-        print(f"usage: {result['usage']}")
+    print(f"Wrote {dest} ({len(data)} bytes)")
+    if generation.usage:
+        print(f"usage: {generation.usage}")
+    if args.json_log:
+        xai_api.append_jsonl(
+            Path(args.json_log),
+            {
+                **log_record,
+                "ok": True,
+                "bytes": len(data),
+                "attempts": generation.attempts,
+                "downloadAttempts": download_attempts,
+                "elapsedSec": round(time.monotonic() - started, 2),
+                "usage": generation.usage,
+                "costUsd": xai_api.cost_usd(generation.usage),
+            },
+        )
     return 0
 
 

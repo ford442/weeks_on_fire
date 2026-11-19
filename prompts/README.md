@@ -3,6 +3,7 @@
 Store all Grok Imagine prompts here for reproducibility and iteration.
 
 ## Organization
+- Every `*-segments.md` that a cutaway uses can be rendered to stills in one pass: `python3 scripts/xai-batch.py prompts/<name>-segments.md --dry-run` lists the prompts it would send; drop `--dry-run` (with `XAI_API_KEY` set) to generate. See `AGENTS.md`.
 - `characters/` – reusable character portrait/action prompts
 - `episodes/` – per-episode scene prompts
 - `templates/` – base prompt templates you copy and customize

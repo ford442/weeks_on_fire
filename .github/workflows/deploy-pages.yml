@@ -62,6 +62,9 @@ jobs:
             ' >> "$GITHUB_STEP_SUMMARY"
           fi
 
+      - name: Python helper tests
+        run: npm run test:py
+
       # vite-imagetools re-encodes every card still (AVIF/WebP x 3 widths); cold that is ~2 CPU
       # minutes. Its cache is content-addressed, so a restored older cache is always safe.
       - name: Restore image variant cache

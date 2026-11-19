@@ -282,6 +282,21 @@ npm run migrate:content
 
 This reads the previous `src/data/*.ts` sources and writes `content/` + song frontmatter. Re-run only when recovering from legacy state.
 
+## Catalog refs on Timeline scenes
+
+A scene in `episodes/episode-NN/scenes.json` may point at the catalog records that play in its slot:
+optional `songId`, `cutawayId`, `sequenceId`, `cartoonId` and `characterIds` (schema:
+[`src/schemas/production.ts`](../src/schemas/production.ts)). Rules of thumb:
+
+- Use the record's `id`, not its title. The scene `title` stays your own label.
+- Leave a ref **out** when it is unset — never `""` or `[]`.
+- Only add a ref that is already true in the episode files (e.g. the description names the
+  cutaway). Refs are not required; a prompt-only scene is valid.
+- `npm run codegen` checks every ref against the catalog and fails with
+  `episode 01 scene-002 songId "no-such-track" is not a song id`.
+- The Timeline editor picks from `src/data/generated/catalog-refs.ts`, a codegen'd `{ id, title }`
+  list, so the Timeline chunk never imports full lyrics or segment prompts.
+
 ## Related
 
 - Timeline production JSON: [`episodes/episode-NN/scenes.json`](../episodes/) — separate from this index; see [`docs/clip-stacker.md`](../docs/clip-stacker.md)

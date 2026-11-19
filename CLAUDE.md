@@ -83,6 +83,8 @@ See `content/README.md`. Typical path:
 2. `npm run codegen`
 3. Commit sources and generated TS
 
+Timeline scenes (`episodes/episode-NN/scenes.json`) may carry optional catalog refs (`songId`, `cutawayId`, `sequenceId`, `cartoonId`, `characterIds`; schema in `src/schemas/production.ts`). Ids only, omitted when unset, and `npm run codegen` fails on an unknown id. See `content/README.md`.
+
 Crew bios: `content/crew.json` (longer crew sheets in `docs/crew/`).
 
 Filter values (episode ids, genres, gallery themes, tools) live in `content/taxonomy.json`; songs and gallery items must use them verbatim (codegen enforces it). Free-text nuance goes in `slot` / `subgenre`. Use `pluralize()` from `src/lib/plural.ts` for any "N things" label.  

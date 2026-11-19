@@ -3,8 +3,18 @@ import { X, Save } from 'lucide-react';
 
 import { useEscapeKey } from '../hooks/useEscapeKey';
 import { appendSceneHistory, updateSceneStatus } from '../data/production';
+import {
+  CHARACTER_OPTIONS,
+  SINGLE_REF_FIELDS,
+  sameCatalogRefs,
+  withCurrentOption,
+} from '../lib/catalogRefs';
+import { pickCatalogRefs, withCatalogRefs } from '../schemas/production';
+
+import SceneRefLinks from './SceneRefLinks';
 
 import type { ProductionScene, SceneStatus } from '../data/production';
+import type { CatalogRefs } from '../schemas/production';
 
 interface SceneEditorModalProps {
   scene: ProductionScene | null;
@@ -39,17 +49,29 @@ function SceneEditorModalContent({
   const [prompt, setPrompt] = useState(scene.prompt ?? '');
   const [mediaUrl, setMediaUrl] = useState(scene.mediaUrl ?? '');
   const [status, setStatus] = useState<SceneStatus>(scene.status);
+  const [refs, setRefs] = useState<CatalogRefs>(() => pickCatalogRefs(scene));
   const [historyNote, setHistoryNote] = useState('');
 
+  const toggleCharacter = (id: string, on: boolean) => {
+    setRefs((prev) => {
+      const rest = (prev.characterIds ?? []).filter((existing) => existing !== id);
+      return { ...prev, characterIds: on ? [...rest, id] : rest };
+    });
+  };
+
   const handleSave = () => {
-    let updated: ProductionScene = {
-      ...scene,
-      title: title.trim() || scene.title,
-      timestamp: timestamp.trim() || scene.timestamp,
-      description: description.trim(),
-      prompt: prompt.trim() || undefined,
-      mediaUrl: mediaUrl.trim() || undefined,
-    };
+    // Cleared pickers remove the key entirely: "unset" is never '' or [].
+    let updated: ProductionScene = withCatalogRefs(
+      {
+        ...scene,
+        title: title.trim() || scene.title,
+        timestamp: timestamp.trim() || scene.timestamp,
+        description: description.trim(),
+        prompt: prompt.trim() || undefined,
+        mediaUrl: mediaUrl.trim() || undefined,
+      },
+      refs,
+    );
 
     // If status changed, use helper (it appends history)
     if (status !== scene.status) {
@@ -62,7 +84,8 @@ function SceneEditorModalContent({
       timestamp !== scene.timestamp ||
       description !== scene.description ||
       prompt !== (scene.prompt ?? '') ||
-      mediaUrl !== (scene.mediaUrl ?? '');
+      mediaUrl !== (scene.mediaUrl ?? '') ||
+      !sameCatalogRefs(refs, scene);
 
     if (changed || historyNote.trim()) {
       const note = historyNote.trim() || (isNew ? 'Initial details added' : 'Updated via editor');
@@ -85,7 +108,7 @@ function SceneEditorModalContent({
         role="dialog"
         aria-modal="true"
         aria-label={isNew ? 'New scene' : 'Edit scene'}
-        className="w-full max-w-2xl rounded-xl border border-zinc-700 bg-zinc-950 shadow-2xl"
+        className="max-h-[calc(100vh-2rem)] w-full max-w-2xl overflow-y-auto rounded-xl border border-zinc-700 bg-zinc-950 shadow-2xl"
       >
         <div className="flex items-center justify-between border-b border-zinc-800 px-5 py-3">
           <div>
@@ -180,6 +203,58 @@ function SceneEditorModalContent({
               </select>
             </label>
           </div>
+
+          <fieldset className="space-y-3 rounded-md border border-zinc-800 p-3">
+            <legend className="px-1 text-xs font-medium text-zinc-400">
+              Catalog links (optional — ids are saved, the scene title stays yours)
+            </legend>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {SINGLE_REF_FIELDS.map((field) => (
+                <label key={field.key} className="block">
+                  <span className="mb-1 block text-xs font-medium text-zinc-400">
+                    {field.label}
+                  </span>
+                  <select
+                    value={refs[field.key] ?? ''}
+                    onChange={(e) => setRefs((prev) => ({ ...prev, [field.key]: e.target.value }))}
+                    className="w-full rounded-md border border-zinc-800 bg-black px-3 py-2 text-sm outline-none focus:border-orange-500"
+                  >
+                    <option value="">— none —</option>
+                    {withCurrentOption(field.options, refs[field.key]).map((option) => (
+                      <option key={option.id} value={option.id}>
+                        {option.missing ? `${option.id} (not in catalog)` : option.title}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ))}
+            </div>
+
+            <fieldset>
+              <legend className="mb-1 text-xs font-medium text-zinc-400">Characters</legend>
+              <div className="grid grid-cols-2 gap-x-3 gap-y-1 sm:grid-cols-3">
+                {[
+                  ...CHARACTER_OPTIONS.map((option) => ({ ...option, missing: false })),
+                  ...(refs.characterIds ?? [])
+                    .filter((id) => !CHARACTER_OPTIONS.some((option) => option.id === id))
+                    .map((id) => ({ id, title: id, missing: true })),
+                ].map((option) => (
+                  <label key={option.id} className="flex items-center gap-2 text-sm text-zinc-300">
+                    <input
+                      type="checkbox"
+                      checked={refs.characterIds?.includes(option.id) ?? false}
+                      onChange={(e) => toggleCharacter(option.id, e.target.checked)}
+                      className="accent-orange-500"
+                    />
+                    {option.missing ? `${option.id} (not in catalog)` : option.title}
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            <SceneRefLinks refs={refs} newTab />
+          </fieldset>
 
           <label className="block">
             <span className="mb-1 block text-xs font-medium text-zinc-400">

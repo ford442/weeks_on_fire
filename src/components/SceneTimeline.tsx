@@ -4,6 +4,8 @@ import { Clock, Edit2, Film, Loader2, Plus, Download } from 'lucide-react';
 import { flattenTimeline, statusColors } from '../data/production';
 import { pluralize } from '../lib/plural';
 
+import SceneRefLinks from './SceneRefLinks';
+
 import type {
   EpisodeId,
   EpisodeProduction,
@@ -201,6 +203,8 @@ export default function SceneTimeline({
                   {scene.prompt}
                 </div>
               )}
+
+              <SceneRefLinks refs={scene} />
 
               <div className="mt-3 flex items-center justify-between text-xs">
                 <div className="text-zinc-400">

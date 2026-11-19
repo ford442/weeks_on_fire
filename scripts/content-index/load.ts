@@ -1,6 +1,10 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { z } from 'zod';
+
+import { EpisodeProductionSchema } from '../../src/schemas/production';
+
 import {
   SongFrontmatterSchema,
   CutawaySchema,
@@ -18,6 +22,7 @@ import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
 
+import type { EpisodeProduction } from '../../src/schemas/production';
 import type {
   CutawayRecord,
   CutawaySegmentRecord,
@@ -239,6 +244,36 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
 export function loadCustomRendererIds(repoRoot: string): Set<string> {
   const source = readFileSync(join(repoRoot, 'src/sequences/registry.ts'), 'utf8');
   return new Set([...source.matchAll(/^\s*'([a-z0-9-]+)':\s*create\w+,?\s*$/gm)].map((m) => m[1]!));
+}
+
+/** A committed Timeline file, validated against the same Zod contract the app uses. */
+export interface LoadedProduction {
+  /** Episode id from the folder name (`episodes/episode-04/` → `04`). */
+  episode: string;
+  file: string;
+  production: EpisodeProduction;
+}
+
+export function loadProductions(repoRoot: string): LoadedProduction[] {
+  const episodesDir = join(repoRoot, 'episodes');
+
+  return readdirSync(episodesDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && /^episode-\d+$/.test(entry.name))
+    .map((entry) => entry.name)
+    .sort()
+    .flatMap((folder) => {
+      const file = `episodes/${folder}/scenes.json`;
+      const path = join(repoRoot, file);
+      if (!existsSync(path)) return [];
+
+      const parsed = EpisodeProductionSchema.safeParse(readJson(path));
+      if (!parsed.success) {
+        throw new Error(
+          `${file} does not match the Timeline schema:\n${z.prettifyError(parsed.error)}`,
+        );
+      }
+      return [{ episode: folder.replace(/^episode-/, ''), file, production: parsed.data }];
+    });
 }
 
 export function listMp3Filenames(repoRoot: string): string[] {

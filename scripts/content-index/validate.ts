@@ -12,7 +12,7 @@ import type {
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
-import type { ParsedSong } from './load';
+import type { LoadedProduction, ParsedSong } from './load';
 
 /**
  * Explicit opt-out for long-form prompt docs that intentionally have no cutaway
@@ -371,6 +371,53 @@ export function validateTaxonomy(
   if (errors.length > 0) {
     throw new Error(
       `Taxonomy validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+/** The ids a Timeline scene may point at, one set per catalog. */
+export interface CatalogIds {
+  songs: ReadonlySet<string>;
+  cutaways: ReadonlySet<string>;
+  sequences: ReadonlySet<string>;
+  cartoons: ReadonlySet<string>;
+  characters: ReadonlySet<string>;
+}
+
+/**
+ * Checks the optional catalog refs on committed `episodes/episode-NN/scenes.json` scenes — the same
+ * class of check as `cutaway.songId`. Scenes without refs are always fine; hand-edited dialog
+ * auditions (`src/data/sceneDialogVersions.ts`) are prose and deliberately not covered.
+ */
+export function validateScenes(productions: LoadedProduction[], catalog: CatalogIds): void {
+  const errors: string[] = [];
+
+  for (const { episode, production } of productions) {
+    for (const scene of production.scenes) {
+      const where = `episode ${episode} ${scene.id}`;
+      const single = [
+        ['songId', scene.songId, catalog.songs, 'song'],
+        ['cutawayId', scene.cutawayId, catalog.cutaways, 'cutaway'],
+        ['sequenceId', scene.sequenceId, catalog.sequences, 'sequence'],
+        ['cartoonId', scene.cartoonId, catalog.cartoons, 'cartoon'],
+      ] as const;
+
+      for (const [key, id, known, noun] of single) {
+        if (id !== undefined && !known.has(id)) {
+          errors.push(`${where} ${key} "${id}" is not a ${noun} id`);
+        }
+      }
+      for (const id of scene.characterIds ?? []) {
+        if (!catalog.characters.has(id)) {
+          errors.push(`${where} characterIds "${id}" is not a character id`);
+        }
+      }
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Scene validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

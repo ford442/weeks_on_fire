@@ -17,16 +17,16 @@ Weeks on Fire is a personal cinematic experiment combining:
 ## Primary content (crawl these)
 
 ### Live app views (SPA; HTML shell also embeds key titles)
-- Visual Archive — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
-- Timeline — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
-- Songs — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
-- Daisy Bell — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
-- Suggestions — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
-- Cartoons — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
-- 3D Sequences — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
-- Characters — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
-- Episodes — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
-- Crew — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
+- Visual Archive (https://ford442.github.io/weeks_on_fire/show/) — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
+- Timeline (https://ford442.github.io/weeks_on_fire/show/timeline/) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
+- Songs (https://ford442.github.io/weeks_on_fire/show/songs/) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
+- Daisy Bell (https://ford442.github.io/weeks_on_fire/show/daisy-bell/) — Rubella & Lillith on the flower bicycle into old London — color HD keyframes beside intentional scratchy period film, sequence board, and street sights.
+- Suggestions (https://ford442.github.io/weeks_on_fire/show/suggestions/) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+- Cartoons (https://ford442.github.io/weeks_on_fire/show/cartoons/) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
+- 3D Sequences (https://ford442.github.io/weeks_on_fire/show/sequences/) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
+- Characters (https://ford442.github.io/weeks_on_fire/show/characters/) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
+- Episodes (https://ford442.github.io/weeks_on_fire/show/episodes/) — Loglines, status, and in-app synopses for every episode — read-only home for scripts and scene breakdowns. Timeline stays the editor.
+- Crew (https://ford442.github.io/weeks_on_fire/show/crew/) — Meet the fictional writer, producer, director, and crew behind Weeks on Fire — bios, quotes, and series credits.
 
 ### Episodes (markdown, fully readable without JS)
 - Episode 1: https://github.com/ford442/weeks_on_fire/tree/main/episodes/episode-01

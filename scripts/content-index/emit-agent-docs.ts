@@ -13,8 +13,9 @@ import {
   loadTaxonomy,
 } from './load';
 import { syncOutputs } from './output';
+import { buildRouteTable, type RouteEntry } from './route-table';
 import { parseFrontmatter } from './parsers/frontmatter';
-import { REPO_BASE, SITE_BASE, siteUrl, siteViews } from './views';
+import { REPO_BASE, SITE_BASE, siteViews } from './views';
 
 const repoRoot = join(import.meta.dirname, '../..');
 const publicDir = join(repoRoot, 'public');
@@ -74,11 +75,15 @@ function episodeBlob(number: string, file: string): string {
 }
 
 function emitLlmsTxt(
+  routes: RouteEntry[],
   songs: ReturnType<typeof loadSongs>,
   gallery: ReturnType<typeof loadGallery>,
   episodes: EpisodeSummary[],
 ): string {
-  const viewLines = siteViews.map((view) => `- ${view.label} — ${view.description}`).join('\n');
+  const viewLines = routes
+    .filter((route) => route.kind === 'view')
+    .map((route) => `- ${route.label} (${route.canonical}) — ${route.summary}`)
+    .join('\n');
 
   const featuredScenes = gallery
     .slice(0, 6)
@@ -333,11 +338,11 @@ Do not invent episode plots beyond the published synopses and scene files.
 `;
 }
 
-function emitSitemap(episodes: EpisodeSummary[]): string {
-  const spaUrls = siteViews.map((view) => ({
-    loc: siteUrl(view.path),
-    changefreq: 'weekly',
-    priority: view.id === 'gallery' ? '1.0' : '0.8',
+function emitSitemap(routes: RouteEntry[], episodes: EpisodeSummary[]): string {
+  const spaUrls = routes.map((route, index) => ({
+    loc: route.canonical,
+    changefreq: route.kind === 'view' ? 'weekly' : 'monthly',
+    priority: index === 0 ? '1.0' : route.kind === 'view' ? '0.8' : '0.6',
   }));
 
   const staticUrls = [
@@ -358,7 +363,7 @@ function emitSitemap(episodes: EpisodeSummary[]): string {
   const body = urls
     .map(
       (url) => `  <url>
-    <loc>${url.loc}</loc>
+    <loc>${url.loc.replace(/&/g, '&amp;')}</loc>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
   </url>`,
@@ -382,9 +387,10 @@ function main() {
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
   const episodes = loadEpisodes();
+  const routes = buildRouteTable(repoRoot);
 
   const outputs = {
-    'llms.txt': emitLlmsTxt(songs, gallery, episodes),
+    'llms.txt': emitLlmsTxt(routes, songs, gallery, episodes),
     'llms-full.txt': emitLlmsFullTxt(
       songs,
       gallery,
@@ -396,7 +402,7 @@ function main() {
       sequences,
       episodes,
     ),
-    'sitemap.xml': emitSitemap(episodes),
+    'sitemap.xml': emitSitemap(routes, episodes),
   };
 
   syncOutputs(
@@ -415,7 +421,7 @@ function main() {
   );
 
   console.log(
-    `Generated agent docs: ${siteViews.length} views, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
+    `Generated agent docs: ${siteViews.length} views, ${routes.length} routes, ${songs.length} songs, ${gallery.length} gallery scenes, ${characters.length} characters, ${cutaways.length} cutaways, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
   );
 }
 

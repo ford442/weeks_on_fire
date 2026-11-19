@@ -52,6 +52,7 @@ import { buildSearchDocuments } from './search-docs';
 import { buildWhatsNew } from './whats-new';
 import { syncOutputs, syncOwnedDirectory } from './output';
 import { buildCutawayRecords, buildSongRecords } from './records';
+import { assertDistinctAudioNames } from './audio-names';
 
 const repoRoot = join(import.meta.dirname, '../..');
 const generatedDir = join(repoRoot, 'src/data/generated');
@@ -71,6 +72,8 @@ function main() {
   const schedule = loadSchedule(repoRoot);
   const taxonomy = loadTaxonomy(repoRoot);
   const productions = loadProductions(repoRoot);
+  const audioFilenames = listMp3Filenames(repoRoot);
+  assertDistinctAudioNames(audioFilenames);
 
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
@@ -114,7 +117,7 @@ function main() {
   const cutawayRecords = buildCutawayRecords(cutaways);
 
   const outputs = {
-    'songs.ts': emitSongsModule(songRecords.summaries, listMp3Filenames(repoRoot)),
+    'songs.ts': emitSongsModule(songRecords.summaries, audioFilenames),
     'cutaways.ts': emitCutawaysModule(cutawayRecords.summaries, cutawayRecords.stillPaths),
     'gallery.ts': emitGalleryModule(gallery),
     'characters.ts': emitCharactersModule(characters),

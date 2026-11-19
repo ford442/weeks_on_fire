@@ -22,11 +22,7 @@ export const DISCLOSURE =
 
 /** Routes that get the laser-snake background (home + music pages). */
 function showsLaserSnakes(pathname: string): boolean {
-  return (
-    pathname === '/' ||
-    pathname === '/index.html' ||
-    /^\/(albums|music)(\/|$)/.test(pathname)
-  );
+  return pathname === '/' || pathname === '/index.html' || /^\/(albums|music)(\/|$)/.test(pathname);
 }
 
 export default function PublicLayout() {

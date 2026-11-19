@@ -105,7 +105,8 @@ export default function LaserSnakes() {
       // Layered sines give a cheap noise-like meander.
       s.heading += Math.sin(s.phase) * 0.035 + Math.sin(s.phase * 0.37 + 1.3) * 0.02;
       // Occasional laser "snap": a hard 30–60° turn.
-      if (Math.random() < 0.004) s.heading += (Math.random() < 0.5 ? -1 : 1) * (0.5 + Math.random() * 0.5);
+      if (Math.random() < 0.004)
+        s.heading += (Math.random() < 0.5 ? -1 : 1) * (0.5 + Math.random() * 0.5);
       s.x += Math.cos(s.heading) * s.speed;
       s.y += Math.sin(s.heading) * s.speed;
       s.trail.push({ x: s.x, y: s.y });

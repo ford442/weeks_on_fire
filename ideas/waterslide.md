@@ -13,6 +13,8 @@ links: [waterslide]
 **People:** none  
 **Continuity object:** one empty bright yellow inflatable inner tube that rides every slide by itself  
 **Prompts:** `prompts/waterslide-segments-a.md` (01–13) + `prompts/waterslide-segments-b.md` (14–26)  
+**Timed bank:** `prompts/waterslide-segments.md` (28-segment slide-cam, Run A)  
+**More segments (long-form):** `prompts/waterslide-more-segments.md` (2026-11-19 — M01 Spillway Face, M14 The Hang, M08 Bubble Run, M06 Inside the Wave)  
 **Status:** draft bank, not a fixed running order. Time and Section are placeholders until a drop map exists. No song file in `songs/` or `ideas/songs/` yet.
 
 A cut-between bank of stills (Grok Imagine) for hard cuts between different waterslide worlds. The only constant is the empty yellow tube. Mute generated audio; stack on the song bed. Align big switches to the chant hooks when the map lands.

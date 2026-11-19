@@ -6,3 +6,5 @@ dist/
 videos/
 *.mp4
 coverage/
+playwright-report/
+test-results/

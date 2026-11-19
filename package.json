@@ -13,14 +13,16 @@
     "agent-docs:check": "tsx scripts/content-index/emit-agent-docs.ts --check",
     "migrate:content": "tsx scripts/content-index/migrate-from-ts.ts",
     "dev": "vite",
-    "lint": "eslint src scripts --max-warnings 0",
-    "format": "prettier --check src scripts",
-    "format:write": "prettier --write src scripts",
+    "lint": "eslint src scripts e2e playwright.config.ts --max-warnings 0",
+    "format": "prettier --check src scripts e2e playwright.config.ts",
+    "format:write": "prettier --write src scripts e2e playwright.config.ts",
     "build": "npm run codegen && npm run agent-docs && tsc -b && vite build --base ${VITE_BASE:-./} && tsx scripts/check-index-encoding.ts && tsx scripts/emit-link-index.ts && tsx scripts/emit-route-html.ts && cp dist/index.html dist/404.html",
     "build:check": "npm run build && tsx scripts/check-bundle-size.ts",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:update": "playwright test --update-snapshots"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.5",
@@ -36,6 +38,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.63.0",
     "@testing-library/dom": "10.4.2",
     "@testing-library/react": "16.3.3",
     "@testing-library/user-event": "14.6.9",

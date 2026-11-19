@@ -55,14 +55,23 @@ npm run codegen          # content/ + songs/ → src/data/generated/
 npm run codegen:check    # fail if generated files drifted
 npm run agent-docs       # public/llms*.txt + sitemap.xml
 npm run codegen:check    # read-only drift check (also: agent-docs:check)
-npm run lint             # type-aware ESLint: src/ and scripts/
+npm run lint             # type-aware ESLint: src/, scripts/, e2e/
 npm run format
 npm run test             # Vitest (node for libs, jsdom for src/components/**)
 npm run test:coverage    # v8 coverage, no threshold yet
+npm run test:e2e         # real-GL frame harness (Playwright + Chromium, software GL)
+npm run test:e2e:update  # rewrite e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check
 ```
 
 Use Node 22 (`.nvmrc`).
+
+`test:e2e` drives the production build, which must use the Pages base:
+`VITE_BASE=/weeks_on_fire/ npm run build && npm run test:e2e` (first time:
+`npx playwright install chromium`). It opens `/show/sequences/lattice-hymn?capture=1` and compares
+downsampled frames at 0s and 50% to `e2e/fixtures/`. `?capture=1` is the only thing that sets
+`preserveDrawingBuffer`; the player publishes the context it got as `data-gl`. Vitest (jsdom) cannot
+run a shader, so this is the only check that does. CI runs it on every pull request.
 
 `tsc -b` includes `tsconfig.scripts.json` so codegen is typechecked. App `tsconfig` enables `noUncheckedIndexedAccess` and `verbatimModuleSyntax`.
 

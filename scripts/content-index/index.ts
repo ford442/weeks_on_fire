@@ -10,6 +10,7 @@ import {
   loadEpisodes,
   loadCartoons,
   loadSequences,
+  loadSchedule,
   loadProductions,
   loadTaxonomy,
   loadCustomRendererIds,
@@ -23,6 +24,7 @@ import {
   validateSequences,
   validateScenes,
   validateSceneBoards,
+  validateSchedule,
   validateTaxonomy,
   validateCatalogLinks,
 } from './validate';
@@ -36,6 +38,7 @@ import {
   emitEpisodesModule,
   emitCartoonsModule,
   emitSequencesModule,
+  emitScheduleModule,
   emitCatalogRefsModule,
   emitTaxonomyModule,
   emitWhatsNewModule,
@@ -61,6 +64,7 @@ function main() {
   const episodes = loadEpisodes(repoRoot);
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
+  const schedule = loadSchedule(repoRoot);
   const taxonomy = loadTaxonomy(repoRoot);
   const productions = loadProductions(repoRoot);
 
@@ -70,6 +74,7 @@ function main() {
   validateCartoons(repoRoot, cartoons);
   validateSceneBoards(repoRoot, sceneBoards, new Set(songs.map((song) => song.id)));
   validateCharacters(repoRoot, characters);
+  validateSchedule(schedule, new Set(cutaways.map((cutaway) => cutaway.id)));
   validateSequences(repoRoot, sequences, loadCustomRendererIds(repoRoot));
   validateScenes(productions, {
     songs: new Set(songs.map((song) => song.id)),
@@ -116,6 +121,7 @@ function main() {
     'episodes.ts': emitEpisodesModule(episodes),
     'cartoons.ts': emitCartoonsModule(cartoons),
     'sequences.ts': emitSequencesModule(sequences),
+    'schedule.ts': emitScheduleModule(schedule),
     'taxonomy.ts': emitTaxonomyModule(taxonomy),
     'whats-new.ts': emitWhatsNewModule(
       buildWhatsNew({ songs, cutaways, cartoons, sequences, gallery }),
@@ -145,7 +151,7 @@ function main() {
   });
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${sceneBoards.length} scene boards, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences; ${graph.nodes.length} graph nodes, ${graph.edges.length} edges; checked ${productions.length} scenes.json files.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${sceneBoards.length} scene boards, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences, ${schedule.blocks.reduce((n, block) => n + block.slots.length, 0)} schedule slots; ${graph.nodes.length} graph nodes, ${graph.edges.length} edges; checked ${productions.length} scenes.json files.`,
   );
 }
 

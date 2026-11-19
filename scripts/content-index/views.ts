@@ -70,9 +70,9 @@ export const siteViews: SiteViewMeta[] = [
     id: 'suggestions',
     label: 'Suggestions',
     path: '/show/suggestions',
-    eyebrow: 'Suggested Cutaways',
+    eyebrow: 'Program Schedule',
     description:
-      'Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.',
+      'EyeWash Station (Channel 12½) as a program guide — every cutaway, one-panel gag and scene suggestion in a time slot, with what is on now, reruns, idents and fake sponsors; unscheduled ones follow. Each opens its board of timed segments and copyable Grok Imagine / Gemini Omni prompts (/show/suggestions/<id>). ?at=HH:MM pins the guide to a time; List is the flat catalog with kind, status and search filters.',
   },
   {
     id: 'cartoons',

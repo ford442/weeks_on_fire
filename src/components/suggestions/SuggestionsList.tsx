@@ -1,4 +1,4 @@
-import { Lightbulb, Music2, Search, Sparkles, Timer, MessageSquare } from 'lucide-react';
+import { Lightbulb, Music2, Sparkles, Timer, MessageSquare } from 'lucide-react';
 
 import {
   type CutawaySegment,
@@ -8,11 +8,9 @@ import {
 } from '../../data/suggestions';
 import { getDialogVersionsForScene } from '../../data/sceneDialogVersions';
 import { pluralize } from '../../lib/plural';
-import { statusOptions, type ProductionStatus } from '../../lib/status';
-import FilterSelect from '../FilterSelect';
 import StatusBadge from '../StatusBadge';
 
-import { allValue, isOpenSlot } from './sightSlots';
+import { isOpenSlot } from './sightSlots';
 
 const kindLabel: Record<SuggestionKind, string> = {
   musical: 'Musical',
@@ -22,93 +20,24 @@ const kindLabel: Record<SuggestionKind, string> = {
 
 interface SuggestionsListProps {
   suggestions: CutawaySuggestion[];
-  totalCount: number;
-  kindCounts: Record<SuggestionKind, number>;
-  kind: typeof allValue | SuggestionKind;
-  query: string;
-  status: typeof allValue | ProductionStatus;
-  statusCounts: Partial<Record<ProductionStatus, number>>;
-  onStatus: (status: typeof allValue | ProductionStatus) => void;
   selectedId?: string;
   activeSegmentId?: string;
   previewSightBySegment: Map<string, SightCandidate>;
-  onKind: (kind: typeof allValue | SuggestionKind) => void;
-  onQuery: (query: string) => void;
   onSelectCutaway: (cutaway: CutawaySuggestion) => void;
   onSelectSegment: (cutaway: CutawaySuggestion, segmentId: string) => void;
 }
 
+/** The flat list: every suggestion as a card, the selected one opened out to its timed segments. */
 export default function SuggestionsList({
   suggestions,
-  totalCount,
-  kindCounts,
-  kind,
-  query,
-  status,
-  statusCounts,
-  onStatus,
   selectedId,
   activeSegmentId,
   previewSightBySegment,
-  onKind,
-  onQuery,
   onSelectCutaway,
   onSelectSegment,
 }: SuggestionsListProps) {
   return (
     <div className="space-y-5">
-      <div className="rounded-lg border border-zinc-800 bg-zinc-950/80 p-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-zinc-400">
-            {suggestions.length} of {totalCount} suggestions
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <KindChip
-              active={kind === allValue}
-              label={`All (${totalCount})`}
-              onClick={() => onKind(allValue)}
-            />
-            <KindChip
-              active={kind === 'musical'}
-              label={`Musical (${kindCounts.musical})`}
-              onClick={() => onKind('musical')}
-            />
-            <KindChip
-              active={kind === 'gag'}
-              label={`Gags (${kindCounts.gag})`}
-              onClick={() => onKind('gag')}
-            />
-            <KindChip
-              active={kind === 'scene'}
-              label={`Scenes (${kindCounts.scene})`}
-              onClick={() => onKind('scene')}
-            />
-          </div>
-        </div>
-        <div className="mt-3">
-          <FilterSelect
-            label="Status"
-            value={status}
-            options={statusOptions(statusCounts)}
-            onChange={(value) => onStatus(value as typeof allValue | ProductionStatus)}
-          />
-        </div>
-        <label className="relative mt-3 block">
-          <span className="sr-only">Search suggestions</span>
-          <Search
-            aria-hidden="true"
-            size={18}
-            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400"
-          />
-          <input
-            value={query}
-            onChange={(event) => onQuery(event.target.value)}
-            placeholder="Search titles, songs, tags..."
-            className="h-11 w-full rounded-md border border-zinc-800 bg-black/70 pl-10 pr-3 text-sm text-white outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-2 focus:ring-orange-400/30"
-          />
-        </label>
-      </div>
-
       {suggestions.map((cutaway) => {
         const isSelected = selectedId === cutaway.id;
 
@@ -207,30 +136,6 @@ export default function SuggestionsList({
         </div>
       )}
     </div>
-  );
-}
-
-function KindChip({
-  active,
-  label,
-  onClick,
-}: {
-  active: boolean;
-  label: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`rounded-md border px-2.5 py-1 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-orange-300 ${
-        active
-          ? 'border-orange-500/60 bg-orange-500/15 text-orange-100'
-          : 'border-zinc-800 bg-zinc-900 text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
-      }`}
-    >
-      {label}
-    </button>
   );
 }
 

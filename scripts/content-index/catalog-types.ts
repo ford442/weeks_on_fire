@@ -46,6 +46,12 @@ export type {
   ProductionStatus,
 } from './schemas';
 export type { SightCandidateRecord as SightCandidate } from './schemas';
+export type {
+  ScheduleBlock,
+  ScheduleRecord as Schedule,
+  ScheduleSlot,
+  ScheduleSponsor,
+} from './schemas';
 export type { TaxonomyEpisode, TaxonomyRecord as Taxonomy, TaxonomyTool } from './schemas';
 
 /** Codegen rewrites a source image path into an imported asset URL. */

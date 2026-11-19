@@ -15,6 +15,7 @@ import {
   EpisodeSchema,
   CartoonSchema,
   SequenceSchema,
+  ScheduleSchema,
   TaxonomySchema,
 } from './schemas';
 import { SequenceGraphSchema } from './graph-schema';
@@ -34,6 +35,7 @@ import type {
   EpisodeRecord,
   CartoonRecord,
   SequenceRecord,
+  ScheduleRecord,
   TaxonomyRecord,
 } from './schemas';
 
@@ -182,6 +184,10 @@ export function loadSceneBoards(repoRoot: string): SceneBoardRecord[] {
 
 export function loadTaxonomy(repoRoot: string): TaxonomyRecord {
   return TaxonomySchema.parse(readJson(join(repoRoot, 'content/taxonomy.json')));
+}
+
+export function loadSchedule(repoRoot: string): ScheduleRecord {
+  return ScheduleSchema.parse(readJson(join(repoRoot, 'content/schedule.json')));
 }
 
 export function loadCrew(repoRoot: string): CrewMemberRecord[] {

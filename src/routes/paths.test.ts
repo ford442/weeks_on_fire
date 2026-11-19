@@ -2,9 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 import {
   crewPath,
+  episodePath,
   isLegacyArchiveLink,
   legacySceneRedirect,
   pathnameToView,
+  suggestionPath,
   viewPaths,
 } from './paths';
 
@@ -76,5 +78,24 @@ describe('isLegacyArchiveLink', () => {
     expect(isLegacyArchiveLink('/show', '?')).toBe(false);
     expect(isLegacyArchiveLink('/show/songs', '?q=cat')).toBe(false);
     expect(isLegacyArchiveLink('/', '?q=cat')).toBe(false);
+  });
+});
+
+describe('suggestion and episode deep links', () => {
+  it('opens a cutaway board at /show/suggestions/<id>', () => {
+    expect(suggestionPath('marble-tick-tack')).toBe('/show/suggestions/marble-tick-tack');
+    expect(pathnameToView(suggestionPath('marble-tick-tack'))).toBe('suggestions');
+    expect(pathnameToView('/show/suggestions/')).toBe('suggestions');
+  });
+
+  it('opens an episode at /show/episodes/<id>', () => {
+    expect(episodePath('03')).toBe('/show/episodes/03');
+    expect(pathnameToView(episodePath('03'))).toBe('episodes');
+  });
+
+  it('does not mistake a pinned time or a view switch for another route', () => {
+    // These are query parameters of the Suggestions view; the path is what picks the view.
+    expect(pathnameToView('/show/suggestions')).toBe('suggestions');
+    expect(isLegacyArchiveLink('/show/suggestions', '?at=02:00&view=list')).toBe(false);
   });
 });

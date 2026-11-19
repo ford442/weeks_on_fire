@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import {
   loadCartoons,
   loadSequences,
+  loadSchedule,
   loadCharacters,
   loadCutaways,
   loadSceneBoards,
@@ -17,6 +18,7 @@ import {
 import { buildCatalogGraph, type CatalogGraph } from './catalog-graph';
 import { syncOutputs } from './output';
 import { buildRouteTable, routePath, type RouteEntry } from './route-table';
+import { emitScheduleSection } from './schedule-docs';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { REPO_BASE, SITE_BASE, siteViews } from './views';
 
@@ -130,6 +132,11 @@ ${viewLines}
 - Hub search: ${SITE_BASE}/show/search/?q=<terms> — one ranked list across songs, cutaways, scenes, stills, episodes, characters, cartoons, 3D sequences and crew (titles, tags, summaries, character names; not lyrics or prompts). Example: ${SITE_BASE}/show/search/?q=well
 - Catalog graph (JSON): ${SITE_BASE}/catalog-graph.json — every record with a page, and the typed links between them (song, character, episode, promotion, insert, related)
 
+### Program schedule
+- EyeWash Station, Channel 12½: ${SITE_BASE}/show/suggestions/ — every cutaway in a time slot, with what is on now; \`?at=HH:MM\` pins a time of day
+- Source: ${REPO_BASE}/blob/main/content/schedule.json
+- Readable rundown: ${SITE_BASE}/llms-full.txt (section "EyeWash Station schedule")
+
 ### Episodes (markdown, fully readable without JS)
 ${episodeLines}
 
@@ -172,6 +179,7 @@ function emitLlmsFullTxt(
   sequences: ReturnType<typeof loadSequences>,
   episodes: EpisodeSummary[],
   graph: CatalogGraph,
+  schedule: ReturnType<typeof loadSchedule>,
 ): string {
   const viewLines = siteViews
     .map((view, index) => `${index + 1}. **${view.label}** (${view.eyebrow}) — ${view.description}`)
@@ -300,6 +308,7 @@ ${crewLines}
 
 ${cutawayLines}
 
+${emitScheduleSection(schedule, cutaways)}
 ## Cartoon ideas (agent parking lot)
 
 Short still + optional 6–8s loop. No song id. Author in \`content/cartoons/<id>.json\`. Promote winners to Suggestions.
@@ -460,6 +469,7 @@ function main() {
       sequences,
       episodes,
       graph,
+      loadSchedule(repoRoot),
     ),
     'sitemap.xml': emitSitemap(routes, episodes),
     'catalog-graph.json': emitCatalogGraphJson(graph),

@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { broadcastOffset, formatClock, parseClock } from '../../src/lib/clock';
+
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
 import type {
@@ -10,6 +12,7 @@ import type {
   FilmSceneRecord,
   SceneBoardRecord,
   TaxonomyRecord,
+  ScheduleRecord,
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
@@ -640,6 +643,90 @@ export function validateCatalogLinks(sources: CatalogLinkSources): void {
   if (errors.length > 0) {
     throw new Error(
       `Catalog link validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
+    );
+  }
+}
+
+/**
+ * Checks the EyeWash rundown (`content/schedule.json`) against the cutaway catalog.
+ *
+ * - every slot names a real cutaway, every ad break a real sponsor, ids are unique;
+ * - slots run in broadcast order: times strictly increase from the first slot's time, wrapping
+ *   midnight at most once, so the file reads top to bottom as one day;
+ * - the first airing of a cutaway is the original; every later airing says `rerun: true`;
+ * - a sponsor nothing uses is dead data.
+ *
+ * A cutaway with no slot is fine: it shows as unscheduled.
+ */
+export function validateSchedule(schedule: ScheduleRecord, cutawayIds: ReadonlySet<string>): void {
+  const errors: string[] = [];
+
+  const seen = <T extends { id: string }>(items: readonly T[], label: string) => {
+    const ids = new Set<string>();
+    for (const item of items) {
+      if (ids.has(item.id)) errors.push(`Duplicate ${label} id: ${item.id}`);
+      ids.add(item.id);
+    }
+    return ids;
+  };
+  const sponsorIds = seen(schedule.sponsors, 'schedule sponsor');
+  seen(schedule.blocks, 'schedule block');
+
+  const slots = schedule.blocks.flatMap((block) =>
+    block.slots.map((slot) => ({ block: block.id, slot })),
+  );
+  const first = slots[0];
+  const dayStart = first ? (parseClock(first.slot.at) ?? 0) : 0;
+
+  const airings = new Map<string, number>();
+  const usedSponsors = new Set<string>();
+  let previous: { at: string; offset: number } | undefined;
+
+  for (const { block, slot } of slots) {
+    const where = `Schedule block ${block}, ${slot.at} ${slot.cutawayId}`;
+
+    if (!cutawayIds.has(slot.cutawayId)) {
+      errors.push(`${where}: unknown cutaway id "${slot.cutawayId}"`);
+    }
+
+    if (slot.adBreak !== undefined) {
+      usedSponsors.add(slot.adBreak);
+      if (!sponsorIds.has(slot.adBreak)) {
+        errors.push(`${where}: unknown sponsor id "${slot.adBreak}" in adBreak`);
+      }
+    }
+
+    const minutes = parseClock(slot.at);
+    if (minutes !== undefined) {
+      const offset = broadcastOffset(minutes, dayStart);
+      if (previous && offset <= previous.offset) {
+        errors.push(
+          `${where}: starts at ${formatClock(minutes)}, not after the slot before it (${formatClock(parseClock(previous.at) ?? 0)}). ` +
+            `Slots run in broadcast order from the first slot (${first?.slot.at}), wrapping past midnight once.`,
+        );
+      }
+      previous = { at: slot.at, offset };
+    }
+
+    const count = airings.get(slot.cutawayId) ?? 0;
+    if (count === 0 && slot.rerun) {
+      errors.push(`${where}: marked rerun, but this is its first airing of the day`);
+    }
+    if (count > 0 && !slot.rerun) {
+      errors.push(`${where}: airs more than once; mark every airing after the first "rerun": true`);
+    }
+    airings.set(slot.cutawayId, count + 1);
+  }
+
+  for (const sponsor of schedule.sponsors) {
+    if (!usedSponsors.has(sponsor.id)) {
+      errors.push(`Schedule sponsor ${sponsor.id} is never used; remove it or give it an adBreak`);
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(
+      `Schedule validation failed:\n${errors.map((error) => `  - ${error}`).join('\n')}`,
     );
   }
 }

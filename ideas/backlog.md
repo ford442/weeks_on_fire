@@ -31,7 +31,7 @@ Quick capture of ideas that aren't ready for their own file yet.
 - [x] Put all current suggestions on the site Suggestions view (Musical / Gags / Scenes filters)
 - [x] Spec the six EyeWash idents (5–10s each) — `ideas/eyewash-idents.md` + `prompts/eyewash-idents-segments.md` + Suggestions `eyewash-idents` (stills/audio still to generate)
 - [ ] Connect the EyeWash transmitter tower to the Spooky Telephone Poles material (tower stays offscreen in Ep4; Ep5 candidate)
-- [ ] Possible: restructure the site **Suggestions** tab as a program schedule with time slots
+- [x] Restructure the site **Suggestions** tab as a program schedule with time slots — `content/schedule.json` + the Suggestions schedule view (now playing, reruns, idents, fake-sponsor ad breaks, `?at=HH:MM`; List keeps the kind/status/search filters)
 - [x] Season arc one-pager — `docs/season-arc.md` (Ep4 = HOA afterglow; Long Way Up = Ep5 candidate)
 - [x] Formalize Episode 4 folder (HOA / Morning After) — `episodes/episode-04/synopsis.md` + `scenes.md` + `subtitles.srt`
 - [x] **Mountain Lion Wildflower Field** — POV leash musical cutaway; botanical surrealism + multi-lion arrival; `ideas/mountain-lion-wildflower-cutaway.md` + `songs/Come_Further.md` + `songs/Here_They_Are.md` + Suggestions `mountain-lion-wildflowers`

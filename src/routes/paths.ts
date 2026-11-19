@@ -71,6 +71,16 @@ export function searchPath(query: string): string {
   return q ? `${viewPaths.search}?${new URLSearchParams({ q }).toString()}` : viewPaths.search;
 }
 
+/** `/show/suggestions/<id>` — a cutaway's board, and where it sits in the schedule. */
+export function suggestionPath(id: string): string {
+  return crewPath(`/suggestions/${id}`);
+}
+
+/** `/show/episodes/<id>` — an episode's page in the Episode Bible. */
+export function episodePath(id: string): string {
+  return crewPath(`/episodes/${id}`);
+}
+
 export function pathnameToView(pathname: string): SiteView {
   const normalized = pathname.replace(/\/+$/, '') || '/';
   const bare =

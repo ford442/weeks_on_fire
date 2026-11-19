@@ -28,7 +28,7 @@ The hub is a single-page app. Views are toggled in-app:
 5. **Timeline** (Production Timeline) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
 6. **Songs** (Minimax Music Catalog) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.
 7. **Scenes** (Scene Boards) — Scenes with a page of their own — pitch, prompt locks, sequence, keyframe board and finished video. Daisy Bell is the first; every scene uses the same template.
-8. **Suggestions** (Suggested Cutaways) — Every current cutaway, one-panel gag, and scene suggestion — timed segments with copyable Grok Imagine / Gemini Omni prompts.
+8. **Suggestions** (Program Schedule) — EyeWash Station (Channel 12½) as a program guide — every cutaway, one-panel gag and scene suggestion in a time slot, with what is on now, reruns, idents and fake sponsors; unscheduled ones follow. Each opens its board of timed segments and copyable Grok Imagine / Gemini Omni prompts (/show/suggestions/<id>). ?at=HH:MM pins the guide to a time; List is the flat catalog with kind, status and search filters.
 9. **Cartoons** (Cartoon Ideas) — Short cartoon seeds from agents — premise, still, optional Grok prompt. Promote winners to Suggestions.
 10. **3D Sequences** (3D Sequences) — Playable in-hub 3D video sequences — lattices, still-life, cel errands, chrome, porch walks, and a fast-motion kick pack. Ten seconds to two minutes.
 11. **Characters** (Character Bible) — Recurring cast and lawn-ensemble roles — including Qing Rao (清饶), the crystal-skull keeper on the Episode 03 Monster Mash lawn.
@@ -310,6 +310,131 @@ Markdown sources live under https://github.com/ford442/weeks_on_fire/tree/main/s
 - **The Velvet Rope at the End of the World** (velvet-rope) — Bouncer enforces heels-or-no-entry while the skyline burns. She produces emergency stilettos. Approved.
 - **Well Fall** (well-fall) — POV down a real well, instrumental heavy metal, no vocal. Lip is locked. Click a sight into open slots B–G, or an ending into H — previews fill [SIGHT] in the prompts.
 - **Yacht Guitar Orchestra** (yacht-guitar-orchestra) — Rubella and Lillith sunbathing on a yacht while a guitar line plays the rail. Three-song hard-cut journey in twenty silent Imagine scenes (about 3:24, working times): daylight vine island with guitar orchestra bed, dark island fire with Wallisian bed, night approach to Busan Gwangan Bridge with Korean K-pop bed. Every mouth stays closed, the vocals are off-picture. No landing.
+
+## EyeWash Station schedule (Channel 12½)
+
+The cutaways above, arranged as one looping broadcast day. Live guide: https://ford442.github.io/weeks_on_fire/show/suggestions/ — what is on now follows the viewer's clock, and `?at=HH:MM` pins a time of day. Author it in `content/schedule.json`. Times are 24-hour; a slot runs until the next one starts, and the last slot of the day runs until the first begins again. A cutaway can air more than once (a rerun). Cutaways with no slot are listed as unscheduled.
+
+### Sign-On — Dawn
+
+Bars and tone at dawn.
+
+- 06:00 — **EyeWash Station Idents** (eyewash-idents) — https://ford442.github.io/weeks_on_fire/show/suggestions/eyewash-idents/
+
+### Continuing Education — Weekday mid-morning
+
+Dead-pan instructional cabaret with glamorous hosts who never smile.
+
+- 10:00 — **Choose Your Basalt** (choose-your-basalt) — https://ford442.github.io/weeks_on_fire/show/suggestions/choose-your-basalt/
+- 10:15 — **Spooky Telephone Poles** (spooky-telephone-poles) — https://ford442.github.io/weeks_on_fire/show/suggestions/spooky-telephone-poles/
+  - ad break: Perpetual Optics — Because you’re going to keep looking.
+- 10:30 — **Choose Your Basalt** (choose-your-basalt) — rerun — https://ford442.github.io/weeks_on_fire/show/suggestions/choose-your-basalt/
+- 10:45 — **Ultra-Refreshed Water Lab** (ultra-refreshed-water-lab) — https://ford442.github.io/weeks_on_fire/show/suggestions/ultra-refreshed-water-lab/
+- 11:00 — **The Most Refreshing Drink** (mv-the-most-refreshing-drink) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-the-most-refreshing-drink/
+
+### Community Notice Board — Whenever, unannounced
+
+Scrolling HOA text over library music. Occasionally libelous.
+
+- 14:07 — **Call Forty-Seven** (mv-call-forty-seven) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-call-forty-seven/
+- 14:22 — **911 for the Wrong Shade of Blue** (911-wrong-shade) — https://ford442.github.io/weeks_on_fire/show/suggestions/911-wrong-shade/
+  - ad break: Brad’s Bins — Every shade of blue. One of them is correct.
+- 14:41 — **Item Three: Decorative Accent** (item-three-decorative-accent) — https://ford442.github.io/weeks_on_fire/show/suggestions/item-three-decorative-accent/
+  - ad break: Public service announcement — If you see a purple light in your driveway, that’s a decorative accent. Do not report it. Enjoy it.
+- 15:03 — **Rubella Stand-Up** (rubella-stand-up) — https://ford442.github.io/weeks_on_fire/show/suggestions/rubella-stand-up/
+- 15:20 — **Article Seven** (mv-article-seven) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-article-seven/
+- 15:34 — **Skeleton Union Break** (skeleton-union-break) — https://ford442.github.io/weeks_on_fire/show/suggestions/skeleton-union-break/
+
+### Out For Delivery — Erratic
+
+90 seconds of the Pizza Guy walking somewhere. No plot. Weirdly calming.
+
+- 17:52 — **Pepperoni or Margherita** (mv-pepperoni-or-margherita) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-pepperoni-or-margherita/
+- 18:09 — **Morning After the Portal** (morning-after-the-portal) — https://ford442.github.io/weeks_on_fire/show/suggestions/morning-after-the-portal/
+- 18:43 — **Pepperoni or Margherita** (mv-pepperoni-or-margherita) — rerun — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-pepperoni-or-margherita/
+
+### The Two at Eleven — 11:00 PM
+
+Glamour-apocalypse talk segment. Two chairs, one collapsing city.
+
+- 23:00 — **We Play to Win (House of Mirrors Rally)** (house-of-mirrors-rally) — https://ford442.github.io/weeks_on_fire/show/suggestions/house-of-mirrors-rally/
+- 23:10 — **Neon Exit Sign** (mv-neon-exit-sign) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-neon-exit-sign/
+- 23:20 — **Closed for Cosmic Reasons** (gag-closed-for-cosmic-reasons) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-closed-for-cosmic-reasons/
+- 23:25 — **Cities in the Shell** (gag-cities-in-the-shell) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-cities-in-the-shell/
+- 23:30 — **The Ice That Exhales** (gag-the-ice-that-exhales) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-the-ice-that-exhales/
+- 23:35 — **Furnace Season** (gag-furnace-season) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-furnace-season/
+- 23:40 — **The Moon Is Collect** (gag-the-moon-is-collect) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-the-moon-is-collect/
+- 23:45 — **Complaint Window, Deep Field** (gag-complaint-window-deep-field) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-complaint-window-deep-field/
+- 23:50 — **Third Shift Porcelain** (gag-third-shift-porcelain) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-third-shift-porcelain/
+- 23:55 — **Heels or No Entry** (mv-heels-or-no-entry) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-heels-or-no-entry/
+- 00:10 — **The Overnight Conservator** (gag-the-overnight-conservator) — https://ford442.github.io/weeks_on_fire/show/suggestions/gag-the-overnight-conservator/
+
+### Rinse Cycle — 2:00 AM
+
+Laundromat block. Strangers, warm dryers, slow songs.
+
+- 02:00 — **2AM Laundromat Slow Dance** (laundromat-slow-dance) — https://ford442.github.io/weeks_on_fire/show/suggestions/laundromat-slow-dance/
+- 02:20 — **The Laundromat Saints** (mv-the-laundromat-saints) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-the-laundromat-saints/
+- 02:40 — **Ultra Screech (Glam-Sham-Poo)** (mv-ultra-screech) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-ultra-screech/
+
+### Static Between Stations — Overnight until sign-off
+
+Ambient night-drive footage, no host, radio voice only.
+
+- 02:55 — **Static Between Stations** (mv-static-between-stations) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-static-between-stations/
+- 03:08 — **Empty Highway Confession** (empty-highway-confession) — https://ford442.github.io/weeks_on_fire/show/suggestions/empty-highway-confession/
+- 03:22 — **Closed Since Ninety-Eight** (mv-closed-since-ninety-eight) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-closed-since-ninety-eight/
+- 03:34 — **Quarter to Seventy-Five** (mv-quarter-to-seventy-five) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-quarter-to-seventy-five/
+
+### Sign-Off — 3:44
+
+The sign-off theme and the 3:44 card.
+
+- 03:44 — **Rinse Cycle** (mv-rinse-cycle) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-rinse-cycle/
+- 03:48 — **EyeWash Station Idents** (eyewash-idents) — rerun — https://ford442.github.io/weeks_on_fire/show/suggestions/eyewash-idents/
+
+### Test Pattern — Post-sign-off
+
+The card. Just the card. Something is behind the card.
+
+- 03:52 — **Please Stand By** (please-stand-by) — https://ford442.github.io/weeks_on_fire/show/suggestions/please-stand-by/
+- 04:00 — **Master Control, 4 AM** (master-control-4am) — https://ford442.github.io/weeks_on_fire/show/suggestions/master-control-4am/
+- 04:10 — **Haunted or Unscheduled** (mv-haunted-or-unscheduled) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-haunted-or-unscheduled/
+- 04:20 — **This Program Contains Dialogue** (mv-this-program-contains-dialogue) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-this-program-contains-dialogue/
+- 04:30 — **Receipt Dated Thursday** (mv-receipt-dated-thursday) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-receipt-dated-thursday/
+- 05:00 — **Chroma Bath** (chroma-bath) — https://ford442.github.io/weeks_on_fire/show/suggestions/chroma-bath/
+- 05:15 — **Color Whip** (color-whip) — https://ford442.github.io/weeks_on_fire/show/suggestions/color-whip/
+
+### Unscheduled
+
+- **Big City** (big-city) — https://ford442.github.io/weeks_on_fire/show/suggestions/big-city/
+- **Cat POV** (cat-pov) — https://ford442.github.io/weeks_on_fire/show/suggestions/cat-pov/
+- **Gallery Fog / Caffeinated Melon** (gallery-fog) — https://ford442.github.io/weeks_on_fire/show/suggestions/gallery-fog/
+- **Home Sweet Void** (home-sweet-void) — https://ford442.github.io/weeks_on_fire/show/suggestions/home-sweet-void/
+- **Marble Tick Tack: Wrong Sets** (marble-tick-tack-worlds) — https://ford442.github.io/weeks_on_fire/show/suggestions/marble-tick-tack-worlds/
+- **Marble Tick Tack** (marble-tick-tack) — https://ford442.github.io/weeks_on_fire/show/suggestions/marble-tick-tack/
+- **Molten Silver Sphere** (molten-silver-sphere) — https://ford442.github.io/weeks_on_fire/show/suggestions/molten-silver-sphere/
+- **Monster Mash Finale** (monster-mash-finale) — https://ford442.github.io/weeks_on_fire/show/suggestions/monster-mash-finale/
+- **Mountain Lion Wildflower Field** (mountain-lion-wildflowers) — https://ford442.github.io/weeks_on_fire/show/suggestions/mountain-lion-wildflowers/
+- **Empty Parking Lot Waltz** (mv-empty-parking-lot-waltz) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-empty-parking-lot-waltz/
+- **Heart Rate Optimal** (mv-heart-rate-optimal) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-heart-rate-optimal/
+- **Porch Light Meridian** (mv-porch-light-meridian) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-porch-light-meridian/
+- **Strange Light** (mv-strange-light) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-strange-light/
+- **The Roof Knows How to Wait** (mv-the-roof-knows-how-to-wait) — https://ford442.github.io/weeks_on_fire/show/suggestions/mv-the-roof-knows-how-to-wait/
+- **Neon Nightfall** (neon-nightfall) — https://ford442.github.io/weeks_on_fire/show/suggestions/neon-nightfall/
+- **No Other Human Sounds** (no-other-human-sounds) — https://ford442.github.io/weeks_on_fire/show/suggestions/no-other-human-sounds/
+- **Ping-Pong vs. AI Robot Showdown** (ping-pong-ai) — https://ford442.github.io/weeks_on_fire/show/suggestions/ping-pong-ai/
+- **Riley Was a Space Cop** (riley-space-cop) — https://ford442.github.io/weeks_on_fire/show/suggestions/riley-space-cop/
+- **The Seed Casts Twice** (seed-casts-twice) — https://ford442.github.io/weeks_on_fire/show/suggestions/seed-casts-twice/
+- **Short Packet Farm — Generate-First Boards** (short-packet-farm) — https://ford442.github.io/weeks_on_fire/show/suggestions/short-packet-farm/
+- **Short Packet Farm — Joke Interrupts** (short-packet-jokes) — https://ford442.github.io/weeks_on_fire/show/suggestions/short-packet-jokes/
+- **Short Packet Farm — Strange 3D** (short-packet-strange-3d) — https://ford442.github.io/weeks_on_fire/show/suggestions/short-packet-strange-3d/
+- **The 480p Studio Huddle** (studio-huddle) — https://ford442.github.io/weeks_on_fire/show/suggestions/studio-huddle/
+- **The Long Way Up** (the-long-way-up) — https://ford442.github.io/weeks_on_fire/show/suggestions/the-long-way-up/
+- **The Soft Gyre** (the-soft-gyre) — https://ford442.github.io/weeks_on_fire/show/suggestions/the-soft-gyre/
+- **The Velvet Rope at the End of the World** (velvet-rope) — https://ford442.github.io/weeks_on_fire/show/suggestions/velvet-rope/
+- **Well Fall** (well-fall) — https://ford442.github.io/weeks_on_fire/show/suggestions/well-fall/
+- **Yacht Guitar Orchestra** (yacht-guitar-orchestra) — https://ford442.github.io/weeks_on_fire/show/suggestions/yacht-guitar-orchestra/
 
 ## Cartoon ideas (agent parking lot)
 

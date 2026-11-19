@@ -115,6 +115,58 @@ export const CutawaySchema = z.object({
   sequenceInsertIds: linkIds.optional(),
 });
 
+/** A clock time as `HH:MM`, 24-hour. */
+export const ClockSchema = z
+  .string()
+  .regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'time must be HH:MM, 24-hour (e.g. "02:00")');
+
+/**
+ * A fake sponsor spot for the EyeWash Station schedule. Copy is transcribed from the ident pack
+ * (`ideas/eyewash-idents.md`); the full spot (still, VO) stays there.
+ */
+export const ScheduleSponsorSchema = z.strictObject({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  /** The spot's opening line, verbatim. */
+  tagline: z.string().min(1),
+  smallPrint: z.string().min(1).optional(),
+});
+
+/** One timed airing of a cutaway. Slots are authored in broadcast order. */
+export const ScheduleSlotSchema = z.strictObject({
+  /** Clock time the slot starts, `HH:MM` 24-hour. It runs until the next slot starts. */
+  at: ClockSchema,
+  /** The cutaway that airs (`content/cutaways/<id>.json`). */
+  cutawayId: z.string().min(1),
+  /** A repeat of a cutaway that already aired earlier in the day. The first airing is never a rerun. */
+  rerun: z.boolean().optional(),
+  /** Sponsor spot (`sponsors[].id`) that airs in the ad break after this slot. */
+  adBreak: z.string().min(1).optional(),
+});
+
+/** A named run of slots: "Continuing Education", "The Two at Eleven". */
+export const ScheduleBlockSchema = z.strictObject({
+  id: z.string().min(1),
+  title: z.string().min(1),
+  /** How the station words the slot ("Weekday mid-morning", "Whenever, unannounced"). */
+  when: z.string().min(1),
+  /** What airs in the block, one line. */
+  about: z.string().min(1),
+  slots: z.array(ScheduleSlotSchema).min(1),
+});
+
+/**
+ * The EyeWash Station rundown (`content/schedule.json`): one broadcast day, looping. It arranges
+ * existing cutaways in time; it never holds a cutaway idea of its own (those live once, in
+ * `content/cutaways/`). Cutaways with no slot show as unscheduled.
+ */
+export const ScheduleSchema = z.strictObject({
+  station: z.string().min(1),
+  channel: z.string().min(1),
+  sponsors: z.array(ScheduleSponsorSchema),
+  blocks: z.array(ScheduleBlockSchema).min(1),
+});
+
 /**
  * Archive lanes for stills. There is deliberately no `suggestion` lane: cutaway and gag ideas live
  * once, in `content/cutaways/`, and the Suggestions view is their only home.
@@ -417,6 +469,10 @@ export type SongFrontmatter = z.infer<typeof SongFrontmatterSchema>;
 export type CutawaySegmentRecord = z.infer<typeof CutawaySegmentSchema>;
 export type SightCandidateRecord = z.infer<typeof SightCandidateSchema>;
 export type CutawayRecord = z.infer<typeof CutawaySchema>;
+export type ScheduleSponsor = z.infer<typeof ScheduleSponsorSchema>;
+export type ScheduleSlot = z.infer<typeof ScheduleSlotSchema>;
+export type ScheduleBlock = z.infer<typeof ScheduleBlockSchema>;
+export type ScheduleRecord = z.infer<typeof ScheduleSchema>;
 export type FilmSceneRecord = z.infer<typeof FilmSceneSchema>;
 export type SeriesCharacterRecord = z.infer<typeof SeriesCharacterSchema>;
 export type CharacterBibleStatus = z.infer<typeof CharacterBibleStatusSchema>;

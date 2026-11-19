@@ -1,0 +1,142 @@
+{
+  "station": "EyeWash Station",
+  "channel": "12½",
+  "sponsors": [
+    {
+      "id": "perpetual-optics",
+      "name": "Perpetual Optics",
+      "tagline": "Because you’re going to keep looking.",
+      "smallPrint": "Not a medical device. Do not rinse the eye with the product. Use the station."
+    },
+    {
+      "id": "brads-bins",
+      "name": "Brad’s Bins",
+      "tagline": "Every shade of blue. One of them is correct.",
+      "smallPrint": "Not affiliated with the HOA. The HOA is affiliated with us."
+    },
+    {
+      "id": "public-service-announcement",
+      "name": "Public service announcement",
+      "tagline": "If you see a purple light in your driveway, that’s a decorative accent. Do not report it. Enjoy it.",
+      "smallPrint": "This message paid for by the cul-de-sac."
+    }
+  ],
+  "blocks": [
+    {
+      "id": "sign-on",
+      "title": "Sign-On",
+      "when": "Dawn",
+      "about": "Bars and tone at dawn.",
+      "slots": [{ "at": "06:00", "cutawayId": "eyewash-idents" }]
+    },
+    {
+      "id": "continuing-education",
+      "title": "Continuing Education",
+      "when": "Weekday mid-morning",
+      "about": "Dead-pan instructional cabaret with glamorous hosts who never smile.",
+      "slots": [
+        { "at": "10:00", "cutawayId": "choose-your-basalt" },
+        { "at": "10:15", "cutawayId": "spooky-telephone-poles", "adBreak": "perpetual-optics" },
+        { "at": "10:30", "cutawayId": "choose-your-basalt", "rerun": true },
+        { "at": "10:45", "cutawayId": "ultra-refreshed-water-lab" },
+        { "at": "11:00", "cutawayId": "mv-the-most-refreshing-drink" }
+      ]
+    },
+    {
+      "id": "community-notice-board",
+      "title": "Community Notice Board",
+      "when": "Whenever, unannounced",
+      "about": "Scrolling HOA text over library music. Occasionally libelous.",
+      "slots": [
+        { "at": "14:07", "cutawayId": "mv-call-forty-seven" },
+        { "at": "14:22", "cutawayId": "911-wrong-shade", "adBreak": "brads-bins" },
+        {
+          "at": "14:41",
+          "cutawayId": "item-three-decorative-accent",
+          "adBreak": "public-service-announcement"
+        },
+        { "at": "15:03", "cutawayId": "rubella-stand-up" },
+        { "at": "15:20", "cutawayId": "mv-article-seven" },
+        { "at": "15:34", "cutawayId": "skeleton-union-break" }
+      ]
+    },
+    {
+      "id": "out-for-delivery",
+      "title": "Out For Delivery",
+      "when": "Erratic",
+      "about": "90 seconds of the Pizza Guy walking somewhere. No plot. Weirdly calming.",
+      "slots": [
+        { "at": "17:52", "cutawayId": "mv-pepperoni-or-margherita" },
+        { "at": "18:09", "cutawayId": "morning-after-the-portal" },
+        { "at": "18:43", "cutawayId": "mv-pepperoni-or-margherita", "rerun": true }
+      ]
+    },
+    {
+      "id": "the-two-at-eleven",
+      "title": "The Two at Eleven",
+      "when": "11:00 PM",
+      "about": "Glamour-apocalypse talk segment. Two chairs, one collapsing city.",
+      "slots": [
+        { "at": "23:00", "cutawayId": "house-of-mirrors-rally" },
+        { "at": "23:10", "cutawayId": "mv-neon-exit-sign" },
+        { "at": "23:20", "cutawayId": "gag-closed-for-cosmic-reasons" },
+        { "at": "23:25", "cutawayId": "gag-cities-in-the-shell" },
+        { "at": "23:30", "cutawayId": "gag-the-ice-that-exhales" },
+        { "at": "23:35", "cutawayId": "gag-furnace-season" },
+        { "at": "23:40", "cutawayId": "gag-the-moon-is-collect" },
+        { "at": "23:45", "cutawayId": "gag-complaint-window-deep-field" },
+        { "at": "23:50", "cutawayId": "gag-third-shift-porcelain" },
+        { "at": "23:55", "cutawayId": "mv-heels-or-no-entry" },
+        { "at": "00:10", "cutawayId": "gag-the-overnight-conservator" }
+      ]
+    },
+    {
+      "id": "rinse-cycle",
+      "title": "Rinse Cycle",
+      "when": "2:00 AM",
+      "about": "Laundromat block. Strangers, warm dryers, slow songs.",
+      "slots": [
+        { "at": "02:00", "cutawayId": "laundromat-slow-dance" },
+        { "at": "02:20", "cutawayId": "mv-the-laundromat-saints" },
+        { "at": "02:40", "cutawayId": "mv-ultra-screech" }
+      ]
+    },
+    {
+      "id": "static-between-stations",
+      "title": "Static Between Stations",
+      "when": "Overnight until sign-off",
+      "about": "Ambient night-drive footage, no host, radio voice only.",
+      "slots": [
+        { "at": "02:55", "cutawayId": "mv-static-between-stations" },
+        { "at": "03:08", "cutawayId": "empty-highway-confession" },
+        { "at": "03:22", "cutawayId": "mv-closed-since-ninety-eight" },
+        { "at": "03:34", "cutawayId": "mv-quarter-to-seventy-five" }
+      ]
+    },
+    {
+      "id": "sign-off",
+      "title": "Sign-Off",
+      "when": "3:44",
+      "about": "The sign-off theme and the 3:44 card.",
+      "slots": [
+        { "at": "03:44", "cutawayId": "mv-rinse-cycle" },
+        { "at": "03:48", "cutawayId": "eyewash-idents", "rerun": true }
+      ]
+    },
+    {
+      "id": "test-pattern",
+      "title": "Test Pattern",
+      "when": "Post-sign-off",
+      "about": "The card. Just the card. Something is behind the card.",
+      "slots": [
+        { "at": "03:52", "cutawayId": "please-stand-by" },
+        { "at": "04:00", "cutawayId": "master-control-4am" },
+        { "at": "04:10", "cutawayId": "mv-haunted-or-unscheduled" },
+        { "at": "04:20", "cutawayId": "mv-this-program-contains-dialogue" },
+        { "at": "04:30", "cutawayId": "mv-receipt-dated-thursday" },
+        { "at": "05:00", "cutawayId": "chroma-bath" },
+        { "at": "05:15", "cutawayId": "color-whip" }
+      ]
+    }
+  ]
+}

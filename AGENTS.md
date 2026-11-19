@@ -43,7 +43,7 @@ Header navigation in `src/components/SiteHeader.tsx` / `scripts/content-index/vi
 | Timeline       | `/timeline`    | Scene status, local edits, exportable production JSON          |
 | Songs          | `/songs`       | Minimax catalog — style prompts, lyrics, episode ties          |
 | Scenes         | `/scenes`      | Scene pages (`/scenes/:id`): locks, sequence, keyframes, video |
-| Suggestions    | `/suggestions` | Cutaways, gags, scene suggestions, timed prompts               |
+| Suggestions    | `/suggestions` | EyeWash schedule: cutaways in time slots, timed prompts        |
 | Cartoons       | `/cartoons`    | Short cartoon seeds from agents (no song id)                   |
 | 3D Sequences   | `/sequences`   | Playable in-hub 3D video sequences (10s–2min)                  |
 | Characters     | `/characters`  | Cast bible; `/characters/:id` profile with an Appears-in strip |

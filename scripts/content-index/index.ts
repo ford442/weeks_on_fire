@@ -10,6 +10,7 @@ import {
   loadEpisodes,
   loadCartoons,
   loadSequences,
+  loadProductions,
   loadTaxonomy,
   loadCustomRendererIds,
 } from './load';
@@ -19,6 +20,7 @@ import {
   validateCartoons,
   validateCharacters,
   validateSequences,
+  validateScenes,
   validateTaxonomy,
 } from './validate';
 import {
@@ -31,6 +33,7 @@ import {
   emitEpisodesModule,
   emitCartoonsModule,
   emitSequencesModule,
+  emitCatalogRefsModule,
   emitTaxonomyModule,
 } from './emit';
 import { syncOutputs } from './output';
@@ -50,6 +53,7 @@ function main() {
   const cartoons = loadCartoons(repoRoot);
   const sequences = loadSequences(repoRoot);
   const taxonomy = loadTaxonomy(repoRoot);
+  const productions = loadProductions(repoRoot);
 
   validateContent(repoRoot, songs, cutaways, checkMode);
   validateEpisodes(repoRoot, episodes);
@@ -57,6 +61,13 @@ function main() {
   validateCartoons(repoRoot, cartoons);
   validateCharacters(repoRoot, characters);
   validateSequences(repoRoot, sequences, loadCustomRendererIds(repoRoot));
+  validateScenes(productions, {
+    songs: new Set(songs.map((song) => song.id)),
+    cutaways: new Set(cutaways.map((cutaway) => cutaway.id)),
+    sequences: new Set(sequences.map((sequence) => sequence.id)),
+    cartoons: new Set(cartoons.map((cartoon) => cartoon.id)),
+    characters: new Set(characters.map((character) => character.id)),
+  });
 
   const outputs = {
     'songs.ts': emitSongsModule(songs),
@@ -74,6 +85,7 @@ function main() {
     'cartoons.ts': emitCartoonsModule(cartoons),
     'sequences.ts': emitSequencesModule(sequences),
     'taxonomy.ts': emitTaxonomyModule(taxonomy),
+    'catalog-refs.ts': emitCatalogRefsModule({ songs, cutaways, sequences, cartoons, characters }),
   };
   syncOutputs(generatedDir, outputs, {
     check: checkMode,
@@ -82,7 +94,7 @@ function main() {
   });
 
   console.log(
-    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences.`,
+    `Generated ${songs.length} songs, ${cutaways.length} cutaways, ${gallery.length} gallery scenes, ${characters.length} characters, ${crew.length} crew, ${episodes.length} episodes, ${cartoons.length} cartoons, ${sequences.length} sequences; checked ${productions.length} scenes.json files.`,
   );
 }
 

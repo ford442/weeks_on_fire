@@ -4,13 +4,14 @@ import { join } from 'node:path';
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { loadCartoons, loadSequences } from './load';
+import { loadCartoons, loadProductions, loadSequences } from './load';
 import { SequenceGraphSchema } from './graph-schema';
 import { SequenceSchema } from './schemas';
 import {
   validateContent,
   validateCartoons,
   validateCharacters,
+  validateScenes,
   validateSequences,
   validateTaxonomy,
 } from './validate';
@@ -23,7 +24,8 @@ import type {
   SequenceRecord,
   SeriesCharacterRecord,
 } from './schemas';
-import type { ParsedSong } from './load';
+import type { LoadedProduction, ParsedSong } from './load';
+import type { CatalogIds } from './validate';
 
 function makeSong(overrides: Partial<ParsedSong> = {}): ParsedSong {
   return {
@@ -481,5 +483,147 @@ describe('validateTaxonomy', () => {
   it('requires a taxonomy entry for every episode in episodes.json', () => {
     const extra = [{ id: '01' }, { id: '09' }] as EpisodeRecord[];
     expect(() => validateTaxonomy(taxonomy, extra, [], [])).toThrow(/episode "09"/);
+  });
+});
+
+describe('scene catalog refs', () => {
+  const catalog: CatalogIds = {
+    songs: new Set(['call-forty-seven']),
+    cutaways: new Set(['911-wrong-shade']),
+    sequences: new Set(['lattice-hymn']),
+    cartoons: new Set(['cereal-wolf']),
+    characters: new Set(['lillith', 'rubella']),
+  };
+
+  function scene(id: string, extra: Record<string, unknown> = {}) {
+    return {
+      id,
+      order: 1,
+      title: 'Scene',
+      timestamp: '00:00:00',
+      description: '',
+      status: 'draft' as const,
+      addedAt: '2026-01-01T00:00:00Z',
+      lastEditedAt: '2026-01-01T00:00:00Z',
+      history: [],
+      ...extra,
+    };
+  }
+
+  function productions(...scenes: ReturnType<typeof scene>[]): LoadedProduction[] {
+    return [
+      {
+        episode: '01',
+        file: 'episodes/episode-01/scenes.json',
+        production: {
+          episode: '01',
+          title: 'Episode 01',
+          lastUpdated: '2026-01-01T00:00:00Z',
+          scenes,
+          episodeHistory: [],
+        },
+      },
+    ];
+  }
+
+  it('accepts scenes with no refs at all', () => {
+    expect(() => validateScenes(productions(scene('scene-001')), catalog)).not.toThrow();
+  });
+
+  it('accepts refs that exist in their catalog', () => {
+    const linked = scene('scene-001', {
+      songId: 'call-forty-seven',
+      cutawayId: '911-wrong-shade',
+      sequenceId: 'lattice-hymn',
+      cartoonId: 'cereal-wolf',
+      characterIds: ['lillith', 'rubella'],
+    });
+    expect(() => validateScenes(productions(linked), catalog)).not.toThrow();
+  });
+
+  it('names the episode, scene, field and id for an unknown songId', () => {
+    const bad = scene('scene-002', { songId: 'no-such-track' });
+    expect(() => validateScenes(productions(bad), catalog)).toThrow(
+      'episode 01 scene-002 songId "no-such-track" is not a song id',
+    );
+  });
+
+  it.each([
+    ['cutawayId', 'nope', 'cutaway'],
+    ['sequenceId', 'nope', 'sequence'],
+    ['cartoonId', 'nope', 'cartoon'],
+  ])('rejects an unknown %s', (key, id, noun) => {
+    const bad = scene('scene-001', { [key]: id });
+    expect(() => validateScenes(productions(bad), catalog)).toThrow(
+      `episode 01 scene-001 ${key} "${id}" is not a ${noun} id`,
+    );
+  });
+
+  it('rejects an unknown entry in characterIds and keeps the known ones quiet', () => {
+    const bad = scene('scene-001', { characterIds: ['lillith', 'nobody'] });
+    expect(() => validateScenes(productions(bad), catalog)).toThrow(
+      'episode 01 scene-001 characterIds "nobody" is not a character id',
+    );
+    expect(() => validateScenes(productions(bad), catalog)).not.toThrow(/"lillith"/);
+  });
+
+  it('does not accept an id from the wrong catalog', () => {
+    const bad = scene('scene-001', { songId: '911-wrong-shade' });
+    expect(() => validateScenes(productions(bad), catalog)).toThrow(/songId "911-wrong-shade"/);
+  });
+
+  it('reports every bad ref in one failure', () => {
+    const bad = productions(
+      scene('scene-001', { songId: 'a' }),
+      scene('scene-002', { cartoonId: 'b', characterIds: ['c'] }),
+    );
+    expect(() => validateScenes(bad, catalog)).toThrow(
+      /scene-001 songId "a".*\n.*scene-002 cartoonId "b".*\n.*scene-002 characterIds "c"/,
+    );
+  });
+
+  describe('loadProductions', () => {
+    let root: string;
+
+    beforeEach(() => {
+      root = mkdtempSync(join(tmpdir(), 'wof-productions-'));
+    });
+    afterEach(() => {
+      rmSync(root, { recursive: true, force: true });
+    });
+
+    function write(folder: string, data: unknown) {
+      mkdirSync(join(root, 'episodes', folder), { recursive: true });
+      writeFileSync(join(root, 'episodes', folder, 'scenes.json'), JSON.stringify(data));
+    }
+
+    const valid = (episode: string) => ({
+      episode,
+      title: `Episode ${episode}`,
+      lastUpdated: '2026-01-01T00:00:00Z',
+      scenes: [scene('scene-001', { cutawayId: '911-wrong-shade' })],
+      episodeHistory: [],
+    });
+
+    it('reads every episode folder in order, takes the episode id from the folder, and keeps refs', () => {
+      write('episode-02', valid('02'));
+      write('episode-01', valid('01'));
+      mkdirSync(join(root, 'episodes', 'episode-03'), { recursive: true }); // no scenes.json
+      mkdirSync(join(root, 'episodes', 'notes'), { recursive: true });
+
+      const loaded = loadProductions(root);
+
+      expect(loaded.map((item) => item.episode)).toEqual(['01', '02']);
+      expect(loaded[0]?.file).toBe('episodes/episode-01/scenes.json');
+      expect(loaded[0]?.production.scenes[0]?.cutawayId).toBe('911-wrong-shade');
+    });
+
+    it('fails with the file path when a scenes.json does not match the Timeline schema', () => {
+      write('episode-01', { ...valid('01'), scenes: [scene('scene-001', { songId: '' })] });
+
+      expect(() => loadProductions(root)).toThrow(
+        /episodes\/episode-01\/scenes\.json does not match the Timeline schema[\s\S]*songId/,
+      );
+    });
   });
 });

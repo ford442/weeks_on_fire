@@ -9,6 +9,7 @@ import {
   ClipStackerPayloadSchema,
   EpisodeProductionSchema,
   ProductionSceneSchema,
+  pickCatalogRefs,
 } from '../schemas/production';
 
 import type {
@@ -96,6 +97,8 @@ export function exportToClipStacker(production: EpisodeProduction): ClipStackerP
       status: scene.status,
       mediaUrl: scene.mediaUrl || null,
       description: scene.description,
+      // Catalog refs ride along only when set; an unset ref is an omitted key.
+      ...pickCatalogRefs(scene),
     })),
     episodeHistory: production.episodeHistory,
   };
@@ -121,6 +124,9 @@ export function clipStackerToProduction(
           status: clip.status,
           mediaUrl: clip.mediaUrl ?? '',
           description: clip.description,
+          // Refs the clip carries replace the scene's; refs it omits are kept, so an external
+          // clip_stacker that does not know these fields cannot erase them.
+          ...pickCatalogRefs(clip),
           lastEditedAt: now,
           history: [
             ...existing.history,
@@ -143,6 +149,7 @@ export function clipStackerToProduction(
         status: clip.status,
         mediaUrl: clip.mediaUrl ?? '',
         description: clip.description,
+        ...pickCatalogRefs(clip),
         lastEditedAt: now,
         history: [
           {

@@ -1,7 +1,7 @@
 {
   "episode": "04",
   "title": "Weeks on Fire - Episode 04",
-  "lastUpdated": "2026-09-13T12:00:00Z",
+  "lastUpdated": "2026-11-19T12:00:00Z",
   "scenes": [
     {
       "id": "scene-001",
@@ -54,14 +54,20 @@
       "description": "INT. KAREN'S KITCHEN / 911 FLOOR — MORNING. Karen's clipboard, purple blinds, transfer loop. Skip if the meeting is running long. See content/cutaways/911-wrong-shade.json.",
       "prompt": "Split-composition still: suburban kitchen table with a clipboard and a cordless phone, purple light through blinds, opposite a tired 911 operator under fluorescent lights, deadpan zoning-emergency comedy, cinematic, Grok Imagine style",
       "mediaUrl": "",
+      "cutawayId": "911-wrong-shade",
       "status": "draft",
       "addedAt": "2026-08-31T12:00:00Z",
-      "lastEditedAt": "2026-08-31T12:00:00Z",
+      "lastEditedAt": "2026-11-19T12:00:00Z",
       "history": [
         {
           "date": "2026-08-31T12:00:00Z",
           "action": "added",
           "note": "Optional cutaway; not required for the meeting spine"
+        },
+        {
+          "date": "2026-11-19T12:00:00Z",
+          "action": "edited",
+          "note": "Linked cutawayId 911-wrong-shade; the description already pointed at content/cutaways/911-wrong-shade.json. First scene seeded with a catalog ref."
         }
       ]
     },

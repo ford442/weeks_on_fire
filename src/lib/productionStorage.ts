@@ -1,6 +1,7 @@
 import { PRODUCTION_STORAGE_SCHEMA_VERSION, parseStoredProduction } from '../schemas/production';
 
 import type { EpisodeProduction } from '../data/production';
+import type { StoredProduction } from '../schemas/production';
 
 function storageKey(episode: string): string {
   return `wof:production:episode-${episode}`;
@@ -22,7 +23,7 @@ export function loadStored(episode: string): EpisodeProduction | null {
 }
 
 export function saveStored(episode: string, production: EpisodeProduction): void {
-  const payload = {
+  const payload: StoredProduction = {
     schemaVersion: PRODUCTION_STORAGE_SCHEMA_VERSION,
     savedAt: new Date().toISOString(),
     production,

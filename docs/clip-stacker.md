@@ -34,6 +34,24 @@ parser. Unrecognized extra fields on a payload are accepted and stripped rather 
 the format can grow without breaking older exports. See `src/schemas/production.test.ts` for the
 export → import round-trip and rejection cases covered by `npm run test`.
 
+### Catalog refs
+
+A scene (`ProductionScene`) and a clip (`ClipStackerClip`) may each carry optional pointers to the
+catalog records that play in that slot. The keys are defined once by `CatalogRefsSchema` in
+[`src/schemas/production.ts`](../src/schemas/production.ts) — this document does not restate them.
+They follow three rules:
+
+- **Optional, and validated only when present.** A scene with just a prompt stays valid. Old
+  payloads that omit the keys still parse; an external clip_stacker that does not know the fields
+  keeps working, because unknown keys are stripped.
+- **Unset is an omitted key, never `""` or `[]`.** A blank id fails validation, so "unset" and "set
+  to blank" cannot be confused. Exports include a ref only when it is set; `version` stays
+  `weeks_on_fire_v1`.
+- **Ids, not titles.** A scene's own `title` remains the human label and may differ from the
+  catalog title on purpose. In committed `episodes/episode-NN/scenes.json`, `npm run codegen`
+  fails on an id that is not in the catalog it names (the same class of check as
+  `cutaway.songId`); the Timeline editor only offers known ids.
+
 ### Omitted on export
 
 These fields exist in `episodes/episode-NN/scenes.json` but are **not** included in clip_stacker exports:
@@ -52,8 +70,8 @@ When importing a `clip-stacker-*.json` file:
 
 1. Validate `version === "weeks_on_fire_v1"` and `clips` is an array.
 2. For each clip, match by `id` against the **committed** `scenes.json` baseline for the current episode.
-3. **Matched scenes** — update `title`, `timestamp`, `order`, `status`, `mediaUrl`, `description`; preserve `prompt`, `addedAt`, and prior `history`; append an `"Imported from clip_stacker"` history entry.
-4. **New clip IDs** — create a new scene with defaults; append import history.
+3. **Matched scenes** — update `title`, `timestamp`, `order`, `status`, `mediaUrl`, `description`; preserve `prompt`, `addedAt`, and prior `history`; append an `"Imported from clip_stacker"` history entry. Catalog refs the clip carries replace the scene's; refs the clip omits are kept (a tool that does not know the fields cannot erase them — clear a ref in the Timeline editor).
+4. **New clip IDs** — create a new scene with defaults (and any refs the clip carries); append import history.
 5. `episodeHistory` from the payload **replaces** the episode history.
 6. `title` ← `project`; `lastUpdated` ← import time.
 
@@ -61,6 +79,18 @@ When importing a `clip-stacker-*.json` file:
 
 - Import cannot restore `prompt` or per-scene history for clips whose `id` does not match a committed scene.
 - Re-importing after editing only in clip_stacker will overwrite matched scene fields.
+
+## Stored edits (localStorage)
+
+The Timeline keeps in-progress edits in `wof:production:episode-NN` as an envelope
+(`schemaVersion`, `savedAt`, `production`; see `StoredProductionSchema`). Loading goes through
+`migrateStoredProduction` in the same schema module, which `parseStoredProduction` calls:
+
+- `schemaVersion` stays at **1** while every new key is optional — v1 documents with or without
+  catalog refs both load as-is.
+- A change old documents cannot satisfy bumps `PRODUCTION_STORAGE_SCHEMA_VERSION` and adds a
+  `fromVersion` step (`fromV1`, then `fromV2`, …), so saved edits are carried forward instead of
+  discarded. Unknown or newer versions, and payloads that fail the current schema, return `null`.
 
 ## Example minimal payload
 

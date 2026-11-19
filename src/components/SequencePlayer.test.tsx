@@ -9,7 +9,10 @@ import { createSequenceScene } from '../sequences/registry';
 
 import SequencePlayer from './SequencePlayer';
 
-vi.mock('../lib/webgl/context', () => ({ createSequenceGl: vi.fn() }));
+vi.mock('../lib/webgl/context', async (importOriginal) => ({
+  ...(await importOriginal<typeof import('../lib/webgl/context')>()),
+  createSequenceGl: vi.fn(),
+}));
 vi.mock('../lib/webgl/engine', () => ({
   SequenceEngine: class {
     dispose() {}
@@ -25,10 +28,10 @@ function makeScene() {
   return { init: vi.fn(), draw: vi.fn(), dispose: vi.fn() };
 }
 
-function renderPlayer() {
+function renderPlayer(props: { capture?: boolean } = {}) {
   return render(
     <MediaSessionProvider>
-      <SequencePlayer sequence={sequence} />
+      <SequencePlayer sequence={sequence} {...props} />
     </MediaSessionProvider>,
   );
 }
@@ -53,6 +56,50 @@ describe('SequencePlayer without WebGL', () => {
     renderPlayer();
     expect(screen.getByText(/WebGL is unavailable/)).toBeTruthy();
   });
+
+  it('reports data-gl="none" on the canvas', () => {
+    renderPlayer();
+    expect(screen.getByRole('img').getAttribute('data-gl')).toBe('none');
+  });
+
+  it('adds the browser statusMessage from webglcontextcreationerror to the overlay', () => {
+    vi.mocked(createSequenceGl).mockImplementation((_canvas, opts) => {
+      opts?.onCreationError?.('Could not create a WebGL2 context, VENDOR = 0xffff');
+      opts?.onCreationError?.('Could not create a WebGL2 context, VENDOR = 0xffff');
+      opts?.onCreationError?.('GPU process was unable to boot');
+      return null;
+    });
+    renderPlayer();
+    const text = screen.getByText(/WebGL is unavailable/).parentElement?.textContent ?? '';
+    expect(text).toContain('Could not create a WebGL2 context, VENDOR = 0xffff');
+    expect(text).toContain('GPU process was unable to boot');
+    // The same message from the webgl2 and webgl attempts is listed once.
+    expect(text.match(/VENDOR = 0xffff/g)).toHaveLength(1);
+  });
+
+  it('shows the bare message when the browser gave no reason', () => {
+    renderPlayer();
+    expect(screen.getByText(/WebGL is unavailable/).parentElement?.textContent).toBe(
+      'WebGL is unavailable in this browser, so the in-hub player cannot run.',
+    );
+  });
+});
+
+describe('SequencePlayer context options', () => {
+  beforeEach(() => {
+    vi.mocked(createSequenceGl).mockReset();
+    vi.mocked(createSequenceGl).mockReturnValue(null);
+  });
+
+  it('does not ask for a preserved drawing buffer by default', () => {
+    renderPlayer();
+    expect(vi.mocked(createSequenceGl).mock.lastCall?.[1]).toMatchObject({ capture: false });
+  });
+
+  it('asks for a preserved drawing buffer only when capture is set', () => {
+    renderPlayer({ capture: true });
+    expect(vi.mocked(createSequenceGl).mock.lastCall?.[1]).toMatchObject({ capture: true });
+  });
 });
 
 describe('SequencePlayer with a stubbed GL context', () => {
@@ -75,6 +122,26 @@ describe('SequencePlayer with a stubbed GL context', () => {
       vi.advanceTimersByTime(ms);
     });
   };
+
+  it('reports the context type it got as data-gl', () => {
+    renderPlayer();
+    // jsdom has no WebGL2RenderingContext, so the stub counts as WebGL1.
+    expect(screen.getByRole('img').getAttribute('data-gl')).toBe('webgl');
+  });
+
+  it('shows why the scene failed to start instead of a bare "unavailable"', () => {
+    const error = vi.spyOn(console, 'error').mockImplementation(() => {});
+    scene.init.mockImplementation(() => {
+      throw new Error('ERROR: 0:12: undeclared identifier uTime');
+    });
+    renderPlayer();
+    const overlay = screen.getByText(/WebGL is unavailable/).parentElement;
+    expect(overlay?.textContent).toContain('ERROR: 0:12: undeclared identifier uTime');
+    expect(error).toHaveBeenCalled();
+    // The context itself was fine, so the canvas still reports it.
+    expect(screen.getByRole('img').getAttribute('data-gl')).toBe('webgl');
+    error.mockRestore();
+  });
 
   it('plays, then pauses and holds the film time', () => {
     renderPlayer();

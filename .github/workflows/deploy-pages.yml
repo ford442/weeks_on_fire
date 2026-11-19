@@ -1,19 +1,23 @@
-# Build the Vite app and deploy dist/ to GitHub Pages.
+# Verify the Vite app on every pull request and push to main; deploy dist/ to GitHub Pages from
+# main (or a manual run) once the same checks pass.
 # Repo Settings → Pages → Source: GitHub Actions
-name: Deploy GitHub Pages
+name: CI and Pages
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
+# Read-only by default, which is all a fork pull request is given. Only the deploy job (never run
+# for a pull request) asks for pages/id-token.
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
+# Deploys share one group so a newer push replaces an older one. Pull requests get their own
+# group per PR so they can never cancel a deploy.
 concurrency:
-  group: pages
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
   cancel-in-progress: true
 
 jobs:
@@ -66,14 +70,40 @@ jobs:
       - name: Bundle size check
         run: npx tsx scripts/check-bundle-size.ts
 
+      # Vitest runs under jsdom, which has no WebGL. This opens the build just made (same
+      # VITE_BASE) in Chromium with software GL and checks the 3D player draws real frames.
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Real-GL frame harness
+        run: npm run test:e2e
+
+      - name: Upload e2e report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
   deploy:
     needs: build
+    # Pull requests verify only; they never deploy or request the github-pages environment.
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

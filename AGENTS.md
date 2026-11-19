@@ -26,7 +26,7 @@ Root `index.html` is the **Vite entry** (`/src/main.tsx`). It is not a standalon
 | Codegen         | `tsx` + Zod (devDependency)    | `scripts/content-index/*.ts`. No extra runtime libraries.         |
 | Episode archive | Markdown + SRT + `scenes.json` | Separate from the React catalog index.                            |
 | Python helpers  | stdlib-only scripts            | Imagine API, slideshow assemble, episode scaffold.                |
-| Deploy          | GitHub Actions → Pages         | `.github/workflows/deploy-pages.yml` (`npm ci && npm run build`). |
+| Deploy          | GitHub Actions → Pages         | `.github/workflows/deploy-pages.yml` (`npm ci && npm run build`). Pull requests run the same checks plus the e2e frame harness; only `main` deploys. |
 
 TypeScript is the hub language. Do not add a new runtime library, in-repo C++, or `compile_commands.json` unless explicitly asked.
 
@@ -106,11 +106,13 @@ npm run codegen          # content/ + songs/ → src/data/generated/
 npm run codegen:check    # fail if generated files drifted (read-only, never writes)
 npm run agent-docs       # regenerate public/llms.txt, llms-full.txt, sitemap.xml
 npm run agent-docs:check # read-only drift check
-npm run lint             # type-aware ESLint (typescript-eslint, jsx-a11y, import-x) on src/ and scripts/
-npm run format           # Prettier check on src/ and scripts/
+npm run lint             # type-aware ESLint (typescript-eslint, jsx-a11y, import-x) on src/, scripts/ and e2e/
+npm run format           # Prettier check on src/, scripts/ and e2e/
 npm run format:write
 npm run test             # Vitest: libs in node, src/components/** in jsdom
 npm run test:coverage    # same, with v8 coverage (no threshold yet)
+npm run test:e2e         # real-GL frame harness: Playwright + Chromium vs e2e/fixtures/ (needs a Pages-base build)
+npm run test:e2e:update  # regenerate e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check + dist/1ink.1ink
 npm run preview
 ```
@@ -119,7 +121,7 @@ Use Node 22 (`.nvmrc`), the version CI and Pages build with.
 
 Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` keeps `data/`, `sequences/` and `lib/webgl` acyclic and `import-x/order` sorts imports. Do not add `eslint-disable` in `src/lib/webgl` or `src/sequences`. `npm install` needs the `overrides` entry in `package.json` because `eslint-plugin-jsx-a11y` has not declared ESLint 10 support yet.
 
-`tsc -b` typechecks **three** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the TS bundle checks). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
+`tsc -b` typechecks **four** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the TS bundle checks), `tsconfig.e2e.json` (`e2e/` and `playwright.config.ts`). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
 
 ### Python helpers (real files)
 

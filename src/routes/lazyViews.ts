@@ -3,6 +3,7 @@ import type { SiteView } from '../components/SiteHeader';
 /** Dynamic imports for each view; shared by `React.lazy` and hover/idle prefetch so both hit one chunk. */
 export const viewLoaders = {
   overview: () => import('../components/Overview'),
+  finalized: () => import('../components/Finalized'),
   gallery: () => import('../components/Gallery'),
   timeline: () => import('../components/TimelinePage'),
   songs: () => import('../components/Songs'),
@@ -27,6 +28,7 @@ export function prefetchView(view: SiteView): void {
 /** Views most visitors open after landing; fetched once the browser is idle. */
 export const likelyViews: readonly SiteView[] = [
   'overview',
+  'finalized',
   'gallery',
   'songs',
   'suggestions',

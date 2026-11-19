@@ -37,6 +37,7 @@ export function emitSongsModule(
     lyrics: string | null;
     notes: string | null;
     audioFile: string | null;
+    status: string;
   }>,
 ): string {
   const linked = songs
@@ -60,6 +61,7 @@ export function emitSongsModule(
     lyrics: ${song.lyrics ? toTsString(song.lyrics) : 'null'},
     notes: ${song.notes ? toTsString(song.notes) : 'null'},
     instrumental: ${song.instrumental},
+    status: ${toTsString(song.status)},
     tags: ${toTsStringArray(song.tags)},
     sourceFile: ${toTsString(song.sourceFile)}${audioLine}
   }`;

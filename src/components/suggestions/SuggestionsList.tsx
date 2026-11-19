@@ -8,6 +8,9 @@ import {
 } from '../../data/suggestions';
 import { getDialogVersionsForScene } from '../../data/sceneDialogVersions';
 import { pluralize } from '../../lib/plural';
+import { statusOptions, type ProductionStatus } from '../../lib/status';
+import FilterSelect from '../FilterSelect';
+import StatusBadge from '../StatusBadge';
 
 import { allValue, isOpenSlot } from './sightSlots';
 
@@ -23,6 +26,9 @@ interface SuggestionsListProps {
   kindCounts: Record<SuggestionKind, number>;
   kind: typeof allValue | SuggestionKind;
   query: string;
+  status: typeof allValue | ProductionStatus;
+  statusCounts: Partial<Record<ProductionStatus, number>>;
+  onStatus: (status: typeof allValue | ProductionStatus) => void;
   selectedId?: string;
   activeSegmentId?: string;
   previewSightBySegment: Map<string, SightCandidate>;
@@ -38,6 +44,9 @@ export default function SuggestionsList({
   kindCounts,
   kind,
   query,
+  status,
+  statusCounts,
+  onStatus,
   selectedId,
   activeSegmentId,
   previewSightBySegment,
@@ -75,6 +84,14 @@ export default function SuggestionsList({
               onClick={() => onKind('scene')}
             />
           </div>
+        </div>
+        <div className="mt-3">
+          <FilterSelect
+            label="Status"
+            value={status}
+            options={statusOptions(statusCounts)}
+            onChange={(value) => onStatus(value as typeof allValue | ProductionStatus)}
+          />
         </div>
         <label className="relative mt-3 block">
           <span className="sr-only">Search suggestions</span>
@@ -214,21 +231,6 @@ function KindChip({
     >
       {label}
     </button>
-  );
-}
-
-function StatusBadge({ status }: { status: CutawaySuggestion['status'] }) {
-  const label =
-    status === 'ready-to-generate'
-      ? 'Ready to generate'
-      : status === 'in-production'
-        ? 'In production'
-        : 'Suggested';
-
-  return (
-    <span className="rounded-md border border-orange-500/30 bg-orange-500/10 px-2.5 py-1 text-xs font-semibold text-orange-200">
-      {label}
-    </span>
   );
 }
 

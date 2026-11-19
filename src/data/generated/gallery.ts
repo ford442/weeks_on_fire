@@ -29,6 +29,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-flower-engine",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -46,6 +47,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-mobius-ribbon",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -63,6 +65,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-gyre-victorian",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -80,6 +83,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-tetrahedron-sea",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -97,6 +101,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-sphere-tower",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -114,6 +119,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-glass-cathedral",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -131,6 +137,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-flower-nebula",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -148,6 +155,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-psy-xai-klein-lattice",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     tool: "grok-imagine",
@@ -165,6 +173,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-laser-serpent-awakening",
     imageKind: "scene",
+    status: "approved",
     added: "2026-10-09",
     episode: "03",
     title: "Laser Serpent Awakening",
@@ -181,6 +190,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-rubella-signal",
     imageKind: "scene",
+    status: "approved",
     added: "2026-10-09",
     episode: "03",
     title: "Rubella Signal",
@@ -197,6 +207,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-snake-battle-canyon",
     imageKind: "scene",
+    status: "approved",
     added: "2026-10-09",
     episode: "03",
     title: "Snake Battle Canyon",
@@ -213,6 +224,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-static-altar",
     imageKind: "scene",
+    status: "approved",
     added: "2026-10-09",
     episode: "03",
     title: "Static Altar",
@@ -229,6 +241,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "ep03-fireline-exit",
     imageKind: "scene",
+    status: "approved",
     added: "2026-10-09",
     episode: "03",
     title: "Fireline Exit",
@@ -245,6 +258,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "character-reference-two",
     imageKind: "character",
+    status: "approved",
     added: "2026-10-09",
     episode: "character-archive",
     title: "The Two",
@@ -261,6 +275,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "character-reference-alt",
     imageKind: "character",
+    status: "approved",
     added: "2026-10-09",
     episode: "character-archive",
     title: "The Two - Alternate Frame",
@@ -277,6 +292,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-computer-room",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "ideas",
     title: "Computer Room — Broadcast Control",
@@ -293,6 +309,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "test-hologram-glitch",
     imageKind: "test",
+    status: "generated",
     added: "2026-10-09",
     episode: "03",
     slot: "Ideas",
@@ -310,6 +327,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-molten-silver-sphere",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "cutaway",
     title: "Molten Silver Sphere — Beat-Sync Pulse",
@@ -325,6 +343,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-glam-sham-poo",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "eyewash",
     title: "Glam-Sham-Poo — Commercial Still Package",
@@ -340,6 +359,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-hover",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — A Hover",
@@ -356,6 +376,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-weather",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — B Weather",
@@ -372,6 +393,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-interior",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — C Interior",
@@ -388,6 +410,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-answer",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — D Answer",
@@ -404,6 +427,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-soft-gyre-soft-set",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "The Soft Gyre — E Soft set",
@@ -420,6 +444,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-well-fall-lip",
     imageKind: "suggestion",
+    status: "generated",
     added: "2026-10-09",
     episode: "visual",
     title: "Well Fall — Lip of the Well",
@@ -436,6 +461,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-podium",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
@@ -452,6 +478,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-detergent",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
@@ -468,6 +495,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-heckle",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",
@@ -484,6 +512,7 @@ export const filmScenes: FilmScene[] = [
   {
     id: "suggestion-rubella-stand-up-land",
     imageKind: "suggestion",
+    status: "suggested",
     added: "2026-10-09",
     episode: "spoken",
     slot: "Short packet farm",

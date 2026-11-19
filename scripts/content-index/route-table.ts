@@ -37,6 +37,10 @@ const viewCopy: Record<string, { title: string; description: string }> = {
     description:
       'Nearly silent comedy. Deadpan characters, a loud world, and the picture changes when the music drops.',
   },
+  finalized: {
+    title: `Finalized — ${BRAND}`,
+    description: 'The finished pieces. Songs, stills and video that made it all the way through.',
+  },
   gallery: {
     title: `Visual Archive — ${BRAND}`,
     description:

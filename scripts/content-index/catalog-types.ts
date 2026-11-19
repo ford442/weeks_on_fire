@@ -18,6 +18,7 @@ import type {
   SeriesCharacterRecord,
   SongFrontmatter,
   CrewMemberRecord,
+  ProductionStatus,
 } from './schemas';
 
 export type {
@@ -38,6 +39,7 @@ export type {
   CrewRole,
   SuggestionKind,
   SuggestionStatus,
+  ProductionStatus,
 } from './schemas';
 export type { SightCandidateRecord as SightCandidate } from './schemas';
 export type { TaxonomyEpisode, TaxonomyRecord as Taxonomy, TaxonomyTool } from './schemas';
@@ -47,8 +49,9 @@ type ResolveImage<T, PathKey extends keyof T, UrlKey extends string> = Omit<T, P
   [K in UrlKey]?: string;
 };
 
-export type Song = Omit<SongFrontmatter, 'instrumental' | 'audioFile'> & {
+export type Song = Omit<SongFrontmatter, 'instrumental' | 'audioFile' | 'status'> & {
   instrumental: boolean;
+  status: ProductionStatus;
   audioFile?: string;
   stylePrompt: string;
   lyrics: string | null;

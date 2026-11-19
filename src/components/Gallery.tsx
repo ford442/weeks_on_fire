@@ -8,10 +8,20 @@ import { pluralize } from '../lib/plural';
 import { episodeOptions, optionValues, themeOptions, toolOptions } from '../lib/filterOptions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
+import {
+  countByStatus,
+  PRODUCTION_STATUSES,
+  productionStatusMeta,
+  statusOptions,
+  type ProductionStatus,
+} from '../lib/status';
 
 import FilterSelect, { allValue } from './FilterSelect';
 import Lightbox from './Lightbox';
 import PromptCard from './PromptCard';
+import StatusBadge from './StatusBadge';
+
+const statusCounts = countByStatus(filmScenes);
 
 export default function Gallery() {
   const [selected, setSelected] = useState<FilmScene>(firstCatalogItem(filmScenes, 'gallery'));
@@ -37,6 +47,10 @@ export default function Gallery() {
   const [imageKind, setImageKind] = useUrlParam<typeof allValue | ImageKind>('kind', allValue, [
     allValue,
     ...(Object.keys(imageKindMeta) as ImageKind[]),
+  ]);
+  const [status, setStatus] = useUrlParam<typeof allValue | ProductionStatus>('status', allValue, [
+    allValue,
+    ...PRODUCTION_STATUSES,
   ]);
   const [showWorkspace, setShowWorkspace] = useState(false);
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
@@ -65,6 +79,7 @@ export default function Gallery() {
           scene.musicCue,
           scene.musicStyle,
           imageKindMeta[scene.imageKind].label,
+          productionStatusMeta[scene.status].label,
           scene.tags.join(' '),
         ]
           .join(' ')
@@ -76,10 +91,11 @@ export default function Gallery() {
         (episode === allValue || scene.episode === episode) &&
         (theme === allValue || scene.theme === theme) &&
         (tool === allValue || scene.tool === tool) &&
-        (imageKind === allValue || scene.imageKind === imageKind)
+        (imageKind === allValue || scene.imageKind === imageKind) &&
+        (status === allValue || scene.status === status)
       );
     });
-  }, [episode, imageKind, query, theme, tool]);
+  }, [episode, imageKind, query, status, theme, tool]);
 
   const openItem = (scene: FilmScene) => {
     setSelected(scene);
@@ -136,8 +152,8 @@ export default function Gallery() {
             <div
               className={`mt-3 grid gap-3 ${
                 filters.tools.length > 0
-                  ? 'lg:grid-cols-[minmax(200px,1fr)_170px_170px_170px]'
-                  : 'lg:grid-cols-[minmax(200px,1fr)_170px_170px]'
+                  ? 'lg:grid-cols-[minmax(200px,1fr)_170px_170px_170px_170px]'
+                  : 'lg:grid-cols-[minmax(200px,1fr)_170px_170px_170px]'
               }`}
             >
               <label className="relative block">
@@ -159,6 +175,13 @@ export default function Gallery() {
                 value={episode}
                 options={filters.episodes}
                 onChange={setEpisode}
+                heightClass="h-10"
+              />
+              <FilterSelect
+                label="Status"
+                value={status}
+                options={statusOptions(statusCounts)}
+                onChange={(value) => setStatus(value as typeof allValue | ProductionStatus)}
                 heightClass="h-10"
               />
               <FilterSelect
@@ -278,6 +301,7 @@ function GalleryCard({ scene, selected, copiedKey, onOpen, onSelect, onCopy }: G
         )}
 
         <div className="space-y-2 p-3">
+          <StatusBadge status={scene.status} size="xs" />
           <p className="text-xs font-semibold text-orange-300/90">
             {episodeWithSlot(scene.episode, scene.slot)}
             {scene.tool && <span className="text-zinc-400"> · {toolLabel(scene.tool)}</span>}

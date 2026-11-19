@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Clock, Edit2, Film, Loader2, Plus, Download } from 'lucide-react';
 
-import { flattenTimeline, statusColors } from '../data/production';
+import { flattenTimeline } from '../data/production';
+import { PRODUCTION_STATUSES, productionStatusMeta } from '../lib/status';
 import { pluralize } from '../lib/plural';
 
+import StatusBadge from './StatusBadge';
 import SceneRefLinks from './SceneRefLinks';
 
 import type {
@@ -130,11 +132,11 @@ export default function SceneTimeline({
             className="h-9 rounded-md border border-zinc-800 bg-zinc-950 px-3 text-sm text-white outline-none focus:border-orange-400"
           >
             <option value="all">All statuses</option>
-            <option value="draft">Draft</option>
-            <option value="generated">Generated</option>
-            <option value="in-edit">In edit</option>
-            <option value="approved">Approved</option>
-            <option value="final">Final</option>
+            {PRODUCTION_STATUSES.map((status) => (
+              <option key={status} value={status}>
+                {productionStatusMeta[status].label}
+              </option>
+            ))}
           </select>
 
           <select
@@ -187,11 +189,7 @@ export default function SceneTimeline({
                     {scene.title}
                   </div>
                 </div>
-                <span
-                  className={`shrink-0 rounded px-2 py-0.5 text-xs font-medium ${statusColors[scene.status]}`}
-                >
-                  {scene.status}
-                </span>
+                <StatusBadge status={scene.status} size="xs" />
               </div>
 
               <p className="mt-2 line-clamp-3 text-sm leading-snug text-zinc-400">

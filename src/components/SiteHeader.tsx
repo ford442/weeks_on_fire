@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
+  BadgeCheck,
   BookOpen,
   Box,
   Clock,
@@ -24,6 +25,7 @@ const SiteSearch = lazy(() => import('./SiteSearch'));
 
 export type SiteView =
   | 'overview'
+  | 'finalized'
   | 'gallery'
   | 'timeline'
   | 'songs'
@@ -41,6 +43,12 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
     description:
       'What Weeks on Fire is, who is in it, and what just landed — start here, then browse the archive, songs, and episodes.',
     icon: Info,
+  },
+  finalized: {
+    title: 'Finalized',
+    description:
+      'Every song, still and video marked Approved or Final, in one place — the finished work.',
+    icon: BadgeCheck,
   },
   gallery: {
     title: 'Visual archive',
@@ -106,6 +114,7 @@ const viewMeta: Record<SiteView, { title: string; description: string; icon: typ
 
 const tabs: Array<{ view: SiteView; label: string }> = [
   { view: 'overview', label: 'Overview' },
+  { view: 'finalized', label: 'Finalized' },
   { view: 'gallery', label: 'Visual archive' },
   { view: 'timeline', label: 'Timeline' },
   { view: 'songs', label: 'Songs' },
@@ -234,6 +243,7 @@ export default function SiteHeader() {
 
 const tabIcons: Record<SiteView, typeof Film> = {
   overview: Info,
+  finalized: BadgeCheck,
   gallery: Film,
   timeline: Clock,
   songs: Music2,

@@ -27,6 +27,7 @@ import type {
   CutawayRecord,
   CutawaySegmentRecord,
   FilmSceneRecord,
+  ProductionStatus,
   SeriesCharacterRecord,
   DaisyBellRecord,
   CrewMemberRecord,
@@ -48,6 +49,7 @@ export interface ParsedSong {
   tags: string[];
   instrumental: boolean;
   audioFile: string | null;
+  status: ProductionStatus;
   sourceFile: string;
   stylePrompt: string;
   lyrics: string | null;
@@ -92,6 +94,7 @@ export function loadSongs(repoRoot: string): ParsedSong[] {
       tags: meta.tags,
       instrumental: meta.instrumental ?? sections.lyrics === null,
       audioFile: meta.audioFile ?? null,
+      status: meta.status ?? (meta.audioFile ? 'final' : 'generated'),
       sourceFile: file,
       stylePrompt: sections.stylePrompt,
       lyrics: sections.lyrics,

@@ -19,6 +19,14 @@ export const siteViews: SiteViewMeta[] = [
       'What Weeks on Fire is — logline, synopsis, tone and format, the episode list, the cast and crew, and what was added most recently.',
   },
   {
+    id: 'finalized',
+    label: 'Finalized',
+    path: '/show/finalized',
+    eyebrow: 'Finished work',
+    description:
+      'Every song, still and video marked Approved or Final — the finished pieces, in one place.',
+  },
+  {
     id: 'gallery',
     label: 'Visual Archive',
     path: '/show/archive',

@@ -25,6 +25,7 @@ export type {
   FilmScene,
   ImageKind,
   MediaType,
+  ProductionStatus,
   SequenceAspect,
   SequenceMedium,
   SequenceRecord,

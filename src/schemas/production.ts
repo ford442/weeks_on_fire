@@ -4,9 +4,16 @@
 // See docs/clip-stacker.md for the payload field reference.
 import { z } from 'zod';
 
-export const SCENE_STATUSES = ['draft', 'generated', 'approved', 'in-edit', 'final'] as const;
-export const SceneStatusSchema = z.enum(SCENE_STATUSES);
-export type SceneStatus = z.infer<typeof SceneStatusSchema>;
+import { PRODUCTION_STATUSES, ProductionStatusSchema } from '../../scripts/content-index/schemas';
+
+/** Timeline scenes share the hub-wide production pipeline. */
+export const SCENE_STATUSES = PRODUCTION_STATUSES;
+/** Pre-unification Timeline exports and localStorage used `draft` for what is now `suggested`. */
+export const SceneStatusSchema = z.preprocess(
+  (value) => (value === 'draft' ? 'suggested' : value),
+  ProductionStatusSchema,
+);
+export type SceneStatus = z.infer<typeof ProductionStatusSchema>;
 
 export const SceneHistoryEntrySchema = z.object({
   date: z.string(),

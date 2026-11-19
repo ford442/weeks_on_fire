@@ -7,6 +7,22 @@ export const AddedDateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'added mu
 /** Optional `added: YYYY-MM-DD` on non-song records; feeds the Overview "What's new" strip. */
 const optionalAdded = AddedDateSchema.optional();
 
+/**
+ * One production pipeline for every item on the hub (songs, stills, videos, cutaways, Timeline
+ * scenes). Type (scene / song / image / video / character) is a separate field; this is only the
+ * stage. Labels and colors live in `src/lib/status.ts`.
+ */
+export const PRODUCTION_STATUSES = [
+  'suggested',
+  'ready-to-generate',
+  'generated',
+  'in-edit',
+  'approved',
+  'final',
+] as const;
+export const ProductionStatusSchema = z.enum(PRODUCTION_STATUSES);
+export type ProductionStatus = z.infer<typeof ProductionStatusSchema>;
+
 export const SongFrontmatterSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
@@ -23,6 +39,8 @@ export const SongFrontmatterSchema = z.object({
   tags: z.array(z.string()),
   instrumental: z.boolean().optional(),
   audioFile: z.string().nullable().optional(),
+  /** Production stage. Omitted → `final` when the song has audio, else `generated`. */
+  status: ProductionStatusSchema.optional(),
 });
 
 export const CutawaySegmentSchema = z.object({
@@ -55,7 +73,7 @@ export const SightCandidateSchema = z.object({
 
 export const SuggestionKindSchema = z.enum(['musical', 'gag', 'scene']);
 
-export const SuggestionStatusSchema = z.enum(['suggested', 'ready-to-generate', 'in-production']);
+export const SuggestionStatusSchema = ProductionStatusSchema;
 
 export const CutawaySchema = z.object({
   id: z.string().min(1),
@@ -84,6 +102,8 @@ export const MediaTypeSchema = z.enum(['image', 'video']);
 export const FilmSceneSchema = z.object({
   id: z.string().min(1),
   imageKind: ImageKindSchema,
+  /** Production stage, independent of `imageKind` (the archive lane) and `mediaType`. */
+  status: ProductionStatusSchema,
   /** Day the record was added (YYYY-MM-DD). */
   added: optionalAdded,
   /** Id from `content/taxonomy.json` `episodes`. */

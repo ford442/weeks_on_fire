@@ -18,6 +18,7 @@ Weeks on Fire is a personal cinematic experiment combining:
 
 ### Live app views (SPA; HTML shell also embeds key titles)
 - Overview (https://ford442.github.io/weeks_on_fire/show/) — What Weeks on Fire is — logline, synopsis, tone and format, the episode list, the cast and crew, and what was added most recently.
+- Finalized (https://ford442.github.io/weeks_on_fire/show/finalized/) — Every song, still and video marked Approved or Final — the finished pieces, in one place.
 - Visual Archive (https://ford442.github.io/weeks_on_fire/show/archive/) — Production stills, cutaway suggestion prompts, and test ideas — scene, suggestion, test, and character lanes with copy-ready Grok prompts.
 - Timeline (https://ford442.github.io/weeks_on_fire/show/timeline/) — Track scene creation, prompt evolution, media links, and status. Export JSON to commit production history.
 - Songs (https://ford442.github.io/weeks_on_fire/show/songs/) — Browse the series soundtrack — Minimax style prompts, lyrics, episode ties, and copy-ready generation notes.

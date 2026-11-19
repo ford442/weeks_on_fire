@@ -11,6 +11,7 @@ import { crewPath } from '../routes/paths';
 import { getDialogVersionsForScene } from '../data/sceneDialogVersions';
 import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlParam } from '../hooks/useUrlState';
+import { countByStatus, PRODUCTION_STATUSES, type ProductionStatus } from '../lib/status';
 
 import CutawayBoard from './suggestions/CutawayBoard';
 import WorkspaceLayout from './WorkspaceLayout';
@@ -27,6 +28,8 @@ const kindCounts = cutawaySuggestions.reduce<Record<SuggestionKind, number>>(
   { musical: 0, gag: 0, scene: 0 },
 );
 
+const statusCounts = countByStatus(cutawaySuggestions);
+
 /** Suggestions route: owns selection, filters, and clipboard state; the panes live in `./suggestions/`. */
 export default function Suggestions() {
   const { id } = useParams();
@@ -39,6 +42,10 @@ export default function Suggestions() {
     'scene',
   ]);
   const [query, setQuery] = useUrlParam('q', '');
+  const [status, setStatus] = useUrlParam<typeof allValue | ProductionStatus>('status', allValue, [
+    allValue,
+    ...PRODUCTION_STATUSES,
+  ]);
   const [sheetOpen, setSheetOpen] = useState(false);
   const [selectedId, setSelectedId] = useState(
     id && cutawaySuggestions.some((cutaway) => cutaway.id === id)
@@ -59,6 +66,7 @@ export default function Suggestions() {
 
     return cutawaySuggestions.filter((cutaway) => {
       const matchesKind = kind === allValue || cutaway.kind === kind;
+      const matchesStatus = status === allValue || cutaway.status === status;
       const matchesSearch =
         normalizedQuery.length === 0 ||
         [
@@ -73,9 +81,9 @@ export default function Suggestions() {
           .toLowerCase()
           .includes(normalizedQuery);
 
-      return matchesKind && matchesSearch;
+      return matchesKind && matchesStatus && matchesSearch;
     });
-  }, [kind, query]);
+  }, [kind, query, status]);
 
   const selected = useMemo(() => {
     const fromCatalog = cutawaySuggestions.find((cutaway) => cutaway.id === selectedId);
@@ -159,6 +167,9 @@ export default function Suggestions() {
           kindCounts={kindCounts}
           kind={kind}
           query={query}
+          status={status}
+          statusCounts={statusCounts}
+          onStatus={setStatus}
           selectedId={selected?.id}
           activeSegmentId={activeSegment?.id}
           previewSightBySegment={sights.previewSightBySegment}

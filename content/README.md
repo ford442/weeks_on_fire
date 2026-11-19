@@ -2,6 +2,20 @@
 
 Authoring sources for the React production hub. **`npm run codegen`** reads these files and emits typed modules under [`src/data/generated/`](../src/data/generated/).
 
+## Production status (one set, every tab)
+
+Songs, gallery items, cutaways and Timeline scenes share one `status` pipeline:
+
+`suggested` → `ready-to-generate` → `generated` → `in-edit` → `approved` → `final`
+
+- Defined once in `scripts/content-index/schemas.ts` (`PRODUCTION_STATUSES`); labels and badge
+  colors in `src/lib/status.ts`, rendered by `src/components/StatusBadge.tsx`.
+- Status is the stage only. Type stays in its own field (`imageKind`, `mediaType`, cutaway `kind`).
+- Gallery items and cutaways require `status`. Songs may set `status:` in frontmatter; omitted, it
+  is `final` when the song has `audioFile`, else `generated`.
+- Timeline still reads the old `draft` status from exports / localStorage as `suggested`.
+- Anything `approved` or `final` shows up on **Finalized** (`/show/finalized`).
+
 ## Adding a song
 
 1. Create `songs/Your_Track.md` with YAML frontmatter:
@@ -223,18 +237,47 @@ Graph shape (angles in degrees, times in seconds; unknown keys are rejected):
 
 ```jsonc
 {
-  "camera": { "type": "orbit", "radius": 5, "height": [{ "t": 0, "v": 1 }, { "t": 8, "v": 2 }], "angle": [{ "t": 0, "v": 0 }, { "t": 16, "v": 360 }], "fov": 48 },
-  "environment": { "background": [0.02, 0.02, 0.02], "lightDir": [0.4, 0.75, 0.5], "fogDensity": 0.04 },
+  "camera": {
+    "type": "orbit",
+    "radius": 5,
+    "height": [
+      { "t": 0, "v": 1 },
+      { "t": 8, "v": 2 },
+    ],
+    "angle": [
+      { "t": 0, "v": 0 },
+      { "t": 16, "v": 360 },
+    ],
+    "fov": 48,
+  },
+  "environment": {
+    "background": [0.02, 0.02, 0.02],
+    "lightDir": [0.4, 0.75, 0.5],
+    "fogDensity": 0.04,
+  },
   "nodes": [
-    { "id": "core", "geometry": { "type": "sphere", "radius": 0.3 },
+    {
+      "id": "core",
+      "geometry": { "type": "sphere", "radius": 0.3 },
       "material": { "kind": "lit", "color": [0.5, 0.2, 0.05], "emissive": [0.5, 0.15, 0.04] },
-      "translation": [0, 0, 0], "rotation": [0, 0, 0], "scale": [1, 1, 1], "spin": [0, 30, 0] }
+      "translation": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "spin": [0, 30, 0],
+    },
   ],
   "clips": [
-    { "target": "core", "property": "scale", "ease": "inOut",
-      "keys": [{ "t": 0, "v": [0, 0, 0] }, { "t": 3.5, "v": [1, 1, 1] }] }
+    {
+      "target": "core",
+      "property": "scale",
+      "ease": "inOut",
+      "keys": [
+        { "t": 0, "v": [0, 0, 0] },
+        { "t": 3.5, "v": [1, 1, 1] },
+      ],
+    },
   ],
-  "loop": { "inSec": 0, "outSec": 16 }
+  "loop": { "inSec": 0, "outSec": 16 },
 }
 ```
 

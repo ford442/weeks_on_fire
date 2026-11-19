@@ -4,6 +4,7 @@ import { episodeWithSlot } from '../data/taxonomy';
 import { formatSongDate } from '../lib/songDate';
 
 import SongAudioPlayer from './SongAudioPlayer';
+import StatusBadge from './StatusBadge';
 
 import type { Song } from '../data/songs';
 
@@ -26,6 +27,9 @@ export default function SongDetail({ song, copiedKey, onCopy }: SongDetailProps)
             <time dateTime={song.added}>{formatSongDate(song.added)}</time>
           </span>
         </p>
+        <div className="mt-2">
+          <StatusBadge status={song.status} />
+        </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{song.title}</h2>
         <p className="mt-3 text-sm leading-6 text-zinc-300">{song.description}</p>
       </div>

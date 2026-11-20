@@ -17,9 +17,16 @@
  *
  * Battery state is only available through the async, non-standard Battery API, so a coarse
  * pointer stands in as the "mobile / battery" signal.
+ *
+ * The canvas may be the page's `<canvas>` (in-thread player) or the `OffscreenCanvas` the render
+ * worker received from `transferControlToOffscreen()`. A worker has no `matchMedia`, so the main
+ * thread reads the environment with `readContextEnv()` and passes it in as `env`.
  */
 
 export type SequenceGl = WebGLRenderingContext | WebGL2RenderingContext;
+
+/** The page canvas, or the worker's transferred `OffscreenCanvas`. */
+export type SequenceCanvas = HTMLCanvasElement | OffscreenCanvas;
 
 /** Which context type the canvas actually got; published as the player's `data-gl` attribute. */
 export type GlKind = 'webgl2' | 'webgl' | 'none';
@@ -36,6 +43,11 @@ export interface SequenceGlOptions {
    * trying to create a context. A null `getContext` alone says nothing about why.
    */
   onCreationError?: (statusMessage: string) => void;
+  /**
+   * Device signals for the attribute table. Read from `window` when omitted, which only works on
+   * the main thread: the render worker is handed the main thread's `readContextEnv()`.
+   */
+  env?: ContextEnv;
 }
 
 export interface ContextEnv {
@@ -57,7 +69,8 @@ export function buildContextAttributes(
   };
 }
 
-function readEnv(): ContextEnv {
+/** Reads the attribute-table signals on the main thread (a worker has no `matchMedia`). */
+export function readContextEnv(): ContextEnv {
   const coarsePointer =
     typeof window !== 'undefined' &&
     typeof window.matchMedia === 'function' &&
@@ -66,10 +79,10 @@ function readEnv(): ContextEnv {
 }
 
 export function createSequenceGl(
-  canvas: HTMLCanvasElement,
+  canvas: SequenceCanvas,
   opts: SequenceGlOptions = {},
 ): SequenceGl | null {
-  const attributes = buildContextAttributes(readEnv(), opts);
+  const attributes = buildContextAttributes(opts.env ?? readContextEnv(), opts);
   const { onCreationError } = opts;
   const onError = (event: Event) => {
     const { statusMessage } = event as WebGLContextEvent;
@@ -79,13 +92,17 @@ export function createSequenceGl(
   try {
     const gl2 = canvas.getContext('webgl2', attributes);
     if (gl2) return gl2;
-    return (
-      canvas.getContext('webgl', attributes) ??
-      (canvas.getContext('experimental-webgl', attributes) as WebGLRenderingContext | null)
-    );
+    const gl1 = canvas.getContext('webgl', attributes);
+    if (gl1 || isOffscreenCanvas(canvas)) return gl1;
+    // `experimental-webgl` is an HTMLCanvasElement-only alias; OffscreenCanvas never had it.
+    return canvas.getContext('experimental-webgl', attributes) as WebGLRenderingContext | null;
   } finally {
     canvas.removeEventListener('webglcontextcreationerror', onError);
   }
+}
+
+function isOffscreenCanvas(canvas: SequenceCanvas): canvas is OffscreenCanvas {
+  return typeof OffscreenCanvas !== 'undefined' && canvas instanceof OffscreenCanvas;
 }
 
 /** Reports the real context type, so a silent WebGL1 fallback is visible rather than assumed. */

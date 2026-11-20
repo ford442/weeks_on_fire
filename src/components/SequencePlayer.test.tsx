@@ -5,9 +5,12 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { sequences, type SequenceRecord } from '../data/sequences';
 import { createSequenceGl } from '../lib/webgl/context';
-import { createSequenceScene } from '../sequences/registry';
+import { resetWorkerAvailability } from '../sequences/render/workerHost';
+import { createScene } from '../sequences/scenes';
 
-import SequencePlayer from './SequencePlayer';
+import SequencePlayer, { type RendererPreference } from './SequencePlayer';
+
+import type { MainToWorkerMessage, WorkerToMainMessage } from '../sequences/worker/protocol';
 
 vi.mock('../lib/webgl/context', async (importOriginal) => ({
   ...(await importOriginal<typeof import('../lib/webgl/context')>()),
@@ -15,10 +18,17 @@ vi.mock('../lib/webgl/context', async (importOriginal) => ({
 }));
 vi.mock('../lib/webgl/engine', () => ({
   SequenceEngine: class {
+    stats = { drawCalls: 3, instances: 9, uniformCalls: 12, bufferUploads: 1 };
+    beginFrame() {}
     dispose() {}
   },
 }));
-vi.mock('../sequences/registry', () => ({ createSequenceScene: vi.fn() }));
+vi.mock('../sequences/scenes', () => ({ createScene: vi.fn() }));
+
+/** A GL context stub: enough for the in-thread host, which only reads the attributes back. */
+const stubGl = {
+  getContextAttributes: () => ({ preserveDrawingBuffer: false }),
+} as unknown as ReturnType<typeof createSequenceGl>;
 
 const base = sequences[0];
 if (!base) throw new Error('sequence fixture is empty');
@@ -28,7 +38,9 @@ function makeScene() {
   return { init: vi.fn(), draw: vi.fn(), dispose: vi.fn() };
 }
 
-function renderPlayer(props: { capture?: boolean } = {}) {
+function renderPlayer(
+  props: { capture?: boolean; renderer?: RendererPreference; stats?: boolean } = {},
+) {
   return render(
     <MediaSessionProvider>
       <SequencePlayer sequence={sequence} {...props} />
@@ -108,8 +120,8 @@ describe('SequencePlayer with a stubbed GL context', () => {
   beforeEach(() => {
     vi.useFakeTimers({ toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance'] });
     scene = makeScene();
-    vi.mocked(createSequenceGl).mockReturnValue({} as ReturnType<typeof createSequenceGl>);
-    vi.mocked(createSequenceScene).mockReturnValue(scene);
+    vi.mocked(createSequenceGl).mockReturnValue(stubGl);
+    vi.mocked(createScene).mockReturnValue(scene);
   });
 
   afterEach(() => {
@@ -127,6 +139,30 @@ describe('SequencePlayer with a stubbed GL context', () => {
     renderPlayer();
     // jsdom has no WebGL2RenderingContext, so the stub counts as WebGL1.
     expect(screen.getByRole('img').getAttribute('data-gl')).toBe('webgl');
+  });
+
+  it('draws in-thread where the browser cannot hand a canvas to a worker (jsdom)', () => {
+    renderPlayer();
+    const canvas = screen.getByRole('img');
+    expect(canvas.getAttribute('data-renderer')).toBe('main');
+    expect(canvas.getAttribute('data-preserve-drawing-buffer')).toBe('false');
+  });
+
+  it('builds the scene from the record, graph included', () => {
+    renderPlayer();
+    expect(vi.mocked(createScene)).toHaveBeenCalledWith({
+      id: 'clock-test',
+      graph: sequence.graph,
+    });
+  });
+
+  it('overlays frame stats with ?stats', () => {
+    renderPlayer({ stats: true });
+    advance(1000);
+    const overlay = screen.getByRole('complementary', { name: 'Renderer stats' });
+    expect(overlay.textContent).toContain('threadmain');
+    expect(overlay.textContent).toContain('draws3 (9 objects)');
+    expect(overlay.textContent).toContain('uniforms12');
   });
 
   it('shows why the scene failed to start instead of a bare "unavailable"', () => {
@@ -213,7 +249,7 @@ describe('SequencePlayer with a stubbed GL context', () => {
     fireEvent(canvas, new Event('webglcontextrestored'));
     advance(100);
     expect(screen.queryByRole('status')).toBeNull();
-    expect(vi.mocked(createSequenceScene)).toHaveBeenCalledTimes(2);
+    expect(vi.mocked(createScene)).toHaveBeenCalledTimes(2);
     expect(lastDrawTime(scene)).toBeLessThan(3.5);
   });
 
@@ -241,5 +277,228 @@ describe('SequencePlayer with a stubbed GL context', () => {
     await user.click(screen.getByRole('button', { name: 'Play' }));
     advance(500);
     expect(lastDrawTime(scene)).toBeLessThan(1);
+  });
+});
+
+/** Stands in for the render worker: records what the player posts, replies on demand. */
+class FakeWorker {
+  static instances: FakeWorker[] = [];
+  onmessage: ((event: MessageEvent<unknown>) => void) | null = null;
+  onerror: ((event: ErrorEvent) => void) | null = null;
+  onmessageerror: (() => void) | null = null;
+  readonly posted: MainToWorkerMessage[] = [];
+  readonly transfers: Transferable[][] = [];
+  terminated = false;
+
+  constructor() {
+    FakeWorker.instances.push(this);
+  }
+
+  postMessage(message: MainToWorkerMessage, transfer: Transferable[] = []) {
+    this.posted.push(message);
+    this.transfers.push(transfer);
+  }
+
+  terminate() {
+    this.terminated = true;
+  }
+
+  reply(message: WorkerToMainMessage) {
+    act(() => {
+      this.onmessage?.({ data: message } as MessageEvent<unknown>);
+    });
+  }
+
+  frames() {
+    return this.posted.filter((m) => m.type === 'tick' || m.type === 'seek');
+  }
+}
+
+const frameStats = {
+  timeSec: 0,
+  cpuMs: 0.4,
+  drawCalls: 8,
+  instances: 41,
+  uniformCalls: 20,
+  bufferUploads: 3,
+  width: 320,
+  height: 180,
+};
+
+describe('SequencePlayer in the render worker', () => {
+  const offscreen = { width: 0, height: 0 };
+
+  beforeEach(() => {
+    vi.useFakeTimers({ toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance'] });
+    FakeWorker.instances = [];
+    resetWorkerAvailability();
+    vi.stubGlobal('Worker', FakeWorker);
+    vi.stubGlobal('OffscreenCanvas', class {});
+    Object.defineProperty(HTMLCanvasElement.prototype, 'transferControlToOffscreen', {
+      configurable: true,
+      value: () => offscreen,
+    });
+    vi.mocked(createSequenceGl).mockReset();
+    vi.mocked(createSequenceGl).mockReturnValue(stubGl);
+    vi.mocked(createScene).mockReturnValue(makeScene());
+  });
+
+  afterEach(() => {
+    delete (HTMLCanvasElement.prototype as Partial<HTMLCanvasElement>).transferControlToOffscreen;
+    vi.unstubAllGlobals();
+    resetWorkerAvailability();
+    vi.useRealTimers();
+  });
+
+  const advance = (ms: number) => {
+    act(() => {
+      vi.advanceTimersByTime(ms);
+    });
+  };
+
+  function worker(): FakeWorker {
+    const instance = FakeWorker.instances[0];
+    if (!instance) throw new Error('no worker was started');
+    return instance;
+  }
+
+  it('transfers the canvas and starts the film in the worker', () => {
+    renderPlayer({ capture: true });
+    const init = worker().posted[0];
+    expect(init).toMatchObject({
+      type: 'init',
+      sequenceId: 'clock-test',
+      durationSec: 10,
+      capture: true,
+      env: { coarsePointer: false },
+    });
+    expect(worker().transfers[0]).toEqual([offscreen]);
+    expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('worker');
+    // The page thread never asked for a context of its own.
+    expect(vi.mocked(createSequenceGl)).not.toHaveBeenCalled();
+  });
+
+  it('publishes what the worker context reported', () => {
+    renderPlayer();
+    worker().reply({
+      type: 'ready',
+      kind: 'webgl2',
+      preserveDrawingBuffer: false,
+      renderer: null,
+    });
+    const canvas = screen.getByRole('img');
+    expect(canvas.getAttribute('data-gl')).toBe('webgl2');
+    expect(canvas.getAttribute('data-preserve-drawing-buffer')).toBe('false');
+  });
+
+  it('keeps one frame in flight and sends the latest time when the worker answers', () => {
+    renderPlayer();
+    advance(200);
+    // The first frame is a seek (nothing came before it); later ones wait for its reply.
+    expect(worker().frames()).toHaveLength(1);
+    expect(worker().frames()[0]?.type).toBe('seek');
+
+    worker().reply({ type: 'frameStats', stats: frameStats });
+    const [, next] = worker().frames();
+    expect(next?.type).toBe('tick');
+    expect((next as { timeSec: number }).timeSec).toBeGreaterThan(0.1);
+  });
+
+  it('sends a seek, not a tick, after the slider moves', () => {
+    renderPlayer();
+    advance(16);
+    worker().reply({ type: 'frameStats', stats: frameStats });
+    worker().reply({ type: 'frameStats', stats: frameStats });
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '7' } });
+    advance(16);
+    worker().reply({ type: 'frameStats', stats: frameStats });
+    const last = worker().frames().at(-1);
+    expect(last).toMatchObject({ type: 'seek' });
+    expect((last as { timeSec: number }).timeSec).toBeCloseTo(7, 1);
+  });
+
+  it('tells the worker about a new drawing-buffer size', () => {
+    renderPlayer();
+    vi.spyOn(HTMLElement.prototype, 'clientWidth', 'get').mockReturnValue(640);
+    vi.spyOn(HTMLElement.prototype, 'clientHeight', 'get').mockReturnValue(360);
+    advance(16);
+    expect(worker().posted).toContainEqual(
+      expect.objectContaining({ type: 'resize', width: 640, height: 360 }),
+    );
+  });
+
+  it('falls back in-thread on a fresh canvas when the worker has no GL', () => {
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    renderPlayer();
+    const first = screen.getByRole('img');
+    worker().reply({
+      type: 'failed',
+      kind: 'none',
+      stage: 'context',
+      reason: 'no OffscreenCanvas GL',
+    });
+
+    const canvas = screen.getByRole('img');
+    expect(canvas).not.toBe(first);
+    expect(canvas.getAttribute('data-renderer')).toBe('main');
+    expect(worker().terminated).toBe(true);
+    expect(vi.mocked(createSequenceGl)).toHaveBeenCalledTimes(1);
+    expect(warn).toHaveBeenCalled();
+  });
+
+  it('skips the worker for later players once it had no GL', () => {
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const { unmount } = renderPlayer();
+    worker().reply({ type: 'failed', kind: 'none', stage: 'context', reason: null });
+    unmount();
+    renderPlayer();
+    expect(FakeWorker.instances).toHaveLength(1);
+    expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('main');
+  });
+
+  it('falls back when the worker script fails to load', () => {
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    renderPlayer();
+    act(() => {
+      worker().onerror?.({ message: '', preventDefault() {} } as ErrorEvent);
+    });
+    expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('main');
+  });
+
+  it('shows the lost-context status from the worker and clears it on restore', () => {
+    renderPlayer();
+    advance(500);
+    worker().reply({ type: 'contextLost' });
+    expect(screen.getByRole('status').textContent).toMatch(/graphics context was lost/);
+    worker().reply({ type: 'contextRestored' });
+    expect(screen.queryByRole('status')).toBeNull();
+  });
+
+  it('never starts a worker under ?renderer=main', () => {
+    renderPlayer({ renderer: 'main' });
+    expect(FakeWorker.instances).toHaveLength(0);
+    expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('main');
+  });
+
+  it('shows worker frame stats in the overlay', () => {
+    renderPlayer({ stats: true });
+    advance(16);
+    worker().reply({ type: 'frameStats', stats: frameStats });
+    advance(300);
+    const overlay = screen.getByRole('complementary', { name: 'Renderer stats' });
+    expect(overlay.textContent).toContain('threadworker');
+    expect(overlay.textContent).toContain('draws8 (41 objects)');
+    expect(overlay.textContent).toContain('buffer320×180');
+  });
+
+  it('disposes the worker when the player goes away', () => {
+    vi.useFakeTimers({
+      toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance', 'setTimeout'],
+    });
+    const { unmount } = renderPlayer();
+    unmount();
+    expect(worker().posted.at(-1)).toEqual({ type: 'dispose' });
+    vi.advanceTimersByTime(1000);
+    expect(worker().terminated).toBe(true);
   });
 });

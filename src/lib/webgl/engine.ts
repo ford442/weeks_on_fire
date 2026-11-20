@@ -272,8 +272,22 @@ export class GpuMesh {
   }
 }
 
+/** Per-frame GL work counters; reset by `beginFrame()`. */
+export interface EngineFrameStats {
+  drawCalls: number;
+  instances: number;
+  uniformCalls: number;
+  bufferUploads: number;
+}
+
 export class SequenceEngine {
   readonly gl: SequenceGl;
+  readonly stats: EngineFrameStats = {
+    drawCalls: 0,
+    instances: 0,
+    uniformCalls: 0,
+    bufferUploads: 0,
+  };
   private readonly lit: ShaderProgram;
   private readonly line: ShaderProgram;
   private readonly point: ShaderProgram;
@@ -308,6 +322,14 @@ export class SequenceEngine {
     gl.enable(gl.DEPTH_TEST);
     gl.enable(gl.CULL_FACE);
     gl.cullFace(gl.BACK);
+  }
+
+  /** Zeroes the frame counters; the render core calls it before each scene draw. */
+  beginFrame(): void {
+    this.stats.drawCalls = 0;
+    this.stats.instances = 0;
+    this.stats.uniformCalls = 0;
+    this.stats.bufferUploads = 0;
   }
 
   setCamera(proj: Mat4, view: Mat4, eye: Vec3): void {

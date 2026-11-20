@@ -373,7 +373,7 @@ two renderers (see [Graph vs custom](#graph-vs-custom-renderer)).
   `src/sequences/graph/`. Invalid tracks, unknown node ids, or times past `durationSec` fail
   `npm run codegen`. Reference: [`sequences/lattice-hymn.graph.json`](sequences/lattice-hymn.graph.json).
 - **Custom (`"renderer": "custom"`):** a hand-written factory in `src/sequences/scenes/*.ts`
-  registered in `src/sequences/registry.ts`. Use it only for unique deformers (e.g. the
+  registered in `src/sequences/scenes/index.ts`. Use it only for unique deformers (e.g. the
   rubber-hose walk cycle). Codegen fails if a record has neither a graph nor
   `"renderer": "custom"` with a registered factory.
 

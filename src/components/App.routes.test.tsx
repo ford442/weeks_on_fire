@@ -433,6 +433,19 @@ describe('appears-in links from the catalog graph', () => {
 });
 
 describe('public site', () => {
+  it('/recipes renders recipes, the egg table and song links', async () => {
+    renderRoute('/recipes');
+    expect(
+      await screen.findByRole('heading', { level: 1, name: /Lillith.s Recipes/ }),
+    ).toBeTruthy();
+    expect(screen.getByRole('heading', { name: 'Soft-Boiled Egg, Landing Version' })).toBeTruthy();
+    expect(screen.getByText(/the palier is still deciding/)).toBeTruthy();
+    expect(screen.getByRole('img', { name: /laundry-room folding table/ })).toBeTruthy();
+    expect(screen.getByRole('link', { name: /Cook to: Daisy Bell/ }).getAttribute('href')).toBe(
+      '/listen/daisy-bell',
+    );
+  });
+
   it('/lace-waterfall renders the band page', async () => {
     renderRoute('/lace-waterfall');
     expect(await screen.findByRole('heading', { level: 1, name: 'Lace Waterfall' })).toBeTruthy();

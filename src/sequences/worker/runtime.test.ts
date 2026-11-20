@@ -77,7 +77,13 @@ describe('render worker runtime', () => {
     });
     expect(posted).toEqual([
       // jsdom-free Node has no WebGL2RenderingContext, so the stub counts as WebGL1.
-      { type: 'ready', kind: 'webgl', preserveDrawingBuffer: true, renderer: 'Fake GPU' },
+      {
+        type: 'ready',
+        kind: 'webgl',
+        preserveDrawingBuffer: true,
+        renderer: 'Fake GPU',
+        kernel: 'ts',
+      },
     ]);
     expect(scene.init).toHaveBeenCalledTimes(1);
   });

@@ -75,6 +75,8 @@ export interface ReadyMessage {
   preserveDrawingBuffer: boolean;
   /** GPU string; only sent for capture runs. */
   renderer: string | null;
+  /** Which `GeometryKernel` the worker picked (`ts`). */
+  kernel: string;
 }
 
 /**

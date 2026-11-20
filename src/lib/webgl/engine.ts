@@ -1,4 +1,5 @@
 import { createInstancingSupport, type InstancingSupport } from './instancing';
+import { tsKernel, type GeometryKernel } from './kernel';
 import {
   DEFAULT_SHININESS,
   INSTANCE_FLOATS,
@@ -311,6 +312,8 @@ export class GpuMesh {
 
 export class SequenceEngine {
   readonly gl: SequenceGl;
+  /** CPU geometry (mesh builders, particles, hoses); chosen by the renderer at init. */
+  readonly kernel: GeometryKernel;
   readonly stats: EngineFrameStats = {
     drawCalls: 0,
     instances: 0,
@@ -351,8 +354,9 @@ export class SequenceEngine {
    * `webglcontextrestored`, construct a new engine (and re-init the scene): all GL objects from
    * before the loss are gone.
    */
-  constructor(gl: SequenceGl) {
+  constructor(gl: SequenceGl, kernel: GeometryKernel = tsKernel) {
     this.gl = gl;
+    this.kernel = kernel;
     statsByGl.set(gl, this.stats);
     createVaoSupport(gl);
     const webgl2 = isWebGL2(gl);

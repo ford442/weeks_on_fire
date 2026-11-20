@@ -77,7 +77,8 @@ describe('SequenceRenderCore', () => {
       throw new Error('context lost');
     });
     expect(() => core.stop()).not.toThrow();
-    expect(vi.mocked(SequenceEngine)).toHaveBeenCalledWith(gl);
+    expect(vi.mocked(SequenceEngine)).toHaveBeenCalledWith(gl, core.kernel);
+    expect(core.kernel.name).toBe('ts');
   });
 });
 

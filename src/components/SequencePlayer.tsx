@@ -70,6 +70,8 @@ export default function SequencePlayer({
   // The next frame does not follow the last one (seek, restart): tell the renderer.
   const jumpRef = useRef(true);
   const statsWindowRef = useRef(new FrameStatsWindow());
+  // Read by the frame loop, so turning the overlay on does not restart the renderer.
+  const statsRef = useRef(stats);
   const reducedMotion = usePrefersReducedMotion();
   const reducedMotionRef = useRef(reducedMotion);
 
@@ -97,6 +99,10 @@ export default function SequencePlayer({
   useEffect(() => {
     wakeRef.current?.();
   }, [playing]);
+
+  useEffect(() => {
+    statsRef.current = stats;
+  }, [stats]);
 
   useEffect(() => {
     reducedMotionRef.current = reducedMotion;
@@ -166,7 +172,7 @@ export default function SequencePlayer({
         lastUiRef.current = now;
         setUiTime(timeSec);
       }
-      if (stats && now - lastStatsUiRef.current > 250) {
+      if (statsRef.current && now - lastStatsUiRef.current > 250) {
         lastStatsUiRef.current = now;
         setSummary(statsWindowRef.current.summary());
       }
@@ -191,6 +197,7 @@ export default function SequencePlayer({
         canvas.dataset.gl = ready.kind;
         canvas.dataset.preserveDrawingBuffer = String(ready.preserveDrawingBuffer);
         if (ready.renderer) canvas.dataset.glRenderer = ready.renderer;
+        canvas.dataset.kernel = ready.kernel;
         setInfo(ready);
       },
       onFailure(reported) {
@@ -270,7 +277,7 @@ export default function SequencePlayer({
       host = null;
       canvas.remove();
     };
-  }, [capture, clock, coordinator, duration, mediaId, mode, sequence, sessionKey, stats]);
+  }, [capture, clock, coordinator, duration, mediaId, mode, sequence, sessionKey]);
 
   useEffect(() => {
     if (!playing) {
@@ -404,6 +411,7 @@ function StatsOverlay({ mode, info, summary }: StatsOverlayProps) {
   const rows: [string, string][] = [
     ['thread', mode === 'worker' ? 'worker' : 'main'],
     ['context', info?.kind ?? '…'],
+    ['kernel', info?.kernel ?? '…'],
   ];
   if (summary) {
     rows.push(

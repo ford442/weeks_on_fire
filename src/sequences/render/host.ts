@@ -18,6 +18,8 @@ export interface RendererInfo {
   preserveDrawingBuffer: boolean;
   /** GPU string, capture runs only. */
   renderer: string | null;
+  /** The `GeometryKernel` the renderer picked. */
+  kernel: string;
 }
 
 export interface RendererFailure {

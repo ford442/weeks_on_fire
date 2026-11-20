@@ -119,7 +119,13 @@ describe('createWorkerHost', () => {
   it('ignores messages that are not worker replies', () => {
     const { reply, callbacks } = setup();
     reply({ type: 'something-else' });
-    reply({ type: 'ready', kind: 'webgl2', preserveDrawingBuffer: false, renderer: null });
+    reply({
+      type: 'ready',
+      kind: 'webgl2',
+      preserveDrawingBuffer: false,
+      renderer: null,
+      kernel: 'ts',
+    });
     expect(callbacks.onReady).toHaveBeenCalledTimes(1);
   });
 

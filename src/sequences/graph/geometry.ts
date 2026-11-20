@@ -1,12 +1,11 @@
+import { tsKernel, type GeometryKernel } from '../../lib/webgl/kernel';
 import {
   createBox,
   createCylinder,
   createIcosahedron,
   createIcosahedronLines,
-  createLathe,
   createLineCube,
   createPlane,
-  createSphere,
   createTorus,
   type MeshData,
 } from '../../lib/webgl/mesh';
@@ -25,12 +24,16 @@ function mulberry32(seed: number): () => number {
   };
 }
 
-export function buildGeometry(geometry: GraphGeometry): MeshData {
+/** Builds a node's mesh; spheres and lathes go through the renderer's geometry kernel. */
+export function buildGeometry(
+  geometry: GraphGeometry,
+  kernel: GeometryKernel = tsKernel,
+): MeshData {
   switch (geometry.type) {
     case 'box':
       return createBox(...geometry.size);
     case 'sphere':
-      return createSphere(geometry.radius, geometry.lat, geometry.long);
+      return kernel.sphere(geometry.radius, geometry.lat, geometry.long);
     case 'cylinder':
       return createCylinder(geometry.radius, geometry.height, geometry.radial, geometry.caps);
     case 'torus':
@@ -40,7 +43,7 @@ export function buildGeometry(geometry: GraphGeometry): MeshData {
     case 'icosahedron':
       return createIcosahedron(geometry.radius);
     case 'lathe':
-      return createLathe(geometry.profile, geometry.segments);
+      return kernel.lathe(geometry.profile, geometry.segments);
     case 'lineCube':
       return createLineCube(geometry.size);
     case 'icosahedronLines':

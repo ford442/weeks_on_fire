@@ -1,4 +1,5 @@
 import { createSequenceGl, glKind, type GlKind, type SequenceGl } from '../../lib/webgl/context';
+import { selectGeometryKernel } from '../../lib/webgl/kernel';
 import { SequenceRenderCore, describeError, rendererName } from '../render/core';
 
 import type { MainToWorkerMessage, WorkerToMainMessage } from './protocol';
@@ -65,9 +66,10 @@ export function createRenderWorkerRuntime(
         }
 
         const source = { id: message.sequenceId, graph: message.graph };
+        const kernel = selectGeometryKernel();
         const build = () => {
           if (!gl) return 'no context';
-          const next = new SequenceRenderCore(gl, source, message.durationSec);
+          const next = new SequenceRenderCore(gl, source, message.durationSec, kernel);
           const failure = next.start();
           core = failure === null ? next : null;
           return failure;
@@ -110,6 +112,7 @@ export function createRenderWorkerRuntime(
           kind,
           preserveDrawingBuffer: attributes?.preserveDrawingBuffer ?? message.capture,
           renderer: message.capture ? rendererName(gl) : null,
+          kernel: kernel.name,
         });
         return;
       }

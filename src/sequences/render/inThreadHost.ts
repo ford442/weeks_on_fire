@@ -1,4 +1,5 @@
 import { createSequenceGl, glKind } from '../../lib/webgl/context';
+import { selectGeometryKernel } from '../../lib/webgl/kernel';
 
 import { SequenceRenderCore, rendererName } from './core';
 
@@ -28,8 +29,9 @@ export function createInThreadHost(
     return { mode: 'main', ...inert };
   }
 
+  const kernel = selectGeometryKernel();
   const build = (): string | null => {
-    const next = new SequenceRenderCore(gl, options.source, options.durationSec);
+    const next = new SequenceRenderCore(gl, options.source, options.durationSec, kernel);
     const failure = next.start();
     core = failure === null ? next : null;
     return failure;
@@ -68,6 +70,7 @@ export function createInThreadHost(
     kind,
     preserveDrawingBuffer: gl.getContextAttributes()?.preserveDrawingBuffer ?? options.capture,
     renderer: options.capture ? rendererName(gl) : null,
+    kernel: kernel.name,
   });
 
   return {

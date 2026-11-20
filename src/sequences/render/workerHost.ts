@@ -111,6 +111,7 @@ export function createWorkerHost(
           kind: message.kind,
           preserveDrawingBuffer: message.preserveDrawingBuffer,
           renderer: message.renderer,
+          kernel: message.kernel,
         });
         return;
       case 'failed':

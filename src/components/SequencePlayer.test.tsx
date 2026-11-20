@@ -385,6 +385,7 @@ describe('SequencePlayer in the render worker', () => {
       kind: 'webgl2',
       preserveDrawingBuffer: false,
       renderer: null,
+      kernel: 'ts',
     });
     const canvas = screen.getByRole('img');
     expect(canvas.getAttribute('data-gl')).toBe('webgl2');
@@ -489,6 +490,18 @@ describe('SequencePlayer in the render worker', () => {
     expect(overlay.textContent).toContain('threadworker');
     expect(overlay.textContent).toContain('draws8 (41 objects)');
     expect(overlay.textContent).toContain('buffer320×180');
+  });
+
+  it('turns the stats overlay on without restarting the renderer', () => {
+    const { rerender } = renderPlayer();
+    rerender(
+      <MediaSessionProvider>
+        <SequencePlayer sequence={sequence} stats />
+      </MediaSessionProvider>,
+    );
+    expect(FakeWorker.instances).toHaveLength(1);
+    expect(worker().terminated).toBe(false);
+    expect(screen.getByRole('complementary', { name: 'Renderer stats' })).toBeTruthy();
   });
 
   it('disposes the worker when the player goes away', () => {

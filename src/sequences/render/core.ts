@@ -1,4 +1,5 @@
 import { SequenceEngine } from '../../lib/webgl/engine';
+import { selectGeometryKernel, type GeometryKernel } from '../../lib/webgl/kernel';
 import { createScene, type SceneSource } from '../scenes';
 
 import type { SequenceGl } from '../../lib/webgl/context';
@@ -43,6 +44,8 @@ export class SequenceRenderCore {
     private readonly gl: SequenceGl,
     private readonly source: SceneSource,
     private readonly durationSec: number,
+    /** Picked once per renderer at init (the worker and the in-thread host each pick). */
+    readonly kernel: GeometryKernel = selectGeometryKernel(),
   ) {}
 
   /** Compiles programs and builds the scene. Returns why it could not (shader log...), or null. */
@@ -50,7 +53,7 @@ export class SequenceRenderCore {
     let engine: SequenceEngine | null = null;
     let scene: SequenceScene | undefined;
     try {
-      engine = new SequenceEngine(this.gl);
+      engine = new SequenceEngine(this.gl, this.kernel);
       scene = createScene(this.source);
       scene?.init(engine);
       this.engine = engine;

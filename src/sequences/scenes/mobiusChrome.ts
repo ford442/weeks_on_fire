@@ -1,6 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
 import { InstanceBatch } from '../../lib/webgl/instances';
-import { createRibbon } from '../../lib/webgl/mesh';
 import { createMat4, DEG, lookAt, perspective, smoothstep, type Vec3 } from '../../lib/webgl/math';
 
 import type { SequenceDrawContext, SequenceScene } from '../types';
@@ -21,7 +20,7 @@ export function createMobiusChrome(): SequenceScene {
 
   /** Same topology at every mix, so after the first build only positions and normals move. */
   function rebuild(engine: SequenceEngine, mix: number) {
-    const mesh = createRibbon(mix, 96, 12);
+    const mesh = engine.kernel.ribbon(mix, 96, 12);
     if (ribbon && mesh.normals) {
       ribbon.updatePositions(mesh.positions);
       ribbon.updateNormals(mesh.normals);

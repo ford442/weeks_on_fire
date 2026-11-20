@@ -118,7 +118,9 @@ export function createGraphScene(graph: SequenceGraph): SequenceScene {
 
   return {
     init(engine: SequenceEngine) {
-      meshes = meshSources.map((geometry) => new GpuMesh(engine.gl, buildGeometry(geometry)));
+      meshes = meshSources.map(
+        (geometry) => new GpuMesh(engine.gl, buildGeometry(geometry, engine.kernel)),
+      );
     },
     draw({ engine, timeSec, aspect }: SequenceDrawContext) {
       const frame = evaluate(timeSec);

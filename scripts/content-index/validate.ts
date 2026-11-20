@@ -3,6 +3,7 @@ import { join } from 'node:path';
 
 import { broadcastOffset, formatClock, parseClock } from '../../src/lib/clock';
 
+import { generationErrors } from './generation';
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
 import type {
@@ -89,6 +90,8 @@ export function validateContent(
         );
       }
     }
+
+    errors.push(...generationErrors(cutaway));
   }
 
   for (const [id, count] of cutawayIds) {

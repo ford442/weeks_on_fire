@@ -1,5 +1,6 @@
 import { z } from 'zod';
 
+import { GenerationSchema } from './generation';
 import { PRODUCTION_STATUSES } from './statuses';
 import { SequenceGraphSchema } from './graph-schema';
 
@@ -59,6 +60,11 @@ export const CutawaySegmentSchema = z.object({
   stillUrl: z.string().optional(),
   stillImagePath: z.string().optional(),
   previewUrl: z.string().optional(),
+  /**
+   * How this segment is generated on xAI. Inline segments may set it directly; either way codegen
+   * overwrites it with the merged result (`generationDefaults` ← this ← `segmentGeneration[id]`).
+   */
+  generation: GenerationSchema.optional(),
 });
 
 export const SightLaneSchema = z.enum(['fall', 'ending']);
@@ -92,6 +98,13 @@ export const CutawaySchema = z.object({
   tags: z.array(z.string()),
   segmentsSource: z.string().optional(),
   segmentStills: z.record(z.string(), z.string()).optional(),
+  /** xAI settings for every segment (`scripts/xai-api-spec.json` lists the values). */
+  generationDefaults: GenerationSchema.optional(),
+  /**
+   * Per-segment overrides of `generationDefaults`, keyed by segment id. Needed for
+   * `segmentsSource` cutaways, whose segments are parsed from markdown and can carry no fields.
+   */
+  segmentGeneration: z.record(z.string(), GenerationSchema).optional(),
   segments: z.array(CutawaySegmentSchema).optional(),
   sightBank: z.array(SightCandidateSchema).optional(),
   /** Cast on screen: ids from `content/characters.json`. */

@@ -5,6 +5,7 @@ import RelatedLinks from '../RelatedLinks';
 import Still from '../Still';
 
 import CopyButton from './CopyButton';
+import GenerateCommand from './GenerateCommand';
 import SightBank from './SightBank';
 import { applySightToPrompt } from './sightSlots';
 
@@ -172,6 +173,16 @@ function SegmentDetail({
         copied={copiedKey === `${segment.id}:grok`}
         onCopy={() => onCopy(grokPrompt, 'Grok Imagine prompt', `${segment.id}:grok`)}
       />
+
+      {segment.grokImaginePrompt && (
+        <GenerateCommand
+          cutawayId={cutaway.id}
+          segmentId={segment.id}
+          generation={segment.generation}
+          copiedKey={copiedKey}
+          onCopy={onCopy}
+        />
+      )}
 
       <PromptBlock
         title="Gemini Omni Prompt"

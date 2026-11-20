@@ -10,6 +10,6 @@ Production notes, logs, references, and external asset links.
 - `music-licensing.md` – Minimax Music rights info
 - `cutaway-assembly.md` – stills + song → timed MP4 preview with `scripts/assemble-cutaway.py` (manifest format, ffmpeg)
 - `song-method.md` – owner lock: the video concept comes first, then the song is built around it
-- `generation-log.jsonl` – spend history appended by `scripts/xai-generate.py` / `xai-batch.py` when run with `--json-log` (model, aspect, prompt hash, usage, cost; never the prompt or key). Created on first use.
+- `generation-log.jsonl` – spend history appended by `scripts/xai-generate.py` / `xai-batch.py` when run with `--json-log` (model, aspect, resolution, quality, prompt hash, usage, cost; clips are marked `"kind": "video"`; never the prompt or key). Created on first use.
 
 Keep this folder as the single source of truth for everything that isn't code or creative assets.

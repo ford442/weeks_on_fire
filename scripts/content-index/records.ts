@@ -39,9 +39,13 @@ export function buildCutawayRecords(
   cutaways: readonly CutawayRecord[],
 ): RecordSet<CutawaySummaryRecord, CutawayFullRecord> & { stillPaths: string[] } {
   const records = cutaways.map((cutaway) => {
-    const { segmentsSource, segmentStills, ...rest } = cutaway;
+    // Authoring-only fields: codegen has already folded the generation settings into each segment.
+    const { segmentsSource, segmentStills, generationDefaults, segmentGeneration, ...rest } =
+      cutaway;
     void segmentsSource;
     void segmentStills;
+    void generationDefaults;
+    void segmentGeneration;
     const segments = cutaway.segments ?? [];
     return CutawayRecordSchema.parse({
       ...rest,

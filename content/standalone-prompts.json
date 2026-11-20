@@ -8,6 +8,10 @@
     "reason": "28-segment slide-cam music-video shot bank; not a cutaway."
   },
   {
+    "path": "prompts/waterslide-more-segments.md",
+    "reason": "Long-form alternate seeds that extend the waterslide-segments.md shot bank; not a cutaway."
+  },
+  {
     "path": "prompts/well-fall-locked-segments.md",
     "reason": "Long-form locked companion to the well-fall cutaway, which already uses prompts/well-fall-segments.md."
   }

@@ -18,6 +18,7 @@ import {
   ScheduleSchema,
   TaxonomySchema,
 } from './schemas';
+import { mergeGeneration } from './generation';
 import { SequenceGraphSchema } from './graph-schema';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
@@ -116,7 +117,12 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
 
   return files.map((file) => {
     const raw = readJson(join(cutawaysDir, file));
-    const record = CutawaySchema.parse(raw);
+    const parsed = CutawaySchema.safeParse(raw);
+    if (!parsed.success) {
+      // Name the file: with dozens of cutaways, a bare ZodError path does not say whose it is.
+      throw new Error(`content/cutaways/${file} is invalid:\n${z.prettifyError(parsed.error)}`);
+    }
+    const record = parsed.data;
 
     let segments: CutawaySegmentRecord[] = record.segments ?? [];
 
@@ -146,9 +152,22 @@ export function loadCutaways(repoRoot: string): CutawayRecord[] {
 
     return {
       ...record,
-      segments,
+      segments: segments.map((segment) => withEffectiveGeneration(record, segment)),
     };
   });
+}
+
+/** The segment with its merged `generation` (or none): defaults ← the segment's own ← the override map. */
+function withEffectiveGeneration(
+  record: CutawayRecord,
+  { generation, ...segment }: CutawaySegmentRecord,
+): CutawaySegmentRecord {
+  const effective = mergeGeneration(
+    record.generationDefaults,
+    generation,
+    record.segmentGeneration?.[segment.id],
+  );
+  return effective ? { ...segment, generation: effective } : segment;
 }
 
 export function loadGallery(repoRoot: string): FilmSceneRecord[] {

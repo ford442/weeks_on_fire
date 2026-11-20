@@ -48,6 +48,8 @@ export const SONG_DETAIL_KEYS = ['stylePrompt', 'lyrics', 'notes'] as const;
 export const CutawaySummarySchema = CutawaySchema.omit({
   segmentsSource: true,
   segmentStills: true,
+  generationDefaults: true,
+  segmentGeneration: true,
   segments: true,
   sightBank: true,
 }).extend({

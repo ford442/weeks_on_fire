@@ -116,7 +116,21 @@ codegen'd and keep their `Drawer / not promoted` note.
 
 4. `songId` must match a song `id` from `songs/*.md` frontmatter.
 
-5. Run `npm run codegen` and commit (including `public/catalog/cutaways/`). The cutaway shows under **Unscheduled** on Suggestions until it has a slot in [`schedule.json`](schedule.json) (below).
+5. **Optional:** how the cutaway wants to be generated on xAI (stills, and clips if you want them), so the Suggestions "Generate on xAI" block and `scripts/xai-batch.py` use the same settings:
+
+   ```json
+   "generationDefaults": {
+     "image": { "model": "grok-imagine-image-2.0", "aspectRatio": "16:9", "resolution": "2k", "quality": "medium", "n": 1, "responseFormat": "url" },
+     "video": { "aspectRatio": "16:9", "resolution": "720p", "durationSec": 6 }
+   },
+   "segmentGeneration": {
+     "mv-ultra-d-product-bottle": { "image": { "aspectRatio": "9:16" } }
+   }
+   ```
+
+   Every field is optional. `generationDefaults` applies to all segments; `segmentGeneration` (keyed by segment id, which works for `segmentsSource` segments that carry no fields of their own) overrides it field by field, per `image` / `video`. Inline `segments` may also carry their own `generation` block; the override map wins over it. Codegen validates against [`scripts/xai-api-spec.json`](../scripts/xai-api-spec.json), the same file the Python runner reads: it fails on an unknown aspect ratio, resolution, quality or response format, on `n` outside 1–10, on a clip longer than 15 s, on a typo'd key (`aspect_ratio`), on a `segmentGeneration` id that names no segment, and on `quality` for a model that does not take it (only `grok-imagine-image-2.0` does; the house default `grok-imagine-image-quality` does not, so set `image.model` alongside it). Codegen emits the merged result on each segment of `public/catalog/cutaways/<id>.json` as `generation`; the authoring fields themselves do not ship. Leave a field out to get the runner's built-in default (model `grok-imagine-image-quality`, 16:9 / `grok-imagine-video`); a clip's length defaults to the segment's own timed length. Models are not enumerated: the server is the authority. Usage: [AGENTS.md](../AGENTS.md#batch-generating-cutaway-stills-and-clips-xai-batchpy).
+
+6. Run `npm run codegen` and commit (including `public/catalog/cutaways/`). The cutaway shows under **Unscheduled** on Suggestions until it has a slot in [`schedule.json`](schedule.json) (below).
 
 ## Adding to the schedule (EyeWash Station)
 

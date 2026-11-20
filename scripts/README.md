@@ -17,17 +17,18 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 
 ## Python (stdlib only)
 
-| Script                        | Purpose                                                                      |
-| ----------------------------- | ---------------------------------------------------------------------------- |
-| `generate-prompts.py`         | Three Grok Imagine variations (wide / close-up / action) from a scene string |
-| `xai-generate.py`             | One xAI Grok Imagine image (`XAI_API_KEY`); `--retries`, `--json-log`        |
-| `xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json`            |
-| `xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes); not a CLI    |
-| `assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                                 |
-| `assemble-cutaway.py`         | Any cutaway's stills + song → timed MP4 preview in `videos/` (needs ffmpeg)  |
-| `create_episode.py`           | Scaffold `episodes/episode-NN/` from `templates/`                            |
-| `eyewash_idents_generator.py` | Markdown table for EyeWash idents                                            |
-| `cat_pov_generator.py`        | Markdown outline for a cat-POV cutaway                                       |
+| Script                        | Purpose                                                                       |
+| ----------------------------- | ----------------------------------------------------------------------------- |
+| `generate-prompts.py`         | Three Grok Imagine variations (wide / close-up / action) from a scene string  |
+| `xai-generate.py`             | One xAI Grok Imagine image (`XAI_API_KEY`); resolution / quality / format     |
+| `xai-batch.py`                | Every segment of one cutaway → stills in `images/<name>/`, or `--video` clips |
+| `xai_api.py`                  | Shared client for the two above (retries, cost, video poll); not a CLI        |
+| `xai-api-spec.json`           | The request values xAI accepts; read by `xai_api.py` and the codegen schema   |
+| `assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                                  |
+| `assemble-cutaway.py`         | Any cutaway's stills + song → timed MP4 preview in `videos/` (needs ffmpeg)   |
+| `create_episode.py`           | Scaffold `episodes/episode-NN/` from `templates/`                             |
+| `eyewash_idents_generator.py` | Markdown table for EyeWash idents                                             |
+| `cat_pov_generator.py`        | Markdown outline for a cat-POV cutaway                                        |
 
 ```bash
 python3 scripts/generate-prompts.py "night desert, laser serpent"
@@ -42,9 +43,14 @@ catalog) or an assembly manifest (explicit images, times and optional Ken Burns 
 ffmpeg pass into `videos/<id>-preview.mp4`. Format and behaviour: [docs/cutaway-assembly.md](../docs/cutaway-assembly.md).
 
 `xai-batch.py` takes a `prompts/*-segments.md` file or a cutaway id, reads the segments (and their
-ids) from the generated catalog, and writes one still per segment plus a manifest. It skips what
-exists, what has no Grok prompt and what still has a `[PLACEHOLDER]`. Full behaviour and flags:
-the script header, and [AGENTS.md](../AGENTS.md#batch-generating-cutaway-stills-xai-batchpy).
+ids, and their per-segment xAI settings) from the generated catalog, and writes one still per segment
+plus a manifest; `--video` makes a clip per segment instead (submitted together, then polled). It
+skips what exists, what has no Grok prompt and what still has a `[PLACEHOLDER]`. Full behaviour and
+flags: the script header, and [AGENTS.md](../AGENTS.md#batch-generating-cutaway-stills-and-clips-xai-batchpy).
+The settings it uses come from flags, then the cutaway's `generationDefaults` (see
+[content/README.md](../content/README.md)), then `xai-api-spec.json`. The same TypeScript schema
+validates `generationDefaults` at codegen, so a typo fails before a paid call; there is deliberately
+no second (TypeScript) runner.
 
 There is no `srt-tools.py` or `update-index.py`.
 

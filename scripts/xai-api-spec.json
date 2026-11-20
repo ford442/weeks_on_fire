@@ -1,0 +1,38 @@
+{
+  "about": "The xAI Imagine request values this repo accepts. One file, read by scripts/xai_api.py (the CLIs) and scripts/content-index/generation.ts (the generationDefaults schema), so the two can never disagree. Source: docs.x.ai, POST /v1/images/generations and POST /v1/videos/generations. The server stays the authority on model ids, so models are not enumerated here.",
+  "image": {
+    "defaultModel": "grok-imagine-image-quality",
+    "defaultAspectRatio": "16:9",
+    "aspectRatios": [
+      "1:1",
+      "3:4",
+      "4:3",
+      "9:16",
+      "16:9",
+      "2:3",
+      "3:2",
+      "9:19.5",
+      "19.5:9",
+      "9:20",
+      "20:9",
+      "1:2",
+      "2:1",
+      "21:9",
+      "5:2",
+      "auto"
+    ],
+    "resolutions": ["1k", "1.5k", "2k"],
+    "qualities": ["low", "medium", "auto"],
+    "qualityModels": ["grok-imagine-image-2.0"],
+    "responseFormats": ["url", "b64_json"],
+    "maxCount": 10
+  },
+  "video": {
+    "defaultModel": "grok-imagine-video",
+    "defaultAspectRatio": "16:9",
+    "aspectRatios": ["1:1", "16:9", "9:16", "4:3", "3:4", "3:2", "2:3", "21:9", "5:2"],
+    "resolutions": ["480p", "720p", "1080p"],
+    "minDurationSec": 1,
+    "maxDurationSec": 15
+  }
+}

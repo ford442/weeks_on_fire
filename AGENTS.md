@@ -147,8 +147,9 @@ Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` 
 | ------------------------------------- | ----------------------------------------------------------------- |
 | `scripts/generate-prompts.py`         | Three Grok Imagine prompt variations from a scene string          |
 | `scripts/xai-generate.py`             | One xAI Imagine image (`XAI_API_KEY`); `--retries`, `--json-log`  |
-| `scripts/xai-batch.py`                | Every segment of one cutaway → `images/<name>/` + `manifest.json` |
-| `scripts/xai_api.py`                  | Shared client for the two above (retries, cost, atomic writes)    |
+| `scripts/xai-batch.py`                | Every segment of one cutaway → stills, or `--video` clips         |
+| `scripts/xai_api.py`                  | Shared client for the two above (retries, cost, video poll)       |
+| `scripts/xai-api-spec.json`           | The request values xAI accepts (one source for CLIs and codegen)  |
 | `scripts/assemble-daisy-slideshow.py` | ffmpeg slideshow over `songs/Daisy+Bell.mp3`                      |
 | `scripts/assemble-cutaway.py`         | Any cutaway's stills + song → timed MP4 preview (needs ffmpeg)    |
 | `scripts/create_episode.py`           | Scaffold `episodes/episode-NN/` from templates                    |
@@ -157,38 +158,69 @@ Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` 
 
 There is **no** `srt-tools.py` or `update-index.py`. Do not invent them.
 
-### Batch-generating cutaway stills (`xai-batch.py`)
+### Batch-generating cutaway stills and clips (`xai-batch.py`)
 
 Needs `XAI_API_KEY` in the environment (or `--api-key`); it is never read from a file and never
 committed, logged or written to a manifest. A paid API: always dry-run first.
 
 ```bash
-python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run    # plan + every prompt, no API call
+python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run    # plan, settings and every prompt; no API call
 python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md \
   --model grok-imagine-image-quality --aspect 16:9 --out images/glam-sham-poo/ --json-log
 python3 scripts/xai-batch.py mv-ultra-screech --only A,C --force           # by cutaway id; redo two segments
+python3 scripts/xai-batch.py mv-ultra-screech --only A --model grok-imagine-image-2.0 \
+  --resolution 2k --quality medium --response-format b64_json                # the other image options
+python3 scripts/xai-batch.py mv-ultra-screech --only A --video --dry-run    # a clip instead of a still
 ```
+
+The Suggestions view builds these lines for you: every segment's prompt board has a **Generate on
+xAI** block with a "Copy command" and a "Copy dry run" button, filled in with that segment's model,
+aspect and other settings (plus a clip command when the content sets `generation.video`).
 
 - **Target** is a `prompts/*-segments.md` file or a cutaway id. Segments and their ids are read
   from the generated `public/catalog/cutaways/<id>.json`, so the manifest's ids are the ids the
   Suggestions view uses. It refuses to run if that catalog has drifted from the markdown: run
   `npm run codegen` after editing a prompts file. Standalone prompt docs
   (`content/standalone-prompts.json`) have no segment ids and are refused.
+- **Settings**, per segment, in order of precedence: the flags you pass (`--model --aspect
+  --resolution --quality --response-format --n`), then the segment's `generation.image` in the
+  catalog (the cutaway's `generationDefaults` merged with its `segmentGeneration` override, authored
+  in `content/cutaways/<id>.json`; see `content/README.md`), then the built-ins in
+  `scripts/xai-api-spec.json` (`grok-imagine-image-quality`, 16:9). Anything else is not sent, so the
+  API applies its own default. One run can therefore mix aspect ratios: set them per segment in the
+  content. `--quality` (`low` / `medium` / `auto`) is only accepted by `grok-imagine-image-2.0`; the
+  script refuses, before any request and in a dry run too, a segment that asks for it on another
+  model. `--response-format b64_json` returns the image inline (nothing to download); `--n 2`
+  asks for several images per segment and saves `<segment-id>.jpg`, `<segment-id>-2.jpg`, ...
 - **Output:** `<out>/<segment-id>.<jpg|png|webp>` and `<out>/manifest.json` (segment id →
-  repo-relative path, prompt SHA-256, model, aspect, size, time), rewritten after every image so an
-  interrupted run loses nothing. `<out>` defaults to `images/<name>/`, where `<name>` is the
-  prompts file's name without `-segments.md`.
+  repo-relative path, prompt SHA-256, model, aspect, resolution, quality, size, time, `costUsd`,
+  `usage`; `variants` when `n > 1`), rewritten after every image so an interrupted run loses
+  nothing. `<out>` defaults to `images/<name>/`, where `<name>` is the prompts file's name without
+  `-segments.md`.
 - **Resume:** a segment is skipped when its image exists, when the cutaway already registers a
   still for it (`segmentStills`), when it has no Grok Imagine prompt, or when the prompt still has
   an unfilled `[PLACEHOLDER]` (Well Fall's `[SIGHT]`). `--force` regenerates, `--only` narrows.
-  A changed prompt on an existing image is flagged, not silently regenerated.
+  A changed prompt, or changed settings, on an existing image is flagged, not silently regenerated.
+- **Clips (`--video`):** the same segments, text-to-video from the segment's Grok Imagine prompt,
+  through the asynchronous API (`POST /v1/videos/generations`, then poll `GET /v1/videos/{request_id}`
+  until `done`). Every segment is submitted first and then all are polled, so the wait is about one
+  clip's, not N. Flags: `--model` (default `grok-imagine-video`), `--aspect`, `--resolution`
+  (`480p` / `720p` / `1080p`), `--duration` 1–15 s (default: the content's
+  `generation.video.durationSec`, else the segment's own timed length, else the API's 8),
+  `--poll-interval`, `--poll-timeout` (default 900 s). Clips go to `videos/<name>/<segment-id>.mp4`
+  with their own manifest (`"kind": "video"`); that folder is gitignored, so host big files on
+  Drive / Imgur. A submitted request id is written to the manifest as `pending` at once and kept
+  through a crash, a timeout or a failed download: re-running resumes it (the plan shows `RESUME`)
+  instead of paying for a new clip. It is dropped only when xAI reports it `failed` or `expired`.
+  A retried *submit* can't tell a lost reply from a lost request, so a network error after xAI
+  accepted the job can start a second paid clip; use `--retries 0` if that matters more to you.
 - **Failures:** 429 / 5xx / network errors retry with exponential backoff (`--retries`, default 3,
   honours `Retry-After`). A 401 / 403 stops the batch; any other failed segment is reported and the
   rest continue. Re-run the same command to redo just the failures.
 - **Cost log:** `--json-log` appends one line per request to `docs/generation-log.jsonl` (model,
-  aspect, prompt hash, usage, `costUsd` from the response's `cost_in_usd_ticks`). Hash only, never
-  the prompt text. Commit it if you want the spend history; it is created on first use.
-- **Aspect** is one value per run (the prompts files carry none); run `--only` per ratio to mix.
+  aspect, resolution, quality, prompt hash, usage, `costUsd` from the response's
+  `cost_in_usd_ticks`). Hash only, never the prompt text. Commit it if you want the spend history;
+  it is created on first use.
 - **Putting a still on the site:** the run prints a `segmentStills` block for
   `content/cutaways/<id>.json`; paste it and `npm run codegen`. Commit only stills you mean to
   ship (no large binaries without approval).

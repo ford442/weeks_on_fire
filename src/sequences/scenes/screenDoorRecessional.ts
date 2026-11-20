@@ -1,4 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import {
   createBox,
   createIcosahedronLines,
@@ -38,6 +39,11 @@ const FRAME_SPACING = 2.15;
 export function createScreenDoorRecessional(): SequenceScene {
   let kit: PorchKit | null = null;
   const mothData = createPoints(40);
+  // Each porch part is one instanced draw across all eight frames.
+  const posts = new InstanceBatch(FRAME_COUNT * 2);
+  const lintels = new InstanceBatch(FRAME_COUNT * 2);
+  const doors = new InstanceBatch(FRAME_COUNT);
+  const bulbs = new InstanceBatch(FRAME_COUNT);
   const proj = createMat4();
   const view = createMat4();
   const identityModel = createMat4();
@@ -87,31 +93,32 @@ export function createScreenDoorRecessional(): SequenceScene {
       const lastIndex = FRAME_COUNT - 1;
       const doorOpen = smoothstep(0.64, 0.78, progress);
 
+      posts.clear();
+      lintels.clear();
+      doors.clear();
+      bulbs.clear();
       for (let i = 0; i < FRAME_COUNT; i++) {
         const z = -i * FRAME_SPACING;
         const oak: Vec3 = [0.5, 0.32, 0.16];
-        engine.drawLit(kit.post, modelTRSX(-0.82, 1.2, z), { color: oak, shininess: 14 });
-        engine.drawLit(kit.post, modelTRSX(0.82, 1.2, z), { color: oak, shininess: 14 });
-        engine.drawLit(kit.lintel, modelTRSX(0, 2.38, z), { color: oak, shininess: 14 });
-        engine.drawLit(kit.lintel, modelTRSX(0, 0.08, z), { color: oak, shininess: 10 });
+        posts.push(modelTRSX(-0.82, 1.2, z), oak, undefined, 14);
+        posts.push(modelTRSX(0.82, 1.2, z), oak, undefined, 14);
+        lintels.push(modelTRSX(0, 2.38, z), oak, undefined, 14);
+        lintels.push(modelTRSX(0, 0.08, z), oak, undefined, 10);
 
         const isLast = i === lastIndex;
         const swing = isLast ? -doorOpen * 1.35 : 0;
-        engine.drawLit(
-          kit.door,
+        doors.push(
           modelTRSX(0.55 * Math.cos(swing) - 0.55, 1.15, z + 0.08, 0, swing, 0),
-          {
-            color: [0.18, 0.2, 0.2],
-            shininess: 30,
-          },
+          [0.18, 0.2, 0.2],
+          undefined,
+          30,
         );
-
-        engine.drawLit(kit.bulb, modelTRSX(0, 2.15, z + 0.2), {
-          color: [1, 0.85, 0.55],
-          emissive: [0.85, 0.55, 0.2],
-          shininess: 4,
-        });
+        bulbs.push(modelTRSX(0, 2.15, z + 0.2), [1, 0.85, 0.55], [0.85, 0.55, 0.2], 4);
       }
+      engine.drawLitInstanced(kit.post, posts);
+      engine.drawLitInstanced(kit.lintel, lintels);
+      engine.drawLitInstanced(kit.door, doors);
+      engine.drawLitInstanced(kit.bulb, bulbs);
 
       writePoints(mothData, (i, set) => {
         const bulbIndex = i % FRAME_COUNT;

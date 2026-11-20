@@ -1,4 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import {
   createBox,
   createCylinder,
@@ -31,34 +32,45 @@ interface Puppet {
   dust: GpuMesh;
 }
 
+/** One instanced draw per puppet part: up to three runners (two afterimage ghosts) per frame. */
+interface Batches {
+  body: InstanceBatch;
+  head: InstanceBatch;
+  eye: InstanceBatch;
+  limb: InstanceBatch;
+  cube: InstanceBatch;
+  floor: InstanceBatch;
+  curtain: InstanceBatch;
+}
+
 export function createHoseChase(): SequenceScene {
   let puppet: Puppet | null = null;
   const dustData = createPoints(28);
   const proj = createMat4();
   const view = createMat4();
   const identityModel = createMat4();
+  const batches: Batches = {
+    body: new InstanceBatch(3),
+    head: new InstanceBatch(3),
+    eye: new InstanceBatch(6),
+    limb: new InstanceBatch(18),
+    cube: new InstanceBatch(3),
+    floor: new InstanceBatch(3),
+    curtain: new InstanceBatch(6),
+  };
 
   const cream: Vec3 = [0.93, 0.86, 0.72];
   const orange: Vec3 = [1, 0.48, 0.12];
   const ink: Vec3 = [0.08, 0.06, 0.05];
   const cubeColor: Vec3 = [0.35, 0.55, 0.82];
 
-  function cel(
-    mesh: GpuMesh,
-    engine: SequenceEngine,
-    model: ReturnType<typeof modelTRSX>,
-    color: Vec3,
-  ) {
-    engine.drawLit(mesh, model, {
-      color,
-      cel: true,
-      shininess: 6,
-      emissive: [color[0] * 0.22, color[1] * 0.22, color[2] * 0.22],
-    });
+  /** A cel part: its own colour, a fifth of it as glow, low shininess. */
+  function cel(batch: InstanceBatch, model: ReturnType<typeof modelTRSX>, color: Vec3) {
+    batch.push(model, color, [color[0] * 0.22, color[1] * 0.22, color[2] * 0.22], 6);
   }
 
-  function drawRunner(
-    engine: SequenceEngine,
+  /** Queues one runner's parts; `drawRunners` draws every queued runner part by part. */
+  function queueRunner(
     x: number,
     bodyY: number,
     squashY: number,
@@ -67,55 +79,44 @@ export function createHoseChase(): SequenceScene {
     wheel: boolean,
     alpha: number,
   ) {
-    if (!puppet) return;
     const bodyColor: Vec3 = [orange[0] * alpha, orange[1] * alpha, orange[2] * alpha];
     const headColor: Vec3 = [cream[0] * alpha, cream[1] * alpha, cream[2] * alpha];
     const inkColor: Vec3 = [ink[0] * alpha, ink[1] * alpha, ink[2] * alpha];
     const cubeC: Vec3 = [cubeColor[0] * alpha, cubeColor[1] * alpha, cubeColor[2] * alpha];
 
-    cel(puppet.body, engine, modelTRSX(x, bodyY, 0, 0, 0.12, lean, 1.15, squashY, 1), bodyColor);
-    cel(
-      puppet.head,
-      engine,
-      modelTRSX(x, bodyY + 0.42 / squashY, 0.04, 0, 0, lean * 0.4),
-      headColor,
-    );
-    engine.drawLit(puppet.eye, modelTRSX(x - 0.07, bodyY + 0.46, 0.2), {
-      color: inkColor,
-      emissive: inkColor,
-      cel: true,
-    });
-    engine.drawLit(puppet.eye, modelTRSX(x + 0.07, bodyY + 0.46, 0.2), {
-      color: inkColor,
-      emissive: inkColor,
-      cel: true,
-    });
+    cel(batches.body, modelTRSX(x, bodyY, 0, 0, 0.12, lean, 1.15, squashY, 1), bodyColor);
+    cel(batches.head, modelTRSX(x, bodyY + 0.42 / squashY, 0.04, 0, 0, lean * 0.4), headColor);
+    batches.eye.push(modelTRSX(x - 0.07, bodyY + 0.46, 0.2), inkColor, inkColor);
+    batches.eye.push(modelTRSX(x + 0.07, bodyY + 0.46, 0.2), inkColor, inkColor);
 
     if (wheel) {
       for (let spoke = 0; spoke < 4; spoke++) {
         const a = stride + (spoke * Math.PI) / 2;
-        cel(
-          puppet.limb,
-          engine,
-          modelTRSX(x - 0.02, bodyY - 0.22, 0, 0, 0, a, 1, 0.85, 1),
-          inkColor,
-        );
+        cel(batches.limb, modelTRSX(x - 0.02, bodyY - 0.22, 0, 0, 0, a, 1, 0.85, 1), inkColor);
       }
     } else {
       const leg = Math.sin(stride) * 0.7;
-      cel(puppet.limb, engine, modelTRSX(x - 0.16, bodyY - 0.28, 0, 0, 0, 0.25 + leg), inkColor);
-      cel(puppet.limb, engine, modelTRSX(x + 0.16, bodyY - 0.28, 0, 0, 0, -0.25 - leg), inkColor);
+      cel(batches.limb, modelTRSX(x - 0.16, bodyY - 0.28, 0, 0, 0, 0.25 + leg), inkColor);
+      cel(batches.limb, modelTRSX(x + 0.16, bodyY - 0.28, 0, 0, 0, -0.25 - leg), inkColor);
     }
 
     const arm = Math.sin(stride + Math.PI) * 0.85;
-    cel(puppet.limb, engine, modelTRSX(x - 0.24, bodyY + 0.08, 0, 0, 0, 1.05 + arm), inkColor);
-    cel(puppet.limb, engine, modelTRSX(x + 0.24, bodyY + 0.08, 0, 0, 0, -1.05 - arm), inkColor);
+    cel(batches.limb, modelTRSX(x - 0.24, bodyY + 0.08, 0, 0, 0, 1.05 + arm), inkColor);
+    cel(batches.limb, modelTRSX(x + 0.24, bodyY + 0.08, 0, 0, 0, -1.05 - arm), inkColor);
     cel(
-      puppet.cube,
-      engine,
+      batches.cube,
       modelTRSX(x, bodyY + 0.66 / squashY, 0, 0.2, stride * 0.15, lean * 0.3, 0.55, 0.55, 0.55),
       cubeC,
     );
+  }
+
+  /** Every queued runner (ghosts first), one instanced draw per part. */
+  function drawRunners(engine: SequenceEngine, parts: Puppet) {
+    engine.drawLitInstanced(parts.body, batches.body, { cel: true });
+    engine.drawLitInstanced(parts.head, batches.head, { cel: true });
+    engine.drawLitInstanced(parts.eye, batches.eye, { cel: true });
+    engine.drawLitInstanced(parts.limb, batches.limb, { cel: true });
+    engine.drawLitInstanced(parts.cube, batches.cube, { cel: true });
   }
 
   return {
@@ -170,34 +171,35 @@ export function createHoseChase(): SequenceScene {
       engine.pointRange = 7;
       engine.clear(0.16, 0.13, 0.11);
 
+      for (const batch of Object.values(batches) as InstanceBatch[]) batch.clear();
+
+      // The treadmill: three overlapping floor tiles and three pairs of curtain legs.
       for (let i = -1; i <= 1; i++) {
-        engine.drawLit(puppet.floor, modelTRSX(-scrollMod + i * tile, 0, 0), {
-          color: [0.25, 0.22, 0.18],
-          useVertexColor: true,
-          shininess: 6,
-        });
+        batches.floor.push(
+          modelTRSX(-scrollMod + i * tile, 0, 0),
+          [0.25, 0.22, 0.18],
+          undefined,
+          6,
+        );
       }
+      engine.drawLitInstanced(puppet.floor, batches.floor, { useVertexColor: true });
       engine.drawLit(puppet.wall, modelTRSX(0, 1.55, -1.55), {
         color: [0.9, 0.82, 0.68],
         shininess: 4,
       });
       for (let i = -1; i <= 1; i++) {
         const cx = -scrollMod + i * tile;
-        engine.drawLit(puppet.curtain, modelTRSX(cx - 2.05, 1.5, -1.35), {
-          color: orange,
-          shininess: 6,
-        });
-        engine.drawLit(puppet.curtain, modelTRSX(cx + 2.05, 1.5, -1.35), {
-          color: orange,
-          shininess: 6,
-        });
+        batches.curtain.push(modelTRSX(cx - 2.05, 1.5, -1.35), orange, undefined, 6);
+        batches.curtain.push(modelTRSX(cx + 2.05, 1.5, -1.35), orange, undefined, 6);
       }
+      engine.drawLitInstanced(puppet.curtain, batches.curtain);
 
       if (run) {
-        drawRunner(engine, x - 0.42, bodyY, squashY, lean, stride - 0.8, true, 0.35);
-        drawRunner(engine, x - 0.24, bodyY, squashY, lean, stride - 0.4, true, 0.6);
+        queueRunner(x - 0.42, bodyY, squashY, lean, stride - 0.8, true, 0.35);
+        queueRunner(x - 0.24, bodyY, squashY, lean, stride - 0.4, true, 0.6);
       }
-      drawRunner(engine, x, bodyY, squashY, lean, stride, run, 1);
+      queueRunner(x, bodyY, squashY, lean, stride, run, 1);
+      drawRunners(engine, puppet);
 
       writePoints(dustData, (i, set) => {
         const life = skidT * (1 - hold);

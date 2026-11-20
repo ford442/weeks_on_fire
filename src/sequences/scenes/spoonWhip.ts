@@ -1,4 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import {
   createBox,
   createCylinder,
@@ -27,6 +28,7 @@ interface StillLife {
 export function createSpoonWhip(): SequenceScene {
   let meshes: StillLife | null = null;
   const steamData = createPoints(48);
+  const spoons = new InstanceBatch(4);
   const proj = createMat4();
   const view = createMat4();
   const identityModel = createMat4();
@@ -95,16 +97,20 @@ export function createSpoonWhip(): SequenceScene {
         shininess: 28,
       });
 
+      // The real spoon and three dimmer, glowing afterimages: one instanced draw, oldest first.
       const spoonSpin = timeSec * 22;
+      spoons.clear();
       for (let ghost = 3; ghost >= 0; ghost--) {
         const yaw = spoonSpin - ghost * 0.45;
         const dim = 1 - ghost * 0.22;
-        engine.drawLit(meshes.spoon, modelTRSX(0.12, 0.085, -0.22, 0, yaw, 0.12), {
-          color: [0.72 * dim, 0.55 * dim, 0.28 * dim],
-          shininess: 90,
-          emissive: ghost > 0 ? [0.08, 0.05, 0.02] : [0, 0, 0],
-        });
+        spoons.push(
+          modelTRSX(0.12, 0.085, -0.22, 0, yaw, 0.12),
+          [0.72 * dim, 0.55 * dim, 0.28 * dim],
+          ghost > 0 ? [0.08, 0.05, 0.02] : [0, 0, 0],
+          90,
+        );
       }
+      engine.drawLitInstanced(meshes.spoon, spoons);
 
       writePoints(steamData, (i, set) => {
         const phaseP = i * 0.37 + timeSec * 2.4;

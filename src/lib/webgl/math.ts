@@ -203,7 +203,15 @@ export function lookAt(out: Mat4, eye: Vec3, center: Vec3, up: Vec3): Mat4 {
   return out;
 }
 
-/** Inverse-transpose of the upper 3x3, written as a 3x3 column-major array. */
+/**
+ * The normal matrix the engine uploads for a model matrix, as a 3x3 column-major array.
+ *
+ * Known issue: this writes the *inverse* of the upper 3x3, not its inverse-transpose, so a
+ * rotated lit mesh is shaded as if rotated the other way (pure rotation R yields R^T). Every
+ * committed film and frame fixture was authored with it, and the instanced lit shader
+ * (`shaders/lit.vert.glsl`) reproduces it so both paths match. Fixing it is a deliberate visual
+ * change: correct this, mirror it in the shader, and regenerate `e2e/fixtures/`.
+ */
 export function normalFromMat4(out: Float32Array, m: Mat4): Float32Array {
   const a00 = m[0] ?? 1;
   const a01 = m[1] ?? 0;

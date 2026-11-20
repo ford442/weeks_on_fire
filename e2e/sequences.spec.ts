@@ -11,6 +11,7 @@ import {
   encodeRgb,
   isFlat,
   readThumbnailInPage,
+  type FrameDiff,
   type FrameFixture,
   type Thumbnail,
 } from './frame';
@@ -41,12 +42,58 @@ const SEQUENCES = [
 
 type Sequence = (typeof SEQUENCES)[number];
 
-const RENDERERS = [
-  { mode: 'worker', query: '' },
-  { mode: 'main', query: '&renderer=main' },
-] as const;
+type GlLimit = 'none' | 'webgl1' | 'webgl1-bare';
 
-type Renderer = (typeof RENDERERS)[number];
+interface Renderer {
+  name: string;
+  mode: 'worker' | 'main';
+  /** The `data-gl` the player must report. */
+  gl: 'webgl2' | 'webgl';
+  query: string;
+  /** Hide WebGL2 (and, for `webgl1-bare`, instancing and VAOs) from the page before it loads. */
+  limit: GlLimit;
+}
+
+const RENDERERS: readonly Renderer[] = [
+  { name: 'worker', mode: 'worker', gl: 'webgl2', query: '', limit: 'none' },
+  { name: 'main', mode: 'main', gl: 'webgl2', query: '&renderer=main', limit: 'none' },
+  // GLSL ES 1.00, plain frame uniforms, ANGLE_instanced_arrays + OES_vertex_array_object.
+  { name: 'main, webgl1', mode: 'main', gl: 'webgl', query: '&renderer=main', limit: 'webgl1' },
+  // The last-resort path: one draw per instance, attributes rebound every draw.
+  {
+    name: 'main, webgl1 without instancing or VAOs',
+    mode: 'main',
+    gl: 'webgl',
+    query: '&renderer=main',
+    limit: 'webgl1-bare',
+  },
+];
+
+/**
+ * Runs in the page before any script: makes `getContext('webgl2')` fail, and optionally hides
+ * the WebGL1 instancing and VAO extensions, so the in-thread player takes its fallback paths.
+ * Playwright serializes this function, so it must not reference anything outside its argument.
+ */
+function limitWebGl(limit: GlLimit): void {
+  if (limit === 'none') return;
+  const hidden = new Set(
+    limit === 'webgl1-bare' ? ['ANGLE_instanced_arrays', 'OES_vertex_array_object'] : [],
+  );
+  // getContext is overloaded per context type; one loose signature covers every call here.
+  type LooseGetContext = (this: HTMLCanvasElement, type: string, attributes?: unknown) => unknown;
+  const proto = HTMLCanvasElement.prototype as unknown as { getContext: LooseGetContext };
+  const getContext = proto.getContext;
+  proto.getContext = function (type, attributes) {
+    if (type === 'webgl2') return null;
+    const context = getContext.call(this, type, attributes) as WebGLRenderingContext | null;
+    if (context && hidden.size > 0 && (type === 'webgl' || type === 'experimental-webgl')) {
+      const getExtension = context.getExtension.bind(context);
+      context.getExtension = ((name: string): unknown =>
+        hidden.has(name) ? null : (getExtension(name) as unknown)) as typeof context.getExtension;
+    }
+    return context;
+  };
+}
 
 function fixturePath(sequence: Sequence): string {
   return join(import.meta.dirname, 'fixtures', `${sequence.id}.frames.json`);
@@ -67,8 +114,9 @@ async function expectContext(
   canvas: Locator,
   mode: Renderer['mode'],
   testInfo: TestInfo,
+  gl: Renderer['gl'] = 'webgl2',
 ): Promise<void> {
-  await expect(canvas).toHaveAttribute('data-gl', 'webgl2');
+  await expect(canvas).toHaveAttribute('data-gl', gl);
   await expect(canvas, 'the renderer the player says drew the frame').toHaveAttribute(
     'data-renderer',
     mode,
@@ -127,7 +175,7 @@ function loadFixture(sequence: Sequence): FrameFixture | undefined {
   }
 }
 
-for (const { mode, query } of RENDERERS) {
+for (const { mode, query } of RENDERERS.filter((r) => r.limit === 'none')) {
   test(`${mode}: playback does not preserve the drawing buffer; only ?capture=1 does`, async ({
     page,
   }, testInfo) => {
@@ -186,20 +234,21 @@ test.describe('without the render worker', () => {
 });
 
 for (const sequence of SEQUENCES) {
-  for (const { mode, query } of RENDERERS) {
-    test(`${sequence.id} (${mode}): draws the committed frames at 0s and 50%`, async ({
+  for (const { name, mode, gl, query, limit } of RENDERERS) {
+    test(`${sequence.id} (${name}): draws the committed frames at 0s and 50%`, async ({
       page,
     }, testInfo) => {
+      await page.addInitScript(limitWebGl, limit);
       const canvas = await openPlayer(page, sequence, `capture=1${query}`);
-      await expectContext(page, canvas, mode, testInfo);
+      await expectContext(page, canvas, mode, testInfo, gl);
 
       const slider = page.getByRole('slider', { name: `Seek ${sequence.title}` });
       const duration = Number(await slider.getAttribute('max'));
       expect(duration, 'slider max is the film duration').toBeGreaterThan(0);
 
-      // Only the worker run rewrites fixtures; the in-thread run always compares.
+      // Only the worker run rewrites fixtures; the in-thread runs always compare.
       const updating =
-        mode === 'worker' && ['all', 'changed'].includes(testInfo.config.updateSnapshots);
+        name === 'worker' && ['all', 'changed'].includes(testInfo.config.updateSnapshots);
       const fixture = loadFixture(sequence);
       if (!updating && !fixture) {
         throw new Error(
@@ -220,6 +269,7 @@ for (const sequence of SEQUENCES) {
         }
 
         let latest: Thumbnail | undefined;
+        let measured: FrameDiff | undefined;
         // Retried briefly: the first draw after load can land a frame or two late on a slow
         // runner, and a worker frame reaches the placeholder canvas a compositor frame later.
         await expect(async () => {
@@ -232,8 +282,16 @@ for (const sequence of SEQUENCES) {
           if (!updating && expected) {
             const diff = compareFrames(latest.rgb, decodeRgb(expected.rgb));
             expect(diff.ok, describeDiff(target.label, diff)).toBe(true);
+            measured = diff;
           }
         }).toPass({ timeout: 10_000, intervals: [250, 500, 1000] });
+        if (measured) {
+          // How close, not just "within tolerance": 0 / 0.00 is a byte-identical thumbnail.
+          testInfo.annotations.push({
+            type: 'frame-diff',
+            description: `${target.label}: max ${measured.maxDiff}, mean ${measured.meanDiff.toFixed(3)}`,
+          });
+        }
 
         if (latest) {
           await testInfo.attach(`frame-${target.label.replace('%', 'pct')}.png`, {

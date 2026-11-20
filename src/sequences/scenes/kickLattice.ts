@@ -1,4 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import {
   createIcosahedronLines,
   createLineCube,
@@ -11,9 +12,13 @@ import { createMat4, DEG, identity, lookAt, perspective, type Vec3 } from '../..
 import type { SequenceDrawContext, SequenceScene } from '../types';
 
 const KICK = 0.4;
+/** Edge lengths of the four nested cubes, inner to outer. */
+const CUBE_SIZES = [0.9, 1.55, 2.25, 3.15];
 
 export function createKickLattice(): SequenceScene {
-  let cubes: GpuMesh[] = [];
+  // One unit cube drawn four times: the size goes into each instance's scale.
+  let cube: GpuMesh | null = null;
+  const cubeBatch = new InstanceBatch(CUBE_SIZES.length);
   let ico: GpuMesh | null = null;
   let core: GpuMesh | null = null;
   let sparks: GpuMesh | null = null;
@@ -24,7 +29,7 @@ export function createKickLattice(): SequenceScene {
 
   return {
     init(engine: SequenceEngine) {
-      cubes = [0.9, 1.55, 2.25, 3.15].map((size) => new GpuMesh(engine.gl, createLineCube(size)));
+      cube = new GpuMesh(engine.gl, createLineCube(1));
       ico = new GpuMesh(engine.gl, createIcosahedronLines(1.85));
       core = new GpuMesh(engine.gl, createSphere(0.28, 18, 24));
       sparks = new GpuMesh(engine.gl, sparkData);
@@ -51,14 +56,18 @@ export function createKickLattice(): SequenceScene {
 
       identity(identityModel);
 
-      cubes.forEach((cube, index) => {
-        const dir = index % 2 === 0 ? 1 : -1;
-        const snap = kickI * 0.18 * dir;
-        const scale = 1 + 0.1 * hop;
-        const model = modelTRSX(0, 0, 0, snap * 0.35, snap, snap * 0.12, scale, scale, scale);
-        const brass: Vec3 = [0.72 + index * 0.04, 0.5, 0.28];
-        engine.drawLines(cube, model, brass);
-      });
+      if (cube) {
+        cubeBatch.clear();
+        CUBE_SIZES.forEach((size, index) => {
+          const dir = index % 2 === 0 ? 1 : -1;
+          const snap = kickI * 0.18 * dir;
+          const scale = (1 + 0.1 * hop) * size;
+          const model = modelTRSX(0, 0, 0, snap * 0.35, snap, snap * 0.12, scale, scale, scale);
+          const brass: Vec3 = [0.72 + index * 0.04, 0.5, 0.28];
+          cubeBatch.push(model, brass);
+        });
+        engine.drawLinesInstanced(cube, cubeBatch);
+      }
 
       if (ico) {
         const snap = -kickI * 0.22;
@@ -89,8 +98,8 @@ export function createKickLattice(): SequenceScene {
       }
     },
     dispose() {
-      cubes.forEach((cube) => cube.dispose());
-      cubes = [];
+      cube?.dispose();
+      cube = null;
       ico?.dispose();
       core?.dispose();
       sparks?.dispose();

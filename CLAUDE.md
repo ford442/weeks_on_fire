@@ -17,6 +17,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 - Author catalog data in `content/` and `songs/`, then codegen — never hand-edit `src/data/generated/` or `public/catalog/` (songs and cutaways: bundled summaries + per-record JSON fetched by detail views; see `content/README.md`)
 - Before any writing or joke pass, read `notes/callback-bank.md` and pull at least three callbacks.
 - Songs start from a video, not from a genre: read `docs/song-method.md` (owner lock) before writing any song, sketch or pitch.
+- Native code is gated and optional: no `native/` today. Issue #94 allowed a C++/WASM geometry kernel only if the TS kernel took ≥ 25% of frame CPU; it measured 0.3–4.7% (`docs/perf/engine-v2-profile.md`). If `native/` is ever added, the hub still builds without it (no emsdk in `npm run build`).
 - Writing and joke passes go to the **`wof-writer`** subagent (`.claude/agents/wof-writer.md`): reading order, comedy rules, locks, and where each kind of output is filed.
 
 ## Hub views
@@ -38,7 +39,11 @@ Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short carto
 Suggestions.
 
 3D Sequences (`/sequences`, `/sequences/:id`) plays procedural WebGL video sequences
-(`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed.
+(`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed. The player draws
+in an `OffscreenCanvas` render worker (`src/sequences/worker/`) and falls back in-thread;
+`?renderer=main` forces in-thread, `?stats` overlays frame stats. Hand-written scenes register in
+`src/sequences/scenes/index.ts`; repeated meshes draw as one `InstanceBatch`. See
+`docs/sequence-engine.md`.
 
 Overview copy (logline, synopsis, tone, format) lives in `src/data/about.ts`; episodes, cast and crew come from the catalog. "What's new" is codegen'd into `src/data/generated/whats-new.ts` from each record's `added: YYYY-MM-DD` (songs require it; cutaways, cartoons, sequences and gallery items take it optionally — set it when you add one).
 
@@ -86,10 +91,13 @@ Use Node 22 (`.nvmrc`).
 
 `test:e2e` drives the production build, which must use the Pages base:
 `VITE_BASE=/weeks_on_fire/ npm run build && npm run test:e2e` (first time:
-`npx playwright install chromium`). It opens `/show/sequences/lattice-hymn?capture=1` and compares
-downsampled frames at 0s and 50% to `e2e/fixtures/`. `?capture=1` is the only thing that sets
-`preserveDrawingBuffer`; the player publishes the context it got as `data-gl`. Vitest (jsdom) cannot
-run a shader, so this is the only check that does. CI runs it on every pull request.
+`npx playwright install chromium`). It opens four films (lattice-hymn, hose-chase, kick-lattice,
+mobius-chrome) with `?capture=1` and compares downsampled frames at 0s and 50% to `e2e/fixtures/`,
+on the render worker and in-thread (WebGL2, WebGL1, and WebGL1 without instancing or VAOs), plus a
+run that blocks the worker script and expects the in-thread fallback. `?capture=1` is the only thing
+that sets `preserveDrawingBuffer`; the player publishes what it got as `data-gl`, `data-renderer` and
+`data-preserve-drawing-buffer`. Vitest (jsdom) cannot run a shader, so this is the only check that
+does. CI runs it on every pull request.
 
 `tsc -b` includes `tsconfig.scripts.json` so codegen is typechecked. App `tsconfig` enables `noUncheckedIndexedAccess` and `verbatimModuleSyntax`.
 

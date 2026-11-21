@@ -214,6 +214,14 @@ The Two belong anywhere the world is ending beautifully. That is not everywhere.
 
 ## Quick-Start Grok Imagine Prompt Seeds
 
+> **Superseded for production stills.** These one-liners are seeds. The hero versions (1,500–3,500
+> characters, wide / medium / close, with the identity locks pasted verbatim) are
+> [`prompts/hero/ep01-house-of-mirrors-rally.md`](../prompts/hero/ep01-house-of-mirrors-rally.md) (the game),
+> [`ep01-burning-town-heels.md`](../prompts/hero/ep01-burning-town-heels.md) (walking away from the fire),
+> [`series-the-two-lamborghini-night.md`](../prompts/hero/series-the-two-lamborghini-night.md) (the car) and
+> [`cutaway-hoa-purple-light.md`](../prompts/hero/cutaway-hoa-purple-light.md) (the back wall). Their look is locked in
+> [`prompts/locks/the-two-identity.lock.md`](../prompts/locks/the-two-identity.lock.md); change it there, not here.
+
 **Core duo shot (use as base):**
 "Two nearly identical women with long black hair and blood-red lipstick wearing matching black lace dresses, one driving a silver Lamborghini at night while the other watches her from the passenger seat with an unreadable expression, gothic atmosphere, cinematic lighting, Grok Imagine style"
 

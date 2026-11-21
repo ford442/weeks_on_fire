@@ -21,7 +21,9 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 
 | Script                        | Purpose                                                                       |
 | ----------------------------- | ----------------------------------------------------------------------------- |
-| `generate-prompts.py`         | Three Grok Imagine variations (wide / close-up / action) from a scene string  |
+| `generate-prompts.py`         | Three quick variations; `--max-density` / `--variants` / `--count` for heroes |
+| `check-hero-prompts.py`       | Hero library rules: locks verbatim, counts, avoid list (`--write`, `--print`) |
+| `hero_prompts.py`             | Shared parser + rules for the two above; not a CLI                            |
 | `xai-generate.py`             | One xAI Grok Imagine image (`XAI_API_KEY`); resolution / quality / format     |
 | `xai-batch.py`                | Every segment of one cutaway → stills in `images/<name>/`, or `--video` clips |
 | `xai_api.py`                  | Shared client for the two above (retries, cost, video poll); not a CLI        |
@@ -34,6 +36,8 @@ ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/
 
 ```bash
 python3 scripts/generate-prompts.py "night desert, laser serpent"
+python3 scripts/generate-prompts.py --max-density "night laundromat" --lock house-negative/still
+python3 scripts/check-hero-prompts.py                 # prompts/hero/ against prompts/locks/
 python3 scripts/create_episode.py 05 "Title"
 python3 scripts/xai-batch.py prompts/glam-sham-poo-segments.md --dry-run
 python3 scripts/assemble-cutaway.py --manifest content/cutaways/mv-ultra-screech.json --dry-run

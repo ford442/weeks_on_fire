@@ -149,7 +149,8 @@ Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` 
 
 | Script                                | Purpose                                                           |
 | ------------------------------------- | ----------------------------------------------------------------- |
-| `scripts/generate-prompts.py`         | Three Grok Imagine prompt variations from a scene string          |
+| `scripts/generate-prompts.py`         | Quick variations; `--max-density` hero builder (W / M / C + counts) |
+| `scripts/check-hero-prompts.py`       | Check `prompts/hero/` against `prompts/locks/`; `--print H07-M`   |
 | `scripts/xai-generate.py`             | One xAI Imagine image (`XAI_API_KEY`); `--retries`, `--json-log`  |
 | `scripts/xai-batch.py`                | Every segment of one cutaway → stills, or `--video` clips         |
 | `scripts/xai_api.py`                  | Shared client for the two above (retries, cost, video poll)       |
@@ -277,6 +278,7 @@ Do **not** add an episode card to a static `index.html`. The hub is the React ap
 - `notes/scratchpad.md` — rapid capture
 - `notes/scene-suggestions.md` / `notes/song-suggestions.md` — structured templates
 - `notes/image-prompt-captures.md` — stage Grok ideas, then move to `prompts/`
+- `prompts/hero/` + `prompts/locks/` — max-density hero key frames (W / M / C) sharing verbatim character locks; rules in `prompts/README.md` → Hero prompts; `python3 scripts/check-hero-prompts.py` before committing
 - `notes/scenes/versions/` — dialog audition pages (not codegen)
 
 ---

@@ -53,6 +53,7 @@ export default function CutawayBoard({
         <RelatedLinks type="cutaway" id={cutaway.id} heading={`${cutaway.title} — links`} />
       </div>
       <CutawayPreview
+        cutaway={cutaway}
         segments={cutaway.segments}
         activeSegmentId={segment.id}
         onActiveSegmentChange={onActiveSegmentChange}

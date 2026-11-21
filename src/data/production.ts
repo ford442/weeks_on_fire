@@ -5,6 +5,7 @@
 // Types and runtime validation both come from the shared Zod contract in
 // src/schemas/production.ts — do not redefine these shapes here.
 
+import { isSessionMediaUrl } from '../lib/mediaUrl';
 import {
   ClipStackerPayloadSchema,
   EpisodeProductionSchema,
@@ -84,6 +85,26 @@ export function getEpisodeProductionSync(episode: string): EpisodeProduction | n
   return structuredClone(cached);
 }
 
+/**
+ * The production with every in-browser take (`blob:` mediaUrl) removed. A take recorded in the hub
+ * plays only in the tab that recorded it, so it is never stored, exported or committed: the scene
+ * keeps no link until a hosted one is pasted.
+ */
+export function withoutSessionMedia(production: EpisodeProduction): EpisodeProduction {
+  if (!production.scenes.some((scene) => isSessionMediaUrl(scene.mediaUrl))) return production;
+  return {
+    ...production,
+    scenes: production.scenes.map((scene) =>
+      isSessionMediaUrl(scene.mediaUrl) ? { ...scene, mediaUrl: '' } : scene,
+    ),
+  };
+}
+
+/** Scenes whose media is a take from this tab only (left out of saves and exports). */
+export function countSessionMedia(production: EpisodeProduction): number {
+  return production.scenes.filter((scene) => isSessionMediaUrl(scene.mediaUrl)).length;
+}
+
 export function exportToClipStacker(production: EpisodeProduction): ClipStackerPayload {
   return {
     project: production.title,
@@ -95,7 +116,8 @@ export function exportToClipStacker(production: EpisodeProduction): ClipStackerP
       timestamp: scene.timestamp,
       order: scene.order,
       status: scene.status,
-      mediaUrl: scene.mediaUrl || null,
+      // A session take (`blob:`) means nothing outside this tab: export it as no media.
+      mediaUrl: scene.mediaUrl && !isSessionMediaUrl(scene.mediaUrl) ? scene.mediaUrl : null,
       description: scene.description,
       // Catalog refs ride along only when set; an unset ref is an omitted key.
       ...pickCatalogRefs(scene),

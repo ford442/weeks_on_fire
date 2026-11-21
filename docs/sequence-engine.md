@@ -45,6 +45,10 @@ marks the worker unavailable for the rest of the page, so later players go strai
 | `?stats` / `=1`  | Overlay: thread, context, kernel, buffer size, CPU per frame, fps, GL counters |
 | `?capture=1`     | Keep the drawing buffer so frames can be read back (e2e harness, capture)      |
 
+**Record** under the player records one full pass as a WebM take ([capture.md](capture.md)). For
+the take only, it draws in-thread at 1280 px wide with the drawing buffer preserved, then hands the
+film back to the worker.
+
 The player also publishes what it got on the canvas: `data-renderer` (`worker` / `main`),
 `data-gl` (`webgl2` / `webgl` / `none`), `data-preserve-drawing-buffer` and `data-kernel`, all as
 reported by the context that was created, not as requested.

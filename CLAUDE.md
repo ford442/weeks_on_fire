@@ -45,6 +45,14 @@ in an `OffscreenCanvas` render worker (`src/sequences/worker/`) and falls back i
 `src/sequences/scenes/index.ts`; repeated meshes draw as one `InstanceBatch`. See
 `docs/sequence-engine.md`.
 
+**Capture (Record take).** The sequence player and the cutaway preview on a Suggestions board each
+have **Record**: one full pass to a WebM take (MediaRecorder, no library; capture code is a lazy
+chunk). The cutaway preview runs on a `PlaybackGraph` (`src/lib/playbackGraph.ts`: one clock for
+song, stills and canvas, registered with the media coordinator). Takes are `blob:` URLs held by the
+tab only: the Timeline editor can attach one to a scene for the session, but saved edits, Export
+JSON and the clip_stacker export never carry a `blob:` URL — host the file and paste the link. Never
+commit takes. See `docs/capture.md`; `scripts/assemble-cutaway.py` stays the quality path.
+
 Overview copy (logline, synopsis, tone, format) lives in `src/data/about.ts`; episodes, cast and crew come from the catalog. "What's new" is codegen'd into `src/data/generated/whats-new.ts` from each record's `added: YYYY-MM-DD` (songs require it; cutaways, cartoons, sequences and gallery items take it optionally — set it when you add one).
 
 Every item uses one production status set (`suggested → ready-to-generate → generated → in-edit →

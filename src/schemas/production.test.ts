@@ -3,7 +3,12 @@ import { z } from 'zod';
 
 import episode01Json from '../../episodes/episode-01/scenes.json';
 import episode04Json from '../../episodes/episode-04/scenes.json';
-import { clipStackerToProduction, exportToClipStacker } from '../data/production';
+import {
+  clipStackerToProduction,
+  countSessionMedia,
+  exportToClipStacker,
+  withoutSessionMedia,
+} from '../data/production';
 
 import {
   ClipStackerPayloadSchema,
@@ -83,6 +88,28 @@ describe('clip_stacker export', () => {
       null, // empty string mediaUrl exported as null
       'https://example.com/scene-002.mp4',
     ]);
+  });
+
+  it('leaves out a take recorded in this tab (blob:), which nobody else can open', () => {
+    const episode = fixtureEpisode();
+    const [first, second] = episode.scenes;
+    if (!first || !second) throw new Error('fixture needs two scenes');
+    const withTake = {
+      ...episode,
+      scenes: [{ ...first, mediaUrl: 'blob:http://localhost:5173/abc' }, second],
+    };
+    expect(countSessionMedia(withTake)).toBe(1);
+    expect(exportToClipStacker(withTake).clips.map((clip) => clip.mediaUrl)).toEqual([
+      null,
+      'https://example.com/scene-002.mp4',
+    ]);
+    // Export JSON (the committed scenes.json shape) drops it the same way.
+    expect(withoutSessionMedia(withTake).scenes.map((scene) => scene.mediaUrl)).toEqual([
+      '',
+      'https://example.com/scene-002.mp4',
+    ]);
+    // Nothing to strip: the same object comes back.
+    expect(withoutSessionMedia(episode)).toBe(episode);
   });
 });
 

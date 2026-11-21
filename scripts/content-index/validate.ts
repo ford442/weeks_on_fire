@@ -82,6 +82,19 @@ export function validateContent(
       }
     }
 
+    // A key that names no segment attaches its still to nothing, silently (the-soft-gyre's five
+    // locked stills sat unused that way). Segment ids come from the prompts parser, not the file.
+    const segmentIds = new Set((cutaway.segments ?? []).map((segment) => segment.id));
+    const strayStills = Object.keys(cutaway.segmentStills ?? {}).filter(
+      (id) => !segmentIds.has(id),
+    );
+    if (strayStills.length > 0) {
+      errors.push(
+        `Cutaway ${cutaway.id}: segmentStills names unknown segment id(s): ${strayStills.join(', ')}` +
+          ` (segments: ${[...segmentIds].join(', ') || 'none'})`,
+      );
+    }
+
     for (const segment of cutaway.segments ?? []) {
       const stillPath = segment.stillImagePath;
       if (stillPath && !existsSync(join(repoRoot, stillPath))) {

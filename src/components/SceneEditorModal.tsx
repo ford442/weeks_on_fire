@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { X, Save } from 'lucide-react';
 
+import { useCaptureTakes } from '../hooks/useCaptureTakes';
 import { useEscapeKey } from '../hooks/useEscapeKey';
 import { appendSceneHistory, updateSceneStatus } from '../data/production';
+import { findTakeByUrl, type CaptureTake } from '../lib/capture/takes';
+import { isHostedMediaUrl, isSessionMediaUrl } from '../lib/mediaUrl';
+import { formatTimecodeTenths } from '../lib/timecode';
 import {
   CHARACTER_OPTIONS,
   SINGLE_REF_FIELDS,
@@ -177,17 +181,20 @@ function SceneEditorModalContent({
           </label>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <label className="block">
-              <span className="mb-1 block text-xs font-medium text-zinc-400">
-                Media URL (Drive / external)
-              </span>
-              <input
-                value={mediaUrl}
-                onChange={(e) => setMediaUrl(e.target.value)}
-                placeholder="https://..."
-                className="w-full rounded-md border border-zinc-800 bg-black px-3 py-2 text-sm outline-none focus:border-orange-500"
-              />
-            </label>
+            <div className="space-y-2">
+              <label className="block">
+                <span className="mb-1 block text-xs font-medium text-zinc-400">
+                  Media URL (Drive / external)
+                </span>
+                <input
+                  value={mediaUrl}
+                  onChange={(e) => setMediaUrl(e.target.value)}
+                  placeholder="https://..."
+                  className="w-full rounded-md border border-zinc-800 bg-black px-3 py-2 text-sm outline-none focus:border-orange-500"
+                />
+              </label>
+              <SessionTakePicker mediaUrl={mediaUrl} onPick={setMediaUrl} />
+            </div>
 
             <label className="block">
               <span className="mb-1 block text-xs font-medium text-zinc-400">Status</span>
@@ -204,6 +211,8 @@ function SceneEditorModalContent({
               </select>
             </label>
           </div>
+
+          <MediaUrlNote mediaUrl={mediaUrl} />
 
           <fieldset className="space-y-3 rounded-md border border-zinc-800 p-3">
             <legend className="px-1 text-xs font-medium text-zinc-400">
@@ -305,4 +314,93 @@ function SceneEditorModalContent({
       </div>
     </div>
   );
+}
+
+function takeLabel(take: CaptureTake): string {
+  const time = new Date(take.createdAt).toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  return `${take.title} · ${formatTimecodeTenths(take.durationSec)} · ${time}`;
+}
+
+/** Takes recorded in this tab (Sequences, Suggestions): attach one to the scene for this session. */
+function SessionTakePicker({
+  mediaUrl,
+  onPick,
+}: {
+  mediaUrl: string;
+  onPick: (url: string) => void;
+}) {
+  const takes = useCaptureTakes();
+  if (takes.length === 0) return null;
+  const current = findTakeByUrl(mediaUrl);
+
+  return (
+    <label className="block">
+      <span className="mb-1 block text-xs font-medium text-zinc-400">
+        Or a take recorded in this tab (session only)
+      </span>
+      <select
+        value={current?.url ?? ''}
+        onChange={(e) => {
+          if (e.target.value) onPick(e.target.value);
+        }}
+        className="w-full rounded-md border border-zinc-800 bg-black px-3 py-2 text-sm outline-none focus:border-orange-500"
+      >
+        <option value="">— choose a take —</option>
+        {takes.map((take) => (
+          <option key={take.id} value={take.url}>
+            {takeLabel(take)}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+/** What happens to the scene's media link: kept and exported, or session only. */
+function MediaUrlNote({ mediaUrl }: { mediaUrl: string }) {
+  const url = mediaUrl.trim();
+  if (!url) return null;
+
+  if (isSessionMediaUrl(url)) {
+    const take = findTakeByUrl(url);
+    return (
+      <div
+        role="note"
+        className="space-y-2 rounded-md border border-amber-500/40 bg-amber-500/10 p-3 text-xs leading-5 text-amber-100"
+      >
+        <p>
+          <strong>Session only.</strong> This take plays in this tab and nowhere else. It is not
+          saved with your edits, not in Export JSON and not sent to clip_stacker: download it, host
+          it (Drive / Imgur), and paste the hosted link here to keep it.
+        </p>
+        {take ? (
+          // eslint-disable-next-line jsx-a11y/media-has-caption -- a take is a picture test; its only sound is the song
+          <video
+            src={take.url}
+            controls
+            playsInline
+            preload="metadata"
+            className="aspect-video w-full max-w-sm rounded bg-black"
+            aria-label={`${take.title} take`}
+          />
+        ) : (
+          <p className="text-amber-200">
+            This take is gone: it was discarded, or the tab was reloaded since it was recorded.
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  if (!isHostedMediaUrl(url)) {
+    return (
+      <p role="note" className="text-xs leading-5 text-zinc-400">
+        This is not an http(s) link, so clip_stacker and other machines may not be able to open it.
+      </p>
+    );
+  }
+  return null;
 }

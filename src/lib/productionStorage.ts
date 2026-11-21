@@ -1,3 +1,4 @@
+import { withoutSessionMedia } from '../data/production';
 import { PRODUCTION_STORAGE_SCHEMA_VERSION, parseStoredProduction } from '../schemas/production';
 
 import type { EpisodeProduction } from '../data/production';
@@ -26,7 +27,8 @@ export function saveStored(episode: string, production: EpisodeProduction): void
   const payload: StoredProduction = {
     schemaVersion: PRODUCTION_STORAGE_SCHEMA_VERSION,
     savedAt: new Date().toISOString(),
-    production,
+    // A `blob:` take dies with the tab; storing it would leave a dead link after a reload.
+    production: withoutSessionMedia(production),
   };
   localStorage.setItem(storageKey(episode), JSON.stringify(payload));
 }

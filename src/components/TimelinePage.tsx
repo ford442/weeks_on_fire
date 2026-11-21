@@ -6,9 +6,11 @@ import { useEpisodeProduction } from '../hooks/useEpisodeProduction';
 import { pluralize } from '../lib/plural';
 import {
   clipStackerToProduction,
+  countSessionMedia,
   createEmptyScene,
   exportToClipStacker,
   isClipStackerPayload,
+  withoutSessionMedia,
 } from '../data/production';
 
 import SceneTimeline from './SceneTimeline';
@@ -83,14 +85,27 @@ export default function TimelinePage() {
     setIsNewScene(false);
   };
 
+  /** Takes from this tab are left out of every export; say so rather than drop them silently. */
+  const noteSessionTakes = () => {
+    if (!production) return;
+    const takes = countSessionMedia(production);
+    setImportMessage(
+      takes > 0
+        ? `Exported without ${pluralize(takes, 'session take')}: a take recorded in this tab is not a link anyone else can open. Download it, host it, and paste the hosted URL into the scene.`
+        : null,
+    );
+  };
+
   const handleExportJSON = () => {
     if (!production) return;
-    downloadJson(production, `episode-${production.episode}-scenes.json`);
+    downloadJson(withoutSessionMedia(production), `episode-${production.episode}-scenes.json`);
+    noteSessionTakes();
   };
 
   const handleExportToClipStacker = () => {
     if (!production) return;
     downloadJson(exportToClipStacker(production), `clip-stacker-${production.episode}.json`);
+    noteSessionTakes();
   };
 
   const handleImportClipStacker = async (event: ChangeEvent<HTMLInputElement>) => {

@@ -26,21 +26,41 @@ import {
  * assumed. The fixtures were taken from the in-thread engine before the worker existed.
  *
  * Update the committed frames after an intentional visual change with `npm run test:e2e:update`
- * (only the worker run writes; the in-thread run is then compared against what it wrote).
+ * (only the in-thread WebGL2 run writes; the worker and WebGL1 runs then compare against it).
  */
 
 const SEQUENCES = [
-  // Graph-backed: lines, a lit core, point sprites.
+  // Lines, a lit core, point sprites; the first graph film.
   { id: 'lattice-hymn', title: 'Lattice Hymn' },
-  // Cel puppets with afterimage ghosts: the instanced path's busiest scene.
+  // Cel puppets with afterimage ghosts on a repeating stage: the instanced path's busiest scene.
   { id: 'hose-chase', title: 'Hose Chase' },
-  // Custom lattice: instanced line cubes plus per-frame spark rewrites.
+  // Instanced line cubes plus per-frame spark rewrites, all stepped by the kick.
   { id: 'kick-lattice', title: 'Kick Lattice' },
   // Ribbon rebuilt through the geometry kernel while it morphs.
   { id: 'mobius-chrome', title: 'Möbius Chrome' },
+  // Point light, a still life, rising steam. Sampled at 25%: at 50% the orbit is behind the
+  // back wall and the frame is one flat colour.
+  { id: 'kitchen-counter-orbit', title: 'Kitchen Counter Orbit', middle: 0.25 },
+  // Eight counter-spinning rings and a kick-stepped dolly.
+  { id: 'tunnel-smash', title: 'Tunnel Smash' },
+  // Eight instanced porch frames, a door swing, the void lattice at the end.
+  { id: 'screen-door-recessional', title: 'Screen Door Recessional' },
+  // Instanced spoon afterimages on a four-orbit camera.
+  { id: 'spoon-whip', title: 'Spoon Whip' },
+  // Cel puppet walk, hop and hat pickup.
+  { id: 'rubber-hose-errand', title: 'Rubber-Hose Errand' },
 ] as const;
 
 type Sequence = (typeof SEQUENCES)[number];
+
+/** Share of the film for the middle frame: 50% unless the film says otherwise. */
+function middleShare(sequence: Sequence): number {
+  return 'middle' in sequence ? sequence.middle : 0.5;
+}
+
+function middleLabel(sequence: Sequence): string {
+  return `${Math.round(middleShare(sequence) * 100)}%`;
+}
 
 type GlLimit = 'none' | 'webgl1' | 'webgl1-bare';
 
@@ -55,8 +75,9 @@ interface Renderer {
 }
 
 const RENDERERS: readonly Renderer[] = [
-  { name: 'worker', mode: 'worker', gl: 'webgl2', query: '', limit: 'none' },
+  // First, because it is the run that writes fixtures (see `updating` below).
   { name: 'main', mode: 'main', gl: 'webgl2', query: '&renderer=main', limit: 'none' },
+  { name: 'worker', mode: 'worker', gl: 'webgl2', query: '', limit: 'none' },
   // GLSL ES 1.00, plain frame uniforms, ANGLE_instanced_arrays + OES_vertex_array_object.
   { name: 'main, webgl1', mode: 'main', gl: 'webgl', query: '&renderer=main', limit: 'webgl1' },
   // The last-resort path: one draw per instance, attributes rebound every draw.
@@ -152,6 +173,12 @@ async function seekTo(page: Page, sequence: Sequence, seconds: number): Promise<
   const slider = page.getByRole('slider', { name: `Seek ${sequence.title}` });
   await slider.fill(String(seconds));
   await expect(page.getByText(new RegExp(`^${timecode(seconds)} / `))).toBeVisible();
+  // `?capture=1` loads publish the film time of the last frame drawn (worker or page). Wait for
+  // it, or an update run can record the previous seek's frame (a worker frame lands late).
+  const canvas = page.locator('canvas[role="img"]');
+  if ((await canvas.getAttribute('data-preserve-drawing-buffer')) === 'true') {
+    await expect(canvas).toHaveAttribute('data-frame-time', String(seconds));
+  }
   await nextFrames(page);
 }
 
@@ -235,7 +262,7 @@ test.describe('without the render worker', () => {
 
 for (const sequence of SEQUENCES) {
   for (const { name, mode, gl, query, limit } of RENDERERS) {
-    test(`${sequence.id} (${name}): draws the committed frames at 0s and 50%`, async ({
+    test(`${sequence.id} (${name}): draws the committed frames at 0s, mid-film and 100%`, async ({
       page,
     }, testInfo) => {
       await page.addInitScript(limitWebGl, limit);
@@ -246,9 +273,11 @@ for (const sequence of SEQUENCES) {
       const duration = Number(await slider.getAttribute('max'));
       expect(duration, 'slider max is the film duration').toBeGreaterThan(0);
 
-      // Only the worker run rewrites fixtures; the in-thread runs always compare.
+      // Only the in-thread WebGL2 run rewrites fixtures; every other run compares. Not the worker:
+      // its frame reaches the page's placeholder canvas a compositor frame (or, after a seek to
+      // the last frame, a few hundred ms) after it reports the draw, and a write cannot retry.
       const updating =
-        name === 'worker' && ['all', 'changed'].includes(testInfo.config.updateSnapshots);
+        name === 'main' && ['all', 'changed'].includes(testInfo.config.updateSnapshots);
       const fixture = loadFixture(sequence);
       if (!updating && !fixture) {
         throw new Error(
@@ -258,7 +287,8 @@ for (const sequence of SEQUENCES) {
 
       const targets = [
         { label: '0s', timeSec: 0 },
-        { label: '50%', timeSec: duration / 2 },
+        { label: middleLabel(sequence), timeSec: duration * middleShare(sequence) },
+        { label: '100%', timeSec: duration },
       ];
       const captured: { label: string; timeSec: number; rgb: number[] }[] = [];
 
@@ -303,9 +333,10 @@ for (const sequence of SEQUENCES) {
       }
 
       const [first, middle] = captured;
+      // Ends on its opening frame is fine (loops); the middle frame must still move.
       if (first && middle) {
         const between = compareFrames(first.rgb, middle.rgb);
-        expect(between.ok, 'the film at 50% must look different from 0s').toBe(false);
+        expect(between.ok, 'the film mid-way must look different from 0s').toBe(false);
       }
 
       if (updating) {

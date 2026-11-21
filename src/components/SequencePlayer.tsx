@@ -294,6 +294,8 @@ export default function SequencePlayer({
         wake();
       },
       onFrame(frameStats) {
+        // Capture loads publish which moment is on screen, so a reader can wait for its frame.
+        if (preserveBuffer) canvas.dataset.frameTime = String(frameStats.timeSec);
         statsWindowRef.current.push(frameStats, performance.now());
       },
     };

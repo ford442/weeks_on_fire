@@ -143,7 +143,7 @@ export function compileGraph(graph: SequenceGraph): { graph: CompiledGraph; issu
   };
 
   const declareVars = (
-    vars: Record<string, number | string> | undefined,
+    vars: Record<string, Scalar> | undefined,
     outer: ResolveSlot,
     taken: ReadonlySet<string>,
     path: (string | number)[],

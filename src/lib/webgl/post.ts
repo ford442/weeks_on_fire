@@ -20,10 +20,11 @@ function isWebGL2(gl: SequenceGl): gl is WebGL2RenderingContext {
  * Post passes for graph films: the first framebuffer use in the engine, kept small.
  *
  * - **Vignette** needs no framebuffer: one full-screen triangle multiplied onto the frame.
- * - **Ghosts** copy the current frame into a texture (`copyTexImage2D`, so the canvas keeps its
- *   antialiasing), draw each earlier moment into one offscreen framebuffer, and add back the part
- *   of it that is brighter than now. Nothing is accumulated between frames, so a seek or a capture
- *   shows exactly the frame playback would. If the framebuffer is incomplete, ghosts are skipped
+ * - **Ghosts** draw the current moment and each earlier one into two offscreen framebuffers, and
+ *   blend the earlier-minus-now difference onto the (antialiased) canvas. Both sides of the
+ *   difference come from identical non-antialiased targets, so static edges cancel exactly and
+ *   only what moved leaves a trail. Nothing is accumulated between frames, so a seek or a capture
+ *   shows exactly the frame playback would. If a framebuffer is incomplete, ghosts are skipped
  *   and the film plays without them.
  *
  * Plain RGBA8 targets and a 16-bit depth renderbuffer: core in WebGL1 and WebGL2, no float
@@ -33,9 +34,7 @@ export class PostPass {
   private vignetteProgram: ShaderProgram | null = null;
   private ghostProgram: ShaderProgram | null = null;
   private readonly triangle: WebGLBuffer;
-  private current: WebGLTexture | null = null;
-  private ghost: { fbo: WebGLFramebuffer; color: WebGLTexture; depth: WebGLRenderbuffer } | null =
-    null;
+  private targets: { current: Target; ghost: Target; depth: WebGLRenderbuffer } | null = null;
   private size = { width: 0, height: 0 };
   private ghostsBroken = false;
 
@@ -68,45 +67,46 @@ export class PostPass {
   }
 
   /**
-   * Copies the canvas (the frame just drawn) for `compositeGhost` to compare against. Returns
-   * false when ghosts cannot run here; the caller then skips them.
+   * Points drawing at the "now" framebuffer: draw the current moment again, then each ghost with
+   * `beginGhost` / `compositeGhost`. Returns false when ghosts cannot run here; the caller skips
+   * them.
    */
-  captureCurrent(width: number, height: number): boolean {
-    if (this.ghostsBroken) return false;
-    const gl = this.gl;
-    if (!this.ensureTargets(width, height)) return false;
-    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    gl.bindTexture(gl.TEXTURE_2D, this.current);
-    // RGB: the canvas has no alpha channel, and a copy may not invent one.
-    gl.copyTexImage2D(gl.TEXTURE_2D, 0, gl.RGB, 0, 0, width, height, 0);
-    gl.bindTexture(gl.TEXTURE_2D, null);
+  beginCurrent(width: number, height: number): boolean {
+    if (this.ghostsBroken || !this.ensureTargets(width, height) || !this.targets) return false;
+    this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, this.targets.current.fbo);
     return true;
   }
 
   /** Points drawing at the ghost framebuffer; draw the earlier moment, then `compositeGhost`. */
   beginGhost(): void {
-    const ghost = this.ghost;
-    if (ghost) this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, ghost.fbo);
+    if (this.targets) this.gl.bindFramebuffer(this.gl.FRAMEBUFFER, this.targets.ghost.fbo);
   }
 
-  /** Adds `weight` times the brighter-than-now part of the ghost onto the canvas. */
-  compositeGhost(weight: number): void {
+  /**
+   * Adds `weight` times the part of the ghost brighter than now onto the canvas, or with `darken`,
+   * takes away the part darker than now (so dark things trail across a bright sky).
+   */
+  compositeGhost(weight: number, darken = false): void {
     const gl = this.gl;
-    const ghost = this.ghost;
+    const targets = this.targets;
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    if (!ghost || !this.current) return;
+    if (!targets) return;
     const program = (this.ghostProgram ??= this.build('ghost'));
     this.begin(program);
     gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, this.current);
+    gl.bindTexture(gl.TEXTURE_2D, targets.current.color);
     gl.activeTexture(gl.TEXTURE1);
-    gl.bindTexture(gl.TEXTURE_2D, ghost.color);
+    gl.bindTexture(gl.TEXTURE_2D, targets.ghost.color);
     setInt(gl, program, 'uCurrent', 0);
     setInt(gl, program, 'uGhost', 1);
     set1(gl, program, 'uWeight', weight);
+    set1(gl, program, 'uDarken', darken ? 1 : 0);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.ONE, gl.ONE);
+    // Darken: canvas minus the (positive) darker-than-now amount.
+    if (darken) gl.blendEquation(gl.FUNC_REVERSE_SUBTRACT);
     this.drawTriangle();
+    gl.blendEquation(gl.FUNC_ADD);
     gl.bindTexture(gl.TEXTURE_2D, null);
     gl.activeTexture(gl.TEXTURE0);
     gl.bindTexture(gl.TEXTURE_2D, null);
@@ -156,62 +156,83 @@ export class PostPass {
   }
 
   private ensureTargets(width: number, height: number): boolean {
-    if (this.ghost && this.size.width === width && this.size.height === height) return true;
+    if (this.targets && this.size.width === width && this.size.height === height) return true;
     this.releaseTargets();
     const gl = this.gl;
-    const texture = () => {
-      const tex = gl.createTexture();
-      if (!tex) return null;
-      gl.bindTexture(gl.TEXTURE_2D, tex);
-      // Non-power-of-two safe on WebGL1: clamp, no mipmaps.
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      return tex;
-    };
-    const current = texture();
-    const color = texture();
-    const fbo = gl.createFramebuffer();
+    // One depth buffer serves both targets: they are drawn one after the other.
     const depth = gl.createRenderbuffer();
-    if (!current || !color || !fbo || !depth) {
+    if (!depth) {
       this.ghostsBroken = true;
       return false;
     }
-    gl.bindTexture(gl.TEXTURE_2D, color);
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
-    gl.bindTexture(gl.TEXTURE_2D, null);
     gl.bindRenderbuffer(gl.RENDERBUFFER, depth);
     gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);
     gl.bindRenderbuffer(gl.RENDERBUFFER, null);
-    gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, color, 0);
-    gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, depth);
-    const complete = gl.checkFramebufferStatus(gl.FRAMEBUFFER) === gl.FRAMEBUFFER_COMPLETE;
-    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
-    this.current = current;
-    this.ghost = { fbo, color, depth };
+    const current = createTarget(gl, width, height, depth);
+    const ghost = createTarget(gl, width, height, depth);
     this.size = { width, height };
-    if (!complete) {
-      this.releaseTargets();
+    if (!current || !ghost) {
+      for (const target of [current, ghost]) if (target) deleteTarget(gl, target);
+      gl.deleteRenderbuffer(depth);
       this.ghostsBroken = true;
       return false;
     }
+    this.targets = { current, ghost, depth };
     return true;
   }
 
   private releaseTargets(): void {
-    const gl = this.gl;
-    if (this.current) gl.deleteTexture(this.current);
-    if (this.ghost) {
-      gl.deleteFramebuffer(this.ghost.fbo);
-      gl.deleteTexture(this.ghost.color);
-      gl.deleteRenderbuffer(this.ghost.depth);
+    const targets = this.targets;
+    if (targets) {
+      deleteTarget(this.gl, targets.current);
+      deleteTarget(this.gl, targets.ghost);
+      this.gl.deleteRenderbuffer(targets.depth);
     }
-    this.current = null;
-    this.ghost = null;
+    this.targets = null;
     this.size = { width: 0, height: 0 };
   }
+}
+
+interface Target {
+  fbo: WebGLFramebuffer;
+  color: WebGLTexture;
+}
+
+/** An RGBA8 colour texture plus the shared depth buffer; null if incomplete here. */
+function createTarget(
+  gl: SequenceGl,
+  width: number,
+  height: number,
+  depth: WebGLRenderbuffer,
+): Target | null {
+  const color = gl.createTexture();
+  const fbo = gl.createFramebuffer();
+  if (!color || !fbo) {
+    if (color) gl.deleteTexture(color);
+    if (fbo) gl.deleteFramebuffer(fbo);
+    return null;
+  }
+  gl.bindTexture(gl.TEXTURE_2D, color);
+  // Non-power-of-two safe on WebGL1: clamp, no mipmaps.
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+  gl.bindTexture(gl.TEXTURE_2D, null);
+  gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, color, 0);
+  gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, depth);
+  const complete = gl.checkFramebufferStatus(gl.FRAMEBUFFER) === gl.FRAMEBUFFER_COMPLETE;
+  gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+  if (complete) return { fbo, color };
+  deleteTarget(gl, { fbo, color });
+  return null;
+}
+
+function deleteTarget(gl: SequenceGl, target: Target): void {
+  gl.deleteFramebuffer(target.fbo);
+  gl.deleteTexture(target.color);
 }
 
 function set1(gl: SequenceGl, program: ShaderProgram, name: string, value: number): void {

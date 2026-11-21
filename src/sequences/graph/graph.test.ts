@@ -228,6 +228,20 @@ describe('createGraphEvaluator', () => {
     expect(driven.fovDeg).toBe(10);
   });
 
+  it('samples keyframed vars at scene time', () => {
+    const keyed = createGraphEvaluator({
+      camera: { type: 'perspective', eye: [0, 'lift * 2', 0], target: [0, 0, 0] },
+      vars: {
+        lift: [
+          { t: 0, v: 0 },
+          { t: 4, v: 1 },
+        ],
+      },
+      nodes: [graph.nodes[0]!],
+    }).frame(1);
+    expect(keyed.eye[1]).toBe(0.5);
+  });
+
   it('wraps scene time with loop but keeps progress on film time', () => {
     const looped = createGraphEvaluator(
       {
@@ -586,7 +600,13 @@ describe('SequenceGraphSchema', () => {
   it('accepts every v2 feature together', () => {
     expect(
       problems({
-        vars: { beat: 'floor(t / 0.5)' },
+        vars: {
+          beat: 'floor(t / 0.5)',
+          drop: [
+            { t: 0, v: 0 },
+            { t: 1, v: 2, ease: 'out' },
+          ],
+        },
         environment: {
           background: ['beat % 2 == 0 ? 0 : 0.1', 0, 0],
           pointLight: { position: [0, 1, 0], color: [1, 1, 1], range: 3 },
@@ -649,7 +669,7 @@ describe('SequenceGraphSchema', () => {
           { t: 1, label: 'drop' },
           { t: 2, label: 'land' },
         ],
-        post: { vignette: { strength: 0.4 }, ghosts: { count: 3, decay: 0.5 } },
+        post: { vignette: { strength: 0.4 }, ghosts: { count: 3, decay: 0.5, mode: 'darken' } },
       }),
     ).toEqual([]);
   });

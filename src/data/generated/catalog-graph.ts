@@ -298,6 +298,7 @@ export const catalogGraph: CatalogGraph = {
     { key: "cartoon:walrus-cork", type: "cartoon", id: "walrus-cork", title: "Last Down the Slide", path: "/show/cartoons/walrus-cork" },
     { key: "cartoon:witness-chicken", type: "cartoon", id: "witness-chicken", title: "Witness Chicken", path: "/show/cartoons/witness-chicken" },
     { key: "cartoon:worm-forecast", type: "cartoon", id: "worm-forecast", title: "Worm Forecast", path: "/show/cartoons/worm-forecast" },
+    { key: "sequence:elephant-trampoline", type: "sequence", id: "elephant-trampoline", title: "Everyone Else Bounces", path: "/show/sequences/elephant-trampoline" },
     { key: "sequence:spoon-whip", type: "sequence", id: "spoon-whip", title: "Spoon Whip", path: "/show/sequences/spoon-whip" },
     { key: "sequence:tunnel-smash", type: "sequence", id: "tunnel-smash", title: "Tunnel Smash", path: "/show/sequences/tunnel-smash" },
     { key: "sequence:hose-chase", type: "sequence", id: "hose-chase", title: "Hose Chase", path: "/show/sequences/hose-chase" },

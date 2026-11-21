@@ -193,6 +193,7 @@ export const cutawayRefs: CatalogRef[] = [
 ];
 
 export const sequenceRefs: CatalogRef[] = [
+  { id: "elephant-trampoline", title: "Everyone Else Bounces" },
   { id: "spoon-whip", title: "Spoon Whip" },
   { id: "tunnel-smash", title: "Tunnel Smash" },
   { id: "hose-chase", title: "Hose Chase" },

@@ -41,7 +41,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 ## Search and catalog graph
 
 - **Search**: https://ford442.github.io/weeks_on_fire/show/search/?q=<terms> (also the header search, `/` or Ctrl/⌘-K). Indexes titles, tags, summaries and linked character names across every catalog; lyrics and Grok prompts are not indexed.
-- **Graph**: https://ford442.github.io/weeks_on_fire/catalog-graph.json — 281 records and 144 typed links. Node keys are `<type>:<id>` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge `rel`: `song` (scored by), `character` (has on screen), `episode` (belongs to), `promotion` (cartoon promoted to cutaway), `insert` (cuts in), `related` (sequence goes with cutaway).
+- **Graph**: https://ford442.github.io/weeks_on_fire/catalog-graph.json — 282 records and 144 typed links. Node keys are `<type>:<id>` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge `rel`: `song` (scored by), `character` (has on screen), `episode` (belongs to), `promotion` (cartoon promoted to cutaway), `insert` (cuts in), `related` (sequence goes with cutaway).
 - Links are authored as ids in `content/` (`characterIds`, `episodeId`, `promotedFromCartoonId` / `promotedToCutawayId`, `sequenceInsertIds`, `relatedCutawayIds`) and Timeline `scenes.json` refs; codegen fails on an unknown id.
 
 ## Episode index
@@ -501,6 +501,7 @@ Short still + optional 6–8s loop. No song id. Author in `content/cartoons/<id>
 
 Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in `content/sequences/<id>.json`. No song id.
 
+- **Everyone Else Bounces** (elephant-trampoline, cartoon, ~12 seconds) — An elephant bounces on a backyard trampoline. The trampoline does not move. The elephant does not leave it. Everyone else on the street goes up instead, and comes down in their own yard.
 - **Spoon Whip** (spoon-whip, photoreal, ~12 seconds) — Same mug, same spoon, same orange. The camera commits a crime: a horizontal whip that never settles. The spoon is a propeller. Steam streaks. Nobody comes back for them any faster.
 - **Tunnel Smash** (tunnel-smash, unreal, ~12 seconds) — Concentric brass rings rush the lens. Each kick is a smash-zoom toward a matte ember that never arrives. The vanishing point is off-center. Not a wormhole. Not a sphere in a cave.
 - **Hose Chase** (hose-chase, cartoon, ~16 seconds) — The errand-runner is already wearing the cube. The 4:3 stage is a treadmill. Rubber-hose legs blur into a wheel. The stop is a skid that throws two grooves. The hat stays on.

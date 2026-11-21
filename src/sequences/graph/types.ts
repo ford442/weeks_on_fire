@@ -128,7 +128,7 @@ export type GraphGeometry =
    * `count` points placed every frame by `position`. Inside a field, `i` is the point index and
    * `n` the count; the field's own `vars` are evaluated per point, before `position`.
    */
-  | { type: 'field'; count: number; vars?: Record<string, number | Expr>; position: Vector }
+  | { type: 'field'; count: number; vars?: Record<string, Scalar>; position: Vector }
   | GraphEmitter
   /** Möbius band (`mix` 0) morphing into a (2,3) torus-knot ribbon (`mix` 1). */
   | { type: 'ribbon'; mix: Scalar; uSegments?: number; vSegments?: number }
@@ -229,8 +229,8 @@ export interface GraphNode {
   wobble?: GraphWobble;
   /** Drawn while > 0 (and while its parent is). */
   visible?: Scalar;
-  /** Named numbers for this node's (and its children's) expressions, in order. */
-  vars?: Record<string, number | Expr>;
+  /** Named numbers for this node's (and its children's) expressions, in order: constants, expressions or keyframes. */
+  vars?: Record<string, Scalar>;
   instances?: GraphInstances;
   repeat?: GraphRepeat;
 }
@@ -257,17 +257,23 @@ export interface GraphPost {
   vignette?: { strength: number; radius?: number; softness?: number };
   /**
    * Afterimages: the film `count` times at `spacing` seconds (default 1/24) earlier, each
-   * weighted `decay^k`, lightening only. Deterministic (re-drawn, not accumulated), so
+   * weighted `decay^k`, lightening (or darkening) only. Deterministic (re-drawn, not accumulated), so
    * seeking and capture show the same frame.
    */
-  ghosts?: { count: number; decay: number; spacing?: number };
+  ghosts?: {
+    count: number;
+    decay: number;
+    spacing?: number;
+    /** `lighten` (default): bright things trail on dark ground. `darken`: dark things trail on bright ground. */
+    mode?: 'lighten' | 'darken';
+  };
 }
 
 export interface SequenceGraph {
   camera: GraphCamera;
   environment?: GraphEnvironment;
-  /** Named numbers every expression can read, evaluated in order once per frame. */
-  vars?: Record<string, number | Expr>;
+  /** Named numbers every expression can read (constants, expressions or keyframes), in order, once per frame. */
+  vars?: Record<string, Scalar>;
   nodes: GraphNode[];
   clips?: GraphClip[];
   /** After `outSec`, scene time wraps back to `inSec`. */

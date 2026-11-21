@@ -49,6 +49,8 @@ const SEQUENCES = [
   { id: 'spoon-whip', title: 'Spoon Whip' },
   // Cel puppet walk, hop and hat pickup.
   { id: 'rubber-hose-errand', title: 'Rubber-Hose Errand' },
+  // Authored as JSON only: hose limbs, emitters, squash and wobble, darken ghosts, a vignette.
+  { id: 'elephant-trampoline', title: 'Everyone Else Bounces' },
 ] as const;
 
 type Sequence = (typeof SEQUENCES)[number];

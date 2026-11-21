@@ -42,16 +42,14 @@ function scalarOf(value: z.ZodType<number> = num) {
 }
 const scalar = scalarOf();
 
+/** Named numbers: constants, expressions or keyframes. */
+const VarsSchema = z.record(z.string(), scalar);
+
 const part = z.union([num, expr], { error: 'must be a number or an expression string' });
 const vector = z.union([z.tuple([part, part, part]), z.array(keyframe(vec3)).min(1)], {
   error:
     'must be [x, y, z] (numbers or expression strings) or a list of { t, v: [x, y, z] } keyframes',
 });
-
-const VarsSchema = z.record(
-  z.string(),
-  z.union([num, expr], { error: 'must be a number or an expression string' }),
-);
 
 const lens = { near: positive.optional(), far: positive.optional() };
 
@@ -343,6 +341,7 @@ export const SequenceGraphSchema = z
             count: z.number().int().min(1).max(4),
             decay: num.gt(0).max(1),
             spacing: positive.max(1).optional(),
+            mode: z.enum(['lighten', 'darken']).optional(),
           })
           .optional(),
       })

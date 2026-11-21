@@ -1,0 +1,760 @@
+{
+  "vars": {
+    "es": [
+      {"t": 0, "v": 1},
+      {"t": 0.8, "v": 1, "ease": "inOut"},
+      {"t": 1.4, "v": 0.85, "ease": "inOut"},
+      {"t": 1.47, "v": 1.1},
+      {"t": 1.52, "v": 0.75, "ease": "out"},
+      {"t": 1.7, "v": 1.1, "ease": "inOut"},
+      {"t": 1.85, "v": 0.95, "ease": "inOut"},
+      {"t": 2.0, "v": 1.03, "ease": "inOut"},
+      {"t": 2.2, "v": 1},
+      {"t": 4.0, "v": 1, "ease": "inOut"},
+      {"t": 4.8, "v": 0.7, "ease": "inOut"},
+      {"t": 4.92, "v": 1.2},
+      {"t": 5.0, "v": 0.55, "ease": "out"},
+      {"t": 5.2, "v": 1.2, "ease": "inOut"},
+      {"t": 5.4, "v": 0.9, "ease": "inOut"},
+      {"t": 5.6, "v": 1.05, "ease": "inOut"},
+      {"t": 5.8, "v": 1}
+    ],
+    "trunk": [
+      {"t": 0, "v": 0},
+      {"t": 0.8, "v": 0, "ease": "inOut"},
+      {"t": 1.4, "v": 45},
+      {"t": 2.2, "v": 45, "ease": "inOut"},
+      {"t": 2.8, "v": 0},
+      {"t": 4.0, "v": 0, "ease": "inOut"},
+      {"t": 4.9, "v": 180},
+      {"t": 5.8, "v": 180, "ease": "inOut"},
+      {"t": 6.4, "v": 0}
+    ],
+    "flare": [
+      {"t": 0, "v": 0},
+      {"t": 4.0, "v": 0, "ease": "inOut"},
+      {"t": 4.9, "v": 40},
+      {"t": 5.8, "v": 40, "ease": "inOut"},
+      {"t": 6.4, "v": 0}
+    ],
+    "blink": [
+      {"t": 0, "v": 1},
+      {"t": 11.2, "v": 1, "ease": "inOut"},
+      {"t": 11.32, "v": 0.1, "ease": "inOut"},
+      {"t": 11.45, "v": 1}
+    ],
+    "ebY": "0.26 + 0.77 * es",
+    "lift": [
+      {"t": 0, "v": 0},
+      {"t": 1.5, "v": 0, "ease": "out"},
+      {"t": 2.1, "v": 1.2},
+      {"t": 2.3, "v": 1.2, "ease": "in"},
+      {"t": 2.8, "v": 0},
+      {"t": 5.0, "v": 0, "ease": "out"},
+      {"t": 6.4, "v": 2.6},
+      {"t": 8.6, "v": 2.6, "ease": "in"},
+      {"t": 9.2, "v": 0}
+    ],
+    "nsq": [
+      {"t": 0, "v": 1},
+      {"t": 1.5, "v": 1},
+      {"t": 1.56, "v": 1.15},
+      {"t": 2.0, "v": 1.15},
+      {"t": 2.12, "v": 0.9},
+      {"t": 2.3, "v": 0.95},
+      {"t": 2.4, "v": 1.15},
+      {"t": 2.78, "v": 1.15},
+      {"t": 2.82, "v": 0.8},
+      {"t": 2.95, "v": 1.1},
+      {"t": 3.1, "v": 0.95},
+      {"t": 3.25, "v": 1.02},
+      {"t": 3.4, "v": 1},
+      {"t": 5.0, "v": 1},
+      {"t": 5.06, "v": 1.3},
+      {"t": 6.2, "v": 1.3},
+      {"t": 6.4, "v": 0.9},
+      {"t": 6.6, "v": 1},
+      {"t": 8.6, "v": 1},
+      {"t": 8.7, "v": 1.3},
+      {"t": 9.18, "v": 1.3},
+      {"t": 9.22, "v": 0.65},
+      {"t": 9.4, "v": 1.15},
+      {"t": 9.6, "v": 0.92},
+      {"t": 9.8, "v": 1.05},
+      {"t": 10.0, "v": 0.98},
+      {"t": 10.4, "v": 1}
+    ],
+    "hang": "smoothstep(6.4, 6.6, t) * (1 - smoothstep(8.4, 8.6, t))",
+    "bs": "clamp((t - 1.5) / 0.4, 0, 1)",
+    "bb": "clamp((t - 5) / 0.7, 0, 1)",
+    "binHop": "0.6 * bs * (1 - bs) + 1.6 * bb * (1 - bb)",
+    "earsUp": "smoothstep(6.38, 6.42, t) * (1 - smoothstep(9.28, 9.32, t))",
+    "sip": [
+      {"t": 0, "v": 0},
+      {"t": 7.4, "v": 0, "ease": "inOut"},
+      {"t": 7.75, "v": 1},
+      {"t": 7.9, "v": 1, "ease": "inOut"},
+      {"t": 8.2, "v": 0}
+    ],
+    "duckUp": [
+      {"t": 0, "v": 0},
+      {"t": 6.6, "v": 0, "ease": "inOut"},
+      {"t": 6.9, "v": 0.3},
+      {"t": 9.3, "v": 0.3, "ease": "in"},
+      {"t": 9.35, "v": 0}
+    ]
+  },
+  "camera": {
+    "type": "perspective",
+    "eye": [-1.1, 1.3, 8.5],
+    "target": [0, 1.55, -1.4],
+    "fov": 40,
+    "near": 0.1,
+    "far": 40
+  },
+  "environment": {
+    "background": [0.62, 0.8, 0.95],
+    "lightDir": [0.35, 0.85, 0.5],
+    "lightColor": [1.0, 0.96, 0.88],
+    "ambient": [0.42, 0.43, 0.48],
+    "fogDensity": 0
+  },
+  "nodes": [
+    {
+      "id": "far-lawn",
+      "geometry": {"type": "box", "size": [40, 0.02, 10]},
+      "material": {"kind": "cel", "color": [0.34, 0.55, 0.3], "glow": 0.1, "shininess": 6},
+      "translation": [0, -0.02, -7.5]
+    },
+    {
+      "id": "lawns",
+      "geometry": {"type": "box", "size": [1, 0.02, 0.84]},
+      "instances": {"count": 33, "layout": "grid", "columns": 11, "spacing": [1, 0, 0.84]},
+      "vars": {"tile": "(i % 11 + floor(i / 11)) % 2"},
+      "material": {
+        "kind": "cel",
+        "color": ["tile ? 0.36 : 0.31", "tile ? 0.64 : 0.56", "tile ? 0.3 : 0.27"],
+        "glow": 0.12,
+        "shininess": 4
+      },
+      "translation": [0, -0.01, -1.26]
+    },
+    {
+      "id": "alley",
+      "geometry": {"type": "box", "size": [40, 0.02, 14]},
+      "material": {"kind": "cel", "color": [0.55, 0.55, 0.57], "glow": 0.12, "shininess": 6},
+      "translation": [0, -0.01, 7]
+    },
+    {
+      "id": "houses",
+      "instances": {"count": 5, "layout": "line", "spacing": [2, 0, 0]},
+      "translation": [-4, 0, -3.1]
+    },
+    {
+      "id": "house-wall",
+      "parent": "houses",
+      "geometry": {"type": "box", "size": [1.4, 0.6, 1.0]},
+      "material": {"kind": "cel", "color": [0.95, 0.9, 0.78], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.3, 0]
+    },
+    {
+      "id": "house-roof",
+      "parent": "houses",
+      "geometry": {"type": "lathe", "profile": [[0.0, -0.001], [1.0, 0], [0, 0.4]], "segments": 4},
+      "material": {"kind": "cel", "color": [0.5, 0.3, 0.18], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.6, 0],
+      "rotation": [0, 45, 0]
+    },
+    {
+      "id": "house-door",
+      "parent": "houses",
+      "geometry": {"type": "box", "size": [0.22, 0.38, 0.02]},
+      "material": {"kind": "cel", "color": [0.36, 0.22, 0.14], "glow": 0.22, "shininess": 6},
+      "translation": [-0.35, 0.19, 0.51]
+    },
+    {
+      "id": "window",
+      "geometry": {"type": "box", "size": [0.36, 0.24, 0.02]},
+      "material": {
+        "kind": "lit",
+        "color": [0.6, 0.75, 0.9],
+        "emissive": ["0.55 + 0.06 * sin(t * pi * 7)", "0.65 + 0.06 * sin(t * pi * 7)", 0.8]
+      },
+      "translation": [4.25, 0.36, -2.59]
+    },
+    {
+      "id": "window-bars",
+      "geometry": {"type": "box", "size": [0.1, 0.2, 0.01]},
+      "instances": {"count": 3, "layout": "line", "spacing": [0.11, 0, 0]},
+      "material": {
+        "kind": "lit",
+        "color": [0, 0, 0],
+        "emissive": [
+          "pick(i, 0.6, 0.35, 0.6) * 0.5",
+          "pick(i, 0.55, 0.6, 0.35) * 0.5",
+          "pick(i, 0.3, 0.6, 0.65) * 0.5"
+        ]
+      },
+      "translation": [4.14, 0.36, -2.575]
+    },
+    {
+      "id": "back-fence",
+      "geometry": {"type": "box", "size": [0.06, 0.3, 0.04]},
+      "instances": {"count": 41, "layout": "line", "spacing": [0.25, 0, 0]},
+      "vars": {
+        "d": "abs(-5 + i * 0.25) * 0.05",
+        "s1": "t - 1.5 - d",
+        "s2": "t - 5 - d",
+        "w": "(s1 > 0 ? 0.35 * sin(s1 * 26) * exp(-s1 * 5) : 0) + (s2 > 0 ? 0.8 * sin(s2 * 22) * exp(-s2 * 3.5) : 0)",
+        "jelly": "max(0.4, 1 + w)"
+      },
+      "material": {"kind": "cel", "color": [0.96, 0.96, 0.94], "glow": 0.3, "shininess": 6},
+      "squash": "jelly",
+      "translation": [-5, "0.15 * jelly", 0]
+    },
+    {
+      "id": "side-fences",
+      "geometry": {"type": "box", "size": [0.04, 0.3, 0.06]},
+      "instances": {"count": 32, "layout": "grid", "columns": 4, "spacing": [2, 0, 0.3]},
+      "vars": {
+        "d": "abs((i % 4) * 2 - 3) * 0.05",
+        "s1": "t - 1.5 - d",
+        "s2": "t - 5 - d",
+        "w": "(s1 > 0 ? 0.35 * sin(s1 * 26) * exp(-s1 * 5) : 0) + (s2 > 0 ? 0.8 * sin(s2 * 22) * exp(-s2 * 3.5) : 0)",
+        "jelly": "max(0.4, 1 + w)"
+      },
+      "material": {"kind": "cel", "color": [0.96, 0.96, 0.94], "glow": 0.3, "shininess": 6},
+      "squash": "jelly",
+      "translation": [0, "0.15 * jelly", -1.25]
+    },
+    {
+      "id": "bins",
+      "geometry": {"type": "box", "size": [0.3, 0.45, 0.3]},
+      "instances": {
+        "count": 3,
+        "layout": "explicit",
+        "points": [[-3.15, 0, 0.6], [-2.8, 0, 0.6], [-2.45, 0, 0.6]]
+      },
+      "material": {
+        "kind": "cel",
+        "color": ["pick(i, 0.45, 0.2, 0.42)", "pick(i, 0.7, 0.35, 0.52)", "pick(i, 0.92, 0.85, 0.62)"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "translation": [0, "0.225 + binHop", 0]
+    },
+    {"id": "cone", "translation": [-0.3, "binHop", 0.5]},
+    {
+      "id": "cone-body",
+      "parent": "cone",
+      "geometry": {
+        "type": "lathe",
+        "profile": [[0.15, 0], [0.13, 0.03], [0.025, 0.42], [0, 0.43]],
+        "segments": 16
+      },
+      "material": {"kind": "cel", "color": [1, 0.45, 0.1], "glow": 0.22, "shininess": 6}
+    },
+    {
+      "id": "cone-band",
+      "parent": "cone",
+      "geometry": {"type": "torus", "major": 0.085, "minor": 0.018, "majorSeg": 20, "minorSeg": 6},
+      "material": {"kind": "cel", "color": [0.97, 0.97, 0.95], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.21, 0]
+    },
+    {
+      "id": "lamp",
+      "translation": [5.3, 0, 1.0],
+      "vars": {"s1": "t - 1.5 - 0.27", "s2": "t - 5 - 0.27"},
+      "squash": "max(0.5, 1 + (s1 > 0 ? 0.2 * sin(s1 * 18) * exp(-s1 * 4) : 0) + (s2 > 0 ? 0.45 * sin(s2 * 16) * exp(-s2 * 3) : 0))"
+    },
+    {
+      "id": "lamp-pole",
+      "parent": "lamp",
+      "geometry": {"type": "cylinder", "radius": 0.04, "height": 1.6, "radial": 10, "caps": true},
+      "material": {"kind": "cel", "color": [0.45, 0.47, 0.5], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.8, 0]
+    },
+    {
+      "id": "lamp-head",
+      "parent": "lamp",
+      "geometry": {"type": "sphere", "radius": 0.12, "lat": 12, "long": 16},
+      "material": {"kind": "lit", "color": [0.9, 0.95, 1], "emissive": [0.85, 0.9, 1]},
+      "translation": [0, 1.65, 0]
+    },
+    {"id": "trampoline", "translation": [0, 0, -1.2]},
+    {
+      "id": "mat",
+      "parent": "trampoline",
+      "geometry": {"type": "cylinder", "radius": 0.78, "height": 0.02, "radial": 32, "caps": true},
+      "material": {"kind": "cel", "color": [0.08, 0.08, 0.09], "glow": 0.1, "shininess": 6},
+      "translation": [0, 0.25, 0]
+    },
+    {
+      "id": "rim",
+      "parent": "trampoline",
+      "geometry": {"type": "torus", "major": 0.8, "minor": 0.06, "majorSeg": 40, "minorSeg": 8},
+      "material": {"kind": "cel", "color": [0.22, 0.82, 0.32], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.26, 0]
+    },
+    {
+      "id": "frame-legs",
+      "parent": "trampoline",
+      "geometry": {"type": "cylinder", "radius": 0.025, "height": 0.25, "radial": 8, "caps": true},
+      "instances": {"count": 6, "layout": "ring", "radius": 0.72},
+      "material": {"kind": "cel", "color": [0.76, 0.78, 0.82], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.125, 0]
+    },
+    {
+      "id": "elephant-body",
+      "geometry": {"type": "sphere", "radius": 0.45, "lat": 16, "long": 20},
+      "material": {"kind": "cel", "color": [0.56, 0.57, 0.62], "glow": 0.22, "shininess": 6},
+      "translation": [0, "ebY", -1.2],
+      "scale": [1.15, 1, 1],
+      "squash": "es"
+    },
+    {
+      "id": "elephant-head",
+      "geometry": {"type": "sphere", "radius": 0.3, "lat": 14, "long": 18},
+      "material": {"kind": "cel", "color": [0.56, 0.57, 0.62], "glow": 0.22, "shininess": 6},
+      "translation": [0, "ebY + 0.2 * es", -0.74]
+    },
+    {
+      "id": "elephant-ears",
+      "geometry": {"type": "sphere", "radius": 0.24, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.74, 0.6, 0.63], "glow": 0.22, "shininess": 6},
+      "instances": {"count": 2},
+      "translation": ["pick(i, -0.34, 0.34)", "ebY + 0.22 * es", -0.82],
+      "rotation": [0, "pick(i, -1, 1) * (25 + flare)", 0],
+      "scale": [0.22, 1, 0.85]
+    },
+    {
+      "id": "elephant-eyes",
+      "geometry": {"type": "sphere", "radius": 0.035, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.06, 0.05, 0.05], "emissive": [0.06, 0.05, 0.05]},
+      "instances": {"count": 2},
+      "translation": ["pick(i, -0.11, 0.11)", "ebY + 0.28 * es", -0.47],
+      "scale": [1, "blink", 1]
+    },
+    {
+      "id": "trunk",
+      "vars": {"a": "rad(trunk)", "base": "ebY + 0.1 * es"},
+      "geometry": {
+        "type": "hose",
+        "from": [0, "base", -0.47],
+        "to": [0, "base - cos(a) * 0.5", "-0.36 + sin(a) * 0.22"],
+        "length": 0.56,
+        "radius": 0.075,
+        "bend": [0, 0, 1],
+        "samples": 14,
+        "radial": 10
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "leg-front-left",
+      "geometry": {
+        "type": "hose",
+        "from": [-0.27, "0.26 + 0.45 * es", 0.2],
+        "to": [-0.3105, 0.27, 0.10000000000000003],
+        "length": 0.36,
+        "radius": 0.095,
+        "bend": [0, 0, 1],
+        "samples": 10,
+        "radial": 10
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "leg-front-right",
+      "geometry": {
+        "type": "hose",
+        "from": [0.27, "0.26 + 0.45 * es", 0.2],
+        "to": [0.3105, 0.27, 0.10000000000000003],
+        "length": 0.36,
+        "radius": 0.095,
+        "bend": [0, 0, 1],
+        "samples": 10,
+        "radial": 10
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "leg-back-left",
+      "geometry": {
+        "type": "hose",
+        "from": [-0.27, "0.26 + 0.45 * es", -0.2],
+        "to": [-0.3105, 0.27, -0.34],
+        "length": 0.36,
+        "radius": 0.095,
+        "bend": [0, 0, -1],
+        "samples": 10,
+        "radial": 10
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "leg-back-right",
+      "geometry": {
+        "type": "hose",
+        "from": [0.27, "0.26 + 0.45 * es", -0.2],
+        "to": [0.3105, 0.27, -0.34],
+        "length": 0.36,
+        "radius": 0.095,
+        "bend": [0, 0, -1],
+        "samples": 10,
+        "radial": 10
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "tail",
+      "geometry": {
+        "type": "hose",
+        "from": [0, "ebY", -1.68],
+        "to": [0.06, "ebY - 0.32", -1.76],
+        "length": 0.36,
+        "radius": 0.022,
+        "bend": [0, 0, -1]
+      },
+      "material": {"kind": "cel", "color": [0.47, 0.48, 0.53], "glow": 0.22, "shininess": 40}
+    },
+    {
+      "id": "mailman",
+      "translation": [-4, "lift + hang * 0.03 * sin(pi * (t - 6.4))", -0.8],
+      "squash": "nsq"
+    },
+    {
+      "id": "mailman-body",
+      "parent": "mailman",
+      "geometry": {"type": "cylinder", "radius": 0.16, "height": 0.62, "radial": 16, "caps": true},
+      "material": {"kind": "cel", "color": [0.16, 0.22, 0.42], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.31, 0]
+    },
+    {
+      "id": "mailman-head",
+      "parent": "mailman",
+      "geometry": {"type": "sphere", "radius": 0.14, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.96, 0.78, 0.62], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.76, 0]
+    },
+    {
+      "id": "mailman-cap",
+      "parent": "mailman",
+      "geometry": {
+        "type": "lathe",
+        "profile": [[0.0, -0.001], [0.2, 0], [0.13, 0.03], [0.13, 0.11], [0, 0.12]],
+        "segments": 16
+      },
+      "material": {"kind": "cel", "color": [0.14, 0.2, 0.4], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.84, 0.01]
+    },
+    {
+      "id": "mailman-bag",
+      "parent": "mailman",
+      "geometry": {"type": "box", "size": [0.22, 0.2, 0.09]},
+      "material": {"kind": "cel", "color": [0.78, 0.62, 0.4], "glow": 0.22, "shininess": 6},
+      "translation": [0.2, 0.33, 0.06]
+    },
+    {
+      "id": "mailman-strap",
+      "parent": "mailman",
+      "geometry": {
+        "type": "hose",
+        "from": [-0.13, 0.6, 0.1],
+        "to": [0.2, 0.43, 0.1],
+        "length": 0.42,
+        "radius": 0.014,
+        "bend": [0, -1, 0]
+      },
+      "material": {"kind": "cel", "color": [0.66, 0.5, 0.3], "glow": 0.22, "shininess": 6}
+    },
+    {
+      "id": "mailman-eyes",
+      "parent": "mailman",
+      "geometry": {"type": "sphere", "radius": 0.025, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.06, 0.05, 0.05], "emissive": [0.06, 0.05, 0.05]},
+      "instances": {"count": 2, "layout": "explicit", "points": [[-0.05, 0.78, 0.13], [0.05, 0.78, 0.13]]}
+    },
+    {
+      "id": "letters",
+      "parent": "mailman",
+      "translation": [0.2, 0.44, 0.06],
+      "geometry": {
+        "type": "emitter",
+        "burst": [{"t": 6.6, "v": 24}],
+        "life": 2.3,
+        "speed": [0.25, 0.6],
+        "spread": 110,
+        "drag": 3,
+        "seed": 11
+      },
+      "material": {"kind": "unlit", "color": [1, 1, 0.98], "size": 5, "alpha": 0.85}
+    },
+    {
+      "id": "dachshund",
+      "translation": [-2, "lift + hang * 0.03 * sin(pi * (t - 6.4) + 1.7)", -1.0],
+      "squash": "nsq"
+    },
+    {
+      "id": "dachshund-body",
+      "parent": "dachshund",
+      "geometry": {"type": "sphere", "radius": 0.13, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.62, 0.3, 0.15], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.2, 0],
+      "scale": [2.7, 1, 1]
+    },
+    {
+      "id": "dachshund-head",
+      "parent": "dachshund",
+      "geometry": {"type": "sphere", "radius": 0.11, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.62, 0.3, 0.15], "glow": 0.22, "shininess": 6},
+      "translation": [0.4, 0.31, 0]
+    },
+    {
+      "id": "dachshund-ears",
+      "parent": "dachshund",
+      "geometry": {"type": "sphere", "radius": 0.06, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.34, 0.17, 0.08], "glow": 0.22, "shininess": 6},
+      "instances": {"count": 2},
+      "translation": [0.38, "0.27 + 0.16 * earsUp", "pick(i, -0.1, 0.1)"],
+      "scale": [0.5, 1.5, 0.8]
+    },
+    {
+      "id": "dachshund-tail",
+      "parent": "dachshund",
+      "geometry": {"type": "cylinder", "radius": 0.022, "height": 0.2, "radial": 8, "caps": true},
+      "material": {"kind": "cel", "color": [0.62, 0.3, 0.15], "glow": 0.22, "shininess": 6},
+      "translation": [-0.38, 0.28, 0],
+      "rotation": [0, 0, "35 + 15 * sin(t * pi * 4) * (1 - earsUp)"]
+    },
+    {
+      "id": "dachshund-legs",
+      "parent": "dachshund",
+      "geometry": {"type": "cylinder", "radius": 0.03, "height": 0.12, "radial": 8, "caps": true},
+      "material": {"kind": "cel", "color": [0.55, 0.26, 0.13], "glow": 0.22, "shininess": 6},
+      "instances": {
+        "count": 4,
+        "layout": "explicit",
+        "points": [[-0.24, 0, -0.07], [-0.24, 0, 0.07], [0.24, 0, -0.07], [0.24, 0, 0.07]]
+      },
+      "translation": [0, 0.06, 0]
+    },
+    {
+      "id": "dachshund-eyes",
+      "parent": "dachshund",
+      "geometry": {"type": "sphere", "radius": 0.025, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.06, 0.05, 0.05], "emissive": [0.06, 0.05, 0.05]},
+      "instances": {"count": 2, "layout": "explicit", "points": [[0.45, 0.35, 0.08], [0.51, 0.35, 0.03]]}
+    },
+    {
+      "id": "bathtub",
+      "translation": [2, "lift + hang * 0.03 * sin(pi * (t - 6.4) + 3.1)", -1.2],
+      "squash": "nsq"
+    },
+    {
+      "id": "tub",
+      "parent": "bathtub",
+      "geometry": {
+        "type": "lathe",
+        "profile": [[0, 0.08], [0.26, 0.08], [0.36, 0.14], [0.4, 0.36], [0.37, 0.38], [0.34, 0.2], [0, 0.18]],
+        "segments": 24
+      },
+      "material": {"kind": "cel", "color": [0.96, 0.96, 0.94], "glow": 0.22, "shininess": 6},
+      "scale": [1.45, 1, 0.85]
+    },
+    {
+      "id": "tub-feet",
+      "parent": "bathtub",
+      "geometry": {"type": "sphere", "radius": 0.05, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.82, 0.64, 0.26], "glow": 0.22, "shininess": 6},
+      "instances": {
+        "count": 4,
+        "layout": "explicit",
+        "points": [[-0.42, 0.05, -0.2], [-0.42, 0.05, 0.2], [0.42, 0.05, -0.2], [0.42, 0.05, 0.2]]
+      }
+    },
+    {
+      "id": "bathwater",
+      "parent": "bathtub",
+      "geometry": {"type": "cylinder", "radius": 0.34, "height": 0.02, "radial": 24, "caps": true},
+      "material": {"kind": "cel", "color": [0.62, 0.82, 0.95], "glow": 0.35, "shininess": 6},
+      "translation": [0, 0.31, 0],
+      "scale": [1.45, 1, 0.85]
+    },
+    {
+      "id": "bather-head",
+      "parent": "bathtub",
+      "geometry": {"type": "sphere", "radius": 0.13, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.96, 0.7, 0.66], "glow": 0.22, "shininess": 6},
+      "translation": [-0.28, 0.44, 0]
+    },
+    {
+      "id": "bather-eyes",
+      "parent": "bathtub",
+      "geometry": {"type": "sphere", "radius": 0.025, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.06, 0.05, 0.05], "emissive": [0.06, 0.05, 0.05]},
+      "instances": {"count": 2, "layout": "explicit", "points": [[-0.33, 0.47, 0.12], [-0.23, 0.47, 0.12]]}
+    },
+    {
+      "id": "duck",
+      "parent": "bathtub",
+      "translation": [0.18, "0.36 + duckUp + 0.02 * sin(t * pi * 2) * (1 - hang)", 0.05]
+    },
+    {
+      "id": "duck-body",
+      "parent": "duck",
+      "geometry": {"type": "sphere", "radius": 0.07, "lat": 10, "long": 12},
+      "material": {"kind": "cel", "color": [1, 0.85, 0.15], "glow": 0.22, "shininess": 6},
+      "scale": [1.3, 1, 1]
+    },
+    {
+      "id": "duck-head",
+      "parent": "duck",
+      "geometry": {"type": "sphere", "radius": 0.045, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [1, 0.85, 0.15], "glow": 0.22, "shininess": 6},
+      "translation": [0.06, 0.07, 0]
+    },
+    {
+      "id": "splash",
+      "parent": "bathtub",
+      "translation": [0, 0.34, 0],
+      "geometry": {
+        "type": "emitter",
+        "burst": [{"t": 9.2, "v": 22}, {"t": 9.35, "v": 8}],
+        "life": 0.6,
+        "speed": [0.8, 1.4],
+        "spread": 35,
+        "gravity": [0, -6, 0],
+        "radius": 0.2,
+        "seed": 5
+      },
+      "material": {"kind": "unlit", "color": [0.7, 0.85, 1], "size": 6, "alpha": 0.8}
+    },
+    {
+      "id": "grandma",
+      "translation": [4, "lift + hang * 0.03 * sin(pi * (t - 6.4) + 4.4)", -1.0],
+      "squash": "nsq"
+    },
+    {
+      "id": "chair",
+      "parent": "grandma",
+      "geometry": {"type": "box", "size": [1, 1, 1]},
+      "material": {"kind": "cel", "color": [0.3, 0.62, 0.36], "glow": 0.22, "shininess": 6},
+      "instances": {"count": 2, "layout": "explicit", "points": [[0, 0.22, 0], [0, 0.44, -0.18]]},
+      "scale": ["0.42", "pick(i, 0.05, 0.44)", "pick(i, 0.36, 0.05)"]
+    },
+    {
+      "id": "grandma-body",
+      "parent": "grandma",
+      "geometry": {"type": "sphere", "radius": 0.16, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.72, 0.62, 0.86], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.4, 0],
+      "scale": [1, 1.2, 0.9]
+    },
+    {
+      "id": "grandma-head",
+      "parent": "grandma",
+      "geometry": {"type": "sphere", "radius": 0.12, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": [0.96, 0.78, 0.62], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.67, 0.02]
+    },
+    {
+      "id": "grandma-bun",
+      "parent": "grandma",
+      "geometry": {"type": "sphere", "radius": 0.065, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.72, 0.72, 0.74], "glow": 0.22, "shininess": 6},
+      "translation": [0, 0.8, -0.05]
+    },
+    {
+      "id": "lemonade",
+      "parent": "grandma",
+      "geometry": {"type": "cylinder", "radius": 0.032, "height": 0.09, "radial": 10, "caps": true},
+      "material": {"kind": "cel", "color": [0.98, 0.92, 0.55], "glow": 0.3, "shininess": 6},
+      "translation": ["0.12 - 0.04 * sip", "0.36 + 0.28 * sip", "0.14 - 0.02 * sip"],
+      "rotation": [0, 0, "20 * sip"]
+    },
+    {
+      "id": "grandma-eyes",
+      "parent": "grandma",
+      "geometry": {"type": "sphere", "radius": 0.025, "lat": 8, "long": 10},
+      "material": {"kind": "cel", "color": [0.06, 0.05, 0.05], "emissive": [0.06, 0.05, 0.05]},
+      "instances": {"count": 2, "layout": "explicit", "points": [[-0.045, 0.69, 0.11], [0.045, 0.69, 0.11]]}
+    },
+    {
+      "id": "dust-mailman",
+      "translation": [-4, 0.04, -0.8],
+      "geometry": {
+        "type": "emitter",
+        "seed": 43,
+        "burst": [{"t": 1.5, "v": 8}, {"t": 2.8, "v": 6}, {"t": 5.0, "v": 18}, {"t": 9.2, "v": 18}],
+        "life": 1.2,
+        "speed": [0.4, 0.9],
+        "spread": 80,
+        "drag": 2.5,
+        "gravity": [0, -0.3, 0],
+        "radius": 0.18
+      },
+      "material": {"kind": "unlit", "color": [0.55, 0.42, 0.26], "size": 9, "alpha": 0.5}
+    },
+    {
+      "id": "dust-dachshund",
+      "translation": [-2, 0.04, -1.0],
+      "geometry": {
+        "type": "emitter",
+        "seed": 23,
+        "burst": [{"t": 1.5, "v": 8}, {"t": 2.8, "v": 6}, {"t": 5.0, "v": 18}, {"t": 9.2, "v": 18}],
+        "life": 1.2,
+        "speed": [0.4, 0.9],
+        "spread": 80,
+        "drag": 2.5,
+        "gravity": [0, -0.3, 0],
+        "radius": 0.18
+      },
+      "material": {"kind": "unlit", "color": [0.55, 0.42, 0.26], "size": 9, "alpha": 0.5}
+    },
+    {
+      "id": "dust-bathtub",
+      "translation": [2, 0.04, -1.2],
+      "geometry": {
+        "type": "emitter",
+        "seed": 23,
+        "burst": [{"t": 1.5, "v": 8}, {"t": 2.8, "v": 6}, {"t": 5.0, "v": 18}, {"t": 9.2, "v": 18}],
+        "life": 1.2,
+        "speed": [0.4, 0.9],
+        "spread": 80,
+        "drag": 2.5,
+        "gravity": [0, -0.3, 0],
+        "radius": 0.18
+      },
+      "material": {"kind": "unlit", "color": [0.55, 0.42, 0.26], "size": 9, "alpha": 0.5}
+    },
+    {
+      "id": "dust-grandma",
+      "translation": [4, 0.04, -1.0],
+      "geometry": {
+        "type": "emitter",
+        "seed": 43,
+        "burst": [{"t": 1.5, "v": 8}, {"t": 2.8, "v": 6}, {"t": 5.0, "v": 18}, {"t": 9.2, "v": 18}],
+        "life": 1.2,
+        "speed": [0.4, 0.9],
+        "spread": 80,
+        "drag": 2.5,
+        "gravity": [0, -0.3, 0],
+        "radius": 0.18
+      },
+      "material": {"kind": "unlit", "color": [0.55, 0.42, 0.26], "size": 9, "alpha": 0.5}
+    }
+  ],
+  "markers": [
+    {"t": 1.5, "label": "small boom"},
+    {"t": 2.8, "label": "small landing"},
+    {"t": 5.0, "label": "big boom"},
+    {"t": 6.4, "label": "the hang"},
+    {"t": 9.2, "label": "everyone lands"},
+    {"t": 11.2, "label": "blink"}
+  ],
+  "post": {
+    "vignette": {"strength": 0.35, "radius": 0.6, "softness": 0.6},
+    "ghosts": {"count": 3, "decay": 0.55, "spacing": 0.06, "mode": "darken"}
+  }
+}

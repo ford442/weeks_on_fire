@@ -286,15 +286,17 @@ export function createGraphScene(graph: SequenceGraph): SequenceScene {
       const post = graph.post;
       const ghosts = post?.ghosts;
       if (ghosts && ghosts.count > 0) {
+        const spacing = ghosts.spacing ?? DEFAULT_GHOST_SPACING;
         const { drawingBufferWidth: width, drawingBufferHeight: height } = engine.gl;
-        if (engine.post.captureCurrent(width, height)) {
-          const spacing = ghosts.spacing ?? DEFAULT_GHOST_SPACING;
+        // Nothing to trail before the first ghost's moment; skip the offscreen passes.
+        if (timeSec - spacing >= 0 && engine.post.beginCurrent(width, height)) {
+          renderAt(engine, timeSec, durationSec, aspect, 0);
           for (let k = 1; k <= ghosts.count; k++) {
             const earlier = timeSec - k * spacing;
             if (earlier < 0) break;
             engine.post.beginGhost();
             renderAt(engine, earlier, durationSec, aspect, k);
-            engine.post.compositeGhost(ghosts.decay ** k);
+            engine.post.compositeGhost(ghosts.decay ** k, ghosts.mode === 'darken');
           }
         }
       }

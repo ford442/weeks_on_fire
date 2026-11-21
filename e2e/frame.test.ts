@@ -94,6 +94,7 @@ describe('committed frame fixtures', () => {
   it('cover the films the harness plays', () => {
     // Every 3D sequence: they are all graphs, and each port was diffed against these frames.
     expect(fixtureFiles.sort()).toEqual([
+      'elephant-trampoline.frames.json',
       'hose-chase.frames.json',
       'kick-lattice.frames.json',
       'kitchen-counter-orbit.frames.json',

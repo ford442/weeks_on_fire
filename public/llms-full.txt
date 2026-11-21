@@ -41,7 +41,7 @@ Crawlers that do not execute JavaScript still receive a content-rich HTML shell 
 ## Search and catalog graph
 
 - **Search**: https://ford442.github.io/weeks_on_fire/show/search/?q=<terms> (also the header search, `/` or Ctrl/⌘-K). Indexes titles, tags, summaries and linked character names across every catalog; lyrics and Grok prompts are not indexed.
-- **Graph**: https://ford442.github.io/weeks_on_fire/catalog-graph.json — 282 records and 144 typed links. Node keys are `<type>:<id>` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge `rel`: `song` (scored by), `character` (has on screen), `episode` (belongs to), `promotion` (cartoon promoted to cutaway), `insert` (cuts in), `related` (sequence goes with cutaway).
+- **Graph**: https://ford442.github.io/weeks_on_fire/catalog-graph.json — 283 records and 147 typed links. Node keys are `<type>:<id>` (types: song, cutaway, scene, still, episode, character, cartoon, sequence). Edge `rel`: `song` (scored by), `character` (has on screen), `episode` (belongs to), `promotion` (cartoon promoted to cutaway), `insert` (cuts in), `related` (sequence goes with cutaway).
 - Links are authored as ids in `content/` (`characterIds`, `episodeId`, `promotedFromCartoonId` / `promotedToCutawayId`, `sequenceInsertIds`, `relatedCutawayIds`) and Timeline `scenes.json` refs; codegen fails on an unknown id.
 
 ## Episode index
@@ -531,6 +531,7 @@ Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author the record 
 Scenes with their own page (`/show/scenes/<id>`): pitch, prompt locks, sequence, keyframe board and finished video, all through one template. Author in `content/scenes/<id>.json`.
 
 - **Daisy Bell** (daisy-bell, generated) — Rubella and Lillith ride a living flower bicycle from a modern wildflower field straight into period London. The joke is the bike. The experiment is the cut: scratchy black-and-white film grain flipping into crisp HD color and back, as if the century cannot settle. Keyframes: 26; videos: 1.
+- **The Long Way Up** (the-long-way-up, ready-to-generate) — Two women who normally say eleven words an episode pick up a stranger at 2:10 PM and talk her up a mountain until dark. Nothing happens. Everything is discussed. The comedy is volume, structure, and commitment to a mid-season cable-procedural register. Score is withheld until the saddle. Keyframes: 10; videos: 0.
 
 ## Repo layout (high signal for agents)
 

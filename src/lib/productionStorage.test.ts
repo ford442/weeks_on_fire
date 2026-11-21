@@ -45,6 +45,24 @@ describe('production storage', () => {
     expect(loadStored('02')).toEqual(production);
   });
 
+  it('never stores a session take: a blob: URL is dead after a reload', () => {
+    const scene = {
+      id: 'scene-001',
+      order: 1,
+      title: 'Feed up',
+      timestamp: '00:00:00',
+      description: '',
+      mediaUrl: 'blob:http://localhost:5173/take',
+      status: 'in-edit' as const,
+      addedAt: '2026-08-31T12:00:00Z',
+      lastEditedAt: '2026-11-19T12:00:00Z',
+      history: [],
+    };
+    saveStored('02', { ...fixtureProduction(), scenes: [scene] });
+    expect(localStorage.getItem('wof:production:episode-02')).not.toContain('blob:');
+    expect(loadStored('02')?.scenes[0]?.mediaUrl).toBe('');
+  });
+
   it('round-trips catalog refs through save and load', () => {
     const production = fixtureProduction();
     const [scene] = [

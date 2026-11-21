@@ -1,0 +1,74 @@
+{
+  "vars": {
+    "kickI": "floor(t / 0.4)",
+    "phase": "t - kickI * 0.4",
+    "punch": "phase < 1 / 24",
+    "hop": "max(0, 1 - phase / 0.12)"
+  },
+  "camera": {
+    "type": "locked",
+    "eye": [3.55, 2.05, 3.7],
+    "target": [0, 0, 0],
+    "fov": 46,
+    "near": 0.1,
+    "far": 40
+  },
+  "environment": {
+    "background": ["punch ? 0 : 0.025", "punch ? 0 : 0.02", "punch ? 0 : 0.018"],
+    "lightDir": [0.4, 0.75, 0.5],
+    "lightColor": [1, 0.72, 0.42],
+    "ambient": [0.05, 0.04, 0.035],
+    "fogDensity": 0.04,
+    "fogColor": [0.03, 0.025, 0.02]
+  },
+  "nodes": [
+    {
+      "id": "cubes",
+      "geometry": {"type": "lineCube", "size": 1},
+      "instances": {"count": 4},
+      "vars": {
+        "dir": "i % 2 == 0 ? 1 : -1",
+        "snap": "kickI * 0.18 * dir",
+        "edge": "(1 + 0.1 * hop) * pick(i, 0.9, 1.55, 2.25, 3.15)"
+      },
+      "material": {"kind": "line", "color": ["0.72 + i * 0.04", 0.5, 0.28]},
+      "rotation": ["deg(snap * 0.35)", "deg(snap)", "deg(snap * 0.12)"],
+      "scale": ["edge", "edge", "edge"]
+    },
+    {
+      "id": "icosahedron",
+      "geometry": {"type": "icosahedronLines", "radius": 1.85},
+      "vars": {"snap": "-kickI * 0.22", "grow": "1 + 0.08 * hop"},
+      "material": {"kind": "line", "color": [0.82, 0.62, 0.32]},
+      "rotation": ["deg(snap * 0.4)", "deg(snap)", 0],
+      "scale": ["grow", "grow", "grow"]
+    },
+    {
+      "id": "core",
+      "geometry": {"type": "sphere", "radius": 0.28, "lat": 18, "long": 24},
+      "vars": {"pulse": "1 + 0.28 * hop"},
+      "material": {
+        "kind": "lit",
+        "color": [0.55, 0.18, 0.05],
+        "emissive": ["0.55 + 0.35 * hop", 0.16, 0.04],
+        "shininess": 8
+      },
+      "rotation": [0, "deg(kickI * 0.5)", 0],
+      "scale": ["pulse", "pulse", "pulse"]
+    },
+    {
+      "id": "sparks",
+      "geometry": {
+        "type": "field",
+        "count": 36,
+        "vars": {
+          "seed": "i * 1.7",
+          "jump": "0.55 + (i % 7) * 0.18 + hop * 0.45",
+          "a": "seed + kickI * 0.51"
+        },
+        "position": ["cos(a) * jump", "sin(a * 1.3) * 0.35 * jump", "sin(a) * jump"]
+      },
+      "material": {"kind": "unlit", "color": [1, 0.45, 0.12], "size": 5, "alpha": "punch ? 0.15 : 0.85"}
+    }
+  ]
+}

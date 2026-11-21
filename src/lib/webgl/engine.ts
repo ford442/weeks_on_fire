@@ -15,6 +15,7 @@ import {
   type Mat4,
   type Vec3,
 } from './math';
+import { PostPass } from './post';
 import { compileProgram, type ShaderProgram } from './program';
 import { composeShader, shaderSources } from './shaders';
 import { createVaoSupport, getVaoSupport, type VaoSupport } from './vao';
@@ -267,12 +268,13 @@ export class GpuMesh {
     }
   }
 
-  draw(): void {
+  /** `count` draws only the first vertices of an unindexed mesh (live particles). */
+  draw(count?: number): void {
     const gl = this.gl;
     if (this.hasIndex) {
       gl.drawElements(this.mode, this.indexCount, gl.UNSIGNED_SHORT, 0);
     } else {
-      gl.drawArrays(this.mode, 0, this.vertexCount);
+      gl.drawArrays(this.mode, 0, Math.min(count ?? this.vertexCount, this.vertexCount));
     }
     this.countDraw(1);
   }
@@ -339,6 +341,7 @@ export class SequenceEngine {
   private uboVersion = -1;
   private readonly programFrameVersion = new Map<ShaderProgram, number>();
   private currentProgram: ShaderProgram | null = null;
+  private postPass: PostPass | null = null;
   private eye: Vec3 = [0, 0, 5];
   lightDir: Vec3 = [0.35, 0.82, 0.45];
   lightColor: Vec3 = [1, 0.92, 0.82];
@@ -521,7 +524,16 @@ export class SequenceEngine {
     mesh.unbindInstanced(instancing);
   }
 
-  drawPoints(mesh: GpuMesh, model: Mat4, color: Vec3, size: number, alpha: number): void {
+  drawPoints(
+    mesh: GpuMesh,
+    model: Mat4,
+    color: Vec3,
+    size: number,
+    alpha: number,
+    /** Draw only the first `count` points (an emitter's live particles). */
+    count?: number,
+  ): void {
+    if (count === 0) return;
     const gl = this.gl;
     const program = this.point;
     this.use(program);
@@ -533,10 +545,22 @@ export class SequenceEngine {
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
     gl.depthMask(false);
-    mesh.draw();
+    mesh.draw(count);
     mesh.unbind();
     gl.depthMask(true);
     gl.disable(gl.BLEND);
+  }
+
+  /**
+   * Vignette and ghost passes (`post.ts`), built on first use so films without post never
+   * compile them. They switch programs and framebuffers; the engine forgets its cached program.
+   */
+  get post(): PostPass {
+    this.postPass ??= new PostPass(this.gl, () => {
+      this.currentProgram = null;
+      getVaoSupport(this.gl)?.bind(null);
+    });
+    return this.postPass;
   }
 
   dispose(): void {
@@ -544,6 +568,8 @@ export class SequenceEngine {
     for (const program of this.programs()) gl.deleteProgram(program.handle);
     if (this.instancing) gl.deleteBuffer(this.instancing.buffer);
     if (this.frameUbo) gl.deleteBuffer(this.frameUbo);
+    this.postPass?.dispose();
+    this.postPass = null;
     if (statsByGl.get(gl) === this.stats) statsByGl.delete(gl);
   }
 

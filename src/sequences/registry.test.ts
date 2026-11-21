@@ -23,9 +23,9 @@ describe('sequence renderers', () => {
     for (const id of customRendererIds) expect(ids.has(id), id).toBe(true);
   });
 
-  it('keeps at least one graph-only and one custom sequence shipped', () => {
-    expect(sequences.some((sequence) => sequence.renderer === 'graph')).toBe(true);
-    expect(sequences.some((sequence) => sequence.renderer === 'custom')).toBe(true);
+  it('plays every shipped sequence from its graph (custom factories are an escape hatch)', () => {
+    for (const sequence of sequences) expect(sequence.renderer, sequence.id).toBe('graph');
+    expect(customRendererIds).toEqual([]);
   });
 
   it('keeps every catalog duration between 10 and 120 seconds', () => {

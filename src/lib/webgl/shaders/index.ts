@@ -1,12 +1,15 @@
 import frameBlock from './frame.block.glsl?raw';
 import frameFragment from './frame.fragment.glsl?raw';
 import frameVertex from './frame.vertex.glsl?raw';
+import ghostFrag from './ghost.frag.glsl?raw';
 import lineFrag from './line.frag.glsl?raw';
 import lineVert from './line.vert.glsl?raw';
 import litFrag from './lit.frag.glsl?raw';
 import litVert from './lit.vert.glsl?raw';
 import pointFrag from './point.frag.glsl?raw';
 import pointVert from './point.vert.glsl?raw';
+import postVert from './post.vert.glsl?raw';
+import vignetteFrag from './vignette.frag.glsl?raw';
 
 /**
  * Shader sources for `SequenceEngine`. Each body is written once, in GLSL ES 1.00, and compiled
@@ -17,6 +20,9 @@ export const shaderSources = {
   lit: { vertex: litVert, fragment: litFrag },
   line: { vertex: lineVert, fragment: lineFrag },
   point: { vertex: pointVert, fragment: pointFrag },
+  /** Post passes (graph `post`): compiled on first use, not with the engine. */
+  vignette: { vertex: postVert, fragment: vignetteFrag },
+  ghost: { vertex: postVert, fragment: ghostFrag },
 } as const;
 
 export type ShaderStage = 'vertex' | 'fragment';
@@ -32,7 +38,7 @@ export interface ShaderVariant {
 const GLSL3_PREAMBLE: Record<ShaderStage, string> = {
   vertex: '#version 300 es\n#define attribute in\n#define varying out\n',
   fragment:
-    '#version 300 es\n#define varying in\nout mediump vec4 wofFragColor;\n#define gl_FragColor wofFragColor\n',
+    '#version 300 es\n#define varying in\n#define texture2D texture\nout mediump vec4 wofFragColor;\n#define gl_FragColor wofFragColor\n',
 };
 
 const FRAME_INCLUDE = /^#include <frame>$/m;

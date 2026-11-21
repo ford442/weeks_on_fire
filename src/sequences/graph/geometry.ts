@@ -10,19 +10,11 @@ import {
   type MeshData,
 } from '../../lib/webgl/mesh';
 
-import type { GraphGeometry } from './types';
+import { emitterCapacity } from './emitter';
+import { HoseTube } from './hose';
+import { mulberry32 } from './random';
 
-/** Small deterministic PRNG so a `points` cloud looks the same on every load. */
-function mulberry32(seed: number): () => number {
-  let a = seed >>> 0;
-  return () => {
-    a = (a + 0x6d2b79f5) >>> 0;
-    let t = a;
-    t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
+import type { GraphGeometry } from './types';
 
 /** Builds a node's mesh; spheres and lathes go through the renderer's geometry kernel. */
 export function buildGeometry(
@@ -75,5 +67,18 @@ export function buildGeometry(
       }
       return { positions, mode: 'points' };
     }
+    // Dynamic geometry: the renderer rewrites these every frame; this is the first build.
+    case 'field':
+      return { positions: new Float32Array(geometry.count * 3), mode: 'points' };
+    case 'emitter':
+      return { positions: new Float32Array(emitterCapacity(geometry) * 3), mode: 'points' };
+    case 'ribbon':
+      return kernel.ribbon(
+        typeof geometry.mix === 'number' ? geometry.mix : 0,
+        geometry.uSegments,
+        geometry.vSegments,
+      );
+    case 'hose':
+      return new HoseTube(geometry, kernel).mesh([0, 0, 0], [0, -geometry.length, 0]);
   }
 }

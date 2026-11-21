@@ -19,7 +19,7 @@ import {
   TaxonomySchema,
 } from './schemas';
 import { mergeGeneration } from './generation';
-import { SequenceGraphSchema } from './graph-schema';
+import { SequenceGraphSchema, formatGraphProblems, graphProblems } from './graph-schema';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { parseSongSections } from './parsers/song-sections';
 import { parseSegmentPromptsFile } from './parsers/segment-prompts';
@@ -272,14 +272,15 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
         if (record.graph) {
           throw new Error(`Sequence ${record.id} has both a graph key and ${graphFile}`);
         }
-        try {
-          record.graph = SequenceGraphSchema.parse(readJson(join(sequencesDir, graphFile)));
-        } catch (error) {
+        const rawGraph = readJson(join(sequencesDir, graphFile));
+        const parsed = SequenceGraphSchema.safeParse(rawGraph);
+        if (!parsed.success) {
           throw new Error(
-            `Invalid ${graphFile}: ${error instanceof Error ? error.message : String(error)}`,
-            { cause: error },
+            `Invalid ${graphFile}:\n${formatGraphProblems(record.id, graphProblems(rawGraph, parsed.error))}`,
+            { cause: parsed.error },
           );
         }
+        record.graph = parsed.data;
       }
       return record;
     })

@@ -28,7 +28,12 @@
     "perf:trace": "tsx scripts/trace-sequences.ts"
   },
   "dependencies": {
+    "@codemirror/lang-json": "6.0.2",
+    "@codemirror/lint": "6.9.8",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.15",
     "@tailwindcss/vite": "4.3.5",
+    "@uiw/react-codemirror": "4.25.12",
     "@vitejs/plugin-react": "6.3.0",
     "lucide-react": "1.72.0",
     "minisearch": "7.2.0",

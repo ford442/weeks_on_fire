@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import { Box, Check, Copy, Search, Sparkles } from 'lucide-react';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Box, Braces, Check, Copy, Search, Sparkles } from 'lucide-react';
 
 import {
   sequences,
@@ -94,10 +94,14 @@ export default function Sequences() {
               <p className="mt-1 text-sm leading-6 text-zinc-400">
                 Procedural WebGL sequences, 12 seconds to 1:50 — slow orbits plus a fast-motion kick
                 pack (strobe, whip, smash, chase). Unreal lattices, a kitchen still-life, a
-                cel-shaded errand, chrome ribbon, and a porch that opens onto geometry. Author more
-                in <code className="whitespace-nowrap text-zinc-300">content/sequences/</code> and
-                run <code className="whitespace-nowrap text-zinc-300">npm run codegen</code>. Copy
-                the Grok / Omni prompts when you want Imagine versions.
+                cel-shaded errand, chrome ribbon, a porch that opens onto geometry, and a street
+                that bounces. Every film is a JSON scene graph: open one with{' '}
+                <span className="text-zinc-300">Edit graph</span> to fork it, or author{' '}
+                <code className="whitespace-nowrap text-zinc-300">
+                  content/sequences/&lt;id&gt;.graph.json
+                </code>{' '}
+                and run <code className="whitespace-nowrap text-zinc-300">npm run codegen</code>.
+                Copy the Grok / Omni prompts when you want Imagine versions.
               </p>
             </div>
           </div>
@@ -212,7 +216,7 @@ function EmptyCatalog() {
       <p className="text-sm font-semibold text-zinc-200">No 3D sequences yet</p>
       <p className="mt-2 text-sm leading-6 text-zinc-400">
         Add <code className="whitespace-nowrap text-zinc-300">content/sequences/your-id.json</code>{' '}
-        and a matching renderer in <code className="text-zinc-300">src/sequences/</code>.
+        and its scene graph, <code className="text-zinc-300">your-id.graph.json</code>.
       </p>
     </div>
   );
@@ -257,11 +261,22 @@ function SequenceDetail({
           </span>
         </div>
         <h2 className="mt-2 text-2xl font-semibold leading-tight text-white">{sequence.title}</h2>
-        <p className="mt-2 text-xs text-zinc-400">
-          {[sequence.runtime, sequence.agent ? `via ${sequence.agent}` : null]
-            .filter(Boolean)
-            .join(' · ')}
-        </p>
+        <div className="mt-2 flex items-center justify-between gap-2">
+          <p className="text-xs text-zinc-400">
+            {[sequence.runtime, sequence.agent ? `via ${sequence.agent}` : null]
+              .filter(Boolean)
+              .join(' · ')}
+          </p>
+          {sequence.graph ? (
+            // Desktop only: the editor needs the width.
+            <Link
+              to={crewPath(`/sequences/${sequence.id}/edit`)}
+              className="hidden shrink-0 items-center gap-1.5 rounded-md border border-zinc-700 px-2.5 py-1.5 text-xs font-semibold text-zinc-200 transition hover:border-orange-400 hover:text-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-300 lg:inline-flex"
+            >
+              <Braces size={14} aria-hidden="true" /> Edit graph
+            </Link>
+          ) : null}
+        </div>
       </div>
 
       <SequencePlayer sequence={sequence} capture={capture} renderer={renderer} stats={stats} />

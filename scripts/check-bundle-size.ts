@@ -10,6 +10,13 @@ const ROUTE_CHUNK_LIMIT_BYTES = 100 * 1024;
 const ROUTE_CHUNKS = ['Songs-', 'songs-', 'Suggestions-', 'suggestions-'] as const;
 /** Every other lazy chunk: a ceiling that catches a catalog sliding back into a view. */
 const ANY_CHUNK_LIMIT_BYTES = 200 * 1024;
+/**
+ * The graph editor's CodeMirror chunk (`/sequences/:id/edit`, desktop only). CodeMirror is one
+ * library, loaded only when someone opens the editor, so it gets its own named budget instead of
+ * the catch-all; the main entry must never carry it (checked below).
+ */
+const EDITOR_CHUNK = 'GraphCodeEditor-';
+const EDITOR_CHUNK_LIMIT_BYTES = 480 * 1024;
 
 /**
  * An emitted song or cutaway literal: a field only those records carry (a song's style prompt, a
@@ -79,6 +86,25 @@ if (eagerSearch.length > 0) {
 }
 console.log('check-bundle-size: MiniSearch and the search corpus stay out of the main entry');
 
+// The graph editor is lazy: CodeMirror and the graph schema (with Zod) load with
+// `/sequences/:id/edit`, never with the first paint. Class names and the schema's own error text
+// survive minification.
+const EDITOR_MARKERS: ReadonlyArray<[string, RegExp]> = [
+  ['CodeMirror', /cm-content/],
+  ['the sequence graph schema', /material kind must be lit, cel, unlit or line/],
+];
+const eagerEditor = EDITOR_MARKERS.filter(([, pattern]) => pattern.test(mainSource)).map(
+  ([name]) => name,
+);
+if (eagerEditor.length > 0) {
+  console.error(
+    `\ncheck-bundle-size: main entry ${mainEntry} contains ${eagerEditor.join(' and ')}. ` +
+      'Import the graph editor only through the lazy /sequences/:id/edit route.',
+  );
+  process.exit(1);
+}
+console.log('check-bundle-size: CodeMirror and the graph schema stay out of the main entry');
+
 // The Timeline labels and links catalog records from the slim `{ id, title }` lists only. Walk the
 // chunks it loads statically; none of them may be (or contain) the full songs / cutaways modules.
 // The main entry is skipped: it loads on every route and is capped above.
@@ -143,16 +169,20 @@ for (const prefix of ROUTE_CHUNKS) {
 for (const name of files) {
   if (name === mainEntry) continue;
   const size = statSync(join(DIST_DIR, name)).size;
-  if (size > ANY_CHUNK_LIMIT_BYTES) {
-    overBudget.push(`${name} is ${formatKb(size)} (limit ${formatKb(ANY_CHUNK_LIMIT_BYTES)})`);
+  const limit = name.startsWith(EDITOR_CHUNK) ? EDITOR_CHUNK_LIMIT_BYTES : ANY_CHUNK_LIMIT_BYTES;
+  if (size > limit) {
+    overBudget.push(`${name} is ${formatKb(size)} (limit ${formatKb(limit)})`);
   }
+}
+if (!files.some((name) => name.startsWith(EDITOR_CHUNK))) {
+  overBudget.push(`no ${EDITOR_CHUNK}*.js chunk (renamed? update EDITOR_CHUNK)`);
 }
 if (overBudget.length > 0) {
   console.error(`\ncheck-bundle-size: chunk budgets exceeded:\n  ${overBudget.join('\n  ')}`);
   process.exit(1);
 }
 console.log(
-  `check-bundle-size: route chunks within ${formatKb(ROUTE_CHUNK_LIMIT_BYTES)}, others within ${formatKb(ANY_CHUNK_LIMIT_BYTES)}`,
+  `check-bundle-size: route chunks within ${formatKb(ROUTE_CHUNK_LIMIT_BYTES)}, the editor's CodeMirror within ${formatKb(EDITOR_CHUNK_LIMIT_BYTES)}, others within ${formatKb(ANY_CHUNK_LIMIT_BYTES)}`,
 );
 
 // No full song or cutaway record in any chunk, the entry included.

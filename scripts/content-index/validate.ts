@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { broadcastOffset, formatClock, parseClock } from '../../src/lib/clock';
+import { SEQUENCE_ID_PATTERN } from '../../src/sequences/graph/ids';
 
 import { keyframeLists } from './graph-schema';
 import { generationErrors } from './generation';
@@ -341,6 +342,11 @@ export function validateSequences(
 
   for (const sequence of sequences) {
     idCounts.set(sequence.id, (idCounts.get(sequence.id) ?? 0) + 1);
+    if (!SEQUENCE_ID_PATTERN.test(sequence.id)) {
+      errors.push(
+        `Sequence id ${sequence.id} must be lowercase letters and digits joined by single hyphens`,
+      );
+    }
     if (sequence.durationSec < 10 || sequence.durationSec > 120) {
       errors.push(
         `Sequence ${sequence.id} durationSec ${sequence.durationSec} is outside 10–120 seconds`,

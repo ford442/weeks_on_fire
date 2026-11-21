@@ -65,7 +65,7 @@ Card (`ideas/funny-rules.md` shape):
 - **Five questions:** a 9-year-old can say the laugh back; mute the music and the cube still becomes a hat; the puppet is the calmest thing in frame (it does nothing); there is no text to cover; one world.
 
 ### Pairing
-Picture: `content/sequences/rubber-hose-errand.json` (timings read from `src/sequences/scenes/rubberHoseErrand.ts`). The sequence schema has no song id, so the pairing lives here and the JSON is untouched. Not Pin Cat, not Courtesy Shuttle. Not `hose-chase` either (its fast, already-hatted sibling); that one would need its own bed.
+Picture: `content/sequences/rubber-hose-errand.json` (timings read from the `vars` at the top of `content/sequences/rubber-hose-errand.graph.json`). The sequence schema has no song id, so the pairing lives here and the JSON is untouched. Not Pin Cat, not Courtesy Shuttle. Not `hose-chase` either (its fast, already-hatted sibling); that one would need its own bed.
 
 ### Video use map (`docs/song-method.md`, item 1)
 - **Target length:** 32.0s = 16 bars of 4/4 at 120 BPM (2.0s per bar, 0.5s per beat). The picture beats fall on bar lines: thud 3.0 = bar 2 beat 3, walk ends 12.0 = bar 7, hat 18.0 = bar 10, exit 24.0 = bar 13.

@@ -39,11 +39,15 @@ Cartoons (`/cartoons`, `/cartoons/:id`) is the agent parking lot for short carto
 Suggestions.
 
 3D Sequences (`/sequences`, `/sequences/:id`) plays procedural WebGL video sequences
-(`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed. The player draws
-in an `OffscreenCanvas` render worker (`src/sequences/worker/`) and falls back in-thread;
-`?renderer=main` forces in-thread, `?stats` overlays frame stats. Hand-written scenes register in
-`src/sequences/scenes/index.ts`; repeated meshes draw as one `InstanceBatch`. See
-`docs/sequence-engine.md`.
+(`content/sequences/<id>.json`, 10s–2min). Unreal, photoreal, cartoon, or mixed. Every film is a
+JSON scene graph, `<id>.graph.json` (graph v2: expressions, vars, hierarchy, instances, treadmill
+repeats, squash / wobble, fields, emitters, hoses, vignette and ghosts; guide in
+`content/README.md` → Authoring a 3D sequence). Author films as graphs, not TypeScript; the
+custom-factory map in `src/sequences/scenes/index.ts` is an empty escape hatch. The graph editor
+(`/sequences/:id/edit`, desktop) previews drafts live, lints with codegen's checks, retimes
+keyframes and forks films; drafts stay in localStorage and leave by Copy / Download. The player
+draws in an `OffscreenCanvas` render worker (`src/sequences/worker/`) and falls back in-thread;
+`?renderer=main` forces in-thread, `?stats` overlays frame stats. See `docs/sequence-engine.md`.
 
 **Capture (Record take).** The sequence player and the cutaway preview on a Suggestions board each
 have **Record**: one full pass to a WebM take (MediaRecorder, no library; capture code is a lazy

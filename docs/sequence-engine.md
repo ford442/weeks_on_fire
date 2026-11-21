@@ -85,8 +85,61 @@ change for its own pull request (fix both, regenerate `e2e/fixtures/`).
 
 - `npm run test`: hosts, worker runtime, protocol, render core, engine (against a recording fake
   GL), shader composition, instance batches, kernel fixtures, and the player in both modes.
-- `npm run test:e2e`: four films (lattice-hymn, hose-chase, kick-lattice, mobius-chrome) at 0s and
-  50% on the worker, in-thread WebGL2, in-thread WebGL1, and in-thread WebGL1 without
-  instancing or VAOs, all against the same fixtures; plus a run with the worker script blocked,
-  which must fall back in-thread. The fixtures were taken from the engine before #94.
+- `npm run test:e2e`: every film at 0s, mid-film and 100% on the worker, in-thread WebGL2,
+  in-thread WebGL1, and in-thread WebGL1 without instancing or VAOs, all against the same
+  fixtures; plus a run with the worker script blocked, which must fall back in-thread, and the
+  graph editor (`e2e/editor.spec.ts`). The eight films that started as TypeScript factories were
+  recorded from those factories, then ported to graphs and diffed against them. Fixtures are
+  written by the in-thread WebGL2 run: a worker frame can reach the page's placeholder canvas a
+  few hundred ms after the worker reports it, and an update cannot retry. `?capture=1` loads
+  publish `data-frame-time`, the film time of the last frame drawn, and the harness waits for it.
+- `src/sequences/graph/*.test.ts`: expressions, the evaluator (hierarchy, copies, treadmill,
+  squash, fields), emitters (seekable), hoses, the schema's error messages, and the editor's
+  JSON locator, retiming, diagnostics and draft storage.
 - `npx tsx scripts/trace-sequences.ts`: the profile behind the gate (see the perf doc).
+
+## Graph v2 (`src/sequences/graph/`)
+
+Every film is a `content/sequences/<id>.graph.json` (authoring guide: `content/README.md` →
+"Authoring a 3D sequence"). The pipeline, per film:
+
+```
+schema.ts      Zod, run by codegen and by the editor. Calls compile.ts, so expression, scope,
+               parent and copy errors come back with their JSON path; issues.ts turns paths into
+               "node leg-l: scale[1] must be positive".
+compile.ts     Every expression (expr.ts: a small parser, no eval) compiled once into a closure
+               over a slot array: built-ins t p dur i n k, then graph vars, then node vars (each
+               its own slot, so scopes never collide).
+evaluate.ts    Pure, no GL: per frame, graph vars, camera, environment, then nodes in order; each
+               copy restores its ancestors' vars for that copy, composes the parent transform,
+               applies clips, layout / repeat offsets, spin, squash and wobble.
+interpreter.ts GL: rewrites dynamic meshes (field, emitter, ribbon, hose), then draws in node
+               order with point sprites last; consecutive copies with one mesh and shading are
+               one instanced draw.
+```
+
+- **Determinism.** A frame is a function of film time. Emitters (`emitter.ts`) step at a fixed
+  60 Hz from 0 through `kernel.integrateParticles` and replay from 0 on a backward seek; ribbons
+  re-mesh on whole steps of `mix` rather than a change threshold; ghosts re-draw earlier moments
+  instead of accumulating. Seeks, loops and captures show the frame playback would.
+- **Kernel.** Spheres, lathes, ribbons, particles and hoses (`hose.ts` sweeps
+  `kernel.hoseChain` into a tube with parallel-transport frames) all go through
+  `GeometryKernel`, so a WASM kernel could take them without touching the graph.
+- **Post** (`src/lib/webgl/post.ts`, built on first use). Vignette is one full-screen triangle
+  multiplied onto the frame, no framebuffer. Ghosts are the engine's first framebuffers: the
+  current moment and each earlier one are drawn into two RGBA8 targets sharing a 16-bit depth
+  buffer, and the earlier-minus-now difference is blended onto the antialiased canvas (added
+  for `lighten`, reverse-subtracted for `darken`). Comparing two identical non-antialiased
+  targets makes static edges cancel exactly. Core WebGL1 and WebGL2, no float textures; an
+  incomplete framebuffer skips ghosts and the film plays without them.
+- **Escape hatch.** `customSceneFactories` in `src/sequences/scenes/index.ts` is empty. A film
+  that needs something the graph cannot say should get a node type, not a factory.
+
+## Graph editor (`/show/sequences/:id/edit`)
+
+`src/components/sequenceEditor/`: a lazy route (CodeMirror and the Zod schema are further lazy
+chunks; `check-bundle-size` fails if either reaches the main entry). The player previews the
+last draft that passed `diagnoseGraphText` (codegen's checks, with text ranges for the lint);
+`SequencePlayer`'s `seekRequest` / `onTimeUpdate` props tie it to the keyframe strip, which
+retimes a key by rewriting only that `t` in the text (`timeline.ts`, `jsonLocate.ts`). Drafts
+are text in localStorage (`src/lib/sequenceDraftStorage.ts`); the hub never writes the repo.

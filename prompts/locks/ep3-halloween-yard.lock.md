@@ -29,7 +29,9 @@ shed and the two color temperatures do not drift between stills that will be cut
 - **Light physics:** two worlds. Warm 2700K tungsten from the porch (hard, overhead, sharp downward
   shadows) and amber pumpkins; cool 4100K moonlight from a full moon; cyan and magenta laser spill
   that rakes wet grass and gives every wet surface a two-color specular edge. The porch light is
-  the brightest source in any frame it is in (the Ep3 "stage set from 1987" click).
+  the brightest source in any frame it is in (the Ep3 "stage set from 1987" click). **Before the
+  click** (H05, H06) it is off: paste `light-preclick` instead, where the warm side comes from the
+  neighbors' porches over the fence.
 - **The finale lawn** (H09) is the same yard after the battle: serpent coils lie defeated on the
   grass, the vintage couch has been dragged out, the hay bale is still smoldering. The battle
   screenplay has the serpents at three feet; the Monster Mash finale has the coils giant. That is
@@ -45,6 +47,14 @@ the backyard of 117 Elmwood, a modest two-story 1960s suburban house with white 
 
 ```text
 Lighting is two worlds that never mix: a hard warm 2700K tungsten porch bulb and amber jack-o'-lantern flicker on one side, cool 4100K full-moon light and saturated cyan and magenta laser spill on the other, every wet blade of grass and every damp leaf carrying a two-color specular edge, a thin ground mist catching the beams
+```
+
+## Paste · light-preclick
+
+Before the 0:35 click (H05, H06): the same two worlds, but this house's porch bulb is off.
+
+```text
+Lighting is two worlds that never mix: warm 2700K tungsten from the neighbors' porch bulbs over the fence and amber jack-o'-lantern flicker on one side, cool 4100K full-moon light and saturated cyan and magenta laser spill on the other, this house's own caged porch bulb still dark, every wet blade of grass and every damp leaf carrying a two-color specular edge, a thin ground mist catching the beams
 ```
 
 ## Paste · serpents

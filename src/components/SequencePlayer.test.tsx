@@ -1,15 +1,20 @@
-import { act, fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { useEffect } from 'react';
+import { MemoryRouter } from 'react-router-dom';
 
+import { useMediaCoordinator } from '../contexts/MediaSessionContext';
 import MediaSessionProvider from '../contexts/MediaSessionProvider';
 import { sequences, type SequenceRecord } from '../data/sequences';
+import { getTakes, resetTakesForTest } from '../lib/capture/takes';
 import { createSequenceGl } from '../lib/webgl/context';
 import { resetWorkerAvailability } from '../sequences/render/workerHost';
 import { createScene } from '../sequences/scenes';
 
 import SequencePlayer, { type RendererPreference } from './SequencePlayer';
 
+import type { MediaCoordinator } from '../lib/mediaCoordinator';
 import type { MainToWorkerMessage, WorkerToMainMessage } from '../sequences/worker/protocol';
 
 vi.mock('../lib/webgl/context', async (importOriginal) => ({
@@ -45,6 +50,7 @@ function renderPlayer(
     <MediaSessionProvider>
       <SequencePlayer sequence={sequence} {...props} />
     </MediaSessionProvider>,
+    { wrapper: MemoryRouter },
   );
 }
 
@@ -504,6 +510,27 @@ describe('SequencePlayer in the render worker', () => {
     expect(screen.getByRole('complementary', { name: 'Renderer stats' })).toBeTruthy();
   });
 
+  it('records a take in-thread, then hands the film back to the worker', async () => {
+    const restore = stubCapture();
+    try {
+      renderPlayer();
+      advance(300);
+      fireEvent.click(screen.getByRole('button', { name: 'Record take' }));
+      await waitFor(() => expect(screen.getByRole('button', { name: 'Stop take' })).toBeTruthy());
+      expect(worker().posted.at(-1)).toEqual({ type: 'dispose' });
+      expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('main');
+
+      fireEvent.click(screen.getByRole('button', { name: 'Stop take' }));
+      await waitFor(() => expect(getTakes()).toHaveLength(1));
+      await waitFor(() =>
+        expect(screen.getByRole('img').getAttribute('data-renderer')).toBe('worker'),
+      );
+      expect(FakeWorker.instances).toHaveLength(2);
+    } finally {
+      restore();
+    }
+  });
+
   it('disposes the worker when the player goes away', () => {
     vi.useFakeTimers({
       toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance', 'setTimeout'],
@@ -513,5 +540,203 @@ describe('SequencePlayer in the render worker', () => {
     expect(worker().posted.at(-1)).toEqual({ type: 'dispose' });
     vi.advanceTimersByTime(1000);
     expect(worker().terminated).toBe(true);
+  });
+});
+
+/** MediaRecorder stand-in: the take's bytes arrive on stop. */
+class FakeMediaRecorder extends EventTarget {
+  static instances: FakeMediaRecorder[] = [];
+  static isTypeSupported = (type: string) => type.startsWith('video/webm');
+  state: RecordingState = 'inactive';
+  readonly calls: string[] = [];
+
+  constructor(
+    readonly stream: MediaStream,
+    readonly options?: MediaRecorderOptions,
+  ) {
+    super();
+    FakeMediaRecorder.instances.push(this);
+  }
+
+  start() {
+    this.calls.push('start');
+    this.state = 'recording';
+  }
+  pause() {
+    this.calls.push('pause');
+    this.state = 'paused';
+  }
+  resume() {
+    this.calls.push('resume');
+    this.state = 'recording';
+  }
+  stop() {
+    this.calls.push('stop');
+    this.state = 'inactive';
+    const data = Object.assign(new Event('dataavailable'), {
+      data: new Blob(['take'], { type: 'video/webm' }),
+    });
+    this.dispatchEvent(data);
+    this.dispatchEvent(new Event('stop'));
+  }
+}
+
+/** Gives jsdom MediaRecorder, canvas.captureStream and blob URLs. Returns the undo. */
+function stubCapture(): () => void {
+  FakeMediaRecorder.instances = [];
+  vi.stubGlobal('MediaRecorder', FakeMediaRecorder);
+  vi.stubGlobal(
+    'MediaStream',
+    class {
+      constructor(private readonly tracks: unknown[]) {}
+      getTracks() {
+        return this.tracks;
+      }
+    },
+  );
+  const track = { stop: vi.fn() };
+  Object.defineProperty(HTMLCanvasElement.prototype, 'captureStream', {
+    configurable: true,
+    value: vi.fn(() => ({ getVideoTracks: () => [track], getTracks: () => [track] })),
+  });
+  let urls = 0;
+  Object.defineProperty(URL, 'createObjectURL', {
+    configurable: true,
+    value: () => `blob:take-${(urls += 1)}`,
+  });
+  Object.defineProperty(URL, 'revokeObjectURL', { configurable: true, value: () => undefined });
+  return () => {
+    resetTakesForTest();
+    delete (HTMLCanvasElement.prototype as Partial<HTMLCanvasElement>).captureStream;
+    delete (URL as Partial<typeof URL>).createObjectURL;
+    delete (URL as Partial<typeof URL>).revokeObjectURL;
+    vi.unstubAllGlobals();
+  };
+}
+
+function CoordinatorProbe({ onReady }: { onReady: (coordinator: MediaCoordinator) => void }) {
+  const coordinator = useMediaCoordinator();
+  useEffect(() => onReady(coordinator), [coordinator, onReady]);
+  return null;
+}
+
+describe('SequencePlayer recording a take', () => {
+  let scene: ReturnType<typeof makeScene>;
+  let restore: () => void;
+
+  beforeEach(() => {
+    vi.useFakeTimers({ toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance'] });
+    restore = stubCapture();
+    scene = makeScene();
+    vi.mocked(createSequenceGl).mockReset();
+    vi.mocked(createSequenceGl).mockReturnValue(stubGl);
+    vi.mocked(createScene).mockReturnValue(scene);
+  });
+
+  afterEach(() => {
+    setHidden(false);
+    restore();
+    vi.useRealTimers();
+  });
+
+  const advance = (ms: number) => {
+    act(() => {
+      vi.advanceTimersByTime(ms);
+    });
+  };
+
+  async function startTake() {
+    fireEvent.click(screen.getByRole('button', { name: 'Record take' }));
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Stop take' })).toBeTruthy());
+  }
+
+  function recorder(): FakeMediaRecorder {
+    const instance = FakeMediaRecorder.instances[0];
+    if (!instance) throw new Error('no recorder was started');
+    return instance;
+  }
+
+  it('records one full pass from 0 with a preserved buffer, then keeps the take', async () => {
+    renderPlayer();
+    advance(3000);
+    await startTake();
+    expect(vi.mocked(createSequenceGl).mock.lastCall?.[1]).toMatchObject({ capture: true });
+    expect(recorder().options?.mimeType).toBe('video/webm;codecs=vp9');
+    advance(16);
+    expect(lastDrawTime(scene)).toBeLessThan(0.1);
+    // Seeking or restarting would cut the take, so the controls are locked while it runs.
+    expect(screen.getByRole('slider')).toHaveProperty('disabled', true);
+    expect(screen.getByRole('button', { name: 'Restart' })).toHaveProperty('disabled', true);
+
+    advance(10_100); // loop is off for the take: it ends on the last frame
+    await waitFor(() => expect(getTakes()).toHaveLength(1));
+    expect(lastDrawTime(scene)).toBe(10);
+    const [take] = getTakes();
+    expect(take).toMatchObject({
+      kind: 'sequence',
+      sourceId: 'clock-test',
+      expectedDurationSec: 10,
+    });
+    expect(Math.abs((take?.durationSec ?? 0) - 10)).toBeLessThan(0.1);
+    expect(take?.fileName).toMatch(/^wof-sequence-clock-test-\d{8}-\d{6}\.webm$/);
+    expect(await screen.findByText(/full take/)).toBeTruthy();
+
+    // Back to playback: no preserved buffer, and Loop is the viewer's again.
+    await waitFor(() => expect(screen.getByRole('button', { name: 'Record take' })).toBeTruthy());
+    expect(vi.mocked(createSequenceGl).mock.lastCall?.[1]).toMatchObject({ capture: false });
+    expect(screen.getByLabelText('Loop')).toHaveProperty('checked', true);
+  });
+
+  it('pauses whatever else was playing, through the media coordinator', async () => {
+    let coordinator: MediaCoordinator | null = null;
+    const onReady = (value: MediaCoordinator) => {
+      coordinator = value;
+    };
+    render(
+      <MediaSessionProvider>
+        <CoordinatorProbe onReady={onReady} />
+        <SequencePlayer sequence={sequence} />
+      </MediaSessionProvider>,
+      { wrapper: MemoryRouter },
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Pause' }));
+    const song = { play: vi.fn(), pause: vi.fn() };
+    act(() => coordinator?.activate('song:daisy-bell', song, { title: 'Daisy Bell' }));
+
+    await startTake();
+    expect(song.pause).toHaveBeenCalled();
+    expect(coordinator!.getActiveId()).toBe('sequence:clock-test');
+  });
+
+  it('pauses the take while the tab is hidden, so it stays as long as the film', async () => {
+    renderPlayer();
+    await startTake();
+    advance(2000);
+    setHidden(true);
+    advance(30_000);
+    setHidden(false);
+    advance(8200);
+    await waitFor(() => expect(getTakes()).toHaveLength(1));
+    // Paused for the hidden span only; the end of the film closes the take.
+    expect(recorder().calls).toEqual(['start', 'pause', 'resume', 'stop']);
+    expect(Math.abs((getTakes()[0]?.durationSec ?? 0) - 10)).toBeLessThan(0.1);
+  });
+
+  it('Stop keeps what was recorded so far', async () => {
+    renderPlayer();
+    await startTake();
+    advance(4000);
+    fireEvent.click(screen.getByRole('button', { name: 'Stop take' }));
+    await waitFor(() => expect(getTakes()).toHaveLength(1));
+    expect(getTakes()[0]?.durationSec).toBeCloseTo(4, 1);
+    expect(await screen.findByText(/stopped early/)).toBeTruthy();
+  });
+
+  it('offers no Record button where the browser cannot record', () => {
+    vi.unstubAllGlobals();
+    renderPlayer();
+    const button = screen.getByRole('button', { name: 'Record take' });
+    expect(button).toHaveProperty('disabled', true);
+    expect(button.getAttribute('title')).toBe('This browser has no MediaRecorder.');
   });
 });

@@ -1,8 +1,10 @@
-import { Pause, Play, RotateCcw } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { Circle, Pause, Play, RotateCcw, Square } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { useMediaCoordinator } from '../contexts/MediaSessionContext';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import { captureUnsupportedReason } from '../lib/capture/support';
+import { addTake } from '../lib/capture/takes';
 import { shouldAnimate } from '../lib/webgl/loop';
 import { PlaybackClock } from '../lib/playbackClock';
 import { formatTimecode } from '../lib/timecode';
@@ -14,7 +16,10 @@ import {
   markWorkerUnavailable,
 } from '../sequences/render/workerHost';
 
+import TakeShelf from './capture/TakeShelf';
+
 import type { SequenceRecord } from '../data/sequences';
+import type { CanvasTake } from '../lib/capture/canvasTake';
 import type {
   RendererCallbacks,
   RendererHost,
@@ -24,6 +29,12 @@ import type {
 
 /** `auto` draws in the render worker where the browser can; `main` forces the in-thread path. */
 export type RendererPreference = 'auto' | 'worker' | 'main';
+
+/**
+ * Recording a take: `preparing` rebuilds the renderer in-thread with a preserved drawing buffer,
+ * `recording` runs one full pass (loop off) into MediaRecorder, `finishing` writes the file.
+ */
+type RecordState = 'idle' | 'preparing' | 'recording' | 'finishing';
 
 interface SequencePlayerProps {
   sequence: SequenceRecord;
@@ -46,6 +57,17 @@ function createPlayerCanvas(title: string, mode: RendererMode): HTMLCanvasElemen
   canvas.setAttribute('aria-label', `${title} 3D sequence`);
   canvas.dataset.renderer = mode;
   return canvas;
+}
+
+/** Takes are drawn at the offline assembler's frame width (`scripts/assemble-cutaway.py`), not at screen size. */
+const TAKE_WIDTH = 1280;
+
+function takeSize(aspect: SequenceRecord['aspect']) {
+  return {
+    dpr: 1,
+    width: TAKE_WIDTH,
+    height: Math.round(TAKE_WIDTH / (aspect === '4:3' ? 4 / 3 : 16 / 9)),
+  };
 }
 
 function backingSize(canvas: HTMLCanvasElement) {
@@ -89,12 +111,29 @@ export default function SequencePlayer({
   const [summary, setSummary] = useState<StatsSummary | null>(null);
   // The film (and capture setting) whose worker failed, so this player draws it in-thread.
   const [fellBackFor, setFellBackFor] = useState<string | null>(null);
+  const [recordState, setRecordState] = useState<RecordState>('idle');
+  const [recordError, setRecordError] = useState<string | null>(null);
+  const [unsupportedCapture] = useState(() => captureUnsupportedReason());
+  // The renderer session whose context is up, so a take starts only on the canvas it records.
+  const [readyFor, setReadyFor] = useState<string | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const takeRef = useRef<CanvasTake | null>(null);
+  // Called by the frame loop when a take's pass reaches the end.
+  const onTakeEndRef = useRef<(() => void) | null>(null);
+  // The drawing-buffer size while a take is on; null draws at screen size.
+  const takeSizeRef = useRef<ReturnType<typeof takeSize> | null>(null);
 
   const coordinator = useMediaCoordinator();
   const duration = sequence.durationSec;
   const mediaId = `sequence:${sequence.id}`;
-  const sessionKey = `${sequence.id}|${capture ? 'capture' : 'play'}`;
-  const mode: RendererMode = fellBackFor === sessionKey ? 'main' : preferredMode(renderer);
+  const recording = recordState !== 'idle';
+  // A take records the in-thread canvas with a preserved drawing buffer: what MediaRecorder reads
+  // is then the canvas the context draws into, on every engine (a transferred canvas is not).
+  const preserveBuffer = capture || recording;
+  const sessionKey = `${sequence.id}|${preserveBuffer ? 'capture' : 'play'}`;
+  const mode: RendererMode =
+    recording || fellBackFor === sessionKey ? 'main' : preferredMode(renderer);
+  const rendererKey = `${sessionKey}|${mode}`;
 
   useEffect(() => {
     wakeRef.current?.();
@@ -117,6 +156,10 @@ export default function SequencePlayer({
   }, [clock, loop]);
 
   useEffect(() => {
+    takeRef.current?.cancel();
+    takeRef.current = null;
+    onTakeEndRef.current = null;
+    setRecordState('idle');
     const start = !reducedMotionRef.current;
     clock.reset(duration, start, performance.now());
     lastUiRef.current = 0;
@@ -132,6 +175,8 @@ export default function SequencePlayer({
     // One canvas per renderer: a canvas handed to a worker can never be drawn on here again.
     const canvas = createPlayerCanvas(sequence.title, mode);
     stage.replaceChildren(canvas);
+    canvasRef.current = canvas;
+    setReadyFor(null);
     setUnsupported(false);
     setContextLost(false);
     setFailure(null);
@@ -152,11 +197,13 @@ export default function SequencePlayer({
     const syncClockHold = (now: number) => {
       if (hidden || lost) clock.freeze(now);
       else clock.thaw(now);
+      // A take pauses with the picture, so it stays as long as the film.
+      takeRef.current?.setPaused(!clock.playing || clock.isFrozen);
     };
 
     const draw = (now: number) => {
       if (!host) return;
-      const { dpr, width, height } = backingSize(canvas);
+      const { dpr, width, height } = takeSizeRef.current ?? backingSize(canvas);
       host.resize(width, height, dpr);
       const { timeSec, ended } = clock.tick(now);
       if (ended) {
@@ -168,6 +215,9 @@ export default function SequencePlayer({
       jumpRef.current = false;
       lastTimeSec = timeSec;
       host.frame(timeSec, continuous);
+      // A take closes after its last frame is drawn, and otherwise pauses with the picture.
+      if (ended && onTakeEndRef.current) onTakeEndRef.current();
+      else takeRef.current?.setPaused(!clock.playing || clock.isFrozen);
       if (now - lastUiRef.current > 80) {
         lastUiRef.current = now;
         setUiTime(timeSec);
@@ -199,6 +249,7 @@ export default function SequencePlayer({
         if (ready.renderer) canvas.dataset.glRenderer = ready.renderer;
         canvas.dataset.kernel = ready.kernel;
         setInfo(ready);
+        setReadyFor(rendererKey);
       },
       onFailure(reported) {
         if (disposed) return;
@@ -218,6 +269,13 @@ export default function SequencePlayer({
         canvas.dataset.gl = reported.kind;
         setFailure(reported.reason);
         setUnsupported(true);
+        if (takeRef.current || onTakeEndRef.current) {
+          takeRef.current?.cancel();
+          takeRef.current = null;
+          onTakeEndRef.current = null;
+          setRecordError('The renderer stopped, so the take was dropped.');
+        }
+        setRecordState('idle');
       },
       onContextLost() {
         if (disposed) return;
@@ -243,7 +301,7 @@ export default function SequencePlayer({
     const options = {
       source: { id: sequence.id, graph: sequence.graph },
       durationSec: duration,
-      capture,
+      capture: preserveBuffer,
     };
     host =
       mode === 'worker'
@@ -276,8 +334,19 @@ export default function SequencePlayer({
       host?.dispose();
       host = null;
       canvas.remove();
+      if (canvasRef.current === canvas) canvasRef.current = null;
     };
-  }, [capture, clock, coordinator, duration, mediaId, mode, sequence, sessionKey]);
+  }, [
+    clock,
+    coordinator,
+    duration,
+    mediaId,
+    mode,
+    preserveBuffer,
+    rendererKey,
+    sequence,
+    sessionKey,
+  ]);
 
   useEffect(() => {
     if (!playing) {
@@ -294,18 +363,108 @@ export default function SequencePlayer({
         pause: () => {
           clock.pause(performance.now());
           setPlaying(false);
+          takeRef.current?.setPaused(true);
         },
       },
-      { title: sequence.title, artist: 'Weeks on Fire', album: '3D Sequences' },
+      {
+        title: recording ? `Recording · ${sequence.title}` : sequence.title,
+        artist: 'Weeks on Fire',
+        album: '3D Sequences',
+      },
     );
     return () => coordinator.deactivate(mediaId);
-  }, [clock, coordinator, mediaId, playing, sequence.title]);
+  }, [clock, coordinator, mediaId, playing, recording, sequence.title]);
+
+  const finishRecording = useCallback(async () => {
+    const take = takeRef.current;
+    if (!take) return;
+    takeRef.current = null;
+    onTakeEndRef.current = null;
+    setRecordState('finishing');
+    const now = performance.now();
+    if (clock.playing) {
+      clock.pause(now);
+      setPlaying(false);
+    }
+    clock.setLoop(loop);
+    try {
+      const result = await take.finish();
+      addTake({
+        kind: 'sequence',
+        sourceId: sequence.id,
+        title: sequence.title,
+        blob: result.blob,
+        extension: result.format.extension,
+        durationSec: result.durationSec,
+        expectedDurationSec: duration,
+      });
+    } catch (error) {
+      setRecordError(error instanceof Error ? error.message : 'The take could not be saved.');
+    } finally {
+      setRecordState('idle');
+    }
+  }, [clock, duration, loop, sequence.id, sequence.title]);
+
+  // Once the in-thread renderer for the take is up, run one full pass (loop off) into the recorder.
+  useEffect(() => {
+    if (recordState !== 'preparing' || readyFor !== rendererKey) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    let cancelled = false;
+    const fail = (error: unknown) => {
+      clock.setLoop(loop);
+      setRecordError(error instanceof Error ? error.message : 'Recording could not start.');
+      setRecordState('idle');
+    };
+    import('../lib/capture/canvasTake').then(({ startCanvasTake }) => {
+      if (cancelled) return;
+      try {
+        takeRef.current = startCanvasTake(canvas, { onError: setRecordError });
+      } catch (error) {
+        fail(error);
+        return;
+      }
+      clock.setLoop(false);
+      clock.reset(duration, true, performance.now());
+      jumpRef.current = true;
+      onTakeEndRef.current = () => void finishRecording();
+      setUiTime(0);
+      setPlaying(true);
+      setRecordState('recording');
+      wakeRef.current?.();
+    }, fail);
+    return () => {
+      cancelled = true;
+    };
+  }, [clock, duration, finishRecording, loop, readyFor, recordState, rendererKey]);
+
+  useEffect(() => {
+    takeSizeRef.current = recording ? takeSize(sequence.aspect) : null;
+    wakeRef.current?.();
+  }, [recording, sequence.aspect]);
+
+  // Leaving the page mid-take drops it.
+  useEffect(
+    () => () => {
+      takeRef.current?.cancel();
+      takeRef.current = null;
+      onTakeEndRef.current = null;
+    },
+    [],
+  );
+
+  const startRecording = () => {
+    if (recording || unsupportedCapture) return;
+    setRecordError(null);
+    setRecordState('preparing');
+  };
 
   const togglePlay = () => {
     const now = performance.now();
     if (clock.playing) clock.pause(now);
     else clock.play(now);
     setPlaying(clock.playing);
+    takeRef.current?.setPaused(!clock.playing || clock.isFrozen);
   };
 
   const restart = () => {
@@ -348,6 +507,19 @@ export default function SequencePlayer({
             restores it; otherwise reload the page.
           </p>
         ) : null}
+        {recording ? (
+          <span
+            role="status"
+            className="absolute right-2 top-2 inline-flex items-center gap-1.5 rounded bg-black/75 px-2 py-0.5 text-xs font-semibold text-red-300"
+          >
+            <Circle size={10} className="fill-red-500 text-red-500" aria-hidden="true" />
+            {recordState === 'preparing'
+              ? 'Preparing take…'
+              : recordState === 'finishing'
+                ? 'Saving take…'
+                : `REC ${formatTimecode(uiTime)} / ${formatTimecode(duration)}`}
+          </span>
+        ) : null}
       </div>
 
       <div className="space-y-3 border-t border-zinc-800 bg-zinc-950/90 p-3">
@@ -360,6 +532,7 @@ export default function SequencePlayer({
             step={0.05}
             value={Math.min(uiTime, duration)}
             onChange={(event) => seek(Number(event.target.value))}
+            disabled={recording}
             className="h-2 w-full cursor-pointer appearance-none rounded-full bg-zinc-800 accent-orange-500"
           />
         </label>
@@ -368,6 +541,7 @@ export default function SequencePlayer({
             <button
               type="button"
               onClick={togglePlay}
+              disabled={recordState === 'preparing' || recordState === 'finishing'}
               className="inline-flex items-center gap-1.5 rounded-md border border-zinc-700 px-2.5 py-1.5 text-xs font-semibold text-zinc-100 transition hover:border-orange-400 hover:text-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-300"
             >
               {playing ? <Pause size={14} /> : <Play size={14} />}
@@ -376,6 +550,7 @@ export default function SequencePlayer({
             <button
               type="button"
               onClick={restart}
+              disabled={recording}
               className="inline-flex items-center gap-1.5 rounded-md border border-zinc-700 px-2.5 py-1.5 text-xs font-semibold text-zinc-100 transition hover:border-orange-400 hover:text-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-300"
             >
               <RotateCcw size={14} />
@@ -386,16 +561,49 @@ export default function SequencePlayer({
                 type="checkbox"
                 checked={loop}
                 onChange={(event) => setLoop(event.target.checked)}
+                disabled={recording}
                 className="accent-orange-500"
               />
               Loop
             </label>
+            {recordState === 'recording' ? (
+              <button
+                type="button"
+                onClick={() => void finishRecording()}
+                aria-label="Stop take"
+                className="inline-flex items-center gap-1.5 rounded-md border border-red-500/50 bg-red-500/15 px-2.5 py-1.5 text-xs font-semibold text-red-200 transition hover:border-red-400 focus:outline-none focus:ring-2 focus:ring-orange-300"
+              >
+                <Square size={12} aria-hidden="true" />
+                Stop
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={startRecording}
+                aria-label="Record take"
+                disabled={recording || unsupported || unsupportedCapture !== null}
+                title={
+                  unsupportedCapture ??
+                  `Record one full pass (${formatTimecode(duration)}) as a WebM take for the Timeline`
+                }
+                className="inline-flex items-center gap-1.5 rounded-md border border-zinc-700 px-2.5 py-1.5 text-xs font-semibold text-zinc-100 transition hover:border-red-400 hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:opacity-40"
+              >
+                <Circle size={12} className="fill-red-500 text-red-500" aria-hidden="true" />
+                Record
+              </button>
+            )}
           </div>
           <p className="font-mono text-xs text-zinc-400">
             {formatTimecode(uiTime)} / {formatTimecode(duration)}
           </p>
         </div>
+        {recordError ? (
+          <p role="alert" className="text-xs text-red-300">
+            {recordError}
+          </p>
+        ) : null}
       </div>
+      <TakeShelf kind="sequence" sourceId={sequence.id} />
     </div>
   );
 }

@@ -12,7 +12,7 @@
  * | `stencil`                      | false                                | Unused                                            |
  * | `powerPreference`              | 'high-performance'; 'default' coarse | Phones/battery devices should not force the dGPU  |
  * | `failIfMajorPerformanceCaveat` | false                                | A slow context beats a blank canvas               |
- * | `preserveDrawingBuffer`        | false; true only for `capture`       | Playback never reads back; `?capture=1` flips it  |
+ * | `preserveDrawingBuffer`        | false; true only for `capture`       | `?capture=1` and a recorded take read pixels back |
  * | `desynchronized`               | unset                                | Optional experiment, never required               |
  *
  * Battery state is only available through the async, non-standard Battery API, so a coarse
@@ -34,8 +34,8 @@ export type GlKind = 'webgl2' | 'webgl' | 'none';
 export interface SequenceGlOptions {
   /**
    * Keep the drawing buffer so frames can be read back (`canvas.toDataURL()`, the e2e frame
-   * harness, a MediaRecorder follow-on). Costs a copy per frame, so playback leaves it off; the
-   * hub turns it on only for a `?capture=1` page load.
+   * harness, a recorded take). Costs a copy per frame, so playback leaves it off; the hub turns it
+   * on only for a `?capture=1` page load and while **Record** runs (docs/capture.md).
    */
   capture?: boolean;
   /**

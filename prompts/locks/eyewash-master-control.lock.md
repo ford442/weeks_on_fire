@@ -43,5 +43,5 @@ Oz, the overnight master-control operator, a calm man in his fifties with grey h
 ## Paste · screen
 
 ```text
-a small old CRT television on the corner bracket glowing with a soft grey-blue EyeWash picture, curved phosphor glass, faint scanlines, no readable text, no channel number, nobody watching it
+a small old CRT television glowing with a soft grey-blue EyeWash picture, curved phosphor glass, faint scanlines, no readable text, no channel number, nobody watching it
 ```

@@ -3,32 +3,75 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useMediaCoordinator } from '../contexts/MediaSessionContext';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
-import { createSequenceGl, glKind, type GlKind } from '../lib/webgl/context';
-import { SequenceEngine } from '../lib/webgl/engine';
 import { shouldAnimate } from '../lib/webgl/loop';
 import { PlaybackClock } from '../lib/playbackClock';
 import { formatTimecode } from '../lib/timecode';
-import { createSequenceScene } from '../sequences/registry';
+import { createInThreadHost } from '../sequences/render/inThreadHost';
+import { FrameStatsWindow, type StatsSummary } from '../sequences/render/stats';
+import {
+  canRenderInWorker,
+  createWorkerHost,
+  markWorkerUnavailable,
+} from '../sequences/render/workerHost';
 
 import type { SequenceRecord } from '../data/sequences';
+import type {
+  RendererCallbacks,
+  RendererHost,
+  RendererInfo,
+  RendererMode,
+} from '../sequences/render/host';
+
+/** `auto` draws in the render worker where the browser can; `main` forces the in-thread path. */
+export type RendererPreference = 'auto' | 'worker' | 'main';
 
 interface SequencePlayerProps {
   sequence: SequenceRecord;
   /** Keep the drawing buffer so a frame can be read back (`?capture=1`). Off for playback. */
   capture?: boolean;
+  /** `?renderer=main` draws on the page's thread even where the worker would work. */
+  renderer?: RendererPreference;
+  /** `?stats=1`: overlay the renderer's per-frame CPU time and GL counters. */
+  stats?: boolean;
 }
 
-function describeError(error: unknown): string {
-  const message = error instanceof Error ? error.message : String(error);
-  return message.trim() || 'unknown error';
+function preferredMode(preference: RendererPreference): RendererMode {
+  return preference !== 'main' && canRenderInWorker() ? 'worker' : 'main';
 }
 
-export default function SequencePlayer({ sequence, capture = false }: SequencePlayerProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+function createPlayerCanvas(title: string, mode: RendererMode): HTMLCanvasElement {
+  const canvas = document.createElement('canvas');
+  canvas.className = 'block h-full w-full';
+  canvas.setAttribute('role', 'img');
+  canvas.setAttribute('aria-label', `${title} 3D sequence`);
+  canvas.dataset.renderer = mode;
+  return canvas;
+}
+
+function backingSize(canvas: HTMLCanvasElement) {
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  return {
+    dpr,
+    width: Math.max(1, Math.floor(canvas.clientWidth * dpr)),
+    height: Math.max(1, Math.floor(canvas.clientHeight * dpr)),
+  };
+}
+
+export default function SequencePlayer({
+  sequence,
+  capture = false,
+  renderer = 'auto',
+  stats = false,
+}: SequencePlayerProps) {
+  const stageRef = useRef<HTMLDivElement>(null);
   const lastUiRef = useRef(0);
-  const engineRef = useRef<SequenceEngine | null>(null);
-  const sceneRef = useRef<ReturnType<typeof createSequenceScene>>(undefined);
+  const lastStatsUiRef = useRef(0);
   const wakeRef = useRef<(() => void) | null>(null);
+  // The next frame does not follow the last one (seek, restart): tell the renderer.
+  const jumpRef = useRef(true);
+  const statsWindowRef = useRef(new FrameStatsWindow());
+  // Read by the frame loop, so turning the overlay on does not restart the renderer.
+  const statsRef = useRef(stats);
   const reducedMotion = usePrefersReducedMotion();
   const reducedMotionRef = useRef(reducedMotion);
 
@@ -40,17 +83,26 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
   const [uiTime, setUiTime] = useState(0);
   const [unsupported, setUnsupported] = useState(false);
   const [contextLost, setContextLost] = useState(false);
-  // Which context the canvas got (absent until the first attempt) and why it failed, if it did.
-  const [kind, setKind] = useState<GlKind | undefined>(undefined);
+  // Why the renderer failed, if it did, and what it reported once it was up.
   const [failure, setFailure] = useState<string | null>(null);
+  const [info, setInfo] = useState<RendererInfo | null>(null);
+  const [summary, setSummary] = useState<StatsSummary | null>(null);
+  // The film (and capture setting) whose worker failed, so this player draws it in-thread.
+  const [fellBackFor, setFellBackFor] = useState<string | null>(null);
 
   const coordinator = useMediaCoordinator();
   const duration = sequence.durationSec;
   const mediaId = `sequence:${sequence.id}`;
+  const sessionKey = `${sequence.id}|${capture ? 'capture' : 'play'}`;
+  const mode: RendererMode = fellBackFor === sessionKey ? 'main' : preferredMode(renderer);
 
   useEffect(() => {
     wakeRef.current?.();
   }, [playing]);
+
+  useEffect(() => {
+    statsRef.current = stats;
+  }, [stats]);
 
   useEffect(() => {
     reducedMotionRef.current = reducedMotion;
@@ -68,77 +120,32 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
     const start = !reducedMotionRef.current;
     clock.reset(duration, start, performance.now());
     lastUiRef.current = 0;
+    jumpRef.current = true;
     setUiTime(0);
     setPlaying(start);
   }, [clock, duration, sequence.id]);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const stage = stageRef.current;
+    if (!stage) return;
 
-    const creationErrors: string[] = [];
-    const gl = createSequenceGl(canvas, {
-      capture,
-      onCreationError: (message) => {
-        if (!creationErrors.includes(message)) creationErrors.push(message);
-      },
-    });
-    setKind(glKind(gl));
-    if (!gl) {
-      setFailure(creationErrors.join(' · ') || null);
-      setUnsupported(true);
-      return;
-    }
+    // One canvas per renderer: a canvas handed to a worker can never be drawn on here again.
+    const canvas = createPlayerCanvas(sequence.title, mode);
+    stage.replaceChildren(canvas);
     setUnsupported(false);
     setContextLost(false);
     setFailure(null);
+    setInfo(null);
+    setSummary(null);
+    statsWindowRef.current.clear();
 
+    let host: RendererHost | null = null;
+    let disposed = false;
+    let failed = false;
     let lost = false;
     let hidden = document.hidden;
-
-    /** Builds the engine and scene; returns why it failed (shader link, mesh limit...) or null. */
-    const setup = (): string | null => {
-      try {
-        const engine = new SequenceEngine(gl);
-        const scene = createSequenceScene(sequence.id);
-        scene?.init(engine);
-        engineRef.current = engine;
-        sceneRef.current = scene;
-        return null;
-      } catch (error) {
-        console.error(`SequencePlayer: could not start "${sequence.id}"`, error);
-        return describeError(error);
-      }
-    };
-
-    const teardown = () => {
-      try {
-        sceneRef.current?.dispose();
-        engineRef.current?.dispose();
-      } catch {
-        // GL objects are already gone after a context loss.
-      }
-      engineRef.current = null;
-      sceneRef.current = undefined;
-    };
-
-    const startFailure = setup();
-    if (startFailure !== null) {
-      teardown();
-      setFailure(startFailure);
-      setUnsupported(true);
-      return;
-    }
-
-    const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const width = Math.max(1, Math.floor(canvas.clientWidth * dpr));
-      const height = Math.max(1, Math.floor(canvas.clientHeight * dpr));
-      if (canvas.width !== width || canvas.height !== height) {
-        canvas.width = width;
-        canvas.height = height;
-      }
-    };
+    let lastTimeSec = -1;
+    let raf = 0;
 
     // The film clock is held while nothing can be drawn (hidden tab, lost context) so it does
     // not jump ahead when drawing resumes.
@@ -148,32 +155,31 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
     };
 
     const draw = (now: number) => {
-      resize();
+      if (!host) return;
+      const { dpr, width, height } = backingSize(canvas);
+      host.resize(width, height, dpr);
       const { timeSec, ended } = clock.tick(now);
       if (ended) {
         setPlaying(false);
         coordinator.deactivate(mediaId);
       }
-      const sceneNow = sceneRef.current;
-      const engineNow = engineRef.current;
-      if (sceneNow && engineNow && canvas.width > 0 && canvas.height > 0) {
-        sceneNow.draw({
-          engine: engineNow,
-          timeSec,
-          progress: duration > 0 ? timeSec / duration : 0,
-          durationSec: duration,
-          aspect: canvas.width / canvas.height,
-        });
-      }
+      // Seeks, restarts and loop wraps are jumps; everything else follows the previous frame.
+      const continuous = !jumpRef.current && timeSec >= lastTimeSec;
+      jumpRef.current = false;
+      lastTimeSec = timeSec;
+      host.frame(timeSec, continuous);
       if (now - lastUiRef.current > 80) {
         lastUiRef.current = now;
         setUiTime(timeSec);
+      }
+      if (statsRef.current && now - lastStatsUiRef.current > 250) {
+        lastStatsUiRef.current = now;
+        setSummary(statsWindowRef.current.summary());
       }
     };
 
     // The loop only keeps ticking while playing and visible. Paused players draw single frames
     // on demand (seek, resize, resume) through `wake`.
-    let raf = 0;
     const frame = (now: number) => {
       raf = 0;
       draw(now);
@@ -182,8 +188,68 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
       }
     };
     const wake = () => {
-      if (raf === 0 && !lost && !hidden) raf = requestAnimationFrame(frame);
+      if (raf === 0 && host && !failed && !lost && !hidden) raf = requestAnimationFrame(frame);
     };
+
+    const callbacks: RendererCallbacks = {
+      onReady(ready) {
+        if (disposed) return;
+        canvas.dataset.gl = ready.kind;
+        canvas.dataset.preserveDrawingBuffer = String(ready.preserveDrawingBuffer);
+        if (ready.renderer) canvas.dataset.glRenderer = ready.renderer;
+        canvas.dataset.kernel = ready.kernel;
+        setInfo(ready);
+      },
+      onFailure(reported) {
+        if (disposed) return;
+        failed = true;
+        cancelAnimationFrame(raf);
+        raf = 0;
+        if (reported.recoverable) {
+          console.warn(
+            `SequencePlayer: the render worker could not draw "${sequence.id}"; drawing in-thread.`,
+            reported.reason ?? '',
+          );
+          // No context in the worker (or no worker): later players skip it.
+          if (reported.kind === 'none') markWorkerUnavailable();
+          setFellBackFor(sessionKey);
+          return;
+        }
+        canvas.dataset.gl = reported.kind;
+        setFailure(reported.reason);
+        setUnsupported(true);
+      },
+      onContextLost() {
+        if (disposed) return;
+        lost = true;
+        cancelAnimationFrame(raf);
+        raf = 0;
+        syncClockHold(performance.now());
+        setContextLost(true);
+      },
+      onContextRestored() {
+        if (disposed) return;
+        lost = false;
+        jumpRef.current = true;
+        syncClockHold(performance.now());
+        setContextLost(false);
+        wake();
+      },
+      onFrame(frameStats) {
+        statsWindowRef.current.push(frameStats, performance.now());
+      },
+    };
+
+    const options = {
+      source: { id: sequence.id, graph: sequence.graph },
+      durationSec: duration,
+      capture,
+    };
+    host =
+      mode === 'worker'
+        ? createWorkerHost(canvas, { ...options, ...backingSize(canvas) }, callbacks)
+        : createInThreadHost(canvas, options, callbacks);
+
     wakeRef.current = wake;
     syncClockHold(performance.now());
     wake();
@@ -197,47 +263,21 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
       syncClockHold(performance.now());
       wake();
     };
-
-    const onLost = (event: Event) => {
-      event.preventDefault();
-      lost = true;
-      cancelAnimationFrame(raf);
-      raf = 0;
-      syncClockHold(performance.now());
-      teardown();
-      setContextLost(true);
-    };
-
-    const onRestored = () => {
-      const restoreFailure = setup();
-      if (restoreFailure !== null) {
-        teardown();
-        setFailure(restoreFailure);
-        setUnsupported(true);
-        return;
-      }
-      lost = false;
-      syncClockHold(performance.now());
-      setContextLost(false);
-      wake();
-    };
-
     const onResize = () => wake();
     window.addEventListener('resize', onResize);
     document.addEventListener('visibilitychange', onVisibility);
-    canvas.addEventListener('webglcontextlost', onLost);
-    canvas.addEventListener('webglcontextrestored', onRestored);
 
     return () => {
+      disposed = true;
       cancelAnimationFrame(raf);
       wakeRef.current = null;
       window.removeEventListener('resize', onResize);
       document.removeEventListener('visibilitychange', onVisibility);
-      canvas.removeEventListener('webglcontextlost', onLost);
-      canvas.removeEventListener('webglcontextrestored', onRestored);
-      teardown();
+      host?.dispose();
+      host = null;
+      canvas.remove();
     };
-  }, [capture, clock, coordinator, duration, mediaId, sequence.id]);
+  }, [capture, clock, coordinator, duration, mediaId, mode, sequence, sessionKey]);
 
   useEffect(() => {
     if (!playing) {
@@ -270,6 +310,7 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
 
   const restart = () => {
     clock.restart(performance.now());
+    jumpRef.current = true;
     setUiTime(0);
     setPlaying(true);
     wakeRef.current?.();
@@ -277,6 +318,7 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
 
   const seek = (next: number) => {
     clock.seek(next, performance.now());
+    jumpRef.current = true;
     setUiTime(clock.peek(performance.now()));
     wakeRef.current?.();
   };
@@ -286,13 +328,9 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
   return (
     <div className="overflow-hidden rounded-md border border-zinc-800 bg-black">
       <div className={`relative ${aspectClass} bg-black`}>
-        <canvas
-          ref={canvasRef}
-          className="h-full w-full"
-          role="img"
-          aria-label={`${sequence.title} 3D sequence`}
-          data-gl={kind}
-        />
+        {/* The renderer's <canvas> is created per session in the effect above. */}
+        <div ref={stageRef} className="h-full w-full" />
+        {stats ? <StatsOverlay mode={mode} info={info} summary={summary} /> : null}
         {unsupported ? (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-4 text-center text-sm text-zinc-400">
             <p>WebGL is unavailable in this browser, so the in-hub player cannot run.</p>
@@ -359,5 +397,45 @@ export default function SequencePlayer({ sequence, capture = false }: SequencePl
         </div>
       </div>
     </div>
+  );
+}
+
+interface StatsOverlayProps {
+  mode: RendererMode;
+  info: RendererInfo | null;
+  summary: StatsSummary | null;
+}
+
+/** `?stats=1`: what drew the last frames and how much it cost, over the last 60 frames. */
+function StatsOverlay({ mode, info, summary }: StatsOverlayProps) {
+  const rows: [string, string][] = [
+    ['thread', mode === 'worker' ? 'worker' : 'main'],
+    ['context', info?.kind ?? '…'],
+    ['kernel', info?.kernel ?? '…'],
+  ];
+  if (summary) {
+    rows.push(
+      ['buffer', `${summary.width}×${summary.height}`],
+      ['cpu', `${summary.cpuMsAvg.toFixed(2)} ms avg · ${summary.cpuMsMax.toFixed(2)} max`],
+      ['fps', summary.fps.toFixed(0)],
+      ['draws', `${summary.drawCalls} (${summary.instances} objects)`],
+      ['uniforms', String(summary.uniformCalls)],
+      ['uploads', String(summary.bufferUploads)],
+    );
+  }
+  return (
+    <aside
+      aria-label="Renderer stats"
+      className="pointer-events-none absolute left-2 top-2 rounded bg-black/75 px-2 py-1 font-mono text-[10px] leading-4 text-lime-300"
+    >
+      <dl className="grid grid-cols-[auto_auto] gap-x-2">
+        {rows.map(([label, value]) => (
+          <div key={label} className="contents">
+            <dt className="text-zinc-400">{label}</dt>
+            <dd>{value}</dd>
+          </div>
+        ))}
+      </dl>
+    </aside>
   );
 }

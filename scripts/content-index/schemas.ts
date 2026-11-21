@@ -458,7 +458,7 @@ export const SequenceSchema = z.object({
   characterIds: linkIds.optional(),
   /**
    * `graph`: played from a scene graph (`<id>.graph.json` or the `graph` key). `custom`: a
-   * hand-written factory in `src/sequences/registry.ts`. Derived from the graph when omitted.
+   * hand-written factory in `src/sequences/scenes/index.ts`. Derived from the graph when omitted.
    */
   renderer: SequenceRendererSchema.optional(),
   graph: SequenceGraphSchema.optional(),

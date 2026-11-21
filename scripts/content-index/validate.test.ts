@@ -318,7 +318,7 @@ describe('validateSequences', () => {
 
   it('flags a custom sequence with no registered factory', () => {
     expect(() => validateSequences('/tmp', [makeSequence()], new Set(['other']))).toThrow(
-      /no factory in src\/sequences\/registry.ts/,
+      /no factory in src\/sequences\/scenes\/index.ts/,
     );
     expect(() =>
       validateSequences('/tmp', [makeSequence()], new Set(['sequence-1'])),

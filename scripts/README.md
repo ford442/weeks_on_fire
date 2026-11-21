@@ -12,6 +12,8 @@ TypeScript codegen for the React hub, plus stdlib Python helpers for prompts and
 | `check-index-encoding.ts`          | part of `npm run build`                   | Dist `index.html` must be UTF-8 without BOM/`<base>` (read-only) |
 | `emit-link-index.ts`               | part of `npm run build`                   | Write `dist/1ink.1ink` (UTF-16 LE copy of `index.html`)          |
 | `check-bundle-size.ts`             | `npm run build:check` / CI                | Main JS chunk size gate                                          |
+| `trace-sequences.ts`               | `npm run perf:trace -- --target …`        | Sequence engine profile: GL calls per frame, kernel CPU share    |
+| `emit-kernel-fixtures.ts`          | `npx tsx scripts/emit-kernel-fixtures.ts` | Rewrite `src/lib/webgl/kernel.fixtures.json` from the TS kernel  |
 
 ESLint and Prettier cover `scripts/` (generated files under `src/data/generated/` stay ignored).
 

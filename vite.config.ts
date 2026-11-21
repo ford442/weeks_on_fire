@@ -121,6 +121,17 @@ export default defineConfig({
       },
     }),
   ],
+  // The 3D Sequences render worker (src/sequences/worker/) is a module worker, so it can share
+  // chunks and keep its own imports lazy.
+  worker: {
+    format: 'es',
+    rollupOptions: {
+      output: {
+        chunkFileNames: (chunk) => `assets/${safeName(chunk.name)}-[hash].js`,
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
+  },
   build: {
     rollupOptions: {
       output: {

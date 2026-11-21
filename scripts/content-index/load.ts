@@ -286,15 +286,15 @@ export function loadSequences(repoRoot: string): SequenceRecord[] {
     .sort((a, b) => a.durationSec - b.durationSec || a.id.localeCompare(b.id));
 }
 
-/** Ids with a hand-written factory in `src/sequences/registry.ts` (`'id': createFoo,`). */
+/** Ids with a hand-written factory in `src/sequences/scenes/index.ts` (`'id': createFoo,`). */
 export function loadCustomRendererIds(repoRoot: string): Set<string> {
-  const source = readFileSync(join(repoRoot, 'src/sequences/registry.ts'), 'utf8');
+  const source = readFileSync(join(repoRoot, 'src/sequences/scenes/index.ts'), 'utf8');
   return new Set([...source.matchAll(/^\s*'([a-z0-9-]+)':\s*create\w+,?\s*$/gm)].map((m) => m[1]!));
 }
 
 /**
  * `sceneId` keys of the hand-authored dialog auditions in `src/data/sceneDialogVersions.ts` (the
- * Suggestions "Dialog" tab looks them up by cutaway id). Read as text, like the registry above.
+ * Suggestions "Dialog" tab looks them up by cutaway id). Read as text, like the scene factories above.
  */
 export function loadDialogSceneIds(repoRoot: string): string[] {
   const source = readFileSync(join(repoRoot, 'src/data/sceneDialogVersions.ts'), 'utf8');

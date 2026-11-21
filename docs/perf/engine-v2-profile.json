@@ -1,0 +1,2470 @@
+{
+  "recordedAt": "2026-11-20T09:03:16.205Z",
+  "options": {
+    "targets": [
+      {
+        "name": "base",
+        "url": "http://127.0.0.1:4174/weeks_on_fire/"
+      },
+      {
+        "name": "branch",
+        "url": "http://127.0.0.1:4175/weeks_on_fire/"
+      }
+    ],
+    "traced": [
+      "hose-chase",
+      "kick-lattice",
+      "mobius-chrome",
+      "lattice-hymn"
+    ],
+    "counted": [
+      "hose-chase",
+      "kick-lattice",
+      "lattice-hymn",
+      "mobius-chrome",
+      "rubber-hose-errand",
+      "screen-door-recessional",
+      "spoon-whip",
+      "tunnel-smash",
+      "kitchen-counter-orbit"
+    ],
+    "seconds": 8,
+    "from": {
+      "mobius-chrome": 33
+    },
+    "out": "/tmp/claude-0/-home-user-weeks-on-fire/849abe9d-c90d-5605-af03-a90c8d2cd4e3/scratchpad/engine-v2-profile.json",
+    "traces": "/tmp/claude-0/-home-user-weeks-on-fire/849abe9d-c90d-5605-af03-a90c8d2cd4e3/scratchpad/traces"
+  },
+  "counts": {
+    "base": [
+      {
+        "film": "hose-chase",
+        "timeSec": 0,
+        "gl": {
+          "draw": 19,
+          "instancedDraw": 0,
+          "uniform": 342,
+          "upload": 1,
+          "clear": 1,
+          "other": 114
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 4,
+        "gl": {
+          "draw": 43,
+          "instancedDraw": 0,
+          "uniform": 774,
+          "upload": 1,
+          "clear": 1,
+          "other": 258
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 8,
+        "gl": {
+          "draw": 43,
+          "instancedDraw": 0,
+          "uniform": 774,
+          "upload": 1,
+          "clear": 1,
+          "other": 258
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 12,
+        "gl": {
+          "draw": 19,
+          "instancedDraw": 0,
+          "uniform": 342,
+          "upload": 1,
+          "clear": 1,
+          "other": 114
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 0,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 1,
+          "clear": 1,
+          "other": 54
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 4,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 1,
+          "clear": 1,
+          "other": 54
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 8,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 1,
+          "clear": 1,
+          "other": 54
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 12,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 1,
+          "clear": 1,
+          "other": 54
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 0,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 0,
+          "clear": 1,
+          "other": 53
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 4,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 0,
+          "clear": 1,
+          "other": 53
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 8,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 0,
+          "clear": 1,
+          "other": 53
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 12,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 0,
+          "uniform": 44,
+          "upload": 0,
+          "clear": 1,
+          "other": 53
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 0,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 0,
+          "uniform": 18,
+          "upload": 3,
+          "clear": 1,
+          "other": 29
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 18.75,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 0,
+          "uniform": 18,
+          "upload": 0,
+          "clear": 1,
+          "other": 8
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 37.5,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 0,
+          "uniform": 18,
+          "upload": 0,
+          "clear": 1,
+          "other": 8
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 56.25,
+        "gl": {
+          "draw": 2,
+          "instancedDraw": 0,
+          "uniform": 36,
+          "upload": 3,
+          "clear": 1,
+          "other": 35
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 0,
+        "gl": {
+          "draw": 13,
+          "instancedDraw": 0,
+          "uniform": 234,
+          "upload": 0,
+          "clear": 1,
+          "other": 79
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 8,
+        "gl": {
+          "draw": 13,
+          "instancedDraw": 0,
+          "uniform": 234,
+          "upload": 0,
+          "clear": 1,
+          "other": 79
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 16,
+        "gl": {
+          "draw": 13,
+          "instancedDraw": 0,
+          "uniform": 234,
+          "upload": 0,
+          "clear": 1,
+          "other": 79
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 24,
+        "gl": {
+          "draw": 13,
+          "instancedDraw": 0,
+          "uniform": 234,
+          "upload": 0,
+          "clear": 1,
+          "other": 79
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 0,
+        "gl": {
+          "draw": 50,
+          "instancedDraw": 0,
+          "uniform": 888,
+          "upload": 1,
+          "clear": 1,
+          "other": 306
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 27.5,
+        "gl": {
+          "draw": 50,
+          "instancedDraw": 0,
+          "uniform": 888,
+          "upload": 1,
+          "clear": 1,
+          "other": 306
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 55,
+        "gl": {
+          "draw": 50,
+          "instancedDraw": 0,
+          "uniform": 888,
+          "upload": 1,
+          "clear": 1,
+          "other": 306
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 82.5,
+        "gl": {
+          "draw": 50,
+          "instancedDraw": 0,
+          "uniform": 888,
+          "upload": 1,
+          "clear": 1,
+          "other": 306
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 0,
+        "gl": {
+          "draw": 11,
+          "instancedDraw": 0,
+          "uniform": 186,
+          "upload": 1,
+          "clear": 1,
+          "other": 73
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 3,
+        "gl": {
+          "draw": 11,
+          "instancedDraw": 0,
+          "uniform": 186,
+          "upload": 1,
+          "clear": 1,
+          "other": 73
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 6,
+        "gl": {
+          "draw": 11,
+          "instancedDraw": 0,
+          "uniform": 186,
+          "upload": 1,
+          "clear": 1,
+          "other": 73
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 9,
+        "gl": {
+          "draw": 11,
+          "instancedDraw": 0,
+          "uniform": 186,
+          "upload": 1,
+          "clear": 1,
+          "other": 73
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 0,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 168,
+          "upload": 1,
+          "clear": 1,
+          "other": 67
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 3,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 168,
+          "upload": 1,
+          "clear": 1,
+          "other": 67
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 6,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 168,
+          "upload": 1,
+          "clear": 1,
+          "other": 67
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 9,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 168,
+          "upload": 1,
+          "clear": 1,
+          "other": 67
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 0,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 132,
+          "upload": 1,
+          "clear": 1,
+          "other": 55
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 12,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 132,
+          "upload": 1,
+          "clear": 1,
+          "other": 55
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 24,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 132,
+          "upload": 1,
+          "clear": 1,
+          "other": 55
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 36,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 132,
+          "upload": 1,
+          "clear": 1,
+          "other": 55
+        }
+      }
+    ],
+    "branch": [
+      {
+        "film": "hose-chase",
+        "timeSec": 0,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 7,
+          "uniform": 21,
+          "upload": 8,
+          "clear": 1,
+          "other": 52
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 4,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 7,
+          "uniform": 21,
+          "upload": 8,
+          "clear": 1,
+          "other": 51
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 8,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 7,
+          "uniform": 21,
+          "upload": 8,
+          "clear": 1,
+          "other": 51
+        }
+      },
+      {
+        "film": "hose-chase",
+        "timeSec": 12,
+        "gl": {
+          "draw": 1,
+          "instancedDraw": 7,
+          "uniform": 21,
+          "upload": 8,
+          "clear": 1,
+          "other": 51
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 0,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 4,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 8,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "kick-lattice",
+        "timeSec": 12,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 0,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 4,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 8,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "lattice-hymn",
+        "timeSec": 12,
+        "gl": {
+          "draw": 3,
+          "instancedDraw": 1,
+          "uniform": 13,
+          "upload": 2,
+          "clear": 1,
+          "other": 34
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 0,
+        "gl": {
+          "draw": 0,
+          "instancedDraw": 1,
+          "uniform": 2,
+          "upload": 4,
+          "clear": 1,
+          "other": 11
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 18.75,
+        "gl": {
+          "draw": 0,
+          "instancedDraw": 1,
+          "uniform": 2,
+          "upload": 2,
+          "clear": 1,
+          "other": 9
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 37.5,
+        "gl": {
+          "draw": 0,
+          "instancedDraw": 1,
+          "uniform": 2,
+          "upload": 2,
+          "clear": 1,
+          "other": 9
+        }
+      },
+      {
+        "film": "mobius-chrome",
+        "timeSec": 56.25,
+        "gl": {
+          "draw": 0,
+          "instancedDraw": 1,
+          "uniform": 2,
+          "upload": 4,
+          "clear": 1,
+          "other": 11
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 0,
+        "gl": {
+          "draw": 5,
+          "instancedDraw": 3,
+          "uniform": 41,
+          "upload": 3,
+          "clear": 1,
+          "other": 48
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 8,
+        "gl": {
+          "draw": 5,
+          "instancedDraw": 3,
+          "uniform": 41,
+          "upload": 3,
+          "clear": 1,
+          "other": 48
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 16,
+        "gl": {
+          "draw": 5,
+          "instancedDraw": 3,
+          "uniform": 41,
+          "upload": 3,
+          "clear": 1,
+          "other": 48
+        }
+      },
+      {
+        "film": "rubber-hose-errand",
+        "timeSec": 24,
+        "gl": {
+          "draw": 5,
+          "instancedDraw": 3,
+          "uniform": 41,
+          "upload": 3,
+          "clear": 1,
+          "other": 48
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 0,
+        "gl": {
+          "draw": 2,
+          "instancedDraw": 4,
+          "uniform": 19,
+          "upload": 6,
+          "clear": 1,
+          "other": 43
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 27.5,
+        "gl": {
+          "draw": 2,
+          "instancedDraw": 4,
+          "uniform": 19,
+          "upload": 6,
+          "clear": 1,
+          "other": 44
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 55,
+        "gl": {
+          "draw": 2,
+          "instancedDraw": 4,
+          "uniform": 19,
+          "upload": 6,
+          "clear": 1,
+          "other": 44
+        }
+      },
+      {
+        "film": "screen-door-recessional",
+        "timeSec": 82.5,
+        "gl": {
+          "draw": 2,
+          "instancedDraw": 4,
+          "uniform": 19,
+          "upload": 6,
+          "clear": 1,
+          "other": 44
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 0,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 1,
+          "uniform": 48,
+          "upload": 3,
+          "clear": 1,
+          "other": 52
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 3,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 1,
+          "uniform": 48,
+          "upload": 3,
+          "clear": 1,
+          "other": 52
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 6,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 1,
+          "uniform": 48,
+          "upload": 3,
+          "clear": 1,
+          "other": 52
+        }
+      },
+      {
+        "film": "spoon-whip",
+        "timeSec": 9,
+        "gl": {
+          "draw": 7,
+          "instancedDraw": 1,
+          "uniform": 48,
+          "upload": 3,
+          "clear": 1,
+          "other": 52
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 0,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 67,
+          "upload": 2,
+          "clear": 1,
+          "other": 60
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 3,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 67,
+          "upload": 2,
+          "clear": 1,
+          "other": 60
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 6,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 67,
+          "upload": 2,
+          "clear": 1,
+          "other": 60
+        }
+      },
+      {
+        "film": "tunnel-smash",
+        "timeSec": 9,
+        "gl": {
+          "draw": 10,
+          "instancedDraw": 0,
+          "uniform": 67,
+          "upload": 2,
+          "clear": 1,
+          "other": 60
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 0,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 53,
+          "upload": 2,
+          "clear": 1,
+          "other": 50
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 12,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 53,
+          "upload": 2,
+          "clear": 1,
+          "other": 50
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 24,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 53,
+          "upload": 2,
+          "clear": 1,
+          "other": 50
+        }
+      },
+      {
+        "film": "kitchen-counter-orbit",
+        "timeSec": 36,
+        "gl": {
+          "draw": 8,
+          "instancedDraw": 0,
+          "uniform": 53,
+          "upload": 2,
+          "clear": 1,
+          "other": 50
+        }
+      }
+    ]
+  },
+  "playback": [
+    {
+      "target": "base",
+      "mode": "main",
+      "film": "hose-chase",
+      "fromSec": 0,
+      "drawnFps": 40.58956916099773,
+      "rafFps": 44.44444444444444,
+      "longTasks": 1,
+      "main": {
+        "taskMsPerSec": 898.878911564644,
+        "cpuMsPerSec": 902.6297052154196,
+        "scriptCpuMsPerSec": 27.971995464852608,
+        "tasksOver50ms": 1,
+        "longestTaskMs": 58.033,
+        "kernelShare": 0.00007385826799346932,
+        "kernelShareOfScript": 0.00238333610308334,
+        "uploadShare": 0.0001941919767311285,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9690105529396721
+          },
+          {
+            "name": "frame",
+            "share": 0.019758593999844747
+          },
+          {
+            "name": "draw",
+            "share": 0.018344233289629672
+          },
+          {
+            "name": "drawLit",
+            "share": 0.011009906302999273
+          },
+          {
+            "name": "drawRunner",
+            "share": 0.007813652072792096
+          },
+          {
+            "name": "cel",
+            "share": 0.004782448461876448
+          },
+          {
+            "name": "uniform3fv",
+            "share": 0.004072127874286194
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.0035322591058577395
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.003427500950234349
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0034052681042567234
+          },
+          {
+            "name": "resize",
+            "share": 0.0033949681417134166
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0030104780765297266
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 898.878911564644,
+        "cpuMsPerSec": 902.6297052154196,
+        "scriptCpuMsPerSec": 27.971995464852608,
+        "tasksOver50ms": 1,
+        "longestTaskMs": 58.033,
+        "kernelShare": 0.00007385826799346932,
+        "kernelShareOfScript": 0.00238333610308334,
+        "uploadShare": 0.0001941919767311285,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9690105529396721
+          },
+          {
+            "name": "frame",
+            "share": 0.019758593999844747
+          },
+          {
+            "name": "draw",
+            "share": 0.018344233289629672
+          },
+          {
+            "name": "drawLit",
+            "share": 0.011009906302999273
+          },
+          {
+            "name": "drawRunner",
+            "share": 0.007813652072792096
+          },
+          {
+            "name": "cel",
+            "share": 0.004782448461876448
+          },
+          {
+            "name": "uniform3fv",
+            "share": 0.004072127874286194
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.0035322591058577395
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.003427500950234349
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0034052681042567234
+          },
+          {
+            "name": "resize",
+            "share": 0.0033949681417134166
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0030104780765297266
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 22.237972067039106
+    },
+    {
+      "target": "base",
+      "mode": "main",
+      "film": "kick-lattice",
+      "fromSec": 0,
+      "drawnFps": 53.9629005059022,
+      "rafFps": 60.03372681281619,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 333.8057335581822,
+        "cpuMsPerSec": 342.6891512085441,
+        "scriptCpuMsPerSec": 20.212591343451376,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 22.983,
+        "kernelShare": 0.00042057331819881765,
+        "kernelShareOfScript": 0.007130501526772753,
+        "uploadShare": 0.0006682588527074818,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9410177086955666
+          },
+          {
+            "name": "frame",
+            "share": 0.02869641954977003
+          },
+          {
+            "name": "draw",
+            "share": 0.025319366712376404
+          },
+          {
+            "name": "resize",
+            "share": 0.012774996555366739
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011674026152967962
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.011362040797580228
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.011266247186882837
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008698519135757917
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.00822283168537704
+          },
+          {
+            "name": "beginWork",
+            "share": 0.007827190950784392
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.005180400364803065
+          },
+          {
+            "name": "drawLines",
+            "share": 0.003424293522121107
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 333.8057335581822,
+        "cpuMsPerSec": 342.6891512085441,
+        "scriptCpuMsPerSec": 20.212591343451376,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 22.983,
+        "kernelShare": 0.00042057331819881765,
+        "kernelShareOfScript": 0.007130501526772753,
+        "uploadShare": 0.0006682588527074818,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9410177086955666
+          },
+          {
+            "name": "frame",
+            "share": 0.02869641954977003
+          },
+          {
+            "name": "draw",
+            "share": 0.025319366712376404
+          },
+          {
+            "name": "resize",
+            "share": 0.012774996555366739
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011674026152967962
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.011362040797580228
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.011266247186882837
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008698519135757917
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.00822283168537704
+          },
+          {
+            "name": "beginWork",
+            "share": 0.007827190950784392
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.005180400364803065
+          },
+          {
+            "name": "drawLines",
+            "share": 0.003424293522121107
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 6.350458333333333
+    },
+    {
+      "target": "base",
+      "mode": "main",
+      "film": "mobius-chrome",
+      "fromSec": 33,
+      "drawnFps": 53.525533579170855,
+      "rafFps": 60.00670465973852,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 426.70387752822137,
+        "cpuMsPerSec": 436.3561291764443,
+        "scriptCpuMsPerSec": 20.145044139009944,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 28.842,
+        "kernelShare": 0.0013021930364811236,
+        "kernelShareOfScript": 0.028206436725501726,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9538334796006404
+          },
+          {
+            "name": "frame",
+            "share": 0.022273775010237005
+          },
+          {
+            "name": "draw",
+            "share": 0.01987861051265432
+          },
+          {
+            "name": "resize",
+            "share": 0.00991459303842737
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.008348888372735022
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.007668982274041339
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0073760208514780335
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0056884196498240315
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.005419274147101974
+          },
+          {
+            "name": "beginWork",
+            "share": 0.004948077453468687
+          },
+          {
+            "name": "drawLit",
+            "share": 0.003724758646139222
+          },
+          {
+            "name": "prefetchView",
+            "share": 0.003162139550534693
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 426.70387752822137,
+        "cpuMsPerSec": 436.3561291764443,
+        "scriptCpuMsPerSec": 20.145044139009944,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 28.842,
+        "kernelShare": 0.0013021930364811236,
+        "kernelShareOfScript": 0.028206436725501726,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9538334796006404
+          },
+          {
+            "name": "frame",
+            "share": 0.022273775010237005
+          },
+          {
+            "name": "draw",
+            "share": 0.01987861051265432
+          },
+          {
+            "name": "resize",
+            "share": 0.00991459303842737
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.008348888372735022
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.007668982274041339
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0073760208514780335
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0056884196498240315
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.005419274147101974
+          },
+          {
+            "name": "beginWork",
+            "share": 0.004948077453468687
+          },
+          {
+            "name": "drawLit",
+            "share": 0.003724758646139222
+          },
+          {
+            "name": "prefetchView",
+            "share": 0.003162139550534693
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 8.15229853862213
+    },
+    {
+      "target": "base",
+      "mode": "main",
+      "film": "lattice-hymn",
+      "fromSec": 0,
+      "drawnFps": 53.47772691749469,
+      "rafFps": 60.06475382382494,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 336.9644970414235,
+        "cpuMsPerSec": 346.6029920732388,
+        "scriptCpuMsPerSec": 22.026236463101483,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 23.276,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9364511069816522
+          },
+          {
+            "name": "frame",
+            "share": 0.03161484066956502
+          },
+          {
+            "name": "draw",
+            "share": 0.028624687270798123
+          },
+          {
+            "name": "resize",
+            "share": 0.013042583353384722
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011777010510149224
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.010940811197082451
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.010649945257290733
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008207702117201258
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.007682983827145104
+          },
+          {
+            "name": "beginWork",
+            "share": 0.006884471463087888
+          },
+          {
+            "name": "drawLines",
+            "share": 0.004281495096026024
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004098536232458256
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 336.9644970414235,
+        "cpuMsPerSec": 346.6029920732388,
+        "scriptCpuMsPerSec": 22.026236463101483,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 23.276,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9364511069816522
+          },
+          {
+            "name": "frame",
+            "share": 0.03161484066956502
+          },
+          {
+            "name": "draw",
+            "share": 0.028624687270798123
+          },
+          {
+            "name": "resize",
+            "share": 0.013042583353384722
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011777010510149224
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.010940811197082451
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.010649945257290733
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008207702117201258
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.007682983827145104
+          },
+          {
+            "name": "beginWork",
+            "share": 0.006884471463087888
+          },
+          {
+            "name": "drawLines",
+            "share": 0.004281495096026024
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004098536232458256
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 6.481258872651357
+    },
+    {
+      "target": "branch",
+      "mode": "worker",
+      "film": "hose-chase",
+      "fromSec": 0,
+      "drawnFps": 38.324816707398355,
+      "rafFps": 60.09775605421017,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 52.79615640968637,
+        "cpuMsPerSec": 84.38613641413019,
+        "scriptCpuMsPerSec": 13.845367696067541,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 33.226,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.8359284085703304
+          },
+          {
+            "name": "prefetchView",
+            "share": 0.04174587043404542
+          },
+          {
+            "name": "run",
+            "share": 0.04174587043404542
+          },
+          {
+            "name": "preload",
+            "share": 0.04155367514256678
+          },
+          {
+            "name": "preloadOnce",
+            "share": 0.03729378498349227
+          },
+          {
+            "name": "finalized",
+            "share": 0.036560546782440195
+          },
+          {
+            "name": "appendChild",
+            "share": 0.03562326563495532
+          },
+          {
+            "name": "frame",
+            "share": 0.03194127775642275
+          },
+          {
+            "name": "_",
+            "share": 0.025106497253976862
+          },
+          {
+            "name": "init",
+            "share": 0.023491266961892677
+          },
+          {
+            "name": "draw",
+            "share": 0.01952230255224816
+          },
+          {
+            "name": "backingSize",
+            "share": 0.01935116975846581
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 882.7441679626841,
+        "cpuMsPerSec": 15.025438791379692,
+        "scriptCpuMsPerSec": 14.507220617640524,
+        "tasksOver50ms": 6,
+        "longestTaskMs": 67.267,
+        "kernelShare": 0.0030238283589262083,
+        "kernelShareOfScript": 0.0031318437294209534,
+        "uploadShare": 0.010919790919643055,
+        "top": [
+          {
+            "name": "scope.onmessage",
+            "share": 0.9152514804929801
+          },
+          {
+            "name": "draw",
+            "share": 0.6196112643151288
+          },
+          {
+            "name": "post",
+            "share": 0.22592951300837652
+          },
+          {
+            "name": "postMessage",
+            "share": 0.2175234180350291
+          },
+          {
+            "name": "drawLitInstanced",
+            "share": 0.1641147723996185
+          },
+          {
+            "name": "queueRunner",
+            "share": 0.1251007326684361
+          },
+          {
+            "name": "push",
+            "share": 0.10768229840528172
+          },
+          {
+            "name": "clear",
+            "share": 0.10051826495833918
+          },
+          {
+            "name": "drawRunners",
+            "share": 0.08900701616897952
+          },
+          {
+            "name": "drawLit",
+            "share": 0.062324873021388595
+          },
+          {
+            "name": "uploadInstances",
+            "share": 0.06098669959115475
+          },
+          {
+            "name": "modelTRSX",
+            "share": 0.05818466793337227
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 0.3920550724637681
+    },
+    {
+      "target": "branch",
+      "mode": "main",
+      "film": "hose-chase",
+      "fromSec": 0,
+      "drawnFps": 40.13340744858255,
+      "rafFps": 43.913285158421345,
+      "longTasks": 3,
+      "main": {
+        "taskMsPerSec": 881.8902723735592,
+        "cpuMsPerSec": 887.8329071706503,
+        "scriptCpuMsPerSec": 22.142857142857142,
+        "tasksOver50ms": 1,
+        "longestTaskMs": 52.05,
+        "kernelShare": 0.000042323765031980116,
+        "kernelShareOfScript": 0.0016970001255177608,
+        "uploadShare": 0.00015063754240672212,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.975059657099868
+          },
+          {
+            "name": "frame",
+            "share": 0.01359394254260895
+          },
+          {
+            "name": "draw",
+            "share": 0.01244706868483408
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.0051405843960292295
+          },
+          {
+            "name": "backingSize",
+            "share": 0.003836686865620919
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.0030008551153591816
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0029552756760939723
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0023991814734104703
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.0023558559624605735
+          },
+          {
+            "name": "drawLitInstanced",
+            "share": 0.0021967035797515596
+          },
+          {
+            "name": "queueRunner",
+            "share": 0.0021064212288993177
+          },
+          {
+            "name": "beginWork",
+            "share": 0.0021055447012211406
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 881.8902723735592,
+        "cpuMsPerSec": 887.8329071706503,
+        "scriptCpuMsPerSec": 22.142857142857142,
+        "tasksOver50ms": 1,
+        "longestTaskMs": 52.05,
+        "kernelShare": 0.000042323765031980116,
+        "kernelShareOfScript": 0.0016970001255177608,
+        "uploadShare": 0.00015063754240672212,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.975059657099868
+          },
+          {
+            "name": "frame",
+            "share": 0.01359394254260895
+          },
+          {
+            "name": "draw",
+            "share": 0.01244706868483408
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.0051405843960292295
+          },
+          {
+            "name": "backingSize",
+            "share": 0.003836686865620919
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.0030008551153591816
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.0029552756760939723
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.0023991814734104703
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.0023558559624605735
+          },
+          {
+            "name": "drawLitInstanced",
+            "share": 0.0021967035797515596
+          },
+          {
+            "name": "queueRunner",
+            "share": 0.0021064212288993177
+          },
+          {
+            "name": "beginWork",
+            "share": 0.0021055447012211406
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 22.122041551246536
+    },
+    {
+      "target": "branch",
+      "mode": "worker",
+      "film": "kick-lattice",
+      "fromSec": 0,
+      "drawnFps": 52.822713766919776,
+      "rafFps": 59.975789589523494,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 50.90976119731451,
+        "cpuMsPerSec": 83.72840321338175,
+        "scriptCpuMsPerSec": 17.873995818201823,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 28.064,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.7865241049366489
+          },
+          {
+            "name": "frame",
+            "share": 0.07396955996004416
+          },
+          {
+            "name": "draw",
+            "share": 0.061938121024131224
+          },
+          {
+            "name": "backingSize",
+            "share": 0.0452355291519899
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.03152305346722044
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.031042006203669627
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.030767309815467114
+          },
+          {
+            "name": "worker.onmessage",
+            "share": 0.020995215814100205
+          },
+          {
+            "name": "_",
+            "share": 0.020857210451606118
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.019111771200252353
+          },
+          {
+            "name": "init",
+            "share": 0.018487461227064822
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.017796120077808737
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 364.7679102013895,
+        "cpuMsPerSec": 11.455705953560031,
+        "scriptCpuMsPerSec": 11.360625068779575,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 23.978,
+        "kernelShare": 0.016071394263098233,
+        "kernelShareOfScript": 0.016205901156595696,
+        "uploadShare": 0.028357893523410633,
+        "top": [
+          {
+            "name": "scope.onmessage",
+            "share": 0.9604026974581644
+          },
+          {
+            "name": "draw",
+            "share": 0.6739706814732271
+          },
+          {
+            "name": "clear",
+            "share": 0.1991104536110204
+          },
+          {
+            "name": "post",
+            "share": 0.16918672789102576
+          },
+          {
+            "name": "postMessage",
+            "share": 0.15175123441372554
+          },
+          {
+            "name": "drawLinesInstanced",
+            "share": 0.07912736075621049
+          },
+          {
+            "name": "drawPoints",
+            "share": 0.057964610271090705
+          },
+          {
+            "name": "uniform3",
+            "share": 0.057445868316394165
+          },
+          {
+            "name": "bufferData",
+            "share": 0.05191262079963112
+          },
+          {
+            "name": "uniform3fv",
+            "share": 0.05071182923783358
+          },
+          {
+            "name": "drawLit",
+            "share": 0.04886741339891256
+          },
+          {
+            "name": "drawLines",
+            "share": 0.04450613844646391
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 0.21687083333333332
+    },
+    {
+      "target": "branch",
+      "mode": "main",
+      "film": "kick-lattice",
+      "fromSec": 0,
+      "drawnFps": 53.81769256643121,
+      "rafFps": 60.09642336584819,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 389.98217288934273,
+        "cpuMsPerSec": 408.38401166050005,
+        "scriptCpuMsPerSec": 24.156295548828343,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 22.393,
+        "kernelShare": 0.0006748340438125982,
+        "kernelShareOfScript": 0.011408679508006498,
+        "uploadShare": 0.0007566487488801956,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9408490664200878
+          },
+          {
+            "name": "frame",
+            "share": 0.033670869325168704
+          },
+          {
+            "name": "draw",
+            "share": 0.029260013447262596
+          },
+          {
+            "name": "backingSize",
+            "share": 0.012052843514001982
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.00857077672080622
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.008410716408543102
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.00827426705143372
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.007407799906489636
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.0068238405854199055
+          },
+          {
+            "name": "beginWork",
+            "share": 0.006147359265666349
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004200004557463437
+          },
+          {
+            "name": "window.requestAnimationFrame",
+            "share": 0.004103364368927214
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 389.98217288934273,
+        "cpuMsPerSec": 408.38401166050005,
+        "scriptCpuMsPerSec": 24.156295548828343,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 22.393,
+        "kernelShare": 0.0006748340438125982,
+        "kernelShareOfScript": 0.011408679508006498,
+        "uploadShare": 0.0007566487488801956,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9408490664200878
+          },
+          {
+            "name": "frame",
+            "share": 0.033670869325168704
+          },
+          {
+            "name": "draw",
+            "share": 0.029260013447262596
+          },
+          {
+            "name": "backingSize",
+            "share": 0.012052843514001982
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.00857077672080622
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.008410716408543102
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.00827426705143372
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.007407799906489636
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.0068238405854199055
+          },
+          {
+            "name": "beginWork",
+            "share": 0.006147359265666349
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004200004557463437
+          },
+          {
+            "name": "window.requestAnimationFrame",
+            "share": 0.004103364368927214
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 7.5882854166666664
+    },
+    {
+      "target": "branch",
+      "mode": "worker",
+      "film": "mobius-chrome",
+      "fromSec": 33,
+      "drawnFps": 52.556662651921606,
+      "rafFps": 60.111682908135336,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 53.105003832256294,
+        "cpuMsPerSec": 93.53016533450126,
+        "scriptCpuMsPerSec": 17.50552939888317,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 26.166,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.8128354703931464
+          },
+          {
+            "name": "frame",
+            "share": 0.059772117193527124
+          },
+          {
+            "name": "draw",
+            "share": 0.0514861082332117
+          },
+          {
+            "name": "backingSize",
+            "share": 0.04274939095844001
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.02905722356654269
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.029010396728677106
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.028792651932602133
+          },
+          {
+            "name": "worker.onmessage",
+            "share": 0.025496042546864883
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.024284398117092848
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.023030609533241788
+          },
+          {
+            "name": "beginWork",
+            "share": 0.022096414117823347
+          },
+          {
+            "name": "_",
+            "share": 0.019352361418900014
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 493.69768969670804,
+        "cpuMsPerSec": 9.549655096901347,
+        "scriptCpuMsPerSec": 9.419358370743458,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 21.083,
+        "kernelShare": 0.046665214350413334,
+        "kernelShareOfScript": 0.047310728027247256,
+        "uploadShare": 0.0016854512308380246,
+        "top": [
+          {
+            "name": "scope.onmessage",
+            "share": 0.949596982239701
+          },
+          {
+            "name": "draw",
+            "share": 0.6747881720306821
+          },
+          {
+            "name": "clear",
+            "share": 0.3079330864395703
+          },
+          {
+            "name": "post",
+            "share": 0.1717325750713737
+          },
+          {
+            "name": "postMessage",
+            "share": 0.14976438079732163
+          },
+          {
+            "name": "drawLitInstanced",
+            "share": 0.13858536753155923
+          },
+          {
+            "name": "use",
+            "share": 0.06803719458362475
+          },
+          {
+            "name": "rebuild",
+            "share": 0.054954882649024844
+          },
+          {
+            "name": "ribbon",
+            "share": 0.053269431418186824
+          },
+          {
+            "name": "syncFrame",
+            "share": 0.050288361213983515
+          },
+          {
+            "name": "ribbonPoint",
+            "share": 0.03820356123232856
+          },
+          {
+            "name": "(garbage collector)",
+            "share": 0.03675888874875311
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 0.18170208333333332
+    },
+    {
+      "target": "branch",
+      "mode": "main",
+      "film": "mobius-chrome",
+      "fromSec": 33,
+      "drawnFps": 53.71300949190396,
+      "rafFps": 60.07816862088219,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 403.80156337242295,
+        "cpuMsPerSec": 410.3900614182021,
+        "scriptCpuMsPerSec": 18.417755443886097,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 21.122,
+        "kernelShare": 0.0012655634233395365,
+        "kernelShareOfScript": 0.028199671377727657,
+        "uploadShare": 0.00004653006781145146,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9551213414373655
+          },
+          {
+            "name": "frame",
+            "share": 0.021389409593302718
+          },
+          {
+            "name": "draw",
+            "share": 0.018399512604342316
+          },
+          {
+            "name": "backingSize",
+            "share": 0.0093568973206572
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.007451069280005703
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.007194201537233714
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.007066039771507436
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.00531803301349127
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.005071233180128777
+          },
+          {
+            "name": "beginWork",
+            "share": 0.004330833680041295
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.003012753864376553
+          },
+          {
+            "name": "window.requestAnimationFrame",
+            "share": 0.00276377718573633
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 403.80156337242295,
+        "cpuMsPerSec": 410.3900614182021,
+        "scriptCpuMsPerSec": 18.417755443886097,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 21.122,
+        "kernelShare": 0.0012655634233395365,
+        "kernelShareOfScript": 0.028199671377727657,
+        "uploadShare": 0.00004653006781145146,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9551213414373655
+          },
+          {
+            "name": "frame",
+            "share": 0.021389409593302718
+          },
+          {
+            "name": "draw",
+            "share": 0.018399512604342316
+          },
+          {
+            "name": "backingSize",
+            "share": 0.0093568973206572
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.007451069280005703
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.007194201537233714
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.007066039771507436
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.00531803301349127
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.005071233180128777
+          },
+          {
+            "name": "beginWork",
+            "share": 0.004330833680041295
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.003012753864376553
+          },
+          {
+            "name": "window.requestAnimationFrame",
+            "share": 0.00276377718573633
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 7.640422037422037
+    },
+    {
+      "target": "branch",
+      "mode": "worker",
+      "film": "lattice-hymn",
+      "fromSec": 0,
+      "drawnFps": 51.98180636777128,
+      "rafFps": 59.99566818280269,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 50.38878059345866,
+        "cpuMsPerSec": 86.61815031405675,
+        "scriptCpuMsPerSec": 19.023608403725362,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 37.714,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.780373878514488
+          },
+          {
+            "name": "frame",
+            "share": 0.05717950769661629
+          },
+          {
+            "name": "worker.onmessage",
+            "share": 0.05267481171045919
+          },
+          {
+            "name": "draw",
+            "share": 0.04838266035867532
+          },
+          {
+            "name": "backingSize",
+            "share": 0.04115239200232049
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.03775917942767981
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.03767916262415107
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.03729658228227928
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.027392002320487302
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.026951909901079228
+          },
+          {
+            "name": "beginWork",
+            "share": 0.02544909430980506
+          },
+          {
+            "name": "_",
+            "share": 0.023754988547594995
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 353.90307559021187,
+        "cpuMsPerSec": 12.131578947368421,
+        "scriptCpuMsPerSec": 11.947909898202296,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 27.618,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "scope.onmessage",
+            "share": 0.9428420949269346
+          },
+          {
+            "name": "draw",
+            "share": 0.6208278657061497
+          },
+          {
+            "name": "clear",
+            "share": 0.17957026682020658
+          },
+          {
+            "name": "drawBatched",
+            "share": 0.1705721146550262
+          },
+          {
+            "name": "post",
+            "share": 0.16491256259875203
+          },
+          {
+            "name": "postMessage",
+            "share": 0.1523615686064469
+          },
+          {
+            "name": "drawLinesInstanced",
+            "share": 0.12210885264633156
+          },
+          {
+            "name": "use",
+            "share": 0.09531078439249083
+          },
+          {
+            "name": "syncFrame",
+            "share": 0.07285111093257635
+          },
+          {
+            "name": "drawLines",
+            "share": 0.0631655999214447
+          },
+          {
+            "name": "drawPoints",
+            "share": 0.04354462922792641
+          },
+          {
+            "name": "(garbage collector)",
+            "share": 0.042018156985619025
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 0.23338124999999998
+    },
+    {
+      "target": "branch",
+      "mode": "main",
+      "film": "lattice-hymn",
+      "fromSec": 0,
+      "drawnFps": 54.310930074677536,
+      "rafFps": 59.96831862412311,
+      "longTasks": 0,
+      "main": {
+        "taskMsPerSec": 329.362412310481,
+        "cpuMsPerSec": 335.34430866711926,
+        "scriptCpuMsPerSec": 22.504073319755598,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 23.516,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9328926338150729
+          },
+          {
+            "name": "frame",
+            "share": 0.033698262316311
+          },
+          {
+            "name": "draw",
+            "share": 0.030028278144108876
+          },
+          {
+            "name": "backingSize",
+            "share": 0.012676746835874407
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011142891172839486
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.010925600577372154
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.010817292687395424
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008732450157282625
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.008480069155093861
+          },
+          {
+            "name": "beginWork",
+            "share": 0.007979356043799575
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004794226818315708
+          },
+          {
+            "name": "drawBatched",
+            "share": 0.004581659931445492
+          }
+        ]
+      },
+      "render": {
+        "taskMsPerSec": 329.362412310481,
+        "cpuMsPerSec": 335.34430866711926,
+        "scriptCpuMsPerSec": 22.504073319755598,
+        "tasksOver50ms": 0,
+        "longestTaskMs": 23.516,
+        "kernelShare": 0,
+        "kernelShareOfScript": 0,
+        "uploadShare": 0,
+        "top": [
+          {
+            "name": "(program)",
+            "share": 0.9328926338150729
+          },
+          {
+            "name": "frame",
+            "share": 0.033698262316311
+          },
+          {
+            "name": "draw",
+            "share": 0.030028278144108876
+          },
+          {
+            "name": "backingSize",
+            "share": 0.012676746835874407
+          },
+          {
+            "name": "performWorkUntilDeadline",
+            "share": 0.011142891172839486
+          },
+          {
+            "name": "performWorkOnRootViaSchedulerTask",
+            "share": 0.010925600577372154
+          },
+          {
+            "name": "performWorkOnRoot",
+            "share": 0.010817292687395424
+          },
+          {
+            "name": "renderRootSync",
+            "share": 0.008732450157282625
+          },
+          {
+            "name": "workLoopSync",
+            "share": 0.008480069155093861
+          },
+          {
+            "name": "beginWork",
+            "share": 0.007979356043799575
+          },
+          {
+            "name": "renderWithHooks",
+            "share": 0.004794226818315708
+          },
+          {
+            "name": "drawBatched",
+            "share": 0.004581659931445492
+          }
+        ]
+      },
+      "renderCpuMsPerFrame": 6.1745270833333326
+    }
+  ]
+}

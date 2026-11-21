@@ -1,5 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine } from '../../lib/webgl/engine';
-import { createRibbon } from '../../lib/webgl/mesh';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import { createMat4, DEG, lookAt, perspective, smoothstep, type Vec3 } from '../../lib/webgl/math';
 
 import type { SequenceDrawContext, SequenceScene } from '../types';
@@ -7,6 +7,7 @@ import type { SequenceDrawContext, SequenceScene } from '../types';
 export function createMobiusChrome(): SequenceScene {
   let ribbon: GpuMesh | null = null;
   let lastMix = -1;
+  const ribbons = new InstanceBatch(2);
   const proj = createMat4();
   const view = createMat4();
   const chrome: Vec3 = [0.72, 0.76, 0.8];
@@ -17,9 +18,16 @@ export function createMobiusChrome(): SequenceScene {
     return toKnot * back;
   }
 
+  /** Same topology at every mix, so after the first build only positions and normals move. */
   function rebuild(engine: SequenceEngine, mix: number) {
-    ribbon?.dispose();
-    ribbon = new GpuMesh(engine.gl, createRibbon(mix, 96, 12));
+    const mesh = engine.kernel.ribbon(mix, 96, 12);
+    if (ribbon && mesh.normals) {
+      ribbon.updatePositions(mesh.positions);
+      ribbon.updateNormals(mesh.normals);
+    } else {
+      ribbon?.dispose();
+      ribbon = new GpuMesh(engine.gl, mesh);
+    }
     lastMix = mix;
   }
 
@@ -53,19 +61,18 @@ export function createMobiusChrome(): SequenceScene {
       engine.pointRange = 4;
       engine.clear(0.015, 0.02, 0.03);
 
+      ribbons.clear();
       const spin = modelTRSX(0, 0, 0, timeSec * 0.15, timeSec * 0.31, timeSec * 0.07);
-      engine.drawLit(ribbon, spin, { color: chrome, shininess: 90, emissive: [0.04, 0.03, 0.02] });
+      ribbons.push(spin, chrome, [0.04, 0.03, 0.02], 90);
 
+      // The split: a second, cooler copy peels off the first.
       const split =
         smoothstep(55 / 75, 60 / 75, progress) * (1 - smoothstep(65 / 75, 72 / 75, progress));
       if (split > 0.02) {
         const offset = modelTRSX(0, 0.12 * split, 0, 0, split * 0.45, 0);
-        engine.drawLit(ribbon, offset, {
-          color: [0.55, 0.7, 0.82],
-          shininess: 80,
-          emissive: [0.02, 0.04, 0.06],
-        });
+        ribbons.push(offset, [0.55, 0.7, 0.82], [0.02, 0.04, 0.06], 80);
       }
+      engine.drawLitInstanced(ribbon, ribbons);
     },
     dispose() {
       ribbon?.dispose();

@@ -24,7 +24,8 @@
     "test:coverage": "vitest run --coverage",
     "test:py": "python3 -m unittest discover -s scripts/tests",
     "test:e2e": "playwright test",
-    "test:e2e:update": "playwright test --update-snapshots"
+    "test:e2e:update": "playwright test --update-snapshots",
+    "perf:trace": "tsx scripts/trace-sequences.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.5",

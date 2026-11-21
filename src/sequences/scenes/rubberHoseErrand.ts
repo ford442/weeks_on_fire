@@ -1,4 +1,5 @@
 import { GpuMesh, modelTRSX, type SequenceEngine, disposeMeshes } from '../../lib/webgl/engine';
+import { InstanceBatch } from '../../lib/webgl/instances';
 import { createBox, createCylinder, createPlane, createSphere } from '../../lib/webgl/mesh';
 import { createMat4, DEG, lookAt, perspective, smoothstep, type Vec3 } from '../../lib/webgl/math';
 
@@ -19,6 +20,9 @@ export function createRubberHoseErrand(): SequenceScene {
   let puppet: Puppet | null = null;
   const proj = createMat4();
   const view = createMat4();
+  const curtains = new InstanceBatch(2);
+  const eyes = new InstanceBatch(2);
+  const limbs = new InstanceBatch(4);
 
   const cream: Vec3 = [0.93, 0.86, 0.72];
   const orange: Vec3 = [1, 0.48, 0.12];
@@ -96,8 +100,10 @@ export function createRubberHoseErrand(): SequenceScene {
         color: [0.9, 0.82, 0.68],
         shininess: 4,
       });
-      engine.drawLit(puppet.curtain, modelTRSX(-2.05, 1.5, -1.35), { color: orange, shininess: 6 });
-      engine.drawLit(puppet.curtain, modelTRSX(2.05, 1.5, -1.35), { color: orange, shininess: 6 });
+      curtains.clear();
+      curtains.push(modelTRSX(-2.05, 1.5, -1.35), orange, undefined, 6);
+      curtains.push(modelTRSX(2.05, 1.5, -1.35), orange, undefined, 6);
+      engine.drawLitInstanced(puppet.curtain, curtains);
 
       const bodyY = dropY;
       const body = modelTRSX(x, bodyY, 0, 0, 0.15, 0, 1, squash, 1);
@@ -105,21 +111,19 @@ export function createRubberHoseErrand(): SequenceScene {
 
       const head = modelTRSX(x, bodyY + 0.42 / squash, 0.04);
       cel(puppet.head, engine, head, cream);
-      engine.drawLit(puppet.eye, modelTRSX(x - 0.07, bodyY + 0.46, 0.2), {
-        color: ink,
-        emissive: ink,
-        cel: true,
-      });
-      engine.drawLit(puppet.eye, modelTRSX(x + 0.07, bodyY + 0.46, 0.2), {
-        color: ink,
-        emissive: ink,
-        cel: true,
-      });
+      eyes.clear();
+      eyes.push(modelTRSX(x - 0.07, bodyY + 0.46, 0.2), ink, ink);
+      eyes.push(modelTRSX(x + 0.07, bodyY + 0.46, 0.2), ink, ink);
+      engine.drawLitInstanced(puppet.eye, eyes, { cel: true });
 
-      cel(puppet.limb, engine, modelTRSX(x - 0.16, bodyY - 0.28, 0, 0, 0, 0.2 + leg), ink);
-      cel(puppet.limb, engine, modelTRSX(x + 0.16, bodyY - 0.28, 0, 0, 0, -0.2 - leg), ink);
-      cel(puppet.limb, engine, modelTRSX(x - 0.22, bodyY + 0.08, 0, 0, 0, 0.9 + arm), ink);
-      cel(puppet.limb, engine, modelTRSX(x + 0.22, bodyY + 0.08, 0, 0, 0, -0.9 - arm), ink);
+      // Hose limbs: ink, a fifth of it as glow, like every other cel part.
+      const glow: Vec3 = [ink[0] * 0.22, ink[1] * 0.22, ink[2] * 0.22];
+      limbs.clear();
+      limbs.push(modelTRSX(x - 0.16, bodyY - 0.28, 0, 0, 0, 0.2 + leg), ink, glow, 6);
+      limbs.push(modelTRSX(x + 0.16, bodyY - 0.28, 0, 0, 0, -0.2 - leg), ink, glow, 6);
+      limbs.push(modelTRSX(x - 0.22, bodyY + 0.08, 0, 0, 0, 0.9 + arm), ink, glow, 6);
+      limbs.push(modelTRSX(x + 0.22, bodyY + 0.08, 0, 0, 0, -0.9 - arm), ink, glow, 6);
+      engine.drawLitInstanced(puppet.limb, limbs, { cel: true });
 
       const cubeStillX = 0.85;
       const cubeXNow = cubeStillX + (x - cubeStillX) * hatT;

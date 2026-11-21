@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { describe, expect, it } from 'vitest';
@@ -87,23 +87,39 @@ describe('rgb codec', () => {
   });
 });
 
-describe('committed lattice-hymn fixture', () => {
-  const fixture = JSON.parse(
-    readFileSync(join(import.meta.dirname, 'fixtures', 'lattice-hymn.frames.json'), 'utf8'),
-  ) as FrameFixture;
+const fixturesDir = join(import.meta.dirname, 'fixtures');
+const fixtureFiles = readdirSync(fixturesDir).filter((name) => name.endsWith('.frames.json'));
 
-  it('matches the grid the harness samples', () => {
-    expect(fixture).toMatchObject({ sequence: 'lattice-hymn', cols: GRID.cols, rows: GRID.rows });
-    expect(fixture.frames.map((f) => f.label)).toEqual(['0s', '50%']);
-    for (const f of fixture.frames) expect(decodeRgb(f.rgb)).toHaveLength(CELLS);
+describe('committed frame fixtures', () => {
+  it('cover the films the harness plays', () => {
+    expect(fixtureFiles.sort()).toEqual([
+      'hose-chase.frames.json',
+      'kick-lattice.frames.json',
+      'lattice-hymn.frames.json',
+      'mobius-chrome.frames.json',
+    ]);
   });
 
-  it('holds real pictures, not a cleared canvas', () => {
-    for (const f of fixture.frames) expect(isFlat(decodeRgb(f.rgb))).toBe(false);
-  });
+  describe.each(fixtureFiles)('%s', (file) => {
+    const fixture = JSON.parse(readFileSync(join(fixturesDir, file), 'utf8')) as FrameFixture;
 
-  it('holds two frames the comparison can tell apart', () => {
-    const [first, middle] = fixture.frames.map((f) => decodeRgb(f.rgb));
-    expect(compareFrames(first!, middle!).ok).toBe(false);
+    it('matches the grid the harness samples', () => {
+      expect(fixture).toMatchObject({
+        sequence: file.replace('.frames.json', ''),
+        cols: GRID.cols,
+        rows: GRID.rows,
+      });
+      expect(fixture.frames.map((f) => f.label)).toEqual(['0s', '50%']);
+      for (const f of fixture.frames) expect(decodeRgb(f.rgb)).toHaveLength(CELLS);
+    });
+
+    it('holds real pictures, not a cleared canvas', () => {
+      for (const f of fixture.frames) expect(isFlat(decodeRgb(f.rgb))).toBe(false);
+    });
+
+    it('holds two frames the comparison can tell apart', () => {
+      const [first, middle] = fixture.frames.map((f) => decodeRgb(f.rgb));
+      expect(compareFrames(first!, middle!).ok).toBe(false);
+    });
   });
 });

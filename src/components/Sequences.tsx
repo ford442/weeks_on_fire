@@ -14,7 +14,7 @@ import { useCopyToClipboard } from '../hooks/useCopyToClipboard';
 import { useUrlFlag, useUrlParam } from '../hooks/useUrlState';
 
 import RelatedLinks from './RelatedLinks';
-import SequencePlayer from './SequencePlayer';
+import SequencePlayer, { type RendererPreference } from './SequencePlayer';
 
 const allValue = 'All';
 
@@ -30,6 +30,13 @@ export default function Sequences() {
     ...mediumOrder,
   ]);
   const [capture] = useUrlFlag('capture');
+  // `?stats` or `?stats=1` overlays frame stats; `?renderer=main` skips the render worker.
+  const stats = new URLSearchParams(search).has('stats');
+  const [renderer] = useUrlParam<RendererPreference>('renderer', 'auto', [
+    'auto',
+    'worker',
+    'main',
+  ]);
   const { copiedKey, copy: copyToClipboard } = useCopyToClipboard();
   const [selectedId, setSelectedId] = useState(
     id && sequences.some((sequence) => sequence.id === id) ? id : (sequences[0]?.id ?? ''),
@@ -186,6 +193,8 @@ export default function Sequences() {
           <SequenceDetail
             sequence={selected}
             capture={capture}
+            renderer={renderer}
+            stats={stats}
             copiedKey={copiedKey}
             onCopy={copyToClipboard}
           />
@@ -220,11 +229,20 @@ function EmptyWorkspace() {
 interface SequenceDetailProps {
   sequence: SequenceRecord;
   capture: boolean;
+  renderer: RendererPreference;
+  stats: boolean;
   copiedKey: string | null;
   onCopy: (text: string, label: string, key: string) => void;
 }
 
-function SequenceDetail({ sequence, capture, copiedKey, onCopy }: SequenceDetailProps) {
+function SequenceDetail({
+  sequence,
+  capture,
+  renderer,
+  stats,
+  copiedKey,
+  onCopy,
+}: SequenceDetailProps) {
   const meta = sequenceMediumMeta[sequence.medium];
 
   return (
@@ -246,7 +264,7 @@ function SequenceDetail({ sequence, capture, copiedKey, onCopy }: SequenceDetail
         </p>
       </div>
 
-      <SequencePlayer sequence={sequence} capture={capture} />
+      <SequencePlayer sequence={sequence} capture={capture} renderer={renderer} stats={stats} />
 
       <section>
         <h3 className="text-sm font-semibold text-zinc-400">Premise</h3>

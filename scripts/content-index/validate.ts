@@ -320,7 +320,7 @@ function graphTimes(graph: NonNullable<SequenceRecord['graph']>): number[] {
 }
 
 /**
- * `customRendererIds` are the ids registered in `src/sequences/registry.ts`; when omitted, the
+ * `customRendererIds` are the ids registered in `src/sequences/scenes/index.ts`; when omitted, the
  * factory check is skipped (unit tests without a checkout).
  */
 export function validateSequences(
@@ -361,7 +361,7 @@ export function validateSequences(
       );
     } else if (customRendererIds && !customRendererIds.has(sequence.id)) {
       errors.push(
-        `Sequence ${sequence.id} is renderer "custom" but has no factory in src/sequences/registry.ts`,
+        `Sequence ${sequence.id} is renderer "custom" but has no factory in src/sequences/scenes/index.ts`,
       );
     }
   }

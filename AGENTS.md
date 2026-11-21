@@ -28,7 +28,9 @@ Root `index.html` is the **Vite entry** (`/src/main.tsx`). It is not a standalon
 | Python helpers  | stdlib-only scripts            | Imagine API, slideshow assemble, episode scaffold.                                                                                                   |
 | Deploy          | GitHub Actions → Pages         | `.github/workflows/deploy-pages.yml` (`npm ci && npm run build`). Pull requests run the same checks plus the e2e frame harness; only `main` deploys. |
 
-TypeScript is the hub language. Do not add a new runtime library, in-repo C++, or `compile_commands.json` unless explicitly asked.
+TypeScript is the hub language. Do not add a new runtime library unless explicitly asked.
+
+**Native code is gated and optional.** In-repo C++ may only live in `native/`, and only after a profile shows it pays: issue #94 set the gate for a C++/WASM geometry kernel (ship it only if `scripts/trace-sequences.ts` shows the TypeScript kernel taking at least 25% of a frame's CPU). It measured 0.3–4.7% ([`docs/perf/engine-v2-profile.md`](docs/perf/engine-v2-profile.md)), so there is no `native/` today and the `GeometryKernel` interface has one, TypeScript, implementation. If `native/` is ever added, the hub must still build without it (`npm run build` never needs emsdk) and its `compile_commands.json` stays in a gitignored `native/<lib>/build/`, never at the root.
 
 ---
 
@@ -127,19 +129,21 @@ npm run format:write
 npm run test             # Vitest: libs in node, src/components/** in jsdom
 npm run test:coverage    # same, with v8 coverage (no threshold yet)
 npm run test:py          # Python helper tests (stdlib unittest, local fake xAI server; no key, no network)
-npm run test:e2e         # real-GL frame harness: Playwright + Chromium vs e2e/fixtures/ (needs a Pages-base build)
+npm run test:e2e         # real-GL frame harness: worker + in-thread players vs e2e/fixtures/ (needs a Pages-base build)
 npm run test:e2e:update  # regenerate e2e/fixtures/*.frames.json after an intentional visual change
 npm run build            # codegen + agent-docs + tsc -b + vite + encoding check + dist/1ink.1ink
 npm run build:check      # build + raw chunk budgets (scripts/check-bundle-size.ts)
 npm run budgets          # Lighthouse CI on a Pages-base build (lighthouserc.json); CI blocks deploy on failure
 npm run preview
+npm run perf:trace -- --target branch=<preview url>   # sequence engine profile (docs/perf/); needs an unminified build
+npx tsx scripts/emit-kernel-fixtures.ts               # rewrite src/lib/webgl/kernel.fixtures.json after a kernel change
 ```
 
 Use Node 22 (`.nvmrc`), the version CI and Pages build with.
 
 Lint runs `recommendedTypeChecked` with `--max-warnings 0`. `import-x/no-cycle` keeps `data/`, `sequences/` and `lib/webgl` acyclic and `import-x/order` sorts imports. Do not add `eslint-disable` in `src/lib/webgl` or `src/sequences`. `npm install` needs the `overrides` entry in `package.json` because `eslint-plugin-jsx-a11y` has not declared ESLint 10 support yet.
 
-`tsc -b` typechecks **four** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the TS bundle checks), `tsconfig.e2e.json` (`e2e/` and `playwright.config.ts`). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
+`tsc -b` typechecks **four** projects: `tsconfig.app.json` (src), `tsconfig.node.json` (vite.config.ts), `tsconfig.scripts.json` (`scripts/content-index` and the top-level `scripts/*.ts`: bundle checks, the sequence profiler, the kernel fixture emitter), `tsconfig.e2e.json` (`e2e/` and `playwright.config.ts`). App compiler flags include `strict`, `noUncheckedIndexedAccess`, `verbatimModuleSyntax`, and `noImplicitOverride`.
 
 ### Python helpers (real files)
 
@@ -253,7 +257,7 @@ Song frontmatter requires `added: YYYY-MM-DD`. `songs/_drawer/` holds unpromoted
 
 Short cartoon ideas (one still + optional 6–8s loop, no song) go in `content/cartoons/<id>.json`. See `content/README.md`. Do not dump them into `notes/one-panel-gags.md` or invent a cutaway until they are ready to promote. Promotion is a two-sided id link (cartoon `promotedToCutawayId` + cutaway `promotedFromCartoonId`); codegen checks both.
 
-3D video sequences (10s–2min, in-hub WebGL players) go in `content/sequences/<id>.json` plus a renderer in `src/sequences/`.
+3D video sequences (10s–2min, in-hub WebGL players) go in `content/sequences/<id>.json` plus a renderer in `src/sequences/`: a graph (`<id>.graph.json`), or a hand-written scene registered in `src/sequences/scenes/index.ts`. The player draws in an `OffscreenCanvas` render worker and falls back in-thread; draw repeated meshes (ghosts, lattices, porch frames) as one `InstanceBatch` with `engine.drawLitInstanced`. Engine notes, URL flags (`?renderer=main`, `?stats`) and tests: [`docs/sequence-engine.md`](docs/sequence-engine.md).
 
 ---
 

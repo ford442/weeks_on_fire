@@ -12,6 +12,8 @@ night. The world is loud and the two leads are not. Nobody flinches above the wa
 troop is background texture, not new cast: no faces get featured and nobody gets a name.
 
 **Long-form generate-first prompts:** `prompts/fire-girls-generate-first.md` (2026-11-19 — #6, #1, #15)
+**Long-form next three:** `prompts/fire-girls-next-three.md`
+**Long-form batch three:** `prompts/fire-girls-batch-three.md` (2026-11-21 — #5, #7, #10)
 
 **Lane locks for every card.** Rubella and Lillith only as featured cast. Canon black lace
 shows at collar and cuffs under the coverall (see *Open questions*). Performance is flat:
@@ -249,6 +251,7 @@ ideas farm to [#22](https://github.com/ford442/weeks_on_fire/issues/22). Songs f
    satisfying sound, and the very-end adjust gives Rubella one deadpan beat.
 
 Long-form prompts for these three: `prompts/fire-girls-generate-first.md`
+Long-form batch three (#5, #7, #10): `prompts/fire-girls-batch-three.md`
 
 ## Open questions (left open)
 - **Black lace vs. red coveralls.** The reference stills show coveralls only. This file

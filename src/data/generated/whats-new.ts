@@ -19,6 +19,13 @@ export interface WhatsNewEntry {
 /** Newest first. */
 export const whatsNew: WhatsNewEntry[] = [
   {
+    kind: "sequence",
+    id: "elephant-trampoline",
+    title: "Everyone Else Bounces",
+    blurb: "An elephant bounces on a backyard trampoline.",
+    added: "2026-11-21",
+  },
+  {
     kind: "song",
     id: "box-box-hat",
     title: "Box, Box, Hat",
@@ -81,13 +88,6 @@ export const whatsNew: WhatsNewEntry[] = [
     id: "hose-chase",
     title: "Hose Chase",
     blurb: "The errand-runner is already wearing the cube.",
-    added: "2026-10-05",
-  },
-  {
-    kind: "sequence",
-    id: "kick-lattice",
-    title: "Kick Lattice",
-    blurb: "The lattices from the hymn, already assembled, hop on a 150 BPM kick.",
     added: "2026-10-05",
   },
 ];

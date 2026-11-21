@@ -1,0 +1,116 @@
+{
+  "vars": {
+    "camZ": "5.6 - p * 20",
+    "enterVoid": "smoothstep(0.78, 0.92, p)",
+    "doorOpen": "smoothstep(0.64, 0.78, p)",
+    "spin": "t * 0.4"
+  },
+  "camera": {
+    "type": "perspective",
+    "eye": ["0.08 * sin(p * 4)", 1.25, "camZ"],
+    "target": [0, 1.05, "camZ - 4.5"],
+    "fov": 52,
+    "near": 0.08,
+    "far": 50
+  },
+  "environment": {
+    "background": [0.035, 0.028, 0.022],
+    "lightDir": [0.2, 0.85, 0.55],
+    "lightColor": [1, 0.82, 0.55],
+    "ambient": [0.1, 0.08, 0.07],
+    "fogDensity": "0.07 + enterVoid * 0.04",
+    "fogColor": [0.04, 0.032, 0.025],
+    "pointLight": {"position": [0, 2.15, "camZ - 1.2"], "color": [1, 0.75, 0.4], "range": 6.5}
+  },
+  "nodes": [
+    {
+      "id": "floor",
+      "geometry": {"type": "plane", "width": 3.2, "depth": 23.2, "nx": 6, "nz": 18},
+      "material": {"kind": "lit", "color": [0.28, 0.22, 0.16], "vertexColor": true, "shininess": 8},
+      "translation": [0, 0, -8]
+    },
+    {
+      "id": "post-left",
+      "geometry": {"type": "box", "size": [0.12, 2.4, 0.12]},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "material": {"kind": "lit", "color": [0.5, 0.32, 0.16], "shininess": 14},
+      "translation": [-0.82, 1.2, 0]
+    },
+    {
+      "id": "post-right",
+      "geometry": {"type": "box", "size": [0.12, 2.4, 0.12]},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "material": {"kind": "lit", "color": [0.5, 0.32, 0.16], "shininess": 14},
+      "translation": [0.82, 1.2, 0]
+    },
+    {
+      "id": "lintel",
+      "geometry": {"type": "box", "size": [1.7, 0.12, 0.12]},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "material": {"kind": "lit", "color": [0.5, 0.32, 0.16], "shininess": 14},
+      "translation": [0, 2.38, 0]
+    },
+    {
+      "id": "sill",
+      "geometry": {"type": "box", "size": [1.7, 0.12, 0.12]},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "material": {"kind": "lit", "color": [0.5, 0.32, 0.16], "shininess": 10},
+      "translation": [0, 0.08, 0]
+    },
+    {
+      "id": "door",
+      "geometry": {"type": "box", "size": [1.35, 2.15, 0.04]},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "vars": {"swing": "i == 7 ? -doorOpen * 1.35 : 0"},
+      "material": {"kind": "lit", "color": [0.18, 0.2, 0.2], "shininess": 30},
+      "translation": ["0.55 * cos(swing) - 0.55", 1.15, 0.08],
+      "rotation": [0, "deg(swing)", 0]
+    },
+    {
+      "id": "bulb",
+      "geometry": {"type": "sphere", "radius": 0.07, "lat": 10, "long": 12},
+      "instances": {"layout": "line", "count": 8, "spacing": [0, 0, -2.15]},
+      "material": {"kind": "lit", "color": [1, 0.85, 0.55], "emissive": [0.85, 0.55, 0.2], "shininess": 4},
+      "translation": [0, 2.15, 0.2]
+    },
+    {
+      "id": "moths",
+      "geometry": {
+        "type": "field",
+        "count": 40,
+        "vars": {
+          "z": "-(i % 8) * 2.15 + 0.2",
+          "a": "t * (1.2 + (i % 5) * 0.15) + i",
+          "r": "0.18 + (i % 4) * 0.05"
+        },
+        "position": ["cos(a) * r", "2.15 + sin(a * 1.7) * 0.12", "z + sin(a) * r"]
+      },
+      "material": {"kind": "unlit", "color": [0.95, 0.88, 0.7], "size": 3.5, "alpha": 0.65}
+    },
+    {"id": "void", "visible": "enterVoid > 0.02", "translation": [0, 1.2, -17.45]},
+    {
+      "id": "void-lattice",
+      "parent": "void",
+      "geometry": {"type": "lineCube", "size": 1.4},
+      "material": {"kind": "line", "color": [0.78, 0.55, 0.28]},
+      "rotation": ["deg(spin)", "deg(spin * 0.7)", 0]
+    },
+    {
+      "id": "void-icosahedron",
+      "parent": "void",
+      "geometry": {"type": "icosahedronLines", "radius": 0.95},
+      "material": {"kind": "line", "color": [0.85, 0.62, 0.32]},
+      "rotation": ["deg(-spin * 0.5)", "deg(spin)", 0]
+    },
+    {
+      "id": "void-core",
+      "parent": "void",
+      "geometry": {"type": "sphere", "radius": 0.16, "lat": 12, "long": 16},
+      "vars": {"grow": "1 + enterVoid * 0.2"},
+      "material": {"kind": "lit", "color": [0.55, 0.18, 0.05], "emissive": [0.5, 0.14, 0.04], "shininess": 8},
+      "rotation": [0, "deg(spin)", 0],
+      "scale": ["grow", "grow", "grow"]
+    }
+  ],
+  "markers": [{"t": 70.4, "label": "last door opens"}, {"t": 85.8, "label": "into the void"}]
+}

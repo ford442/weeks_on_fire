@@ -340,8 +340,8 @@ The **Cartoons** hub view (`/cartoons`) is a parking lot for short cartoon seeds
 
 The **3D Sequences** hub view (`/sequences`, `/sequences/:id`) plays procedural WebGL
 video sequences — 10 seconds to 2 minutes, no song id. One JSON file per sequence
-under [`sequences/`](sequences/). Filename must match `id`. Each id is played by one of
-two renderers (see [Graph vs custom](#graph-vs-custom-renderer)).
+under [`sequences/`](sequences/). Filename (and `id`) is a lowercase hyphenated slug; the film
+itself is its scene graph (see [Authoring a 3D sequence](#authoring-a-3d-sequence)).
 
 ```json
 {
@@ -365,81 +365,151 @@ two renderers (see [Graph vs custom](#graph-vs-custom-renderer)).
   packets, not a substitute for the in-app animation.
 - Run `npm run codegen` and commit the JSON + `src/data/generated/sequences.ts`.
 
-### Graph vs custom renderer
+### Authoring a 3D sequence
 
-- **Graph (default, no TypeScript):** add `content/sequences/<id>.graph.json` next to the
-  record (or a `graph` key on the record — not both). Codegen validates it with Zod
-  (`scripts/content-index/graph-schema.ts`) and the hub plays it through
-  `src/sequences/graph/`. Invalid tracks, unknown node ids, or times past `durationSec` fail
-  `npm run codegen`. Reference: [`sequences/lattice-hymn.graph.json`](sequences/lattice-hymn.graph.json).
-- **Custom (`"renderer": "custom"`):** a hand-written factory in `src/sequences/scenes/*.ts`
-  registered in `src/sequences/scenes/index.ts`. Use it only for unique deformers (e.g. the
-  rubber-hose walk cycle). Codegen fails if a record has neither a graph nor
-  `"renderer": "custom"` with a registered factory.
+Every film is a **scene graph**: `content/sequences/<id>.graph.json` next to the record (or a
+`graph` key on the record, not both). No TypeScript. Codegen validates it with the same Zod
+schema the hub's editor uses ([`src/sequences/graph/schema.ts`](../src/sequences/graph/schema.ts))
+and fails on anything wrong, naming the node and path:
 
-Graph shape (angles in degrees, times in seconds; unknown keys are rejected):
+```text
+sequence hose-chase node leg-l: geometry.size[1] must be positive
+sequence hose-chase node arm: rotation[2] expression "deg(swing": expected ")" (at deg(swing⟨here⟩)
+```
 
-```jsonc
+The smallest valid graph:
+
+```json
 {
-  "camera": {
-    "type": "orbit",
-    "radius": 5,
-    "height": [
-      { "t": 0, "v": 1 },
-      { "t": 8, "v": 2 },
-    ],
-    "angle": [
-      { "t": 0, "v": 0 },
-      { "t": 16, "v": 360 },
-    ],
-    "fov": 48,
-  },
-  "environment": {
-    "background": [0.02, 0.02, 0.02],
-    "lightDir": [0.4, 0.75, 0.5],
-    "fogDensity": 0.04,
-  },
+  "camera": { "type": "locked", "eye": [0, 1, 4], "target": [0, 0.5, 0] },
   "nodes": [
     {
-      "id": "core",
-      "geometry": { "type": "sphere", "radius": 0.3 },
-      "material": { "kind": "lit", "color": [0.5, 0.2, 0.05], "emissive": [0.5, 0.15, 0.04] },
-      "translation": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "spin": [0, 30, 0],
-    },
-  ],
-  "clips": [
-    {
-      "target": "core",
-      "property": "scale",
-      "ease": "inOut",
-      "keys": [
-        { "t": 0, "v": [0, 0, 0] },
-        { "t": 3.5, "v": [1, 1, 1] },
-      ],
-    },
-  ],
-  "loop": { "inSec": 0, "outSec": 16 },
+      "id": "ball",
+      "geometry": { "type": "sphere", "radius": 0.5 },
+      "material": { "kind": "cel", "color": [1, 0.45, 0.1], "glow": 0.22 },
+      "translation": [0, "0.5 + abs(sin(t * 3))", 0]
+    }
+  ]
 }
 ```
 
-- `camera.type`: `locked` (`eye`, `target`), `perspective` (keyframable `eye`, `target`, `fov`),
-  or `orbit` (keyframable `radius`, `height`, `angle`, optional `target`, `fov`). Any animated
-  value is a constant or `[{ "t", "v", "ease?" }]` (held flat outside the first / last key).
-- `geometry.type`: `box`, `sphere`, `cylinder`, `torus`, `plane`, `icosahedron`, `lathe`
-  (`profile` of `[radius, y]`), `lineCube`, `icosahedronLines`, `line` (`points`, `closed`),
-  `points` (seeded cloud: `count`, `radius: [min, max]`, `flatten`, `seed`).
-- `material.kind`: `lit` / `cel` (`color`, `emissive`, `shininess`, `outline` on cel), `unlit`
-  (flat; `size` / `alpha` for points), `line`. Triangle geometry takes `lit` / `cel` / `unlit`,
-  line geometry takes `line`, `points` take `unlit`.
-- `clips` animate `translation`, `rotation`, `scale`, `emissive` (lit / cel), `alpha` (points)
-  on a node id, or `fogDensity` on target `scene`. `ease` is `linear`, `in`, `out`, `inOut`
-  or `hold`; a key's own `ease` shapes the segment after it. A clip replaces the node's static
-  value; `spin` (deg/s) is added on top so continuous rotation loops without a seam.
-- `loop`: after `outSec`, scene time wraps back to `inSec`.
-- No song id, no glTF, no three.js in v1.
+**Easiest path:** open any film in the hub, press **Edit graph** (`/show/sequences/<id>/edit`,
+desktop), fork it under a new id, and edit with the live player, inline errors and a keyframe
+strip (click to scrub, drag a key to retime it). Drafts stay in your browser. **Download
+`<id>.graph.json`**, add the record, run `npm run codegen`. Agents can write the JSON directly;
+`public/llms.txt` carries the same contract.
+
+#### Values: constants, expressions, keyframes
+
+Angles are degrees, times are seconds. Almost any number (and any part of an `[x, y, z]`) can be:
+
+- a **constant**: `0.5`, `[0, 1, 0]`
+- an **expression** string: `"0.55 + abs(sin(t * 8)) * 0.28"`, `["x - 0.16", "bodyY", 0]`
+- **keyframes**: `[{ "t": 0, "v": 1 }, { "t": 2, "v": 0.5, "ease": "out" }]`, strictly ascending,
+  held flat outside the first and last key. A key's `ease` (`linear`, `in`, `out`, `inOut`,
+  `hold`) shapes the segment after it.
+
+Expressions read built-ins `t` (scene time, after `loop`), `p` (film progress 0–1), `dur`, `i`
+and `n` (copy index and count; point index inside a `field`), `k` (repeat copy, centred on 0),
+plus `vars`. Operators: `+ - * / %`, comparisons and `&& || !` (1 or 0), `c ? a : b`. Functions:
+`sin cos tan asin acos atan atan2 abs floor ceil round fract sqrt exp log pow sign min max
+clamp mix smoothstep step mod deg rad hash pick` (`deg()` turns radians into the degrees
+rotations want; `pick(i, a, b, c)` chooses by index). `pi` and `tau` are constants.
+
+`vars` are named values (any of the three forms above), evaluated in order. Graph `vars` are seen
+everywhere; a node's `vars` by that node and its children (re-evaluated per copy, so they can
+read `i`). A var may read only the vars above it; names may not shadow built-ins or graph vars.
+
+#### The graph
+
+```jsonc
+{
+  "camera": {},          // locked | perspective | orbit (below)
+  "environment": {},     // background, lightDir, lightColor, ambient, fogDensity, fogColor, pointLight
+  "vars": {},            // named values for every expression
+  "nodes": [],           // drawn in order; point sprites last
+  "clips": [],           // per-node keyframe tracks (translation, rotation, scale, emissive, alpha)
+  "loop": { "inSec": 0, "outSec": 16 },
+  "markers": [{ "t": 5, "label": "big boom" }],     // named beats (Timeline)
+  "post": { "vignette": {}, "ghosts": {} }
+}
+```
+
+- **camera** `locked` (`eye`, `target`, `fov` constants), `perspective` (`eye`, `target`, `fov`
+  any form) or `orbit` (`radius`, `height`, `angle` around Y, optional `target`, `fov`). All take
+  `near` / `far` (default 0.1 / 60).
+- **environment** values take any form; `pointLight` is `{ position, color, range }`.
+- **clips** (`{ target, property, keys, ease? }`) replace the node's value for that property;
+  `fogDensity` lives on target `scene`. Still supported; node fields with keyframes or
+  expressions usually read better.
+
+#### Nodes
+
+| Field | What it does |
+| --- | --- |
+| `id` | Letters, digits, `-`, `_`; unique; `scene` is reserved. |
+| `parent` | A node **earlier** in the list. Transforms compose; visibility and vars inherit. A node with no `geometry` / `material` is a **group**. |
+| `translation`, `rotation` (Euler XYZ, degrees), `scale` | Any form. `spin` (deg/s, constant) adds continuous rotation. |
+| `squash` | Volume-preserving: `0.5` is half height and wider. Children squash with it. |
+| `wobble` | `{ amp, freq, decay?, start? }` jelly: squash × `1 + amp·sin(2π·freq·(t−start))·e^(−decay·(t−start))`. |
+| `visible` | Drawn while > 0 (and while its parent is): `"skidT > 0.05"`, `"t < 6"`. |
+| `vars` | Named values for this node and its children. |
+| `instances` | Copies of the node (and its children): `{ count, layout?, spacing?, columns?, radius?, points?, jitter?, seed? }`. `line` (copy `i` at `i·spacing`), `grid` (XZ, centred), `ring` (around Y, `radius`), `explicit` (`points`), or none (place them with `i`). One instanced draw. |
+| `repeat` | Treadmill copies: `{ axis, period, copies? (3), speed?, offset? }`. Copy `k` sits at `k·period − mod(offset + speed·t, period)` and wraps. Can combine with `instances`. |
+
+Only one node in a parent chain may have `instances` or `repeat`.
+
+**Geometry** (`geometry.type`): `box` (`size`), `sphere` (`radius`, `lat`, `long`), `cylinder`
+(`radius`, `height`, `radial`, `caps`), `torus` (`major`, `minor`, …), `plane` (XZ checker; show
+its colours with `vertexColor` on a lit material), `icosahedron`, `lathe` (`profile` of
+`[radius, y]` bottom to top, `segments`; 4 segments make a pyramid roof), `lineCube`,
+`icosahedronLines`, `line` (`points`, `closed`), `points` (seeded cloud), and the dynamic ones,
+rebuilt every frame (they cannot be copied):
+
+- `field` — `count` points placed by `position`, with per-point `vars`; `i` is the point index.
+  Steam, sparks, moths.
+- `emitter` — particles: `rate` and/or `burst` (`[{ "t": 5, "v": 18 }]` = 18 at 5 s), `life`,
+  `speed` (or `[min, max]`), `direction`, `spread` (cone half-angle, degrees), `gravity`, `drag`,
+  `origin`, `radius`, `floorY` / `bounce`, `seed`. Stepped at 60 Hz from 0 through the geometry
+  kernel, so any frame can be seeked to and looks the same.
+- `ribbon` — Möbius band morphing to a torus-knot ribbon by `mix` (0–1).
+- `hose` — a rubber-hose tube from `from` to `to` (node space) of rest `length` and `radius`:
+  closer than `length` it bows toward `bend` (default up), farther it stretches straight. Pin the
+  far end and move the near one for legs that buckle when the body squashes.
+
+**Material** (`material.kind`): `lit` / `cel` (`color`, `emissive` or `glow` (emissive as a share
+of colour; cel parts use 0.22), `shininess`, `outline`, `vertexColor`), `unlit` (flat; on point
+geometry `size` px and `alpha`), `line`. Triangle geometry takes lit / cel / unlit; `lineCube`,
+`icosahedronLines`, `line` take `line`; `points`, `field`, `emitter` take `unlit`. Colours take any
+form, so copies can be tinted per `i`.
+
+**Post** (`post`): `vignette: { strength, radius?, softness? }`; `ghosts: { count (1–4), decay,
+spacing? (s, default 1/24), mode? }` re-draws the film `count` times at `spacing` earlier and adds
+the difference, `decay^k` each: `lighten` (default) trails bright things on dark ground, `darken`
+dark things across a bright sky. Deterministic (nothing accumulates), so seeks and captures match.
+
+References: [`lattice-hymn.graph.json`](sequences/lattice-hymn.graph.json) (smallest),
+[`hose-chase.graph.json`](sequences/hose-chase.graph.json) (groups, copies, treadmill, field),
+[`elephant-trampoline.graph.json`](sequences/elephant-trampoline.graph.json) (hoses, emitters,
+squash, darken ghosts, vignette; authored as JSON only).
+
+#### Porting a hand-written scene: the screenshot-diff checklist
+
+`"renderer": "custom"` with a factory in `src/sequences/scenes/index.ts` is an escape hatch (the
+map is empty today). Prefer a new node type over a new factory. If one comes back, port it like
+the first eight were:
+
+1. Add the film to `SEQUENCES` in `e2e/sequences.spec.ts` and record its frames **from the
+   factory**: `VITE_BASE=/weeks_on_fire/ npm run build && npm run test:e2e:update -- -g "<id> \(main\)"`.
+   That writes `e2e/fixtures/<id>.frames.json` at 0 s, mid-film and 100%.
+2. Write `<id>.graph.json` as a transcription: same constants, same order of operations, the
+   factory's locals as `vars`, radians through `deg()`, its loops as `instances` / `repeat` /
+   `field`.
+3. Remove the factory from `src/sequences/scenes/index.ts` and `"renderer": "custom"` from the
+   record, then `npm run codegen`, build, and `npm run test:e2e`: the graph must match the
+   factory's frames on the worker and all three in-thread GL paths (the tolerance is in
+   `e2e/frame.ts`; the eight ports land at 0 difference in all but one cell).
+4. Delete the factory file in the same commit.
 
 ## Linking records (catalog graph and search)
 

@@ -2,7 +2,7 @@ import { data, Navigate, type LoaderFunctionArgs, type RouteObject } from 'react
 
 import { RecordNotFoundError } from '../data/records';
 
-import { prefetchView } from './lazyViews';
+import { loadSequenceEditor, prefetchView } from './lazyViews';
 import { CREW_PREFIX, viewPaths } from './paths';
 import {
   Album,
@@ -25,6 +25,7 @@ import {
   RouteFallback,
   Scenes,
   SearchPage,
+  SequenceEditor,
   Sequences,
   Songs,
   Suggestions,
@@ -132,6 +133,15 @@ const crewViews: RouteObject[] = [
       'sequences',
       idLoader(async () => (await import('../data/sequences')).sequences),
     ),
+  },
+  {
+    // Before React.lazy asks for it: start the editor chunk with the id check.
+    path: `${viewPaths.sequences}/:id/edit`,
+    element: <SequenceEditor />,
+    loader: (args: LoaderFunctionArgs) => {
+      void loadSequenceEditor();
+      return idLoader(async () => (await import('../data/sequences')).sequences)(args);
+    },
   },
   { path: viewPaths.characters, element: <Characters /> },
   {

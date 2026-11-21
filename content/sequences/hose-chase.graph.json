@@ -1,0 +1,278 @@
+{
+  "vars": {
+    "squashIn": "smoothstep(0, 2, t)",
+    "run": "t >= 2 && t < 12",
+    "skidT": "smoothstep(12, 14.5, t)",
+    "hold": "smoothstep(14.5, 16, t)",
+    "runTime": "max(0, min(t - 2, 10))",
+    "skidElapsed": "max(0, min(t - 12, 2.5))",
+    "scroll": "runTime * 3.6 + 3.6 * (skidElapsed - (skidElapsed * skidElapsed) / (2 * 2.5))",
+    "x": "-0.15 + 0.35 * (1 - squashIn)",
+    "hop": "run ? abs(sin(t * 16)) * 0.06 : 0",
+    "lean": "run ? -0.35 : 0.55 * skidT * (1 - hold)",
+    "squashY": "0.7 + 0.3 * squashIn - 0.22 * skidT + hop",
+    "bodyY": "2.1 * (1 - squashIn) + 0.55 * squashIn + hop - 0.08 * skidT",
+    "stride": "run ? t * 16 : 12 * 16 * (1 - skidT)"
+  },
+  "camera": {
+    "type": "locked",
+    "eye": [0, 1.2, 3.55],
+    "target": [0, 0.72, 0],
+    "fov": 48,
+    "near": 0.1,
+    "far": 30
+  },
+  "environment": {
+    "background": [0.16, 0.13, 0.11],
+    "lightDir": [0.2, 0.75, 0.7],
+    "lightColor": [1.05, 0.98, 0.88],
+    "ambient": [0.46, 0.4, 0.34],
+    "fogDensity": 0,
+    "pointLight": {"position": [0.1, 1.6, 2.4], "color": [1, 0.9, 0.75], "range": 7}
+  },
+  "nodes": [
+    {
+      "id": "floor",
+      "geometry": {"type": "plane", "width": 6, "depth": 4, "nx": 8, "nz": 6},
+      "repeat": {"axis": "x", "period": 4.2, "copies": 3, "offset": "scroll"},
+      "material": {"kind": "lit", "color": [0.25, 0.22, 0.18], "vertexColor": true, "shininess": 6}
+    },
+    {
+      "id": "wall",
+      "geometry": {"type": "box", "size": [6.2, 3.2, 0.08]},
+      "material": {"kind": "lit", "color": [0.9, 0.82, 0.68], "shininess": 4},
+      "translation": [0, 1.55, -1.55]
+    },
+    {
+      "id": "curtains",
+      "geometry": {"type": "box", "size": [0.35, 3.1, 0.12]},
+      "instances": {"count": 2, "layout": "explicit", "points": [[-2.05, 1.5, -1.35], [2.05, 1.5, -1.35]]},
+      "repeat": {"axis": "x", "period": 4.2, "copies": 3, "offset": "scroll"},
+      "material": {"kind": "lit", "color": [1, 0.48, 0.12], "shininess": 6}
+    },
+    {
+      "id": "runner",
+      "instances": {"count": 3},
+      "visible": "i == 2 || run",
+      "vars": {
+        "gx": "x - pick(i, 0.42, 0.24, 0)",
+        "gstride": "stride - pick(i, 0.8, 0.4, 0)",
+        "ga": "pick(i, 0.35, 0.6, 1)",
+        "legSwing": "sin(gstride) * 0.7",
+        "armSwing": "sin(gstride + pi) * 0.85"
+      }
+    },
+    {
+      "id": "body",
+      "parent": "runner",
+      "geometry": {"type": "sphere", "radius": 0.28, "lat": 12, "long": 16},
+      "material": {"kind": "cel", "color": ["1 * ga", "0.48 * ga", "0.12 * ga"], "glow": 0.22, "shininess": 6},
+      "translation": ["gx", "bodyY", 0],
+      "rotation": [0, "deg(0.12)", "deg(lean)"],
+      "scale": [1.15, "squashY", 1]
+    },
+    {
+      "id": "head",
+      "parent": "runner",
+      "geometry": {"type": "sphere", "radius": 0.22, "lat": 12, "long": 16},
+      "material": {
+        "kind": "cel",
+        "color": ["0.93 * ga", "0.86 * ga", "0.72 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "translation": ["gx", "bodyY + 0.42 / squashY", 0.04],
+      "rotation": [0, 0, "deg(lean * 0.4)"]
+    },
+    {
+      "id": "eye-left",
+      "parent": "runner",
+      "geometry": {"type": "sphere", "radius": 0.045, "lat": 8, "long": 10},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "emissive": ["0.08 * ga", "0.06 * ga", "0.05 * ga"]
+      },
+      "translation": ["gx - 0.07", "bodyY + 0.46", 0.2]
+    },
+    {
+      "id": "eye-right",
+      "parent": "runner",
+      "geometry": {"type": "sphere", "radius": 0.045, "lat": 8, "long": 10},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "emissive": ["0.08 * ga", "0.06 * ga", "0.05 * ga"]
+      },
+      "translation": ["gx + 0.07", "bodyY + 0.46", 0.2]
+    },
+    {
+      "id": "spoke-0",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "run",
+      "translation": ["gx - 0.02", "bodyY - 0.22", 0],
+      "rotation": [0, 0, "deg(gstride)"],
+      "scale": [1, 0.85, 1]
+    },
+    {
+      "id": "spoke-1",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "run",
+      "translation": ["gx - 0.02", "bodyY - 0.22", 0],
+      "rotation": [0, 0, "deg(gstride + 1 * pi / 2)"],
+      "scale": [1, 0.85, 1]
+    },
+    {
+      "id": "spoke-2",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "run",
+      "translation": ["gx - 0.02", "bodyY - 0.22", 0],
+      "rotation": [0, 0, "deg(gstride + 2 * pi / 2)"],
+      "scale": [1, 0.85, 1]
+    },
+    {
+      "id": "spoke-3",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "run",
+      "translation": ["gx - 0.02", "bodyY - 0.22", 0],
+      "rotation": [0, 0, "deg(gstride + 3 * pi / 2)"],
+      "scale": [1, 0.85, 1]
+    },
+    {
+      "id": "leg-left",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "!run",
+      "translation": ["gx - 0.16", "bodyY - 0.28", 0],
+      "rotation": [0, 0, "deg(0.25 + legSwing)"]
+    },
+    {
+      "id": "leg-right",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "visible": "!run",
+      "translation": ["gx + 0.16", "bodyY - 0.28", 0],
+      "rotation": [0, 0, "deg(-0.25 - legSwing)"]
+    },
+    {
+      "id": "arm-left",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "translation": ["gx - 0.24", "bodyY + 0.08", 0],
+      "rotation": [0, 0, "deg(1.05 + armSwing)"]
+    },
+    {
+      "id": "arm-right",
+      "parent": "runner",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "material": {
+        "kind": "cel",
+        "color": ["0.08 * ga", "0.06 * ga", "0.05 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "translation": ["gx + 0.24", "bodyY + 0.08", 0],
+      "rotation": [0, 0, "deg(-1.05 - armSwing)"]
+    },
+    {
+      "id": "hat",
+      "parent": "runner",
+      "geometry": {"type": "box", "size": [0.32, 0.32, 0.32]},
+      "material": {
+        "kind": "cel",
+        "color": ["0.35 * ga", "0.55 * ga", "0.82 * ga"],
+        "glow": 0.22,
+        "shininess": 6
+      },
+      "translation": ["gx", "bodyY + 0.66 / squashY", 0],
+      "rotation": ["deg(0.2)", "deg(gstride * 0.15)", "deg(lean * 0.3)"],
+      "scale": [0.55, 0.55, 0.55]
+    },
+    {
+      "id": "dust",
+      "visible": "skidT > 0.05",
+      "vars": {"life": "skidT * (1 - hold)"},
+      "geometry": {
+        "type": "field",
+        "count": 28,
+        "vars": {"a": "i * 0.9", "spread": "0.15 + life * (0.2 + (i % 5) * 0.08)"},
+        "position": [
+          "x - 0.35 - spread * cos(a)",
+          "0.08 + life * (0.05 + (i % 4) * 0.04)",
+          "sin(a) * 0.12 * life"
+        ]
+      },
+      "material": {
+        "kind": "unlit",
+        "color": [0.55, 0.45, 0.32],
+        "size": 7,
+        "alpha": "0.55 * skidT * (1 - hold)"
+      }
+    },
+    {
+      "id": "groove-near",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "visible": "skidT > 0.05",
+      "material": {"kind": "cel", "color": [0.2, 0.16, 0.12], "emissive": [0.12, 0.06, 0.02]},
+      "translation": ["x - 0.55", 0.02, 0.08],
+      "rotation": [0, 0, "deg(1.57)"],
+      "scale": [0.7, 0.15, 0.15]
+    },
+    {
+      "id": "groove-far",
+      "geometry": {"type": "cylinder", "radius": 0.045, "height": 0.42, "radial": 10, "caps": true},
+      "visible": "skidT > 0.05",
+      "material": {"kind": "cel", "color": [0.2, 0.16, 0.12], "emissive": [0.1, 0.05, 0.02]},
+      "translation": ["x - 0.7", 0.02, -0.08],
+      "rotation": [0, 0, "deg(1.57)"],
+      "scale": [0.55, 0.12, 0.12]
+    }
+  ],
+  "markers": [{"t": 2, "label": "run"}, {"t": 12, "label": "skid"}, {"t": 14.5, "label": "hold"}]
+}

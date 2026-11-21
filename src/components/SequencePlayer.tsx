@@ -44,6 +44,10 @@ interface SequencePlayerProps {
   renderer?: RendererPreference;
   /** `?stats=1`: overlay the renderer's per-frame CPU time and GL counters. */
   stats?: boolean;
+  /** Film time as the transport shows it (about every 80 ms while playing, and on every seek). */
+  onTimeUpdate?: (timeSec: number) => void;
+  /** Jump the film clock from outside (the graph editor's keyframe strip). A new object = a new seek. */
+  seekRequest?: { timeSec: number };
 }
 
 function preferredMode(preference: RendererPreference): RendererMode {
@@ -84,6 +88,8 @@ export default function SequencePlayer({
   capture = false,
   renderer = 'auto',
   stats = false,
+  onTimeUpdate,
+  seekRequest,
 }: SequencePlayerProps) {
   const stageRef = useRef<HTMLDivElement>(null);
   const lastUiRef = useRef(0);
@@ -142,6 +148,19 @@ export default function SequencePlayer({
   useEffect(() => {
     statsRef.current = stats;
   }, [stats]);
+
+  useEffect(() => {
+    onTimeUpdate?.(uiTime);
+  }, [onTimeUpdate, uiTime]);
+
+  useEffect(() => {
+    if (!seekRequest) return;
+    const now = performance.now();
+    clock.seek(seekRequest.timeSec, now);
+    jumpRef.current = true;
+    setUiTime(clock.peek(now));
+    wakeRef.current?.();
+  }, [clock, seekRequest]);
 
   useEffect(() => {
     reducedMotionRef.current = reducedMotion;
@@ -294,6 +313,8 @@ export default function SequencePlayer({
         wake();
       },
       onFrame(frameStats) {
+        // Capture loads publish which moment is on screen, so a reader can wait for its frame.
+        if (preserveBuffer) canvas.dataset.frameTime = String(frameStats.timeSec);
         statsWindowRef.current.push(frameStats, performance.now());
       },
     };

@@ -1,0 +1,46 @@
+{
+  "vars": {
+    "morph": "smoothstep(40 / 75, 55 / 75, p) * (1 - smoothstep(65 / 75, 1, p))",
+    "split": "smoothstep(55 / 75, 60 / 75, p) * (1 - smoothstep(65 / 75, 72 / 75, p))",
+    "boom": "3.3 - 0.7 * smoothstep(0.25, 0.55, p)",
+    "yaw": "t * 0.22"
+  },
+  "camera": {
+    "type": "perspective",
+    "eye": ["sin(yaw) * boom", "0.55 + 0.35 * sin(p * pi)", "cos(yaw) * boom"],
+    "target": [0, 0, 0],
+    "fov": 50,
+    "near": 0.08,
+    "far": 30
+  },
+  "environment": {
+    "background": [0.015, 0.02, 0.03],
+    "lightDir": [0.55, 0.35, 0.75],
+    "lightColor": [1, 0.55, 0.22],
+    "ambient": [0.08, 0.12, 0.16],
+    "fogDensity": 0.05,
+    "fogColor": [0.02, 0.03, 0.04],
+    "pointLight": {"position": [1.2, 0.8, 0.4], "color": [0.35, 0.75, 1], "range": 4}
+  },
+  "nodes": [
+    {
+      "id": "ribbon",
+      "geometry": {"type": "ribbon", "mix": "morph", "uSegments": 96, "vSegments": 12},
+      "material": {"kind": "lit", "color": [0.72, 0.76, 0.8], "emissive": [0.04, 0.03, 0.02], "shininess": 90},
+      "rotation": ["deg(t * 0.15)", "deg(t * 0.31)", "deg(t * 0.07)"]
+    },
+    {
+      "id": "ribbon-split",
+      "geometry": {"type": "ribbon", "mix": "morph", "uSegments": 96, "vSegments": 12},
+      "material": {"kind": "lit", "color": [0.55, 0.7, 0.82], "emissive": [0.02, 0.04, 0.06], "shininess": 80},
+      "visible": "split > 0.02",
+      "translation": [0, "0.12 * split", 0],
+      "rotation": [0, "deg(split * 0.45)", 0]
+    }
+  ],
+  "markers": [
+    {"t": 40, "label": "morph to knot"},
+    {"t": 55, "label": "knot; split peels off"},
+    {"t": 65, "label": "morph back"}
+  ]
+}

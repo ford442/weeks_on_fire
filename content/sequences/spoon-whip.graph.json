@@ -1,0 +1,91 @@
+{
+  "vars": {
+    "kickI": "floor(t / 0.4)",
+    "phase": "t - kickI * 0.4",
+    "orbit": "p * pi * 8 + min(phase / 0.4, 1) * 0.55"
+  },
+  "camera": {
+    "type": "perspective",
+    "eye": ["sin(orbit) * 2.05", "1.12 + 0.08 * sin(t * 11)", "cos(orbit) * 2.05 + 0.12"],
+    "target": [0, 0.35, 0],
+    "fov": 42,
+    "near": 0.08,
+    "far": 20
+  },
+  "environment": {
+    "background": [0.09, 0.07, 0.055],
+    "lightDir": [0.2, 0.85, 0.4],
+    "lightColor": [1, 0.86, 0.62],
+    "ambient": [0.16, 0.13, 0.11],
+    "fogDensity": 0.02,
+    "fogColor": [0.08, 0.06, 0.05],
+    "pointLight": {"position": [0.15, 1.6, 0.2], "color": [1, 0.78, 0.45], "range": 3.4}
+  },
+  "nodes": [
+    {
+      "id": "wall",
+      "geometry": {"type": "box", "size": [4.2, 2.4, 0.08]},
+      "material": {"kind": "lit", "color": [0.82, 0.76, 0.66], "shininess": 6},
+      "translation": [0, 1.15, -0.92]
+    },
+    {
+      "id": "table",
+      "geometry": {"type": "box", "size": [3.4, 0.12, 1.8]},
+      "material": {"kind": "lit", "color": [0.48, 0.3, 0.14], "shininess": 18}
+    },
+    {
+      "id": "mug",
+      "geometry": {"type": "cylinder", "radius": 0.22, "height": 0.42, "radial": 28, "caps": true},
+      "material": {"kind": "lit", "color": [0.93, 0.9, 0.84], "shininess": 70},
+      "translation": [-0.18, 0.27, 0.05]
+    },
+    {
+      "id": "handle",
+      "geometry": {"type": "torus", "major": 0.16, "minor": 0.035, "majorSeg": 24, "minorSeg": 12},
+      "material": {"kind": "lit", "color": [0.93, 0.9, 0.84], "shininess": 70},
+      "translation": [-0.4, 0.28, 0.05],
+      "rotation": [90, 0, 0]
+    },
+    {
+      "id": "coffee",
+      "geometry": {"type": "cylinder", "radius": 0.185, "height": 0.02, "radial": 24, "caps": true},
+      "material": {"kind": "lit", "color": [0.18, 0.1, 0.05], "emissive": [0.05, 0.02, 0.01], "shininess": 80},
+      "translation": [-0.18, 0.45, 0.05]
+    },
+    {
+      "id": "orange",
+      "geometry": {"type": "sphere", "radius": 0.2, "lat": 16, "long": 20},
+      "material": {"kind": "lit", "color": [0.9, 0.42, 0.1], "shininess": 28},
+      "translation": [0.42, 0.26, 0.18],
+      "rotation": ["deg(t * 6)", 0, "deg(t * 4.2)"]
+    },
+    {
+      "id": "spoons",
+      "geometry": {"type": "box", "size": [0.04, 0.015, 0.55]},
+      "instances": {"count": 4},
+      "vars": {"ghost": "3 - i", "yaw": "t * 22 - ghost * 0.45", "dim": "1 - ghost * 0.22"},
+      "material": {
+        "kind": "lit",
+        "color": ["0.72 * dim", "0.55 * dim", "0.28 * dim"],
+        "emissive": ["ghost > 0 ? 0.08 : 0", "ghost > 0 ? 0.05 : 0", "ghost > 0 ? 0.02 : 0"],
+        "shininess": 90
+      },
+      "translation": [0.12, 0.085, -0.22],
+      "rotation": [0, "deg(yaw)", "deg(0.12)"]
+    },
+    {
+      "id": "steam",
+      "geometry": {
+        "type": "field",
+        "count": 48,
+        "vars": {
+          "phaseP": "i * 0.37 + t * 2.4",
+          "rise": "((phaseP * 0.55) % 1.1) * 1.15",
+          "swirl": "phaseP * 4.2"
+        },
+        "position": ["-0.18 + cos(swirl) * 0.12 * rise", "0.52 + rise", "0.05 + sin(swirl * 0.8) * 0.1 * rise"]
+      },
+      "material": {"kind": "unlit", "color": [0.95, 0.9, 0.82], "size": 6, "alpha": 0.42}
+    }
+  ]
+}

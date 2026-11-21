@@ -57,6 +57,9 @@ Weeks on Fire is a personal cinematic experiment combining:
 - https://github.com/ford442/weeks_on_fire/tree/main/content/cartoons
 - https://github.com/ford442/weeks_on_fire/tree/main/content/sequences
 
+### Authoring a 3D sequence (graph v2)
+Every in-hub 3D film is a JSON scene graph, `content/sequences/<id>.graph.json`, next to its record; no TypeScript. Contract: https://github.com/ford442/weeks_on_fire/blob/main/content/README.md#authoring-a-3d-sequence (full summary in https://ford442.github.io/weeks_on_fire/llms-full.txt). Graph editor (desktop): https://ford442.github.io/weeks_on_fire/show/sequences/<id>/edit — live player, inline schema errors, keyframe strip; fork any film under a new id, then Download `<id>.graph.json`. Validate with `npm run codegen` (errors name the node and path).
+
 ## Featured visual scenes
 
 | Scene | Episode | Theme |

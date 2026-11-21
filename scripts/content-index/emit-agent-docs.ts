@@ -22,6 +22,21 @@ import { emitScheduleSection } from './schedule-docs';
 import { parseFrontmatter } from './parsers/frontmatter';
 import { REPO_BASE, SITE_BASE, siteViews } from './views';
 
+/** The graph v2 contract for agents (llms-full.txt); the long form is content/README.md. */
+const SEQUENCE_GRAPH_CONTRACT = `### Graph v2 contract (\`<id>.graph.json\`)
+
+- Top level: \`camera\` (required), \`nodes\` (required, 1–300), \`environment\`, \`vars\`, \`clips\`, \`loop\` { inSec, outSec }, \`markers\` [{ t, label }], \`post\`. Unknown keys fail codegen.
+- Values: degrees and seconds. Most numbers, and each part of an [x, y, z], may be a constant, an expression string ("0.5 + abs(sin(t * 8)) * 0.3") or keyframes [{ "t", "v", "ease"? }] (strictly ascending; ease linear | in | out | inOut | hold).
+- Expression names: t (scene time), p (progress 0–1), dur, i / n (copy index / count; point index in a field), k (repeat copy), vars. Operators + - * / % == != < <= > >= && || ! ?:. Functions: sin cos tan asin acos atan atan2 abs floor ceil round fract sqrt exp log pow sign min max clamp mix smoothstep step mod deg rad hash pick; constants pi, tau.
+- \`vars\`: named values in order; graph vars are global, node vars scope to the node and its children and are re-evaluated per copy.
+- camera: locked { eye, target, fov } | perspective { eye, target, fov } | orbit { radius, height, angle, target?, fov? }; all take near / far.
+- environment: background, lightDir, lightColor, ambient, fogDensity, fogColor, pointLight { position, color, range }.
+- Node: id, parent (earlier node; no geometry + no material = group), translation, rotation, scale, spin (deg/s), squash (volume-preserving), wobble { amp, freq, decay?, start? }, visible (> 0 draws), vars, instances { count, layout: line | grid | ring | explicit, spacing, columns, radius, points, jitter, seed }, repeat { axis, period, copies, speed, offset }. One copy source per parent chain.
+- Geometry: box, sphere, cylinder, torus, plane, icosahedron, lathe, lineCube, icosahedronLines, line, points; dynamic (not copyable): field { count, vars, position }, emitter { rate, burst, life, speed, direction, spread, gravity, drag, origin, radius, floorY, bounce, seed }, ribbon { mix }, hose { from, to, length, radius, bend }.
+- Material: lit | cel { color, emissive | glow, shininess, outline, vertexColor (plane only) }, unlit { color, size, alpha (points, field, emitter only) }, line { color }.
+- post: vignette { strength, radius, softness }; ghosts { count 1–4, decay, spacing, mode: lighten | darken }.
+- Codegen errors read "sequence <id> node <node-id>: <path> <problem>". Every film's graph is a working example; elephant-trampoline was authored as JSON only.`;
+
 const repoRoot = join(import.meta.dirname, '../..');
 const publicDir = join(repoRoot, 'public');
 const checkMode = process.argv.includes('--check');
@@ -150,6 +165,9 @@ ${episodeLines}
 - ${REPO_BASE}/tree/main/content/cartoons
 - ${REPO_BASE}/tree/main/content/sequences
 
+### Authoring a 3D sequence (graph v2)
+Every in-hub 3D film is a JSON scene graph, \`content/sequences/<id>.graph.json\`, next to its record; no TypeScript. Contract: ${REPO_BASE}/blob/main/content/README.md#authoring-a-3d-sequence (full summary in ${SITE_BASE}/llms-full.txt). Graph editor (desktop): ${SITE_BASE}/show/sequences/<id>/edit — live player, inline schema errors, keyframe strip; fork any film under a new id, then Download \`<id>.graph.json\`. Validate with \`npm run codegen\` (errors name the node and path).
+
 ## Featured visual scenes
 
 | Scene | Episode | Theme |
@@ -242,7 +260,7 @@ ${paths}`;
       ? sequences
           .map(
             (sequence) =>
-              `- **${sequence.title}** (${sequence.id}, ${sequence.medium}, ${sequence.runtime}) — ${sequence.premise}`,
+              `- **${sequence.title}** (${sequence.id}, ${sequence.medium}, ${sequence.runtime}) — ${sequence.premise} Graph: ${REPO_BASE}/blob/main/content/sequences/${sequence.id}.graph.json · editor: ${SITE_BASE}/show/sequences/${sequence.id}/edit`,
           )
           .join('\n')
       : '- (none yet — add `content/sequences/<id>.json`)';
@@ -317,7 +335,9 @@ ${cartoonLines}
 
 ## 3D sequences (in-hub players)
 
-Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author in \`content/sequences/<id>.json\`. No song id.
+Playable procedural WebGL sequences, 10 seconds to 2 minutes. Author the record in \`content/sequences/<id>.json\` (id: lowercase hyphenated slug) and the film in \`content/sequences/<id>.graph.json\`. No song id.
+
+${SEQUENCE_GRAPH_CONTRACT}
 
 ${sequenceLines}
 

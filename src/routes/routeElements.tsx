@@ -12,7 +12,7 @@ import {
 import SiteHeader from '../components/SiteHeader';
 import MediaSessionProvider from '../contexts/MediaSessionProvider';
 
-import { likelyViews, prefetchView, viewLoaders } from './lazyViews';
+import { likelyViews, loadSequenceEditor, prefetchView, viewLoaders } from './lazyViews';
 import {
   CREW_PREFIX,
   crewPath,
@@ -35,6 +35,7 @@ export const Video = lazy(viewLoaders.video);
 export const Suggestions = lazy(viewLoaders.suggestions);
 export const Cartoons = lazy(viewLoaders.cartoons);
 export const Sequences = lazy(viewLoaders.sequences);
+export const SequenceEditor = lazy(loadSequenceEditor);
 export const Characters = lazy(viewLoaders.characters);
 export const Episodes = lazy(viewLoaders.episodes);
 export const Crew = lazy(viewLoaders.crew);

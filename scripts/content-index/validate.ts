@@ -2,7 +2,9 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { broadcastOffset, formatClock, parseClock } from '../../src/lib/clock';
+import { SEQUENCE_ID_PATTERN } from '../../src/sequences/graph/ids';
 
+import { keyframeLists } from './graph-schema';
 import { generationErrors } from './generation';
 import { countEditTimelineRows } from './parsers/segment-prompts';
 
@@ -320,15 +322,9 @@ export function validateSceneBoards(
 }
 
 function graphTimes(graph: NonNullable<SequenceRecord['graph']>): number[] {
-  const times: number[] = [];
-  const camera: Record<string, unknown> = graph.camera;
-  for (const value of Object.values(camera)) {
-    if (Array.isArray(value) && typeof value[0] === 'object' && value[0] !== null) {
-      for (const key of value as { t: number }[]) times.push(key.t);
-    }
-  }
-  for (const clip of graph.clips ?? []) for (const key of clip.keys) times.push(key.t);
+  const times = keyframeLists(graph).flatMap((list) => list.keys.map((key) => key.t));
   if (graph.loop) times.push(graph.loop.inSec, graph.loop.outSec);
+  for (const marker of graph.markers ?? []) times.push(marker.t);
   return times;
 }
 
@@ -346,6 +342,11 @@ export function validateSequences(
 
   for (const sequence of sequences) {
     idCounts.set(sequence.id, (idCounts.get(sequence.id) ?? 0) + 1);
+    if (!SEQUENCE_ID_PATTERN.test(sequence.id)) {
+      errors.push(
+        `Sequence id ${sequence.id} must be lowercase letters and digits joined by single hyphens`,
+      );
+    }
     if (sequence.durationSec < 10 || sequence.durationSec > 120) {
       errors.push(
         `Sequence ${sequence.id} durationSec ${sequence.durationSec} is outside 10–120 seconds`,

@@ -1,0 +1,109 @@
+{
+  "vars": {
+    "kickI": "floor(t / 0.4)",
+    "phase": "t - kickI * 0.4",
+    "lurch": "smoothstep(0, 0.16, phase / 0.4)",
+    "travel": "(kickI + lurch) * 0.22",
+    "camZ": "8.4 - travel",
+    "punch": "phase < 1 / 24"
+  },
+  "camera": {
+    "type": "perspective",
+    "eye": [0.42, -0.18, "camZ"],
+    "target": [0.35, -0.22, "camZ - 4.2"],
+    "fov": "54 - min(travel * 2.2, 18)",
+    "near": 0.08,
+    "far": 40
+  },
+  "environment": {
+    "background": ["punch ? 0 : 0.018", "punch ? 0 : 0.014", "punch ? 0 : 0.012"],
+    "lightDir": [0.55, 0.25, 0.8],
+    "lightColor": [1, 0.55, 0.22],
+    "ambient": [0.06, 0.05, 0.04],
+    "fogDensity": 0.08,
+    "fogColor": [0.02, 0.015, 0.012],
+    "pointLight": {"position": [0, 0, 0], "color": [1, 0.35, 0.08], "range": 6}
+  },
+  "nodes": [
+    {
+      "id": "ring-0",
+      "geometry": {"type": "torus", "major": 1.15, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.72, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.0, -0.0, 0.0],
+      "rotation": [90, "deg(t * 3.4)", 0]
+    },
+    {
+      "id": "ring-1",
+      "geometry": {"type": "torus", "major": 1.11, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.74, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.08, -0.04, -1.05],
+      "rotation": [90, "deg(t * 3.4 * -1)", 0]
+    },
+    {
+      "id": "ring-2",
+      "geometry": {"type": "torus", "major": 1.07, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.76, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.16, -0.08, -2.1],
+      "rotation": [90, "deg(t * 3.4)", 0]
+    },
+    {
+      "id": "ring-3",
+      "geometry": {"type": "torus", "major": 1.03, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.78, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.24, -0.12, -3.15],
+      "rotation": [90, "deg(t * 3.4 * -1)", 0]
+    },
+    {
+      "id": "ring-4",
+      "geometry": {"type": "torus", "major": 0.99, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.8, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.32, -0.16, -4.2],
+      "rotation": [90, "deg(t * 3.4)", 0]
+    },
+    {
+      "id": "ring-5",
+      "geometry": {"type": "torus", "major": 0.95, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.82, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.4, -0.2, -5.25],
+      "rotation": [90, "deg(t * 3.4 * -1)", 0]
+    },
+    {
+      "id": "ring-6",
+      "geometry": {"type": "torus", "major": 0.91, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.84, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.48, -0.24, -6.3],
+      "rotation": [90, "deg(t * 3.4)", 0]
+    },
+    {
+      "id": "ring-7",
+      "geometry": {"type": "torus", "major": 0.87, "minor": 0.055, "majorSeg": 36, "minorSeg": 10},
+      "material": {"kind": "lit", "color": [0.86, 0.48, 0.22], "emissive": [0.08, 0.03, 0.01], "shininess": 70},
+      "translation": [0.56, -0.28, -7.35],
+      "rotation": [90, "deg(t * 3.4 * -1)", 0]
+    },
+    {
+      "id": "core",
+      "geometry": {"type": "sphere", "radius": 0.22, "lat": 16, "long": 20},
+      "material": {"kind": "lit", "color": [0.55, 0.18, 0.05], "emissive": [0.55, 0.14, 0.04], "shininess": 8},
+      "vars": {"pulse": "1 + 0.18 * (1 - phase / 0.4)"},
+      "translation": [0, 0, -8.6],
+      "rotation": [0, "deg(t * 2.2)", 0],
+      "scale": ["pulse", "pulse", "pulse"]
+    },
+    {
+      "id": "sparks",
+      "geometry": {
+        "type": "field",
+        "count": 40,
+        "vars": {
+          "seed": "i * 0.73",
+          "z": "((seed + t * 6.5) % 10) - 1.2",
+          "a": "seed * 2.1",
+          "r": "0.35 + (i % 5) * 0.12"
+        },
+        "position": ["cos(a) * r + 0.2", "sin(a * 1.4) * r - 0.1", "-z"]
+      },
+      "material": {"kind": "unlit", "color": [1, 0.5, 0.15], "size": 4, "alpha": "punch ? 0.2 : 0.7"}
+    }
+  ]
+}

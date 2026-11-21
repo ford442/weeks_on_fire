@@ -18,6 +18,9 @@ export const viewLoaders = {
   search: () => import('../components/SearchPage'),
 } satisfies Record<SiteView, () => Promise<unknown>>;
 
+/** The graph editor (`/sequences/:id/edit`): its own chunk, never part of the Sequences view. */
+export const loadSequenceEditor = () => import('../components/sequenceEditor/SequenceEditor');
+
 const requested = new Set<SiteView>();
 
 /** Warms a view's chunk. Safe to call repeatedly; failures are left for the real navigation to surface. */

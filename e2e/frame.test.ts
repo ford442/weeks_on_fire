@@ -92,11 +92,18 @@ const fixtureFiles = readdirSync(fixturesDir).filter((name) => name.endsWith('.f
 
 describe('committed frame fixtures', () => {
   it('cover the films the harness plays', () => {
+    // Every 3D sequence: they are all graphs, and each port was diffed against these frames.
     expect(fixtureFiles.sort()).toEqual([
+      'elephant-trampoline.frames.json',
       'hose-chase.frames.json',
       'kick-lattice.frames.json',
+      'kitchen-counter-orbit.frames.json',
       'lattice-hymn.frames.json',
       'mobius-chrome.frames.json',
+      'rubber-hose-errand.frames.json',
+      'screen-door-recessional.frames.json',
+      'spoon-whip.frames.json',
+      'tunnel-smash.frames.json',
     ]);
   });
 
@@ -109,7 +116,11 @@ describe('committed frame fixtures', () => {
         cols: GRID.cols,
         rows: GRID.rows,
       });
-      expect(fixture.frames.map((f) => f.label)).toEqual(['0s', '50%']);
+      const labels = fixture.frames.map((f) => f.label);
+      expect(labels).toHaveLength(3);
+      expect(labels[0]).toBe('0s');
+      expect(labels[1]).toMatch(/^\d+%$/);
+      expect(labels[2]).toBe('100%');
       for (const f of fixture.frames) expect(decodeRgb(f.rgb)).toHaveLength(CELLS);
     });
 

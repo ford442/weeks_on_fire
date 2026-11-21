@@ -34,7 +34,8 @@
       "musicCue": "",
       "grokImaginePrompt": "",
       "geminiOmniPrompt": "",
-      "promptVariations": []
+      "promptVariations": [],
+      "stillImagePath": "ideas/soft-gyre/shot-a-hover.jpg"
     },
     {
       "id": "gyre-b",
@@ -47,7 +48,8 @@
       "musicCue": "",
       "grokImaginePrompt": "",
       "geminiOmniPrompt": "",
-      "promptVariations": []
+      "promptVariations": [],
+      "stillImagePath": "ideas/soft-gyre/shot-b-weather.jpg"
     },
     {
       "id": "gyre-c",
@@ -60,7 +62,8 @@
       "musicCue": "",
       "grokImaginePrompt": "",
       "geminiOmniPrompt": "",
-      "promptVariations": []
+      "promptVariations": [],
+      "stillImagePath": "ideas/soft-gyre/shot-c-interior.jpg"
     },
     {
       "id": "gyre-d",
@@ -73,7 +76,8 @@
       "musicCue": "",
       "grokImaginePrompt": "",
       "geminiOmniPrompt": "",
-      "promptVariations": []
+      "promptVariations": [],
+      "stillImagePath": "ideas/soft-gyre/shot-d-answer.jpg"
     },
     {
       "id": "gyre-e",
@@ -86,7 +90,8 @@
       "musicCue": "",
       "grokImaginePrompt": "",
       "geminiOmniPrompt": "",
-      "promptVariations": []
+      "promptVariations": [],
+      "stillImagePath": "ideas/soft-gyre/shot-e-soft-set.jpg"
     }
   ]
 }

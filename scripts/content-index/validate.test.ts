@@ -151,6 +151,29 @@ describe('validateContent', () => {
       /segment count 1 != edit timeline rows 2/,
     );
   });
+
+  it('flags segmentStills keys that name no segment', () => {
+    const segment = {
+      id: 'gyre-a',
+      label: 'A',
+      start: '0:00',
+      end: '0:06',
+      durationSec: 6,
+      onScreen: 'A',
+      lyrics: '',
+      musicCue: '',
+      grokImaginePrompt: '',
+      geminiOmniPrompt: '',
+      promptVariations: [],
+    };
+    const cutaway = makeCutaway({
+      segments: [segment],
+      segmentStills: { 'gyre-a-hover': 'ideas/a.jpg' },
+    });
+    expect(() => validateContent(repoRoot, [makeSong()], [cutaway], false)).toThrow(
+      /segmentStills names unknown segment id\(s\): gyre-a-hover \(segments: gyre-a\)/,
+    );
+  });
 });
 
 function makeCartoon(overrides: Partial<CartoonRecord> = {}): CartoonRecord {

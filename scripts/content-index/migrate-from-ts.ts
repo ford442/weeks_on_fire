@@ -19,11 +19,11 @@ const SEGMENTS_SOURCE_MAP: Record<string, string> = {
 };
 
 const SOFT_GYRE_STILLS: Record<string, string> = {
-  'gyre-a-hover': 'ideas/soft-gyre/shot-a-hover.jpg',
-  'gyre-b-weather': 'ideas/soft-gyre/shot-b-weather.jpg',
-  'gyre-c-interior': 'ideas/soft-gyre/shot-c-interior.jpg',
-  'gyre-d-answer': 'ideas/soft-gyre/shot-d-answer.jpg',
-  'gyre-e-soft-set': 'ideas/soft-gyre/shot-e-soft-set.jpg',
+  'gyre-a': 'ideas/soft-gyre/shot-a-hover.jpg',
+  'gyre-b': 'ideas/soft-gyre/shot-b-weather.jpg',
+  'gyre-c': 'ideas/soft-gyre/shot-c-interior.jpg',
+  'gyre-d': 'ideas/soft-gyre/shot-d-answer.jpg',
+  'gyre-e': 'ideas/soft-gyre/shot-e-soft-set.jpg',
 };
 
 function parseImportMap(tsSource: string): Map<string, string> {

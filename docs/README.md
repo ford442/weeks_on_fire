@@ -9,6 +9,7 @@ Production notes, logs, references, and external asset links.
 - `external-assets.md` – all hosting links (Google Drive, Imgur, etc.)
 - `music-licensing.md` – Minimax Music rights info
 - `cutaway-assembly.md` – stills + song → timed MP4 preview with `scripts/assemble-cutaway.py` (manifest format, ffmpeg)
+- `capture.md` – in-hub **Record**: a sequence or cutaway preview → WebM take, session only; attaching takes in the Timeline
 - `song-method.md` – owner lock: the video concept comes first, then the song is built around it
 - `generation-log.jsonl` – spend history appended by `scripts/xai-generate.py` / `xai-batch.py` when run with `--json-log` (model, aspect, resolution, quality, prompt hash, usage, cost; clips are marked `"kind": "video"`; never the prompt or key). Created on first use.
 

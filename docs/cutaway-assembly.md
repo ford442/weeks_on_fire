@@ -9,6 +9,10 @@ It is a preview tool, not the edit. Its job is to answer "does this cut breathe 
 before we spend more Grok Imagine credits?" The result goes to `videos/` (gitignored); the real
 timeline lives in the Timeline view and the external editor (see [clip-stacker.md](clip-stacker.md)).
 
+For a quicker look, the cutaway preview on Suggestions can record the same cut in the browser, song
+included, as a WebM take ([capture.md](capture.md)). This script stays the quality path: exact frame
+boundaries, H.264, any size.
+
 **Needs `ffmpeg` and `ffprobe` on `PATH`** (`apt install ffmpeg` / `brew install ffmpeg`). Python
 standard library only, like every script in this repo. No npm packages are involved.
 

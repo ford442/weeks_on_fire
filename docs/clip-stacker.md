@@ -53,6 +53,14 @@ They follow three rules:
   fails on an id that is not in the catalog it names (the same class of check as
   `cutaway.songId`); the Timeline editor only offers known ids.
 
+### Session takes (`blob:` media)
+
+A take recorded in the hub ([capture.md](capture.md)) can be attached to a scene from the Timeline
+editor. Its `mediaUrl` is a `blob:` URL that only the recording tab can open, so it never leaves the
+tab: the clip_stacker export sends `mediaUrl: null` for that scene, **Export JSON** drops it, and the
+browser's saved edits store the scene with no media link. Host the take and paste its http(s) link
+to have it exported.
+
 ### Omitted on export
 
 These fields exist in `episodes/episode-NN/scenes.json` but are **not** included in clip_stacker exports:

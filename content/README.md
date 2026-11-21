@@ -190,6 +190,8 @@ A scene is a cutaway or sequence that has grown its own page: pitch, prompt lock
 
 1. Create `content/scenes/your-scene-id.json` (the filename must equal `id`). Use [`scenes/daisy-bell.json`](scenes/daisy-bell.json) as the worked example:
 
+   A second worked example with no song and no stills yet is [`scenes/the-long-way-up.json`](scenes/the-long-way-up.json) (`ready-to-generate`: omit `imagePath` on frames until the file exists under `images/`). Do not add a `_template.json` here — codegen reads every `*.json` in `content/scenes/` as a scene.
+
 ```json
 {
   "id": "your-scene-id",

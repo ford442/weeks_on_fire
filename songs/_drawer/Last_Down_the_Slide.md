@@ -39,7 +39,7 @@ seed; not the goose lifeguard of `Whistle_Twice.md` (different world, no goose h
   whole** (0:10–0:20): POP, splash, the dry pool, the seagull. Chain: the last frame of A
   (the walrus's calm face squished at the slide exit, slide bulging) is the start still of B.
 - **Pattern:** hard hits on action beats. Each penguin "zip" is a snare-and-twang hit (0:01.7,
-  0:03.3, 0:05.0, the last three penguins as one triple zip). The walrus is a low baritone
+  0:03.3, 0:05.0, the last four penguins as one four-zip run). The walrus is a low baritone
   sax note that holds.
 - **Breaks:** (1) **the stuck stop, 0:08.3–0:10.0, unscored**: band out, only the slide
   creaking and squeaking; (2) the full band back on the POP at 0:10.0; (3) out again at

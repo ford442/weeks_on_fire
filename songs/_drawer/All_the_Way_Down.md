@@ -31,7 +31,7 @@ them look up"; here, one bat looks up on the very last frame. That is the end re
 `laugh:` A man sings a love song about falling while we really fall down a well, and the bats are too busy playing cards to notice.
 `drop:` **Transforms.** At 0:10 the lip becomes a tunnel and the pigeons on the pipe all turn their heads at once as the band comes in.
 `end reaction:` one bat at the poker table looks up as we pass (G, 1:19). Spent once.
-`do-not:` show the singer or any mouth; put a band, a face or text in the well; let the song land on the tonic; let anything at a sight react except the one bat; fade out.
+`do-not:` show the singer or any mouth; put a band, a face or text in the well; let the song land on the tonic; let anything at a sight react except the one bat (the drop's pigeon head-turn at 0:10 is the only other allowed reaction); fade out.
 `promote?:` no.
 
 ## Video use map

@@ -44,6 +44,7 @@ export const PublicLayout = lazy(() => import('../public/PublicLayout'));
 export const Listen = lazy(() => import('../public/Listen'));
 export const Album = lazy(() => import('../public/Listen').then((m) => ({ default: m.Album })));
 export const Recipes = lazy(() => import('../public/Recipes'));
+export const Errands = lazy(() => import('../public/Errands'));
 export const PublicHome = lazy(() =>
   import('../public/PublicPages').then((m) => ({ default: m.PublicHome })),
 );

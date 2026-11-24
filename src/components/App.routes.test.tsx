@@ -446,6 +446,28 @@ describe('public site', () => {
     );
   });
 
+  it('/errands plays a full run from the panel (no canvas in jsdom: click-to-go)', async () => {
+    renderRoute('/errands');
+    expect(await screen.findByRole('heading', { level: 1, name: 'Errands' })).toBeTruthy();
+    expect(screen.getByRole('link', { name: 'Errands' }).getAttribute('aria-current')).toBe('page');
+    const list = screen.getByRole('heading', { name: 'The list' }).closest('section')!;
+    const count = () => within(list).getAllByRole('listitem').length;
+    expect(count()).toBeGreaterThanOrEqual(3);
+    expect(count()).toBeLessThanOrEqual(5);
+    fireEvent.click(await screen.findByRole('button', { name: /^Go to The Laundry-Room Door/ }));
+    expect(screen.getByText(/Nothing to drop off/)).toBeTruthy();
+    for (const store of ['The All-Night Market', 'Wing Nut Hardware', 'The Corner Vending Machine'])
+      fireEvent.click(screen.getByRole('button', { name: `Go to ${store}` }));
+    expect(within(list).queryAllByText('To get')).toHaveLength(0);
+    expect(within(list).getAllByText('In the car')).toHaveLength(count());
+    fireEvent.click(screen.getByRole('button', { name: /^Go to The Laundry-Room Door/ }));
+    expect(within(list).getAllByText('Home')).toHaveLength(count());
+    expect(screen.getByText(/Everything on the list is home/)).toBeTruthy();
+    expect(screen.getByLabelText('Run time').textContent).toMatch(/list complete/);
+    fireEvent.click(screen.getByRole('button', { name: 'New list' }));
+    expect(within(list).queryAllByText('Home')).toHaveLength(0);
+  });
+
   it('/lace-waterfall renders the band page', async () => {
     renderRoute('/lace-waterfall');
     expect(await screen.findByRole('heading', { level: 1, name: 'Lace Waterfall' })).toBeTruthy();

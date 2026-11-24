@@ -9,6 +9,7 @@ const nav = [
   { to: '/listen', label: 'Listen', end: false },
   { to: '/albums', label: 'Music', end: false },
   { to: '/recipes', label: 'Recipes', end: false },
+  { to: '/errands', label: 'Errands', end: false },
 ];
 
 const titles: Record<string, string> = {
@@ -17,6 +18,7 @@ const titles: Record<string, string> = {
   '/albums': 'Music · Weeks of Fire',
   '/lace-waterfall': 'Lace Waterfall · Weeks of Fire',
   '/recipes': 'Lillith’s Recipes · Weeks of Fire',
+  '/errands': 'Errands · Weeks of Fire',
 };
 
 export const DISCLOSURE =

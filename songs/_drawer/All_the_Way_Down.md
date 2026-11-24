@@ -43,8 +43,8 @@ them look up"; here, one bat looks up on the very last frame. That is the end re
   B = 10s, used whole. C–G = 15s each, trimmed to 12s (drop the first 1.5s and last 1.5s).
   H = 15s, trimmed to 12s. Chain rule: the last frame of each clip (shaft only, no sight in
   view) is the start still of the next. Paste the continuity lock into every take.
-- **Pattern:** verse on the fall, chorus on the sight. Each chorus line "all the way down"
-  lands as a sight enters frame; the shaft between sights carries the verse.
+- **Pattern:** verse on the fall, chorus on the sight. The first "all the way down" of each chorus
+  lands as that chorus's sight enters frame (B–H); the chorus's other lines and the verse ride the shaft.
 - **Breaks:** (1) 0:00–0:08, the doo-wop "intro" is one held bass vocal note and the well
   drip only. (2) 1:08–1:10, the band stops for two seconds; the drip comes through alone.
   (3) **written silence, 1:28–1:32, four seconds, unscored**: the final chorus is cut off

@@ -25,7 +25,7 @@
 ## Backlog
 
 - [Fix First] `npm ci` lockfile drift from #211; deploy red since 2026-11-21.
-- `/crew/` still returns HTTP 404 (it isn't in the per-route HTML emitter); the other deep routes now return 200.
+- Crew lives at `/show/crew/` (200, emitted). Bare `/crew/` 404s; CLAUDE.md still documents `/crew`, so either fix the doc or add a redirect.
 - Errands (#215) and the EyeWash handoff (#217) are merged but undeployed.
 - Egg Xylophone and Eight Arms, Two Mittens have been held since 2026-11-19 (title not sung).
 
@@ -37,6 +37,6 @@
 ## Last run
 
 - 2026-11-25 · mode: Fix First · focus: repair package-lock drift from Dependabot #211 so `npm ci` and the Pages deploy pass.
-- Issue B: "Add /crew to per-route HTML emission and assert every route returns 200".
+- Issue B: "Assert every routed view has emitted HTML; redirect or drop the legacy /crew path".
 - Lens: cast & characters. Next: writing craft.
 - Next run, check first: the deploy conclusion on main, whether Errands is live, and whether Egg Xylophone / Eight Arms were promoted or cut.

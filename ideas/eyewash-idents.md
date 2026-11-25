@@ -30,6 +30,39 @@ These are the cheapest tone-per-second in the project: one still, one sting, one
 
 **We Always Return** reuses Continuity Voice’s best line on purpose. The joke is the dog, not a new slogan.
 
+## Generation handoff
+
+No stills or audio stings have been generated. This environment has no `XAI_API_KEY`, and the
+repository has no configured Minimax audio-generation integration. Do not add placeholder media or
+change the cutaway from `ready-to-generate`.
+
+The still batch is reproducible once an xAI key is available:
+
+```bash
+python3 scripts/xai-batch.py prompts/eyewash-idents-segments.md --dry-run
+python3 scripts/xai-batch.py prompts/eyewash-idents-segments.md --out images/eyewash-idents/
+```
+
+The dry run confirms six separate stills and their id-derived output names:
+
+| Ident | Still output | Audio sting |
+|-------|--------------|-------------|
+| A | `images/eyewash-idents/eyewash-idents-a-please-stand.jpg` | Not generated |
+| B | `images/eyewash-idents/eyewash-idents-b-rinse-cycle.jpg` | Not generated |
+| C | `images/eyewash-idents/eyewash-idents-c-unscheduled-programming.jpg` | Not generated |
+| D | `images/eyewash-idents/eyewash-idents-d-aspect-ratio.jpg` | Not generated |
+| E | `images/eyewash-idents/eyewash-idents-e-we-always.jpg` | Not generated |
+| F | `images/eyewash-idents/eyewash-idents-f-3-44.jpg` | Not generated |
+
+Audio remains blocked on a configured Minimax generation service. Use the individual 5–10 second
+directions in `prompts/eyewash-idents-segments.md` and the four sonic variants in
+`songs/Rinse_Cycle.md`; do not render the full sign-off song six times or present it as a sting.
+The existing song `audioFile` field represents one song file, not six segment stings, so do not
+attach one sting there as though it covered the package. Once real assets exist, register the
+stills in `segmentStills`, integrate each sting with a segment-level mapping, and update status only
+after verifying all twelve files. Continuity Voice stays audio-only; do not identify it as the
+Episode 2 Radio Voice.
+
 ---
 
 ## Continuity Voice (never seen)

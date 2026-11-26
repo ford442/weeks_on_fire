@@ -1,9 +1,10 @@
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 import { describe, expect, it } from 'vitest';
 
-import { escapeHtml, renderRouteHtml } from '../emit-route-html';
+import { emitRouteHtml, escapeHtml, renderRouteHtml } from '../emit-route-html';
 
 import {
   DESCRIPTION_MAX,
@@ -152,5 +153,31 @@ describe('emit-route-html', () => {
         '/weeks_on_fire/',
       ),
     ).toThrow(/found 2/);
+  });
+
+  it.each([
+    ['/weeks_on_fire/', '/weeks_on_fire/show/crew/', '/weeks_on_fire/assets/'],
+    ['/preview', '/preview/show/crew/', '/preview/assets/'],
+    ['/', '/show/crew/', '/assets/'],
+    ['./', '../show/crew/', '../../assets/'],
+  ])('emits the crew redirect and destination for base %s', (base, target, assets) => {
+    const dist = mkdtempSync(join(tmpdir(), 'crew-routes-'));
+    try {
+      const template = fixture.replace(
+        /\/weeks_on_fire\/assets\//g,
+        base.startsWith('/') ? `${base.replace(/\/?$/, '/')}assets/` : './assets/',
+      );
+      writeFileSync(join(dist, 'index.html'), template);
+      emitRouteHtml(repoRoot, dist, base);
+      const redirect = readFileSync(join(dist, 'crew/index.html'), 'utf8');
+      const crew = readFileSync(join(dist, 'show/crew/index.html'), 'utf8');
+      expect(redirect).toContain(`content="0; url=${target}"`);
+      expect(redirect).toContain(`href="${target}"`);
+      expect(crew).toContain(`src="${assets}`);
+      expect(crew).toContain(`href="${assets}`);
+      expect(crew).toContain('https://ford442.github.io/weeks_on_fire/show/crew/');
+    } finally {
+      rmSync(dist, { recursive: true, force: true });
+    }
   });
 });

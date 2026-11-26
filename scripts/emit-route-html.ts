@@ -94,23 +94,33 @@ export function routeFile(distDir: string, path: string): string {
   return join(distDir, ...path.split('/').filter(Boolean), 'index.html');
 }
 
-function main() {
-  const repoRoot = join(import.meta.dirname, '..');
-  const distDir = join(repoRoot, 'dist');
-  const base = process.env.VITE_BASE ?? './';
-  if (!base.startsWith('/')) {
-    // Relative builds (Contabo, 1ink, local) have no fixed base for nested pages; they keep the SPA fallback.
-    console.log(
-      `emit-route-html: skipped (VITE_BASE=${base} is relative; set VITE_BASE=/weeks_on_fire/)`,
-    );
-    return;
-  }
+export function emitRouteHtml(repoRoot: string, distDir: string, base: string): void {
+  const absoluteBase = base.startsWith('/');
   const normalizedBase = base.endsWith('/') ? base : `${base}/`;
-  const template = readFileSync(join(distDir, 'index.html'), 'utf8');
-  const routes = buildRouteTable(repoRoot);
+  const redirectTarget = absoluteBase ? `${normalizedBase}show/crew/` : '../show/crew/';
+  const redirect = `<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<meta http-equiv="refresh" content="0; url=${escapeHtml(redirectTarget)}" />
+<title>Redirecting to Crew</title></head>
+<body><a href="${escapeHtml(redirectTarget)}">Continue to Crew</a></body></html>
+`;
+  const redirectFile = routeFile(distDir, '/crew/');
+  mkdirSync(dirname(redirectFile), { recursive: true });
+  writeFileSync(redirectFile, redirect);
+
+  let template = readFileSync(join(distDir, 'index.html'), 'utf8');
+  let routes = buildRouteTable(repoRoot);
+  let assetBase = normalizedBase;
+  if (!absoluteBase) {
+    // Other relative-base routes keep the SPA fallback; the crew page needs root-relative assets
+    // expressed from its own directory so it also works when mounted under an unknown prefix.
+    routes = routes.filter((route) => route.path === '/show/crew/');
+    assetBase = '../../';
+    template = template.replace(/(\s(?:href|src))="\.\//g, `$1="${assetBase}`);
+  }
   let bytes = 0;
   for (const route of routes) {
-    const html = renderRouteHtml(template, route, normalizedBase);
+    const html = renderRouteHtml(template, route, assetBase);
     const file = routeFile(distDir, route.path);
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, html);
@@ -121,4 +131,7 @@ function main() {
   );
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) main();
+if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
+  const repoRoot = join(import.meta.dirname, '..');
+  emitRouteHtml(repoRoot, join(repoRoot, 'dist'), process.env.VITE_BASE ?? './');
+}

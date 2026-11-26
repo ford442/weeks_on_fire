@@ -22,7 +22,7 @@ Live hub: https://ford442.github.io/weeks_on_fire
 
 ## Hub views
 
-Overview (`/show`, the default: logline, synopsis, episode list, cast and crew cards, What's new), Finalized (`/show/finalized`: every Approved/Final song, image and video), Visual Archive (`/show/archive`), Video (`/show/video`), Timeline, Songs, Scenes (`/show/scenes`, `/show/scenes/:id`), Suggestions (the EyeWash schedule), Cartoons, 3D Sequences, Characters (`/show/characters/:id`), Episodes, Crew (`/crew`). Search (`/show/search?q=…`, also the header overlay on `/` or Ctrl/⌘-K) is not a tab.
+Overview (`/show`, the default: logline, synopsis, episode list, cast and crew cards, What's new), Finalized (`/show/finalized`: every Approved/Final song, image and video), Visual Archive (`/show/archive`), Video (`/show/video`), Timeline, Songs, Scenes (`/show/scenes`, `/show/scenes/:id`), Suggestions (the EyeWash schedule), Cartoons, 3D Sequences, Characters (`/show/characters/:id`), Episodes, Crew (`/show/crew`). Search (`/show/search?q=…`, also the header overlay on `/` or Ctrl/⌘-K) is not a tab.
 
 **Catalog graph.** Records link by id: cutaway `characterIds` / `episodeId` / `promotedFromCartoonId` / `sequenceInsertIds`, cartoon `promotedToCutawayId`, sequence `relatedCutawayIds` / `characterIds`, scene board `characterIds`, song `episodeId` (see `content/README.md` → Linking records). Codegen fails on an unknown or one-sided link and emits `src/data/generated/catalog-graph.ts` (the "Appears in" strips) and `search-index.ts` (titles, tags, summaries, cast — no lyrics or prompts; MiniSearch, lazy-loaded). Promoting a cartoon means setting the link on both files. Add `characterIds` only for cast on screen in that record.
 

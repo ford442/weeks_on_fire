@@ -39,7 +39,7 @@ a dad or a sibling; let the sandwich get eaten.
   repeated pose). Chain: the last frame of A (full pose, all eight arms out) is the start
   still of B.
 - **Pattern:** verse on the handing-over, **list on action** — one item per beat across bars
-  7–8, then **chorus on the hold** (the pose).
+  7–8, then **chorus on the hold** (the pose). Lyrics: the item list is tagged `[Chorus]` so the full band lands on bar 7; the second `[Chorus]` opens on the title, "Eight arms, two mittens."
 - **Breaks:** (1) bar 5–6, 0:06.0–0:09.0, music ducks to brushes only under the cartoon
   grab-blur (picture whoosh and rummage on top); (2) **music out 0:19.5–0:21.0** so the cone
   squeak is heard alone; (3) final line sung after the facepalm, unaccompanied.
@@ -78,9 +78,9 @@ Cozy kids' winter jazz waltz, 120 BPM, B-flat major, 3/4 time, twenty-four secon
 
 [Verse 1]
 Two little mittens for eight little arms
-Not in this one, not in this one
+Six little arms are waiting their turn
 
-[Pre-Chorus]
+[Chorus]
 A sock
 A boot
 An oven mitt
@@ -89,6 +89,7 @@ A cone
 A sandwich
 
 [Chorus]
+Eight arms, two mittens
 All eight arms are warm today
 All eight arms are warm
 Off he goes into the snow
@@ -114,12 +115,11 @@ face one at a time; hold on the doorway, snow falling. Trim the first second.
 
 ## Callbacks spent
 
-- **Madelin's bag has extra gravity** — portable form: *"Not in this one"* from someone else,
-  meaning another place (the mitten basket). Sung, not on screen; Madelin does not appear.
 - **"Extra napkins are in the bag."** — portable form: someone else says it flatly after a
   disaster and it lands wrong (he is wearing a sandwich). Plainest true statement, no
   punchline read; the Pizza Guy does not appear.
 - **Bag at chest height** — Mom's knitted bag held level at chest height, uncommented.
+- *Cut in revision (2026-11-26):* the Madelin "Not in this one" callback; it no longer appears in the lyrics.
 
 ## Why it is not the neighbors
 

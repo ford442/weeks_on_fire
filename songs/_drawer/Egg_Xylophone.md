@@ -25,7 +25,7 @@ of ears. That keeps rule 1.
 `laugh:` The hen lays a song, and the last egg is so big it plays the tuba.
 `drop:` **Falls.** At 0:10.0 the ostrich egg falls into the tuba bell: BWAAAMP, every
 feather on the hen blows straight back.
-`end reaction:` none from the hen. The pig uncovers one ear at 0:15.5 (spent once).
+`end reaction:` one folding chair creaks at 0:15.5 where applause would go (sound only, spent once). No animal reacts.
 `do-not:` let the hen panic, scream, or look at camera; put any words on screen; add a
 farmer; let the ostrich appear (only the egg).
 `promote?:` no.
@@ -60,13 +60,13 @@ farmer; let the ostrich appear (only the egg).
 | 0:06–0:08 | 4 | Hen stands up a little. Cow looks over. | Pre-chorus, toy band rising. |
 | 0:08–0:10 | 5 | Giant egg wobbles out, far too big for her. | **Silence.** Room tone, wobble creak. |
 | 0:10.0 | 6 b1 | **DROP. Egg falls into tuba.** Feathers blow back. | BWAAAMP, full band one hit, then tuba alone. |
-| 0:12–0:15 | 7–8 | Feathers float down, land back on her one by one. Hen's face unchanged. | Outro line, tuba ring-out. |
-| 0:15.5 | 8 b3 | Pig uncovers one ear. | One folding chair creaks. Cut. |
+| 0:12–0:15 | 7–8 | Feathers float down, land back on her one by one. Hen's face unchanged. | Outro: "Egg xylophone" ×2, tuba ring-out. |
+| 0:15.5 | 8 b3 | Hold. Feathers settled, nobody moves. | One folding chair creaks. Cut. |
 
 ## STYLE (MiniMax paste, under 1,000 characters)
 
 ```
-Kids' toy-band counting march, 120 BPM, C major, 4/4, sixteen seconds, eight bars, played completely straight. Bright wooden xylophone, toy piano, snare tap, little woodblock, one huge deep tuba. Warm male narrator voice, friendly children's-TV host, sung clearly and plainly, no vibrato, never excited. Bars 2 and 3: one sung word per xylophone note, a rising scale C, D, E, G. Bar 4: toy band climbs, tuba silent. Bar 5: complete silence, two full seconds, no tail. Bar 6 downbeat: one enormous low tuba blast, the whole band hits once with it, then the tuba holds alone. Bars 7 and 8: soft xylophone falling slowly like feathers, narrator sings the last line gently, then stop dead. Dry close mix, small barn room, no reverb wash, no synth, no guitar, no drum kit, no choir. Original melody.
+Kids' toy-band counting march, 120 BPM, C major, 4/4, sixteen seconds, eight bars, played completely straight. Bright wooden xylophone, toy piano, snare tap, little woodblock, one huge deep tuba. Warm male narrator voice, friendly children's-TV host, sung clearly and plainly, no vibrato, never excited. Bars 2 and 3: one sung word per xylophone note, a rising scale C, D, E, G. Bar 4: toy band climbs, tuba silent. Bar 5: complete silence, two full seconds, no tail. Bar 6 downbeat: one enormous low tuba blast, the whole band hits once with it, then the tuba holds alone. Bars 7 and 8: soft xylophone falling slowly like feathers, narrator sings the title twice gently, then stop dead. Dry close mix, small barn room, no reverb wash, no synth, no guitar, no drum kit, no choir. Original melody.
 ```
 
 ## LYRICS (MiniMax paste)
@@ -87,8 +87,8 @@ Little hen is laying one egg more
 Bwaaamp
 
 [Outro]
-That one was big
-That one was big
+Egg xylophone
+Egg xylophone
 ```
 
 ## Grok Imagine clip plan
@@ -103,7 +103,7 @@ tips off the end. End frame: giant egg one inch above the tuba bell.
 **Clip B — 6s, used whole (0:10–0:16).** Start still = last frame of A. Motion: egg drops
 into the tuba bell, a cartoon shock-ring blasts out, every feather on the hen blows straight
 back off her body, her face does not change, the cow and pig cover their ears, feathers
-float down and settle back on her one by one, the pig lifts one hoof off one ear.
+float down and settle back on her one by one; hold, nobody moves.
 
 ## Callbacks spent
 

@@ -29,9 +29,9 @@ the cutaway until the owner says so. One sight is modified: `bats-poker` says "n
 them look up"; here, one bat looks up on the very last frame. That is the end reaction.
 
 `laugh:` A man sings a love song about falling while we really fall down a well, and the bats are too busy playing cards to notice.
-`drop:` **Transforms.** At 0:10 the lip becomes a tunnel and the pigeons on the pipe all turn their heads at once as the band comes in.
+`drop:` **Transforms.** At 0:10 the lip becomes a tunnel and the band comes in; the pigeons on the pipe do not move.
 `end reaction:` one bat at the poker table looks up as we pass (G, 1:19). Spent once.
-`do-not:` show the singer or any mouth; put a band, a face or text in the well; let the song land on the tonic; let anything at a sight react except the one bat (the drop's pigeon head-turn at 0:10 is the only other allowed reaction); fade out.
+`do-not:` show the singer or any mouth; put a band, a face or text in the well; let the song land on the tonic; let anything at a sight react except the one bat; fade out.
 `promote?:` no.
 
 ## Video use map
@@ -44,7 +44,7 @@ them look up"; here, one bat looks up on the very last frame. That is the end re
   H = 15s, trimmed to 12s. Chain rule: the last frame of each clip (shaft only, no sight in
   view) is the start still of the next. Paste the continuity lock into every take.
 - **Pattern:** verse on the fall, chorus on the sight. The first "all the way down" of each chorus
-  lands as that chorus's sight enters frame (B–H); the chorus's other lines and the verse ride the shaft.
+  lands as its sight enters frame (C dinner, G bats); verses and bridge ride the other sights.
 - **Breaks:** (1) 0:00–0:08, the doo-wop "intro" is one held bass vocal note and the well
   drip only. (2) 1:08–1:10, the band stops for two seconds; the drip comes through alone.
   (3) **written silence, 1:28–1:32, four seconds, unscored**: the final chorus is cut off
@@ -58,7 +58,7 @@ them look up"; here, one bat looks up on the very last frame. That is the end re
 
 | beat | time | sight id | note |
 |---|---|---|---|
-| B | 0:10–0:20 | `pigeons-on-pipe` | the drop: every head turns as the band enters |
+| B | 0:10–0:20 | `pigeons-on-pipe` | the drop: band enters; not one pigeon moves (review 2026-11-26 cut the head-turn, one reaction only) |
 | C | 0:20–0:32 | `balcony-dinner` | two diners, candle, not looking down; the "dance" sight |
 | D | 0:32–0:44 | `shower-course` | one ring of clean grout |
 | E | 0:44–0:56 | `vending-machine` | humming, fully stocked, one row empty. We do not stop |
@@ -71,7 +71,7 @@ them look up"; here, one bat looks up on the very last frame. That is the end re
 | time | picture | sound |
 |---|---|---|
 | 0:00–0:10 | A: the lip, the tip, the commit. | One held bass "ooo", the drip. Piano triplets in at 0:08. |
-| 0:10.0 | **DROP.** Lip becomes tunnel; pigeons turn their heads. | Full band in: brushed kit, upright bass, tenor sax, backing "ooh-wah". Verse 1. |
+| 0:10.0 | **DROP.** Lip becomes tunnel; pigeons, unmoved. | Full band in: brushed kit, upright bass, tenor sax, backing "ooh-wah". Verse 1. |
 | 0:20–0:32 | Dinner on the brick. | Chorus: "All the way down". |
 | 0:32–0:56 | Shower tile, then the vending machine. | Verse 2, then the hum alone for two beats. |
 | 0:56–1:08 | Moon in the brick. | Bridge (tagged [Breakdown]), sax answers. |
